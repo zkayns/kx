@@ -12,7 +12,10 @@ country_event = { #American Commission
 
 	option = { #No
 		name = hongkong.1.a
-		hidden_effect = { load_oob = HKG }
+		hidden_effect = { 
+		load_oob = HKG
+		
+		}
 	}
 
 	option = { #Yes

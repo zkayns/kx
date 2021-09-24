@@ -1206,6 +1206,12 @@ spriteTypes = {
 		name = "GFX_idea_AOG_Chen_Gongbo_hog_pau"
 		texturefile = "gfx/interface/ministers/AOG/AOG_Chen_Gongbo.png"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_HKG_Duncan_William_Macintosh_hog_ade"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Duncan_William_Macintosh.png"
+	}
+
 
 
 	#Foreign Minister
@@ -1222,6 +1228,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_AOG_Zhou_Fohai_for_pau"
 		texturefile = "gfx/interface/ministers/AOG/AOG_Zhou_Fohai.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Charles_Sutcliffe_for_ade"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Charles_Sutcliffe.png"
 	}
 
 
@@ -1255,12 +1265,20 @@ spriteTypes = {
 		name = "GFX_idea_AOG_Zhou_Fohai_eco_pau"
 		texturefile = "gfx/interface/ministers/AOG/AOG_Zhou_Fohai.png"
 	}
+	spriteType = {
+		name = "GFX_idea_HKG_Duncan_William_Macintosh_eco_ade"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Duncan_William_Macintosh.png"
+	}
 
 
 	#Security Minister
 	spriteType = {
 		name = "GFX_idea_AOG_Lei_Zhong_sec_ade"
 		texturefile = "gfx/interface/ministers/AOG/AOG_Lei_Zhong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Roy_Henry_sec_ade"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Roy_Henry.png"
 	}
 
 

@@ -34,13 +34,37 @@ focus_tree = {
 		available = {
 		}
 		relative_position_id = HKG_tumultuous_independence
-		x = 1
+		x = -1
 		y = 1
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_secure_the_streets"
-			add_political_power = 150
-			add_stability = 0.1
+			if = {
+				limit = {
+					HKG = {
+						has_idea = HKG_widespread_disorder_idea1
+					}
+				}
+			swap_ideas = {
+					remove_idea = HKG_widespread_disorder_idea1
+					add_idea = HKG_widespread_disorder_idea2
+				}
+			}
+			if = {
+				limit = {
+					HKG = {
+						has_idea = HKG_widespread_disorder_idea
+					}
+				}
+			swap_ideas = {
+					remove_idea = HKG_widespread_disorder_idea
+					add_idea = HKG_widespread_disorder_idea1
+				}
+			}
+			custom_effect_tooltip = HKG_add_police
+			hidden_effect = {
+				load_oob = HKG_police1
+			}
 		}
 	}
 	focus = { 
@@ -51,13 +75,37 @@ focus_tree = {
 		available = {
 		}
 		relative_position_id = HKG_tumultuous_independence
-		x = -1
+		x = 1
 		y = 1
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_provisional_government"
-			add_political_power = 150
-			add_stability = 0.1
+			if = {
+				limit = {
+					HKG = {
+						has_idea = HKG_makeshift_administration_idea1
+					}
+				}
+			swap_ideas = {
+					remove_idea = HKG_makeshift_administration_idea1
+					add_idea = HKG_makeshift_administration_idea2
+				}
+			}
+			if = {
+				limit = {
+					HKG = {
+						has_idea = HKG_makeshift_administration_idea
+					}
+				}
+			swap_ideas = {
+					remove_idea = HKG_makeshift_administration_idea
+					add_idea = HKG_makeshift_administration_idea1
+				}
+			}
+			add_ideas = HKG_Duncan_William_Macintosh_hog_ade
+			add_ideas = HKG_Roy_Henry_sec_ade
+			add_ideas = HKG_Duncan_William_Macintosh_eco_ade
+			add_ideas = HKG_Charles_Sutcliffe_for_ade
 		}
 	}
 	focus = { 
@@ -97,8 +145,41 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_border_control"
-			add_political_power = 150
-			add_stability = 0.1
+			if = {
+				limit = {
+					HKG = {
+						has_idea = HKG_makeshift_administration_idea1
+					}
+				}
+			swap_ideas = {
+					remove_idea = HKG_makeshift_administration_idea1
+					add_idea = HKG_makeshift_administration_idea2
+				}
+			}
+			if = {
+				limit = {
+					HKG = {
+						has_idea = HKG_makeshift_administration_idea
+					}
+				}
+			swap_ideas = {
+					remove_idea = HKG_makeshift_administration_idea
+					add_idea = HKG_makeshift_administration_idea1
+				}
+			}
+			326 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10062
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = { 

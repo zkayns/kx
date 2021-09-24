@@ -35,15 +35,21 @@ POLITICS_MACINTOSH_DESC:0 ""
 
 HKG_police_garrison_idea:0 "The HKPF Garrison"
 HKG_widespread_disorder_idea:0 "Widespread Disorder"
+HKG_widespread_disorder_idea1:0 "Combating General Unrest"
+HKG_widespread_disorder_idea2:0 "Combating General Unrest"
 HKG_triads_idea:0 "Growing Influence of the Triads"
 HKG_major_port_idea:0 "Important International Trade Harbour"
 HKG_bankrupcy_aftermath_idea:0 "Post-Bankrupcy Economy"
 HKG_makeshift_administration_idea:0 "Makeshift Administration"
+HKG_makeshift_administration_idea1:0 "Establishing an Efficient Administration"
+HKG_makeshift_administration_idea2:0 "Establishing an Efficient Administration"
+
 
 #### Triggers
 
 #### Tooltips
 
+HKG_add_police:0 "§CTwo additional police squadrons will be mobilized§!"
 
 #################
 #### Focuses ####
