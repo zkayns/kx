@@ -156,6 +156,8 @@ UZB = "countries/Asian.txt" #Uzbekistan
 VIN = "countries/Asian.txt"
 XSM = "countries/Asian.txt"
 YUN = "countries/Asian.txt"
+HKG = "countries/Asian.txt" #Hong Kong
+
 
 ### Indian ###
 BHC = "countries/Indian.txt"

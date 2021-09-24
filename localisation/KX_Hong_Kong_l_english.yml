@@ -1,0 +1,31 @@
+﻿l_english:
+
+HKG_focus:0 "Hong Kong Focus Tree"
+
+HKG_authoritarian_democrat:0 "Hong Kong"
+HKG_authoritarian_democrat_DEF:0 "Independent City of Hong Kong"
+HKG_authoritarian_democrat_ADJ:0 "Hong Konger"
+
+
+HKG_authoritarian_democrat_party:0 "HKPF"
+HKG_authoritarian_democrat_party_long:0 "Hong Kong Police Force"
+HKG_paternal_autocrat_party:0 "HKPF"
+HKG_paternal_autocrat_party_long:0 "Hong Kong Police Force"
+
+POLITICS_MACINTOSH_DESC:0 "dsfsd"
+
+#### Triggers
+
+#### Tooltips
+
+
+#################
+#### Focuses ####
+#################
+
+
+
+hongkong.1.t:0 "t"
+hongkong.1.d:0 "d"
+hongkong.1.a:0 "a"
+hongkong.1.b:0 "b"

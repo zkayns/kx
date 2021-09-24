@@ -1,0 +1,26 @@
+division_template = {
+	name = "Hong Kong Police Force"
+	division_names_group = HKG_MIL_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10062
+		division_template = "Hong Kong Police Force"
+		start_experience_factor = 0.175
+		start_equipment_factor = 1.0
+	}
+
+}

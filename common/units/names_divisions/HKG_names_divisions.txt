@@ -1,0 +1,39 @@
+HKG_MIL_01 = {
+	name = "Hong Kong Police Squadron"
+
+	for_countries = { HKG }
+
+	can_use = { always = yes }
+
+	division_types = { "militia" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HKG_INF_01 }
+
+	fallback_name = "%d. Hong Kong Police Squadron"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Hong Kong Police Squadron" }
+		2 = { "%dnd Hong Kong Police Squadron" }
+		3 = { "%drd Hong Kong Police Squadron" }
+		4 = { "%dth Hong Kong Police Squadron" }
+		5 = { "%dth Hong Kong Police Squadron" }
+		6 = { "%dth Hong Kong Police Squadron" }
+		7 = { "%dth Hong Kong Police Squadron" }
+		8 = { "%dth Hong Kong Police Squadron" }
+		9 = { "%dth Hong Kong Police Squadron" }
+		10 = { "%dth Hong Kong Police Squadron" }
+		11 = { "%dth Hong Kong Police Squadron" }
+		12 = { "%dth Hong Kong Police Squadron" }
+		13 = { "%dth Hong Kong Police Squadron" }
+		14 = { "%dth Hong Kong Police Squadron" }
+		15 = { "%dth Hong Kong Police Squadron" }
+		16 = { "%dth Hong Kong Police Squadron" }
+		17 = { "%dth Hong Kong Police Squadron" }
+		18 = { "%dth Hong Kong Police Squadron" }
+		19 = { "%dth Hong Kong Police Squadron" }
+		20 = { "%dth Hong Kong Police Squadron" }
+	}
+}

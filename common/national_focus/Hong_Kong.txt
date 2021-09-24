@@ -1,0 +1,29 @@
+focus_tree = {
+	id = HKG_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HKG
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2800 y = 1200 }
+
+	focus = { 
+		id = HKG_tumultuous_independence
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		prerequisite = {}
+		available = {
+		}
+		x = 7
+		y = 0
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HON_monzada"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+}

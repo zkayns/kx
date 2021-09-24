@@ -1,0 +1,22 @@
+add_namespace = hongkong
+
+
+country_event = { #American Commission
+	id = hongkong.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.1" }
+	title = hongkong.1.t
+	desc = hongkong.1.t
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #No
+		name = hongkong.1.a
+		hidden_effect = { load_oob = HKG }
+	}
+
+	option = { #Yes
+		name = hongkong.1.b
+		add_political_power = -10
+	}
+}

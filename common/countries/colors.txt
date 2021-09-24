@@ -1366,3 +1366,7 @@ IQR = {
 	color = rgb { 50 12 175 }
 	color_ui = rgb { 50 12 175 }
 }
+HKG = {
+	color = rgb { 31 114 196 }
+	color_ui = rgb { 31 114 196 }
+}
