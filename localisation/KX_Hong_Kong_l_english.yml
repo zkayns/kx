@@ -68,6 +68,14 @@ HKG_business_reach:0 "Reach out to Merchants and Bankers"
 HKG_business_reach_desc:0 ""
 HKG_appoint_civilian_officials:0 "Appoint New Bureaucrats"
 HKG_appoint_civilian_officials_desc:0 "d"
+HKG_disorder_quelled:0 "Disorder Quelled"
+HKG_disorder_quelled_desc:0 "d"
+HKG_administration_founded:0 "Stable Administration Founded"
+HKG_administration_founded_desc:0 "d"
+HKG_banditry_suppressed:0 "Banditry Suppressed"
+HKG_banditry_suppressed:0 "d"
+HKG_next_page:0 "The Next Page"
+HKG_next_page:0 "d"
 
 #### Events
 
