@@ -1,0 +1,79 @@
+ideas = {
+
+	country = {
+		HKG_police_garrison_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_police_garrison_idea"
+				hidden_effect = {
+				country_lock_all_division_template = yes
+				}
+			}
+			picture = UK_military_loyal_idea
+			modifier = {
+				conscription_factor = -0.65
+				max_planning = -0.1
+				planning_speed = -0.1
+				experience_gain_army_factor = -0.05
+				army_org_factor = 0.05
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+		}
+		HKG_widespread_disorder_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_widespread_disorder_idea"
+			}
+			picture = chi_war_of_resistance3
+			modifier = {
+				stability_weekly = -0.025
+				war_support_weekly = -0.025
+				political_power_gain = -0.1
+			}
+		}
+		HKG_triads_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads_idea"
+			}
+			picture = LEC_triads
+			modifier = {
+				stability_factor = -0.15
+				national_populist_drift = 0.02
+			}
+		}
+		HKG_major_port_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_major_port_idea"
+			}
+			picture = MAG_open_port
+			modifier = {
+				trade_opinion_factor = 0.15
+				industrial_capacity_dockyard = 0.10
+				production_speed_dockyard_factor = 0.10
+				production_speed_naval_base_factor = 0.15
+			}
+		}
+		HKG_bankrupcy_aftermath_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankrupcy_aftermath_idea"
+			}
+			picture = RUS_backward_industry_idea
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_factory_max_efficiency_factor = -0.20
+				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.30
+				industrial_capacity_dockyard = -0.30
+			}
+		}
+		HKG_makeshift_administration_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_makeshift_administration_idea"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				political_power_factor = -0.1
+			}
+		}
+	}
+}

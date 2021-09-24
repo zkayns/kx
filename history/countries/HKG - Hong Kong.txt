@@ -110,8 +110,8 @@ set_popularities = {
 	totalist = 0
 	radical_socialist = 4
 	syndicalist = 0
-	social_democrat = 2
-	social_liberal = 6
+	social_democrat = 6
+	social_liberal = 2
 	market_liberal = 12
 	social_conservative = 14
 	authoritarian_democrat = 34
@@ -132,6 +132,12 @@ add_ideas = {
 	### Foreign Minister
 	### Eco minister
 	### Security Minister
+	HKG_police_garrison_idea
+	HKG_widespread_disorder_idea
+	HKG_makeshift_administration_idea
+	HKG_bankrupcy_aftermath_idea
+	HKG_triads_idea
+	HKG_major_port_idea
 }
 
 create_country_leader = {
@@ -151,6 +157,15 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 	traits = { benevolent_commissioner }
+}
+
+create_country_leader = {
+	name = "Heung Wah-yim"
+	desc = "POLITICS_HEUNG_DESC"
+	picture = "Portrait_Asia_Generic_new_5.png"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = { }
 }
 
 

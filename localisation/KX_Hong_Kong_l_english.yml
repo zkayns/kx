@@ -7,12 +7,38 @@ HKG_authoritarian_democrat_DEF:0 "Independent City of Hong Kong"
 HKG_authoritarian_democrat_ADJ:0 "Hong Konger"
 
 
+
+HKG_totalist_party:0 "Chinese Syndicalist Party"
+HKG_totalist_party_long:0 "Chinese Syndicalist Party"
+HKG_syndicalist_party:0 "Chinese Syndicalist Party"
+HKG_syndicalist_party_long:0 "Chinese Syndicalist Party"
+HKG_radical_socialist_party:0 "Chinese Syndicalist Party"
+HKG_radical_socialist_party_long:0 "Chinese Syndicalist Party"
+HKG_social_democrat_party:0 "HKLP"
+HKG_social_democrat_party_long:0 "Hong Kong Labour Party"
+HKG_social_liberal_party:0 "HKLP"
+HKG_social_liberal_party_long:0 "Hong Kong Liberal Party"
+HKG_market_liberal_party:0 "HKCP(m)"
+HKG_market_liberal_party_long:0 "Hong Kong Conservative Party (moderates)"
+HKG_social_conservative_party:0 "HKCP(h)"
+HKG_social_conservative_party_long:0 "Hong Kong Conservative Party (hardliners)"
 HKG_authoritarian_democrat_party:0 "HKPF"
 HKG_authoritarian_democrat_party_long:0 "Hong Kong Police Force"
 HKG_paternal_autocrat_party:0 "HKPF"
 HKG_paternal_autocrat_party_long:0 "Hong Kong Police Force"
+HKG_national_populist_party:0 "Sun Yee On"
+HKG_national_populist_party_long:0 "Sun Yee On"
 
-POLITICS_MACINTOSH_DESC:0 "dsfsd"
+POLITICS_MACINTOSH_DESC:0 ""
+
+#### Ideas
+
+HKG_police_garrison_idea:0 "The HKPF Garrison"
+HKG_widespread_disorder_idea:0 "Widespread Disorder"
+HKG_triads_idea:0 "Growing Influence of the Triads"
+HKG_major_port_idea:0 "Important International Trade Harbour"
+HKG_bankrupcy_aftermath_idea:0 "Post-Bankrupcy Economy"
+HKG_makeshift_administration_idea:0 "Makeshift Administration"
 
 #### Triggers
 
@@ -22,8 +48,28 @@ POLITICS_MACINTOSH_DESC:0 "dsfsd"
 #################
 #### Focuses ####
 #################
+HKG_tumultuous_independence:0 "Tumultuous Independence"
+HKG_tumultuous_independence_desc:0 "d"
+HKG_secure_the_streets:0 "Dispatch More Patrols to the Streets"
+HKG_secure_the_streets_desc:0 "d"
+HKG_provisional_government:0 "Establish a Provisional Government"
+HKG_provisional_government_desc:0 "d"
+HKG_confiscate_firearms:0 "Confiscate Illegal Firearms"
+HKG_confiscate_firearms_desc:0 "d"
+HKG_border_control:0 "Set Up Border Control Outposts"
+HKG_border_control_desc:0 "d"
+HKG_curfew:0 "Enforce a Curfew"
+HKG_curfew_desc:0 "d"
+HKG_kowloon_law:0 "Invoke Martial Law in Kowloon"
+HKG_kowloon_law_desc:0 "d"
+HKG_kowloon_march:0 "March to Secure Kowloon"
+HKG_kowloon_march_desc:0 "d"
+HKG_business_reach:0 "Reach out to Merchants and Bankers"
+HKG_business_reach_desc:0 ""
+HKG_appoint_civilian_officials:0 "Appoint New Bureaucrats"
+HKG_appoint_civilian_officials_desc:0 "d"
 
-
+#### Events
 
 hongkong.1.t:0 "t"
 hongkong.1.d:0 "d"
