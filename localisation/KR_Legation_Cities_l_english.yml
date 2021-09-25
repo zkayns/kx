@@ -1044,14 +1044,10 @@ lec.69.t:0 "[FROM.GetNameDefCap] Occupies Tianjin"
 lec.69.d:0 "The Chinese Central Government has occupied Tianjin, unwilling to let such a major city fall into the hands of the Japanese or even base criminals. While this is a blow to the Mandate, we can do nothing about this now."
 lec.69.a:0 "Awful!"
 
-lec.70.t:0 "The Occupation of Hong Kong"
-lec.70.d:0 "The Legation Council has gone bankrupt, spelling an end to the International Mandate. Now, as Shanghai devolves into street fights and chaos, the outlying cities of the Mandate are left unprotected. In Hong Kong, the British and Vermillion Society have cooperated to ensure stability in the streets, and the two sides are angling for annexation into Britain and our nation, respectively. The British are not here yet, however, and we have an opportunity to invade. Should we reclaim Hong Kong for China?"
-lec.70.a:0 "It is vulnerable, take it!"
-lec.70.b:0 "We cannot spare the resources right now."
-
-lec.71.t:0 "[FROM.GetNameDefCap] Occupies Hong Kong"
-lec.71.d:0 "The Guangdong Clique has occupied Hong Kong, unwilling to let such a major city fall into the hands of the British or Germans. While this is a blow to the Mandate, we can do nothing about this now."
-lec.71.a:0 "Awful!"
+lec.70.t:0 "Hong Kong Declares Independence!"
+lec.70.d:0 "The Legation Council has gone bankrupt, spelling an end to the International Mandate. Now, as Shanghai devolves into street fights and chaos, the outlying cities of the Mandate are left unprotected. The city of Hong Kong has fallen into severe turmoil due to the fact that our disgruntled troops have refused to fulfill their duties to maintain order in the streets. Dissatisfied with this development, Chief Commissioner Duncan William Macintosh of the Hong Kong Police has decided to take the matters into his own hands, proclaiming independence of the city from the League."
+lec.70.a:0 "We can't do anything about it..."
+lec.70.b:0 "We can't do anything about it... (Play as Hong Kong)"
 
 lec.72.t:0 "The Collapse of the Legation Council's Government"
 lec.72.d:0 "As chaos overtakes Shanghai in the wake of the Council's decision to end the Mandate, our troops trapped in Shanghai are left without orders. The Japanese are making moves to occupy the city, but we don't know what they'll do yet. It seems they are moving to occupy the docks to wait for reinforcements, so some suggest our troops try to beat them there and secure supply lines. Others suggest that we should remain in the central city and defend from there. What should we do?"

@@ -2354,6 +2354,10 @@ country_event = { #Banruptcy Consequences
 			}
 		}
 		hidden_effect = {
+			country_event = {
+				id = lec.70
+				days = 7
+			}
 			GEA = {
 				country_event = {
 					id = lec.72
@@ -2399,19 +2403,6 @@ country_event = { #Banruptcy Consequences
 					country_event = {
 						id = lec.68
 						days = 8
-					}
-				}
-			}
-			if = {
-				limit = {
-					owns_state = 326
-				}
-				593 = {
-					controller = {
-						country_event = {
-							id = lec.70
-							days = 10
-						}
 					}
 				}
 			}
@@ -2644,7 +2635,7 @@ country_event = { #Tianjin Occupied
 	}
 }
 
-country_event = { #Occupy Hong Kong?
+country_event = { #Hong Kong Declares Independence
 	id = lec.70
 	immediate = { log = "[GetDateText]: [Root.GetName]: event lec.70" }
 	title = lec.70.t
@@ -2652,54 +2643,44 @@ country_event = { #Occupy Hong Kong?
 	picture = GFX_report_event_CHI_riot
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		LEC = {
-			owns_state = 326
-		}
-	}
-	option = {	#dewit
+	option = { 
 		name = lec.70.a
 		ai_chance = {
-			factor = 80
+			factor = 100
 		}
-		add_political_power = -5
-		LEC = {
-			country_event = {
-				id = lec.71
-			}
-		}
-		transfer_state = 326
-		326 = {
-			add_claim_by = Root
-		}
-	}
-	option = {	#nah
-		name = lec.70.b
-		ai_chance = {
-			factor = 40
-			modifier = {
-				factor = 0
-				LEC = {
-					has_country_flag = LEC_dead_to_china
-				}
-			}
-		}
-		add_political_power = 5
-	}
-}
-
-country_event = { #Hong Kong Occupied
-	id = lec.71
-	immediate = { log = "[GetDateText]: [Root.GetName]: event lec.71" }
-	title = lec.71.t
-	desc = lec.71.d
-	picture = GFX_report_event_CHI_militia
-	is_triggered_only = yes
-	option = {	#ok very bad
-		name = lec.71.a
 		add_political_power = -15
 		326 = {
 			remove_core_of = LEC
+		}
+		HKG = {
+			add_state_core = 326
+		}
+		every_owned_state = {
+			limit = { is_core_of = HKG }
+			HKG = { transfer_state = PREV }
+		}
+	}
+	option = {	#switch to Hong Kong
+		name = lec.70.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -15
+		326 = {
+			remove_core_of = LEC
+		}
+		HKG = {
+			add_state_core = 326
+		}
+		every_owned_state = {
+			limit = { is_core_of = HKG }
+			HKG = { transfer_state = PREV }
+		}
+		HKG = {
+			change_tag_from = LEC
+		}
+		hidden_effect = {
+			HKG = { country_event = hongkong.1 }
 		}
 	}
 }
