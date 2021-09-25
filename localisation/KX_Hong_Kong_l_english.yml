@@ -26,8 +26,15 @@ HKG_authoritarian_democrat_party:0 "HKPF"
 HKG_authoritarian_democrat_party_long:0 "Hong Kong Police Force"
 HKG_paternal_autocrat_party:0 "HKPF"
 HKG_paternal_autocrat_party_long:0 "Hong Kong Police Force"
+HKG_paternal_autocrat_party1:0 "Sun Yee On"
+HKG_paternal_autocrat_party1_long:0 "Sun Yee On Triad"
+HKG_paternal_autocrat_party2:0 "14K"
+HKG_paternal_autocrat_party2_long:0 "14K Triad"
 HKG_national_populist_party:0 "Sun Yee On"
-HKG_national_populist_party_long:0 "Sun Yee On"
+HKG_national_populist_party_long:0 "Sun Yee On Triad"
+HKG_national_populist_party1:0 "14K"
+HKG_national_populist_party1_long:0 "14K Triad"
+
 
 POLITICS_MACINTOSH_DESC:0 ""
 
@@ -39,9 +46,10 @@ HKG_widespread_disorder_idea1:0 "Combating General Unrest"
 HKG_widespread_disorder_idea2:0 "Combating General Unrest"
 HKG_triads_idea:0 "Growing Influence of the Triads"
 HKG_triads_idea1:0 "Triads in Revolt"
+HKG_triads_idea2:0 "Triads in Retreat"
 HKG_major_port_idea:0 "Important International Trade Harbour"
 HKG_bankrupcy_aftermath_idea:0 "Post-Bankrupcy Economy"
-HKG_makeshift_administration_idea:0 "Makeshift Administration"
+HKG_makeshift_administration_idea:0 "Deficient Administration"
 HKG_makeshift_administration_idea1:0 "Establishing an Efficient Administration"
 HKG_makeshift_administration_idea2:0 "Establishing an Efficient Administration"
 
@@ -52,6 +60,7 @@ HKG_makeshift_administration_idea2:0 "Establishing an Efficient Administration"
 
 HKG_add_police:0 "§CTwo additional police squadrons will be mobilized§!"
 HKG_kowloon_law_tt:0 "§RThe ongoing crisis in Kowloon will require judicious decisionmaking, or else our leadership may be put in danger.§!"
+HKG_police_deposed:0 "The Hong Kong Police garrison has been deposed"
 
 #################
 #### Focuses ####
@@ -87,9 +96,9 @@ HKG_next_page:0 "d"
 
 #### Events
 
-hongkong.1.t:0 "t"
-hongkong.1.d:0 "d"
-hongkong.1.a:0 "a"
+hongkong.1.t:0 "dont"
+hongkong.1.d:0 "add"
+hongkong.1.a:0 "loc"
 
 hongkong.2.t:0 "The Pearl of the Orient Turns the Page"
 hongkong.2.d:0 "d"
@@ -109,5 +118,35 @@ hongkong.5.a:0 "a"
 
 hongkong.6.t:0 "Organizing Proper Countermeasures"
 hongkong.6.d:0 "how to fight criminals"
-hongkong.6.a:0 "a"
-hongkong.6.b:0 "a"
+hongkong.6.a:0 "Focus on eliminating the Triad leaders"
+hongkong.6.b:0 "Tackle their main holdouts"
+
+hongkong.7.t.eliminate:0 "The Whereabouts of Heung Chin"
+hongkong.7.t.tackle:0 "A Decrepit Basement in Yau Ma Tei"
+hongkong.7.d.eliminate:0 "organizing search party for triad leader"
+hongkong.7.d.tackle:0 "organizing a raid for triad holdout"
+hongkong.7.a:0 "Send out our Chinese officers!"
+hongkong.7.b:0 "The Chinese cannot be trusted with anything... Dispatch HKPF's finest!"
+hongkong.7.c:0 "Set up a reconnaissance party near the building"
+hongkong.7.e:0 "We have no time to spare... Assault the holdout immediately!"
+
+hongkong.8.t.eliminate:0 "Our Chinese Agents Deliver Promising News"
+hongkong.8.t.tackle:0 "Reconnaissance Unit Sends a Promising Report"
+hongkong.8.d.eliminate:0 "the triad guy will be doing something tommorow"
+hongkong.8.d.tackle:0 "many triad highups have a meeting in the basement tommorow"
+hongkong.8.a:0 "Ensure this'll be his last [whatever the fuck he will be doing]"
+hongkong.8.b:0 "Have our units make a surprise appearance at the meeting"
+
+hongkong.9.t.eliminate:0 "One of Our Patrols Makes a Dreadful Discovery!"
+hongkong.9.t.tackle:0 "The Strike Force Stumbles Upon an Arms Deal!"
+hongkong.9.d.eliminate:0 "bodies of british agents found on the shore of Wan Chai"
+hongkong.9.d.tackle:0 "there was an arms deal ongoing with tons of guards, most of the five-os die"
+hongkong.9.a:0 "This is worrying..."
+hongkong.9.b:0 "This is worrying..."
+
+hongkong.10.t.eliminate:0 "Heung Chin Has Been Assassinated!"
+hongkong.10.t.tackle:0 "The Strike Force Decimates Triad Members!"
+hongkong.10.d.eliminate:0 "killed the bastard"
+hongkong.10.d.tackle:0 "killed the bastards"
+hongkong.10.a:0 "A great success!"
+hongkong.10.b:0 "A great success!"

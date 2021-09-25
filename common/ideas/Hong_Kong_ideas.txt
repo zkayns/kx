@@ -4,9 +4,6 @@ ideas = {
 		HKG_police_garrison_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_police_garrison_idea"
-				hidden_effect = {
-				country_lock_all_division_template = yes
-				}
 			}
 			picture = UK_military_loyal_idea
 			modifier = {
@@ -70,6 +67,17 @@ ideas = {
 				stability_factor = -0.25
 				national_populist_drift = 0.05
 				weekly_manpower = -500
+			}
+		}
+		HKG_triads_idea2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads2_idea"
+			}
+			picture = LEC_triads
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.05
+				weekly_manpower = -100
 			}
 		}
 		HKG_major_port_idea = {

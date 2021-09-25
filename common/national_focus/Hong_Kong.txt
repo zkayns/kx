@@ -17,6 +17,7 @@ focus_tree = {
 		prerequisite = {}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		x = 7
@@ -29,7 +30,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = {
 						id = hongkong.5
-						days = 36
+						days = 42
 						}
 			}
 		}
@@ -41,6 +42,7 @@ focus_tree = {
 		prerequisite = { focus = HKG_tumultuous_independence }
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -84,6 +86,7 @@ focus_tree = {
 		prerequisite = { focus = HKG_tumultuous_independence }
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -132,6 +135,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -157,6 +161,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -211,6 +216,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -258,6 +264,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -268,7 +275,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = {
 						id = hongkong.6
-						days = 2
+						days = 1
 						}
 			}
 		}
@@ -286,6 +293,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -311,6 +319,7 @@ focus_tree = {
 		available = {
 			has_government = authoritarian_democrat
 			NOT = { has_idea = HKG_triads_idea1 }
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -333,6 +342,7 @@ focus_tree = {
 		available = {
 			has_government = authoritarian_democrat
 			NOT = { has_idea = HKG_triads_idea1 }
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -357,6 +367,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -378,6 +389,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -399,6 +411,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
@@ -426,6 +439,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
