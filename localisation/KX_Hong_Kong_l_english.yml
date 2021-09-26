@@ -37,6 +37,8 @@ HKG_national_populist_party1_long:0 "14K Triad"
 
 
 POLITICS_MACINTOSH_DESC:0 ""
+POLITICS_HEUNG_DESC:0 ""
+POLITICS_KOT_SIUWONG:0 ""
 
 #### Ideas
 
@@ -47,11 +49,13 @@ HKG_widespread_disorder_idea2:0 "Combating General Unrest"
 HKG_triads_idea:0 "Growing Influence of the Triads"
 HKG_triads_idea1:0 "Triads in Revolt"
 HKG_triads_idea2:0 "Triads in Retreat"
+HKG_triads_idea3:0 "Triads in Advance"
 HKG_major_port_idea:0 "Important International Trade Harbour"
 HKG_bankrupcy_aftermath_idea:0 "Post-Bankrupcy Economy"
 HKG_makeshift_administration_idea:0 "Deficient Administration"
 HKG_makeshift_administration_idea1:0 "Establishing an Efficient Administration"
 HKG_makeshift_administration_idea2:0 "Establishing an Efficient Administration"
+HKG_makeshift_administration_idea_triad:0 "Criminal Governance"
 
 
 #### Triggers
@@ -122,7 +126,7 @@ hongkong.6.a:0 "Focus on eliminating the Triad leaders"
 hongkong.6.b:0 "Tackle their main holdouts"
 
 hongkong.7.t.eliminate:0 "The Whereabouts of Heung Chin"
-hongkong.7.t.tackle:0 "A Decrepit Basement in Yau Ma Tei"
+hongkong.7.t.tackle:0 "A Decrepit Basement in Wong Tai Sin"
 hongkong.7.d.eliminate:0 "organizing search party for triad leader"
 hongkong.7.d.tackle:0 "organizing a raid for triad holdout"
 hongkong.7.a:0 "Send out our Chinese officers!"

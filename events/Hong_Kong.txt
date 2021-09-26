@@ -97,7 +97,7 @@ country_event = { Organizing countermeasures
 		hidden_effect = {
 			country_event = {
 				id = hongkong.7
-				days = 3
+				days = 2
 			}
 		}
 	}
@@ -376,6 +376,7 @@ country_event = { Triads in retreat!
 		}
 		add_political_power = 50
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.075 }
+		kill_ideology_leader = national_populist
 		set_party_name = {
 			ideology = national_populist
 			long_name = HKG_national_populist_party1_long
@@ -384,11 +385,11 @@ country_event = { Triads in retreat!
 		create_country_leader = {
 			name = "Kot Siu-wong"
 			desc = "POLITICS_KOT_SIUWONG"
-			picture = "Portrait_Asia_Generic_new_5.png"
+			picture = "Portrait_HKG_Kot_Siu_Wong"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
 			traits = { }
-			}
+		}
 		hidden_effect = {
 			country_event = {
 				id = hongkong.12
@@ -412,6 +413,228 @@ country_event = { Triads in retreat!
 				id = hongkong.12
 				days = 2
 			}
+		}
+	}
+}
+
+country_event = { Triads in advance!
+	id = hongkong.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.11" }
+	title = {
+		text = hongkong.11.t.eliminate
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+	}
+	title = {
+		text = hongkong.11.t.tackle
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+	}
+	desc = {
+		text = hongkong.11.d.eliminate
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+	}
+	desc = {
+		text = hongkong.11.d.tackle
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = hongkong.11.a
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+		swap_ideas = {
+					remove_idea = HKG_triads_idea1
+					add_idea = HKG_triads_idea3
+		}
+		add_political_power = -50
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.075 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		hidden_effect = {
+			country_event = {
+				id = hongkong.13
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = hongkong.11.b
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+		swap_ideas = {
+					remove_idea = HKG_triads_idea1
+					add_idea = HKG_triads_idea3
+		}
+		add_political_power = -50
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.075 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		hidden_effect = {
+			country_event = {
+				id = hongkong.13
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { Triads threat crushed!
+	id = hongkong.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.12" }
+	title = {
+		text = hongkong.12.t.eliminate
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+	}
+	title = {
+		text = hongkong.12.t.tackle
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+	}
+	desc = {
+		text = hongkong.12.d.eliminate
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+	}
+	desc = {
+		text = hongkong.12.d.tackle
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = hongkong.12.a
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+		add_political_power = 75
+		add_stability = 0.075
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		hidden_effect = {
+			clr_country_flag = HKG_triadwar_eliminate_leaders
+		}
+	}
+	option = {
+		name = hongkong.12.b
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+		add_political_power = 75
+		add_stability = 0.075
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		hidden_effect = {
+			clr_country_flag = HKG_triadwar_tackle_outposts
+		}
+	}
+}
+
+country_event = { Triads takeover!
+	id = hongkong.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.13" }
+	title = {
+		text = hongkong.13.t.eliminate
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+	}
+	title = {
+		text = hongkong.13.t.tackle
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+	}
+	desc = {
+		text = hongkong.13.d.eliminate
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+	}
+	desc = {
+		text = hongkong.13.d.tackle
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = hongkong.13.a
+		trigger = {
+			has_country_flag = HKG_triadwar_eliminate_leaders
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = HKG_paternal_autocrat_party1_long
+			name = HKG_paternal_autocrat_party1
+			}
+		create_country_leader = {
+			name = "Heung Chin"
+			desc = "POLITICS_HEUNG_DESC"
+			picture = "Portrait_HKG_Heung_Chin.png"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.25 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.20 }
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		remove_ideas = HKG_police_garrison_idea
+		remove_ideas = HKG_triads_idea3
+		remove_idea = HKG_widespread_disorder_idea2
+		if = {
+			limit = {
+				has_ideas = HKG_makeshift_administration_idea1
+			}
+			swap_ideas = {
+				remove_idea = HKG_makeshift_administration_idea1
+				add_idea = HKG_makeshift_administration_idea_triad
+			}
+		}
+		if = {
+			limit = {
+				has_ideas = HKG_makeshift_administration_idea2
+			}
+			swap_ideas = {
+				remove_idea = HKG_makeshift_administration_idea2
+				add_idea = HKG_makeshift_administration_idea_triad
+			}
+		}
+		hidden_effect = {
+			set_country_flag = HKG_police_deposed
+			clr_country_flag = HKG_triadwar_eliminate_leaders
+		}
+	}
+	option = {
+		name = hongkong.13.b
+		trigger = {
+			has_country_flag = HKG_triadwar_tackle_outposts
+		}
+		add_political_power = 75
+		add_stability = 0.075
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		hidden_effect = {
+			clr_country_flag = HKG_triadwar_tackle_outposts
 		}
 	}
 }

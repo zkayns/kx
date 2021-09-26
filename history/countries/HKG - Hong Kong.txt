@@ -127,7 +127,7 @@ set_politics = {
 	
 }
 add_ideas = {
-	#medium_economy
+	limited_exports
 	### Head of Government
 	### Foreign Minister
 	### Eco minister
@@ -162,7 +162,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Heung Chin"
 	desc = "POLITICS_HEUNG_DESC"
-	picture = "Portrait_Asia_Generic_new_5.png"
+	picture = "Portrait_HKG_Heung_Chin.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 	traits = { }

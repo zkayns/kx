@@ -411,6 +411,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = authoritarian_democrat
+			has_idea = HKG_triads_idea2
 			NOT = { has_country_flag = HKG_police_deposed }
 		}
 		cancel_if_invalid = yes
