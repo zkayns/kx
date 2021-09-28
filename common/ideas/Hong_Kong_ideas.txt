@@ -5,9 +5,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_police_garrison_idea"
 			}
-			picture = UK_military_loyal_idea
+			picture = GFX_idea_HKG_police_garrison_idea
 			modifier = {
-				conscription_factor = -0.65
+				conscription_factor = -0.75
 				max_planning = -0.1
 				planning_speed = -0.1
 				experience_gain_army_factor = -0.05

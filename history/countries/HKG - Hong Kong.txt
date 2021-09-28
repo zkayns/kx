@@ -3,14 +3,17 @@ capital = 326
 OOB = "HKG"
 
 set_research_slots = 3
-set_convoys = 75
-set_stability = 0.1
-set_war_support = 0.1
+set_convoys = 50
+set_stability = 0.25
+set_war_support = 0.3
 set_technology = {
 	### General ###
 	electronic_mechanical_engineering = 1
 	radio = 1
 	mechanical_computing = 1
+	basic_machine_tools = 1
+	improved_machine_tools = 1
+	construction1 = 1
 
 	### Tanks ###
 	gwtank = 1
@@ -26,6 +29,7 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gw_artillery = 1
+	support_weapons = 1
 
 	### Air ###
 	early_fighter = 1
@@ -114,9 +118,9 @@ set_popularities = {
 	social_liberal = 2
 	market_liberal = 12
 	social_conservative = 14
-	authoritarian_democrat = 34
-	paternal_autocrat = 22
-	national_populist = 6
+	authoritarian_democrat = 24
+	paternal_autocrat = 2
+	national_populist = 36
 }
 
 set_politics = {
@@ -173,3 +177,17 @@ create_country_leader = {
 
 ### Corps Commander
 
+create_corps_commander = {
+	name = "Duncan William Macintosh"
+	picture = "Portrait_HKG_Duncan_William_Macintosh.png"
+	traits = {
+		politically_connected
+		urban_assault_specialist
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 12023
+}

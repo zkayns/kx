@@ -1992,5 +1992,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_VNC_venice_for_venetians_idea"
 		texturefile = "gfx/interface/ideas/ideas/VNC_venice_for_venetians_idea.tga"
-	}	
+	}
+### HONG KONG ###
+	spriteType = {
+		name = "GFX_idea_HKG_police_garrison_idea"
+		texturefile = "gfx/interface/ideas/ideas/HKG_police_garrison_idea.tga"
+	}
 }

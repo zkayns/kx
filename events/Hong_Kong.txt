@@ -622,6 +622,8 @@ country_event = { Triads takeover!
 		}
 		hidden_effect = {
 			set_country_flag = HKG_police_deposed
+			set_country_flag = HKG_triads_in_charge
+			set_country_flag = HKG_sun_yee_on_in_charge
 			clr_country_flag = HKG_triadwar_eliminate_leaders
 		}
 	}

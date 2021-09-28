@@ -7567,4 +7567,8 @@ SpriteTypes = {
 		name = "GFX_goal_UKR_Lions_Halych"
 		texturefile = "gfx/interface/goals/UKR_Lions_Halych.png"
 	}
+	SpriteType = {
+		name = "DSR_Wipe_the_slate_clean_burn_it_all_down"
+		texturefile = "gfx/interface/goals/goal_DSR_Wipe_the_slate_clean_burn_it_all_down.png"
+	}
 }
