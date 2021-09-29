@@ -1,4 +1,5 @@
 add_namespace = hongkong
+add_namespace = hktriads
 
 country_event = { #AI loading stuff
 	id = hongkong.1
@@ -21,7 +22,7 @@ country_event = { #AI loading stuff
 	}
 }
 
-country_event = { Introduction event
+country_event = { #Introduction event
 	id = hongkong.2
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.2" }
 	title = hongkong.2.t
@@ -34,7 +35,7 @@ country_event = { Introduction event
 	}
 }
 
-country_event = { Confiscating Firearms
+country_event = { #Confiscating Firearms
 	id = hongkong.3
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.3" }
 	title = hongkong.3.t
@@ -53,7 +54,7 @@ country_event = { Confiscating Firearms
 	}
 }
 
-country_event = { They've found a WHAT?
+country_event = { #They've found a WHAT?
 	id = hongkong.4
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.4" }
 	title = hongkong.4.t
@@ -64,14 +65,14 @@ country_event = { They've found a WHAT?
 	option = {
 		name = hongkong.4.a
 		add_equipment_to_stockpile = {
-				type = gwtank
-				amount = 1
-				producer = GXC
+				type = light_tank_equipment
+				amount = 10
+				producer = HKG
 		}
 	}
 }
 
-country_event = { Kowloon Crisis
+country_event = { #Kowloon Crisis
 	id = hongkong.5
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.5" }
 	title = hongkong.5.t
@@ -90,7 +91,7 @@ country_event = { Kowloon Crisis
 	}
 }
 
-country_event = { Organizing countermeasures
+country_event = { #Organizing countermeasures
 	id = hongkong.6
 	immediate = { 
 		log = "[GetDateText]: [Root.GetName]: event hongkong.6"
@@ -126,7 +127,7 @@ country_event = { Organizing countermeasures
 	}
 }
 
-country_event = { Countermeasures
+country_event = { #Countermeasures
 	id = hongkong.7
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.7" }
 	title = {
@@ -219,7 +220,7 @@ country_event = { Countermeasures
 	}
 }
 
-country_event = { Countermeasures outcome - positive!
+country_event = { #Countermeasures outcome - positive!
 	id = hongkong.8
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.8" }
 	title = {
@@ -277,7 +278,7 @@ country_event = { Countermeasures outcome - positive!
 	}
 }
 
-country_event = { Countermeasures outcome - negative!
+country_event = { #Countermeasures outcome - negative!
 	id = hongkong.9
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.9" }
 	title = {
@@ -335,7 +336,7 @@ country_event = { Countermeasures outcome - negative!
 	}
 }
 
-country_event = { Triads in retreat!
+country_event = { #Triads in retreat!
 	id = hongkong.10
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.10" }
 	title = {
@@ -417,7 +418,7 @@ country_event = { Triads in retreat!
 	}
 }
 
-country_event = { Triads in advance!
+country_event = { #Triads in advance!
 	id = hongkong.11
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.11" }
 	title = {
@@ -487,7 +488,7 @@ country_event = { Triads in advance!
 	}
 }
 
-country_event = { Triads threat crushed!
+country_event = { #Triads threat crushed!
 	id = hongkong.12
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.12" }
 	title = {
@@ -543,7 +544,7 @@ country_event = { Triads threat crushed!
 	}
 }
 
-country_event = { Triads takeover!
+country_event = { #Triads takeover!
 	id = hongkong.13
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.13" }
 	title = {
@@ -601,10 +602,11 @@ country_event = { Triads takeover!
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		remove_ideas = HKG_police_garrison_idea
 		remove_ideas = HKG_triads_idea3
-		remove_idea = HKG_widespread_disorder_idea2
+		remove_ideas = HKG_widespread_disorder_idea2
+		add_ideas = HKG_triad_army_idea
 		if = {
 			limit = {
-				has_ideas = HKG_makeshift_administration_idea1
+				has_idea = HKG_makeshift_administration_idea1
 			}
 			swap_ideas = {
 				remove_idea = HKG_makeshift_administration_idea1

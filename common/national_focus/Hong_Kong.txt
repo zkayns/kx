@@ -664,8 +664,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_war_support = 0.05
+			add_command_power = -10
+			swap_ideas = {
+				remove_idea = HKG_triad_army_idea
+				add_idea = HKG_triad_army_bandit_idea1
+			}
 		}
 	}
 	focus = { 
@@ -694,12 +698,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_war_support = 0.05
+			add_command_power = -10
+			swap_ideas = {
+				remove_idea = HKG_triad_army_idea
+				add_idea = HKG_triad_army_smuggler_idea1
+			}
 		}
 	}
 	focus = { 
-		id = HKG_1
+		id = HKG_standarize_equipment
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
@@ -722,7 +730,7 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_2
+		id = HKG_hierarchy
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
@@ -744,7 +752,7 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_3
+		id = HKG_officer_corps
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
@@ -766,14 +774,14 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_4
+		id = HKG_doctrines_focus
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_1
+			focus = HKG_standarize_equipment
 		}
 		prerequisite = {
-			focus = HKG_2
+			focus = HKG_hierarchy
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -791,14 +799,14 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_5
+		id = HKG_discipline
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_2
+			focus = HKG_hierarchy
 		}
 		prerequisite = {
-			focus = HKG_3
+			focus = HKG_officer_corps
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -816,14 +824,14 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_6
+		id = HKG_no_commies
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_4
+			focus = HKG_doctrines_focus
 		}
 		prerequisite = {
-			focus = HKG_5
+			focus = HKG_discipline
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -841,14 +849,14 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_7
+		id = HKG_mil_academy
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_4
+			focus = HKG_doctrines_focus
 		}
 		prerequisite = {
-			focus = HKG_5
+			focus = HKG_discipline
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -866,14 +874,14 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_8
+		id = HKG_long_arm
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_7
+			focus = HKG_mil_academy
 		}
 		prerequisite = {
-			focus = HKG_6
+			focus = HKG_no_commies
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -891,7 +899,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HKG_9
+		id = HKG_mainland_connections
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
@@ -913,14 +921,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HKG_10
+		id = HKG_new_piracy
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_9
+			focus = HKG_mainland_connections
 		}
 		prerequisite = {
-			focus = HKG_1
+			focus = HKG_standarize_equipment
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -938,14 +946,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HKG_11
+		id = HKG_chain_loyalty
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_9
+			focus = HKG_mainland_connections
 		}
 		prerequisite = {
-			focus = HKG_16
+			focus = HKG_arms_manufacturing
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -958,19 +966,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = HKG_triad_army_smuggler_idea1
+				add_idea = HKG_triad_army_smuggler_idea2
+			}
 		}
 	}
 	focus = {
-		id = HKG_12
+		id = HKG_prize
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_10
+			focus = HKG_new_piracy
 		}
 		prerequisite = {
-			focus = HKG_11
+			focus = HKG_chain_loyalty
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -983,16 +993,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = HKG_triad_army_smuggler_idea2
+				add_idea = HKG_triad_army_smuggler_idea3
+			}
 		}
 	}
 	focus = {
-		id = HKG_13
+		id = HKG_drug_trafficking
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_11
+			focus = HKG_chain_loyalty
+		}
+		prerequisite = {
+			focus = HKG_new_piracy
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1010,14 +1025,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HKG_14
+		id = HKG_smooth_sailing
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_12
+			focus = HKG_drug_trafficking
 		}
 		prerequisite = {
-			focus = HKG_13
+			focus = HKG_prize
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1030,37 +1045,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = HKG_triad_army_smuggler_idea3
+				add_idea = HKG_triad_army_smuggler_idea4
+			}
 		}
 	}
 	focus = {
-		id = HKG_15
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = {
-			focus = HKG_13
-		}
-		prerequisite = {
-			focus = HKG_14
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_recruit_red_poles
-		x = 0
-		y = 5
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = {
-		id = HKG_16
+		id = HKG_arms_manufacturing
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
@@ -1078,12 +1070,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_ideas = HKG_arms_manufacturing_idea
+			326 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
-		id = HKG_17
+		id = HKG_conflicted_loyalties
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
@@ -1105,7 +1104,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HKG_18
+		id = HKG_martial_art
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
@@ -1122,19 +1121,23 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_command_power = -10
+			swap_ideas = {
+				remove_idea = HKG_triad_army_bandit_idea1
+				add_idea = HKG_triad_army_bandit_idea2
+			}
+			add_ideas = HKG_martial_art_idea
 		}
 	}
 	focus = {
-		id = HKG_19
+		id = HKG_assault_tactics
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_16
+			focus = HKG_arms_manufacturing
 		}
 		prerequisite = {
-			focus = HKG_17
+			focus = HKG_conflicted_loyalties
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1147,19 +1150,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			army_experience = 20
+			add_tech_bonus = {
+				name = HKG_air
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
-		id = HKG_20
+		id = HKG_street_fighting
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_18
+			focus = HKG_martial_art
 		}
 		prerequisite = {
-			focus = HKG_17
+			focus = HKG_conflicted_loyalties
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1172,19 +1180,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			army_experience = 30
+			custom_effect_tooltip = asymmetrical_warfare_effect
+			hidden_effect = {
+				set_technology = {
+					asymmetrical_warfare = 1
+				}
+			}
 		}
 	}
 	focus = {
-		id = HKG_21
+		id = HKG_initiate_loyal
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_19
+			focus = HKG_assault_tactics
 		}
 		prerequisite = {
-			focus = HKG_20
+			focus = HKG_street_fighting
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1197,19 +1210,25 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_command_power = -10
+			swap_ideas = {
+				remove_idea = HKG_triad_army_bandit_idea2
+				add_idea = HKG_triad_army_bandit_idea3
+			}
+			add_manpower = 75000
+			add_war_support = 0.1
+			army_experience = 15
 		}
 	}
 	focus = {
-		id = HKG_22
+		id = HKG_reverse_engineer
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_19
+			focus = HKG_assault_tactics
 		}
 		prerequisite = {
-			focus = HKG_20
+			focus = HKG_street_fighting
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1222,19 +1241,29 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_tech_bonus = {
+				name = HKG_infantry
+				bonus = 0.75
+				uses = 3
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = HKG_artillery
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
 		}
 	}
 	focus = {
-		id = HKG_23
+		id = HKG_vision_realized
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_21
+			focus = HKG_initiate_loyal
 		}
 		prerequisite = {
-			focus = HKG_22
+			focus = HKG_reverse_engineer
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1247,8 +1276,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_war_support = 0.05
+			swap_ideas = {
+				remove_idea = HKG_triad_army_bandit_idea3
+				add_idea = HKG_triad_army_bandit_idea4
+			}
 		}
 	}
 	focus = { 

@@ -161,5 +161,172 @@ ideas = {
 				political_power_factor = -0.25
 			}
 		}
+		HKG_triad_army_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_idea"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				conscription_factor = -0.35
+				army_org_factor	= -0.25
+				max_planning = -0.15
+				planning_speed = -0.15
+				supply_consumption_factor = -0.10
+				no_supply_grace = 36
+				training_time_factor = 0.1
+			}
+		}
+		HKG_triad_army_smuggler_idea1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_smuggler_idea1"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				conscription_factor = -0.30
+				army_org_factor	= -0.25
+				max_planning = -0.15
+				planning_speed = -0.15
+				supply_consumption_factor = -0.15
+				no_supply_grace = 36
+				training_time_factor = 0.05
+			}
+		}
+		HKG_triad_army_smuggler_idea2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_smuggler_idea2"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				conscription_factor = -0.30
+				army_org_factor	= -0.15
+				max_planning = -0.15
+				planning_speed = -0.15
+				supply_consumption_factor = -0.15
+				no_supply_grace = 36
+				training_time_factor = 0.05
+				decryption_factor = 0.05
+				encryption_factor = 0.05
+			}
+		}
+		HKG_triad_army_smuggler_idea3 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_smuggler_idea3"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				conscription_factor = -0.15
+				army_org_factor	= 0.05
+				max_planning = -0.15
+				planning_speed = -0.15
+				supply_consumption_factor = -0.15
+				no_supply_grace = 36
+				decryption_factor = 0.05
+				encryption_factor = 0.05
+				mobilization_speed = 0.1
+			}
+		}
+		HKG_triad_army_smuggler_idea4 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_smuggler_idea4"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				army_org_factor	= 0.15
+				max_planning = -0.15
+				planning_speed = -0.15
+				supply_consumption_factor = -0.2
+				no_supply_grace = 36
+				decryption_factor = 0.05
+				encryption_factor = 0.05
+				land_reinforce_rate = 0.05
+				mobilization_speed = -0.1
+			}
+		}
+		HKG_triad_army_bandit_idea1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_bandit_idea1"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				conscription_factor = -0.15
+				army_org_factor	= -0.2
+				max_planning = -0.15
+				planning_speed = -0.15
+				supply_consumption_factor = -0.10
+				no_supply_grace = 36
+				training_time_factor = 0.05
+			}
+		}
+		HKG_triad_army_bandit_idea2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_bandit_idea2"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				conscription_factor = -0.15
+				army_org_factor	= -0.1
+				max_planning = -0.15
+				planning_speed = -0.15
+				supply_consumption_factor = -0.10
+				no_supply_grace = 36
+				training_time_factor = 0.05
+				army_morale_factor = 0.025
+			}
+		}
+		HKG_triad_army_bandit_idea3 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_bandit_idea3"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				conscription_factor = 0.1
+				max_planning = -0.15
+				planning_speed = -0.15
+				supply_consumption_factor = -0.10
+				no_supply_grace = 36
+				training_time_factor = 0.05
+				army_morale_factor = 0.025
+			}
+		}
+		HKG_triad_army_bandit_idea4 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_bandit_idea3"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				conscription_factor = 0.1
+				max_planning = -0.1
+				planning_speed = -0.1
+				supply_consumption_factor = -0.10
+				no_supply_grace = 36
+				army_morale_factor = 0.075
+				training_time_factor = -0.05
+			}
+		}
+		HKG_martial_art_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_martial_art_idea"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				experience_gain_army = 0.05
+				army_org_factor	= 0.1
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+			}
+		}
+		HKG_arms_manufacturing_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_arms_manufacturing_idea"
+			}
+			picture = HOL_workplace_democracy
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
+			}
+		}
 	}
 }
