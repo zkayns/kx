@@ -204,8 +204,7 @@ ideas = {
 				supply_consumption_factor = -0.15
 				no_supply_grace = 36
 				training_time_factor = 0.05
-				decryption_factor = 0.05
-				encryption_factor = 0.05
+				encryption_factor = 0.1
 			}
 		}
 		HKG_triad_army_smuggler_idea3 = {
@@ -220,8 +219,7 @@ ideas = {
 				planning_speed = -0.15
 				supply_consumption_factor = -0.15
 				no_supply_grace = 36
-				decryption_factor = 0.05
-				encryption_factor = 0.05
+				encryption_factor = 0.1
 				mobilization_speed = 0.1
 			}
 		}
@@ -236,10 +234,9 @@ ideas = {
 				planning_speed = -0.15
 				supply_consumption_factor = -0.2
 				no_supply_grace = 36
-				decryption_factor = 0.05
-				encryption_factor = 0.05
+				encryption_factor = 0.1
 				land_reinforce_rate = 0.05
-				mobilization_speed = -0.1
+				mobilization_speed = 0.1
 			}
 		}
 		HKG_triad_army_bandit_idea1 = {
