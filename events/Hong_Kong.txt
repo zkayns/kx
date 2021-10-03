@@ -642,3 +642,131 @@ country_event = { #Triads takeover!
 		}
 	}
 }
+
+### TRIAD EVENTS ###
+
+country_event = { #Conflicted Loyalties
+	id = hktriads.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.1" }
+	title = hktriads.1.t
+	desc = hktriads.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hktriads.1.a
+		add_manpower = -400
+		add_political_power = -15
+	}
+	option = {
+		name = hktriads.1.b
+		custom_effect_tooltip = HKG_loyalties_tt1
+		add_timed_idea = {
+			idea = HKG_loyalties_crack_idea
+			days = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = hktriads.2
+				days = 101
+			}
+		}
+	}
+	option = {
+		name = hktriads.1.c
+		custom_effect_tooltip = HKG_loyalties_tt2
+		add_ideas = HKG_loyalties_appease_idea
+		hidden_effect = {
+			country_event = {
+				id = hktriads.3
+				days = 24
+			}
+		}
+	}
+}
+
+country_event = { #Conflicted Loyalties pt. 2
+	id = hktriads.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2" }
+	title = hktriads.2.t
+	desc = hktriads.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hktriads.2.a
+		add_ideas = HKG_loyalties_cracked_idea
+	}
+}
+
+country_event = { #Conflicted Loyalties pt. 3
+	id = hktriads.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.3" }
+	title = hktriads.3.t
+	desc = hktriads.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hktriads.3.a
+		remove_ideas = HKG_loyalties_appease_idea
+		add_ideas = HKG_cronies_payment_idea
+	}
+	option = {
+		name = hktriads.3.b
+		hidden_effect = {
+			country_event = {
+				id = hktriads.4
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #Conflicted Loyalties pt. 4
+	id = hktriads.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.4" }
+	title = hktriads.4.t
+	desc = hktriads.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hktriads.4.a
+		add_stability = -0.15
+		add_manpower = -10
+		swap_ideas = {
+			remove_idea = HKG_loyalties_appease_idea
+			add_idea = HKG_loyalties_appeased_idea
+		}
+	}
+}
+
+country_event = { #Central Guoshu Institute
+	id = hktriads.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.5" }
+	title = hktriads.5.t
+	desc = hktriads.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hktriads.5.a
+		add_manpower = 1500
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+	}
+}
+
+country_event = { #Hit-and-run tactics
+	id = hktriads.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6" }
+	title = hktriads.6.t
+	desc = hktriads.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hktriads.6.a
+		add_war_support = 0.015
+	}
+}
