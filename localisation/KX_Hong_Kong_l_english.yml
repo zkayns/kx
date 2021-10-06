@@ -71,9 +71,11 @@ HKG_loyalties_crack_idea:0 "Stamping Out Trecherous Activities"
 HKG_loyalties_cracked_idea:0 "Dutiful Enforcers"
 HKG_loyalties_appease_idea:0 "Self-Indulgent Enforcers"
 HKG_loyalties_appeased_idea:0 "Intimidated Enforcers"
-HKG_cronies_payment_idea:0 "Increased Red Poles' Payroll"
-HKG_non_mtg_fags_idea:0 "Smugglers Network Formed"
-HKG_new_piracy_idea:0 "Piratng in the South China Sea"
+HKG_cronies_payment_idea:0 "Increased Red Poles' Payrolls"
+HKG_non_mtg_fags_idea:0 "Smuggler Networks"
+HKG_new_piracy_idea:0 "South China Sea Pirating"
+HKG_submarines_idea:0 "Submersible Armada"
+HKG_prize_idea:0 "The Prize is Right"
 
 
 #### Triggers
@@ -88,7 +90,7 @@ HKG_sun_yee_on_in_charge:0 "The Sun Yee On has emerged victorious in the power s
 HKG_14k_in_charge:0 "The 14K has emerged victorious in the power struggle"
 HKG_loyalties_tt1:0 "§GIt will take some time to replace the troublesome associates with ones that can be trusted.§!"
 HKG_loyalties_tt2:0 "§RThe cronies will have to be dealt with eventually...§!"
-HKG_mainland_connections_tt:0 "§GOur network of associates in the Chinese interior will allow us to gain a significent portion of civilian intelligence in the region!§!"
+HKG_mainland_connections_tt:0 "§GOur network of associates in the Chinese interior will allow us to gain a significent portion of civilian and military intelligence in the region!§!"
 
 
 #################
@@ -168,7 +170,7 @@ HKG_chain_loyalty:0 "Formulate Chains of Responsibility"
 HKG_chain_loyalty_desc:0 "d"
 HKG_drug_trafficking:0 "Introduce Aerial Trafficking Networks"
 HKG_drug_trafficking_desc:0 "d"
-HKG_prize:0 "The §YPrize§! is Right!"
+HKG_prize:0 "Eyes on the §YPrize§!!"
 HKG_prize_desc:0 "d"
 HKG_smooth_sailing:0 "Smugglers Smooth Sailing"
 HKG_smooth_sailing_desc:0 "d"
@@ -273,3 +275,7 @@ hktriads.5.a:0 "slick beans"
 hktriads.6.t:0 "Harassment and Withdrawal"
 hktriads.6.d:0 "basically guerilla tactics ok"
 hktriads.6.a:0 "slick beans"
+
+hktriads.7.t:0 "Coordinated Troubleshooting System"
+hktriads.7.d:0 "everybody knows their place and their task and they are faithful to it"
+hktriads.7.a:0 "impressive!"

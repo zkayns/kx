@@ -733,7 +733,7 @@ focus_tree = {
 				category = infantry_weapons
 			}
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
+				type = infantry_equipment
 				amount = 1750
 				producer = HKG
 			}
@@ -937,7 +937,11 @@ focus_tree = {
 					}
 					add_intel = {
 						target = LEP
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = LEP
+						army_intel = 15
 					}
 				}
 				if = {
@@ -949,7 +953,11 @@ focus_tree = {
 					}
 					add_intel = {
 						target = GXC
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = GXC
+						army_intel = 15
 					}
 				}
 				if = {
@@ -961,7 +969,11 @@ focus_tree = {
 					}
 					add_intel = {
 						target = CHI
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = CHI
+						army_intel = 15
 					}
 				}
 				if = {
@@ -973,7 +985,11 @@ focus_tree = {
 					}
 					add_intel = {
 						target = YUN
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = YUN
+						army_intel = 15
 					}
 				}
 				if = {
@@ -985,7 +1001,11 @@ focus_tree = {
 					}
 					add_intel = {
 						target = SZC
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = SZC
+						army_intel = 15
 					}
 				}
 				if = {
@@ -997,7 +1017,11 @@ focus_tree = {
 					}
 					add_intel = {
 						target = ANQ
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = ANQ
+						army_intel = 15
 					}
 				}
 				if = {
@@ -1009,7 +1033,11 @@ focus_tree = {
 					}
 					add_intel = {
 						target = SQI
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = SQI
+						army_intel = 15
 					}
 				}
 				if = {
@@ -1021,7 +1049,11 @@ focus_tree = {
 					}
 					add_intel = {
 						target = QIE
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = QIE
+						army_intel = 15
 					}
 				}
 				if = {
@@ -1033,7 +1065,27 @@ focus_tree = {
 					}
 					add_intel = {
 						target = SHX
-						civilian_intel = 25
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = SHX
+						army_intel = 15
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "La Resistance"
+						PRC = {
+							exists = yes
+						}
+					}
+					add_intel = {
+						target = PRC
+						civilian_intel = 20
+					}
+					add_intel = {
+						target = PRC
+						army_intel = 15
 					}
 				}
 			else = {
@@ -1063,7 +1115,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			add_tech_bonus = {
+					name = HKG_navy
+					bonus = 1
+					uses = 2
+					category = naval_doctrine
+				}
+				add_tech_bonus = {
+					name = HKG_navy
+					bonus = 1
+					uses = 1
+					category = ss_tech
+				}
+			navy_experience = 75
 			add_ideas = HKG_new_piracy_idea
+			add_ideas = HKG_submarines_idea
 		}
 	}
 	focus = {
@@ -1087,6 +1153,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			country_event = hktriads.7
 			swap_ideas = {
 				remove_idea = HKG_triad_army_smuggler_idea1
 				add_idea = HKG_triad_army_smuggler_idea2
@@ -1114,6 +1181,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			army_experience = 50
+			add_ideas = HKG_prize_idea
 			swap_ideas = {
 				remove_idea = HKG_triad_army_smuggler_idea2
 				add_idea = HKG_triad_army_smuggler_idea3
@@ -1141,8 +1210,47 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+				add_tech_bonus = {
+					name = HKG_air
+					bonus = 1
+					uses = 2
+					category = air_doctrine
+				}
+				add_tech_bonus = {
+					name = HKG_air1
+					bonus = 1
+					uses = 1
+					category = light_fighter
+				}
+				air_experience = 75
+				add_equipment_to_stockpile = {
+					type = fighter_equipment
+					amount = 125
+					producer = HKG
+				}
+				add_equipment_to_stockpile = {
+					type = transport_plane_equipment
+					amount = 75
+					producer = HKG
+				}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = HKG
+					is_in_home_area = yes
+					air_base < 7
+					infrastructure < 7
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -1166,6 +1274,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			add_war_support = 0.05
 			swap_ideas = {
 				remove_idea = HKG_triad_army_smuggler_idea3
 				add_idea = HKG_triad_army_smuggler_idea4

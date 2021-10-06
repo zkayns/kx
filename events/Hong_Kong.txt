@@ -770,3 +770,17 @@ country_event = { #Hit-and-run tactics
 		add_war_support = 0.015
 	}
 }
+
+country_event = { #Coordinated Troubleshooting System
+	id = hktriads.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.7" }
+	title = hktriads.7.t
+	desc = hktriads.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hktriads.7.a
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+	}
+}
