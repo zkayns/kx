@@ -7571,4 +7571,29 @@ SpriteTypes = {
 		name = "DSR_Wipe_the_slate_clean_burn_it_all_down"
 		texturefile = "gfx/interface/goals/goal_DSR_Wipe_the_slate_clean_burn_it_all_down.png"
 	}
+	### HKG ###
+	SpriteType = {
+		name = "GFX_focus_HKG_provisional_government"
+		texturefile = "gfx/interface/goals/GFX_focus_HKG_provisional_government.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_secure_the_streets"
+		texturefile = "gfx/interface/goals/GFX_focus_HKG_secure_the_streets.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_banditry_suppressed"
+		texturefile = "gfx/interface/goals/GFX_focus_HKG_banditry_suppressed.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_kowloon_march"
+		texturefile = "gfx/interface/goals/GFX_focus_HKG_kowloon_march.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_business_reach"
+		texturefile = "gfx/interface/goals/GFX_focus_HKG_business_reach.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_disorder_quelled"
+		texturefile = "gfx/interface/goals/GFX_focus_HKG_disorder_quelled.png"
+	}
 }

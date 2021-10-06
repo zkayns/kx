@@ -784,3 +784,18 @@ country_event = { #Coordinated Troubleshooting System
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 	}
 }
+
+country_event = { #Coordinated Troubleshooting System
+	id = hktriads.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8" }
+	title = hktriads.8.t
+	desc = hktriads.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hktriads.8.a
+		add_stability = 0.075
+		add_political_power = 30
+	}
+}
