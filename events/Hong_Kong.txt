@@ -799,3 +799,53 @@ country_event = { #Coordinated Troubleshooting System
 		add_political_power = 30
 	}
 }
+
+country_event = { #hunt syndies good
+	id = hktriads.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.9" }
+	title = hktriads.9.t
+	desc = hktriads.9.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.9.a
+		add_manpower = -50
+		add_stability = 0.025
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+}
+
+country_event = { #hunt syndies vgood
+	id = hktriads.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.10" }
+	title = hktriads.10.t
+	desc = hktriads.10.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.10.a
+		add_manpower = -35
+		add_stability = 0.05
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 275
+			producer = HKG
+		}
+	}
+}
+
+country_event = { #hunt syndies bad
+	id = hktriads.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.11" }
+	title = hktriads.11.t
+	desc = hktriads.11.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.11.a
+		add_manpower = -150
+		add_stability = -0.025
+		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
+	}
+}

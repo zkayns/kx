@@ -7596,4 +7596,8 @@ SpriteTypes = {
 		name = "GFX_focus_HKG_disorder_quelled"
 		texturefile = "gfx/interface/goals/GFX_focus_HKG_disorder_quelled.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_HKG_border_control"
+		texturefile = "gfx/interface/goals/GFX_focus_HKG_border_control.png"
+	}
 }

@@ -1,0 +1,116 @@
+HKG_no_commies_decisions = {
+	HKG_recruit_no_commie_militia = {
+		icon = soldierly_discipline
+		available = {
+			has_equipment = { infantry_equipment > 749 }
+			has_country_flag = HKG_triads_in_charge
+		}
+		visible = {
+			has_completed_focus = HKG_no_commies
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 749 }
+		}
+		custom_cost_text = 750_infantry_equipment
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 30
+		ai_will_do = {
+			factor = 100
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_recruit_no_commie_militia"
+			custom_effect_tooltip = HKG_no_commies_tt
+			hidden_effect = {
+				load_oob = "HKG_no_commies"
+			}
+		}
+	}
+	HKG_hunt_syndies = {
+		icon = hand_grab
+		available = {
+			has_country_flag = HKG_triads_in_charge
+		}
+		visible = {
+			has_completed_focus = HKG_no_commies
+		}
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 60
+		days_remove = 15
+		ai_will_do = {
+			factor = 100
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_hunt_syndies"
+			effect_tooltip = {
+				if = {
+					limit = { has_equipment = { infantry_equipment > 2449 }
+					}
+					random_list = {
+						75 = { 
+							custom_effect_tooltip = HKG_hunt_syndies_good
+							hidden_effect = {
+								country_event = {
+								id = hktriads.9
+								days = 2
+							}
+							}
+						}
+						15 = {
+							custom_effect_tooltip = HKG_hunt_syndies_vgood
+							hidden_effect = {
+								country_event = {
+									id = hktriads.10
+									days = 2
+								}
+							}
+						}
+						10 = { 
+							custom_effect_tooltip = HKG_hunt_syndies_bad
+							hidden_effect = {
+								country_event = {
+									id = hktriads.11
+									days = 2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					random_list = {
+						70 = { 
+							custom_effect_tooltip = HKG_hunt_syndies_good
+							hidden_effect = {
+								country_event = {
+									id = hktriads.9
+									days = 2
+								}
+							}
+						}
+						10 = {
+							custom_effect_tooltip = HKG_hunt_syndies_vgood
+							hidden_effect = {
+								country_event = {
+									id = hktriads.10
+									days = 2
+								}
+							}
+						}
+						20 = { 
+							custom_effect_tooltip = HKG_hunt_syndies_bad
+							hidden_effect = {
+								country_event = {
+									id = hktriads.11
+									days = 2
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

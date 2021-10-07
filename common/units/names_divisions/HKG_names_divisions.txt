@@ -37,3 +37,43 @@ HKG_MIL_01 = {
 		20 = { "%dth Hong Kong Police Squadron" }
 	}
 }
+
+HKG_MIL_02 = {
+	name = "Militia Division"
+
+	for_countries = { HKG }
+
+	can_use = { always = yes }
+
+	division_types = { "militia" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HKG_INF_02 }
+
+	fallback_name = "%d. Anti-Socialist Brigade"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Anti-Socialist Brigade" }
+		2 = { "%dnd Anti-Socialist Brigade" }
+		3 = { "%drd Anti-Socialist Brigade" }
+		4 = { "%dth Anti-Socialist Brigade" }
+		5 = { "%dth Anti-Socialist Brigade" }
+		6 = { "%dth Anti-Socialist Brigade" }
+		7 = { "%dth Anti-Socialist Brigade" }
+		8 = { "%dth Anti-Socialist Brigade" }
+		9 = { "%dth Anti-Socialist Brigade" }
+		10 = { "%dth Anti-Socialist Brigade" }
+		11 = { "%dth Anti-Socialist Brigade" }
+		12 = { "%dth Anti-Socialist Brigade" }
+		13 = { "%dth Anti-Socialist Brigade" }
+		14 = { "%dth Anti-Socialist Brigade" }
+		15 = { "%dth Anti-Socialist Brigade" }
+		16 = { "%dth Anti-Socialist Brigade" }
+		17 = { "%dth Anti-Socialist Brigade" }
+		18 = { "%dth Anti-Socialist Brigade" }
+		19 = { "%dth Anti-Socialist Brigade" }
+		20 = { "%dth Anti-Socialist Brigade" }
+	}
+}

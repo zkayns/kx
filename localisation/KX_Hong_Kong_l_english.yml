@@ -83,7 +83,16 @@ HKG_prize_idea:0 "The Prize is Right"
 HKG_officer_corps_idea:0 "Officer Corps Primacy"
 
 
-#### Triggers
+#### Decisions
+HKG_no_commies_decisions:0 "The Anti-Socialist Movement"
+HKG_no_commies_decisions_desc:0 ""
+HKG_recruit_no_commie_militia:0 "Raise Anti-Socialist Militias"
+HKG_recruit_no_commie_militia_desc:0 ""
+HKG_hunt_syndies:0 "Hunt LKMT Cells"
+
+
+750_infantry_equipment:0 "£rifle_texticon §H750§!"
+750_infantry_equipment_blocked:0 "£rifle_texticon §R750§!"
 
 #### Tooltips
 
@@ -96,6 +105,10 @@ HKG_14k_in_charge:0 "The 14K has emerged victorious in the power struggle"
 HKG_loyalties_tt1:0 "§GIt will take some time to replace the troublesome associates with ones that can be trusted.§!"
 HKG_loyalties_tt2:0 "§RThe cronies will have to be dealt with eventually...§!"
 HKG_mainland_connections_tt:0 "§GOur network of associates in the Chinese interior will allow us to gain a significent portion of civilian and military intelligence in the region!§!"
+HKG_no_commies_tt:0 "Three §Ranti-socialist§! regiments will join our cause!"
+HKG_hunt_syndies_good:0 "a §Csuccessful§! operation against the leftist cells!"
+HKG_hunt_syndies_vgood:0 "a §Gvery successful§! operation against the leftist cells!"
+HKG_hunt_syndies_bad:0 "an §Runsuccessful§! operation against the leftist cells!"
 
 
 #################
@@ -121,7 +134,7 @@ HKG_business_reach:0 "Reach Out to Merchants and Bankers"
 HKG_business_reach_desc:0 ""
 HKG_appoint_civilian_officials:0 "Appoint New Bureaucrats"
 HKG_appoint_civilian_officials_desc:0 "d"
-HKG_disorder_quelled:0 "Restore Law and Order in the Streets"
+HKG_disorder_quelled:0 "Restore Law and Order to the Streets"
 HKG_disorder_quelled_desc:0 "d"
 HKG_administration_founded:0 "Set Foundations for a Stable Administration"
 HKG_administration_founded_desc:0 "d"
