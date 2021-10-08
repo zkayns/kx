@@ -474,5 +474,20 @@ ideas = {
 				experience_gain_navy = 0.05
 			}
 		}
+		HKG_no_commies_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_no_commies_idea"
+			}
+			picture = GFX_idea_HUN_white_terror_idea_2
+			modifier = {
+				party_popularity_stability_factor = 0.15
+				political_power_gain = 0.1
+				army_morale_factor = 0.075
+				surrender_limit = 0.1
+				totalist_drift = -0.1
+				syndicalist_drift = -0.1
+				radical_socialist_drift = -0.1
+			}
+		}
 	}
 }

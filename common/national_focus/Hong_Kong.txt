@@ -836,6 +836,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
 			unlock_decision_category_tooltip = HKG_no_commies_decisions
+			hidden_effect = {
+				HKG_no_commies_setup = yes
+			}
 		}
 	}
 	focus = { 

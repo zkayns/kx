@@ -1,5 +1,5 @@
 HKG_no_commies_decisions = {
-	HKG_recruit_no_commie_militia = {
+	HKG_recruit_no_commies_militia = {
 		icon = soldierly_discipline
 		available = {
 			has_equipment = { infantry_equipment > 749 }
@@ -7,6 +7,7 @@ HKG_no_commies_decisions = {
 		}
 		visible = {
 			has_completed_focus = HKG_no_commies
+			has_country_flag = HKG_no_commies_flag
 		}
 		custom_cost_trigger = {
 			has_equipment = { infantry_equipment > 749 }
@@ -20,10 +21,12 @@ HKG_no_commies_decisions = {
 		}
 		
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_recruit_no_commie_militia"
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_recruit_no_commies_militia"
 			custom_effect_tooltip = HKG_no_commies_tt
 			hidden_effect = {
 				load_oob = "HKG_no_commies"
+				HKG_no_commies_check = yes
+				HKG_no_commies_militia_effect = yes
 			}
 		}
 	}
@@ -34,6 +37,7 @@ HKG_no_commies_decisions = {
 		}
 		visible = {
 			has_completed_focus = HKG_no_commies
+			has_country_flag = HKG_no_commies_flag
 		}
 		cost = 25
 		fire_only_once = no
@@ -50,9 +54,10 @@ HKG_no_commies_decisions = {
 					limit = { has_equipment = { infantry_equipment > 2449 }
 					}
 					random_list = {
-						75 = { 
+						70 = { 
 							custom_effect_tooltip = HKG_hunt_syndies_good
 							hidden_effect = {
+								HKG_no_commies_check = yes
 								country_event = {
 								id = hktriads.9
 								days = 2
@@ -62,15 +67,53 @@ HKG_no_commies_decisions = {
 						15 = {
 							custom_effect_tooltip = HKG_hunt_syndies_vgood
 							hidden_effect = {
+								HKG_no_commies_check = yes
 								country_event = {
 									id = hktriads.10
 									days = 2
 								}
 							}
 						}
-						10 = { 
+						15 = { 
 							custom_effect_tooltip = HKG_hunt_syndies_bad
 							hidden_effect = {
+								HKG_no_commies_check = yes
+								country_event = {
+									id = hktriads.11
+									days = 2
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { has_equipment = { infantry_equipment > 5449 }
+					}
+					random_list = {
+						75 = { 
+							custom_effect_tooltip = HKG_hunt_syndies_good
+							hidden_effect = {
+								HKG_no_commies_check = yes
+								country_event = {
+								id = hktriads.9
+								days = 2
+							}
+							}
+						}
+						20 = {
+							custom_effect_tooltip = HKG_hunt_syndies_vgood
+							hidden_effect = {
+								HKG_no_commies_check = yes
+								country_event = {
+									id = hktriads.10
+									days = 2
+								}
+							}
+						}
+						5 = { 
+							custom_effect_tooltip = HKG_hunt_syndies_bad
+							hidden_effect = {
+								HKG_no_commies_check = yes
 								country_event = {
 									id = hktriads.11
 									days = 2
@@ -84,6 +127,7 @@ HKG_no_commies_decisions = {
 						70 = { 
 							custom_effect_tooltip = HKG_hunt_syndies_good
 							hidden_effect = {
+								HKG_no_commies_check = yes
 								country_event = {
 									id = hktriads.9
 									days = 2
@@ -93,6 +137,7 @@ HKG_no_commies_decisions = {
 						10 = {
 							custom_effect_tooltip = HKG_hunt_syndies_vgood
 							hidden_effect = {
+								HKG_no_commies_check = yes
 								country_event = {
 									id = hktriads.10
 									days = 2
@@ -102,6 +147,7 @@ HKG_no_commies_decisions = {
 						20 = { 
 							custom_effect_tooltip = HKG_hunt_syndies_bad
 							hidden_effect = {
+								HKG_no_commies_check = yes
 								country_event = {
 									id = hktriads.11
 									days = 2
@@ -110,6 +156,40 @@ HKG_no_commies_decisions = {
 						}
 					}
 				}
+			}
+		}
+	}
+	HKG_no_commies_burma = {
+		icon = trumpet
+		available = {
+			has_equipment = { infantry_equipment > 1999 }
+			has_country_flag = HKG_triads_in_charge
+			BRM = {
+				exists = yes
+				has_socialist_government = yes
+			}
+		}
+		visible = {
+			has_completed_focus = HKG_no_commies
+			has_country_flag = HKG_no_commies_flag
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = 2000_infantry_equipment_1
+		fire_only_once = yes
+		days_remove = 80
+		ai_will_do = {
+			factor = 100
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_no_commies_burma"
+			custom_effect_tooltip = HKG_no_commies_tt
+			hidden_effect = {
+				load_oob = "HKG_no_commies"
+				HKG_no_commies_check = yes
+				HKG_no_commies_militia_effect = yes
 			}
 		}
 	}

@@ -1,0 +1,58 @@
+HKG_no_commies_setup = {
+	set_variable = { HKG_no_commies_progress = 0 }
+	clamp_variable = {
+		var = HKG_no_commies_progress
+		min = 0
+		max = 50
+	}
+	set_country_flag = HKG_no_commies_flag
+}
+
+HKG_no_commies_check = {
+	if = {
+		limit = {
+			check_variable = { HKG_no_commies_progress < 49 }
+			CHI = {
+				exists = no
+			}
+			GXC = {
+				exists = no
+			}
+			SZC = {
+				OR = {
+					exists = no
+					has_socialist_government = no
+				}
+			}
+		}
+		HKG = {
+			clr_country_flag = HKG_no_commies_flag
+			country_event = hktriads.12
+		}
+	}
+	else = {
+		add_manpower = 1
+	}
+}
+
+
+HKG_no_commies_militia_effect = {
+	add_to_variable = { HKG_no_commies_progress = 3 }
+}
+
+HKG_hunt_syndies_effect_good = {
+	add_to_variable = { HKG_no_commies_progress = 3 }
+}
+
+HKG_hunt_syndies_effect_vgood = {
+	add_to_variable = { HKG_no_commies_progress = 5 }
+}
+
+HKG_hunt_syndies_effect_bad = {
+	add_to_variable = { HKG_no_commies_progress = -3 }
+}
+
+HKG_hunt_syndies_effect_bad = {
+	add_to_variable = { HKG_no_commies_progress = -3 }
+}
+

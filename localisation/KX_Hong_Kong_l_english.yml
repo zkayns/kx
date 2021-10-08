@@ -81,14 +81,15 @@ HKG_new_piracy_idea:0 "South China Sea Pirating"
 HKG_submarines_idea:0 "Submersible Armada"
 HKG_prize_idea:0 "The Prize is Right"
 HKG_officer_corps_idea:0 "Officer Corps Primacy"
+HKG_no_commies_idea:0 "Leftist Thought Eradicated"
 
 
 #### Decisions
 HKG_no_commies_decisions:0 "The Anti-Socialist Movement"
 HKG_no_commies_decisions_desc:0 ""
-HKG_recruit_no_commie_militia:0 "Raise Anti-Socialist Militias"
-HKG_recruit_no_commie_militia_desc:0 ""
-HKG_hunt_syndies:0 "Hunt LKMT Cells"
+HKG_recruit_no_commies_militia:0 "Raise Anti-Socialist Militias"
+HKG_recruit_no_commies_militia_desc:0 ""
+HKG_hunt_syndies:0 "Hunt L-KMT Cells"
 
 
 750_infantry_equipment:0 "£rifle_texticon §H750§!"
@@ -301,3 +302,19 @@ hktriads.7.a:0 "impressive!"
 hktriads.8.t:0 "Restructuring Our Command Hierarchy"
 hktriads.8.d:0 "basically: 49ers become soldiers or reserves, red poles become NCOs, vanguards take care of intel, white paper fans become administrators"
 hktriads.8.a:0 "splendid!"
+
+hktriads.9.t:0 "L-KMT Cells Harassed"
+hktriads.9.d:0 "title"
+hktriads.9.a:0 "splendid!"
+
+hktriads.10.t:0 "L-KMT Cells Badly Wounded!"
+hktriads.10.d:0 "title"
+hktriads.10.a:0 "splendid!"
+
+hktriads.11.t:0 "L-KMT Cells Push Back Our Agents!"
+hktriads.11.d:0 "title"
+hktriads.11.a:0 "wtf"
+
+hktriads.12.t:0 "Socialist Influence in China Destroyed!"
+hktriads.12.d:0 "end to the no commies decision minigame"
+hktriads.12.a:0 "splendid!"
