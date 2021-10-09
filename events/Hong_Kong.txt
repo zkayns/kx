@@ -615,7 +615,7 @@ country_event = { #Triads takeover!
 		}
 		if = {
 			limit = {
-				has_ideas = HKG_makeshift_administration_idea2
+				has_idea = HKG_makeshift_administration_idea2
 			}
 			swap_ideas = {
 				remove_idea = HKG_makeshift_administration_idea2
@@ -864,14 +864,70 @@ country_event = { #no commies final event
 		add_political_power = 100
 		add_stability = 0.05
 		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
-		random_other_country = {
+		every_country = {
 			limit = {
 				has_socialist_government = yes
 			}
 			add_opinion_modifier = {
 				target = HKG
 				modifier = KR_outraged
-			}
+			}	
 		}
+	}
+}
+
+country_event = { #(BRM) 14k members spotted (might get expanded upon)
+	id = hktriads.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.13" }
+	title = hktriads.13.t
+	desc = hktriads.13.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.13.a
+		add_manpower = -200
+		add_war_support = 0.025
+	}
+}
+
+country_event = { # no commies burma
+	id = hktriads.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.14" }
+	title = hktriads.14.t
+	desc = hktriads.14.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.14.a
+		add_stability = 0.025
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+	}
+}
+
+country_event = { # no commies burma
+	id = hktriads.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.15" }
+	title = hktriads.15.t
+	desc = hktriads.15.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.15.a
+		add_war_support = 0.015
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+}
+
+country_event = { # no commies burma
+	id = hktriads.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.16" }
+	title = hktriads.16.t
+	desc = hktriads.16.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.16.a
+		add_stability = 0.015
+		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
 	}
 }

@@ -3,7 +3,7 @@ HKG_no_commies_setup = {
 	clamp_variable = {
 		var = HKG_no_commies_progress
 		min = 0
-		max = 50
+		max = 100
 	}
 	set_country_flag = HKG_no_commies_flag
 }
@@ -11,7 +11,7 @@ HKG_no_commies_setup = {
 HKG_no_commies_check = {
 	if = {
 		limit = {
-			check_variable = { HKG_no_commies_progress < 49 }
+			check_variable = { HKG_no_commies_progress < 99 }
 			CHI = {
 				exists = no
 			}
@@ -52,7 +52,11 @@ HKG_hunt_syndies_effect_bad = {
 	add_to_variable = { HKG_no_commies_progress = -3 }
 }
 
-HKG_hunt_syndies_effect_bad = {
-	add_to_variable = { HKG_no_commies_progress = -3 }
+HKG_no_commies_burma_effect = {
+	add_to_variable = { HKG_no_commies_progress = 8 }
+}
+
+HKG_no_commie_books_effect = {
+	add_to_variable = { HKG_no_commies_progress = 10 }
 }
 

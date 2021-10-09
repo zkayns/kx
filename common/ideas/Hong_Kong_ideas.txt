@@ -478,7 +478,7 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_no_commies_idea"
 			}
-			picture = GFX_idea_HUN_white_terror_idea_2
+			picture = FIU_getting_pirated
 			modifier = {
 				party_popularity_stability_factor = 0.15
 				political_power_gain = 0.1
@@ -487,6 +487,28 @@ ideas = {
 				totalist_drift = -0.1
 				syndicalist_drift = -0.1
 				radical_socialist_drift = -0.1
+			}
+		}
+		HKG_no_commie_books_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_no_commie_books_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				research_speed_factor = -0.075
+			}
+		}
+		HKG_no_commie_books_idea1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_no_commie_books_idea1"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				research_speed_factor = -0.025
 			}
 		}
 	}

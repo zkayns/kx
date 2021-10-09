@@ -82,6 +82,8 @@ HKG_submarines_idea:0 "Submersible Armada"
 HKG_prize_idea:0 "The Prize is Right"
 HKG_officer_corps_idea:0 "Officer Corps Primacy"
 HKG_no_commies_idea:0 "Leftist Thought Eradicated"
+HKG_no_commie_books_idea:0 "Crackdown on Socialist Publications"
+HKG_no_commie_books_idea1:0 "Socialist Publications Banned"
 
 
 #### Decisions
@@ -90,6 +92,8 @@ HKG_no_commies_decisions_desc:0 ""
 HKG_recruit_no_commies_militia:0 "Raise Anti-Socialist Militias"
 HKG_recruit_no_commies_militia_desc:0 ""
 HKG_hunt_syndies:0 "Hunt L-KMT Cells"
+HKG_no_commies_burma:0 "Combat Leftist Dissidents in Burma"
+HKG_no_commie_books:0 "Subversive Literature Ban"
 
 
 750_infantry_equipment:0 "£rifle_texticon §H750§!"
@@ -318,3 +322,24 @@ hktriads.11.a:0 "wtf"
 hktriads.12.t:0 "Socialist Influence in China Destroyed!"
 hktriads.12.d:0 "end to the no commies decision minigame"
 hktriads.12.a:0 "splendid!"
+
+hktriads.13.t:0 "Triad Members in the Streets of Yankoun!"
+hktriads.13.d:0 "what they up to doe"
+hktriads.13.a:0 ":huh:"
+
+hktriads.14.t:0 "Our Agents Return from Burma"
+hktriads.14.d:0 "hehe die commies"
+hktriads.14.a:0 "yup"
+
+hktriads.15.t:0 "The Closure of Swindon Book Store"
+hktriads.15.d:0 "banning commie books flavour ev 1(oldest book store)"
+hktriads.15.a:0 "yup"
+
+hktriads.16.t:0 "'The Club'"
+hktriads.16.d:0 "banning commie books flavour ev 2(HK Club)"
+hktriads.16.a:0 "yup"
+
+hktriads.17.t:0 "Witchhunt Concluded"
+hktriads.17.d:0 "banning commie books reward ev"
+hktriads.17.a:0 "yup"
+
