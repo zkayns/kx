@@ -109,6 +109,7 @@ add_namespace = germans
 		add_stability = -0.10
 		set_country_flag = DKB_krasnov_stays
 		unlock_national_focus = DKB_after
+		custom_effect_tooltip = DKB_do_not_pick_for_germans
 		GER = {
 				set_autonomy = {
 					target = DKB
@@ -1085,6 +1086,45 @@ country_event = { #vlasov ded
 		 }
 		 }
 		 set_cosmetic_tag = DKB_RUS_empire
+	 }
+	 option = { #sovl kino
+		name = germans.18.c
+		create_country_leader = {
+			name = "Ivan VII"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {}
+		 }
+		 hidden_effect = {
+		 create_country_leader = {
+			name = "Ivan VII"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {}
+		 }
+		 }
+		 set_cosmetic_tag = DKB_RUS_empire
+	 }
+	 option = { #sovl kino
+		name = germans.18.f
+		create_country_leader = {
+			name = "Louis I"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {}
+		 }
+		 hidden_effect = {
+		 create_country_leader = {
+			name = "Louis I"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {}
+		 }
+		 }
 	 }
 	}
 	
