@@ -96,7 +96,7 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_major_port_idea"
 			}
-			picture = MAG_open_port
+			picture = GFX_idea_HKG_major_port_idea
 			modifier = {
 				trade_opinion_factor = 0.15
 				industrial_capacity_dockyard = 0.10
@@ -509,6 +509,17 @@ ideas = {
 				political_power_gain = 0.1
 				stability_factor = 0.1
 				research_speed_factor = -0.025
+			}
+		}
+		HKG_bolster_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bolster_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_arms_factory_factor = 0.15
 			}
 		}
 	}

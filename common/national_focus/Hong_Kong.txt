@@ -815,7 +815,7 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_no_commies
+		id = HKG_bolster
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
@@ -835,9 +835,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			unlock_decision_category_tooltip = HKG_no_commies_decisions
-			hidden_effect = {
-				HKG_no_commies_setup = yes
+			add_ideas = HKG_bolster_idea
+			326 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -846,7 +851,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_no_commies
+			focus = HKG_bolster
 		}
 		prerequisite = {
 			focus = HKG_discipline
@@ -887,6 +892,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			add_command_power = -10
 			swap_ideas = {
 				remove_idea = HKG_triad_army_standing_idea1
 				add_idea = HKG_triad_army_standing_idea2
@@ -898,7 +904,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = {
-			focus = HKG_no_commies
+			focus = HKG_bolster
 		}
 		prerequisite = {
 			focus = HKG_discipline
@@ -1188,6 +1194,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			add_command_power = -10
 			country_event = hktriads.7
 			swap_ideas = {
 				remove_idea = HKG_triad_army_smuggler_idea1
@@ -1216,6 +1223,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			add_command_power = -10
 			army_experience = 50
 			add_ideas = HKG_prize_idea
 			swap_ideas = {
@@ -1622,8 +1630,8 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something3
-		icon = GFX_goal_ideology_paternal_autocrat
+		id = HKG_no_commies
+		icon = GRU_BAN_LEFT
 		cost = 10
 		prerequisite = { 
 			focus = HKG_14k_something2
@@ -1639,8 +1647,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			unlock_decision_category_tooltip = HKG_no_commies_decisions
+			hidden_effect = {
+				HKG_no_commies_setup = yes
+			}
 		}
 	}
 	focus = { 
@@ -1701,7 +1711,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something3
+			focus = HKG_no_commies
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1745,7 +1755,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something3
+			focus = HKG_no_commies
 		}
 		available = {
 			has_government = paternal_autocrat

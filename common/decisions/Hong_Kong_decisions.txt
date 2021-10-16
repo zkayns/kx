@@ -252,7 +252,7 @@ HKG_no_commies_decisions = {
 		}
 		
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_no_commies_burma"
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_no_commie_books"
 			swap_ideas = {
 				remove_idea = HKG_no_commie_books_idea
 				add_idea = HKG_no_commie_books_idea1

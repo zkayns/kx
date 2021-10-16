@@ -84,6 +84,7 @@ HKG_officer_corps_idea:0 "Officer Corps Primacy"
 HKG_no_commies_idea:0 "Leftist Thought Eradicated"
 HKG_no_commie_books_idea:0 "Crackdown on Socialist Publications"
 HKG_no_commie_books_idea1:0 "Socialist Publications Banned"
+HKG_bolster_idea:0 "Military Factories Investments"
 
 
 #### Decisions
@@ -205,13 +206,14 @@ HKG_discipline:0 "Ensure Discipline Among the Troops"
 HKG_discipline_desc:0 "d"
 HKG_doctrines_focus:0 "Modern Military Doctrines"
 HKG_doctrines_focus_desc:0 "d"
-HKG_no_commies:0 "Anti-Socialist Militias"
-HKG_no_commies_desc:0 "d"
+HKG_bolster:0 "Bolster Arms Production"
+HKG_bolster_desc:0 "d"
 HKG_mil_academy:0 "Found The Hong Kong Military Academy"
 HKG_mil_academy_desc:0 "d"
 HKG_long_arm:0 "The Long Arm of the Dragon Head"
 HKG_long_arm_desc:0 "d"
-
+HKG_no_commies:0 "Combat Leftism"
+HKG_no_commies_desc:0 "d"
 
 #### Events
 

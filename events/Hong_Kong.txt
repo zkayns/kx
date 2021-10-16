@@ -904,7 +904,7 @@ country_event = { # no commies burma
 	}
 }
 
-country_event = { # no commies burma
+country_event = { # book store
 	id = hktriads.15
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.15" }
 	title = hktriads.15.t
@@ -918,7 +918,7 @@ country_event = { # no commies burma
 	}
 }
 
-country_event = { # no commies burma
+country_event = { # hk club
 	id = hktriads.16
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.16" }
 	title = hktriads.16.t
@@ -929,5 +929,19 @@ country_event = { # no commies burma
 		name = hktriads.16.a
 		add_stability = 0.015
 		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+	}
+}
+
+country_event = { # hk club
+	id = hktriads.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.17" }
+	title = hktriads.17.t
+	desc = hktriads.17.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.17.a
+		add_political_power = 75
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 	}
 }
