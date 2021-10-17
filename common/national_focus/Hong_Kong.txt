@@ -786,22 +786,22 @@ focus_tree = {
 			add_ideas = HKG_officer_corps_idea
 			create_corps_commander = {
 				name = "Li Mi"
-				picture = "gfx/leaders/Generic/Portrait_Asia_Generic_land_new_5.png"
+				picture = "Portrait_HKG_Li_Mi_general.png"
 				traits = {
 					harsh_leader
 					infantry_officer
 					jungle_rat
 				}
-				skill = 3
-				attack_skill = 3
+				skill = 2
+				attack_skill = 2
 				defense_skill = 2
-				planning_skill = 2
+				planning_skill = 1
 				logistics_skill = 3
 				id = 12024
 			}
 			create_navy_leader = {
 				name = "Chan Chak"
-				picture = "gfx/leaders/Generic/Portrait_Asia_Generic_land_new_5.png"
+				picture = "Portrait_HKG_Chan_Chak_general.png"
 				traits = {
 					blockade_runner
 				}

@@ -945,3 +945,28 @@ country_event = { # hk club
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 	}
 }
+
+country_event = { # test
+	id = hktriads.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.18" }
+	title = hktriads.18.t
+	desc = hktriads.18.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.18.a
+		set_cosmetic_tag = HKG_SUN_YEE_ON
+	}
+	option = {
+		name = hktriads.18.b
+		set_cosmetic_tag = HKG_14K
+	}
+	option = {
+		name = hktriads.18.c
+		set_cosmetic_tag = HKG_14K_LIANGGUANG
+	}
+	option = {
+		name = hktriads.18.e
+		set_cosmetic_tag = HKG_14K_KMT
+	}
+}
