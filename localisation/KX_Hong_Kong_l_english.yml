@@ -52,6 +52,7 @@ HKG_triads_idea2:0 "Triads in Retreat"
 HKG_triads_idea3:0 "Triads in Advance"
 HKG_major_port_idea:0 "Important International Trade Harbour"
 HKG_bankrupcy_aftermath_idea:0 "Post-Bankrupcy Economy"
+HKG_bankrupcy_aftermath_idea_triad:0 "Economy in Shambles"
 HKG_makeshift_administration_idea:0 "Deficient Administration"
 HKG_makeshift_administration_idea1:0 "Establishing an Efficient Administration"
 HKG_makeshift_administration_idea2:0 "Establishing an Efficient Administration"
@@ -85,6 +86,7 @@ HKG_no_commies_idea:0 "Leftist Thought Eradicated"
 HKG_no_commie_books_idea:0 "Crackdown on Socialist Publications"
 HKG_no_commie_books_idea1:0 "Socialist Publications Banned"
 HKG_bolster_idea:0 "Military Factories Investments"
+HKG_academy_idea:0 "Hong Kong Military Academy"
 
 
 #### Decisions
@@ -212,8 +214,16 @@ HKG_mil_academy:0 "Found The Hong Kong Military Academy"
 HKG_mil_academy_desc:0 "d"
 HKG_long_arm:0 "The Long Arm of the Dragon Head"
 HKG_long_arm_desc:0 "d"
-HKG_no_commies:0 "Combat Leftism"
+HKG_no_commies:0 "Eradicate Leftist Thought"
 HKG_no_commies_desc:0 "d"
+HKG_sinocentrism:0 "Emphasize Sinocentrism"
+HKG_sinocentrism_desc:0 "d"
+HKG_14k_triad_allies:0 "Reinforce Gang Alliances"
+HKG_14k_triad_allies_desc:0 "d"
+HKG_expel_garrisons:0 "Expel Foreign Garrisons"
+HKG_expel_garrisons_desc:0 "d"
+HKG_new_regime:0 "Solidify the New Regime"
+HKG_new_regime_desc:0 "d"
 
 #### Events
 
@@ -344,4 +354,8 @@ hktriads.16.a:0 "yup"
 hktriads.17.t:0 "Witchhunt Concluded"
 hktriads.17.d:0 "banning commie books reward ev"
 hktriads.17.a:0 "yup"
+
+hktriads.18.t:0 "Introducing Drilling Exercises"
+hktriads.18.d:0 "marching up and down the square"
+hktriads.18.a:0 "aye"
 

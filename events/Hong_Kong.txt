@@ -598,13 +598,24 @@ country_event = { #Triads takeover!
 		}
 		remove_all_ministers = yes
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.25 }
-		add_popularity = { ideology = paternal_autocrat popularity = 0.20 }
-		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.35 }
 		remove_ideas = HKG_police_garrison_idea
 		remove_ideas = HKG_triads_idea3
 		remove_ideas = HKG_widespread_disorder_idea2
-		add_ideas = HKG_triad_army_idea
+		swap_ideas = {
+			remove_idea = HKG_bankrupcy_aftermath_idea
+			add_idea = HKG_bankrupcy_aftermath_idea_triad
+		}
 		if = {
+			limit = {
+				has_idea = HKG_makeshift_administration_idea
+			}
+			swap_ideas = {
+				remove_idea = HKG_makeshift_administration_idea
+				add_idea = HKG_makeshift_administration_idea_triad
+			}
+		}
+		else_if = {
 			limit = {
 				has_idea = HKG_makeshift_administration_idea1
 			}
@@ -613,7 +624,7 @@ country_event = { #Triads takeover!
 				add_idea = HKG_makeshift_administration_idea_triad
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				has_idea = HKG_makeshift_administration_idea2
 			}
@@ -627,6 +638,8 @@ country_event = { #Triads takeover!
 			set_country_flag = HKG_triads_in_charge
 			set_country_flag = HKG_sun_yee_on_in_charge
 			clr_country_flag = HKG_triadwar_eliminate_leaders
+			set_cosmetic_tag = HKG_SUN_YEE_ON
+			add_popularity = { ideology = national_populist popularity = -0.30 }
 		}
 	}
 	option = {
@@ -634,11 +647,67 @@ country_event = { #Triads takeover!
 		trigger = {
 			has_country_flag = HKG_triadwar_tackle_outposts
 		}
-		add_political_power = 75
-		add_stability = 0.075
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = HKG_paternal_autocrat_party1_long
+			name = HKG_paternal_autocrat_party1
+			}
+		create_country_leader = {
+			name = "Heung Chin"
+			desc = "POLITICS_HEUNG_DESC"
+			picture = "Portrait_HKG_Heung_Chin.png"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.25 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.35 }
+		remove_ideas = HKG_police_garrison_idea
+		remove_ideas = HKG_triads_idea3
+		remove_ideas = HKG_widespread_disorder_idea2
+		swap_ideas = {
+			remove_idea = HKG_bankrupcy_aftermath_idea
+			add_idea = HKG_bankrupcy_aftermath_idea_triad
+		}
+		if = {
+			limit = {
+				has_idea = HKG_makeshift_administration_idea
+			}
+			swap_ideas = {
+				remove_idea = HKG_makeshift_administration_idea
+				add_idea = HKG_makeshift_administration_idea_triad
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = HKG_makeshift_administration_idea1
+			}
+			swap_ideas = {
+				remove_idea = HKG_makeshift_administration_idea1
+				add_idea = HKG_makeshift_administration_idea_triad
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = HKG_makeshift_administration_idea2
+			}
+			swap_ideas = {
+				remove_idea = HKG_makeshift_administration_idea2
+				add_idea = HKG_makeshift_administration_idea_triad
+			}
+		}
 		hidden_effect = {
+			set_country_flag = HKG_police_deposed
+			set_country_flag = HKG_triads_in_charge
+			set_country_flag = HKG_sun_yee_on_in_charge
 			clr_country_flag = HKG_triadwar_tackle_outposts
+			set_cosmetic_tag = HKG_SUN_YEE_ON
+			add_popularity = { ideology = national_populist popularity = -0.30 }
 		}
 	}
 }
@@ -932,7 +1001,7 @@ country_event = { # hk club
 	}
 }
 
-country_event = { # hk club
+country_event = { # literature banned
 	id = hktriads.17
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.17" }
 	title = hktriads.17.t
@@ -946,7 +1015,7 @@ country_event = { # hk club
 	}
 }
 
-country_event = { # test
+country_event = { # drilling troops
 	id = hktriads.18
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.18" }
 	title = hktriads.18.t
@@ -955,18 +1024,7 @@ country_event = { # test
 
 	option = {
 		name = hktriads.18.a
-		set_cosmetic_tag = HKG_SUN_YEE_ON
-	}
-	option = {
-		name = hktriads.18.b
-		set_cosmetic_tag = HKG_14K
-	}
-	option = {
-		name = hktriads.18.c
-		set_cosmetic_tag = HKG_14K_LIANGGUANG
-	}
-	option = {
-		name = hktriads.18.e
-		set_cosmetic_tag = HKG_14K_KMT
+		add_war_support = 0.025
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 	}
 }

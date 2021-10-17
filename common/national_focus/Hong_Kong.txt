@@ -783,6 +783,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			army_experience = 25
 			add_ideas = HKG_officer_corps_idea
 			create_corps_commander = {
 				name = "Li Mi"
@@ -867,8 +868,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			army_experience = 50
+			add_tech_bonus = {
+				name = HKG_land
+				bonus = 1
+				uses = 3
+				category = land_doctrine
+			}
 		}
 	}
 	focus = { 
@@ -892,6 +898,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
+			army_experience = 50
+			country_event = hktriads.18
 			add_command_power = -10
 			swap_ideas = {
 				remove_idea = HKG_triad_army_standing_idea1
@@ -920,8 +928,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_command_power = -10
+			add_ideas = HKG_academy_idea
+			swap_ideas = {
+				remove_idea = HKG_triad_army_standing_idea2
+				add_idea = HKG_triad_army_standing_idea3
+			}
 		}
 	}
 	focus = { 
@@ -945,8 +957,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			add_political_power = 150
-			add_stability = 0.1
+			add_war_support = 0.05
+			swap_ideas = {
+				remove_idea = HKG_triad_army_standing_idea3
+				add_idea = HKG_triad_army_standing_idea4
+			}
 		}
 	}
 	focus = {
@@ -1424,7 +1439,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
 			army_experience = 20
 			add_tech_bonus = {
-				name = HKG_air
+				name = HKG_land
 				bonus = 1
 				uses = 2
 				category = land_doctrine
@@ -1561,7 +1576,7 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something
+		id = HKG_14k_triad_allies
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
@@ -1583,7 +1598,7 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something1
+		id = HKG_expel_garrisons
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
@@ -1605,14 +1620,14 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something2
+		id = HKG_new_regime
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something1
+			focus = HKG_expel_garrisons
 		}
 		prerequisite = { 
-			focus = HKG_14k_something
+			focus = HKG_14k_triad_allies
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1634,7 +1649,7 @@ focus_tree = {
 		icon = GRU_BAN_LEFT
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something2
+			focus = HKG_new_regime
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1685,11 +1700,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something5
-		icon = GFX_goal_ideology_paternal_autocrat
+		id = HKG_sinocentrism
+		icon = GFX_goal_china_deal
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something2
+			focus = HKG_new_regime
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1733,7 +1748,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something5
+			focus = HKG_sinocentrism
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1777,7 +1792,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something5
+			focus = HKG_sinocentrism
 		}
 		available = {
 			has_government = paternal_autocrat
