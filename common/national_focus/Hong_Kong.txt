@@ -1645,8 +1645,8 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_no_commies
-		icon = GRU_BAN_LEFT
+		id = HKG_order_without_law
+		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
 			focus = HKG_new_regime
@@ -1662,27 +1662,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_remove_rival_triads"
-			unlock_decision_category_tooltip = HKG_no_commies_decisions
-			hidden_effect = {
-				HKG_no_commies_setup = yes
-			}
+			
 		}
 	}
 	focus = { 
-		id = HKG_14k_something4
+		id = HKG_kill_canton
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something8
+			focus = HKG_centralize_executive
 		}
 		prerequisite = { 
-			focus = HKG_14k_something16
+			focus = HKG_sun_yee_on_remnants
 		}
 		prerequisite = { 
-			focus = HKG_14k_something17
+			focus = HKG_reign_over_business
 		}
 		prerequisite = { 
-			focus = HKG_14k_something18
+			focus = HKG_illegal_gambling
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1700,8 +1697,8 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_sinocentrism
-		icon = GFX_goal_china_deal
+		id = HKG_all_that_glitters
+		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
 			focus = HKG_new_regime
@@ -1722,11 +1719,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something11
+		id = HKG_36_syndicates
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_no_commies
+			focus = HKG_order_without_law
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1744,11 +1741,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something12
+		id = HKG_expert_counterfeiters
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_sinocentrism
+			focus = HKG_all_that_glitters
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1766,11 +1763,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something6
+		id = HKG_destroy_wo_on_lok
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_no_commies
+			focus = HKG_order_without_law
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1788,11 +1785,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something7
+		id = HKG_rev_opium_trade
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_sinocentrism
+			focus = HKG_all_that_glitters
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1810,11 +1807,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something8
+		id = HKG_centralize_executive
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something11
+			focus = HKG_36_syndicates
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1832,11 +1829,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something16
+		id = HKG_sun_yee_on_remnants
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something6
+			focus = HKG_destroy_wo_on_lok
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1854,11 +1851,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something17
+		id = HKG_reign_over_business
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something7
+			focus = HKG_rev_opium_trade
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1876,11 +1873,11 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_14k_something18
+		id = HKG_illegal_gambling
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something12
+			focus = HKG_expert_counterfeiters
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1902,7 +1899,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something4
+			focus = HKG_kill_canton
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -1927,7 +1924,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 10
 		prerequisite = { 
-			focus = HKG_14k_something4
+			focus = HKG_kill_canton
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -3704,3 +3701,8 @@ focus_tree = {
 		}
 	}
 }
+
+### unlock_decision_category_tooltip = HKG_no_commies_decisions
+###			hidden_effect = {
+###				HKG_no_commies_setup = yes
+###			}
