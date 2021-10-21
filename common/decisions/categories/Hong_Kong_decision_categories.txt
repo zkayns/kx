@@ -9,3 +9,15 @@ HKG_no_commies_decisions = {
 		has_completed_focus = HKG_no_commies
 	}
 }
+
+HKG_triad_conflict_decisions = {
+	icon = GFX_decision_category_generic_purge
+	allowed = {
+		original_tag = HKG
+	}
+
+	visible = {
+		original_tag = HKG
+		has_country_flag = HKG_triad_conflict_start
+	}
+}

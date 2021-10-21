@@ -633,6 +633,7 @@ country_event = { #Triads takeover!
 				add_idea = HKG_makeshift_administration_idea_triad
 			}
 		}
+		add_ideas = HKG_triads_in_power_idea
 		hidden_effect = {
 			set_country_flag = HKG_police_deposed
 			set_country_flag = HKG_triads_in_charge
@@ -674,6 +675,7 @@ country_event = { #Triads takeover!
 			remove_idea = HKG_bankrupcy_aftermath_idea
 			add_idea = HKG_bankrupcy_aftermath_idea_triad
 		}
+		add_ideas = HKG_triads_in_power_idea
 		if = {
 			limit = {
 				has_idea = HKG_makeshift_administration_idea
@@ -707,7 +709,7 @@ country_event = { #Triads takeover!
 			set_country_flag = HKG_sun_yee_on_in_charge
 			clr_country_flag = HKG_triadwar_tackle_outposts
 			set_cosmetic_tag = HKG_SUN_YEE_ON
-			add_popularity = { ideology = national_populist popularity = -0.30 }
+			add_popularity = { ideology = national_populist popularity = -0.40 }
 		}
 	}
 }
@@ -1026,5 +1028,67 @@ country_event = { # drilling troops
 		name = hktriads.18.a
 		add_war_support = 0.025
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+	}
+}
+
+country_event = { # introduction to sun yee on
+	id = hktriads.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.19" }
+	title = hktriads.19.t
+	desc = hktriads.19.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.19.a
+		add_political_power = 35
+	}
+}
+
+country_event = { # introduction to 14k
+	id = hktriads.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.20" }
+	title = hktriads.20.t
+	desc = hktriads.20.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.20.a
+		add_political_power = -10
+	}
+}
+
+country_event = { # introduction to 49ers
+	id = hktriads.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.21" }
+	title = hktriads.21.t
+	desc = hktriads.21.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.21.a
+		add_manpower = 30000
+		add_political_power = -25
+	}
+	option = {
+		name = hktriads.21.b
+		add_ideas = HKG_better_49ers_idea
+		add_political_power = 25
+	}
+}
+
+country_event = { # introduction to vanguards
+	id = hktriads.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.22" }
+	title = hktriads.22.t
+	desc = hktriads.22.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.22.a
+		add_ideas = HKG_rich_vanguards_idea
+	}
+	option = {
+		name = hktriads.22.b
+		add_ideas = HKG_powerful_vanguards_idea
 	}
 }

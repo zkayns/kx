@@ -1,0 +1,31 @@
+defined_text = {
+	name = HKG_sun_influece
+	text = {
+		trigger = {
+			has_country_flag = HKG_decision_made
+		}
+		localization_key = HKG_sun_influece_text
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = HKG_decision_made }
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = HKG_14k_influece
+	text = {
+		trigger = {
+			has_country_flag = HKG_decision_made
+		}
+		localization_key = HKG_14k_influece_text
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = HKG_decision_made }
+		}
+		localization_key = ""
+	}
+}

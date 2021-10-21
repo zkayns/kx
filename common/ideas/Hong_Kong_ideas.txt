@@ -58,6 +58,54 @@ ideas = {
 				national_populist_drift = 0.02
 			}
 		}
+		HKG_triads_in_power_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads_in_power_idea"
+			}
+			picture = LEC_triads
+			modifier = {
+				conscription_factor = -0.5
+				army_org_factor = -0.1
+				army_morale_factor = -0.05
+				weekly_manpower = -500
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+		}
+		HKG_triads_in_power_idea1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads_in_power_idea1"
+			}
+			picture = LEC_triads
+			modifier = {
+				conscription_factor = -0.3
+				army_org_factor = -0.1
+				army_morale_factor = -0.05
+				weekly_manpower = -500
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+		}
+		HKG_triads_in_power_idea2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads_in_power_idea2"
+			}
+			picture = LEC_triads
+			modifier = {
+				conscription_factor = -0.3
+				army_org_factor = -0.05
+				weekly_manpower = -300
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+		}
+		HKG_triads_in_power_idea3 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads_in_power_idea2"
+			}
+			picture = LEC_triads
+			modifier = {
+				army_org_factor = -0.05
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+		}
 		HKG_triads_idea1 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads1_idea"
@@ -580,6 +628,39 @@ ideas = {
 			}
 			research_bonus = {
 					naval_doctrine = 0.1
+			}
+		}
+		HKG_better_49ers_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				conscription_factor = -0.05
+				army_attack_factor = 0.05
+				breakthrough_factor = 0.025
+			}
+		}
+		HKG_rich_vanguards_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = 0.08
+				political_power_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+		HKG_powerful_vanguards_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = -0.08
+				political_power_factor = -0.1
+				stability_factor = -0.05
 			}
 		}
 	}
