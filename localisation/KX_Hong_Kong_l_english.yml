@@ -50,7 +50,7 @@ HKG_national_populist_party1_long:0 "14K Triad"
 
 POLITICS_MACINTOSH_DESC:0 ""
 POLITICS_HEUNG_DESC:0 ""
-POLITICS_KOT_SIUWONG:0 ""
+POLITICS_KOT_SIUWONG_DESC:0 ""
 
 #### Ideas
 
@@ -126,8 +126,8 @@ HKG_choose_14k:0 "Overtures to Kot Siu-wong"
 750_infantry_equipment_blocked:0 "£rifle_texticon §R750§!"
 
 ### SCRIPTED LOC
-HKG_sun_influece_text:0 "\n\n\nThe §XSun Yee On§!'s influence: \n"
-HKG_14k_influece_text:0 "The §V14K§!'s influence: "
+HKG_sun_influece_text:0 "\n\n\nThe §XSun Yee On§!'s influence: [?HKG_sun_yee_on_influence_var]\n"
+HKG_14k_influece_text:0 "The §V14K§!'s influence: [?HKG_14k_influence_var] \n\n\n£rifle_texticon §HWeapons§! available for operations: [?HKG_guns_var]\n£GFX_manpower_texticon §HManpower§! available for operations: [?HKG_men_var]"
 
 
 #### Tooltips
@@ -151,7 +151,22 @@ HKG_hegemony_tt:0 "Selecting this focus will unlock £decision_icon_small §Hdec
 HKG_triad_conflict_start:0 "The Triad Conflict is ongoing"
 HKG_sun_yee_on_chosen:0 "We will support §XSun Yee On§!'s side!"
 HKG_14k_chosen:0 "We will support §V14K§!'s side!"
-
+HKG_triad_conflict_minus_200_guns_pre_tt:0 "This action will require £rifle_texticon §H200 weapons§!."
+HKG_triad_conflict_minus_400_guns_pre_tt:0 "This action will require £rifle_texticon §H400 weapons§!."
+HKG_triad_conflict_no_guns_tt:0 "We don't have enough £rifle_texticon §Hweapons§! to properly react."
+HKG_triad_conflict_minus_300_men_pre_tt:0 "This action will require £GFX_manpower_texticon §H300 men§!."
+HKG_triad_conflict_minus_600_men_pre_tt:0 "This action will require £GFX_manpower_texticon §H600 men§!."
+HKG_triad_conflict_minus_200_men_post_tt:0 "We've §Rlost§! £GFX_manpower_texticon §H200 men§! in the process."
+HKG_triad_conflict_minus_400_men_post_tt:0 "We've §Rlost§! £GFX_manpower_texticon §H400 men§! in the process."
+HKG_triad_conflict_minus_600_men_post_tt:0 "We've §Rlost§! £GFX_manpower_texticon §H600 men§! in the process."
+HKG_triad_conflict_sun_yee_on_plus_plus_tt:0 "The §XSun Yee On§!'s influence will §Ggreatly increase§!!"
+HKG_triad_conflict_sun_yee_on_plus_tt:0 "The §XSun Yee On§!'s influence will §Gincrease§!!"
+HKG_triad_conflict_sun_yee_on_minus_tt:0 "The §XSun Yee On§!'s influence will §Rdecrease§!!"
+HKG_triad_conflict_sun_yee_on_minus_minus_tt:0 "The §XSun Yee On§!'s influence will §Rgreatly decrease§!!"
+HKG_triad_conflict_14k_plus_plus_tt:0 "The §V14K§!'s influence will §Ggreatly increase§!!"
+HKG_triad_conflict_14k_plus_tt:0 "The §V14K§!'s influence will §Gincrease§!!"
+HKG_triad_conflict_14k_minus_tt:0 "The §V14K§!'s influence will §Rdecrease§!!"
+HKG_triad_conflict_14k_minus_minus_tt:0 "The §V14K§!'s influence will §Rgreatly decrease§!!"
 
 #################
 #### Focuses ####
@@ -194,7 +209,7 @@ HKG_hegemony:0 "Struggle for Hegemony"
 HKG_hegemony_desc:0 "d"
 HKG_sun_yee_on:0 "Sun Yee On's Dominance"
 HKG_sun_yee_on_desc:0 ""
-HKG_14k:0 "14K's Ascension"
+HKG_14k:0 "14K's Ascendance"
 HKG_14k_desc:0 "d"
 HKG_recruit_red_poles:0 "Introduce New Red Poles"
 HKG_recruit_red_poles_desc:0 "d"
@@ -453,3 +468,39 @@ hktriads.22.t:0 "Placating the Vanguards"
 hktriads.22.d:0 "introduction to vanguards"
 hktriads.22.a:0 "pay them more"
 hktriads.22.b:0 "give them more power"
+
+hktriads.23.t:0 "General Kot Siu-wong's Rally in Sai Kung"
+hktriads.23.d:0 "general kot organizes sum shit"
+hktriads.23.a:0 "use some guns"
+hktriads.23.b:0 "use more guns"
+hktriads.23.c:0 "we can't afford to use any guns"
+
+hktriads.2301.t:0 "Our Assets Manage to Crash the Rally"
+hktriads.2301.d:0 "some success"
+hktriads.2301.a:0 "-400 mp"
+
+hktriads.2302.t:0 "Our Assets Decimate 14K's Troops"
+hktriads.2302.d:0 "huge success"
+hktriads.2302.a:0 "-200 mp"
+
+hktriads.2303.t:0 "Kot Siu-wong Gains a New Stronghold"
+hktriads.2303.d:0 "because we didn't do anything they gained influence in sai kung"
+hktriads.2303.a:0 ":("
+
+hktriads.24.t:0 "14K Members Threaten Our Territory"
+hktriads.24.d:0 "general kot organizes sum shit"
+hktriads.24.a:0 "spend more manpower"
+hktriads.24.b:0 "spend some manpower"
+hktriads.24.c:0 "we can't afford to use any men"
+
+hktriads.2401.t:0 "Our Assets Manage to Crash the Rally"
+hktriads.2401.d:0 "some success"
+hktriads.2401.a:0 "-400 mp"
+
+hktriads.2402.t:0 "Our Assets Decimate 14K's Troops"
+hktriads.2402.d:0 "huge success"
+hktriads.2402.a:0 "-200 mp"
+
+hktriads.2403.t:0 "Kot Siu-wong Gains a New Stronghold"
+hktriads.2403.d:0 "because we didn't do anything they gained influence in sai kung"
+hktriads.2403.a:0 ":("

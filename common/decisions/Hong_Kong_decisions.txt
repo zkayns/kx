@@ -280,7 +280,7 @@ HKG_triad_conflict_decisions = {
 		}
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 50
+			factor = 100
 		}
 		
 		complete_effect = {
@@ -289,6 +289,24 @@ HKG_triad_conflict_decisions = {
 			custom_effect_tooltip = HKG_sun_yee_on_chosen
 			hidden_effect = {
 				set_country_flag = HKG_sun_yee_on_chosen_flag
+				set_country_flag = HKG_decision_made
+				HKG_triad_conflict_setup_sun_yee_on = yes
+				country_event = {
+					id = hktriads.23
+					days = 14
+				}
+				country_event = {
+					id = hktriads.24
+					days = 30
+				}
+				country_event = {
+					id = hktriads.25
+					days = 48
+				}
+				country_event = {
+					id = hktriads.26
+					days = 64
+				}
 			}
 		}
 	}
@@ -303,7 +321,7 @@ HKG_triad_conflict_decisions = {
 		}
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 50
+			factor = 100
 		}
 		
 		complete_effect = {
@@ -313,6 +331,7 @@ HKG_triad_conflict_decisions = {
 			hidden_effect = {
 				set_country_flag = HKG_14k_chosen_flag
 				set_country_flag = HKG_decision_made
+				HKG_triad_conflict_setup_14k = yes
 			}
 		}
 	}

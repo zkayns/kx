@@ -385,7 +385,7 @@ country_event = { #Triads in retreat!
 			}
 		create_country_leader = {
 			name = "Kot Siu-wong"
-			desc = "POLITICS_KOT_SIUWONG"
+			desc = "POLITICS_KOT_SIUWONG_DESC"
 			picture = "Portrait_HKG_Kot_Siu_Wong"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
@@ -1090,5 +1090,219 @@ country_event = { # introduction to vanguards
 	option = {
 		name = hktriads.22.b
 		add_ideas = HKG_powerful_vanguards_idea
+	}
+}
+
+country_event = { # 14k's move (1/4)
+	id = hktriads.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.23" }
+	title = hktriads.23.t
+	desc = hktriads.23.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.23.a
+		trigger = {
+			check_variable = { HKG_guns_var > 199 }
+		}
+		custom_effect_tooltip = HKG_triad_conflict_minus_200_guns_pre_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_200_guns = yes
+			country_event = {
+				id = hktriads.2301
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = hktriads.23.b
+		trigger = {
+			check_variable = { HKG_guns_var > 399 }
+		}
+		custom_effect_tooltip = HKG_triad_conflict_minus_400_guns_pre_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_400_guns = yes
+			country_event = {
+				id = hktriads.2302
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = hktriads.23.c
+		trigger = {
+			check_variable = { HKG_guns_var < 200 }
+		}
+		custom_effect_tooltip = HKG_triad_conflict_no_guns_tt
+		hidden_effect = {
+			country_event = {
+				id = hktriads.2303
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # 14k's move (1/4) some success
+	id = hktriads.2301
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2301" }
+	title = hktriads.2301.t
+	desc = hktriads.2301.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2301.a
+		add_political_power = 10
+		custom_effect_tooltip = HKG_triad_conflict_minus_400_men_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_400_men = yes
+			HKG_triad_conflict_sun_yee_on_plus = yes
+		}
+	}
+}
+
+country_event = { # 14k's move (1/4) big success
+	id = hktriads.2302
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2302" }
+	title = hktriads.2302.t
+	desc = hktriads.2302.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2302.a
+		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
+		add_political_power = 25
+		hidden_effect = {
+			HKG_triad_conflict_minus_200_men = yes
+			HKG_triad_conflict_sun_yee_on_plus_plus = yes
+		}
+	}
+}
+
+country_event = { # 14k's move (1/4) failure
+	id = hktriads.2303
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2303" }
+	title = hktriads.2303.t
+	desc = hktriads.2303.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2303.a
+		add_political_power = -25
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_plus_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_minus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus_plus = yes
+			HKG_triad_conflict_sun_yee_on_minus = yes
+		}
+	}
+}
+
+country_event = { # 14k's move (2/4)
+	id = hktriads.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.24" }
+	title = hktriads.24.t
+	desc = hktriads.24.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.24.a
+		trigger = {
+			check_variable = { HKG_men_var > 599 }
+		}
+		custom_effect_tooltip = HKG_triad_conflict_minus_600_men_pre_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_600_men = yes
+			country_event = {
+				id = hktriads.2401
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = hktriads.24.b
+		trigger = {
+			check_variable = { HKG_men_var > 299 }
+		}
+		custom_effect_tooltip = HKG_triad_conflict_minus_300_men_pre_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_300_men = yes
+			country_event = {
+				id = hktriads.2402
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = hktriads.24.c
+		trigger = {
+			check_variable = { HKG_men_var < 300 }
+		}
+		custom_effect_tooltip = HKG_triad_conflict_minus_300_men_pre_tt
+		hidden_effect = {
+			country_event = {
+				id = hktriads.2403
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # 14k's move (2/4) big success
+	id = hktriads.2401
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2401" }
+	title = hktriads.2401.t
+	desc = hktriads.2401.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2401.a
+		add_political_power = 25
+		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_200_men = yes
+			HKG_triad_conflict_sun_yee_on_plus_plus = yes
+		}
+	}
+}
+
+country_event = { # 14k's move (2/4) some success
+	id = hktriads.2402
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2402" }
+	title = hktriads.2402.t
+	desc = hktriads.2402.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2402.a
+		custom_effect_tooltip = HKG_triad_conflict_minus_600_men_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
+		add_political_power = 10
+		hidden_effect = {
+			HKG_triad_conflict_minus_600_men = yes
+			HKG_triad_conflict_sun_yee_on_plus = yes
+		}
+	}
+}
+
+country_event = { # 14k's move (2/4) failure
+	id = hktriads.2403
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2403" }
+	title = hktriads.2403.t
+	desc = hktriads.2403.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2403.a
+		add_political_power = -25
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_plus_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_minus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus_plus = yes
+			HKG_triad_conflict_sun_yee_on_minus = yes
+		}
 	}
 }
