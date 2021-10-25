@@ -1240,7 +1240,6 @@ country_event = { # 14k's move (2/4)
 		trigger = {
 			check_variable = { HKG_men_var < 300 }
 		}
-		custom_effect_tooltip = HKG_triad_conflict_minus_300_men_pre_tt
 		hidden_effect = {
 			country_event = {
 				id = hktriads.2403
@@ -1303,6 +1302,60 @@ country_event = { # 14k's move (2/4) failure
 		hidden_effect = {
 			HKG_triad_conflict_14k_plus_plus = yes
 			HKG_triad_conflict_sun_yee_on_minus = yes
+		}
+	}
+}
+
+country_event = { # 14k's move (3/4)
+	id = hktriads.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.25" }
+	title = hktriads.25.t
+	desc = hktriads.25.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.25.a
+		trigger = {
+			check_variable = { HKG_men_var > 599 }
+			check_variable = { HKG_gun_var > 299 }
+		}
+		custom_effect_tooltip = HKG_triad_conflict_minus_600_men_pre_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_300_guns = yes
+			HKG_triad_conflict_minus_600_men = yes
+			country_event = {
+				id = hktriads.2501
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = hktriads.25.b
+		trigger = {
+			check_variable = { HKG_gun_var > 499 }
+			check_variable = { HKG_men_var > 899 }
+		}
+		custom_effect_tooltip = HKG_triad_conflict_minus_500_guns_pre_tt
+		custom_effect_tooltip = HKG_triad_conflict_minus_900_men_pre_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_500_guns = yes
+			country_event = {
+				id = hktriads.2502
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = hktriads.25.c
+		trigger = {
+			check_variable = { HKG_gun_var < 300 }
+			check_variable = { HKG_men_var < 600 }
+		}
+		hidden_effect = {
+			country_event = {
+				id = hktriads.2503
+				days = 7
+			}
 		}
 	}
 }
