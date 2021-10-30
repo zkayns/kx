@@ -1249,7 +1249,7 @@ country_event = { # 14k's move (2/4)
 	}
 }
 
-country_event = { # 14k's move (2/4) big success
+country_event = { # 14k's move (2/4) some success
 	id = hktriads.2401
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2401" }
 	title = hktriads.2401.t
@@ -1258,17 +1258,17 @@ country_event = { # 14k's move (2/4) big success
 
 	option = {
 		name = hktriads.2401.a
-		add_political_power = 25
-		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
-		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
+		add_political_power = 10
+		custom_effect_tooltip = HKG_triad_conflict_minus_400_men_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
 		hidden_effect = {
-			HKG_triad_conflict_minus_200_men = yes
-			HKG_triad_conflict_sun_yee_on_plus_plus = yes
+			HKG_triad_conflict_minus_400_men = yes
+			HKG_triad_conflict_sun_yee_on_plus = yes
 		}
 	}
 }
 
-country_event = { # 14k's move (2/4) some success
+country_event = { # 14k's move (2/4) big success
 	id = hktriads.2402
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2402" }
 	title = hktriads.2402.t
@@ -1277,12 +1277,12 @@ country_event = { # 14k's move (2/4) some success
 
 	option = {
 		name = hktriads.2402.a
-		custom_effect_tooltip = HKG_triad_conflict_minus_600_men_post_tt
-		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
-		add_political_power = 10
+		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
+		add_political_power = `25
 		hidden_effect = {
-			HKG_triad_conflict_minus_600_men = yes
-			HKG_triad_conflict_sun_yee_on_plus = yes
+			HKG_triad_conflict_minus_200_men = yes
+			HKG_triad_conflict_sun_yee_on_plus_plus = yes
 		}
 	}
 }
@@ -1312,13 +1312,14 @@ country_event = { # 14k's move (3/4)
 	title = hktriads.25.t
 	desc = hktriads.25.d
 	is_triggered_only = yes
-
+	
 	option = {
 		name = hktriads.25.a
 		trigger = {
+			check_variable = { HKG_guns_var > 299 }
 			check_variable = { HKG_men_var > 599 }
-			check_variable = { HKG_gun_var > 299 }
 		}
+		custom_effect_tooltip = HKG_triad_conflict_minus_300_guns_pre_tt
 		custom_effect_tooltip = HKG_triad_conflict_minus_600_men_pre_tt
 		hidden_effect = {
 			HKG_triad_conflict_minus_300_guns = yes
@@ -1332,7 +1333,7 @@ country_event = { # 14k's move (3/4)
 	option = {
 		name = hktriads.25.b
 		trigger = {
-			check_variable = { HKG_gun_var > 499 }
+			check_variable = { HKG_guns_var > 499 }
 			check_variable = { HKG_men_var > 899 }
 		}
 		custom_effect_tooltip = HKG_triad_conflict_minus_500_guns_pre_tt
@@ -1348,8 +1349,10 @@ country_event = { # 14k's move (3/4)
 	option = {
 		name = hktriads.25.c
 		trigger = {
-			check_variable = { HKG_gun_var < 300 }
-			check_variable = { HKG_men_var < 600 }
+			OR = {
+				check_variable = { HKG_guns_var < 299 }
+				check_variable = { HKG_men_var < 599 }
+			}
 		}
 		hidden_effect = {
 			country_event = {

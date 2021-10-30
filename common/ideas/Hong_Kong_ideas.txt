@@ -152,6 +152,17 @@ ideas = {
 				production_speed_naval_base_factor = 0.15
 			}
 		}
+		HKG_major_port_idea_triad = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_major_port_idea"
+			}
+			picture = GFX_idea_HKG_major_port_idea_triad
+			modifier = {
+				industrial_capacity_dockyard = -0.05
+				production_speed_dockyard_factor = -0.10
+				navy_fuel_consumption_factor = 0.1
+			}
+		}
 		HKG_bankrupcy_aftermath_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankrupcy_aftermath_idea"
@@ -620,6 +631,11 @@ ideas = {
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_academy_idea"
 			}
 			picture = FIU_getting_pirated
+			modifier = {
+				army_leader_start_logistics_level = 1
+				army_leader_start_planning_level = 1
+				military_leader_cost_factor	= -0.5
+			}
 			research_bonus = {
 					land_doctrine = 0.1
 			}

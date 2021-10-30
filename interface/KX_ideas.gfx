@@ -2022,11 +2022,15 @@ spriteTypes = {
 	### HONG KONG ###
 	spriteType = {
 		name = "GFX_idea_HKG_police_garrison_idea"
-		texturefile = "gfx/interface/ideas/ideas/HKG_police_garrison_idea.tga"
+		texturefile = "gfx/interface/ideas/ideas/HKG_police_garrison_idea.png"
 	}
 	spriteType = {
 		name = "GFX_idea_HKG_major_port_idea"
-		texturefile = "gfx/interface/ideas/ideas/HKG_major_port_idea.tga"
+		texturefile = "gfx/interface/ideas/ideas/HKG_major_port_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_major_port_idea_triad"
+		texturefile = "gfx/interface/ideas/ideas/HKG_major_port_idea_triad.png"
 	}
 	spriteType = {
 		name = "GFX_idea_generic_catholic_corporatism_spirit"
