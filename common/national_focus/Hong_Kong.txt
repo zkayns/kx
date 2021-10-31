@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 200 y = 2200 }
+	continuous_focus_position = { x = 200 y = 2500 }
 	initial_show_position = { x = 7 y = 0 }
 
 	focus = { 
@@ -464,7 +464,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_tumultuous_independence
-		x = 18
+		x = 24
 		y = 0
 
 		completion_reward = {

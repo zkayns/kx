@@ -31,7 +31,7 @@ HKG_no_commies_decisions = {
 		}
 		
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_recruit_no_commies_militia"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_recruit_no_commies_militia"
 			custom_effect_tooltip = HKG_no_commies_tt
 			hidden_effect = {
 				load_oob = "HKG_no_commies"
@@ -58,7 +58,7 @@ HKG_no_commies_decisions = {
 		}
 		
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_hunt_syndies"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_hunt_syndies"
 			effect_tooltip = {
 				if = {
 					limit = { has_equipment = { infantry_equipment > 2449 }
@@ -194,6 +194,7 @@ HKG_no_commies_decisions = {
 		}
 		
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_no_commies_burma"
 			BRM = {
 				country_event = hktriads.13
 				add_opinion_modifier = { target = ROOT modifier = ITA_hates_govt }
@@ -208,7 +209,7 @@ HKG_no_commies_decisions = {
 		}
 		
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_no_commies_burma"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_no_commies_burma"
 			country_event = {
 				id = hktriads.14
 				days = 3
@@ -236,6 +237,7 @@ HKG_no_commies_decisions = {
 		}
 		
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_no_commie_books"
 			add_ideas = HKG_no_commie_books_idea
 			hidden_effect = {
 				country_event = {
@@ -252,7 +254,7 @@ HKG_no_commies_decisions = {
 		}
 		
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_no_commie_books"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_no_commie_books"
 			swap_ideas = {
 				remove_idea = HKG_no_commie_books_idea
 				add_idea = HKG_no_commie_books_idea1
@@ -325,7 +327,7 @@ HKG_triad_conflict_decisions = {
 		}
 		
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_choose_sun_yee_on"
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_choose_14k"
 			add_political_power = 100
 			custom_effect_tooltip = HKG_14k_chosen
 			hidden_effect = {
@@ -335,4 +337,62 @@ HKG_triad_conflict_decisions = {
 			}
 		}
 	}
+	HKG_skirmish = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			check_variable = { HKG_guns_var > 149 }
+		}
+		visible = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			NOT = { has_country_flag = HKG_14k_chosen_flag }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		custom_cost_trigger = {
+			check_variable = { HKG_guns_var > 149 }
+		}
+		custom_cost_text = 150_infantry_equipment
+		days_remove = 7
+		days_re_enable = 14
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_skirmish"
+			hidden_effect = {
+				HKG_triad_conflict_minus_150_guns = yes
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_skirmish"
+			random_list = {
+				70 = {
+					custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
+					add_political_power = 10
+					hidden_effect = {
+						HKG_triad_conflict_sun_yee_on_plus = yes
+						country_event = hktriads.2600
+					}
+				}
+				15 = {
+					custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
+					add_political_power = 25
+					hidden_effect = {
+						HKG_triad_conflict_sun_yee_on_plus_plus = yes
+						country_event = hktriads.2601
+					}
+				}
+				15 = {
+					custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_minus_tt
+					add_political_power = -10
+					hidden_effect = {
+						HKG_triad_conflict_sun_yee_on_minus = yes
+						country_event = hktriads.2602
+					}
+				}
+			}
+		}
+	}
+}
 		

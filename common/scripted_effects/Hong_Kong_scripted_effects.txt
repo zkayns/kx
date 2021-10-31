@@ -138,6 +138,9 @@ HKG_triad_conflict_14k_minus_minus = {
 	add_to_variable = { HKG_14k_influence_var = -10 }
 }
 ### guns
+HKG_triad_conflict_minus_150_guns = {
+	add_to_variable = { HKG_guns_var = -150 }
+}
 HKG_triad_conflict_minus_200_guns = {
 	add_to_variable = { HKG_guns_var = -200 }
 }
