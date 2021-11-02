@@ -341,7 +341,10 @@ HKG_triad_conflict_decisions = {
 		icon = generic_prepare_civil_war
 		available = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
-			check_variable = { HKG_guns_var > 149 }
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_guns_var > 149 }
+			}
 		}
 		visible = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
@@ -368,6 +371,7 @@ HKG_triad_conflict_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_skirmish"
 			random_list = {
 				70 = {
+					custom_effect_tooltip = HKG_good_skirmish_tt
 					custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
 					add_political_power = 10
 					hidden_effect = {
@@ -376,6 +380,7 @@ HKG_triad_conflict_decisions = {
 					}
 				}
 				15 = {
+					custom_effect_tooltip = HKG_great_skirmish_tt
 					custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
 					add_political_power = 25
 					hidden_effect = {
@@ -384,6 +389,7 @@ HKG_triad_conflict_decisions = {
 					}
 				}
 				15 = {
+					custom_effect_tooltip = HKG_bad_skirmish_tt
 					custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_minus_tt
 					add_political_power = -10
 					hidden_effect = {
@@ -398,8 +404,11 @@ HKG_triad_conflict_decisions = {
 		icon = generic_prepare_civil_war
 		available = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
-			check_variable = { HKG_guns_var > 199 }
-			check_variable = { HKG_men_var > 299 }
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_guns_var > 199 }
+					check_variable = { HKG_men_var > 299 }
+			}
 		}
 		visible = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
@@ -426,13 +435,116 @@ HKG_triad_conflict_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_bomb_14k"
 			random_list = {
-				82 = {
+				88 = {
 					country_event = hktriads.2603
 				}
 				12 = {
 					country_event = hktriads.2604
 				}
 			}
+		}
+	}
+	HKG_street_presence = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_men_var > 999 }
+			}
+		}
+		visible = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			NOT = { has_country_flag = HKG_14k_chosen_flag }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		custom_cost_trigger = {
+			check_variable = { HKG_men_var > 999 }
+		}
+		custom_cost_text = 1000_men
+		
+		days_remove = 10
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_street_presence"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_street_presence"
+			custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
+			country_event = hktriads.28
+			hidden_effect = {
+				HKG_triad_conflict_sun_yee_on_plus = yes
+				HKG_triad_conflict_minus_1000_men = yes
+			}
+		}
+	}
+	HKG_guard_key_locations = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_men_var > 599 }
+					check_variable = { HKG_guns_var > 399 }
+			}
+		}
+		visible = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			NOT = { has_country_flag = HKG_14k_chosen_flag }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		custom_cost_trigger = {
+			check_variable = { HKG_men_var > 599 }
+			check_variable = { HKG_guns_var > 399 }
+		}
+		custom_cost_text = 400_infantry_equipment_600_men
+		
+		days_remove = 14
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_guard_key_locations"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_guard_key_locations"
+			add_ideas = HKG_guard_key_locations_idea
+			hidden_effect = {
+				HKG_triad_conflict_minus_600_men = yes
+				HKG_triad_conflict_minus_400_guns = yes
+				country_event = {
+					id = hktriads.29
+					days = 2
+				}
+			}
+		}
+	}
+	HKG_wo_on_lok_ally = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+		}
+		visible = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			NOT = { has_country_flag = HKG_14k_chosen_flag }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 25
+		days_remove = 7
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_wo_on_lok_ally"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_wo_on_lok_ally"
+			country_event = hktriads.27
 		}
 	}
 }

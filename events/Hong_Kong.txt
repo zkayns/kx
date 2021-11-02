@@ -1518,3 +1518,97 @@ country_event = { # bombing outcome bad
 		}
 	}
 }
+
+country_event = { # SYO allying WOL
+	id = hktriads.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.27" }
+	title = hktriads.27.t
+	desc = hktriads.27.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.27.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.2701
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = hktriads.27.b
+		hidden_effect = {
+			country_event = {
+				id = hktriads.2702
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { # WOL not allied
+	id = hktriads.2701
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2701" }
+	title = hktriads.2701.t
+	desc = hktriads.2701.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2701.a
+		add_war_support = -0.02
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_minus_tt
+		hidden_effect = {
+			HKG_triad_conflict_sun_yee_on_minus = yes
+		}
+	}
+}
+
+country_event = { # WOL allied
+	id = hktriads.2702
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2702" }
+	title = hktriads.2702.t
+	desc = hktriads.2702.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2702.a
+		add_war_support = 0.02
+		add_ideas = HKG_cucked_to_wo_on_lok
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
+		hidden_effect = {
+			HKG_triad_conflict_sun_yee_on_plus = yes
+		}
+	}
+}
+
+country_event = { #increasing presence in the streets
+	id = hktriads.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.28" }
+	title = hktriads.28.t
+	desc = hktriads.28.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.28.a
+		add_war_support = 0.025
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+	}
+}
+
+country_event = { #increasing presence in the streets
+	id = hktriads.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.29" }
+	title = hktriads.29.t
+	desc = hktriads.29.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.29.a
+		add_war_support = 0.025
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		custom_effect_tooltip = HKG_triad_conflict_14k_minus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_minus = yes
+		}
+	}
+}

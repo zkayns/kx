@@ -29,7 +29,7 @@ HKG_radical_socialist_party_long:0 "Chinese Syndicalist Party"
 HKG_social_democrat_party:0 "HKLP"
 HKG_social_democrat_party_long:0 "Hong Kong Labour Party"
 HKG_social_liberal_party:0 "HKLDP"
-HKG_social_liberal_party_long:0 "Hong Kong Liberal Democratic Party"
+HKG_social_liberal_party_long:0 "Hong Kong Liberal Party"
 HKG_market_liberal_party:0 "HKCP(Moderates)"
 HKG_market_liberal_party_long:0 "Hong Kong Conservative Party (Moderates)"
 HKG_social_conservative_party:0 "HKCP(Hardliners)"
@@ -107,6 +107,8 @@ HKG_academy_idea:0 "Hong Kong Military Academy"
 HKG_better_49ers_idea:0 "More Restrictive Initiation Requirements"
 HKG_rich_vanguards_idea:0 "Increased Vanguards' Payrolls"
 HKG_powerful_vanguards_idea: "More Power to the Vanguards"
+HKG_cucked_to_wo_on_lok:0 "Concessions to Won On Lok"
+HKG_guard_key_locations_idea:0 "Increased Guarding Efforts"
 
 
 #### Decisions
@@ -123,6 +125,9 @@ HKG_choose_sun_yee_on:0 "Loyalty to Heung Chin"
 HKG_choose_14k:0 "Overtures to Kot Siu-wong"
 HKG_skirmish:0 "Skirmish with 14K Members"
 HKG_bomb_14k:0 "Plant a Bomb in a 14K Hideout"
+HKG_street_presence:0 "Increase Our Presence in the Streets"
+HKG_guard_key_locations:0 "Redouble Guard in Key Locations"
+HKG_wo_on_lok_ally:0 "Approach Wo On Lok"
 
 
 750_infantry_equipment:0 "£rifle_texticon §H750§!"
@@ -131,6 +136,10 @@ HKG_bomb_14k:0 "Plant a Bomb in a 14K Hideout"
 150_infantry_equipment_blocked:0 "£rifle_texticon §R150§!"
 200_infantry_equipment_300_men:0 "£rifle_texticon §H200§!, £GFX_manpower_texticon §H300§!"
 200_infantry_equipment_300_men_blocked:0 "£rifle_texticon §R200§!, £GFX_manpower_texticon §R300§!"
+400_infantry_equipment_600_men:0 "£rifle_texticon §H400§!, £GFX_manpower_texticon §H600§!"
+400_infantry_equipment_600_men_blocked:0 "£rifle_texticon §R400§!, £GFX_manpower_texticon §R600§!"
+1000_men:0 "£GFX_manpower_texticon §H1000§!"
+1000_men_blocked:0 "£GFX_manpower_texticon §H1000§!"
 
 ### SCRIPTED LOC
 HKG_sun_influece_text:0 "\n\n\nThe §XSun Yee On§!'s influence: [?HKG_sun_yee_on_influence_var]\n"
@@ -181,6 +190,10 @@ HKG_triad_conflict_14k_minus_tt:0 "The §V14K§!'s influence will §Rdecrease§!
 HKG_triad_conflict_14k_minus_minus_tt:0 "The §V14K§!'s influence will §Rgreatly decrease§!!"
 HKG_sun_yee_on_chosen_flag:0 "We've chosen to support §XSun Yee On§!."
 HKG_14k_chosen_flag:0 "We've chosen to support the §V14K§!."
+HKG_guns_men_tt:0 "We have enough resources to support this action"
+HKG_good_skirmish_tt:0 "a victorious skirmish!"
+HKG_great_skirmish_tt:0 "a very successful skirmish!"
+HKG_bad_skirmish_tt:0 "a failed skirmish!"
 
 #################
 #### Focuses ####
@@ -557,6 +570,27 @@ hktriads.2603.t:0 "Bombing scheme successful!"
 hktriads.2603.d:0 "related to decision"
 hktriads.2603.a:0 "-14k pop"
 
-hktriads.2604.t:0 "Failure in bombing scheme!"
+hktriads.2604.t:0 "Bombing scheme fails!"
 hktriads.2604.d:0 "related to decision"
 hktriads.2604.a:0 "-syo pop"
+
+hktriads.27.t:0 "Reaffirming the Sun Yee On-Wo On Lok Alliance"
+hktriads.27.d:0 "we need to get wo on lok on our side to help us fight 14k"
+hktriads.27.a:0 "idk threaten them or something -> no support"
+hktriads.27.b:0 "offer them concessions -> leads to getting support"
+
+hktriads.2701.t:0 "The Wo On Lok [something]!"
+hktriads.2701.d:0 "related to decision"
+hktriads.2701.a:0 "-syo pop"
+
+hktriads.2702.t:0 "The Wo On Lok Submits!"
+hktriads.2702.d:0 "related to decision"
+hktriads.2702.a:0 "+syo pop"
+
+hktriads.28.t:0 "From Tsuen Wan to Tai Po"
+hktriads.28.d:0 "we must be present everywhere to crush the 14k threat yada yada"
+hktriads.28.a:0 "ok"
+
+hktriads.29.t:0 "14K Assets Captured in the Kowloon Port!"
+hktriads.29.d:0 "thanks to increasing guards we found some mfs"
+hktriads.29.a:0 "ok"

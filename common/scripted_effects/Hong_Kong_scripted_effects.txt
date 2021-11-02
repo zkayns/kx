@@ -169,6 +169,9 @@ HKG_triad_conflict_minus_400_men = {
 HKG_triad_conflict_minus_600_men = {
 	add_to_variable = { HKG_men_var = -600 }
 }
-HKG_triad_conflict_minus_600_men = {
+HKG_triad_conflict_minus_900_men = {
 	add_to_variable = { HKG_men_var = -900 }
+}
+HKG_triad_conflict_minus_1000_men = {
+	add_to_variable = { HKG_men_var = -1000 }
 }
