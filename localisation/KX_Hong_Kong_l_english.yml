@@ -122,12 +122,15 @@ HKG_no_commie_books:0 "Subversive Literature Ban"
 HKG_choose_sun_yee_on:0 "Loyalty to Heung Chin"
 HKG_choose_14k:0 "Overtures to Kot Siu-wong"
 HKG_skirmish:0 "Skirmish with 14K Members"
+HKG_bomb_14k:0 "Plant a Bomb in a 14K Hideout"
 
 
 750_infantry_equipment:0 "£rifle_texticon §H750§!"
 750_infantry_equipment_blocked:0 "£rifle_texticon §R750§!"
 150_infantry_equipment:0 "£rifle_texticon §H150§!"
 150_infantry_equipment_blocked:0 "£rifle_texticon §R150§!"
+200_infantry_equipment_300_men:0 "£rifle_texticon §H200§!, £GFX_manpower_texticon §H300§!"
+200_infantry_equipment_300_men_blocked:0 "£rifle_texticon §R200§!, £GFX_manpower_texticon §R300§!"
 
 ### SCRIPTED LOC
 HKG_sun_influece_text:0 "\n\n\nThe §XSun Yee On§!'s influence: [?HKG_sun_yee_on_influence_var]\n"
@@ -549,3 +552,11 @@ hktriads.2601.a:0 "-100 mp"
 hktriads.2602.t:0 "outcome of skirmish - bad"
 hktriads.2602.d:0 "related to decision"
 hktriads.2602.a:0 "-400 mp"
+
+hktriads.2603.t:0 "Bombing scheme successful!"
+hktriads.2603.d:0 "related to decision"
+hktriads.2603.a:0 "-14k pop"
+
+hktriads.2604.t:0 "Failure in bombing scheme!"
+hktriads.2604.d:0 "related to decision"
+hktriads.2604.a:0 "-syo pop"

@@ -1484,3 +1484,37 @@ country_event = { # skirmish outcome bad
 		}
 	}
 }
+
+country_event = { # bombing outcome good
+	id = hktriads.2603
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2603" }
+	title = hktriads.2603.t
+	desc = hktriads.2603.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2603.a
+		add_war_support = 0.05
+		custom_effect_tooltip = HKG_triad_conflict_14k_minus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_minus = yes
+		}
+	}
+}
+
+country_event = { # bombing outcome bad
+	id = hktriads.2604
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2604" }
+	title = hktriads.2604.t
+	desc = hktriads.2604.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2604.a
+		add_war_support = -0.05
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_minus_tt
+		hidden_effect = {
+			HKG_triad_conflict_sun_yee_on_minus = yes
+		}
+	}
+}

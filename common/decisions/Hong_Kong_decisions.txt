@@ -347,7 +347,7 @@ HKG_triad_conflict_decisions = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
 			NOT = { has_country_flag = HKG_14k_chosen_flag }
 		}
-		fire_only_once = yes
+		fire_only_once = no
 		ai_will_do = {
 			factor = 100
 		}
@@ -390,6 +390,47 @@ HKG_triad_conflict_decisions = {
 						HKG_triad_conflict_sun_yee_on_minus = yes
 						country_event = hktriads.2602
 					}
+				}
+			}
+		}
+	}
+	HKG_bomb_14k = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			check_variable = { HKG_guns_var > 199 }
+			check_variable = { HKG_men_var > 299 }
+		}
+		visible = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			NOT = { has_country_flag = HKG_14k_chosen_flag }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		custom_cost_trigger = {
+			check_variable = { HKG_guns_var > 199 }
+			check_variable = { HKG_men_var > 299 }
+		}
+		custom_cost_text = 200_infantry_equipment_300_men
+		days_remove = 10
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_bomb_14k"
+			hidden_effect = {
+				HKG_triad_conflict_minus_200_guns = yes
+				HKG_triad_conflict_minus_300_men = yes
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_bomb_14k"
+			random_list = {
+				82 = {
+					country_event = hktriads.2603
+				}
+				12 = {
+					country_event = hktriads.2604
 				}
 			}
 		}
