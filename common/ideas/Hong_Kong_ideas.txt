@@ -701,5 +701,69 @@ ideas = {
 				conscription_factor = -0.025
 			}
 		}
+		HKG_navy_building_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = generic_navy
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				light_cruiser = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				heavy_cruiser = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				SH_battleship = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				battleship = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		HKG_chan_chak_reforms_idea1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				naval_coordination = 0.10
+				screening_efficiency = 0.05
+				convoy_escort_efficiency = 0.10
+			}
+		}
+		HKG_chan_chak_reforms_idea2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				naval_speed_factor = 0.02
+				naval_retreat_speed = 0.05
+				screening_efficiency = 0.10
+				naval_coordination = 0.15
+				convoy_escort_efficiency = 0.20
+			}
+		}
 	}
 }

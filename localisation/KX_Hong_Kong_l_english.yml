@@ -109,6 +109,9 @@ HKG_rich_vanguards_idea:0 "Increased Vanguards' Payrolls"
 HKG_powerful_vanguards_idea: "More Power to the Vanguards"
 HKG_cucked_to_wo_on_lok:0 "Concessions to Won On Lok"
 HKG_guard_key_locations_idea:0 "Increased Guarding Efforts"
+HKG_navy_building_idea:0 "Building a Navy of Our Own"
+HKG_chan_chak_reforms_idea1:0 "Admiral Chak's Naval Reform"
+HKG_chan_chak_reforms_idea2:0 "Admiral Chak's Naval Reform"
 
 
 #### Decisions
@@ -127,11 +130,14 @@ HKG_skirmish:0 "Skirmish with 14K Members"
 HKG_bomb_14k:0 "Plant a Bomb in a 14K Hideout"
 HKG_street_presence:0 "Increase Our Presence in the Streets"
 HKG_guard_key_locations:0 "Redouble Guard in Key Locations"
+HKG_use_civilians:0 "Arm Loyal Citizens"
 HKG_wo_on_lok_ally:0 "Approach Wo On Lok"
 
 
 750_infantry_equipment:0 "£rifle_texticon §H750§!"
 750_infantry_equipment_blocked:0 "£rifle_texticon §R750§!"
+800_infantry_equipment:0 "£rifle_texticon §H800§!"
+800_infantry_equipment_blocked:0 "£rifle_texticon §R800§!"
 150_infantry_equipment:0 "£rifle_texticon §H150§!"
 150_infantry_equipment_blocked:0 "£rifle_texticon §R150§!"
 200_infantry_equipment_300_men:0 "£rifle_texticon §H200§!, £GFX_manpower_texticon §H300§!"
@@ -594,3 +600,19 @@ hktriads.28.a:0 "ok"
 hktriads.29.t:0 "14K Assets Captured in the Kowloon Port!"
 hktriads.29.d:0 "thanks to increasing guards we found some mfs"
 hktriads.29.a:0 "ok"
+
+hktriads.30.t:0 "Admiral Chak's Navy Reform"
+hktriads.30.d:0 "building navie and shieet :flushed: (pt 1)"
+hktriads.30.a:0 "ok"
+
+hktriads.31.t:0 "Establishment of the 'Chak Doctrine'"
+hktriads.31.d:0 "building navie and shieet :flushed: (pt 2)"
+hktriads.31.a:0 "ok"
+
+hktriads.32.t:0 "Finalizing the Naval Reform"
+hktriads.32.d:0 "building navie and shieet :flushed: (pt 3)"
+hktriads.32.a:0 "ok"
+
+hktriads.33.t:0 "Cooperating with the Citizenry"
+hktriads.33.d:0 "in exchange for protection etc some of the local population turns to our side"
+hktriads.33.a:0 "ok"

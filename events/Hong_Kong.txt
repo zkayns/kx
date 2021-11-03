@@ -1612,3 +1612,77 @@ country_event = { #increasing presence in the streets
 		}
 	}
 }
+
+country_event = { #chan chak's reforms pt 1
+	id = hktriads.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.30" }
+	title = hktriads.30.t
+	desc = hktriads.30.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.30.a
+		add_war_support = 0.05
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_timed_idea = {
+			idea = HKG_navy_building_idea
+			days = 900
+		}
+		hidden_effect = {
+			country_event = hktriads.31
+			days = 80
+		}
+	}
+}
+
+country_event = { #chan chak's reforms pt 2
+	id = hktriads.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.31" }
+	title = hktriads.31.t
+	desc = hktriads.31.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.31.a
+		add_war_support = 0.05
+		navy_experience = 50
+		add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		add_ideas = HKG_chan_chak_reforms_idea1
+		hidden_effect = {
+			country_event = {
+				id = hktriads.32
+				days = 80
+			}
+		}
+	}
+}
+
+country_event = { #chan chak's reforms pt 3
+	id = hktriads.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.32" }
+	title = hktriads.32.t
+	desc = hktriads.32.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.32.a
+		swap_ideas = {
+			remove_idea = HKG_chan_chak_reforms_idea1
+			add_idea = HKG_chan_chak_reforms_idea2
+		}
+	}
+}
+
+country_event = { #arming loyal citizens
+	id = hktriads.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.33" }
+	title = hktriads.33.t
+	desc = hktriads.33.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.33.a
+		add_political_power = 20
+		add_war_support = 0.025
+	}
+}

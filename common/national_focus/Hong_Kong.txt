@@ -873,6 +873,12 @@ focus_tree = {
 				maneuvering_skill = 4
 				coordination_skill = 2
 			}
+			hidden_effect = {
+				country_event = {
+					id = hktriads.30
+					days = 100
+				}
+			}
 		}
 	}
 	focus = { 

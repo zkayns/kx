@@ -523,6 +523,46 @@ HKG_triad_conflict_decisions = {
 			}
 		}
 	}
+	HKG_use_civilians = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_guns_var > 799 }
+			}
+		}
+		visible = {
+			has_country_flag = HKG_sun_yee_on_chosen_flag
+			NOT = { has_country_flag = HKG_14k_chosen_flag }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		custom_cost_trigger = {
+			check_variable = { HKG_guns_var > 799 }
+		}
+		custom_cost_text = 800_infantry_equipment
+		
+		days_remove = 20
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_use_civilians"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_use_civilians"
+			custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
+			country_event = {
+					id = hktriads.33
+					days = 2
+			}
+			hidden_effect = {
+				HKG_triad_conflict_14k_plus_plus = yes
+				HKG_triad_conflict_minus_800_guns = yes
+			}
+		}
+	}
 	HKG_wo_on_lok_ally = {
 		icon = generic_prepare_civil_war
 		available = {
