@@ -873,6 +873,7 @@ focus_tree = {
 				maneuvering_skill = 4
 				coordination_skill = 2
 			}
+			custom_effect_tooltip = HKG_chan_chak_reforms_tt
 			hidden_effect = {
 				country_event = {
 					id = hktriads.30

@@ -163,9 +163,9 @@ ideas = {
 				navy_fuel_consumption_factor = 0.1
 			}
 		}
-		HKG_bankrupcy_aftermath_idea = {
+		HKG_bankruptcy_aftermath_idea = {
 			on_add = { 
-				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankrupcy_aftermath_idea"
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankruptcy_aftermath_idea"
 			}
 			picture = RUS_backward_industry_idea
 			modifier = {
@@ -176,9 +176,9 @@ ideas = {
 				industrial_capacity_dockyard = -0.30
 			}
 		}
-		HKG_bankrupcy_aftermath_idea_triad = {
+		HKG_bankruptcy_aftermath_idea_triad = {
 			on_add = { 
-				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankrupcy_aftermath_idea_triad"
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankruptcy_aftermath_idea_triad"
 			}
 			picture = RUS_backward_industry_idea
 			modifier = {

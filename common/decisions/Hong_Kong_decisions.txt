@@ -344,6 +344,7 @@ HKG_triad_conflict_decisions = {
 			custom_trigger_tooltip = {
 					tooltip = HKG_guns_men_tt
 					check_variable = { HKG_guns_var > 149 }
+					check_variable = { HKG_men_var > 249 }
 			}
 		}
 		visible = {
@@ -356,8 +357,9 @@ HKG_triad_conflict_decisions = {
 		}
 		custom_cost_trigger = {
 			check_variable = { HKG_guns_var > 149 }
+			check_variable = { HKG_men_var > 249 }
 		}
-		custom_cost_text = 150_infantry_equipment
+		custom_cost_text = 150_infantry_equipment_250_men
 		days_remove = 7
 		days_re_enable = 14
 		
@@ -365,6 +367,7 @@ HKG_triad_conflict_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision HKG_skirmish"
 			hidden_effect = {
 				HKG_triad_conflict_minus_150_guns = yes
+				HKG_triad_conflict_minus_250_men = yes
 			}
 		}
 		remove_effect = {
@@ -400,7 +403,7 @@ HKG_triad_conflict_decisions = {
 			}
 		}
 	}
-	HKG_bomb_14k = {
+	HKG_assault_14k = {
 		icon = generic_prepare_civil_war
 		available = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
@@ -414,7 +417,6 @@ HKG_triad_conflict_decisions = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
 			NOT = { has_country_flag = HKG_14k_chosen_flag }
 		}
-		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
 		}
@@ -426,20 +428,88 @@ HKG_triad_conflict_decisions = {
 		days_remove = 10
 		
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_bomb_14k"
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_assault_14k"
 			hidden_effect = {
 				HKG_triad_conflict_minus_200_guns = yes
 				HKG_triad_conflict_minus_300_men = yes
 			}
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_bomb_14k"
-			random_list = {
-				88 = {
-					country_event = hktriads.2603
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_assault_14k"
+			custom_effect_tooltip = HKG_assault_tt
+			army_experience = 25
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { HKG_sun_yee_on_influence_var > 80 } 
+					}
+					random_list = {
+						99 = {
+							country_event = hktriads.2603
+						}
+						1 = {
+							country_event = hktriads.2604
+						}
+					}
 				}
-				12 = {
-					country_event = hktriads.2604
+				else_if = {
+					limit = { check_variable = { HKG_sun_yee_on_influence_var > 60 } 
+					}
+					random_list = {
+						88 = {
+							country_event = hktriads.2603
+						}
+						12 = {
+							country_event = hktriads.2604
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { HKG_sun_yee_on_influence_var > 50 } 
+					}
+					random_list = {
+						82 = {
+							country_event = hktriads.2603
+						}
+						18 = {
+							country_event = hktriads.2604
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { HKG_sun_yee_on_influence_var > 40 } 
+					}
+					random_list = {
+						75 = {
+							country_event = hktriads.2603
+						}
+						25 = {
+							country_event = hktriads.2604
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { HKG_sun_yee_on_influence_var > 30 } 
+					}
+					random_list = {
+						66 = {
+							country_event = hktriads.2603
+						}
+						34 = {
+							country_event = hktriads.2604
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { HKG_sun_yee_on_influence_var > 1 } 
+					}
+					random_list = {
+						50 = {
+							country_event = hktriads.2603
+						}
+						50 = {
+							country_event = hktriads.2604
+						}
+					}
 				}
 			}
 		}

@@ -603,8 +603,8 @@ country_event = { #Triads takeover!
 		remove_ideas = HKG_triads_idea3
 		remove_ideas = HKG_widespread_disorder_idea2
 		swap_ideas = {
-			remove_idea = HKG_bankrupcy_aftermath_idea
-			add_idea = HKG_bankrupcy_aftermath_idea_triad
+			remove_idea = HKG_bankruptcy_aftermath_idea
+			add_idea = HKG_bankruptcy_aftermath_idea_triad
 		}
 		if = {
 			limit = {
@@ -672,8 +672,8 @@ country_event = { #Triads takeover!
 		remove_ideas = HKG_triads_idea3
 		remove_ideas = HKG_widespread_disorder_idea2
 		swap_ideas = {
-			remove_idea = HKG_bankrupcy_aftermath_idea
-			add_idea = HKG_bankrupcy_aftermath_idea_triad
+			remove_idea = HKG_bankruptcy_aftermath_idea
+			add_idea = HKG_bankruptcy_aftermath_idea_triad
 		}
 		add_ideas = HKG_triads_in_power_idea
 		if = {

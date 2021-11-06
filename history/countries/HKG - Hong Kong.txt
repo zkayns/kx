@@ -138,7 +138,7 @@ add_ideas = {
 	HKG_police_garrison_idea
 	HKG_widespread_disorder_idea
 	HKG_makeshift_administration_idea
-	HKG_bankrupcy_aftermath_idea
+	HKG_bankruptcy_aftermath_idea
 	HKG_triads_idea
 	HKG_major_port_idea
 }
