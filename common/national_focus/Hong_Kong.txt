@@ -1247,7 +1247,7 @@ focus_tree = {
 				add_tech_bonus = {
 					name = HKG_navy
 					bonus = 1
-					uses = 1
+					uses = 2
 					category = ss_tech
 				}
 			navy_experience = 75
@@ -1344,13 +1344,13 @@ focus_tree = {
 				add_tech_bonus = {
 					name = HKG_air1
 					bonus = 1
-					uses = 1
+					uses = 2
 					category = light_fighter
 				}
 				air_experience = 75
 				add_equipment_to_stockpile = {
 					type = fighter_equipment
-					amount = 125
+					amount = 150
 					producer = HKG
 				}
 				add_equipment_to_stockpile = {

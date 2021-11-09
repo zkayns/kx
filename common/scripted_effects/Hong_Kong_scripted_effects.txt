@@ -156,10 +156,22 @@ HKG_triad_conflict_minus_500_guns = {
 HKG_triad_conflict_minus_800_guns = {
 	add_to_variable = { HKG_guns_var = -800 }
 }
+HKG_triad_conflict_minus_900_guns = {
+	add_to_variable = { HKG_guns_var = -900 }
+}
 HKG_triad_conflict_plus_200_guns = {
 	add_to_variable = { HKG_guns_var = 200 }
 }
+HKG_triad_conflict_plus_250_guns = {
+	add_to_variable = { HKG_guns_var = 250 }
+}
+HKG_triad_conflict_plus_500_guns = {
+	add_to_variable = { HKG_guns_var = 500 }
+}
 ### men
+HKG_triad_conflict_minus_100_men = {
+	add_to_variable = { HKG_men_var = -100 }
+}
 HKG_triad_conflict_minus_200_men = {
 	add_to_variable = { HKG_men_var = -200 }
 }
@@ -180,4 +192,7 @@ HKG_triad_conflict_minus_900_men = {
 }
 HKG_triad_conflict_minus_1000_men = {
 	add_to_variable = { HKG_men_var = -1000 }
+}
+HKG_triad_conflict_plus_1000_men = {
+	add_to_variable = { HKG_men_var = 1000 }
 }

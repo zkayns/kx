@@ -39,7 +39,7 @@ HKG_MIL_01 = {
 }
 
 HKG_MIL_02 = {
-	name = "Militia Division"
+	name = "Anti-Socialist Brigade"
 
 	for_countries = { HKG }
 
@@ -75,5 +75,45 @@ HKG_MIL_02 = {
 		18 = { "%dth Anti-Socialist Brigade" }
 		19 = { "%dth Anti-Socialist Brigade" }
 		20 = { "%dth Anti-Socialist Brigade" }
+	}
+}
+
+HKG_INF_01 = {
+	name = "Sun Yee On Regiment"
+
+	for_countries = { HKG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HKG_INF_02 }
+
+	fallback_name = "%d. Infantry Regiment""
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Infantry Regiment" }
+		2 = { "%dnd Infantry Regiment" }
+		3 = { "%drd Infantry Regiment" }
+		4 = { "%dth Infantry Regiment" }
+		5 = { "%dth Infantry Regiment" }
+		6 = { "%dth Infantry Regiment" }
+		7 = { "%dth Infantry Regiment" }
+		8 = { "%dth Infantry Regiment" }
+		9 = { "%dth Infantry Regiment" }
+		10 = { "%dth Infantry Regiment" }
+		11 = { "%dth Infantry Regiment" }
+		12 = { "%dth Infantry Regiment" }
+		13 = { "%dth Infantry Regiment" }
+		14 = { "%dth Infantry Regiment" }
+		15 = { "%dth Infantry Regiment" }
+		16 = { "%dth Infantry Regiment" }
+		17 = { "%dth Infantry Regiment" }
+		18 = { "%dth Infantry Regiment" }
+		19 = { "%dth Infantry Regiment" }
+		20 = { "%dth Infantry Regiment" }
 	}
 }
