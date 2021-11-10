@@ -1800,6 +1800,18 @@ HKG_14K_KMT = {
 	color = rgb { 0 0 152 }
 	color_ui = rgb { 0 0 152 }
 }
+HKG_SASSOON = {
+	color = rgb { 238 213 116 }
+	color_ui = rgb { 238 213 116 }
+}
+HKG_SASSOON1 = {
+	color = rgb { 238 213 116 }
+	color_ui = rgb { 238 213 116 }
+}
+HKG_SASSOON2 = {
+	color = rgb { 238 213 116 }
+	color_ui = rgb { 238 213 116 }
+}
 RUS_SCY = {
 	color = rgb { 238 188 29 }
 	color_ui = rgb { 238 188 29}

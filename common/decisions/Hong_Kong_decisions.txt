@@ -334,6 +334,18 @@ HKG_triad_conflict_decisions = {
 				set_country_flag = HKG_14k_chosen_flag
 				set_country_flag = HKG_decision_made
 				HKG_triad_conflict_setup_14k = yes
+				country_event = {
+					id = hktriads.35
+					days = 21
+				}
+				country_event = {
+					id = hktriads.36
+					days = 38
+				}
+				country_event = {
+					id = hktriads.37
+					days = 64
+				}
 			}
 		}
 	}
