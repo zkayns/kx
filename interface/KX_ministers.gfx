@@ -1211,6 +1211,18 @@ spriteTypes = {
 		name = "GFX_idea_HKG_Duncan_William_Macintosh_hog_ade"
 		texturefile = "gfx/interface/ministers/HKG/HKG_Duncan_William_Macintosh.png"
 	}
+	spriteType = {
+		name = "GFX_idea_HKG_Josslyn_Erroll_hog_npo"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Josslyn_Erroll.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Rotha_Beryl_Lintorn_Orman_hog_npo"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Rotha_Beryl_Lintorn_Orman.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_William_Joyce_hog_npo"
+		texturefile = "gfx/interface/ministers/HKG/HKG_William_Joyce.png"
+	}
 
 
 
@@ -1232,6 +1244,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_HKG_Charles_Sutcliffe_for_ade"
 		texturefile = "gfx/interface/ministers/HKG/HKG_Charles_Sutcliffe.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_William_Joyce_for_npo"
+		texturefile = "gfx/interface/ministers/HKG/HKG_William_Joyce.png"
 	}
 
 
@@ -1269,6 +1285,10 @@ spriteTypes = {
 		name = "GFX_idea_HKG_Duncan_William_Macintosh_eco_ade"
 		texturefile = "gfx/interface/ministers/HKG/HKG_Duncan_William_Macintosh.png"
 	}
+	spriteType = {
+		name = "GFX_idea_HKG_Neil_Francis_Hawkins_eco_npo"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Neil_Francis_Hawkins.png"
+	}
 
 
 	#Security Minister
@@ -1279,6 +1299,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_HKG_Roy_Henry_sec_ade"
 		texturefile = "gfx/interface/ministers/HKG/HKG_Roy_Henry.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Maxwell_Knight_sec_npo"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Maxwell_Knight.png"
 	}
 
 

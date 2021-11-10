@@ -2187,6 +2187,69 @@ ideas = {
 				hog_reformist_soldier
 			}
 		}
+		HKG_Josslyn_Erroll_hog_npo = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			visible = {
+				NOT = { has_country_flag = HKG_Josslyn_Erroll_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Josslyn_Erroll_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_naive_optimist
+			}
+		}
+		HKG_Rotha_Beryl_Lintorn_Orman_hog_npo = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			visible = {
+				NOT = { has_country_flag = HKG_Rotha_Beryl_Lintorn_Orman_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Rotha_Beryl_Lintorn_Orman_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_staunch_anti_socialist
+			}
+		}
+		HKG_William_Joyce_hog_npo = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			visible = {
+				NOT = { has_country_flag = HKG_William_Joyce_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_William_Joyce_hog_npo"
+			}
+			traits = {
+				head_of_government
+				national_populist
+				hog_staunch_anti_socialist
+			}
+		}
 	}
 
 	person_of_influence = {
@@ -6917,6 +6980,69 @@ ideas = {
 				foreign_minister
 				authoritarian_democrat
 				for_iron_fisted_brute
+			}
+		}
+		HKG_Maxwell_Knight_sec_npo = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = Maxwell_Knight_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Maxwell_Knight_sec_npo"
+			}
+			traits = {
+				security_minister
+				national_populist
+				sec_back_stabber
+			}
+		}
+		HKG_Neil_Francis_Hawkins_eco_npo = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = Neil_Francis_Hawkins_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Neil_Francis_Hawkins_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_planned_economy_proponent
+			}
+		}
+		HKG_William_Joyce_for_npo = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = William_Joyce_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_William_Joyce_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_the_cloak_n_dagger_schemer
 			}
 		}
 	}

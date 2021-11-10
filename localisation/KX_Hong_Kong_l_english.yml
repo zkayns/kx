@@ -15,9 +15,18 @@ HKG_14K_paternal_autocrat_DEF:0 "United Syndicates of Hong Kong"
 HKG_14K_LIANGGUANG_paternal_autocrat:0 "Liangguang Clique"
 HKG_14K_LIANGGUANG_paternal_autocrat_ADJ:0 "Liangguang"
 HKG_14K_LIANGGUANG_paternal_autocrat_DEF:0 "The Liangguang Clique"
+HKG_14K_LIANGGUANG_national_populist:0 "Liangguang Clique"
+HKG_14K_LIANGGUANG_national_populist_ADJ:0 "Liangguang"
+HKG_14K_LIANGGUANG_national_populist_DEF:0 "The Liangguang Clique"
 HKG_14K_KMT_paternal_autocrat:0 "Guangdong Revolutionary Government"
 HKG_14K_KMT_paternal_autocrat_ADJ:0 "Guangdong"
 HKG_14K_KMT_paternal_autocrat_DEF:0 "Guangdong Reorganized National Revolutionary Government"
+HKG_SASSOON_market_liberal:0 ""
+HKG_SASSOON_market_liberal_ADJ:0 "Hong Kong"
+HKG_SASSOON_market_liberal_DEF:0 ""
+HKG_SASSOON_social_conservative:0 ""
+HKG_SASSOON_social_conservative_ADJ:0 ""
+HKG_SASSOON_social_conservative_DEF:0 ""
 
 
 HKG_totalist_party:0 "Chinese Syndicalist Party"
@@ -112,6 +121,7 @@ HKG_guard_key_locations_idea:0 "Increased Guarding Efforts"
 HKG_navy_building_idea:0 "Building a Navy of Our Own"
 HKG_chan_chak_reforms_idea1:0 "Admiral Chak's Naval Reform"
 HKG_chan_chak_reforms_idea2:0 "Admiral Chak's Naval Reform"
+hog_staunch_anti_socialist:0 "Staunch Anti-Socialist"
 
 
 #### Decisions
@@ -220,6 +230,7 @@ HKG_triad_inf_tt:0 "§HFour regiments of infantry will be formed.§!"
 #################
 #### Focuses ####
 #################
+
 HKG_tumultuous_independence:0 "Tumultuous Independence"
 HKG_tumultuous_independence_desc:0 "d"
 HKG_secure_the_streets:0 "Dispatch More Police Patrols"

@@ -351,6 +351,13 @@ leader_traits = {
 
 		random = no
 	}
+	
+	hog_staunch_anti_socialist = { #Lintorn-Orman/Joyce
+		political_power_gain = 0.075
+		command_power_gain = 0.25
+
+		random = no
+	}
 
 	###########################################
 	### Persons of Influence General Traits ###
