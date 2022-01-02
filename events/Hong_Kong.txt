@@ -393,7 +393,7 @@ country_event = { #Triads in retreat!
 		create_country_leader = {
 			name = "Kot Siu-wong"
 			desc = "POLITICS_KOT_SIUWONG_DESC"
-			picture = "Portrait_HKG_Kot_Siu_Wong"
+			picture = "gfx/leaders/HKG/Portrait_HKG_Kot_Siu_Wong"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
 			traits = { }
@@ -594,9 +594,9 @@ country_event = { #Triads takeover!
 		create_country_leader = {
 			name = "Heung Chin"
 			desc = "POLITICS_HEUNG_DESC"
-			picture = "Portrait_HKG_Heung_Chin.png"
+			picture = "gfx/leaders/HKG/Portrait_HKG_Heung_Chin.png"
 			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
+			ideology = crime_syndicate_subtype
 			traits = { }
 		}
 		set_politics = {
@@ -663,9 +663,9 @@ country_event = { #Triads takeover!
 		create_country_leader = {
 			name = "Heung Chin"
 			desc = "POLITICS_HEUNG_DESC"
-			picture = "Portrait_HKG_Heung_Chin.png"
+			picture = "gfx/leaders/HKG/Portrait_HKG_Heung_Chin.png"
 			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
+			ideology = crime_syndicate_subtype
 			traits = { }
 		}
 		set_politics = {
@@ -1492,7 +1492,7 @@ country_event = { # skirmish outcome bad
 	}
 }
 
-country_event = { # bombing outcome good
+country_event = { # bombing outcome good - syo
 	id = hktriads.2603
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2603" }
 	title = hktriads.2603.t
@@ -1509,7 +1509,7 @@ country_event = { # bombing outcome good
 	}
 }
 
-country_event = { # bombing outcome bad
+country_event = { # bombing outcome bad - syo
 	id = hktriads.2604
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2604" }
 	title = hktriads.2604.t
@@ -1522,6 +1522,40 @@ country_event = { # bombing outcome bad
 		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_minus_tt
 		hidden_effect = {
 			HKG_triad_conflict_sun_yee_on_minus = yes
+		}
+	}
+}
+
+country_event = { # bombing outcome good - 14k
+	id = hktriads.2605
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2605" }
+	title = hktriads.2605.t
+	desc = hktriads.2605.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2605.a
+		add_war_support = 0.05
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_minus_tt
+		hidden_effect = {
+			HKG_triad_conflict_sun_yee_on_minus = yes
+		}
+	}
+}
+
+country_event = { # bombing outcome bad - 14k
+	id = hktriads.2606
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.2606" }
+	title = hktriads.2606.t
+	desc = hktriads.2606.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.2606.a
+		add_war_support = -0.05
+		custom_effect_tooltip = HKG_triad_conflict_14k_minus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_minus = yes
 		}
 	}
 }
@@ -1916,6 +1950,180 @@ country_event = { # 14k picked syo event 3
 			HKG_triad_conflict_plus_250_guns = yes
 			HKG_triad_conflict_sun_yee_on_plus = yes
 			HKG_triad_conflict_minus_200_men = yes
+		}
+	}
+}
+
+country_event = { # two-gun cohen's assistance?
+	id = hktriads.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.38" }
+	title = hktriads.38.t
+	desc = hktriads.38.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.38.a
+		custom_effect_tooltip = HKG_cohen_general_tt
+		add_political_power = -25
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus = yes
+			create_corps_commander = {
+				name = "Morris Abraham Cohen"
+				picture = "Portrait_HKG_Two-Gun_Cohen.png"
+				traits = {
+					organizer
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 3
+				id = 12026
+			}
+		}
+	}
+	option = {
+		name = hktriads.38.b
+		add_stability = 0.05
+		hidden_effect = {
+		}
+	}
+	option = {
+		name = hktriads.38.c
+		add_stability = -0.1
+		add_ideas = HKG_jewish_suppression_idea
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_plus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus_plus = yes
+			country_event = {
+				id = hktriads.39
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = { # kmt cells aid us
+	id = hktriads.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.39" }
+	title = hktriads.39.t
+	desc = hktriads.39.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.39.a
+		add_war_support = 0.05
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_tt
+		custom_effect_tooltip = HKG_triad_conflict_plus_400_guns_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_plus_1000_men_post_14k_tt
+		hidden_effect = {
+			HKG_triad_conflict_plus_400_guns = yes
+			HKG_triad_conflict_14k_plus = yes
+			HKG_triad_conflict_plus_1000_men = yes
+		}
+	}
+}
+
+country_event = { # striking supplies
+	id = hktriads.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.40" }
+	title = hktriads.40.t
+	desc = hktriads.40.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.40.a
+		add_war_support = 0.05
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_plus_tt
+		custom_effect_tooltip = HKG_triad_conflict_plus_250_guns_post_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus_plus = yes
+			HKG_triad_conflict_plus_250_guns = yes
+			country_event = {
+				id = hktriads.41
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # syo captive spoils a secret
+	id = hktriads.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.41" }
+	title = hktriads.41.t
+	desc = hktriads.41.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.41.a
+		hidden_effect = {
+			set_country_flag = HKG_14k_intel_gained
+		}
+	}
+}
+
+country_event = { # should we kill heung chin
+	id = hktriads.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.42" }
+	title = hktriads.42.t
+	desc = hktriads.42.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.42.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.4200
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = hktriads.42.b
+		hidden_effect = {
+			country_event = {
+				id = hktriads.4201
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # assassination attempt
+	id = hktriads.4200
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.4200" }
+	title = hktriads.4200.t
+	desc = hktriads.4200.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.4200.a
+		add_war_support = -0.1
+		custom_effect_tooltip = HKG_triad_conflict_14k_minus_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt_
+		custom_effect_tooltip = HKG_triad_conflict_minus_400_men_post_tt
+		hidden_effect = {
+			HKG_triad_conflict_minus_400_men = yes
+			HKG_triad_conflict_sun_yee_on_plus = yes
+			HKG_triad_conflict_14k_minus = yes
+		}
+	}
+}
+
+country_event = { # no assassination attempt
+	id = hktriads.4201
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.4201" }
+	title = hktriads.4201.t
+	desc = hktriads.4201.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.4201.a
+		custom_effect_tooltip = HKG_regain_man_guns
+		hidden_effect = {
+			HKG_triad_conflict_plus_150_guns = yes
+			HKG_triad_conflict_plus_250_men = yes
 		}
 	}
 }

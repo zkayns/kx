@@ -776,5 +776,27 @@ ideas = {
 				convoy_escort_efficiency = 0.20
 			}
 		}
+		HKG_jewish_suppression_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		HKG_14k_intel_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				out_of_supply_factor = -0.1
+				war_support_factor = 0.05
+				local_manpower = 0.02
+			}
+		}
 	}
 }

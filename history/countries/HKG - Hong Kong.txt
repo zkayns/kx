@@ -146,9 +146,9 @@ add_ideas = {
 create_country_leader = {
 	name = "Duncan William Macintosh"
 	desc = "POLITICS_MACINTOSH_DESC"
-	picture = "Portrait_HKG_Duncan_William_Macintosh.png"
+	picture = "gfx/leaders/HKG/Portrait_HKG_Duncan_William_Macintosh.png"
 	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
+	ideology = police_state_subtype
 	traits = { benevolent_commissioner }
 }
 
@@ -156,16 +156,16 @@ create_country_leader = {
 create_country_leader = {
 	name = "Duncan William Macintosh"
 	desc = "POLITICS_MACINTOSH_DESC"
-	picture = "Portrait_HKG_Duncan_William_Macintosh.png"
+	picture = "gfx/leaders/HKG/Portrait_HKG_Duncan_William_Macintosh.png"
 	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
+	ideology = junta_subtype
 	traits = { benevolent_commissioner }
 }
 
 create_country_leader = {
 	name = "Heung Chin"
 	desc = "POLITICS_HEUNG_DESC"
-	picture = "Portrait_HKG_Heung_Chin.png"
+	picture = "gfx/leaders/HKG/Portrait_HKG_Heung_Chin.png"
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 	traits = { }
@@ -178,7 +178,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Duncan William Macintosh"
-	picture = "Portrait_HKG_Duncan_William_Macintosh.png"
+	picture = "gfx/leaders/HKG/Portrait_HKG_Duncan_William_Macintosh.png"
 	traits = {
 		politically_connected
 		urban_assault_specialist
