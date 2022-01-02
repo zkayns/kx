@@ -1767,7 +1767,7 @@ country_event = { #legationary arsenal 3
 		name = hktriads.3402.a
 		add_political_power = 25
 		custom_effect_tooltip = HKG_triad_conflict_plus_500_guns_post_tt
-		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
 		hidden_effect = {
 			HKG_triad_conflict_plus_500_guns = yes
 			HKG_triad_conflict_sun_yee_on_plus_plus = yes
@@ -1785,7 +1785,7 @@ country_event = { #legationary arsenal 4
 	option = {
 		name = hktriads.3403.a
 		custom_effect_tooltip = HKG_triad_conflict_plus_500_guns_post_tt
-		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
 		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
 		hidden_effect = {
 			HKG_triad_conflict_plus_250_guns = yes
@@ -1813,7 +1813,7 @@ country_event = { # 14k picked syo event 1
 		hidden_effect = {
 			country_event = {
 				id = hktriads.3501
-				days = 3
+				days = 1
 			}
 		HKG_triad_conflict_minus_400_guns = yes
 		HKG_triad_conflict_minus_600_men = yes
@@ -1830,7 +1830,7 @@ country_event = { # 14k picked syo event 1
 		hidden_effect = {
 			country_event = {
 				id = hktriads.3502
-				days = 3
+				days = 1
 			}
 		HKG_triad_conflict_minus_200_guns = yes
 		HKG_triad_conflict_minus_400_men = yes
@@ -1851,6 +1851,38 @@ country_event = { # 14k picked syo event 1
 	}
 }
 
+country_event = { # 14k picked syo event 1 part 2
+	id = hktriads.3501
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.3501" }
+	title = hktriads.3501.t
+	desc = hktriads.3501.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.3501.a
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_plus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus_plus = yes
+		}
+	}
+}
+
+country_event = { # 14k picked syo event 1 part 3
+	id = hktriads.3403
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.3403" }
+	title = hktriads.3403.t
+	desc = hktriads.3403.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.3502.a
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus = yes
+		}
+	}
+}
+
 country_event = { # 14k picked syo event 2
 	id = hktriads.36
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.36" }
@@ -1860,13 +1892,10 @@ country_event = { # 14k picked syo event 2
 
 	option = {
 		name = hktriads.36.a
-		custom_effect_tooltip = HKG_triad_conflict_plus_500_guns_post_tt
-		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus
-		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
+		add_ideas = HKG_wo_on_lok_sun_yee_on_ally
 		hidden_effect = {
-			HKG_triad_conflict_plus_250_guns = yes
-			HKG_triad_conflict_sun_yee_on_plus = yes
-			HKG_triad_conflict_minus_200_men = yes
+			HKG_triad_conflict_sun_yee_on_plus_plus = yes
 		}
 	}
 }

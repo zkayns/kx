@@ -142,6 +142,7 @@ HKG_guard_key_locations_idea:0 "Increased Guarding Efforts"
 HKG_navy_building_idea:0 "Building a Navy of Our Own"
 HKG_chan_chak_reforms_idea1:0 "Admiral Chak's Naval Reform"
 HKG_chan_chak_reforms_idea2:0 "Admiral Chak's Naval Reform"
+HKG_wo_on_lok_sun_yee_on_ally:0 "Wo On Lok-Sun Yee On Alliance"
 hog_staunch_anti_socialist:0 "Staunch Anti-Socialist"
 
 
@@ -688,3 +689,15 @@ hktriads.35.d:0 "they found out where do we keep money"
 hktriads.35.a:0 "fierce resistance"
 hktriads.35.b:0 "idk fight them"
 hktriads.35.c:0 "we dont have guns!"
+
+hktriads.3501.t:0 "The Assault is Crushed!"
+hktriads.3501.d:0 "super duper victory"
+hktriads.3501.a:0 "++14k inf"
+
+hktriads.3502.t:0 "Sun Yee On Members Repelled!"
+hktriads.3502.d:0 "victory"
+hktriads.3502.a:0 "+14k inf"
+
+hktriads.36.t:0 "Sun Yee On Aligns with Wo On Lok!"
+hktriads.36.d:0 "they grow more powerful"
+hktriads.36.a:0 "zamn..."
