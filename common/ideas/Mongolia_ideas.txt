@@ -736,9 +736,7 @@ ideas = {
 			modifier = {
 				war_support_factor = -0.15
 				army_org_factor = -0.15
-			}
-			research_bonus = {
-				land_doctrine = -0.25
+				land_doctrine_cost_factor = 0.25
 			}
 		}
 		MON_sternberg_purge_big_idea = {
@@ -747,9 +745,7 @@ ideas = {
 			modifier = {
 				war_support_factor = -0.25
 				army_org_factor = -0.25
-			}
-			research_bonus = {
-				land_doctrine = -0.50
+				land_doctrine_cost_factor = 0.5
 			}
 		}
 		MON_buddhist_law_idea = {
@@ -1045,6 +1041,7 @@ ideas = {
 		Eurasian_alliance_idea = {
             on_add = {log = "[GetDateText]: [Root.GetName]: add idea Eurasian_alliance_idea"}
             allowed = { always = no }
+			available = { is_in_faction_with = MON }
 			removal_cost = -1
             picture = idea_Eurasia
 			modifier = {
@@ -1341,6 +1338,24 @@ ideas = {
 				conscription_factor = 0.35
 				army_morale_factor = 0.15
 				research_speed_factor = 0.02
+			}
+		}
+		
+		MON_anti_mongolian_violence_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_anti_mongolian_violence"}
+			picture = MON_anti_mongolian_violence
+			modifier = {
+				MONTHLY_POPULATION = -0.05
+				stability_factor = -0.05
+			}
+		}
+		
+		MON_anti_chinese_violence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_anti_chinese_violence"}
+			picture = MON_anti_chinese_violence
+			modifier = {
+				MONTHLY_POPULATION = -0.05
+				stability_factor = -0.05
 			}
 		}
 	}

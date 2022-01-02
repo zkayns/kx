@@ -1690,6 +1690,34 @@ ADA = {
 	color = rgb { 146 78 48 }
 	color_ui = rgb { 146 78 48 }
 }
+AML_Dominion = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+TXS_Dominion = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+DSR_Dominion = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+CGL_Dominion = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+FSA_Dominion = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+CAL_Dominion = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+NEE_Dominion_other = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
 ###reddawn
 GRU_NMDVP = {
 	color = rgb { 45 45 45 }
@@ -1784,6 +1812,190 @@ VK_REBBELLION = {
 	color = rgb { 110 0 0 }
 	color_ui = rgb { 110 0 0 }
 }
+AFG_OTT_exile = {
+	color = rgb { 123 0 0 }
+	color_ui = rgb { 123 0 0 }
+}
+AFG_OTT_equal = {
+	color = rgb { 74 93 35 }
+	color_ui = rgb { 74 93 35 }
+}
+RUS_SCY = {
+	color = rgb { 238 188 29 }
+	color_ui = rgb { 238 188 29}
+}
+RUS_SCY2 = {
+	color = rgb { 238 188 29 }
+	color_ui = rgb { 238 188 29 }
+}
+RUS_SCY3 = {
+	color = rgb { 238 188 29 }
+	color_ui = rgb { 238 188 29 }
+}
+RUS_SCY4 = {
+	color = rgb { 238 188 29 }
+	color_ui = rgb { 238 188 29 }
+}
+BAY_DOLBUS_GERMANY = {
+	color = rgb { 76 152 152 }
+	color_ui = rgb { 76 152 152 }
+}
+BBR_israel = {
+	color = rgb { 68 0 102 }
+	color_ui = rgb { 68 0 102 }
+}
+BBR_israel2 = {
+	color = rgb { 68 0 102 }
+	color_ui = rgb { 68 0 102 }
+}
+BBR_israel3 = {
+	color = rgb { 68 0 102 }
+	color_ui = rgb { 68 0 102 }
+}
+BBR_israel4 = {
+	color = rgb { 68 0 102 }
+	color_ui = rgb { 68 0 102 }
+}
+BBR_SUNRA_GANG = {
+	color = rgb { 145 92 131 }
+	color_ui = rgb {  145 92 131 }
+}	
+BBR_SUNRA_GANG2 = {
+	color = rgb { 145 92 131 }
+	color_ui = rgb {  145 92 131 }
+}
+BBR_SUNRA_GANG3 = {
+	color = rgb { 145 92 131 }
+	color_ui = rgb {  145 92 131 }
+}
+BBR_SUNRA_GANG4 = {
+	color = rgb { 145 92 131 }
+	color_ui = rgb {  145 92 131 }
+}
+BBR_SUNRA_GANG5 = {
+	color = rgb { 145 92 131 }
+	color_ui = rgb {  145 92 131 }
+}
+BBR_SUNRA_GANG6 = {
+	color = rgb { 145 92 131 }
+	color_ui = rgb {  145 92 131 }
+}
+HUN_bay_puppet = {
+	color = rgb { 0 70 255 }
+	color_ui = rgb { 0 70 255 }
+}
+TIAN_EMPIRE = {
+	color = rgb { 82  2  15 }
+	color_ui = rgb { 82  2  15 }
+}
+TIAN_EMPIRE2 = {
+	color = rgb { 82  2  15 }
+	color_ui = rgb { 82  2  15 }
+}
+TIAN_EMPIRE3 = {
+	color = rgb { 82  2  15 }
+	color_ui = rgb { 82  2  15 }
+}
+SPR_BOURBON = {
+	color = rgb { 0 0 153 }
+	color_ui = rgb { 0 0 153 }
+}
+SPR_FRANCO_SPAIN = {
+	color = rgb { 0 0 153 }
+	color_ui = rgb { 0 0 153 }
+}
+MLT_MED_FED = {
+	color = rgb { 255 222 0 }
+	color_ui = rgb { 255 222 0 }
+}
+MLT_ITALY = {
+	color = rgb { 114 47 55 }
+	color_ui = rgb { 114 47 55 }
+}
+MLT_OUTMERE = {
+	color = rgb { 255 255 204 }
+	color_ui = rgb { 255 255 204 }
+}
+MLT_LATIN_EMPIRE = {
+	color = rgb { 220 0 0 }
+	color_ui = rgb { 220 0 0 }
+}
+MLT_JERSUALEM = {
+	color = rgb { 255 255 204 }
+	color_ui = rgb { 255 255 204 }
+}
+MLT_ARAB_FUNNY_MEN = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
+}
+MLT_EDSSA = {
+	color = rgb { 0 18 127 }
+	color_ui = rgb { 0 18 127 }
+}
+MLT_ANTIOCH = {
+	color = rgb { 152 85 92 }
+	color_ui = rgb { 152 85 92 }
+}
+MLT_EGY = {
+	color = rgb { 188 190 42 }
+	color_ui = rgb { 188 190 42 }
+}
+ALB_BRA = {
+	color = rgb { 149 45 102 }
+	color_ui = rgb { 194 59 133 }
+}
+LBA_OTT = {
+	color = rgb { 25 105 90 }
+	color_ui = rgb { 25 105 90 }
+}
+CRE_OTT = {
+	color = rgb { 123 0 0 }
+	color_ui = rgb { 123 0 0 }
+}
+MAL_NOR = {
+	color = rgb { 255 255 185 }
+	color_ui = rgb { 255 255 185 }
+}
+SKM_HIMALAYA = {
+	color = rgb { 93 104 199 }
+	color_ui = rgb { 93 104 199 }
+}
+VKB = {
+	color = rgb { 75 75 75 }
+	color_ui = rgb { 85 85 85 }
+}
+VKR = {
+	color = rgb { 75 75 75 }
+	color_ui = rgb { 85 85 85 }
+}
+VKK = {
+	color = rgb { 75 75 75 }
+	color_ui = rgb { 85 85 85 }
+}
+HYP = {
+	color = rgb { 75 75 75 }
+	color_ui = rgb { 85 85 85 }
+}
+SAX = {
+	color = rgb { 160 160 160 }
+	color_ui = rgb { 160 160 160 }
+}
+POM = {
+	color = rgb { 0 62 7 }
+	color_ui = rgb { 0 62 7 }
+}
+SIL = {
+	color = rgb { 153 76 0 }
+	color_ui = rgb { 153 76 0 }
+}
+HZN = {
+	color = rgb { 20 40 150 }
+	color_ui = rgb { 20 40 150 }
+}
+SCH = {
+	color = rgb { 159 83 80 }
+	color_ui = rgb { 197 101 98 }
+}
 HKG_SUN_YEE_ON = {
 	color = rgb { 247 51 18 }
 	color_ui = rgb { 247 51 18 }
@@ -1811,20 +2023,4 @@ HKG_SASSOON1 = {
 HKG_SASSOON2 = {
 	color = rgb { 238 213 116 }
 	color_ui = rgb { 238 213 116 }
-}
-RUS_SCY = {
-	color = rgb { 238 188 29 }
-	color_ui = rgb { 238 188 29}
-}
-RUS_SCY2 = {
-	color = rgb { 238 188 29 }
-	color_ui = rgb { 238 188 29}
-}
-RUS_SCY3 = {
-	color = rgb { 238 188 29 }
-	color_ui = rgb { 238 188 29}
-}
-RUS_SCY4 = {
-	color = rgb { 238 188 29 }
-	color_ui = rgb { 238 188 29}
 }

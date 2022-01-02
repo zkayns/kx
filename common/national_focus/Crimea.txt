@@ -1834,10 +1834,10 @@ focus_tree = {
 			focus = CRM_Directorate_Of_Economy_And_Military
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = CRM_The_War_Doctrine
-				bonus = 1
-				uses = 3
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}
@@ -2200,10 +2200,10 @@ focus_tree = {
 					producer = UKR
 				}
 			}
-			add_tech_bonus = {
-				name = CRM_Crimean_Air_Force
-				bonus = 1
-				uses = 3
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
 				category = air_doctrine
 			}
 		}
@@ -3026,7 +3026,10 @@ focus_tree = {
 			focus = CRM_Bring_Cossacks_Into_The_Fold
 		}
 		available = {
-			is_owner_neighbor_of = OTT
+            OR = {
+			   is_owner_neighbor_of = OTT
+               is_owner_neighbor_of = TUR
+			}
 			OR = {
 				EGY = { has_war_with = OTT }
 				has_global_flag = AXIS_VICTORY
@@ -3565,8 +3568,9 @@ focus_tree = {
 						is_core_of = KLY
 						is_core_of = MTR
 					}
-					add_claim_by = CRM
 				}
+				add_claim_by = CRM
+				add_core_of = CRM
 			}
 			if = {
 				limit = {
@@ -3687,8 +3691,9 @@ focus_tree = {
 					OR = {
 						is_core_of = UKR
 					}
-					add_claim_by = CRM
 				}
+				add_claim_by = CRM
+				add_core_of = CRM
 			}
 			declare_war_on = {
 				target = UKR
@@ -3718,6 +3723,15 @@ focus_tree = {
 			focus = CRM_Mobilize_Against_Ukrainians
 		}
 		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = UKR
+					}
+				}
+				add_claim_by = CRM
+				add_core_of = CRM
+			}
 			UKR = {
 				country_event = {
 					id = crm.159
@@ -3756,8 +3770,9 @@ focus_tree = {
 						is_core_of = GEO
 						is_core_of = AZE
 					}
-					add_claim_by = CRM
 				}
+				add_claim_by = CRM
+				add_core_of = CRM
 			}
 			if = {
 				limit = {

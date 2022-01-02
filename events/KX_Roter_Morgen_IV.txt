@@ -6,8 +6,8 @@ country_event = { #Imperial Victory
     title = rotermorgenIV.1.t
     desc = rotermorgenIV.1.d
     hidden = yes
-	fire_only_once = yes
     trigger = {
+		has_global_flag = GER_CIVL_WAR_IS_THING
         	GER = {
             	has_country_flag = GER_LEFT_REVOLT
             	controls_state = 781
@@ -15,6 +15,7 @@ country_event = { #Imperial Victory
         	}
         	NOT = { country_exists = GRU }
     }
+	is_triggered_only = yes
     immediate = {
         GER = {
             clr_country_flag = GER_LEFT_REVOLT
@@ -47,7 +48,6 @@ country_event = { # Wilhelm suicide
 	
 	option = { # 
 		name = rotermorgenIV.2.a
-		effect_tooltip = { kill_country_leader = yes }
 		hidden_effect = { GER_wilhelm_ii_dies = yes }
 		hidden_effect = {
 				set_global_flag = wilhelmiided
@@ -121,8 +121,6 @@ country_event = { #
 		create_rhenish_cores = yes
 		create_bavarian_cores = yes
 		create_hanoverian_cores = yes
-		create_luxembourg_core = yes
-		create_luxembourg_state = yes
 		create_prussia = yes
 		create_bavaria = yes
 		create_rhenish_state = yes

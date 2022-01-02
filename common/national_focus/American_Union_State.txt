@@ -1690,7 +1690,7 @@ focus_tree = {
 	focus = {# The Knights of Columbus
 		id = TEX_knights_of_columbus
 		icon = GFX_goal_TEX_focus_Knights_of_Columbus
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_new_gunpowder_plot
 		}
@@ -1729,7 +1729,7 @@ focus_tree = {
 	focus = {# Fight Pelleyism
 		id = TEX_fight_pelleyism
 		icon = GFX_goal_TEX_focus_fight_orangism
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_knights_of_columbus
 		}
@@ -1758,7 +1758,7 @@ focus_tree = {
 	focus = {# Puppet the Opposition 
 		id = TEX_puppet_the_opposition
 		icon = GFX_goal_TEX_focus_puppet_others
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_fight_pelleyism
 		}
@@ -1785,7 +1785,7 @@ focus_tree = {
 	focus = {# Cremate the Klan
 		id = TEX_cremate_the_klan
 		icon = GFX_goal_TEX_focus_klantards
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_fight_pelleyism
 		}
@@ -1821,7 +1821,7 @@ focus_tree = {
 	focus = {# Criminalise Republicanism
 		id = TEX_criminalise_republicanism
 		icon = GFX_goal_TEX_focus_libtards
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_knights_of_columbus
 		}
@@ -1848,7 +1848,7 @@ focus_tree = {
 	focus = {# Promote Aristocratic Ideals
 		id = TEX_promote_monarchism
 		icon = GFX_goal_TEX_focus_Promote_Aristocracy
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_criminalise_republicanism
 		}
@@ -1874,7 +1874,7 @@ focus_tree = {
 	focus = {# Catholic America
 		id = TEX_catholic_america
 		icon = GFX_goal_TEX_focus_Integral_America
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_new_gunpowder_plot
 		}
@@ -1902,7 +1902,7 @@ focus_tree = {
 	focus = {# Guadalupism
 		id = TEX_guadalupism
 		icon = GFX_goal_TEX_focus_Guadalupism
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_catholic_america
 		}
@@ -1927,7 +1927,7 @@ focus_tree = {
 	focus = {# Encourge Conversions
 		id = TEX_encourge_conversions
 		icon = GFX_goal_TEX_focus_Encourage_Conversions
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_guadalupism
 		}
@@ -1952,7 +1952,7 @@ focus_tree = {
 	focus = {# Maccabee Plan
 		id = TEX_catholic_monarchy
 		icon = GFX_goal_TEX_focus_Maccabee_Plan
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_new_gunpowder_plot
 		}
@@ -2002,7 +2002,7 @@ focus_tree = {
 	focus = {# Reward Catholicism
 		id = TEX_reward_catholicism
 		icon = GFX_goal_TEX_focus_Reward_Catholics_Plan
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_catholic_monarchy
 		}
@@ -2086,7 +2086,7 @@ focus_tree = {
 	focus = {# Catholic Education
 		id = TEX_catholic_education
 		icon = GFX_goal_TEX_focus_Catholic_Education
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_reward_catholicism
 		}
@@ -2112,7 +2112,7 @@ focus_tree = {
 	focus = {# Cavalier Identity
 		id = TEX_cavalier_identity
 		icon = GFX_goal_TEX_focus_Cavalier_Identity
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_catholic_monarchy
 		}
@@ -2138,7 +2138,7 @@ focus_tree = {
 	focus = {# Distributism
 		id = TEX_distributism
 		icon = GFX_goal_TEX_focus_distributism
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_cavalier_identity
 		}
@@ -2164,7 +2164,7 @@ focus_tree = {
 	focus = {# Catholic Unions
 		id = TEX_catholic_unions
 		icon = GFX_goal_TEX_focus_Catholic_Unions
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_cavalier_identity
 		}
@@ -2189,7 +2189,7 @@ focus_tree = {
 	focus = {# Common Man Monarchism
 		id = TEX_common_man_monachism
 		icon = GFX_goal_TEX_focus_Common_Man_Integralism
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_puppet_the_opposition
 		}
@@ -2217,7 +2217,7 @@ focus_tree = {
 	focus = {# Blur the Lines
 		id = TEX_blur_the_lines
 		icon = GFX_goal_TEX_focus_Blur_the_Line
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_distributism
 		}
@@ -2245,7 +2245,7 @@ focus_tree = {
 	focus = {# AMEERICAE SANCTUS
 		id = TEX_americae_sanctus
 		icon = GFX_goal_TEX_focus_AMERICAE_SANCTUS
-		cost = 7.25
+		cost = 5
 		prerequisite = {
 			focus = TEX_common_man_monachism
 		}
@@ -3362,7 +3362,7 @@ focus_tree = {
 			add_manpower = 3500
 			army_experience = 15
 			add_war_support = 0.05
-			add_popularity  { ideology = social_conservative popularity = 0.03 }
+			add_popularity = { ideology = social_conservative popularity = 0.03 }
 			hidden_effect = {
 			country_event = {
 			id = unionstate.57
@@ -3394,7 +3394,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_wrangle_congress"
 			add_stability = 0.05
 			add_political_power = 50
-			add_popularity  { ideology = social_conservative popularity = 0.05 }
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = TEX
@@ -8249,9 +8249,9 @@ focus_tree = {
 		relative_position_id = TEX_From_a_Militia_to_a_force
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_makeshift_forts"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -8453,10 +8453,10 @@ focus_tree = {
 		relative_position_id = TEX_From_a_Militia_to_a_force
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_protecting_Columbia"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 2
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}
@@ -8569,10 +8569,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_Columbia_needs_you"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
-				uses = 2
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}
@@ -8702,11 +8702,11 @@ focus_tree = {
 			}
 			add_command_power = 25
 			army_experience = 5
-			add_tech_bonus = {
-				name = TEX_Terrible_Terry_plan
-				bonus = 1
-				uses = 2
-				category = cat_grand_battle_plan
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_grand_battle_plan
 			}
 		}
 	}
@@ -8848,11 +8848,11 @@ focus_tree = {
 			remove_idea = TEX_la_mesa_plan_idea_4
 			add_idea = TEX_la_mesa_plan_idea_5
 			}
-			add_tech_bonus = {
-				name = TEX_Terrible_Terry_plan
-				bonus = 1
-				uses = 3
-				category = cat_grand_battle_plan
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_grand_battle_plan
 			}
 		}
 	}
@@ -8886,11 +8886,11 @@ focus_tree = {
 			add_ideas = TEX_minister_smith_idea
 			add_political_power = 15
 			add_war_support = 0.03
-			add_tech_bonus = {
-				name = COR_War_Of_Numbers
-				bonus = 1
-				uses = 1
-				category = cat_mass_assault
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_mass_assault
 			}
 			custom_effect_tooltip = TEX_rightism_tooltip
 			modify_country_flag = {
@@ -8925,11 +8925,11 @@ focus_tree = {
 			add_war_support = 0.05
 			add_manpower = 15000
 			add_political_power = 35
-			add_tech_bonus = {
-				name = COR_War_Of_Numbers
-				bonus = 1
-				uses = 1
-				category = cat_mass_assault
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_mass_assault
 			}
 		}
 	}
@@ -8963,11 +8963,11 @@ focus_tree = {
 			}
 			add_political_power = 40
 			add_command_power = 20
-			add_tech_bonus = {
-				name = COR_War_Of_Numbers
-				bonus = 1
-				uses = 2
-				category = cat_mass_assault
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_mass_assault
 			}
 		}
 	}
@@ -8994,11 +8994,11 @@ focus_tree = {
 			remove_idea = TEX_minister_smith_idea_3
 			add_idea = TEX_minister_smith_idea_4
 			}
-			add_tech_bonus = {
-				name = COR_War_Of_Numbers
-				bonus = 2
-				uses = 1
-				category = cat_mass_assault
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_mass_assault
 			}
 		}
 	}
@@ -9048,9 +9048,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_speed_drills"
 			army_experience = 15
 			add_command_power = 20
-			add_tech_bonus = {
-				name = TEX_War_Of_Numbers
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -9088,11 +9088,11 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
-			add_tech_bonus = {
-				name = TEX_War_Of_Numbers
-				bonus = 1
-				uses = 2
-				category = cat_mass_assault
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_mass_assault
 			}
 		}
 	}
@@ -9125,11 +9125,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_Lightning_Joe"
 			add_ideas = TEX_lighning_joe_idea
 			army_experience = 10
-			add_tech_bonus = {
-				name = COR_Overwhelming_Firepower
-				bonus = 1
-				uses = 1
-				category = cat_superior_firepower
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_superior_firepower
 			}
 		}
 	}
@@ -9336,11 +9336,11 @@ focus_tree = {
 			remove_idea = TEX_lighning_joe_idea_3
 			add_idea = TEX_lighning_joe_idea_4
 			}
-			add_tech_bonus = {
-				name = COR_Overwhelming_Firepower
-				bonus = 2
-				uses = 2
-				category = cat_superior_firepower
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_superior_firepower
 			}
 		}
 	}
@@ -9407,11 +9407,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_Devers_Plan"
 			add_ideas = TEX_Devers_plan1
-			add_tech_bonus = {
-				name = COR_Fast_Warfare
-				bonus = 1
-				uses = 1
-				category = cat_mobile_warfare
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_mobile_warfare
 			}
 		}
 	}
@@ -9492,17 +9492,32 @@ focus_tree = {
 				uses = 2
 				category = armor
 			}
-			add_tech_bonus = {
-				name = COR_Spearhead_Doctrine
-				bonus = 1
-				uses = 2
-				category = cat_mobile_warfare
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_mobile_warfare
 			}
-			add_equipment_to_stockpile = {
-			type = light_tank_equipment
-			amount = 30
-			producer = TEX
+			if = {
+				limit = {
+					NOT = { has_dlc = "No Step Back" }
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1
+					amount = 30
+					producer = TEX
+				}
 			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = 30
+					producer = TEX
+				}
+			}			
 		}
 	}
 	focus = {
@@ -9534,11 +9549,27 @@ focus_tree = {
 				uses = 1
 				category = cat_medium_armor
 			}
-			add_equipment_to_stockpile = {
-			type = medium_tank_equipment
-			amount = 10
-			producer = TEX
+			if = {
+				limit = {
+					NOT = { has_dlc = "No Step Back" }
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_equipment_1
+					amount = 10
+					producer = TEX
+				}
 			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = 10
+					producer = TEX
+				}
+			}
+			
 		}
 	}
 	focus = {
@@ -9596,11 +9627,11 @@ focus_tree = {
 				add_idea = TEX_Devers_plan4
 			}
 			army_experience = 15
-			add_tech_bonus = {
-				name = COR_Spearhead_Doctrine
-				bonus = 2
-				uses = 1
-				category = cat_mobile_warfare
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = cat_mobile_warfare
 			}
 		}
 	}
@@ -9693,10 +9724,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_air_force_reform"
 			air_experience = 25
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = air_doctrine
+			add_doctrine_cost_reduction = {
+	name = air_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = air_doctrine
 			}
 			hidden_effect = {
 				country_event = { id = ustates.623 days = 75 }
@@ -9999,10 +10031,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_rule_the_skies"
 			air_experience = 10
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = air_doctrine
+			add_doctrine_cost_reduction = {
+	name = air_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = air_doctrine
 			}
 		}
 	}
@@ -10060,10 +10093,11 @@ focus_tree = {
 		relative_position_id = TEX_Weyland_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_CAS_doctrine"
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = air_doctrine
+			add_doctrine_cost_reduction = {
+	name = air_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = air_doctrine
 			}
 		}
 	}
@@ -10119,10 +10153,11 @@ focus_tree = {
 				remove_idea = TEX_Weyland_reform_plan1
 				add_idea = TEX_Weyland_reform_plan2
 			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = air_doctrine
+			add_doctrine_cost_reduction = {
+	name = air_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = air_doctrine
 			}
 		}
 	}
@@ -10183,10 +10218,11 @@ focus_tree = {
 				remove_idea = TEX_Le_May_reform_plan1
 				add_idea = TEX_Le_May_reform_plan2
 			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = air_doctrine
+			add_doctrine_cost_reduction = {
+	name = air_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = air_doctrine
 			}
 		}
 	}
@@ -10260,10 +10296,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_navy"
 			navy_experience = 10
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = naval_doctrine
+			add_doctrine_cost_reduction = {
+	name = naval_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = naval_doctrine
 			}
 		}
 	}
@@ -10758,10 +10795,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_admirals"
 			navy_experience = 10
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = naval_doctrine
+			add_doctrine_cost_reduction = {
+	name = naval_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = naval_doctrine
 			}
 		}
 	}
@@ -10792,10 +10830,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_life_at_sea"
 			navy_experience = 10
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = naval_doctrine
+			add_doctrine_cost_reduction = {
+	name = naval_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = naval_doctrine
 			}
 		}
 	}
@@ -10963,10 +11002,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_america_rules_waves"
 			navy_experience = 10
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = naval_doctrine
+			add_doctrine_cost_reduction = {
+	name = naval_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = naval_doctrine
 			}
 		}
 	}
@@ -11710,11 +11750,27 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_aid_paraguay"
 			PAR = {
-			add_equipment_to_stockpile = {
-			type = light_tank_equipment
-			amount = 30
-			producer = TEX
+			if = {
+				limit = {
+					NOT = { has_dlc = "No Step Back" }
 				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1
+					amount = 30
+					producer = TEX
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = 30
+					producer = TEX
+				}
+			}
+			
 			add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 300
@@ -11960,10 +12016,11 @@ focus_tree = {
 					}
 				}
 			}
-			add_tech_bonus = {
-				bonus = 2
-				uses = 1
-				category = naval_doctrine
+			add_doctrine_cost_reduction = {
+	name = naval_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = naval_doctrine
 			}
 		}
 	}

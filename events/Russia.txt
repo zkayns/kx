@@ -269,12 +269,11 @@ country_event = { #Kerensky
 		add_ideas = {
 			rus_political_instability
 		}
-		kill_country_leader = yes
 		add_manpower = -1
 		create_country_leader = {
 			name = "The Senate"
 			desc = "POLITICS_SENATE_DESC"
-			picture = "Portrait_RUS_The_Senate.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_The_Senate.png"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
 			traits = {}
@@ -320,7 +319,7 @@ country_event = { #Kerensky
 	#		create_country_leader = {
 	#			name = "Alexandr Kerensky"
 	#			desc = "POLITICS_ALEXANDER_KERENSKY_DESC"
-	#			picture = "Portrait_RUS_Alexander_Kerensky_I_Lived_Bitch.png"
+	#			picture = "gfx/leaders/RUS/Portrait_RUS_Alexander_Kerensky_I_Lived_Bitch.png"
 	#			expire = "1965.1.1"
 	#			ideology = social_liberal_subtype
 	#			traits = { first_president }
@@ -558,13 +557,12 @@ country_event = { #Gorgulov Coups Savinkov
 	picture = GFX_rus_gorguloff_army_event
 	option = {
 		name = russia.12.a
-		kill_country_leader = yes
 		create_country_leader = {
 			name = "Pavel Gorgulov"
 			desc = "POLITICS_GORGULOV_DESC"
-			picture = "Portrait_RUS_Pavel_Gorgulov.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Pavel_Gorgulov.png"
 			expire = "1965.1.1"
-			ideology = national_populist_subtype
+			ideology = scythianism_subtype
 		}
 		hidden_effect = {
 			country_event = {
@@ -641,12 +639,11 @@ country_event = { #Power Struggle
 				}
 			}
 		}
-		kill_country_leader = yes
 		create_country_leader = {
 			name = "Viktor Abakumov"
-			picture = "Portrait_RUS_Viktor_Abakumov.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Viktor_Abakumov.png"
 			expire = "1965.1.1"
-			ideology = national_populist_subtype
+			ideology = savinkovism_subtype
 			traits = { vozhd }
 		}
 		remove_all_ministers = yes
@@ -683,12 +680,11 @@ country_event = { #Power Struggle
 			long_name = RUS_solidarist_party_long
 			name = RUS_solidarist_party
 		}
-		kill_country_leader = yes
 		create_country_leader = {
 			name = "Viktor Baydalakov"
-			picture = "Portrait_RUS_Viktor_Baydalakov.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Viktor_Baydalakov.png"
 			expire = "1965.1.1"
-			ideology = national_populist_subtype
+			ideology = solidarism_subtype
 		}
 		remove_all_ministers = yes
 		add_ideas = {
@@ -719,7 +715,7 @@ country_event = { #Vlasov
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "Andrey Vlasov"
-			picture = "Portrait_RUS_Andrey_Vlasov.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Andrey_Vlasov.png"
 			expire = "1965.1.1"
 			ideology = national_populist_subtype
 		}
@@ -2882,7 +2878,7 @@ country_event = {#Retire
 		create_country_leader = {
 			name = "The Senate"
 			desc = "POLITICS_SENATE_DESC"
-			picture = "Portrait_RUS_The_Senate.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_The_Senate.png"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
 			traits = {}
@@ -3094,7 +3090,7 @@ country_event = {#Bukharin arrested
 		hidden_effect = {
 			create_country_leader = {
 			name = "Sergey Kirov"
-			picture = "Portrait_RUS_Sergey_Kirov.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Sergey_Kirov.png"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			traits = {}
@@ -3116,7 +3112,7 @@ country_event = {#Bukharin arrested
 		hidden_effect = {
 			create_country_leader = {
 			name = "Sergey Kirov"
-			picture = "Portrait_RUS_Sergey_Kirov.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Sergey_Kirov.png"
 			expire = "1965.1.1"
 			ideology = radical_socialist_subtype
 			traits = {}
@@ -3140,7 +3136,6 @@ country_event = {#Savinkov arrested
 		hidden_effect = {
 			get_current_government_type = yes
 			set_politics = { ruling_party = national_populist }
-			kill_country_leader = yes
 			restore_previous_government_type = yes
 		}
 		add_popularity = {
@@ -3165,7 +3160,6 @@ country_event = {#Savinkov arrested
 		hidden_effect = {
 			get_current_government_type = yes
 			set_politics = { ruling_party = national_populist }
-			kill_country_leader = yes
 			restore_previous_government_type = yes
 		}
 		add_popularity = {
@@ -3531,9 +3525,9 @@ country_event = {#Kerensky arrested
 			create_country_leader = {
 				name = "Lavr Kornilov"
 				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "Portrait_RUS_Lavr_Kornilov.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 				traits = {}
 			}
 		add_stability = 0.1
@@ -3628,7 +3622,7 @@ country_event = {#Kerensky arrested
 		create_country_leader = {
 			name = "The Senate"
 			desc = "POLITICS_SENATE_DESC"
-			picture = "Portrait_RUS_The_Senate.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_The_Senate.png"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
 			traits = {}
@@ -3695,9 +3689,9 @@ country_event = {#Kornilov coups Kerensky
 			create_country_leader = {
 				name = "Lavr Kornilov"
 				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "Portrait_RUS_Lavr_Kornilov.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = absolute_monarchy_subtype
 				traits = {}
 			}
 		add_stability = 0.1
@@ -8227,9 +8221,9 @@ country_event = { #Savinkov Proclaimed Vozhd
 			create_country_leader = {
 				name = "Boris Savinkov"
 				desc = "POLITICS_BORIS_SAVINKOV_DESC"
-				picture = "Portrait_RUS_Boris_Savinkov_President.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Savinkov_President.png"
 				expire = "1965.1.1"
-				ideology = national_populist_subtype
+				ideology = savinkovism_subtype
 				traits = { vozhd }
 			}
 			set_politics = {
@@ -9742,7 +9736,7 @@ country_event = { #RNSMA coup
 		create_country_leader = {
 			name = "Vladimir Purishkevich"
 				desc = "POLITICS_VLADIMIR_PURISHKEVICH_DESC"
-				picture = "Portrait_RUS_Vladimir_Purishkevich.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Purishkevich.png"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
 				traits = {}
@@ -9817,9 +9811,9 @@ country_event = { #Kornilov coup
 			create_country_leader = {
 				name = "Lavr Kornilov"
 				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "Portrait_RUS_Lavr_Kornilov.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 				traits = {}
 			}
 		
@@ -9892,9 +9886,9 @@ country_event = { #Kornilov coup
 			create_country_leader = {
 				name = "Lavr Kornilov"
 				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "Portrait_RUS_Lavr_Kornilov.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 				traits = {}
 			}
 		
@@ -10349,7 +10343,7 @@ country_event = { #Zhukov Coup
 			name = "Georgy Zhukov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Gregory_Zhukov_General.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = red_junta_subtype
 			traits = {}
 		}
 		add_stability = 0.5
@@ -10440,6 +10434,7 @@ country_event = { #Revolution
 			national_populist = 0
 			}
 		}
+		hidden_effect = { load_focus_tree = Russia_Socialist }
 		remove_all_ministers = yes
 		add_ideas = {
 			SOV_Nikolay_Bukharin_hog_rso
@@ -10497,7 +10492,7 @@ country_event = { #Revolution
 			ideology = social_democrat
 			popularity = socdem
 		}
-		
+		hidden_effect = { load_focus_tree = Russia_Socialist }
 		remove_all_ministers = yes
 		add_ideas = {
 			RUS_Aleksey_I_Rykov_hog_rso
@@ -10555,6 +10550,7 @@ country_event = { #Revolution
 			ideology = social_democrat
 			popularity = socdem
 		}
+		hidden_effect = { load_focus_tree = Russia_Socialist }
 		remove_all_ministers = yes
 		add_ideas = {
 			RUS_Rafail_Abramovich_hog_sde
@@ -10596,8 +10592,9 @@ country_event = { #Revolution
 				authoritarian_democrat = 0
 				paternal_autocrat = 0
 				national_populist = 0
-				}
 			}
+		}
+		hidden_effect = { load_focus_tree = Russia_Socialist }
 		remove_all_ministers = yes
 		add_ideas = {
 			RUS_Aleksey_I_Rykov_hog_rso
@@ -10627,8 +10624,9 @@ country_event = { #Revolution
 				authoritarian_democrat = 0
 				paternal_autocrat = 0
 				national_populist = 0
-				}
+			}
 		}
+		hidden_effect = { load_focus_tree = Russia_Socialist }
 		remove_all_ministers = yes
 		add_ideas = {
 			RUS_Irakliy_G_Tsereteli_hog_sde
@@ -11107,9 +11105,9 @@ country_event = { #The Patriarch's Demands
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "Sergius"
-			picture = "Portrait_RUS_Sergius_Stragorodsky.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Sergius_Stragorodsky.png"
 			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
+			ideology = theocracy_subtype
 			traits = {}
 		}			
 	}
@@ -11568,7 +11566,7 @@ country_event = { #Emergency end
 		create_country_leader = {
 			name = "The Senate"
 			desc = "POLITICS_SENATE_DESC"
-			picture = "Portrait_RUS_The_Senate.png"
+			picture = "gfx/leaders/RUS/Portrait_RUS_The_Senate.png"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
 			traits = {}
@@ -11826,7 +11824,10 @@ country_event = { #Kornilov's Death
 			limit = {
 				has_unit_leader = 402
 			}
-			remove_unit_leader = 402
+			random_unit_leader = {
+				limit = { has_id = 402 }			
+				remove_unit_leader = yes
+			}
 		}
 		if = {
 			limit = {
@@ -11842,13 +11843,12 @@ country_event = { #Kornilov's Death
 		}
 		hidden_effect = {
 			remove_kornilov_idea = yes
-			kill_country_leader = yes
 			create_country_leader = {
 				name = "Anton Denikin"
 				desc = "POLITICS_ANTON_DENIKIN_DESC"
-				picture = "Portrait_RUS_Dic_Anton_Denikin.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Dic_Anton_Denikin.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 			}
 			country_event = {
 				id = rusd.60
@@ -11905,7 +11905,10 @@ country_event = { #Kornilov's Death
 			limit = {
 				has_unit_leader = 402
 			}
-			remove_unit_leader = 402
+			random_unit_leader = {
+				limit = { has_id = 402 }			
+				remove_unit_leader = yes
+			}
 		}
 		clr_country_flag = RUS_JUNTA
 		clr_country_flag = RUS_DEN_TEMP
@@ -11930,13 +11933,12 @@ country_event = { #Kornilov's Death
 		add_ideas = RUS_Anton_I_Denikin_hog_ade
 		hidden_effect = {
 			add_ideas = RUS_rovs_denikin
-			kill_country_leader = yes
 			create_country_leader = {
 				name = "Anton Denikin"
 				desc = "POLITICS_ANTON_DENIKIN_DESC"
-				picture = "Portrait_RUS_Dic_Anton_Denikin.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Dic_Anton_Denikin.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 			}
 			country_event = {
 				id = rusd.66
@@ -11964,7 +11966,10 @@ country_event = { #Kornilov's Death
 			limit = {
 				has_unit_leader = 402
 			}
-			remove_unit_leader = 402
+			random_unit_leader = {
+				limit = { has_id = 402 }			
+				remove_unit_leader = yes
+			}
 		}
 		clr_country_flag = RUS_JUNTA
 		clr_country_flag = RUS_DEN_TEMP
@@ -11985,13 +11990,12 @@ country_event = { #Kornilov's Death
 		hidden_effect = {
 			remove_kornilov_idea = yes
 			remove_ideas = RUS_rovs_wrangel
-			kill_country_leader = yes
 			create_country_leader = {
 				name = "Pyotr Wrangel"
 				desc = "POLITICS_PYOTR_VRANGEL_DESC"
-				picture = "Portrait_RUS_Pyotr_Wrangel.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 				traits = { RUS_black_baron }
 			}
 			country_event = {
@@ -12045,7 +12049,10 @@ country_event = { #Kornilov's Death
 			limit = {
 				has_unit_leader = 402
 			}
-			remove_unit_leader = 402
+			random_unit_leader = {
+				limit = { has_id = 402 }			
+				remove_unit_leader = yes
+			}
 		}
 		if = {
 			limit = {
@@ -12061,13 +12068,12 @@ country_event = { #Kornilov's Death
 		}
 		hidden_effect = {
 			remove_kornilov_idea = yes
-			kill_country_leader = yes
 			create_country_leader = {
 				name = "Anton Denikin"
 				desc = "POLITICS_ANTON_DENIKIN_DESC"
-				picture = "Portrait_RUS_Dic_Anton_Denikin.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Dic_Anton_Denikin.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 			}
 			country_event = {
 				id = rusd.60
@@ -12117,7 +12123,10 @@ country_event = { #Kornilov's Death
 			limit = {
 				has_unit_leader = 402
 			}
-			remove_unit_leader = 402
+			random_unit_leader = {
+				limit = { has_id = 402 }			
+				remove_unit_leader = yes
+			}
 		}
 		clr_country_flag = RUS_JUNTA
 		clr_country_flag = RUS_DEN_TEMP
@@ -12136,13 +12145,12 @@ country_event = { #Kornilov's Death
 			remove_ideas = RUS_Lavr_G_Kornilov_carm_pau
 		}
 		hidden_effect = {
-			kill_country_leader = yes
 			create_country_leader = {
 				name = "Anton Denikin"
 				desc = "POLITICS_ANTON_DENIKIN_DESC"
-				picture = "Portrait_RUS_Dic_Anton_Denikin.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Dic_Anton_Denikin.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 			}
 			country_event = {
 				id = rusd.66
@@ -12160,7 +12168,10 @@ country_event = { #Kornilov's Death
 			limit = {
 				has_unit_leader = 402
 			}
-			remove_unit_leader = 402
+			random_unit_leader = {
+				limit = { has_id = 402 }			
+				remove_unit_leader = yes
+			}
 		}
 		clr_country_flag = RUS_JUNTA
 		clr_country_flag = RUS_DEN_TEMP
@@ -12182,13 +12193,12 @@ country_event = { #Kornilov's Death
 		add_ideas = RUS_Pyetr_N_Vrangel_hog_ade
 		hidden_effect = {
 			remove_kornilov_idea = yes
-			kill_country_leader = yes
 			create_country_leader = {
 				name = "Pyotr Wrangel"
 				desc = "POLITICS_PYOTR_VRANGEL_DESC"
-				picture = "Portrait_RUS_Pyotr_Wrangel.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = junta_subtype
 			}
 			country_event = {
 				id = rusd.66
@@ -12219,17 +12229,22 @@ country_event = { #Savinkov in power
 	is_triggered_only = yes
 	option = {
 		name = rusd.58.a
-		kill_country_leader = yes
 		hidden_effect = {
 			
 		create_country_leader = {
-		name = "Boris Savinkov"
-		desc = "POLITICS_BORIS_SAVINKOV_DESC"
-		picture = "Portrait_RUS_Boris_Savinkov_Uniform.png"
-		expire = "1965.1.1"
-		ideology = national_populist_subtype
-		traits = { vozhd }
-		}
+			name = "Boris Savinkov"
+			desc = "POLITICS_BORIS_SAVINKOV_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Savinkov_Uniform.png"
+			expire = "1965.1.1"
+			ideology = savinkovism_subtype
+			traits = { vozhd }
+			}
+			if = {	
+				limit = { has_country_leader = { name = "Boris Savinkov" ruling_only = yes } }
+				set_country_leader_portrait = {
+					portrait = "gfx/leaders/RUS/Portrait_RUS_Boris_Savinkov_Uniform.png"
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = national_populist
@@ -12315,17 +12330,22 @@ country_event = { #Rise of the Vozhd
 	option = {
 		name = rusd.65.a
 		hidden_effect = {
-		kill_country_leader = yes
 		}
 		clr_country_flag = RUS_SAVI_HOG
 		set_country_flag = RUS_SAVI
 		create_country_leader = {
-		name = "Boris Savinkov"
-		desc = "POLITICS_BORIS_SAVINKOV_DESC"
-		picture = "Portrait_RUS_Boris_Savinkov_Uniform.png"
-		expire = "1965.1.1"
-		ideology = national_populist_subtype
-		traits = { vozhd }
+			name = "Boris Savinkov"
+			desc = "POLITICS_BORIS_SAVINKOV_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Savinkov_Uniform.png"
+			expire = "1965.1.1"
+			ideology = savinkovism_subtype
+			traits = { vozhd }
+		}
+		if = {	
+			limit = { has_country_leader = { name = "Boris Savinkov" ruling_only = yes } }
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/RUS/Portrait_RUS_Boris_Savinkov_Uniform.png"
+			}
 		}
 		set_politics = {
 			ruling_party = national_populist
@@ -12476,9 +12496,9 @@ country_event = { #Fate of Russia
 			create_country_leader = {
 				name = "Pyotr IV"
 				desc = "POLITICS_PYOTR_VRANGEL_DESC"
-				picture = "Portrait_RUS_Pyotr_Wrangel_Tsar.png"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = absolute_monarchy_subtype
 				traits = { RUS_black_baron }
 			}
 			random_other_country = {
@@ -13452,7 +13472,7 @@ country_event = { #The Capital
 			factor = 40
 		}
 		set_country_flag = RUS_moscow_capital
-		set_capital = 219
+		set_capital = { state = 219 }
 	}
 }
 country_event = { #Thailand
@@ -14130,22 +14150,9 @@ country_event = { #Kirill Romanov dies
 			RUS_tsar_kirill = yes
 		}
 		effect_tooltip = {
-			kill_country_leader = yes
 		}
 		hidden_effect = {
 			get_current_government_type = yes
-			set_politics = { ruling_party = social_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = market_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_conservative }
-			kill_country_leader = yes
-			set_politics = { ruling_party = authoritarian_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = paternal_autocrat }
-			kill_country_leader = yes
 			restore_previous_government_type = yes
 			RUS_setup_tsar_vladimir = yes
 		}
@@ -14159,22 +14166,9 @@ country_event = { #Kirill Romanov dies
 			RUS_tsar_kirill = yes
 		}
 		effect_tooltip = {
-			kill_country_leader = yes
 		}
 		hidden_effect = {
 			get_current_government_type = yes
-			set_politics = { ruling_party = social_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = market_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_conservative }
-			kill_country_leader = yes
-			set_politics = { ruling_party = authoritarian_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = paternal_autocrat }
-			kill_country_leader = yes
 			restore_previous_government_type = yes
 			RUS_setup_tsar_vladimir = yes
 		}
@@ -14311,18 +14305,6 @@ country_event = { #Milyukov death
 		}
 		hidden_effect = {
 			get_current_government_type = yes
-			set_politics = { ruling_party = social_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = market_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_conservative }
-			kill_country_leader = yes
-			set_politics = { ruling_party = authoritarian_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = paternal_autocrat }
-			kill_country_leader = yes
 			restore_previous_government_type = yes
 			RUS_setup_acting_president = yes
 		}
@@ -14456,7 +14438,6 @@ country_event = { #Dmitriy's death
 		trigger = {
 			RUS_tsar_dmitriy = yes
 		}
-		kill_country_leader = yes
 		RUS_setup_tsar_pavel = yes
 		add_stability = -0.12
 	}
@@ -14469,18 +14450,6 @@ country_event = { #Dmitriy's death
 		add_stability = -0.02
 		hidden_effect = {
 			get_current_government_type = yes
-			set_politics = { ruling_party = social_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = market_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_conservative }
-			kill_country_leader = yes
-			set_politics = { ruling_party = authoritarian_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = paternal_autocrat }
-			kill_country_leader = yes
 			restore_previous_government_type = yes
 			RUS_setup_acting_president = yes
 		}
@@ -14626,6 +14595,13 @@ country_event = {
 			remove_ideas = RUS_Sergius_of_Nizhny_Novgorod_sec_ade
 			add_ideas = RUS_Aleksandr_P_Balk_sec_pau 
 		}
+		if = {
+			limit = {
+				has_idea = RUS_Patriarch_Sergius_hog_pau
+			}
+			remove_ideas = RUS_Patriarch_Sergius_hog_pau
+			add_ideas = RUS_Patriarch_Kirill_hog_ade
+		}
 	}
 }
 
@@ -14664,22 +14640,9 @@ country_event = {
 				NOT = { has_country_flag = soviet_russia_restored }
 			}
 			effect_tooltip = {
-			kill_country_leader = yes
 		}
 		hidden_effect = {
 			get_current_government_type = yes
-			set_politics = { ruling_party = social_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = market_liberal }
-			kill_country_leader = yes
-			set_politics = { ruling_party = social_conservative }
-			kill_country_leader = yes
-			set_politics = { ruling_party = authoritarian_democrat }
-			kill_country_leader = yes
-			set_politics = { ruling_party = paternal_autocrat }
-			kill_country_leader = yes
 			restore_previous_government_type = yes
 			RUS_setup_acting_president = yes
 		}
@@ -14693,7 +14656,6 @@ country_event = {
 				}
 				has_country_flag = soviet_russia_restored
 			}
-			kill_country_leader = yes
 			create_country_leader = {
 			name = "Central Executive Committee"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Sovnarkom.png"
@@ -14752,7 +14714,10 @@ country_event = {
 
 	option = {
 		name = rusd.97.a
-		remove_unit_leader = 451
+		random_unit_leader = {
+			limit = { has_id = 451 }			
+			remove_unit_leader = yes
+		}
 	}
 }
 
@@ -14864,7 +14829,6 @@ country_event = { #Wrangel dead
 			name = "Pyotr IV"
 			}
 		}
-		kill_country_leader = yes
 		RUS_setup_tsar_wrangel_son = yes
 		set_country_flag = Pyetr_Vrangel_dead
 		if = {
@@ -14888,7 +14852,6 @@ country_event = { #Wrangel dead
 			name = "Pyotr IV"
 			}
 		}
-		kill_country_leader = yes
 		RUS_setup_tsar_vladimir = yes
 		set_country_flag = Pyetr_Vrangel_dead
 		if = {
@@ -14936,7 +14899,6 @@ country_event = { #Wrangel dead
 			name = "Pyotr IV"
 			}
 		}
-		kill_country_leader = yes
 		RUS_setup_shatilov = yes
 		if = {
 			limit = {
@@ -17396,7 +17358,7 @@ country_event = { #Unlock political decisions
 			desc = "POLITICS_GRIGORY_ZINOVIEV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Grigoriy_Zinoviev.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = authcom_subtype
 			traits = {}
 		}
 		remove_all_ministers = yes
@@ -19170,7 +19132,6 @@ country_event = { #voroshilov plot
 	
 	option = {
 		name = russoc.63.a
-		kill_country_leader = yes
 		if = {
 			limit = {
 				has_idea = RUS_Georgiy_K_Zhukov_hog_tot
@@ -19721,7 +19682,7 @@ country_event = { #Troika dissolves
 			name = "Mikhail Tukhachevsky"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Tukhachevskiy.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = red_junta_subtype
 			traits = { red_napoleon }
 		}
 		set_cosmetic_tag = SOV_tukhachevsky
@@ -19761,7 +19722,7 @@ country_event = { #Troika dissolves
 			name = "Mikhail Frunze"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Frunze.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = red_junta_subtype
 		}
 		set_cosmetic_tag = SOV_tukhachevsky
 		set_country_flag = tukhachevsky_power
@@ -19807,7 +19768,7 @@ country_event = { #Socialist Victory in the Civil War (GER)
     fire_only_once = yes
 	trigger = {
 		tag = GER
-		country_exists = SOV
+		soviets_exist = yes
 		SOV = { NOT = { has_country_flag = SOV_restored_in_transamur } }
 	}
 	mean_time_to_happen = {
@@ -20800,7 +20761,15 @@ country_event = { #alliance name
 				}
 			}
 		}
-		create_faction = russian_cis
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			set_faction_name = russian_cis
+		}
+		else = {
+			create_faction = russian_cis
+		}
 	}
 	option = {
 		name = rusfor.1.b
@@ -20821,14 +20790,30 @@ country_event = { #alliance name
 				has_country_flag = authoritarian_democrat_coalition
 			}
 		}
-		create_faction = eurasian_bloc
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			set_faction_name = eurasian_bloc
+		}
+		else = {
+			create_faction = eurasian_bloc
+		}
 	}
 	option = {
 		name = rusfor.1.c
 		ai_chance = {
 			factor = 60
 		}
-		create_faction = moscow_accord
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			set_faction_name = moscow_accord
+		}
+		else = {
+			create_faction = moscow_accord
+		}		
 	}
 	option = {
 		name = rusfor.1.e
@@ -20841,7 +20826,15 @@ country_event = { #alliance name
 		ai_chance = {
 			factor = 100
 		}
-		create_faction = fourth_internationale
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			set_faction_name = fourth_internationale
+		}
+		else = {
+			create_faction = fourth_internationale
+		}
 	}
 }
 	
@@ -22713,7 +22706,6 @@ country_event = { #Free Czechoslovakia
 						has_country_flag = CZE_SVK_was_puppeted
 						}
 					}
-					kill_country_leader = yes
 				}
 			set_cosmetic_tag = CZE_czechoslavakia
 			
@@ -22770,7 +22762,6 @@ country_event = { #Free Czechoslovakia
 							has_country_flag = CZE_SVK_was_puppeted
 							}
 						}
-						kill_country_leader = yes
 					}
 				
 				leave_faction = yes
@@ -23096,7 +23087,6 @@ country_event = { #Russia agrees
 						has_country_flag = CZE_SVK_was_puppeted
 						}
 					}
-					kill_country_leader = yes
 				}
 			set_cosmetic_tag = CZE_czechoslavakia
 			
@@ -23139,7 +23129,6 @@ country_event = { #Russia agrees
 							has_country_flag = CZE_SVK_was_puppeted
 							}
 						}
-						kill_country_leader = yes
 					}
 				
 				separate_peace_all_wars = yes
@@ -23296,7 +23285,6 @@ country_event = { #Russia denies
 						has_country_flag = CZE_SVK_was_puppeted
 						}
 					}
-					kill_country_leader = yes
 				}
 			set_cosmetic_tag = CZE_czechoslavakia
 			
@@ -23339,7 +23327,6 @@ country_event = { #Russia denies
 							has_country_flag = CZE_SVK_was_puppeted
 							}
 						}
-						kill_country_leader = yes
 					}
 				
 				separate_peace_all_wars = yes
@@ -24719,7 +24706,7 @@ country_event = { #Great Patriotic War
 			has_war_with = FRA
 			has_war_with = GER
 		}
-		NOT = { country_exists = SOV }
+		NOT = { soviets_exist = yes }
 	}
 
 	option = {
@@ -24772,7 +24759,7 @@ country_event = { #A New 1812
 	trigger = {
 		is_subject = no
 		has_war = yes
-		NOT = { country_exists = SOV }
+		NOT = { soviets_exist = yes }
 		controls_state = 219
 		OR = {
 			NOT = {
@@ -25394,6 +25381,444 @@ country_event = { #Russia refuses
 
 
 #Foreign Politics Focuses Events ###########################
+country_event = { #The Trans-Siberian Crisis
+	id = rusfor.62
+	title = rusfor.62.t
+	desc = rusfor.62.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = RUS 
+		NOT = { has_completed_focus = RUS_Mongolian_Issue }
+		329 = { is_owned_by_ROOT_or_ally = no }
+		MON = { NOT = { has_completed_focus = MON_russia_friendship } }
+		NOT = {
+			has_war_with = MON
+			is_in_faction_with = MON
+		}
+		MON = {
+			is_subject = no 
+			exists = yes 
+			controls_state = 811
+		}
+	}
+	
+	option = {
+		name = rusfor.62.a #We must increase the security on our trains.
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_completed_focus = RUS_Realpolitik
+		}
+		add_political_power = -100
+		add_opinion_modifier = {
+			target = MON
+			modifier = medium_decrease
+		}
+	}
+
+	option = {
+		name = rusfor.62.b #Demand a formal apology from the Mongolian government!
+		ai_chance = {
+			factor = 5
+		}
+		MON = {
+			country_event = {
+				id = rusfor.63
+			}
+		}
+	}
+
+	option = {
+		name = rusfor.62.c #Enough! We demand full sovereignty over OUR Trans-Siberian railway!
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = 100
+		MON = {
+			country_event = {
+				id = rusfor.66
+			}
+		}
+		add_state_claim = 329
+		add_state_core = 654
+		add_state_core = 811
+	}
+
+	option = {
+		name = rusfor.62.e #We shall bring civilization where there is barbarism, send the troops!
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_completed_focus = RUS_Expansionism
+		}
+		add_political_power = 100
+		MON = {
+			country_event = {
+				id = rusfor.69
+			}
+		}
+		declare_war_on = {
+			target = MON type = annex_everything
+		}
+		add_state_claim = 329
+		add_state_core = 654
+		add_state_core = 811
+	}
+
+}
+
+country_event = { #Russia demands a formal apology
+	id = rusfor.63
+	title = rusfor.63.t
+	desc = rusfor.63.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = rusfor.63.a #We express our deepest regrets, send gifts to the bereaved.
+		ai_chance = {
+			factor = 30
+		}
+		FROM = {
+			country_event = {
+				id = rusfor.64
+			}
+		}
+		add_political_power = -100
+	}
+
+	option = {
+		name = rusfor.63.b #We cannot be held responsible for the actions of bandits.
+		ai_chance = {
+			factor = 50
+		}
+		FROM = {
+			country_event = {
+				id = rusfor.65
+			}
+		}
+	}
+
+	option = {
+		name = rusfor.63.c #What!? Siberia is ours!
+		trigger = {
+			MON_sternberg_in_power = yes
+		}
+		ai_chance = {
+			factor = 20
+		}
+		FROM = {
+			country_event = {
+				id = rusfor.68
+			}
+		}
+		hidden_effect = { load_oob = "MON_ATTACK_RUS" }
+		add_state_claim = 583
+		add_state_claim = 572
+		add_state_claim = 653
+		add_state_claim = 580
+		add_state_claim = 579
+		add_state_claim = 590
+		add_state_claim = 588
+		add_state_claim = 403
+		add_state_claim = 571
+		add_state_claim = 570
+		add_state_claim = 578
+		add_state_claim = 40
+		add_state_claim = 569
+		add_state_claim = 568
+		add_state_claim = 567
+		add_state_claim = 566
+		add_state_claim = 577
+		add_state_claim = 516
+		add_state_claim = 576
+		add_state_claim = 575
+
+		add_state_claim = 565
+		add_state_claim = 561
+		add_state_claim = 657
+		add_state_claim = 560
+		add_state_claim = 574
+		add_state_claim = 644
+		add_state_claim = 562
+		add_state_claim = 637
+	}
+
+}
+
+country_event = { #The Mongolians Apologis
+	id = rusfor.64
+	title = rusfor.64.t
+	desc = rusfor.64.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = rusfor.64.a #that is good
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = -40
+		add_opinion_modifier = {
+			target = MON modifier = KR_approves_of_govt
+		}
+	}
+
+	option = {
+		name = rusfor.64.b #Okay, but we shall be watching the railroad in future!
+		ai_chance = {
+			factor = 95
+		}
+		add_opinion_modifier = {
+			target = MON modifier = KR_approves_of_govt
+		}
+		add_state_core = 811
+		add_state_core = 654
+	}
+}
+
+country_event = { #The Mongolians refuse our request!
+	id = rusfor.65
+	title = rusfor.65.t
+	desc = rusfor.65.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = rusfor.65.a #He is right, it was not his fault.
+		ai_chance = {
+			factor = 5
+		}
+		trigger = {
+			NOT = { has_completed_focus = RUS_Expansionism }
+		}
+		add_political_power = -40
+		add_opinion_modifier = {
+			target = MON modifier = KR_approves_of_govt
+		}
+	}
+
+	option = {
+		name = rusfor.65.b #We shall not forget this!
+		ai_chance = {
+			factor = 15
+		}
+		add_political_power = -60
+		add_opinion_modifier = {
+			target = MON modifier = KR_disapproves_of_govt
+		}
+		add_state_core = 811
+		add_state_core = 654
+	}
+
+	option = {
+		name = rusfor.65.c #Then it is war!
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = 100
+		add_state_core = 811
+		add_state_core = 654
+		MON = {
+			country_event = {
+				id = rusfor.69
+			}
+		}
+		declare_war_on = {
+			target = MON 
+			type = annex_everything
+		}
+	}
+
+}
+
+country_event = { #Russia demands full control over the railroad
+	id = rusfor.66
+	title = rusfor.66.t
+	desc = rusfor.66.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = rusfor.66.a #We shall abandon our portion of the railroad.
+		ai_chance = {
+			factor = 40
+		}
+		FROM = {
+			country_event = {
+				id = rusfor.67
+				
+			}
+		}
+		add_political_power = -100
+		FROM = {
+			transfer_state = 811
+			transfer_state = 654
+			add_state_core = 811
+			add_state_core = 654
+		}
+		remove_state_core = 811
+		remove_state_core = 654
+	}
+
+	option = {
+		name = rusfor.66.b #We cannot be held responsible for the actions of bandits.
+		ai_chance = {
+			factor = 20
+		}
+		RUS = {
+			country_event = {
+				id = rusfor.65
+			}
+		}
+	}
+
+	option = {
+		name = rusfor.66.c #Mobilise, Siberia is ours!
+		trigger = {
+			MON_sternberg_in_power = yes
+		}
+		ai_chance = {
+			factor = 40
+		}
+		RUS = {
+			country_event = {
+				id = rusfor.68
+			}
+		}
+		hidden_effect = { load_oob = MON_ATTACK_RUS }
+		add_state_claim = 583
+		add_state_claim = 572
+		add_state_claim = 653
+		add_state_claim = 580
+		add_state_claim = 579
+		add_state_claim = 590
+		add_state_claim = 588
+		add_state_claim = 403
+		add_state_claim = 571
+		add_state_claim = 570
+		add_state_claim = 578
+		add_state_claim = 40
+		add_state_claim = 569
+		add_state_claim = 568
+		add_state_claim = 567
+		add_state_claim = 566
+		add_state_claim = 577
+		add_state_claim = 516
+		add_state_claim = 576
+		add_state_claim = 575
+
+		add_state_claim = 565
+		add_state_claim = 561
+		add_state_claim = 657
+		add_state_claim = 560
+		add_state_claim = 574
+		add_state_claim = 644
+		add_state_claim = 562
+		add_state_claim = 637
+	}
+
+}
+
+country_event = { #The Russian Railroad!
+	id = rusfor.67
+	title = rusfor.67.t
+	desc = rusfor.67.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = rusfor.67.a #Excellent!
+		add_political_power = 300
+	}
+
+}
+
+country_event = { #The Bloody Baron
+	id = rusfor.68
+	title = rusfor.68.t
+	desc = rusfor.68.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = rusfor.68.a #We shall wipe Mongolia from the map!
+		ai_chance = {
+			factor = 90
+		}
+		add_political_power = 100
+		add_state_core = 811
+		add_state_core = 654
+		declare_war_on = {
+			target = MON 
+			type = annex_everything
+		}
+	}
+
+	option = {
+		name = rusfor.68.b #Evacuate all Russian citizens from Mongolia and seal the border.
+		ai_chance = {
+			factor = 5
+		}
+		trigger = {
+			NOT = { has_completed_focus = RUS_Expansionism }
+		}
+		add_political_power = -200
+	}
+}
+country_event = { #The Russians Attack!
+	id = rusfor.69
+	title = rusfor.69.t
+	desc = rusfor.69.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = MON
+		MON_sternberg_in_power = yes
+	}
+	
+	option = {
+		name = rusfor.69.a #Let the Russians come, we shall chase them out of Asia!
+		hidden_effect = { load_oob = MON_ATTACK_RUS }
+		add_state_claim = 583
+		add_state_claim = 572
+		add_state_claim = 653
+		add_state_claim = 580
+		add_state_claim = 579
+		add_state_claim = 590
+		add_state_claim = 588
+		add_state_claim = 403
+		add_state_claim = 571
+		add_state_claim = 570
+		add_state_claim = 578
+		add_state_claim = 40
+		add_state_claim = 569
+		add_state_claim = 568
+		add_state_claim = 567
+		add_state_claim = 566
+		add_state_claim = 577
+		add_state_claim = 516
+		add_state_claim = 576
+		add_state_claim = 575
+
+		add_state_claim = 565
+		add_state_claim = 561
+		add_state_claim = 657
+		add_state_claim = 560
+		add_state_claim = 574
+		add_state_claim = 644
+		add_state_claim = 562
+		add_state_claim = 637
+	}
+
+}
 
 
 country_event = { #Germany invites DKB/GEO/AZE to the Reichspakt
@@ -25607,6 +26032,20 @@ country_event = { #Russia ignored demands
 				}
 			}
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = OTT
+					OTT = { is_subject = no }
+				}
+				OTT = { 
+					country_event = {
+						id = ottfor.51 
+						days = 1
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -25622,6 +26061,20 @@ country_event = { #Mitteleuropa ceases all contacts with us RUS
 		name = rusfor.1007.a #I WILL SURVIVE
 		add_stability = -0.1
 		add_ideas = rus_ceased_contacts_germany
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = OTT
+					OTT = { is_subject = no }
+				}
+				OTT = { 
+					country_event = {
+						id = ottfor.51 
+						days = 1
+					}
+				}
+			}
+		}
 	}
 }
 news_event = { #The Caucasus Crisis
@@ -26142,6 +26595,57 @@ country_event = { #The Baku Oil Fields
 			}
 		}
 	}
+	
+	option = {
+		name = rusfor.1020.c #Who built Baku's oil plants? Make plans for a hostile takeover!
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = -50
+		add_named_threat = {
+			threat = 3 
+			name = rusfor.1020.t
+		}
+		add_opinion_modifier = {
+			target = AZE 
+			modifier = KR_outraged
+		}
+		create_wargoal = {
+			type = annex_everything 
+			target = AZE
+		}
+	}
+	
+	option = {
+		name = rusfor.1020.e #We shall take back our stolen plants by force, right now!
+		trigger = {
+			OR = {
+				has_completed_focus = RUS_Expansionism
+				NOT = { has_completed_focus = RUS_Realpolitik }
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				AZE = { 
+					OR = {
+						is_in_faction = yes 
+						is_guaranteed_by = GER
+						is_subject = yes
+					}
+				}
+			}				
+		}
+		declare_war_on = {
+			target = AZE 
+			type = annex_everything
+		}
+		add_named_threat = {
+			threat = 3 
+			name = rusfor.1020.t
+		}
+	}
 }
 
 country_event = { #Russian Investment AZE
@@ -26238,7 +26742,47 @@ country_event = { #Azerbaijan agrees
 			factor = 40
 		}
 		add_stability = 0.03
+		add_political_power = 100
 		puppet = FROM
+	}
+	option = {
+		name = rusfor.1023.b #Start to plan on how best to incorporate Azerbaijan into Russia!
+		trigger = {
+			OR = {
+				has_completed_focus = RUS_Expansionism
+				NOT = { has_completed_focus = RUS_Realpolitik }
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+		add_stability = -0.03
+		add_political_power = -50
+		puppet = FROM
+		hidden_effect = {
+			country_event = {
+				id = rusfor.1024
+				days = 175
+			}
+		}
+	}
+}
+country_event = { #Integration Azer
+	id = rusfor.1024
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rusfor.1024" }
+	title = rusfor.1024.t
+	desc = rusfor.1024.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = rusfor.1024.a
+		ai_chance = {
+			factor = 99
+		}
+		annex_country = {
+			target = AZE
+		}
 	}
 }
 
@@ -27371,6 +27915,11 @@ country_event = { #Russia demands northern iran
 				factor = 2
 				FROM = { same_government_type_as_ROOT = yes }
 			}
+			modifier = {
+				factor = 2
+				has_war = yes
+				surrender_progress > 0.1
+			}
 		}
 		add_political_power = -100
 		FROM = {
@@ -27388,12 +27937,11 @@ country_event = { #Russia demands northern iran
 				if = {
 					limit = { has_country_flag = RUS_demands_puppet_PER }					
 					puppet = ROOT
+				}
 			}
 			country_event = {
 				id = rusfor.1067
 				days = 2
-				random = 48
-				}
 			}
 		}
 	}
@@ -27408,7 +27956,6 @@ country_event = { #Russia demands northern iran
 			country_event = {
 				id = rusfor.1068
 				days = 2
-				random = 48
 			}
 		}
 	}
@@ -27490,6 +28037,7 @@ country_event = { #Russia Demands We Surrender Greater Armenia OTT
 			effect_tooltip = {
 				transfer_state = 1000
 				transfer_state = 1001
+				transfer_state = 1213
 			}
 			country_event = {
 				id = rusfor.1072
@@ -27537,6 +28085,7 @@ country_event = { #OTT/TUR accepts
 		add_political_power = 20
 		transfer_state = 1000
 		transfer_state = 1001
+		transfer_state = 1213
 	}
 
 	option = {
@@ -27601,7 +28150,7 @@ country_event = { #Referendum
 			factor = 20
 			modifier = {
 				factor = 0
-				RUS = { has_same_government_as_ROOT = no }
+				RUS = { same_government_type_as_ROOT = no }
 			}
 		}
 		RUS = {
@@ -29424,7 +29973,7 @@ country_event = { #We've been defeated! FIN
 	}
 	
 	immediate = {
-		set_global_flag = { flag = RUS_FIN_offered_peace days = 90 value 1 }
+		set_global_flag = { flag = RUS_FIN_offered_peace days = 90 value = 1 }
 		if = {
 			limit = {
 				NOT = { surrender_progress > 0.2 }
@@ -29672,7 +30221,7 @@ country_event = { #ROM-RUS peace deal
 	}
 	
 	immediate = {
-		set_global_flag = { flag = RUS_ROM_offered_peace days = 90 value 1 }
+		set_global_flag = { flag = RUS_ROM_offered_peace days = 90 value = 1 }
 		if = {
 			limit = {
 				NOT = {
@@ -30276,6 +30825,7 @@ country_event = { #Spiritual Administration of the Muslims of Central Asia
 	title = rusfor.1273.t
 	desc = rusfor.1273.d
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -30331,6 +30881,16 @@ country_event = { #Pacification of Central Asia
 	option = {
 		name = rusfor.1275.a
 		add_political_power = 20
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = KYR
+					is_core_of = UZB
+					is_core_of = TRK
+				}
+			}
+			add_compliance = 10
+		}
 	}
 }
 
@@ -30594,7 +31154,10 @@ country_event = { #Question of Kuban
 				is_puppet = yes
 				}
 			}
-			NOT = { has_idea = rus_ceased_contacts_germany }
+			AND = { 
+				NOT = { has_idea = rus_ceased_contacts_germany }
+				UKR = { is_in_faction_with = GER }
+			}
 		}
 		ai_chance = {
 			factor = 35
@@ -32827,16 +33390,13 @@ country_event = { #green vozhd
 	option = {
 		name = rusfor.1435.a
 		hidden_effect = {	
-			kill_country_leader = yes
-			
-			create_country_leader = {
-			    name = "Pavel Gorgulov"
-			    desc = "POLITICS_GORGULOV_DESC"
-				picture = "Portrait_RUS_Pavel_Gorgulov_Vohzd.png"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = { green_vozhd }
+			if = {	
+				limit = { has_country_leader = { name = "Pavel Gorgulov" ruling_only = yes } }
+				set_country_leader_portrait = {
+					portrait = "gfx/leaders/RUS/Portrait_RUS_Pavel_Gorgulov_Vohzd.png"
+				}
 			}
+			add_country_leader_trait = green_vozhd
 	    }
     }
 }
@@ -32877,7 +33437,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
 				traits = {  }
@@ -32885,7 +33445,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = {  }
@@ -32893,7 +33453,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = {  }
@@ -32901,7 +33461,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
 				traits = {  }
@@ -32909,7 +33469,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = market_liberal_subtype
 				traits = {  }
@@ -32917,7 +33477,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 				traits = {  }
@@ -32925,7 +33485,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 				traits = {  }
@@ -32933,7 +33493,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = radical_socialist_subtype
 				traits = {  }
@@ -32941,7 +33501,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = syndicalist_subtype
 				traits = {  }
@@ -32949,7 +33509,7 @@ country_event = { #Alaska Integration
 			create_country_leader = {
 				name = "Russian Administration"
 				desc = "POLITICS_RUSSIAN_ADMIN_DESC"
-				picture = "Portrait_Alaska_Russian_Administration.png"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
 				expire = "1965.1.1"
 				ideology = totalist_subtype
 				traits = {  }
