@@ -2023,7 +2023,7 @@ country_event = { # two-gun cohen's assistance?
 			HKG_triad_conflict_14k_plus_plus = yes
 			country_event = {
 				id = hktriads.47
-				days = 14
+				days = 68
 			}
 		}
 	}
@@ -2286,7 +2286,26 @@ country_event = { # end of triad war
 	}
 }
 
-country_event = { # introduction event to triad war
+country_event = { # jewish resistance
+	id = hktriads.47
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.47" }
+	title = hktriads.47.t
+	desc = hktriads.47.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.47.a
+		swap_ideas = {
+				remove_idea = HKG_jewish_suppression_idea
+				add_idea = HKG_jewish_suppression_idea1
+		}
+		hidden_effect = {
+			set_country_flag = HKG_jewish_resistance
+		}
+	}
+}
+
+country_event = { # intel network finalized
 	id = hktriads.48
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.48" }
 	title = hktriads.48.t
@@ -2298,6 +2317,100 @@ country_event = { # introduction event to triad war
 		add_war_support = 0.025
 		hidden_effect = {
 			set_country_flag = HKG_14k_intel_flag
+		}
+	}
+}
+
+country_event = { # calm before the storm
+	id = hktriads.49
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.49" }
+	title = hktriads.49.t
+	desc = hktriads.49.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.49.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.50
+				days = 28
+			}
+		}
+	}
+}
+
+country_event = { # wo on lok bombing
+	id = hktriads.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.50" }
+	title = hktriads.50.t
+	desc = hktriads.50.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.50.a
+		add_stability = -0.05
+		326 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1.5
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = hktriads.52
+				days = 32
+			}
+		}
+	}
+}
+
+country_event = { # occupants legacy
+	id = hktriads.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.51" }
+	title = hktriads.51.t
+	desc = hktriads.51.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.51.a
+		326 = {
+			remove_building = {
+				type = naval_base
+				level = 3
+				province = 10062
+			}
+			remove_building = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2250
+				producer = LEC
+		}
+		add_equipment_to_stockpile = {
+				type = convoy
+				amount = 50
+				producer = LEC
+		}
+	}
+}
+
+country_event = { # another bombing
+	id = hktriads.52
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.52" }
+	title = hktriads.52.t
+	desc = hktriads.52.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.52.a
+		326 = {
+			damage_building = {
+				type = industrial_complex
+				damage = 0.45
+			}
 		}
 	}
 }

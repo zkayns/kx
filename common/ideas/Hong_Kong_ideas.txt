@@ -233,6 +233,17 @@ ideas = {
 				political_power_factor = -0.25
 			}
 		}
+		HKG_makeshift_administration_idea_triad1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_makeshift_administration_idea_triad"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				political_power_factor = -0.20
+			}
+		}
 		HKG_triad_army_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_idea"
@@ -787,6 +798,18 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 			}
 		}
+		HKG_jewish_suppression_idea1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				stability_factor = -0.075
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
 		HKG_14k_intel_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
@@ -796,6 +819,18 @@ ideas = {
 				out_of_supply_factor = -0.1
 				war_support_factor = 0.05
 				local_manpower = 0.02
+			}
+		}
+		HKG_14k_intel_idea1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+			local_intel_to_enemies = -0.15
+			new_operative_slot_bonus = 1
+			foreign_subversive_activites = -0.1
+			resistance_damage_to_garrison = -0.1
 			}
 		}
 	}
