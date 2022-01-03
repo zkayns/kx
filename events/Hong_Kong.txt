@@ -61,7 +61,7 @@ country_event = { #Confiscating Firearms
 	}
 }
 
-country_event = { #They've found a WHAT?
+country_event = { #They've found a WHAT? ###need fixing###
 	id = hongkong.4
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.4" }
 	title = hongkong.4.t
@@ -71,10 +71,25 @@ country_event = { #They've found a WHAT?
 
 	option = {
 		name = hongkong.4.a
-		add_equipment_to_stockpile = {
-				type = light_tank_equipment
-				amount = 10
-				producer = HKG
+		if = {
+			limit = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 1
+				producer = GXC
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis
+				amount = 1
+				producer = GXC
+			}
 		}
 	}
 }
@@ -648,6 +663,10 @@ country_event = { #Triads takeover!
 			clr_country_flag = HKG_triadwar_eliminate_leaders
 			set_cosmetic_tag = HKG_SUN_YEE_ON
 			add_popularity = { ideology = national_populist popularity = -0.30 }
+			if = {
+				limit = { has_template = "Hong Kong Police Force" }
+				delete_unit_template_and_units = { division_template = "Hong Kong Police Force" }
+			}
 		}
 	}
 	option = {
@@ -710,6 +729,10 @@ country_event = { #Triads takeover!
 				add_idea = HKG_makeshift_administration_idea_triad
 			}
 		}
+		swap_ideas = {
+			remove_idea = HKG_major_port_idea
+			add_idea = HKG_major_port_idea_triad
+		}
 		hidden_effect = {
 			set_country_flag = HKG_police_deposed
 			set_country_flag = HKG_triads_in_charge
@@ -717,6 +740,10 @@ country_event = { #Triads takeover!
 			clr_country_flag = HKG_triadwar_tackle_outposts
 			set_cosmetic_tag = HKG_SUN_YEE_ON
 			add_popularity = { ideology = national_populist popularity = -0.40 }
+			if = {
+				limit = { has_template = "Hong Kong Police Squadron" }
+				delete_unit_template_and_units = { division_template = "Hong Kong Police Squadron" }
+			}
 		}
 	}
 }
@@ -1670,8 +1697,10 @@ country_event = { #chan chak's reforms pt 1
 			days = 900
 		}
 		hidden_effect = {
-			country_event = hktriads.31
-			days = 80
+			country_event = {
+				id = hktriads.31
+				days = 80
+			}
 		}
 	}
 }
@@ -1943,13 +1972,9 @@ country_event = { # 14k picked syo event 3
 
 	option = {
 		name = hktriads.37.a
-		custom_effect_tooltip = HKG_triad_conflict_plus_500_guns_post_tt
-		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus
-		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
 		hidden_effect = {
-			HKG_triad_conflict_plus_250_guns = yes
 			HKG_triad_conflict_sun_yee_on_plus = yes
-			HKG_triad_conflict_minus_200_men = yes
 		}
 	}
 }
@@ -1997,7 +2022,7 @@ country_event = { # two-gun cohen's assistance?
 		hidden_effect = {
 			HKG_triad_conflict_14k_plus_plus = yes
 			country_event = {
-				id = hktriads.39
+				id = hktriads.47
 				days = 14
 			}
 		}
@@ -2101,7 +2126,7 @@ country_event = { # assassination attempt
 		name = hktriads.4200.a
 		add_war_support = -0.1
 		custom_effect_tooltip = HKG_triad_conflict_14k_minus_tt
-		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt_
+		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_tt
 		custom_effect_tooltip = HKG_triad_conflict_minus_400_men_post_tt
 		hidden_effect = {
 			HKG_triad_conflict_minus_400_men = yes
@@ -2164,6 +2189,115 @@ country_event = { # capturing tsing yi
 		hidden_effect = {
 			HKG_triad_conflict_14k_plus_plus = yes
 			HKG_triad_conflict_minus_200_men = yes
+		}
+	}
+}
+
+country_event = { # introduction event to triad war
+	id = hktriads.45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.45" }
+	title = hktriads.45.t
+	desc = hktriads.45.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.45.a
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = { # end of triad war
+	id = hktriads.46
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.46" }
+	title = {
+		text = hktriads.46.t.syo
+		trigger = {
+			check_variable = { HKG_sun_yee_on_influence_var > HKG_14k_influence_var }
+		}
+	}
+	title = {
+		text = hktriads.46.t.14k
+		trigger = {
+			check_variable = { HKG_14k_influence_var > HKG_sun_yee_on_influence_var }
+		}
+	}
+	desc = {
+		text = hktriads.46.d.syo
+		trigger = {
+			check_variable = { HKG_sun_yee_on_influence_var > HKG_14k_influence_var }
+		}
+	}
+	desc = {
+		text = hktriads.46.d.14k
+		trigger = {
+			check_variable = { HKG_14k_influence_var > HKG_sun_yee_on_influence_var }
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.46.a
+		trigger = {
+			check_variable = { HKG_sun_yee_on_influence_var > HKG_14k_influence_var }
+		}
+		add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
+		add_stability = 0.1
+		add_political_power = 75
+		hidden_effect = {
+			complete_national_focus = HKG_sun_yee_on
+			clr_country_flag = HKG_triad_conflict_start
+			clr_country_flag = HKG_14k_chosen_flag
+			clr_country_flag = HKG_sun_yee_on_chosen_flag
+		}
+	}
+	option = {
+		name = hktriads.46.b
+		trigger = {
+			check_variable = { HKG_14k_influence_var > HKG_sun_yee_on_influence_var }
+		}
+		add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
+		add_stability = 0.1
+		add_political_power = 75
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = HKG_paternal_autocrat_party2_long
+			name = HKG_paternal_autocrat_party2
+			}
+		create_country_leader = {
+			name = "Kot Siu-wong"
+			desc = "POLITICS_HEUNG_DESC"
+			picture = "gfx/leaders/HKG/Portrait_HKG_Kot_Siu_Wong.png"
+			expire = "1965.1.1"
+			ideology = crime_syndicate_subtype
+			traits = { }
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			complete_national_focus = HKG_14k
+			clr_country_flag = HKG_triad_conflict_start
+			clr_country_flag = HKG_14k_chosen_flag
+			clr_country_flag = HKG_sun_yee_on_chosen_flag
+		}
+	}
+}
+
+country_event = { # introduction event to triad war
+	id = hktriads.48
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.48" }
+	title = hktriads.48.t
+	desc = hktriads.48.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.48.a
+		add_war_support = 0.025
+		hidden_effect = {
+			set_country_flag = HKG_14k_intel_flag
 		}
 	}
 }

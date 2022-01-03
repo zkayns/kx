@@ -234,6 +234,7 @@ HKG_triad_conflict_plus_500_guns_post_tt:0 "We've gained £rifle_texticon §H500
 HKG_triad_conflict_plus_500_guns_post_alt_tt:0 "We will gain £rifle_texticon §H500 weapons§!!"
 HKG_triad_conflict_no_guns_tt:0 "We don't have enough £rifle_texticon §Hweapons§! to make a proper response."
 HKG_triad_conflict_minus_300_men_pre_tt:0 "This action will require £GFX_manpower_texticon §H300 men§!."
+HKG_triad_conflict_minus_400_men_pre_tt:0 "This action will require £GFX_manpower_texticon §H400 men§!."
 HKG_triad_conflict_minus_600_men_pre_tt:0 "This action will require £GFX_manpower_texticon §H600 men§!."
 HKG_triad_conflict_minus_900_men_pre_tt:0 "This action will require £GFX_manpower_texticon §H900 men§!."
 HKG_triad_conflict_minus_100_men_post_tt:0 "We've §Rlost§! £GFX_manpower_texticon §H100 men§! in the process."
@@ -267,6 +268,7 @@ HKG_14k_intel_gained:0 "Intel regarding §XHeung Chin's§! whereabouts has been 
 HKG_regain_man_guns:0 "We will regain the resources used for this operation."
 HKG_secure_tsing_yi_tt:0 "§GOur agents have informed us that the strategically important island of Tsing Yi is severely underprotected by the rival Triad forces. Capturing it would grant us a solid stronghold for a future assault on the Victoria Harbour.§!"
 HKG_gain_intel_tt:0 "§HSetting up a network of agents will allow us to §!§Gexpand our operations§!§H!§!"
+HKG_14k_intel_flag:0 "A network of agents has been successfully established."
 
 #################
 #### Focuses ####
@@ -729,6 +731,10 @@ hktriads.36.t:0 "Sun Yee On Aligns with Wo On Lok!"
 hktriads.36.d:0 "they grow more powerful"
 hktriads.36.a:0 "zamn..."
 
+hktriads.37.t:0 "Sun Yee On Strikes a Large Arms Deal!"
+hktriads.37.d:0 "they grow more powerful"
+hktriads.37.a:0 "zamn..."
+
 hktriads.38.t:0 "Approaching the Jewish Colonel"
 hktriads.38.d:0 "what do with jews"
 hktriads.38.a:0 "make cohen general"
@@ -767,3 +773,18 @@ hktriads.43.a:0 "lets attack the victoria harbour now"
 hktriads.44.t:0 "The Assault on Victoria Harbour"
 hktriads.44.d:0 "some fighting took place and now the harbour is in our possession"
 hktriads.44.a:0 "big if tru"
+
+hktriads.45.t:0 "Streets of Hong Kong Erupt in Violence"
+hktriads.45.d:0 "introduction event to triad war"
+hktriads.45.a:0 "crazy"
+
+hktriads.46.t.syo:0 "The Sun Yee On Stans Victorious!"
+hktriads.46.t.14k:0 "The 14K Stands Victorious!"
+hktriads.46.d.syo:0 "syo won the triad war"
+hktriads.46.d.14k:0 "14k won the triad war"
+hktriads.46.a:0 "crazy"
+hktriads.46.b:0 "crazy"
+
+hktriads.48.t:0 "Intelligence Network Finalized"
+hktriads.48.d:0 "our assets have been placed throughout the city and deliver intel to kot"
+hktriads.48.a:0 ";]"

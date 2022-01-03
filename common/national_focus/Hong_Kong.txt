@@ -160,6 +160,9 @@ focus_tree = {
 		prerequisite = { 
 			focus = HKG_secure_the_streets
 		}
+		prerequisite = { 
+			focus = HKG_provisional_government
+		}
 		available = {
 			has_government = authoritarian_democrat
 			NOT = { has_country_flag = HKG_police_deposed }
@@ -582,16 +585,18 @@ focus_tree = {
 			hidden_effect = {
 				set_country_flag = HKG_triad_conflict_start
 				country_event = {
-					id = hktriads.23
+					id = hktriads.45
 					days = 5
 				}
 			}
-			
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
 			custom_effect_tooltip = HKG_hegemony_tt
+			hidden_effect = {
+				country_event = hktriads.46
+			}
 		}
 	}
 	focus = { 
@@ -655,6 +660,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_idea = HKG_triads_in_power_idea3
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_meet_the_new_boss

@@ -334,6 +334,24 @@ HKG_triad_conflict_decisions = {
 				set_country_flag = HKG_14k_chosen_flag
 				set_country_flag = HKG_decision_made
 				HKG_triad_conflict_setup_14k = yes
+				if = {
+					limit = {
+						has_idea = HKG_better_49ers_idea
+					}
+				remove_ideas = HKG_better_49ers_idea
+				}
+				if = {
+					limit = {
+						has_idea = HKG_rich_vanguards_idea
+					}
+				remove_ideas = HKG_rich_vanguards_idea
+				}
+				if = {
+					limit = {
+						has_idea = HKG_powerful_vanguards_idea
+					}
+				remove_ideas = HKG_powerful_vanguards_idea
+				}
 				country_event = {
 					id = hktriads.35
 					days = 21
@@ -1079,6 +1097,10 @@ HKG_triad_conflict_decisions = {
 			custom_effect_tooltip = HKG_gain_intel_tt
 			hidden_effect = {
 				HKG_triad_conflict_14k_plus = yes
+				country_event = {
+					id = hktriads.48
+					days = 7
+				}
 				clr_country_flag = HKG_triad_conflict_doing_stuff
 			}
 		}
@@ -1088,6 +1110,7 @@ HKG_triad_conflict_decisions = {
 		available = {
 			has_country_flag = HKG_14k_chosen_flag
 			has_idea = HKG_14k_intel_idea
+			has_country_flag = HKG_14k_intel_flag
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
 			custom_trigger_tooltip = {
 					tooltip = HKG_guns_men_tt
@@ -1181,6 +1204,7 @@ HKG_triad_conflict_decisions = {
 		available = {
 			has_country_flag = HKG_14k_chosen_flag
 			has_idea = HKG_14k_intel_idea
+			has_country_flag = HKG_14k_intel_flag
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
 			custom_trigger_tooltip = {
 					tooltip = HKG_guns_men_tt
