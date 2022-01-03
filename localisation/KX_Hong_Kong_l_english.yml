@@ -177,6 +177,7 @@ HKG_contact_kmt_cells:0 "Contact KMT Cells on the Mainland"
 HKG_ambush_supply_lines:0 "Cut Sun Yee On's Supply Lines"
 HKG_establish_intel:0 "Establish Fifth Columnists"
 HKG_kill_heung_chin:0 "Assassinate Heung Chin"
+HKG_secure_tsing_yi:0 "Secure Tsing Yi"
 
 
 750_infantry_equipment:0 "£rifle_texticon §H750§!"
@@ -261,9 +262,11 @@ HKG_triad_conflict_doing_stuff:0 "We're already focusing our efforts elsewhere."
 HKG_triad_inf_tt:0 "§HFour regiments of infantry will be formed.§!"
 HKG_cohen_general_tt:0 "§HMorris Cohen§! will be promoted to a £GFX_army_experience General."
 HKG_contact_kmt_cells_tt:0 "South Chinese §RKMT§! cells might support us in the struggle against §XSun Yee On§!."
-HKG_ambush_supply_lines_tt:0 "§GDue to our excellent network of agents in the city, we will coordinate an assault on our opponents' goods shipment.§!"
+HKG_ambush_supply_lines_tt:0 "§GDue to our excellent network of agents in the city, we've managed to track our opponents' large arms and goods shipment.§!"
 HKG_14k_intel_gained:0 "Intel regarding §XHeung Chin's§! whereabouts has been obtained."
 HKG_regain_man_guns:0 "We will regain the resources used for this operation."
+HKG_secure_tsing_yi_tt:0 "§GOur agents have informed us that the strategically important island of Tsing Yi is severely underprotected by the rival Triad forces. Capturing it would grant us a solid stronghold for a future assault on the Victoria Harbour.§!"
+HKG_gain_intel_tt:0 "§HSetting up a network of agents will allow us to §!§Gexpand our operations§!§H!§!"
 
 #################
 #### Focuses ####
@@ -756,3 +759,11 @@ hktriads.4200.a:0 "XD"
 hktriads.4201.t:0 "they find out it was a setup"
 hktriads.4201.d:0 "it was a bait"
 hktriads.4201.a:0 "XDD"
+
+hktriads.43.t:0 "Tsing Yi Captured"
+hktriads.43.d:0 "some fighting took place and now the island is in our possession"
+hktriads.43.a:0 "lets attack the victoria harbour now"
+
+hktriads.44.t:0 "The Assault on Victoria Harbour"
+hktriads.44.d:0 "some fighting took place and now the harbour is in our possession"
+hktriads.44.a:0 "big if tru"

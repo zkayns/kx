@@ -1046,6 +1046,10 @@ HKG_triad_conflict_decisions = {
 		available = {
 			has_country_flag = HKG_14k_chosen_flag
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_men_var > 999 }
+			}
 		}
 		visible = {
 			has_country_flag = HKG_14k_chosen_flag
@@ -1072,6 +1076,7 @@ HKG_triad_conflict_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_establish_intel"
 			add_ideas = HKG_14k_intel_idea
 			custom_effect_tooltip = HKG_triad_conflict_14k_plus_tt
+			custom_effect_tooltip = HKG_gain_intel_tt
 			hidden_effect = {
 				HKG_triad_conflict_14k_plus = yes
 				clr_country_flag = HKG_triad_conflict_doing_stuff
@@ -1084,10 +1089,16 @@ HKG_triad_conflict_decisions = {
 			has_country_flag = HKG_14k_chosen_flag
 			has_idea = HKG_14k_intel_idea
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_guns_var > 399 }
+					check_variable = { HKG_men_var > 599 }
+			}
 		}
 		visible = {
 			has_country_flag = HKG_14k_chosen_flag
 			NOT = { has_country_flag = HKG_sun_yee_on_chosen_flag }
+			has_idea = HKG_14k_intel_idea
 		}
 		fire_only_once = yes
 		ai_will_do = {
@@ -1127,6 +1138,11 @@ HKG_triad_conflict_decisions = {
 			has_idea = HKG_14k_intel_idea
 			has_country_flag = HKG_14k_intel_gained
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_guns_var > 149 }
+					check_variable = { HKG_men_var > 249 }
+			}
 		}
 		visible = {
 			has_country_flag = HKG_14k_chosen_flag
@@ -1157,6 +1173,54 @@ HKG_triad_conflict_decisions = {
 			country_event = hktriads.42
 			hidden_effect = {
 				clr_country_flag = HKG_triad_conflict_doing_stuff
+			}
+		}
+	}
+	HKG_secure_tsing_yi = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = HKG_14k_chosen_flag
+			has_idea = HKG_14k_intel_idea
+			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
+			custom_trigger_tooltip = {
+					tooltip = HKG_guns_men_tt
+					check_variable = { HKG_guns_var > 399 }
+					check_variable = { HKG_men_var > 599 }
+			}
+		}
+		visible = {
+			has_country_flag = HKG_14k_chosen_flag
+			NOT = { has_country_flag = HKG_sun_yee_on_chosen_flag }
+			has_idea = HKG_14k_intel_idea
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		custom_cost_text = 400_infantry_equipment_600_men
+		custom_cost_trigger = {
+			check_variable = { HKG_men_var > 599 }
+			check_variable = { HKG_guns_var > 399 }
+		}
+		days_remove = 14
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_secure_sai_kung"
+			hidden_effect = {
+				set_country_flag = HKG_triad_conflict_doing_stuff
+				HKG_triad_conflict_minus_600_men = yes
+				HKG_triad_conflict_minus_400_guns = yes
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_secure_sai_kung"
+			custom_effect_tooltip = HKG_secure_tsing_yi_tt
+			hidden_effect = {
+				clr_country_flag = HKG_triad_conflict_doing_stuff
+				country_event = {
+					id = hktriads.43
+					days = 2
+				}
 			}
 		}
 	}

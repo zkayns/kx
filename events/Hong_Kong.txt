@@ -2127,3 +2127,43 @@ country_event = { # no assassination attempt
 		}
 	}
 }
+
+country_event = { # capturing tsing yi
+	id = hktriads.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.43" }
+	title = hktriads.43.t
+	desc = hktriads.43.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.43.a
+		add_war_support = 0.05
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus = yes
+			country_event = {
+				id = hktriads.44
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # capturing tsing yi
+	id = hktriads.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.44" }
+	title = hktriads.44.t
+	desc = hktriads.44.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.44.a
+		add_war_support = 0.05
+		custom_effect_tooltip = HKG_triad_conflict_14k_plus_plus_tt
+		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
+		hidden_effect = {
+			HKG_triad_conflict_14k_plus_plus = yes
+			HKG_triad_conflict_minus_200_men = yes
+		}
+	}
+}
