@@ -1797,7 +1797,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			
+			add_stability = 0.05
+			country_event = hktriads.53
+			add_ideas = HKG_order_without_law_idea
 		}
 	}
 	focus = { 
@@ -1871,8 +1873,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
+			country_event = hktriads.55
 		}
 	}
 	focus = { 

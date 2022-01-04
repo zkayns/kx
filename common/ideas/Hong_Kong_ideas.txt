@@ -833,5 +833,17 @@ ideas = {
 			resistance_damage_to_garrison = -0.1
 			}
 		}
+		HKG_order_without_law_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = -0.1
+				party_popularity_stability_factor = 0.125
+				monthly_population	= 0.03
+				local_resources_factor = 0.05
+			}
+		}
 	}
 }

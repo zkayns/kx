@@ -148,6 +148,7 @@ HKG_jewish_suppression_idea:0 "Antisemitic Rhetoric"
 HKG_jewish_suppression_idea1:0 "Jewish Resistance"
 HKG_14k_intel_idea:0 "All-seeing Operatives"
 HKG_14k_intel_idea1:0 "Strategic Intelligence Agency"
+HKG_order_without_law_idea: "Order Without Law"
 hog_staunch_anti_socialist:0 "Staunch Anti-Socialist"
 
 
@@ -819,3 +820,23 @@ hktriads.51.a:0 "salvage what we can and sell the rest"
 hktriads.52.t:0 "Sun Yee On Agents Bomb Strike Our Factory!"
 hktriads.52.d:0 "d"
 hktriads.52.a:0 "a"
+
+hktriads.53.t:0 "Show Kindness, But Demand Respect"
+hktriads.53.d:0 "basically the populace isn't in many ways regulated - they're free to do whatever they want as long as it doesn't damage the triad's interests. based anarcho-criminalism??"
+hktriads.53.a:0 "nice!"
+
+hktriads.54.t:0 "followup event to hktriads.53"
+hktriads.54.d:0 "maybe describing the relations between triad members and citizens on a daily basis in more detail"
+hktriads.54.a:0 "nice!"
+
+hktriads.55.t:0 "Formation of the Council of The 18 Syndicates"
+hktriads.55.d:0 "not entirely a legislative body but that's kind of how i would imagine its role? basically the representatives of different sectors from different areas convene with the general, we'll talk a little bit more about it when you get to writing lmao. also, asking how often should the council meet"
+hktriads.55.a:0 "3 months"
+hktriads.55.b:0 "6 months"
+hktriads.55.c:0 "12 months"
+
+hktriads.56.t:0 "First Meeting of the 18 Syndicates Council"
+hktriads.56.d:0 "first meeting, choosing the focus for the next term"
+hktriads.56.a:0 "militarization"
+hktriads.56.b:0 "economy"
+hktriads.56.c:0 "some fucking 'politics' shit"
