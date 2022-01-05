@@ -2464,6 +2464,10 @@ country_event = { # council of 18 syndicates pt.1 introduction
 		hidden_effect = {
 			set_country_flag = HKG_18_syndicates_active
 			set_country_flag = HKG_18_syndicates_3_months
+			country_event = {
+				id = hktriads.56
+				days = 7
+			}
 		}
 	}
 	option = {
@@ -2473,6 +2477,10 @@ country_event = { # council of 18 syndicates pt.1 introduction
 		hidden_effect = {
 			set_country_flag = HKG_18_syndicates_active
 			set_country_flag = HKG_18_syndicates_6_months
+			country_event = {
+				id = hktriads.56
+				days = 7
+			}
 		}
 	}
 	option = {
@@ -2482,6 +2490,10 @@ country_event = { # council of 18 syndicates pt.1 introduction
 		hidden_effect = {
 			set_country_flag = HKG_18_syndicates_active
 			set_country_flag = HKG_18_syndicates_12_months
+			country_event = {
+				id = hktriads.56
+				days = 7
+			}
 		}
 	}
 }
@@ -2497,19 +2509,19 @@ country_event = { # council of 18 syndicates pt.2 first meeting
 		name = hktriads.56.a
 		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_military_3
 				days = 90
 			}
 		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_6_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_military_6
 				days = 180
 			}
 		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_12_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_military_12
 				days = 360
 			}
 		}
@@ -2518,19 +2530,19 @@ country_event = { # council of 18 syndicates pt.2 first meeting
 		name = hktriads.56.b
 		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_economy_3
 				days = 90
 			}
 		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_6_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_economy_6
 				days = 180
 			}
 		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_12_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_economy_12
 				days = 360
 			}
 		}
@@ -2539,21 +2551,107 @@ country_event = { # council of 18 syndicates pt.2 first meeting
 		name = hktriads.56.c
 		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_politics_3
 				days = 90
 			}
 		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_6_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_politics_6
 				days = 180
 			}
 		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_12_months } 
 			add_timed_idea = {
-				idea =
+				idea = HKG_18_syndicates_politics_12
 				days = 360
 			}
 		}
+	}
+}
+
+country_event = { # council of 18 syndicates pt.3 every other meeting
+	id = hktriads.57
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.57" }
+	title = hktriads.57.t
+	desc = hktriads.57.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.57.a
+		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_military_3
+				days = 90
+			}
+		}
+		if = { limit = { has_country_flag = HKG_18_syndicates_6_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_military_6
+				days = 180
+			}
+		}
+		if = { limit = { has_country_flag = HKG_18_syndicates_12_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_military_12
+				days = 360
+			}
+		}
+	}
+	option = {
+		name = hktriads.57.b
+		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_economy_3
+				days = 90
+			}
+		}
+		if = { limit = { has_country_flag = HKG_18_syndicates_6_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_economy_6
+				days = 180
+			}
+		}
+		if = { limit = { has_country_flag = HKG_18_syndicates_12_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_economy_12
+				days = 360
+			}
+		}
+	}
+	option = {
+		name = hktriads.57.c
+		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_politics_3
+				days = 90
+			}
+		}
+		if = { limit = { has_country_flag = HKG_18_syndicates_6_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_politics_6
+				days = 180
+			}
+		}
+		if = { limit = { has_country_flag = HKG_18_syndicates_12_months } 
+			add_timed_idea = {
+				idea = HKG_18_syndicates_politics_12
+				days = 360
+			}
+		}
+	}
+}
+
+country_event = { # order without law
+	id = hktriads.58
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.58" }
+	title = hktriads.58.t
+	desc = hktriads.58.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.58.a
+		add_stability = 0.025
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 	}
 }

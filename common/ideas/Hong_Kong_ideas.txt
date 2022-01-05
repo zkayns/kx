@@ -845,5 +845,239 @@ ideas = {
 				local_resources_factor = 0.05
 			}
 		}
+		HKG_18_syndicates_military_3 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				army_org_factor = 0.1
+				experience_gain_factor = 0.075
+				planning_speed = 0.05
+				max_planning = 0.05
+			}
+		}
+		HKG_18_syndicates_military_6 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				army_org_factor = 0.15
+				experience_gain_factor = 0.1
+				planning_speed = 0.075
+				max_planning = 0.075
+			}
+		}
+		HKG_18_syndicates_military_12 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				army_org_factor = 0.2
+				experience_gain_factor = 0.15
+				planning_speed = 0.125
+				max_planning = 0.125
+			}
+		}
+		HKG_18_syndicates_economy_3 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = -0.025
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.025
+			}
+		}
+		HKG_18_syndicates_economy_6 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		HKG_18_syndicates_economy_12 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = -0.075
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		HKG_18_syndicates_politics_3 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = 0.05
+				research_speed_factor = 0.025
+				stability_factor = 0.05
+				surrender_limit	= 0.1
+			}
+		}
+		HKG_18_syndicates_politics_6 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = 0.1
+				research_speed_factor = 0.05
+				stability_factor = 0.075
+				surrender_limit	= 0.15
+			}
+		}
+		HKG_18_syndicates_politics_12 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_country_flag = HKG_18_syndicates_active
+					}
+				country_event = hktriads.57
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = HKG_18_syndicates_active }
+					}
+				country_event = hktriads.58
+				}
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.075
+				stability_factor = 0.1
+				surrender_limit	= 0.2
+			}
+		}
 	}
 }
