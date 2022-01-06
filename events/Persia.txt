@@ -180,4 +180,3 @@ country_event = { # Death of Ahmad Shah
 		}
 	}
 }
-}
