@@ -73,7 +73,7 @@ add_opinion_modifier = { target = OTT modifier = embargo }
 set_war_support = 0.25
 
 set_politics = {
-	ruling_party = social_democrat
+	ruling_party = market_liberal_subtype
 	last_election = "1888.6.15"
 	election_frequency = 48
 	elections_allowed = no
@@ -83,9 +83,9 @@ set_popularities = {
 	totalist = 0
 	radical_socialist = 9
 	syndicalist = 0
-	social_democrat = 41
-	social_liberal = 2
-	market_liberal = 2
+	social_democrat = 2
+	social_liberal = 5
+	market_liberal = 38
 	social_conservative = 4
 	authoritarian_democrat = 26
 	paternal_autocrat = 14
@@ -110,41 +110,6 @@ country_event = {
 country_event = {
 	id = pers.99 # Yalda Night
 	days = 87
-}
-
-country_event = {
-	id = pers.2 # Death of Ahmad Shah
-	days = 95
-}
-
-country_event = {
-	id = pers.97 # Ramadan
-	days = 204
-}
-
-country_event = {
-	id = pers.89 # Dehkhoda's Dictionary
-	days = 220
-}
-
-country_event = {
-	id = pers.90 # Persepolis Excavation
-	days = 459
-}
-
-country_event = {
-	id = pers.38 # 1938 Presidential Election
-	days = 950
-}
-
-country_event = {
-	id = pers.38 # 1938 Majlis Election
-	days = 950
-}
-
-country_event = {
-	id = pers.101 # Rostam the Bear
-	days = 2355
 }
 
 create_country_leader = {
