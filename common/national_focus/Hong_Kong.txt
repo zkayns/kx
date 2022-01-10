@@ -1916,8 +1916,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
+			country_event = hktriads.59
 		}
 	}
 	focus = { 

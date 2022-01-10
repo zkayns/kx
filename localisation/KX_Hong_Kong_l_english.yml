@@ -427,19 +427,19 @@ hongkong.1.d:0 "add"
 hongkong.1.a:0 "loc"
 
 hongkong.2.t:0 "Hong Kong Turns the Page"
-hongkong.2.d:0 "d"
+hongkong.2.d:0 "introductionary event, canon way is they went independent after the legations have gone bankrupt, due to their forces being unable to keep order the police seizes power"
 hongkong.2.a:0 "The Pearl of the Orient will thrive!"
 
 hongkong.3.t:0 "Crackdown on Gun Traffickers"
-hongkong.3.d:0 "d"
+hongkong.3.d:0 "confiscating illegal firearms to the best of their abilities which isn't much at this point tho"
 hongkong.3.a:0 "a"
 
 hongkong.4.t:0 "A Peculiar Finding in Wan Chai"
-hongkong.4.d:0 "found a fucking tank lmao"
+hongkong.4.d:0 "found a fucking tank lmao (fires after the confiscating firearms focus is taken)"
 hongkong.4.a:0 "They've found a WHAT?"
 
 hongkong.5.t:0 "The Triads Declare Open Rebellion"
-hongkong.5.d:0 "inevitable"
+hongkong.5.d:0 "inevitable, happens a few days after the first focus"
 hongkong.5.a:0 "a"
 
 hongkong.6.t:0 "Organizing Proper Countermeasures"
@@ -451,10 +451,10 @@ hongkong.7.t.eliminate:0 "The Whereabouts of Heung Chin"
 hongkong.7.t.tackle:0 "A Decrepit Basement in Wong Tai Sin"
 hongkong.7.d.eliminate:0 "organizing search party for triad leader"
 hongkong.7.d.tackle:0 "organizing a raid for triad holdout"
-hongkong.7.a:0 "Send out our Chinese officers!"
-hongkong.7.b:0 "The Chinese cannot be trusted with anything... Dispatch HKPF's finest!"
-hongkong.7.c:0 "Set up a reconnaissance party near the building"
-hongkong.7.e:0 "We have no time to spare... Assault the holdout immediately!"
+hongkong.7.a:0 "Send out our Chinese officers!" ##leads to hongkong.8###
+hongkong.7.b:0 "The Chinese cannot be trusted with anything... Dispatch HKPFs finest!" ##leads to hongkong.9###
+hongkong.7.c:0 "Set up a reconnaissance party near the building" ##leads to hongkong.8###
+hongkong.7.e:0 "We have no time to spare... Assault the holdout immediately!" ##leads to hongkong.9###
 
 hongkong.8.t.eliminate:0 "Our Chinese Agents Deliver Promising News"
 hongkong.8.t.tackle:0 "Reconnaissance Unit Sends a Promising Report"
@@ -465,7 +465,7 @@ hongkong.8.b:0 "Have our units make a surprise appearance at the meeting"
 
 hongkong.9.t.eliminate:0 "One of Our Patrols Makes a Dreadful Discovery!"
 hongkong.9.t.tackle:0 "The Strike Force Stumbles Upon an Arms Deal!"
-hongkong.9.d.eliminate:0 "bodies of british agents found on the shore of Wan Chai"
+hongkong.9.d.eliminate:0 "bodies of british agents found somewhere"
 hongkong.9.d.tackle:0 "there was an arms deal ongoing with tons of guards, most of the five-os die"
 hongkong.9.a:0 "This is worrying..."
 hongkong.9.b:0 "This is worrying..."
@@ -859,3 +859,35 @@ hktriads.57.c:0 "some fucking 'politics' shit"
 hktriads.58.t:0 "The 18 Syndicates Council Disbanded!"
 hktriads.58.d:0 "when li mi goes gamer"
 hktriads.58.a:0 "h"
+
+hktriads.59.t:0 "Addressing the Wo On Lok Threat"
+hktriads.59.d:0 "how to proceed with the wo on lok"
+hktriads.59.a:0 "do nothing"
+hktriads.59.b:0 "kill them"
+hktriads.59.c:0 "try negotiations"
+
+hktriads.60.t:0 "Choosing a Course of Action"
+hktriads.60.d:0 "describing options a and b"
+hktriads.60.a:0 "large assault"
+hktriads.60.b:0 "more infiltration and a coordinated strike"
+
+hktriads.60.t:0 "negotiations unsuccessful"
+hktriads.60.d:0 "they didn't feel like negotiating and they sad bad things about my mom"
+hktriads.60.a:0 "proceed with the attack plan"
+hktriads.60.b:0 "do nothing"
+
+hktriads.62.t:0 "large assault chosen"
+hktriads.62.d:0 "our agents march to regions predominantly controlled by wo on lok/sun yee on and a large fight breaks out"
+hktriads.62.a:0 "waiting for the results"
+
+hktriads.63.t:0 "more infiltration and a coordinated strike chosen"
+hktriads.63.d:0 "our agents make their way to regions predominantly controlled by wo on lok/sun yee on *covertly* and will launch surprise attacks tommorow"
+hktriads.63.a:0 "waiting for the results"
+
+hktriads.64.t:0 "success in the large assault"
+hktriads.64.d:0 "the assault is a success, the wo on lok is no longer a big threat"
+hktriads.64.a:0 "splendid"
+
+hktriads.65.t:0 "success in the covert assault"
+hktriads.65.d:0 "the assault is a success, the wo on lok is no longer a big threat"
+hktriads.65.a:0 "splendid"

@@ -2642,7 +2642,7 @@ country_event = { # council of 18 syndicates pt.3 every other meeting
 	}
 }
 
-country_event = { # order without law
+country_event = { # 18 syndicates council disbanded
 	id = hktriads.58
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.58" }
 	title = hktriads.58.t
@@ -2653,5 +2653,155 @@ country_event = { # order without law
 		name = hktriads.58.a
 		add_stability = 0.025
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+	}
+}
+
+country_event = { # destroy wo on lok
+	id = hktriads.59
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.59" }
+	title = hktriads.59.t
+	desc = hktriads.59.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.59.a
+		add_stability = -0.075
+	}
+	option = {
+		name = hktriads.59.b
+		add_war_support = 0.02
+		hidden_effect = {
+			country_event = {
+				id = hktriads.60
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = hktriads.59.c
+		add_stability = 0.02
+		hidden_effect = {
+			country_event = {
+				id = hktriads.61
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { # destroy wo on lok - kill 1
+	id = hktriads.60
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.60" }
+	title = hktriads.60.t
+	desc = hktriads.60.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.60.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.62
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = hktriads.60.b
+		hidden_effect = {
+			country_event = {
+				id = hktriads.63
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # destroy wo on lok - negotiate
+	id = hktriads.61
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.61" }
+	title = hktriads.60.t
+	desc = hktriads.60.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.61.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.60
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = hktriads.61.b
+		add_stability = -0.075
+	}
+}
+
+country_event = { # destroy wo on lok - kill large
+	id = hktriads.62
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.62" }
+	title = hktriads.62.t
+	desc = hktriads.62.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.62.a
+		add_war_support = 0.01
+		hidden_effect = {
+			country_event = {
+				id = hktriads.64
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # destroy wo on lok - kill covert
+	id = hktriads.63
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.63" }
+	title = hktriads.63.t
+	desc = hktriads.63.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.63.a
+		add_war_support = 0.01
+		hidden_effect = {
+			country_event = {
+				id = hktriads.65
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # destroy wo on lok - kill large - done
+	id = hktriads.64
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.64" }
+	title = hktriads.64.t
+	desc = hktriads.64.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.64.a
+		add_manpower = -800
+		add_stability = 0.05
+		remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
+	}
+}
+
+country_event = { # destroy wo on lok - kill covert - done
+	id = hktriads.65
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.65" }
+	title = hktriads.65.t
+	desc = hktriads.65.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.65.a
+		add_manpower = -450
+		add_stability = 0.025
+		remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
 	}
 }

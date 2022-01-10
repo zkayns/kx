@@ -131,6 +131,7 @@ set_politics = {
 }
 add_ideas = {
 	limited_exports
+	low_economic_mobilisation	
 	### Head of Government
 	### Foreign Minister
 	### Eco minister
