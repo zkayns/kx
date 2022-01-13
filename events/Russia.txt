@@ -261,6 +261,13 @@ country_event = { #Kerensky
 		name = russia.5.a
 		ai_chance = {
 			factor = 99
+			modifier = {
+                factor = 0
+                has_game_rule = {
+                    rule = RUS_kerensky_assasination
+                    option = RUS_KERENSKY_LIVE_BITCH
+                }
+            }
 		}
 		country_event = {
 			id = russia.6
@@ -308,6 +315,13 @@ country_event = { #Kerensky
 		name = russia.5.b
 		ai_chance = {
 			factor = 1
+			modifier = {
+                factor = 0
+                has_game_rule = {
+                    rule = RUS_kerensky_assasination
+                    option = RUS_KERENSKY_DIE
+                }
+            }
 		}
 			
 		country_event = {
@@ -829,8 +843,10 @@ country_event = { #Power Struggle
 			limit = { NOT = { has_country_flag = disable_duma } }
 			set_country_flag = disable_duma
 		}
+		clr_country_flag = RUS_SAVI
 		set_country_flag = RUS_SOLIDARISTS
 		set_country_flag = NSNP_separated
+		load_focus_tree = RUS_SENATE_FOCUS
 		country_event = {
 			id = rusdem.606
 			days = 2
@@ -6427,30 +6443,7 @@ country_event = { #Opposition laws
 							has_country_flag = soc_land_accepted
 						}
 					}
-					if = {
-						limit = {
-							NOT = {
-								psr_in_power = yes
-								has_country_flag = psr_banned
-								check_variable = { psr_total_mp < 30 }
-								has_country_flag = soc_land_blocked
-								has_country_flag = soc_land_accepted
-							}
-						}
-						country_event = rusdem.207
-						if = {
-							limit = {
-								psr_in_power = no
-								NOT = { has_country_flag = psr_coalition }
-							}
-							set_country_flag = RUS_LAW_OPPOSITION_VOTES
-						}
-						set_country_flag = RUS_LAW_PSR_SOCIALIZATION_OF_LAND
-						set_country_flag = RUS_LAW_DUMA_LEVEL
-						set_country_flag = RUS_LAW_IN_PROGRESS
-						Get_initial_RUS_LAW_PSR_SOCIALIZATION_OF_LAND = yes
-						activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
-					}
+					country_event = rusdem.207
 				}
 				20 = {
 					modifier = {
@@ -6462,31 +6455,7 @@ country_event = { #Opposition laws
 							has_country_flag = RUS_LAW_PRIVATIZE_RAILROAD_blocked
 						}
 					}
-					if = {
-						limit = {
-							NOT = {
-								has_government = social_conservative
-								has_country_flag = vns_banned
-								has_country_flag = RUS_LAW_PRIVATIZE_RAILROAD_accepted
-								has_country_flag = RUS_LAW_PRIVATIZE_RAILROAD_blocked
-							}
-						}
-						country_event = rusdem.208
-						if = {
-							limit = {
-								NOT = {
-									has_government = social_conservative
-									has_country_flag = social_conservative_coalition
-								}
-							}
-							set_country_flag = RUS_LAW_OPPOSITION_VOTES
-						}
-						set_country_flag = RUS_LAW_PRIVATIZE_RAILROAD
-						set_country_flag = RUS_LAW_DUMA_LEVEL
-						set_country_flag = RUS_LAW_IN_PROGRESS
-						Get_initial_RUS_LAW_STOLYPIN_REFORMS = yes
-						activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
-					}
+					country_event = rusdem.208						
 				}
 				20 = {
 					modifier = {
@@ -6497,30 +6466,7 @@ country_event = { #Opposition laws
 							has_idea = RUS_general_education
 						}
 					}
-					if = {
-						limit = {
-							NOT = {
-								rsdrp_in_power = yes
-								has_country_flag = rsdrp_banned
-								has_idea = RUS_general_education
-							}
-						}
-						country_event = rusdem.212
-						if = {
-							limit = {
-								NOT = {
-									rsdrp_in_power = yes
-									has_country_flag = rsdrp_coalition
-								}
-							}
-							set_country_flag = RUS_LAW_OPPOSITION_VOTES
-						}
-						set_country_flag = RUS_LAW_GENERAL_EDUCATION
-						set_country_flag = RUS_LAW_DUMA_LEVEL
-						set_country_flag = RUS_LAW_IN_PROGRESS
-						Get_initial_RUS_LAW_CHEAP_HOUSING = yes
-						activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
-					}
+					country_event = rusdem.212						
 				}
 				20 = {
 					modifier = {
@@ -6537,38 +6483,7 @@ country_event = { #Opposition laws
 							has_completed_focus = RUS_Monarchy_Referendum
 						}
 					}
-					if = {
-						limit = {
-							NOT = {
-								has_socialist_government = yes
-								has_government = market_liberal
-								has_government = social_conservative
-								has_government = authoritarian_democrat
-								RUS_russian_monarch = yes
-								has_country_flag = monarchy_referendum_accepted
-								has_country_flag = monarchy_referendum_blocked
-								has_completed_focus = RUS_Towards_Greatest_Aim
-								has_completed_focus = RUS_Monarchy_Referendum
-							}
-						}
-						country_event = rusdem.209
-						if = {
-							limit = {
-								NOT = {
-									has_government = social_conservative
-									has_country_flag = social_conservative_coalition
-									has_government = market_liberal
-									has_country_flag = market_liberal_coalition
-								}
-							}
-							set_country_flag = RUS_LAW_OPPOSITION_VOTES
-						}
-						set_country_flag = RUS_LAW_HOLD_THE_MONARCHY_REFERENDUM
-						set_country_flag = RUS_LAW_DUMA_LEVEL
-						set_country_flag = RUS_LAW_IN_PROGRESS
-						Get_initial_RUS_LAW_HOLD_THE_MONARCHY_REFERENDUM = yes
-						activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
-					}
+					country_event = rusdem.209						
 				}
 				20 = {
 					modifier = {
@@ -6585,14 +6500,7 @@ country_event = { #Opposition laws
 							has_completed_focus = RUS_Monarchy_Referendum
 						}
 					}
-					country_event = rusdem.210
-					set_country_flag = RUS_LAW_OPPOSITION_VOTES
-					set_country_flag = RUS_LAW_SENATE_PSR_KDP_REFORM
-					set_country_flag = RUS_LAW_DUMA_LEVEL
-					set_country_flag = RUS_LAW_IN_PROGRESS
-					Get_initial_RUS_LAW_SENATE_PSR_KDP_REFORM = yes
-					set_country_flag = RUS_LAW_CHANGING_CONSTITUTION
-					activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
+					country_event = rusdem.210					
 				}
 			}	
 		}
@@ -6607,9 +6515,31 @@ country_event = { #PSR tries to socialize land
 	desc = rusdem.207.d 
 	fire_only_once = yes
 	is_triggered_only = yes
-		
+	trigger = {
+		NOT = {
+			psr_in_power = yes
+			has_country_flag = psr_banned
+			has_socialist_government = yes
+			check_variable = { psr_total_mp < 30 }
+			has_country_flag = soc_land_blocked
+			has_country_flag = soc_land_accepted
+		}
+	}
+			
 	option = {
 		name = rusdem.207.a
+		if = {
+			limit = {
+				psr_in_power = no
+				NOT = { has_country_flag = psr_coalition }
+			}
+			set_country_flag = RUS_LAW_OPPOSITION_VOTES
+		}
+		set_country_flag = RUS_LAW_PSR_SOCIALIZATION_OF_LAND
+		set_country_flag = RUS_LAW_DUMA_LEVEL
+		set_country_flag = RUS_LAW_IN_PROGRESS
+		Get_initial_RUS_LAW_PSR_SOCIALIZATION_OF_LAND = yes
+		activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
 	}
 }
 country_event = { #VNS tries to privatise railroads
@@ -6621,9 +6551,31 @@ country_event = { #VNS tries to privatise railroads
 	desc = rusdem.208.d 
 	fire_only_once = yes
 	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_government = social_conservative
+			has_country_flag = vns_banned
+			has_country_flag = RUS_LAW_PRIVATIZE_RAILROAD_accepted
+			has_country_flag = RUS_LAW_PRIVATIZE_RAILROAD_blocked
+		}
+	}
 		
 	option = {
 		name = rusdem.208.a
+		if = {
+			limit = {
+				NOT = {
+					has_government = social_conservative
+					has_country_flag = social_conservative_coalition
+				}
+			}
+			set_country_flag = RUS_LAW_OPPOSITION_VOTES
+		}
+		set_country_flag = RUS_LAW_PRIVATIZE_RAILROAD
+		set_country_flag = RUS_LAW_DUMA_LEVEL
+		set_country_flag = RUS_LAW_IN_PROGRESS
+		Get_initial_RUS_LAW_STOLYPIN_REFORMS = yes
+		activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
 	}
 }
 country_event = { #VNS tries to restore monarchy
@@ -6635,9 +6587,37 @@ country_event = { #VNS tries to restore monarchy
 	desc = rusdem.209.d 
 	fire_only_once = yes
 	is_triggered_only = yes
-		
+	trigger = {
+		NOT = {
+			has_socialist_government = yes
+			has_government = market_liberal
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+			RUS_russian_monarch = yes
+			has_country_flag = monarchy_referendum_accepted
+			has_country_flag = monarchy_referendum_blocked
+			has_completed_focus = RUS_Towards_Greatest_Aim
+			has_completed_focus = RUS_Monarchy_Referendum
+		}
+	}
 	option = {
 		name = rusdem.209.a
+		if = {
+			limit = {
+				NOT = {
+					has_government = social_conservative
+					has_country_flag = social_conservative_coalition
+					has_government = market_liberal
+					has_country_flag = market_liberal_coalition
+				}
+			}
+			set_country_flag = RUS_LAW_OPPOSITION_VOTES
+		}
+		set_country_flag = RUS_LAW_HOLD_THE_MONARCHY_REFERENDUM
+		set_country_flag = RUS_LAW_DUMA_LEVEL
+		set_country_flag = RUS_LAW_IN_PROGRESS
+		Get_initial_RUS_LAW_HOLD_THE_MONARCHY_REFERENDUM = yes
+		activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
 	}
 }
 country_event = { #VNS tries to restore monarchy
@@ -6665,9 +6645,31 @@ country_event = { #Senate Reform
 	desc = rusdem.210.d 
 	fire_only_once = yes
 	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+				has_government = national_populist
+				RUS_russian_monarch = yes
+				has_country_flag = RUS_LAW_SENATE_PSR_KDP_REFORM_blocked
+				has_country_flag = RUS_LAW_SENATE_PSR_KDP_REFORM_accepted
+				has_country_flag = RUS_LAW_SENATE_RSDRP_REFORM_accepted
+				has_country_flag = RUS_LAW_SENATE_RSDRP_REFORM_blocked
+				has_completed_focus = RUS_Monarchy_Referendum
+			}
+		}
+	}
 		
 	option = {
 		name = rusdem.210.a
+		set_country_flag = RUS_LAW_OPPOSITION_VOTES
+		set_country_flag = RUS_LAW_SENATE_PSR_KDP_REFORM
+		set_country_flag = RUS_LAW_DUMA_LEVEL
+		set_country_flag = RUS_LAW_IN_PROGRESS
+		Get_initial_RUS_LAW_SENATE_PSR_KDP_REFORM = yes
+		set_country_flag = RUS_LAW_CHANGING_CONSTITUTION
+		activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
 	}
 }
 country_event = { #Eurasianists bye bye
@@ -6715,9 +6717,29 @@ country_event = { #General Education
 	desc = rusdem.212.d 
 	fire_only_once = yes
 	is_triggered_only = yes
-		
+	trigger = {
+		NOT = {
+			rsdrp_in_power = yes
+			has_country_flag = rsdrp_banned
+			has_idea = RUS_general_education
+		}
+	}
 	option = {
 		name = rusdem.212.a
+		if = {
+			limit = {
+				NOT = {
+					rsdrp_in_power = yes
+					has_country_flag = rsdrp_coalition
+				}
+			}
+			set_country_flag = RUS_LAW_OPPOSITION_VOTES
+		}
+		set_country_flag = RUS_LAW_GENERAL_EDUCATION
+		set_country_flag = RUS_LAW_DUMA_LEVEL
+		set_country_flag = RUS_LAW_IN_PROGRESS
+		Get_initial_RUS_LAW_CHEAP_HOUSING = yes
+		activate_mission = RUS_LAW_DUMA_LEVEL_DEADLINE
 	}
 }
 
@@ -11309,6 +11331,7 @@ country_event = { #presidential general elections
 				has_country_flag = RUS_DPROM
 			}	
 		}
+		RUS_russian_monarch = no
 	}
 	is_triggered_only = yes
 	
@@ -15381,12 +15404,22 @@ country_event = { #NRPR
 			random_list = {
 				50 = {
 					modifier = {
-						factor = 1.2
+						factor = 2
 						has_country_flag = bolsheviks_allowed
 					}
 					modifier = {
-						factor = 0.4
+						factor = 0
 						has_country_flag = bolsheviks_banned
+					}
+					modifier = {
+						factor = 10000
+						AND = {
+							is_ai = yes
+							has_game_rule = {
+								rule = RUS_RCW
+								option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
+							}
+						}
 					}
 					country_event = {
 						id = rusdem.360
@@ -15395,11 +15428,11 @@ country_event = { #NRPR
 				}
 				50 = {
 					modifier = {
-						factor = 0.8
+						factor = 0
 						has_country_flag = bolsheviks_allowed
 					}
 					modifier = {
-						factor = 1.5
+						factor = 2
 						has_country_flag = bolsheviks_banned
 					}
 					modifier = {
@@ -15409,16 +15442,6 @@ country_event = { #NRPR
 							has_game_rule = {
 								rule = RUS_RCW
 								option = RULE_OPTION_RUSSIAN_CIVIL_WAR_DISABLED
-							}
-						}
-					}
-					modifier = {
-						factor = 10000
-						AND = {
-							is_ai = yes
-							has_game_rule = {
-								rule = RUS_RCW
-								option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
 							}
 						}
 					}
@@ -17336,48 +17359,10 @@ country_event = { #PSR
 				}
 			}
 		}
-		random_list = {
-			30 = {
-				modifier = {
-					factor = 1.5
-					has_country_leader = {
-						ruling_only = yes
-						name = "Nikolay Avksentiev"
-					}
-				}
-				modifier = {
-					factor = 10000
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR
-					}
-				}			
-				country_event = {
-					id = rusdem.419
-					days = 4
-				}
-			}
-			70 = {
-				modifier = {
-					factor = 1.5
-					has_country_leader = {
-						ruling_only = yes
-						name = "Lev Gershtein"
-					}
-				}
-				modifier = {
-					factor = 10000
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR
-					}
-				}
-				country_event = {
-					id = rusdem.420
-					days = 4
-				}
-			}
-		}		
+		country_event = {
+			id = rusdem.420
+			days = 4
+		}
 	}
 	option = {
 		name = rusdem.418.b
@@ -17398,48 +17383,10 @@ country_event = { #PSR
 				}
 			}
 		}
-		random_list = {
-			70 = {
-				modifier = {
-					factor = 1.5
-					has_country_leader = {
-						ruling_only = yes
-						name = "Nikolay Avksentiev"
-					}
-				}
-				modifier = {
-					factor = 10000
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR
-					}
-				}
-				country_event = {
-					id = rusdem.419
-					days = 4
-				}
-			}
-			30 = {
-				modifier = {
-					factor = 1.5
-					has_country_leader = {
-						ruling_only = yes
-						name = "Lev Gershtein"
-					}
-				}
-				modifier = {
-					factor = 10000
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR
-					}
-				}
-				country_event = {
-					id = rusdem.420
-					days = 4
-				}
-			}
-		}		
+		country_event = {
+			id = rusdem.419
+			days = 4
+		}
 	}
 }
 country_event = { #PSR
@@ -19560,6 +19507,13 @@ country_event = { #Monarchy Referendum
 		name = rusdem.551.a
 		unlock_decision_tooltip = RUS_LAW_HOLD_THE_MONARCHY_REFERENDUM_initialize
 		set_country_flag = RUS_LAW_HOLD_THE_MONARCHY_REFERENDUM_available
+		set_country_flag = RUS_NOT_TAKING_REFERENDUM
+		hidden_effect = {
+			country_event = {
+				id = rusdem.625
+				days = 730
+			}
+		}
 	}
 }
 country_event = { #Monarchy Referendum
@@ -19984,6 +19938,18 @@ country_event = { #Monarchy Referendum
 	id = rusdem.557
 	title = rusdem.557.t
 	desc = rusdem.557.d
+	desc = {
+		text = rusdem.557.d
+		trigger = {
+			NOT = { has_country_flag = RUS_TSAR_ANA_NO }
+		}
+	}
+	desc = {
+		text = rusdem.557.d.noanastasia
+		trigger = {
+			has_country_flag = RUS_TSAR_ANA_NO
+		}
+	}	
 	is_triggered_only = yes
 	fire_only_once = no
 		
@@ -20075,6 +20041,11 @@ country_event = { #Monarchy Referendum
 				}
 			}
 		}
+		trigger = {
+			NOT = {
+				has_country_flag = RUS_TSAR_ANA_NO
+			}
+		}
 		set_country_flag = RUS_TSAR_ANA
 		custom_effect_tooltip = RUS_TSAR_ANA_TT
 		set_variable = { RUS_monarchy_candidate_legitimacy = 0 }
@@ -20099,6 +20070,22 @@ country_event = { #Monarchy Referendum
 			base = 0
 		}
 		country_event = rusdem.556
+	}	
+	option = {
+		name = rusdem.557.f
+		ai_chance = {
+			base = 0
+		}
+		trigger = {
+			has_country_flag = RUS_NICK_VISIBLE
+		}
+		add_political_power = -100
+		hidden_effect = {
+			country_event = {
+				id = rusdem.620
+				days = 22
+			}
+		}
 	}	
 }
 country_event = { #Monarchy Referendum
@@ -20229,6 +20216,29 @@ country_event = { #Monarchy Referendum
 		add_to_variable = { RUS_monarchy_candidate_legitimacy = -0.2 }
 		custom_effect_tooltip = RUS_decrease_monarchy_referendum_legitimacy_tt
 		add_to_variable = { RUS_monarchy_referendum_legitimacy_bonus = -0.2 }
+	}
+	option = {
+		name = rusdem.562.c
+		trigger = {
+			 has_country_flag = RUS_TSAR_ANA
+		}
+		ai_chance = {
+			base = 35
+		}
+		add_stability = -0.12
+		set_country_flag = RUS_TSAR_ANA_NO
+		clr_country_flag = RUS_TSAR_ANA
+		if = {
+			limit = {
+				has_country_flag = RUS_2_YEAR_DEADLINE_FLAG
+			}
+			set_country_flag = RUS_NICK_VISIBLE
+		}
+		country_event = {
+			id = rusdem.557
+			days = 1
+		}
+		
 	}
 	option = {
 		name = rusdem.562.a
@@ -22006,7 +22016,6 @@ country_event = { #NSNP
 		clr_country_flag = RUS_SAVI
 		set_country_flag = RUS_SOLIDARISTS
 		clr_country_flag = RUS_JUNTA		
-		load_focus_tree = RUS_SENATE_FOCUS
 		set_country_flag = RUS_democracy
 		clr_country_flag = disable_duma		
 		country_event = {
@@ -22212,6 +22221,157 @@ country_event = { #Presidental check
 }
 
 
+country_event = { #Nicholas claims to have returned
+	id = rusdem.620
+	title = rusdem.620.t 
+	desc = rusdem.620.d 
+	picture = GFX_event_russia_romanovs
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Nonsense!
+		name = rusdem.620.a
+		hidden_effect = {
+			country_event = {
+				id = rusdem.556
+				days = 34
+			}
+			clr_country_flag = RUS_NICK_VISIBLE
+		}
+	}
+	option = { #Mabye look into this
+		name = rusdem.620.b
+		trigger = {
+			is_ai = no
+		}
+		country_event = {
+			id = rusdem.621
+			days = 10
+		}
+	}
+}
+
+country_event = { #Nicholas II Found alive!
+	id = rusdem.621
+	title = rusdem.621.t 
+	desc = rusdem.621.d 
+	picture = GFX_event_russia_nicholas
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Merly a Pretender
+		name = rusdem.621.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = rusdem.556
+				days = 34
+			}
+			clr_country_flag = RUS_NICK_VISIBLE
+		}
+	}
+	option = { #It is the real Nikolai!
+		name = rusdem.621.b
+		trigger = {
+			is_ai = no
+		}
+		country_event = {
+			id = rusdem.622
+			days = 13
+		}
+	}
+}
+
+country_event = { #Choosing the True Tsar?
+	id = rusdem.622
+	title = rusdem.622.t 
+	desc = rusdem.622.d 
+	picture = GFX_event_russia_nicholas
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Return of the Tsar!
+		name = rusdem.622.a
+		add_political_power = 10
+		set_country_flag = RUS_TSAR_NIK
+		custom_effect_tooltip = RUS_TSAR_NIK_TT
+		custom_effect_tooltip = RUS_increase_monarchy_candidate_legitimacy_tt
+		add_to_variable = { RUS_monarchy_candidate_legitimacy = 0.07 }
+		custom_effect_tooltip = RUS_increase_monarchy_popular_support_tt
+		add_to_variable = { RUS_monarchy_popular_support_bonus = 0.07 }
+		custom_effect_tooltip = RUS_increase_monarchy_referendum_legitimacy_tt
+		add_to_variable = { RUS_monarchy_referendum_legitimacy_bonus = 0.07 }
+	}
+	option = { #Nicholas opts to Retir
+		name = rusdem.622.b
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = rusdem.556
+				days = 34
+			}
+			clr_country_flag = RUS_NICK_VISIBLE
+		}
+	}
+}
+country_event = { #Nicholas II Dies
+	id = rusdem.623
+	title = rusdem.623.t 
+	desc = rusdem.623.d 
+	picture = GFX_event_russia_nicholas
+	
+	trigger = {
+		date > 1945.5.5
+		has_country_leader = {
+			name = "Nicholas II"
+			ruling_only = yes
+		}
+	}
+	fire_only_once = yes
+	
+	option = { #RIP
+		name = rusdem.623.a
+		add_political_power = 10
+		RUS_setup_tsar_alexi = yes
+	}
+
+}
+
+country_event = { #Anastasia Flavour
+	id = rusdem.624
+	title = rusdem.624.t 
+	desc = rusdem.624.d 
+	picture = GFX_event_russia_anastasia
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #RIP
+		name = rusdem.624.a
+		add_manpower = -1
+	}
+
+}
+
+country_event = { #Nicky Trigger
+	id = rusdem.625
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = RUS_NOT_TAKING_REFERENDUM
+			}
+			set_country_flag = RUS_2_YEAR_DEADLINE_FLAG
+		}
+	}
+	
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+}
+
+
 country_event = { #RNSMA coup
 	id = rusd.19
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rusd.19" }
@@ -22235,19 +22395,19 @@ country_event = { #RNSMA coup
 			long_name = RUS_tsar_party_long
 			name = RUS_tsar_party
 		}
-		create_country_leader = {
-			name = "Vladimir Purishkevich"
-				desc = "POLITICS_VLADIMIR_PURISHKEVICH_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Purishkevich.png"
-				expire = "1965.1.1"
-				ideology = legionarism_subtype 
-				traits = {}
-		}
 		if = {
 			limit = {
 				NOT = {
 					has_country_flag = RUS_Purishkevich_dead
 				}
+			}
+			create_country_leader = {
+				name = "Vladimir Purishkevich"
+				desc = "POLITICS_VLADIMIR_PURISHKEVICH_DESC"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Purishkevich.png"
+				expire = "1965.1.1"
+				ideology = legionarism_subtype 
+				traits = {}
 			}
 			add_ideas = {
 				RUS_Vladimir_M_Purishkevich_hog_pau
@@ -22257,6 +22417,12 @@ country_event = { #RNSMA coup
 			}
 		}
 		else = {
+			create_country_leader = {
+				name = "Nikolay Markov"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Markov.png"
+				expire = "1965.1.1"
+				ideology = legionarism_subtype 
+			}
 			add_ideas = {
 				RUS_Nikolay_E_Markov_hog_npo
 				RUS_Aleksey_A_Ignatiev_for_pau 
@@ -22283,7 +22449,6 @@ country_event = { #RNSMA coup
 				id = rusd.154
 				days = 3
 			}
-			load_focus_tree = russia_focus
 		}
 	}
 }
@@ -26829,7 +26994,68 @@ country_event = { #Kirill Romanov dies
 		}
 	}
 }
-	
+country_event = { #Denikin's Death
+	id = rusd.96
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rusd.96" }
+	title = rusd.96.t
+	desc = rusd.96.d.hos
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = rusd.96.a
+		trigger = {
+			RUS_denikin_in_power = no
+			NOT = { has_idea = RUS_Anton_I_Denikin_hog_ade }
+		}
+		set_country_flag = Anton_I_Denikin_dead
+		random_unit_leader = {
+			limit = {
+				has_id = 401
+			}
+			retire = yes
+		}
+	}
+	option = {
+		name = rusd.96.b
+		trigger = {
+			OR = {
+				RUS_denikin_in_power = yes
+				has_idea = RUS_Anton_I_Denikin_hog_ade
+			}
+		}
+		set_country_flag = Anton_I_Denikin_dead
+		random_unit_leader = {
+			limit = {
+				has_id = 401
+			}
+			retire = yes
+		}
+		if = {
+			limit = {
+				has_idea = RUS_Anton_I_Denikin_hog_ade
+			}
+			swap_ideas = {
+				remove_idea = RUS_Anton_I_Denikin_hog_ade
+				add_idea = RUS_Abram_Dragomirov_hog_ade
+			}
+		}
+		if = {
+			limit = {
+				RUS_denikin_in_power = yes
+			}
+			effect_tooltip = { kill_country_leader = yes }
+			create_country_leader = {
+				name = "Ivan Romanovskiy"
+				desc = "POLITICS_IVAN_ROMANOVSKIY_DESC"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Ivan_Romanovsky.png"
+				expire = "1965.1.1"
+				ideology = authdem_junta_subtype
+			}
+		}		
+	}
+}	
 
 country_event = {
 	id = rusd.97
@@ -27497,6 +27723,18 @@ country_event = { #1st Women's Division of Death
 		add_political_power = -40
 		custom_effect_tooltip = RUS_WOMAN_DIVISION_tt
 		hidden_effect = { load_oob = RUS_WOMAN_DIVISION }
+		create_corps_commander = {
+			name = "Maria Bochkareva"
+			portrait_path = "gfx/leaders/RUS/Portrait_RUS_Maria_Bochkareva.png"
+			traits = {
+				
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
 		if = {
 			limit = {
 				OR = {
@@ -29923,6 +30161,10 @@ country_event = {#Governmental structure
 			}
 		}
 		increase_plsr_congress = yes
+		country_event = {
+			id = russoc.9
+			days = 5
+		}
 	}
 }
 country_event = {#Trade Unions
@@ -46099,7 +46341,7 @@ country_event = { #Transfer of the territory
 					state = 146 #Viipuri
 				}
 			}
-			FROM = { transfer_state = PREV }
+			ROOT = { transfer_state = PREV }
 		}
 	}
 }
