@@ -189,6 +189,19 @@ ideas = {
 				industrial_capacity_dockyard = -0.30
 			}
 		}
+		HKG_bankruptcy_aftermath_idea_cohen = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankruptcy_aftermath_idea_cohen"
+			}
+			picture = RUS_backward_industry_idea
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+			}
+		}
 		HKG_makeshift_administration_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_makeshift_administration_idea"
@@ -235,7 +248,7 @@ ideas = {
 		}
 		HKG_makeshift_administration_idea_triad1 = {
 			on_add = { 
-				log = "[GetDateText]: [Root.GetName]: add idea HKG_makeshift_administration_idea_triad"
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_makeshift_administration_idea_triad1"
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -244,9 +257,37 @@ ideas = {
 				political_power_factor = -0.20
 			}
 		}
+		HKG_makeshift_administration_idea_triad2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_makeshift_administration_idea_triad2"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_factor = -0.15
+			}
+		}
+		HKG_makeshift_administration_idea_cohen = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_makeshift_administration_idea_cohen"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				war_support_factor = -0.25
+				political_power_factor = -0.10
+				conscription_factor = -0.25
+			}
+		}
 		HKG_triad_army_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_idea"
+			}
+			available = {
+				OR = {
+					has_country_flag = HKG_14k_in_charge
+					has_country_flag = HKG_sun_yee_on_in_charge
+				}
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -263,6 +304,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_standing_idea1"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				conscription_factor = -0.35
@@ -276,6 +320,9 @@ ideas = {
 		HKG_triad_army_standing_idea2 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_standing_idea2"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -292,6 +339,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_standing_idea3"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				conscription_factor = -0.25
@@ -306,6 +356,9 @@ ideas = {
 		HKG_triad_army_standing_idea4 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_standing_idea4"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -322,6 +375,12 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_smuggler_idea1"
 			}
+			available = {
+				OR = {
+					has_country_flag = HKG_14k_in_charge
+					has_country_flag = HKG_sun_yee_on_in_charge
+				}
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				conscription_factor = -0.30
@@ -336,6 +395,12 @@ ideas = {
 		HKG_triad_army_smuggler_idea2 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_smuggler_idea2"
+			}
+			available = {
+				OR = {
+					has_country_flag = HKG_14k_in_charge
+					has_country_flag = HKG_sun_yee_on_in_charge
+				}
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -353,6 +418,12 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_smuggler_idea3"
 			}
+			available = {
+				OR = {
+					has_country_flag = HKG_14k_in_charge
+					has_country_flag = HKG_sun_yee_on_in_charge
+				}
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				conscription_factor = -0.15
@@ -368,6 +439,12 @@ ideas = {
 		HKG_triad_army_smuggler_idea4 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_smuggler_idea4"
+			}
+			available = {
+				OR = {
+					has_country_flag = HKG_14k_in_charge
+					has_country_flag = HKG_sun_yee_on_in_charge
+				}
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -385,6 +462,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_bandit_idea1"
 			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				conscription_factor = -0.15
@@ -399,6 +479,9 @@ ideas = {
 		HKG_triad_army_bandit_idea2 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_bandit_idea2"
+			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -416,6 +499,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_bandit_idea3"
 			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				conscription_factor = 0.1
@@ -430,6 +516,9 @@ ideas = {
 		HKG_triad_army_bandit_idea4 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_triad_army_bandit_idea3"
+			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -446,6 +535,9 @@ ideas = {
 		HKG_martial_art_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_martial_art_idea"
+			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -472,6 +564,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_loyalties_crack_idea"
 			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				army_org_factor	= -0.2
@@ -485,6 +580,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_loyalties_cracked_idea"
 			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				army_org_factor	= 0.1
@@ -496,6 +594,9 @@ ideas = {
 		HKG_loyalties_appease_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_loyalties_appease_idea"
+			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -510,6 +611,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_loyalties_appeased_idea"
 			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
+			}
 			picture = HOL_workplace_democracy
 			modifier = {
 				max_command_power = 10
@@ -520,6 +624,9 @@ ideas = {
 		HKG_cronies_payment_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_loyalties_appease_idea"
+			}
+			available = {
+				has_country_flag = HKG_sun_yee_on_in_charge
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
@@ -814,6 +921,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			picture = FIU_getting_pirated
 			modifier = {
 				out_of_supply_factor = -0.1
@@ -825,12 +935,15 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			picture = FIU_getting_pirated
 			modifier = {
-			local_intel_to_enemies = -0.15
-			new_operative_slot_bonus = 1
-			foreign_subversive_activites = -0.1
-			resistance_damage_to_garrison = -0.1
+				local_intel_to_enemies = -0.15
+				new_operative_slot_bonus = 1
+				foreign_subversive_activites = -0.1
+				resistance_damage_to_garrison = -0.1
 			}
 		}
 		HKG_order_without_law_idea = {
@@ -848,6 +961,9 @@ ideas = {
 		HKG_18_syndicates_military_3 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
 			}
 			on_remove = {
 				if = {
@@ -875,6 +991,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			on_remove = {
 				if = {
 					limit = {
@@ -900,6 +1019,9 @@ ideas = {
 		HKG_18_syndicates_military_12 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
 			}
 			on_remove = {
 				if = {
@@ -927,6 +1049,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			on_remove = {
 				if = {
 					limit = {
@@ -952,6 +1077,9 @@ ideas = {
 		HKG_18_syndicates_economy_6 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
 			}
 			on_remove = {
 				if = {
@@ -979,6 +1107,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			on_remove = {
 				if = {
 					limit = {
@@ -1004,6 +1135,9 @@ ideas = {
 		HKG_18_syndicates_politics_3 = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
 			}
 			on_remove = {
 				if = {
@@ -1031,6 +1165,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			on_remove = {
 				if = {
 					limit = {
@@ -1057,6 +1194,9 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
 			on_remove = {
 				if = {
 					limit = {
@@ -1077,6 +1217,21 @@ ideas = {
 				research_speed_factor = 0.075
 				stability_factor = 0.1
 				surrender_limit	= 0.2
+			}
+		}
+		HKG_chairman_general = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.05
+				drift_defence_factor = 0.25
+				command_power_gain = 0.2
 			}
 		}
 	}

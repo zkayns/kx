@@ -65,6 +65,8 @@ HKG_social_conservative_party:0 "HKCP(Hardliners)"
 HKG_social_conservative_party_long:0 "Hong Kong Conservative Party (Hardliners)"
 HKG_authoritarian_democrat_party:0 "HKPF"
 HKG_authoritarian_democrat_party_long:0 "Hong Kong Police Force"
+HKG_authoritarian_democrat_party1:0 "HKJC"
+HKG_authoritarian_democrat_party1_long:0 "Hong Kong Jewish Club"
 HKG_paternal_autocrat_party:0 "HKPF"
 HKG_paternal_autocrat_party_long:0 "Hong Kong Police Force"
 HKG_paternal_autocrat_party1:0 "Sun Yee On"
@@ -81,6 +83,7 @@ POLITICS_MACINTOSH_DESC:0 ""
 POLITICS_HEUNG_DESC:0 ""
 POLITICS_KOT_SIUWONG_DESC:0 ""
 POLITICS_VICTOR_SASSOON_DESC:0 ""
+POLITICS_COHEN_DESC:0 ""
 
 #### Ideas
 
@@ -100,11 +103,14 @@ HKG_major_port_idea:0 "Important International Trade Harbour"
 HKG_major_port_idea_triad:0 "International Trade Curtailed"
 HKG_bankruptcy_aftermath_idea:0 "Bankruptcy Aftermath"
 HKG_bankruptcy_aftermath_idea_triad:0 "Economy in Shambles"
+HKG_bankruptcy_aftermath_idea_cohen:0 "Economical Revitalization"
 HKG_makeshift_administration_idea:0 "Deficient Administration"
 HKG_makeshift_administration_idea1:0 "Establishing an Efficient Administration"
 HKG_makeshift_administration_idea2:0 "Establishing an Efficient Administration"
 HKG_makeshift_administration_idea_triad:0 "Criminal Governance"
 HKG_makeshift_administration_idea_triad1:0 "Run-in with the Law"
+HKG_makeshift_administration_idea_triad2:0 "Run-in with the Law"
+HKG_makeshift_administration_idea_cohen:0 "Ma Kun's Leadership"
 HKG_triad_army_idea:0 "From Criminals to a Fighting Force"
 HKG_triad_army_standing_idea1:0 "Fielding a Professional Army"
 HKG_triad_army_standing_idea2:0 "Fielding a Professional Army"
@@ -158,7 +164,10 @@ HKG_18_syndicates_economy_12:0 "18 Syndicates Council - Focus on Profiteering"
 HKG_18_syndicates_politics_3:0 "18 Syndicates Council - Focus on Internal Issues"
 HKG_18_syndicates_politics_6:0 "18 Syndicates Council - Focus on Internal Issues"
 HKG_18_syndicates_politics_12:0 "18 Syndicates Council - Focus on Internal Issues"
+HKG_chairman_general:0 "Chairman-General's Reign"
 hog_staunch_anti_socialist:0 "Staunch Anti-Socialist"
+two_gun_cohen:0 "'Two-Gun' Cohen"
+
 
 
 #### Decisions
@@ -282,10 +291,13 @@ HKG_regain_man_guns:0 "We will regain the resources used for this operation."
 HKG_secure_tsing_yi_tt:0 "§GOur agents have informed us that the strategically important island of Tsing Yi is severely underprotected by the rival Triad forces. Capturing it would grant us a solid stronghold for a future assault on the Victoria Harbour.§!"
 HKG_gain_intel_tt:0 "§HSetting up a network of agents will allow us to §!§Gexpand our operations§!§H!§!"
 HKG_14k_intel_flag:0 "A network of agents has been successfully established."
+HKG_14k_intel_remnants_tt:0 "§GThis action is available due to our network of agents in the city.§!"
 HKG_14k_success_tt:0 "The §V14K§! has managed to depose the dominating Triads of Hong Kong!"
 HKG_syo_success_tt:0 "The §XSun Yee On§! has managed to assert its dominance over Hong Kong during the Triad War!"
 HKG_jewish_resistance:0 "The Jews are resisting our persecution."
 HKG_14k_intel_tt:0 "The intelligence agents will join a newly formed §Ragency§!."
+HKG_sun_yee_on_remnants_tt:0 "§RWe will attempt to do away with the §!§XSun Yee On§!§R, once and for all.§!"
+HKG_jews_angry_tt:0 "§RChoosing this option might have drastic consequences if Morris Cohen hasn't been arrested!§!"
 
 #################
 #### Focuses ####
@@ -421,6 +433,10 @@ HKG_kill_canton_desc:0 "d"
 
 
 #### Events
+
+hongkong.0.t:0 "Our Grim Reality"
+hongkong.0.d:0 "describing the major players"
+hongkong.0.a:0 "a"
 
 hongkong.1.t:0 "dont"
 hongkong.1.d:0 "add"
@@ -871,10 +887,10 @@ hktriads.60.d:0 "describing options a and b"
 hktriads.60.a:0 "large assault"
 hktriads.60.b:0 "more infiltration and a coordinated strike"
 
-hktriads.60.t:0 "negotiations unsuccessful"
-hktriads.60.d:0 "they didn't feel like negotiating and they sad bad things about my mom"
-hktriads.60.a:0 "proceed with the attack plan"
-hktriads.60.b:0 "do nothing"
+hktriads.61.t:0 "negotiations unsuccessful"
+hktriads.61.d:0 "they didn't feel like negotiating and they sad bad things about my mom"
+hktriads.61.a:0 "proceed with the attack plan"
+hktriads.61.b:0 "do nothing"
 
 hktriads.62.t:0 "large assault chosen"
 hktriads.62.d:0 "our agents march to regions predominantly controlled by wo on lok/sun yee on and a large fight breaks out"
@@ -891,3 +907,72 @@ hktriads.64.a:0 "splendid"
 hktriads.65.t:0 "success in the covert assault"
 hktriads.65.d:0 "the assault is a success, the wo on lok is no longer a big threat"
 hktriads.65.a:0 "splendid"
+
+hktriads.66.t:0 "Creating the Post of Chairman-General"
+hktriads.66.d:0 "kot siu-wong names himself chairman-general as head of the triad and leader of the new kmt movement, this gets expanded upon in his post-canton path"
+hktriads.66.a:0 "Here's one to General Kot!"
+
+hktriads.67.t:0 "Taking the Fight to Sun Yee On"
+hktriads.67.d.woonlok:0 "yes wo on lok"
+hktriads.67.d.nowoonlok:0 "yes wo on lok"
+hktriads.67.a:0 "We must focus all of our resources on the Sun Yee On!" ###hktriads.68###
+hktriads.67.b:0 "Let's find a way to neutralize Wo On Lok as a threat first" ###hktriads.69###
+hktriads.67.c:0 "Coordinate strikes on the known Sun Yee On hideouts" ###hktriads.70###
+
+hktriads.68.t:0 "Crossing Swords with Sun Yee On"
+hktriads.68.d:0 "making an all out attack in hopes of being able to eliminate them"
+hktriads.68.a:0 "maybe if we just try hard enough" ###hktriads.6800###
+
+hktriads.6800.t:0 "Streets of Hong Kong Erupt in Violence"
+hktriads.6800.d:0 "intense fighting all over the city, no clear victor"
+hktriads.6800.a:0 "Don't let them rest!" ###hktriads.6801###
+
+hktriads.6801.t:0 "Pearl of the Orient Tainted in Red"
+hktriads.6801.d:0 "more intense fighting all over the city, no clear victor"
+hktriads.6801.a:0 "we can make it...maybe?" ###hktriads.6802###
+
+hktriads.6802.t:0 "Two Dogs Strive for a Bone..."
+hktriads.6802.d:0 "the jews alongside with two gun cohens ole kmt friends make their move"
+hktriads.6802.a:0 "????" ###hktriads.6803###
+
+hktriads.6803.t:0 "...A Third Runs Away With It."
+hktriads.6803.d:0 "the jews alongside with two gun cohens ole kmt friends take over"
+hktriads.6803.a:0 "????" ###two gun cohen takes over###
+
+hktriads.69.t:0 "Dealing with Wo On Lok"
+hktriads.69.d:0 "in order not to fight their alliance at the same time we should focus on the weaker triad first"
+hktriads.69.a:0 "available if didn't establish agents, longer way" ###hktriads.6900###
+hktriads.69.b:0 "available if established agents during the triad war, basically shorter way" ###hktriads.6901###
+
+hktriads.6900.t:0 "Storming Kowloon District"
+hktriads.6900.d:0 "fighting wo on lok"
+hktriads.6900.a:0 "bloody fights in kowloon" ###hktriads.6902###
+
+hktriads.6901.t:0 "Ending the Water Room Gang"
+hktriads.6901.d:0 "our agents have infiltrated wo on lok and proceed to fucking kill its leadership"
+hktriads.6901.a:0 ":yes:" ###hktriads.6907###
+
+hktriads.6902.t:0 "Wo On Lok Retaliates!"
+hktriads.6902.d:0 "wo on lok retaliates"
+hktriads.6902.a:0 "hold them back" ###hktriads.6903###
+
+hktriads.6903.t:0 "Wo On Lok Assault Fended Off!"
+hktriads.6903.d:0 "we've won yay"
+hktriads.6903.a:0 "make a final assault" ###hktriads.6904###
+
+hktriads.6904.t:0 "The Water Room Gang is no more"
+hktriads.6904.d:0 "now let's fight sun yee on"
+hktriads.6904.a:0 "onwards to victory lmao" ###hktriads.6905###
+
+hktriads.6905.t:0 "Crossing Swords with Sun Yee On"
+hktriads.6905.d:0 "take the fight to em but how doe (just flavour leads to the same event) (also can be fired after taking both the long and the short ways)"
+hktriads.6905.a:0 "slaughter everyone be merciless" ###hktriads.6906###
+hktriads.6905.b:0 "we are not that evil" ###hktriads.6906###
+
+hktriads.6906.t:0 "Sun Yee On On It's Knees!"
+hktriads.6906.d:0 "they be defeated, end of syo, end of event chain"
+hktriads.6906.a:0 "we are the undisputed leaders"
+
+hktriads.6907.t:0 "Wo On Lok is no more"
+hktriads.6907.d:0 "we've won yay"
+hktriads.6907.a:0 "now lets fight sun yee on" ###hktriads.6905###

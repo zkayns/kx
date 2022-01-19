@@ -1070,11 +1070,18 @@ leader_traits = {
 		army_morale_factor = 0.05
 		experience_gain_army = 0.01
 	}
+	### HKG
 	benevolent_commissioner = {
 		random = no	
 		army_core_attack_factor = 0.05
 		army_core_defence_factor = 0.05
 		army_org_factor = 0.10
 		stability_factor = 0.05
+	}
+	two_gun_cohen = {
+		random = no	
+		experience_gain_army = 0.05
+		command_power_gain = 0.10
+		army_morale_factor = 0.05
 	}
 }

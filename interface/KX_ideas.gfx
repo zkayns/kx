@@ -2136,6 +2136,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ideas/HKG_major_port_idea_triad.png"
 	}
 	spriteType = {
+		name = "GFX_idea_HKG_major_port_idea_opium"
+		texturefile = "gfx/interface/ideas/ideas/HKG_major_port_idea_opium.png"
+	}
+	spriteType = {
 		name = "GFX_idea_generic_catholic_corporatism_spirit"
 		texturefile = "gfx/interface/ideas/ideas/generic_catholic_corporatism_spirit.png"
 	}

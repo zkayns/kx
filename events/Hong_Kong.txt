@@ -1,6 +1,19 @@
 add_namespace = hongkong
 add_namespace = hktriads
 
+country_event = { #Introduction event
+	id = hongkong.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.0" }
+	title = hongkong.0.t
+	desc = hongkong.0.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hongkong.0.a
+	}
+}
+
 country_event = { #AI loading stuff
 	id = hongkong.1
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.1" }
@@ -628,6 +641,10 @@ country_event = { #Triads takeover!
 			remove_idea = HKG_bankruptcy_aftermath_idea
 			add_idea = HKG_bankruptcy_aftermath_idea_triad
 		}
+		swap_ideas = {
+			remove_idea = HKG_major_port_idea
+			add_idea = HKG_major_port_idea_triad
+		}
 		if = {
 			limit = {
 				has_idea = HKG_makeshift_administration_idea
@@ -682,7 +699,7 @@ country_event = { #Triads takeover!
 			ideology = paternal_autocrat
 			long_name = HKG_paternal_autocrat_party1_long
 			name = HKG_paternal_autocrat_party1
-			}
+		}
 		create_country_leader = {
 			name = "Heung Chin"
 			desc = "POLITICS_HEUNG_DESC"
@@ -745,8 +762,8 @@ country_event = { #Triads takeover!
 			set_cosmetic_tag = HKG_SUN_YEE_ON
 			add_popularity = { ideology = national_populist popularity = -0.40 }
 			if = {
-				limit = { has_template = "Hong Kong Police Squadron" }
-				delete_unit_template_and_units = { division_template = "Hong Kong Police Squadron" }
+				limit = { has_template = "Hong Kong Police Force" }
+				delete_unit_template_and_units = { division_template = "Hong Kong Police Force" }
 			}
 		}
 	}
@@ -2250,6 +2267,7 @@ country_event = { # end of triad war
 		add_political_power = 75
 		hidden_effect = {
 			complete_national_focus = HKG_sun_yee_on
+			set_country_flag = HKG_sun_yee_on_in_charge
 			clr_country_flag = HKG_triad_conflict_start
 			clr_country_flag = HKG_14k_chosen_flag
 			clr_country_flag = HKG_sun_yee_on_chosen_flag
@@ -2283,6 +2301,7 @@ country_event = { # end of triad war
 		remove_all_ministers = yes
 		hidden_effect = {
 			complete_national_focus = HKG_14k
+			set_country_flag = HKG_14k_in_charge
 			clr_country_flag = HKG_triad_conflict_start
 			clr_country_flag = HKG_14k_chosen_flag
 			clr_country_flag = HKG_sun_yee_on_chosen_flag
@@ -2803,5 +2822,455 @@ country_event = { # destroy wo on lok - kill covert - done
 		add_manpower = -450
 		add_stability = 0.025
 		remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
+	}
+}
+
+country_event = { # chairman-general
+	id = hktriads.66
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.66" }
+	title = hktriads.66.t
+	desc = hktriads.66.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.66.a
+		add_stability = 0.05
+		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		add_ideas = HKG_chairman_general
+	}
+}
+
+country_event = { # sun yee on remnants pt. 1
+	id = hktriads.67
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.66" }
+	title = hktriads.67.t
+	desc = {
+		text = hktriads.67.d.woonlok
+		trigger = {
+			has_idea = HKG_wo_on_lok_sun_yee_on_ally
+		}
+	}
+	desc = {
+		text = hktriads.67.d.nowoonlok
+		trigger = {
+			NOT = { has_idea = HKG_wo_on_lok_sun_yee_on_ally }
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.67.a
+		trigger = {
+			AND = {
+				has_idea = HKG_jewish_suppression_idea1
+				has_idea = HKG_wo_on_lok_sun_yee_on_ally
+			}
+		}
+		custom_effect_tooltip = HKG_jews_angry_tt
+		add_war_support = 0.02
+		hidden_effect = {
+			country_event = {
+				id = hktriads.68
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = hktriads.67.b
+		trigger = {
+			has_idea = HKG_wo_on_lok_sun_yee_on_ally
+		}
+		add_war_support = 0.01
+		hidden_effect = {
+			country_event = {
+				id = hktriads.69
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = hktriads.67.c
+		trigger = {
+			NOT = { has_idea = HKG_wo_on_lok_sun_yee_on_ally }
+			NOT = { has_idea = HKG_jewish_suppression_idea1 }
+		}
+		add_war_support = 0.05
+		hidden_effect = {
+			country_event = {
+				id = hktriads.70
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - two gun cohen coup pt. 1
+	id = hktriads.68
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.68" }
+	title = hktriads.68.t
+	desc = hktriads.68.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.68.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6800
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - two gun cohen coup pt. 2
+	id = hktriads.6800
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6800" }
+	title = hktriads.6800.t
+	desc = hktriads.6800.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6800.a
+		add_manpower = -250
+		add_stability = -0.03
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6801
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - two gun cohen coup pt. 3
+	id = hktriads.6801
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6801" }
+	title = hktriads.6801.t
+	desc = hktriads.6801.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6801.a
+		add_manpower = -350
+		add_stability = -0.05
+		326 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.8
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.3
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6802
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - two gun cohen coup pt. 4
+	id = hktriads.6802
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6802" }
+	title = hktriads.6802.t
+	desc = hktriads.6802.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6802.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6803
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - two gun cohen coup pt. 5
+	id = hktriads.6803
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6803" }
+	title = hktriads.6803.t
+	desc = hktriads.6803.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6803.a
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = HKG_authoritarian_democrat_party1_long
+			name = HKG_authoritarian_democrat_party1
+		}
+		create_country_leader = {
+			name = "Morris A. Cohen"
+			desc = "POLITICS_COHEN_DESC"
+			picture = "gfx/leaders/HKG/Portrait_HKG_Two-Gun_Cohen.png"
+			expire = "1965.1.1"
+			ideology = authoritarian_liberalism_subtype
+			traits = { two_gun_cohen }
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.30 }
+		if = {
+			limit = {
+				has_idea = HKG_makeshift_administration_idea_triad1
+			}
+			swap_ideas = {
+				remove_idea = HKG_makeshift_administration_idea_triad1
+				add_idea = HKG_makeshift_administration_idea_cohen
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = HKG_makeshift_administration_idea_triad2
+			}
+			swap_ideas = {
+				remove_idea = HKG_makeshift_administration_idea_triad2
+				add_idea = HKG_makeshift_administration_idea_cohen
+			}
+		}
+		if = {
+			limit = {
+				has_idea = HKG_bankruptcy_aftermath_idea_triad
+			}
+			swap_ideas = {
+				remove_idea = HKG_bankruptcy_aftermath_idea_triad
+				add_idea = HKG_bankruptcy_aftermath_idea_cohen
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = HKG_bankruptcy_aftermath_idea_triad1
+			}
+			swap_ideas = {
+				remove_idea = HKG_bankruptcy_aftermath_idea_triad1
+				add_idea = HKG_bankruptcy_aftermath_idea_cohen
+			}
+		}
+		hidden_effect = {
+			remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
+			clr_country_flag = HKG_triads_in_charge
+			clr_country_flag = HKG_14k_in_charge
+			clr_country_flag = HKG_18_syndicates_active
+			add_popularity = { ideology = paternal_autocrat popularity = -0.40 }
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok
+	id = hktriads.69
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.69" }
+	title = hktriads.69.t
+	desc = hktriads.69.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.69.a
+		trigger = {
+			NOT = { has_idea = HKG_14k_intel_idea }
+			NOT = {	has_idea = HKG_14k_intel_idea1 }
+		}
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6900
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = hktriads.69.b
+		trigger = {
+			OR = {
+				has_idea = HKG_14k_intel_idea
+				has_idea = HKG_14k_intel_idea1
+			}
+		}
+		custom_effect_tooltip = HKG_14k_intel_remnants_tt
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6901
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok - long pt.1
+	id = hktriads.6900
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6900" }
+	title = hktriads.6900.t
+	desc = hktriads.6900.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6900.a
+		add_manpower = -70
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6902
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok - short pt.1
+	id = hktriads.6901
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6901" }
+	title = hktriads.6901.t
+	desc = hktriads.6901.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6901.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6907
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok - long pt.2
+	id = hktriads.6902
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6902" }
+	title = hktriads.6902.t
+	desc = hktriads.6902.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6902.a
+		326 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.75
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6903
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok - long pt.3
+	id = hktriads.6903
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6903" }
+	title = hktriads.6903.t
+	desc = hktriads.6903.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6903.a
+		add_manpower = -125
+		add_stability = 0.025
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6904
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok - long pt.4
+	id = hktriads.6904
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6904" }
+	title = hktriads.6904.t
+	desc = hktriads.6904.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6904.a
+		remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6905
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok - long pt.5
+	id = hktriads.6905
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6905" }
+	title = hktriads.6905.t
+	desc = hktriads.6905.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6905.a
+		remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
+		add_stability = -0.02
+		add_political_power = 20
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6906
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = hktriads.6905.b
+		remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
+		add_stability = 0.02
+		add_political_power = -20
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6906
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok - long pt.6 - final
+	id = hktriads.6906
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6906" }
+	title = hktriads.6906.t
+	desc = hktriads.6906.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6906.a
+		add_stability = 0.1
+		add_political_power = 100
+		add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
+		hidden_effect = {
+			complete_national_focus = HKG_sun_yee_on_remnants
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - targeting wo on lok - short pt.2
+	id = hktriads.6907
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.6907" }
+	title = hktriads.6907.t
+	desc = hktriads.6907.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.6907.a
+		remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
+		add_manpower = -20
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = {
+				id = hktriads.6905
+				days = 6
+			}
+		}
 	}
 }
