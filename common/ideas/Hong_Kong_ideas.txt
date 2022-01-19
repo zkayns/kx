@@ -98,11 +98,23 @@ ideas = {
 		}
 		HKG_triads_in_power_idea3 = {
 			on_add = { 
-				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads_in_power_idea2"
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_triads_in_power_idea3"
 			}
 			picture = LEC_triads
 			modifier = {
 				army_org_factor = -0.05
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+		}
+		HKG_cohen_in_power_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_cohen_in_power_idea"
+			}
+			picture = HOL_workplace_democracy
+			modifier = {
+				army_org_factor = -0.10
+				army_morale_factor = -0.10
+				conscription_factor = -0.15
 				custom_modifier_tooltip = cannot_train_units_tt
 			}
 		}
@@ -922,7 +934,10 @@ ideas = {
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
 			available = {
-				has_country_flag = HKG_14k_in_charge
+				OR = {
+					has_country_flag = HKG_14k_in_charge
+					has_country_flag = HKG_14k_chosen_flag
+				}
 			}
 			picture = FIU_getting_pirated
 			modifier = {
@@ -936,7 +951,10 @@ ideas = {
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
 			available = {
-				has_country_flag = HKG_14k_in_charge
+				OR = {
+					has_country_flag = HKG_14k_in_charge
+					has_country_flag = HKG_14k_chosen_flag
+				}
 			}
 			picture = FIU_getting_pirated
 			modifier = {
@@ -950,6 +968,10 @@ ideas = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
 			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
+			
 			picture = FIU_getting_pirated
 			modifier = {
 				political_power_gain = -0.1

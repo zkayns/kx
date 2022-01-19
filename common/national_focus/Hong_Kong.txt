@@ -591,7 +591,7 @@ focus_tree = {
 				set_country_flag = HKG_triad_conflict_start
 				country_event = {
 					id = hktriads.45
-					days = 5
+					days = 3
 				}
 			}
 		}
@@ -3851,9 +3851,286 @@ focus_tree = {
 			add_stability = 0.1
 		}
 	}
-}
+	focus = { 
+		id = HKG_jewish_king_of_china
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_meet_the_new_boss
+		x = 30
+		y = 0
 
-### unlock_decision_category_tooltip = HKG_no_commies_decisions
-###			hidden_effect = {
-###				HKG_no_commies_setup = yes
-###			}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_reestablish_19_army
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_jewish_king_of_china
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = -2
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_secure_perimeter
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_jewish_king_of_china
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = 0
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_begin_reconstruction
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_jewish_king_of_china
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = 2
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_military_pensions
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_reestablish_19_army
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = -3
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_merchant_agreements
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_begin_reconstruction
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = 3
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_aid_triad_victims
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_reestablish_19_army
+		}
+		prerequisite = { 
+			focus = HKG_secure_perimeter
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = -1
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_kadoorie_support
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_begin_reconstruction
+		}
+		prerequisite = { 
+			focus = HKG_secure_perimeter
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = 1
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_trilateral_committeee
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_aid_triad_victims
+		}
+		prerequisite = { 
+			focus = HKG_kadoorie_support
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = -2
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_upper_echelon
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_aid_triad_victims
+		}
+		prerequisite = { 
+			focus = HKG_kadoorie_support
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = 0
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_honour_sun_yat_sen
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_aid_triad_victims
+		}
+		prerequisite = { 
+			focus = HKG_kadoorie_support
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = 2
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_cohen_schwartzberg_constitution
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_trilateral_committeee
+		}
+		prerequisite = { 
+			focus = HKG_upper_echelon
+		}
+		prerequisite = { 
+			focus = HKG_honour_sun_yat_sen
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = 0
+		y = 5
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+}

@@ -674,6 +674,7 @@ country_event = { #Triads takeover!
 		}
 		add_ideas = HKG_triads_in_power_idea
 		hidden_effect = {
+			add_political_power = 75
 			set_country_flag = HKG_police_deposed
 			set_country_flag = HKG_triads_in_charge
 			set_country_flag = HKG_sun_yee_on_in_charge
@@ -755,6 +756,7 @@ country_event = { #Triads takeover!
 			add_idea = HKG_major_port_idea_triad
 		}
 		hidden_effect = {
+			add_political_power = 75
 			set_country_flag = HKG_police_deposed
 			set_country_flag = HKG_triads_in_charge
 			set_country_flag = HKG_sun_yee_on_in_charge
@@ -2223,8 +2225,11 @@ country_event = { # introduction event to triad war
 
 	option = {
 		name = hktriads.45.a
-		add_political_power = -50
+		add_political_power = -25
 		add_stability = -0.05
+		hidden_effect = {
+			set_country_flag = HKG_triad_conflict_start
+		}
 	}
 }
 
@@ -3054,8 +3059,26 @@ country_event = { # sun yee on remnants - two gun cohen coup pt. 5
 				add_idea = HKG_bankruptcy_aftermath_idea_cohen
 			}
 		}
+		if = {
+			limit = {
+				has_idea = HKG_triads_in_power_idea3
+			}
+			swap_ideas = {
+				remove_idea = HKG_triads_in_power_idea3
+				add_idea = HKG_cohen_in_power_idea
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_idea = HKG_triads_in_power_idea3 }
+			}
+			add_ideas = HKG_cohen_in_power_idea
+			hidden_effect = { country_lock_all_division_template = yes }
+		}
 		hidden_effect = {
 			remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
+			remove_ideas = HKG_jewish_suppression_idea1
+			set_country_flag = HKG_cohen_in_charge
 			clr_country_flag = HKG_triads_in_charge
 			clr_country_flag = HKG_14k_in_charge
 			clr_country_flag = HKG_18_syndicates_active
