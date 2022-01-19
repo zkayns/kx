@@ -3853,7 +3853,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_jewish_king_of_china
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Cohen
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -3872,7 +3872,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_reestablish_19_army
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_19_Army
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -3894,7 +3894,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_secure_perimeter
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Perimeter
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -3916,7 +3916,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_begin_reconstruction
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Fragrant_Port
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -3938,7 +3938,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_military_pensions
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Happy_Soldier
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -3960,7 +3960,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_merchant_agreements
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Renegotiate
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -3982,7 +3982,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_aid_triad_victims
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_China_Lady
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4007,7 +4007,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_kadoorie_support
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Kadoories
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4032,7 +4032,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_trilateral_committeee
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Tri_Com
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4057,7 +4057,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_upper_echelon
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Upper_Echelon
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4082,7 +4082,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_honour_sun_yat_sen
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Praise_Sun
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4107,7 +4107,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_cohen_schwartzberg_constitution
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_focus_HKG_Cohen_Const
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat

@@ -60627,6 +60627,378 @@ SpriteType = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
+		name = "GFX_focus_HKG_19_Army_shine"
+		texturefile = "gfx/interface/goals/HKG_19_Army.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_19_Army.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_19_Army.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_China_Lady_shine"
+		texturefile = "gfx/interface/goals/HKG_China_Lady.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_China_Lady.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_China_Lady.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Cohen_shine"
+		texturefile = "gfx/interface/goals/HKG_Cohen.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Cohen.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Cohen.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Cohen_Const_shine"
+		texturefile = "gfx/interface/goals/HKG_Cohen_Const.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Cohen_Const.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Cohen_Const.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Fragrant_Port_shine"
+		texturefile = "gfx/interface/goals/HKG_Fragrant_Port.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Fragrant_Port.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Fragrant_Port.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Happy_Soldier_shine"
+		texturefile = "gfx/interface/goals/HKG_Happy_Soldier.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Happy_Soldier.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Happy_Soldier.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Kadoories_shine"
+		texturefile = "gfx/interface/goals/HKG_Kadoories.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Kadoories.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Kadoories.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Perimeter_shine"
+		texturefile = "gfx/interface/goals/HKG_Perimeter.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Perimeter.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Perimeter.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Praise_Sun_shine"
+		texturefile = "gfx/interface/goals/HKG_Praise_Sun.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Praise_Sun.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Praise_Sun.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Renegotiate_shine"
+		texturefile = "gfx/interface/goals/HKG_Renegotiate.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Renegotiate.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Renegotiate.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Tri_Com_shine"
+		texturefile = "gfx/interface/goals/HKG_Tri_Com.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Tri_Com.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Tri_Com.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Upper_Echelon_shine"
+		texturefile = "gfx/interface/goals/HKG_Upper_Echelon.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Upper_Echelon.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/HKG_Upper_Echelon.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "GFX_goal_GEA_New_Measures_for_Old_Problems_shine"
 		texturefile = "gfx/interface/goals/goal_GEA_New_Measures_for_Old_Problems.png"
 		effectFile = "gfx/FX/buttonstate.lua"

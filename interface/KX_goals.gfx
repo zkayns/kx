@@ -7808,6 +7808,54 @@ SpriteTypes = {
 		name = "GFX_focus_HKG_border_control"
 		texturefile = "gfx/interface/goals/GFX_focus_HKG_border_control.png"
 	}
+    SpriteType = {
+		name = "GFX_focus_HKG_19_Army"
+		texturefile = "gfx/interface/goals/HKG_19_Army.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_China_Lady"
+		texturefile = "gfx/interface/goals/HKG_China_Lady.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Cohen"
+		texturefile = "gfx/interface/goals/HKG_Cohen.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Cohen_Const"
+		texturefile = "gfx/interface/goals/HKG_Cohen_Const.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Fragrant_Port"
+		texturefile = "gfx/interface/goals/HKG_Fragrant_Port.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Happy_Soldier"
+		texturefile = "gfx/interface/goals/HKG_Happy_Soldier.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Kadoories"
+		texturefile = "gfx/interface/goals/HKG_Kadoories.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Perimeter"
+		texturefile = "gfx/interface/goals/HKG_Perimeter.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Praise_Sun"
+		texturefile = "gfx/interface/goals/HKG_Praise_Sun.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Renegotiate"
+		texturefile = "gfx/interface/goals/HKG_Renegotiate.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Tri_Com"
+		texturefile = "gfx/interface/goals/HKG_Tri_Com.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Upper_Echelon"
+		texturefile = "gfx/interface/goals/HKG_Upper_Echelon.png"
+	}
 	### NEE LOVECRAFT SUCCESSORS ###
 	SpriteType = {
 		name = "GFX_goal_NEE_cosmic_horror"
