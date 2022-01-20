@@ -3076,6 +3076,7 @@ country_event = { # sun yee on remnants - two gun cohen coup pt. 5
 			hidden_effect = { country_lock_all_division_template = yes }
 		}
 		hidden_effect = {
+			add_ideas = HKG_Two-Gun_Cohen_hog_ade
 			remove_ideas = HKG_wo_on_lok_sun_yee_on_ally
 			remove_ideas = HKG_jewish_suppression_idea1
 			set_country_flag = HKG_cohen_in_charge

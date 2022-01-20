@@ -358,6 +358,12 @@ leader_traits = {
 
 		random = no
 	}
+	hog_jewish_compromiser = { #Cohen
+		political_power_gain = 0.15
+		research_speed_factor = 0.01
+
+		random = no
+	}
 
 	###########################################
 	### Persons of Influence General Traits ###

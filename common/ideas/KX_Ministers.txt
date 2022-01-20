@@ -2270,6 +2270,27 @@ ideas = {
 				hog_staunch_anti_socialist
 			}
 		}
+		HKG_Two-Gun_Cohen_hog_ade = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			visible = {
+				NOT = { has_country_flag = HKG_Two-Gun_Cohen_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Two-Gun_Cohen_hog_ade"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_jewish_compromiser
+			}
+		}
 	}
 
 	person_of_influence = {
@@ -7123,6 +7144,132 @@ ideas = {
 				foreign_minister
 				national_populist
 				for_the_cloak_n_dagger_schemer
+			}
+		}
+		HKG_T_V_Soong_chtc_sli = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = HKG_T_V_Soong_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_T_V_Soong_chtc_sli"
+			}
+			traits = {
+				trilateral_chinese
+				social_liberal
+				sec_compassionate_gentleman
+			}
+		}
+		HKG_Sun_Fo_chtc_sli = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = HKG_Sun_Fo_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Sun_Fo_chtc_sli"
+			}
+			traits = {
+				trilateral_chinese
+				social_liberal
+				sec_man_of_the_people
+			}
+		}
+		HKG_Elly_Kadoorie_jetc_mli = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = HKG_Elly_Kadoorie_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Elly_Kadoorie_jetc_mli"
+			}
+			traits = {
+				trilateral_jewish
+				market_liberal
+				eco_construction_magnate
+			}
+		}
+		HKG_Morris_Schwartzberg_jetc_ade = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = HKG_Morris_Schwartzberg_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Morris_Schwartzberg_jetc_ade"
+			}
+			traits = {
+				trilateral_jewish
+				authoritarian_democrat
+				sec_silent_lawyer
+			}
+		}
+		HKG_Cecil_Clementi_brtc_sli = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = HKG_Cecil_Clementi_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Cecil_Clementi_brtc_sli"
+			}
+			traits = {
+				trilateral_british
+				social_liberal
+				for_ideological_crusader
+			}
+		}
+		HKG_Mark_Aitchison_Young_brtc_sco = {
+			allowed = { original_tag = HKG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = HKG_Cecil_Clementi_dead }
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_Mark_Aitchison_Young_brtc_sco"
+			}
+			traits = {
+				trilateral_british
+				social_conservative
+				for_apologetic_clerk
 			}
 		}
 	}

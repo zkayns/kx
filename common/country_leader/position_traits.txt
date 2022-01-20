@@ -23,6 +23,9 @@ leader_traits = {
 	minister_of_native_affairs = {}
 	national_philosopher = {}
 	faction_minister = {}
+	trilateral_british = {}
+	trilateral_jewish = {}
+	trilateral_chinese = {}
 
 #####################
 # Military Staff

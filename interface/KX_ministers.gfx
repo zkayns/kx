@@ -1319,6 +1319,10 @@ spriteTypes = {
 		name = "GFX_idea_HKG_William_Joyce_hog_npo"
 		texturefile = "gfx/interface/ministers/HKG/HKG_William_Joyce.png"
 	}
+	spriteType = {
+		name = "GFX_idea_HKG_Two-Gun_Cohen_hog_ade"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Two-Gun_Cohen.png"
+	}
 
 
 
@@ -1401,6 +1405,32 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/HKG/HKG_Maxwell_Knight.png"
 	}
 
+	### HKG unique ministers
+	
+	spriteType = {
+		name = "GFX_idea_HKG_T_V_Soong_chtc_sli"
+		texturefile = "gfx/interface/ministers/HKG/HKG_T_V_Soong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Sun_Fo_chtc_sli"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Sun_Fo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Elly_Kadoorie_jetc_mli"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Elly_Kadoorie.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Morris_Schwartzberg_jetc_ade"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Morris_Schwartzberg.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Cecil_Clementi_brtc_sli"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Cecil_Clementi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HKG_Mark_Aitchison_Young_brtc_sco"
+		texturefile = "gfx/interface/ministers/HKG/HKG_Mark_Aitchison_Young.png"
+	}
 
 	#Intel Minister
 	spriteType = {
