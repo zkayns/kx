@@ -1084,4 +1084,13 @@ leader_traits = {
 		command_power_gain = 0.10
 		army_morale_factor = 0.05
 	}
+	triad_war = {
+		random = no	
+		stability_factor = -0.10
+		industrial_concern_cost_factor = 0.75
+		weapons_manufacturer_cost_factor = 0.75
+		tank_manufacturer_cost_factor = 0.75
+		naval_manufacturer_cost_factor = 0.75
+		aircraft_manufacturer_cost_factor = 0.75
+	}
 }

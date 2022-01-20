@@ -84,6 +84,7 @@ POLITICS_HEUNG_DESC:0 ""
 POLITICS_KOT_SIUWONG_DESC:0 ""
 POLITICS_VICTOR_SASSOON_DESC:0 ""
 POLITICS_COHEN_DESC:0 ""
+POLITICS_CHAOS_DESC:0 ""
 
 #### Ideas
 
@@ -169,6 +170,7 @@ HKG_chairman_general:0 "Chairman-General's Reign"
 hog_staunch_anti_socialist:0 "Staunch Anti-Socialist"
 hog_jewish_compromiser:0 "The Jewish Compromiser"
 two_gun_cohen:0 "'Two-Gun' Cohen"
+triad_war:0 "The Triad War"
 
 
 

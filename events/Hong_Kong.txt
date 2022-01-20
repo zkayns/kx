@@ -2229,6 +2229,14 @@ country_event = { # introduction event to triad war
 		add_stability = -0.05
 		hidden_effect = {
 			set_country_flag = HKG_triad_conflict_start
+			create_country_leader = {
+				name = "Contested Leadership"
+				desc = "POLITICS_CHAOS_DESC"
+				picture = "gfx/leaders/HKG/Portrait_HKG_chaos.png"
+				expire = "1965.1.1"
+				ideology = crime_syndicate_subtype
+				traits = { triad_war }
+			}
 		}
 	}
 }
