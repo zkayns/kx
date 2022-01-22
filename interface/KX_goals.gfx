@@ -7856,6 +7856,46 @@ SpriteTypes = {
 		name = "GFX_focus_HKG_Upper_Echelon"
 		texturefile = "gfx/interface/goals/HKG_Upper_Echelon.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Dem_Central"
+		texturefile = "gfx/interface/goals/HKG_Dem_Central.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Factionalism"
+		texturefile = "gfx/interface/goals/HKG_Factionalism.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Lee_Enfield"
+		texturefile = "gfx/interface/goals/HKG_Lee_Enfield.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Murray_Protocols"
+		texturefile = "gfx/interface/goals/HKG_Murray_Protocols.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_No_Kings"
+		texturefile = "gfx/interface/goals/HKG_No_Kings.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Northern_Expedition_Veterans"
+		texturefile = "gfx/interface/goals/HKG_Northern_Expedition_Veterans.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_President_Gun"
+		texturefile = "gfx/interface/goals/HKG_President_Gun.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Reward_Cohen"
+		texturefile = "gfx/interface/goals/HKG_Reward_Cohen.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Silver_Dragons"
+		texturefile = "gfx/interface/goals/HKG_Silver_Dragons.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Victoria_Port"
+		texturefile = "gfx/interface/goals/HKG_Victoria_Port.png"
+	}
 	### NEE LOVECRAFT SUCCESSORS ###
 	SpriteType = {
 		name = "GFX_goal_NEE_cosmic_horror"
