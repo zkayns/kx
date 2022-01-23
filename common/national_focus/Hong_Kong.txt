@@ -4931,8 +4931,287 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		relative_position_id = HKG_jewish_king_of_china
-		x = 9
+		x = 11
 		y = 6
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_silence_liberals
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_guangxi_circle
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = -2
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_punish_plotters
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_guangxi_circle
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = 0
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_recompense_army
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_guangxi_circle
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = 2
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_chen_mingshu
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_silence_liberals
+		}
+		prerequisite = { 
+			focus = HKG_punish_plotters
+		}
+		mutually_exclusive = {
+			focus = HKG_wang_jingwei
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = -3
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_wang_jingwei
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_silence_liberals
+		}
+		prerequisite = { 
+			focus = HKG_punish_plotters
+		}
+		mutually_exclusive = {
+			focus = HKG_chen_mingshu
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = -1
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_huolongjing
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_recompense_army
+		}
+		prerequisite = { 
+			focus = HKG_punish_plotters
+		}
+		mutually_exclusive = {
+			focus = HKG_wuzi
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = 1
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_wuzi
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_recompense_army
+		}
+		prerequisite = { 
+			focus = HKG_punish_plotters
+		}
+		mutually_exclusive = {
+			focus = HKG_huolongjing
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = 3
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_pragmatic_alliance
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_chen_mingshu
+			focus = HKG_wang_jingwei
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = -2
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_new_generalissimo
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_chen_mingshu
+			focus = HKG_wang_jingwei
+		}
+		prerequisite = { 
+			focus = HKG_huolongjing
+			focus = HKG_wuzi
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = 0
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_support_acftu
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_huolongjing
+			focus = HKG_wuzi
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = 2
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_revolutionary_committee
+		icon = GFX_focus_HKG_China_Lady
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_cohen_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_pragmatic_alliance
+		}
+		prerequisite = { 
+			focus = HKG_new_generalissimo
+		}
+		prerequisite = { 
+			focus = HKG_support_acftu
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_guangxi_circle
+		x = 0
+		y = 4
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
