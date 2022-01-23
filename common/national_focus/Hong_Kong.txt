@@ -4442,7 +4442,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_big_tent
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Big_Tent
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4464,7 +4464,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_leadership_promises
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Leadership_Promise
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4486,7 +4486,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_party_state
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_One_Party
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4508,7 +4508,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_sun_fo
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Premier_Sun_Fo
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4533,7 +4533,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_ma_kun
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Premier_Ma_Kun
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4558,7 +4558,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_li_jishen
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Premier_Li_Jishen
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4583,7 +4583,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_curtail_army
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Curtail_Military
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4608,7 +4608,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_compromissory_cabinet
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Military_Cabinet
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4633,7 +4633,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_defend_trilateral
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Defend_Tricom
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4658,7 +4658,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_abandon_trilateral
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Downgrade_Tricom
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4683,7 +4683,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_befriend_new_guanxi
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Zongren_Clique
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4708,7 +4708,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_whampoa_connections
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Whampoa
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4733,7 +4733,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_reduce_administrative_branches
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_NEE_education_administration
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4759,7 +4759,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_five_yuans
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Five_Yuans
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4785,7 +4785,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_presidental_veto
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Strong_President
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4811,7 +4811,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_limit_president_powers
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Weak_President
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4837,7 +4837,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_cronyism
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Crooks
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4863,7 +4863,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_meritocracy
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_goal_LPD_white_officer_primacy
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
@@ -4889,7 +4889,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_wholesome_coalition
-		icon = GFX_focus_HKG_China_Lady
+		icon = GFX_focus_HKG_Salvation_China
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
