@@ -7964,6 +7964,54 @@ SpriteTypes = {
 		name = "GFX_focus_HKG_Zongren_Clique"
 		texturefile = "gfx/interface/goals/HKG_Zongren_Clique.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_HKG_ACFTU"
+		texturefile = "gfx/interface/goals/HKG_ACFTU.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Cooperate_Mingshu"
+		texturefile = "gfx/interface/goals/HKG_Cooperate_Mingshu.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Five_Goats_Canton"
+		texturefile = "gfx/interface/goals/HKG_Five_Goats_Canton.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Generalissimo_Zongren"
+		texturefile = "gfx/interface/goals/HKG_Generalissimo_Zongren.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Huolongjing"
+		texturefile = "gfx/interface/goals/HKG_Huolongjing.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Invite_Jingwei"
+		texturefile = "gfx/interface/goals/HKG_Invite_Jingwei.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Pragmatism"
+		texturefile = "gfx/interface/goals/HKG_Pragmatism.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Recompense_Soldiers"
+		texturefile = "gfx/interface/goals/HKG_Recompense_Soldiers.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Rev_Com_KMT"
+		texturefile = "gfx/interface/goals/HKG_Rev_Com_KMT.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Silence_Liberals"
+		texturefile = "gfx/interface/goals/HKG_Silence_Liberals.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Traitors"
+		texturefile = "gfx/interface/goals/HKG_Traitors.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Wuzi"
+		texturefile = "gfx/interface/goals/HKG_Wuzi.png"
+	}
 	### NEE LOVECRAFT SUCCESSORS ###
 	SpriteType = {
 		name = "GFX_goal_NEE_cosmic_horror"
