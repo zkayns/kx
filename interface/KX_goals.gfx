@@ -8012,6 +8012,10 @@ SpriteTypes = {
 		name = "GFX_focus_HKG_Wuzi"
 		texturefile = "gfx/interface/goals/HKG_Wuzi.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_HKG_Generalissimo_Jishen"
+		texturefile = "gfx/interface/goals/HKG_Generalissimo_Jishen.png"
+	}
 	### NEE LOVECRAFT SUCCESSORS ###
 	SpriteType = {
 		name = "GFX_goal_NEE_cosmic_horror"

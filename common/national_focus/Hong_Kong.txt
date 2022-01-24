@@ -5143,7 +5143,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_new_generalissimo
-		icon = GFX_focus_HKG_Generalissimo_Zongren
+		icon = GFX_focus_HKG_Generalissimo_Jishen
 		cost = 10
 		available = {
 			has_government = authoritarian_democrat
