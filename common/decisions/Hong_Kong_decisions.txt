@@ -1321,4 +1321,175 @@ HKG_triad_conflict_decisions = {
 		}
 	}
 }
+
+HKG_opium_decisions = {
+	HKG_refit_the_port = {
+		icon = generic_naval_base
+		modifier = {
+			consumer_goods_factor = 0.07
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
 		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_refit_the_port"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_refit_the_port"
+			
+			swap_ideas = {
+				remove_idea = HKG_major_port_idea_triad
+				add_idea = HKG_major_port_idea_opium
+			}
+			326 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 10062
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				set_country_flag = HKG_port_refitted
+			}
+		}
+	}
+	HKG_indochinese_opium = {
+		icon = GFX_decision_go_outside
+		modifier = {
+			political_power_gain = -0.1
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			has_country_flag = HKG_port_refitted
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 25
+		days_remove = 30
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium"
+			
+			custom_effect_tooltip = HKG_indochinese_opium_tt
+			hidden_effect = {
+				set_country_flag = HKG_indochinese_opium_flag
+			}
+		}
+	}
+	HKG_burmese_opium = {
+		icon = GFX_decision_go_outside
+		modifier = {
+			political_power_gain = -0.1
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			has_country_flag = HKG_port_refitted
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 25
+		days_remove = 30
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_burmese_opium"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_burmese_opium"
+			
+			custom_effect_tooltip = HKG_burmese_opium_tt
+			hidden_effect = {
+				set_country_flag = HKG_burmese_opium_flag
+			}
+		}
+	}
+	HKG_thai_opium = {
+		icon = GFX_decision_go_outside
+		modifier = {
+			political_power_gain = -0.1
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			has_country_flag = HKG_port_refitted
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 25
+		days_remove = 30
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_thai_opium"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_thai_opium"
+			
+			custom_effect_tooltip = HKG_thai_opium_tt
+			hidden_effect = {
+				set_country_flag = HKG_thai_opium_flag
+			}
+		}
+	}
+	HKG_indian_opium = {
+		icon = GFX_decision_go_outside
+		modifier = {
+			political_power_gain = -0.1
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			has_country_flag = HKG_port_refitted
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 25
+		days_remove = 30
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indian_opium"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indian_opium"
+			
+			custom_effect_tooltip = HKG_indian_opium_tt
+			hidden_effect = {
+				set_country_flag = HKG_indian_opium_flag
+			}
+		}
+	}

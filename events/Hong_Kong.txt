@@ -2229,6 +2229,11 @@ country_event = { # introduction event to triad war
 		add_stability = -0.05
 		hidden_effect = {
 			set_country_flag = HKG_triad_conflict_start
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = "Sun Yee On/14K"
+				name = "Sun Yee On/14K"
+			}
 			create_country_leader = {
 				name = "Contested Leadership"
 				desc = "POLITICS_CHAOS_DESC"
@@ -2278,6 +2283,14 @@ country_event = { # end of triad war
 		add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
 		add_stability = 0.1
 		add_political_power = 75
+		create_country_leader = {
+			name = "Heung Chin"
+			desc = "POLITICS_HEUNG_DESC"
+			picture = "gfx/leaders/HKG/Portrait_HKG_Heung_Chin.png"
+			expire = "1965.1.1"
+			ideology = crime_syndicate_subtype
+			traits = { }
+		}
 		hidden_effect = {
 			complete_national_focus = HKG_sun_yee_on
 			set_country_flag = HKG_sun_yee_on_in_charge
@@ -2298,7 +2311,7 @@ country_event = { # end of triad war
 			ideology = paternal_autocrat
 			long_name = HKG_paternal_autocrat_party2_long
 			name = HKG_paternal_autocrat_party2
-			}
+		}
 		create_country_leader = {
 			name = "Kot Siu-wong"
 			desc = "POLITICS_HEUNG_DESC"
@@ -2905,7 +2918,6 @@ country_event = { # sun yee on remnants pt. 1
 		name = hktriads.67.c
 		trigger = {
 			NOT = { has_idea = HKG_wo_on_lok_sun_yee_on_ally }
-			NOT = { has_idea = HKG_jewish_suppression_idea1 }
 		}
 		add_war_support = 0.05
 		hidden_effect = {
@@ -3304,5 +3316,162 @@ country_event = { # sun yee on remnants - targeting wo on lok - short pt.2
 				days = 6
 			}
 		}
+	}
+}
+
+country_event = { # sun yee on remnants - no wo on lok pt.1
+	id = hktriads.70
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.70" }
+	title = hktriads.70.t
+	desc = hktriads.70.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.70.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.7000
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = { # sun yee on remnants - no wo on lok pt.2
+	id = hktriads.7000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.7000" }
+	title = hktriads.7000.t
+	desc = hktriads.7000.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.7000.a
+		add_stability = 0.1
+		add_political_power = 100
+		add_popularity = { ideology = paternal_autocrat popularity = 0.15 }
+		hidden_effect = {
+			complete_national_focus = HKG_sun_yee_on_remnants
+		}
+	}
+}
+
+country_event = { # dealing with jews
+	id = hktriads.71
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.71" }
+	title = hktriads.71.t
+	desc = hktriads.71.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.71.a
+		hidden_effect = {
+			country_event = {
+				id = hktriads.72
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # dealing with jews pt.2
+	id = hktriads.72
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.72" }
+	title = hktriads.72.t
+	desc = hktriads.72.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.72.a
+		add_political_power = 10
+		swap_ideas = {
+				remove_idea = HKG_jewish_suppression_idea1
+				add_idea = HKG_jewish_suppression_idea
+		}
+		hidden_effect = {
+			country_event = {
+				id = hktriads.73
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { # dealing with jews pt.3
+	id = hktriads.73
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.73" }
+	title = hktriads.73.t
+	desc = hktriads.73.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.73.a
+		add_stability = 0.03
+		add_popularity = { ideology = paternal_autocrat popularity = 0.06 }
+		remove_ideas = HKG_jewish_suppression_idea
+		326 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		hidden_effect = {
+			clr_country_flag = HKG_jewish_resistance
+		}
+	}
+}
+
+country_event = { # filling our coffers
+	id = hktriads.74
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.74" }
+	title = hktriads.74.t
+	desc = hktriads.74.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.74.a
+		add_stability = -0.025
+	}
+}
+
+country_event = { # expert counterfeiters
+	id = hktriads.75
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.75" }
+	title = hktriads.75.t
+	desc = hktriads.75.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.75.a
+		add_ideas = HKG_expert_counterfeiters_idea
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+
+country_event = { # gambling
+	id = hktriads.76
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.76" }
+	title = hktriads.76.t
+	desc = hktriads.76.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.76.a
+		add_ideas = HKG_gambling_idea
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+
+country_event = { # racketeering
+	id = hktriads.77
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.77" }
+	title = hktriads.77.t
+	desc = hktriads.77.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.76.a
+		add_ideas = HKG_racketeering_idea
+		add_offsite_building = { type = industrial_complex level = 1 }
 	}
 }

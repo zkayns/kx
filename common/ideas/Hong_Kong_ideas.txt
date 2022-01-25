@@ -166,13 +166,27 @@ ideas = {
 		}
 		HKG_major_port_idea_triad = {
 			on_add = { 
-				log = "[GetDateText]: [Root.GetName]: add idea HKG_major_port_idea"
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_major_port_idea_triad"
 			}
 			picture = GFX_idea_HKG_major_port_idea_triad
 			modifier = {
 				industrial_capacity_dockyard = -0.05
 				production_speed_dockyard_factor = -0.10
 				navy_fuel_consumption_factor = 0.1
+			}
+		}
+		HKG_major_port_idea_opium = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_major_port_idea_opium"
+			}
+			picture = GFX_idea_HKG_major_port_idea_opium
+			modifier = {
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.10
+				trade_opinion_factor = -0.20
+				production_factory_max_efficiency_factor = -0.10
+				navy_fuel_consumption_factor = 0.1
+				industrial_capacity_dockyard = -0.05
 			}
 		}
 		HKG_bankruptcy_aftermath_idea = {
@@ -199,6 +213,56 @@ ideas = {
 				production_speed_buildings_factor = -0.25
 				industrial_capacity_factory = -0.30
 				industrial_capacity_dockyard = -0.30
+			}
+		}
+		HKG_bankruptcy_aftermath_idea_triad1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankruptcy_aftermath_idea_triad1"
+			}
+			picture = RUS_backward_industry_idea
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_factory_max_efficiency_factor = -0.20
+				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+			}
+		}
+		HKG_bankruptcy_aftermath_idea_triad2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankruptcy_aftermath_idea_triad2"
+			}
+			picture = RUS_backward_industry_idea
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+			}
+		}
+		HKG_bankruptcy_aftermath_idea_triad3 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankruptcy_aftermath_idea_triad3"
+			}
+			picture = RUS_backward_industry_idea
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		HKG_bankruptcy_aftermath_idea_triad4 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_bankruptcy_aftermath_idea_triad4"
+			}
+			picture = RUS_backward_industry_idea
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
 			}
 		}
 		HKG_bankruptcy_aftermath_idea_cohen = {
@@ -555,8 +619,7 @@ ideas = {
 			modifier = {
 				experience_gain_army = 0.05
 				army_org_factor	= 0.1
-				army_attack_factor = 0.075
-				army_defence_factor = 0.075
+				experience_loss_factor = -0.10
 			}
 		}
 		HKG_arms_manufacturing_idea = {
@@ -616,7 +679,6 @@ ideas = {
 				command_power_gain = -0.1
 				stability_factor = 0.1
 				occupation_cost = 0.1
-				experience_gain_army_factor = -0.1
 			}
 		}
 		HKG_loyalties_appeased_idea = {
@@ -642,7 +704,7 @@ ideas = {
 			}
 			picture = HOL_workplace_democracy
 			modifier = {
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.03
 			}
 		}
 		HKG_non_mtg_fags_idea = {
@@ -721,6 +783,7 @@ ideas = {
 				totalist_drift = -0.1
 				syndicalist_drift = -0.1
 				radical_socialist_drift = -0.1
+				social_democrat_drift = -0.1
 			}
 		}
 		HKG_no_commie_books_idea = {
@@ -782,9 +845,9 @@ ideas = {
 			}
 			picture = FIU_getting_pirated
 			modifier = {
-				conscription_factor = -0.05
+				conscription_factor = -0.10
 				army_attack_factor = 0.05
-				breakthrough_factor = 0.025
+				casualty_trickleback = 0.10
 			}
 		}
 		HKG_rich_vanguards_idea = {
@@ -899,7 +962,7 @@ ideas = {
 			}
 			picture = FIU_getting_pirated
 			modifier = {
-				naval_speed_factor = 0.02
+				naval_speed_factor = 0.05
 				naval_retreat_speed = 0.05
 				screening_efficiency = 0.10
 				naval_coordination = 0.15
@@ -915,6 +978,7 @@ ideas = {
 				stability_factor = -0.05
 				industrial_capacity_factory = -0.05
 				production_factory_max_efficiency_factor = -0.05
+				research_speed_factor = -0.02
 			}
 		}
 		HKG_jewish_suppression_idea1 = {
@@ -927,6 +991,7 @@ ideas = {
 				industrial_capacity_factory = -0.1
 				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.05
+				research_speed_factor = -0.04
 			}
 		}
 		HKG_14k_intel_idea = {
@@ -975,9 +1040,9 @@ ideas = {
 			picture = FIU_getting_pirated
 			modifier = {
 				political_power_gain = -0.1
-				party_popularity_stability_factor = 0.125
-				monthly_population	= 0.03
-				local_resources_factor = 0.05
+				party_popularity_stability_factor = 0.1
+				resistance_damage_to_garrison = -0.2
+				resistance_target = -0.25
 			}
 		}
 		HKG_18_syndicates_military_3 = {
@@ -1254,6 +1319,52 @@ ideas = {
 				stability_factor = -0.05
 				drift_defence_factor = 0.25
 				command_power_gain = 0.2
+			}
+		}
+		HKG_expert_counterfeiters_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				industrial_capacity_factory = 0.10
+				line_change_production_efficiency_factor = 0.10
+				consumer_goods_factor = -0.025
+				trade_opinion_factor = -0.30
+				min_export = 0.1
+			}
+		}
+		HKG_gambling_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = -0.025
+				political_power_gain = 0.10
+			}
+		}
+		HKG_racketeering_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				industrial_concern_cost_factor = -0.2
+				weapons_manufacturer_cost_factor = -0.2
+				tank_manufacturer_cost_factor = -0.2
+				naval_manufacturer_cost_factor = -0.2
+				aircraft_manufacturer_cost_factor = -0.2
+				stability_factor = -0.05
 			}
 		}
 	}

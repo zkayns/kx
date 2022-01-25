@@ -205,3 +205,33 @@ HKG_triad_conflict_plus_250_men = {
 HKG_triad_conflict_plus_1000_men = {
 	add_to_variable = { HKG_men_var = 1000 }
 }
+HKG_14k_improve_economy = {
+	if = {[
+		limit = { has_idea = HKG_bankruptcy_aftermath_idea_triad }
+		swap_ideas = {
+			remove_idea = HKG_bankruptcy_aftermath_idea_triad
+			add_idea = HKG_bankruptcy_aftermath_idea_triad1
+		}
+	}
+	else_if = {
+		limit = { has_idea = HKG_bankruptcy_aftermath_idea_triad1 }
+		swap_ideas = {
+			remove_idea = HKG_bankruptcy_aftermath_idea_triad1
+			add_idea = HKG_bankruptcy_aftermath_idea_triad2
+		}
+	}
+	else_if = {
+		limit = { has_idea = HKG_bankruptcy_aftermath_idea_triad2 }
+		swap_ideas = {
+			remove_idea = HKG_bankruptcy_aftermath_idea_triad2
+			add_idea = HKG_bankruptcy_aftermath_idea_triad3
+		}
+	}
+	else_if = {
+		limit = { has_idea = HKG_bankruptcy_aftermath_idea_triad3 }
+		swap_ideas = {
+			remove_idea = HKG_bankruptcy_aftermath_idea_triad3
+			add_idea = HKG_bankruptcy_aftermath_idea_triad4
+		}
+	}
+}
