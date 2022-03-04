@@ -219,7 +219,7 @@ create_country_leader = {
 	desc = "POLITICS_RICHARD_RUSSELL_DESC"
 	picture = "gfx/leaders/COR/COR_Richard_Russell.png"
 	expire = "1965.1.1"
-	ideology = soccon_agrarianism_subtype
+	ideology = dixiecrat_subtype
 	traits = {}
 }
 create_country_leader = {
@@ -449,7 +449,7 @@ create_corps_commander = { #Robert Lee Bullard
 }
 
 create_corps_commander = { #Strom
-	name = "Strom Thurmond"
+	name = "Strom Thurmond "
 #	desc = "TEX_JOHN_HINES_DESC"
 	portrait_path = "gfx/leaders/COR/Portrait_COR_Strom_Thurmond.png"
 	traits = {

@@ -521,6 +521,8 @@ RULE_OPTION_GER_REV_ALWAYS_DESC:0 "The German Revolution will always occur, rega
 
 RULE_OPTION_UKR_FUTURE_ROYAL_REVOLUTION:0 "£KR_game_rule_flag_UKR_radical_socialist    True Ukrainian Royal Socialism" 
 RULE_OPTION_UKR_FUTURE_ROYAL_REVOLUTION_DESC:0 "Feeling that Khruschev has gone too far, the king invites the Revolutionary Ukrainian Party to form a brand new royal & socialist government."
+RULE_OPTION_UKR_FUTURE_DEMOCRACY:0 "£KR_game_rule_flag_UKR    A Free Ukraine" 
+RULE_OPTION_UKR_FUTURE_DEMOCRACY_DESC:0 "To break the parliamentary deadlock and reduce the Syndicalist influence in the government, the king calls for snap elections to the Rada. One of the popular pro-Ukrainian parties takes a majority in the Rada and transforms Ukraine into a true democracy."
 
 RUS_KERENSKY_ASSASINATION:0 "£KR_game_rule_flag_RUS   The Assasination of President Kerensky"
 RULE_OPTION_RUS_KERENSKY_RANDOM:0 "Default"
@@ -573,3 +575,13 @@ RULE_OPTION_NOR_MONARCHY_NO:0 "£KR_game_rule_flag_NOR_syndicalist   Monarchy Ab
 RULE_OPTION_NOR_MONARCHY_NO_DESC:0 "As expected, the socialist Prime Minister announce the end of the Norwegian monarchy and proclaim the establishment of a socialist republic"
 RULE_OPTION_NOR_MONARCHY_YES:0 "£KR_game_rule_flag_NOR   Monarchy Kept"
 RULE_OPTION_NOR_MONARCHY_YES_DESC:0 "To everyone's surprise, the socialist government leaves Haakon on his throne and a socialist monarchy is established."
+
+NYC_INDEPENDENCE:0 "£KR_game_rule_flag_NYC   The Fate of New York City"
+RULE_OPTION_NYC_INDEPENDENCE_RANDOM:0 "Default"
+RULE_OPTION_NYC_INDEPENDENCE_RANDOM_DESC:0 "The fate of New York City during the Civil War will be left to fate..."
+RULE_OPTION_NYC_INDEPENDENCE_GUARENTEE:0 "£KR_game_rule_flag_NYC   The Free City-State"
+RULE_OPTION_NYC_INDEPENDENCE_GUARENTEE_DESC:0 "After a bloody battle between Federalists and Socialists, neither of them wins, and Mayor Fiorello La Guardia declares the independence of the Big Apple."
+RULE_OPTION_NYC_SOCIALIST:0 "£KR_game_rule_flag_CSA   The Socialist City"
+RULE_OPTION_NYC_SOCIALIST_DESC:0 "Socialists loyal to Big Bill take control of the city and drive out the reactionaries!"
+RULE_OPTION_NYC_FED:0 "£KR_game_rule_flag_USA  The Federalist City"
+RULE_OPTION_NYC_FED_DESC:0 "MacArthur's Federalists hunt down the Red traitors and ensure the city's loyalty to the legitimate government!"

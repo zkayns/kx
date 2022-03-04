@@ -290,6 +290,24 @@ defined_text = {
 		}
 		localization_key = totalist_savinkovism_subtype
 	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = fitzhughism_subtype
+		}
+		localization_key = fitzhughism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = social_futurism_subtype
+		}
+		localization_key = social_futurism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = militant_atheism_subtype
+		}
+		localization_key = militant_atheism_subtype
+	}
 
 	text = {
 		trigger = {
@@ -362,6 +380,18 @@ defined_text = {
 			has_country_leader_ideology = agrarian_syndicalism_subtype
 		}
 		localization_key = agrarian_syndicalism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = de_leonism_subtype
+		}
+		localization_key = de_leonism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = syn_georgism_subtype
+		}
+		localization_key = syn_georgism_subtype
 	}
 
 	text = {
@@ -466,11 +496,23 @@ defined_text = {
 		}
 		localization_key = radsoc_communism_subtype
 	}
-		text = {
+	text = {
+		trigger = {
+			has_country_leader_ideology = zhdanovism_subtype
+		}
+		localization_key = zhdanovism_subtype
+	}
+	text = {
 		trigger = {
 			has_country_leader_ideology = radsoc_tridemism_subtype
 		}
 		localization_key = radsoc_tridemism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = bellamyism_subtype
+		}
+		localization_key = bellamyism_subtype
 	}
 
 	text = {
@@ -562,6 +604,12 @@ defined_text = {
 			has_country_leader_ideology = socdem_tridemism_subtype
 		}
 		localization_key = socdem_tridemism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = georgism_subtype
+		}
+		localization_key = georgism_subtype
 	}
 
 	text = {
@@ -709,6 +757,12 @@ defined_text = {
 		}
 		localization_key = marlib_jadidism_subtype
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = marlib_crime_syndicate_subtype
+		}
+		localization_key = marlib_crime_syndicate_subtype
+	}
 
 	text = {
 		trigger = {
@@ -775,6 +829,12 @@ defined_text = {
 			has_country_leader_ideology = soccon_jadidism_subtype
 		}
 		localization_key = soccon_jadidism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = dixiecrat_subtype
+		}
+		localization_key = dixiecrat_subtype
 	}
 
 	text = {
@@ -884,6 +944,12 @@ defined_text = {
 			has_country_leader_ideology = authdem_tridemism_subtype
 		}
 		localization_key = authdem_tridemism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = kemalism_subtype
+		}
+		localization_key = kemalism_subtype
 	}
 
 	text = {

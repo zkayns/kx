@@ -330,6 +330,13 @@ sound = {
 }
 
 sound = {
+	name = "super_Disney_vic"
+	file = "menu/Disney_vic.wav"
+	volume = 0.9
+	always_load = yes
+}
+
+sound = {
 	name = "super_USA_vic"
 	file = "menu/USA_vic.wav"
 	volume = 0.8
@@ -621,6 +628,12 @@ sound = {
 	always_load = yes
 }
 sound = {
+	name = "super_RUSSIAN_UNIFICATION_zhdanov"
+	file = "menu/RUSSIAN_UNIFICATION_zhdanov.wav"
+	volume = 1
+	always_load = yes
+}
+sound = {
 	name = "super_RUSSIAN_UNIFICATION_fishman"
 	file = "menu/RUSSIAN_UNIFICATION_fishman.wav"
 	volume = 1
@@ -632,18 +645,7 @@ sound = {
 	volume = 1
 	always_load = yes
 }
-sound = {
-	name = "super_RUSSIAN_UNIFICATION_natsi"
-	file = "menu/RUSSIAN_UNIFICATION_natsi.wav"
-	volume = 1
-	always_load = yes
-}
-sound = {
-	name = "super_RUSSIAN_UNIFICATION_natsi"
-	file = "menu/RUSSIAN_UNIFICATION_natsi.wav"
-	volume = 1
-	always_load = yes
-}
+
 
 sound = {
 	name = "super_KIK_obamaafrika"
