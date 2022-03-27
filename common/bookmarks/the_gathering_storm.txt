@@ -79,9 +79,9 @@ bookmarks = {
 			}
 
 			focuses = {
-				RUS_savinkov
-				RUS_Soc_Lib_Dictator
-				RUS_Power_To_The_Soviets
+				RUS_Drozdovsky_Takes_Over
+				RUS_Question_Of_The_Duma
+				RUS_Jakobsons_Socdem_Eurasia
 			}
 		}
 
@@ -140,45 +140,46 @@ bookmarks = {
 			history = "SKM_KR_GATHERING_STORM_DESC"
 			ideology = authoritarian_democrat
 			ideas = {
-				SKM_ethnic_tensions
-				SKM_landowning_elite
-				SKM_chogyal
+				SKM_puppet_chogyal
+				SKM_aristocratic_government
+				SKM_democratic_government
 			}
 			focuses = {
-				skm_tashis_triumph
-				skm_sikkim_new_year
-				skm_coup_moment
+				skm_old_kazis
+				skm_kazi_takeover
+				skm_wholesome_kazis
 			}
 		}
 
-		"CZE" = {
+		"MEX" = {
 			minor = yes
-			history = "CZE_KR_GATHERING_STORM_DESC"
-			ideology = social_liberal
+			history = "MEX_KR_GATHERING_STORM_DESC"
+			ideology = radical_socialist
 			ideas = {
-				BOH_sudeten_german_divide
-				BOH_skoda_works_different
-				BOH_rural_divide
+				MEX_asa_rebellion
+				MEX_dl_opposition
+				MEX_revolution_economic
 			}
 			focuses = {
-				BOH_death_of_masaryk
-				BOH_assert_bohemian_self_determination
-				BOH_free_czechoslovakia
+				MEX_PCM_the_lenin_of_the_west
+				MEX_fateful_day
+				MEX_GOL_heirs_of_the_aztecs
 			}
 		}
-		
-		"UKR" = {
+
+		"BRM" = {
 			minor = yes
-			history = "URK_KR_GATHERING_STORM_DESC"
+			history = "BRM_KR_GATHERING_STORM_DESC"
 			ideology = authoritarian_democrat
 			ideas = {
-				language_issue
-				Hetman_Army
+				BRM_young_officers
+				BRM_birds
+				BRM_ostasien_officers
 			}
 			focuses = {
-				UKR_Snap_Elections
-				UKR_Our_Future
-				UKR_Rebirth_Ukrainian_Revolution
+				BRM_vanquish_siam
+				BRM_peacock_astride
+				BRM_request_reichspakt_entry
 			}
 		}
 

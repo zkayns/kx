@@ -51,6 +51,78 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					tag = FIN
+					has_democratic_government = no
+					NOT = { has_government = paternal_autocrat }
+				}
+				if = {
+					limit = {
+						KAR = {	is_subject_of = FIN }
+						FIN = { has_socialist_government = yes }
+					}
+					end_puppet = KAR
+				}
+				else_if = {
+					limit = {
+						FIN = { has_government = national_populist }
+					}
+					annex_country = {
+						target = KAR
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WHR
+				}
+				if = {
+					limit = {
+						WHR = {
+							NOT = {
+								has_country_leader = {
+									name = "Uladzimir"
+									ruling_only = yes
+								}
+								has_country_leader = {
+									name = "Žyhimont"
+									ruling_only = yes
+								}
+							}
+							NOT = { has_country_flag = WHR_republic_installed }
+						}
+					}
+					WHR = { clr_country_flag = WHR_monarchy_kept }
+					set_country_flag = WHR_republic_installed
+					set_cosmetic_tag = WHR_BEL
+				}
+				if = {
+					limit = {
+						NOT = { has_government = social_democrat }
+						NOT = { has_government = radical_socialist }
+					}
+					clr_country_flag = WHR_bsdpvictory
+				}	
+				if = {
+					limit = {
+						NOT = { has_government = syndicalist }
+					}
+					clr_country_flag = WHR_bpsrvictory
+				}	
+				if = {
+					limit = {
+						NOT = { has_government = social_liberal }
+					}
+					clr_country_flag = WHR_bpsfvictory
+				}	
+				if = {
+					limit = {
+						NOT = { has_government = social_conservative }
+					}
+					clr_country_flag = WHR_bkhdvictory
+				}					
+			}
 		}
 	}
 
@@ -179,7 +251,6 @@ on_actions = {
 					tag = WHR
 					has_war = no
 				}
-				country_event = whrpol.25	#1939
 				country_event = whrpol.26 #1943
 			}
 			if = {

@@ -6727,7 +6727,7 @@ country_event = { # The Great Strike-Leftist Victory
 			desc = "POLITICS_NORMAN_WALLACE_LERMOND_DESC"
 			picture = "gfx/leaders/NEE/Portrait_NEE_Norman_Wallace_Lermond.png"
 			expire = "1965.1.1"
-			ideology = agrarian_socialism_subtype
+			ideology = bellamyism_subtype
 			traits = { radical_environmentalist }
 		}
 		hidden_effect = {
@@ -6778,7 +6778,7 @@ country_event = { # The Great Strike-Leftist Victory
 			desc = "POLITICS_NORMAN_WALLACE_LERMOND_DESC"
 			picture = "gfx/leaders/NEE/Portrait_NEE_Norman_Wallace_Lermond.png"
 			expire = "1965.1.1"
-			ideology = agrarian_socialism_subtype
+			ideology = bellamyism_subtype
 			traits = { radical_environmentalist }
 		}
 		set_cosmetic_tag = NEE_LERMOND_FLAG
@@ -11540,7 +11540,7 @@ country_event = {# cat
 	immediate = {log = "[GetDateText]: [Root.GetName]: event lovecraftflavor.14"}
 	title = lovecraftflavor.14.t
 	desc = lovecraftflavor.14.d
-	picture = GFX_event_NEE_nature
+	picture = GFX_event_NEE_cat
 	
 	fire_only_once = yes
 	

@@ -426,7 +426,8 @@ country_event = { # Murray steps down!
 		set_party_name = {
 			ideology = paternal_autocrat
 			long_name = COR_national_corporatism_paternal_autocrat_long
-			name = COR_national_corporatism_paternal_autocrat }
+			name = COR_national_corporatism_paternal_autocrat 
+                }
 		hidden_effect = {
 			country_event = { id = constate.7 days = 13 }
 			remove_all_ministers = yes
@@ -1100,10 +1101,10 @@ country_event = { # Reorganize the Democratic Party
 			name = COR_social_conservative_patton_party }
 		create_country_leader = {
 			name = "James Francis Byrnes"
-			desc = "POLITICS_HARRY_BYRD_DESC"
-			picture = "gfx/leaders/USA/Portrait_USA_Harry_F_Byrd.png"
+			desc = ""
+			picture = "gfx/leaders/COR/Portrait_COR_James_Byrnes.png"
 			expire = "1965.1.1"
-			ideology = social_democrat_subtype
+			ideology = socdem_dixiecrat_subtype 
 			traits = { backroom_backstabber }
 		}
 		set_party_name = {
@@ -1111,10 +1112,6 @@ country_event = { # Reorganize the Democratic Party
 			long_name = COR_social_democrat_patton_party_long
 			name = COR_social_democrat_patton_party }
 		}
-	}
-	option = { # No
-		name = constate.1105.b
-		add_stability = 0.02
 	}
 }
 
@@ -1134,9 +1131,17 @@ country_event = { # Reorganize the Republican Party
 		add_political_power = 20
 		hidden_effect = {
 		create_country_leader = {
+			name = "Interim Government"
+			desc = ""
+			picture = "gfx/leaders/USA/Portrait_USA_Senate_Emergency.png"
+			expire = "1965.1.1"
+			ideology = authdem_junta_subtype
+			traits = { the_committee }
+		}
+		create_country_leader = {
 			name = "Strom Thurmond"
 			desc = "COR_STROM_THURMOND_DESC"
-			picture = "gfx/leaders/COR/Portrait_COR_Strom_Thurmond.png"
+			picture = "gfx/leaders/USA/Portrait_USA_Strom_Thurmond.png"
 			expire = "1965.1.1"
 			ideology = liberal_conservative_subtype
 			traits = { smooth_talking_charmer }
@@ -1147,10 +1152,10 @@ country_event = { # Reorganize the Republican Party
 			name = COR_market_liberal_patton_party }
 		create_country_leader = {
 			name = "Joseph Raymond McCarthy"
-			desc = "COR_STROM_THURMOND_DESC"
-			picture = "gfx/leaders/COR/Portrait_COR_Strom_Thurmond.png"
+			desc = ""
+			picture = "gfx/leaders/CGL/Joe_McCarthy.png"
 			expire = "1965.1.1"
-			ideology = social_liberal_subtype
+			ideology = mccarthyism_subtype
 			traits = { backroom_backstabber }
 		}
 		set_party_name = {
@@ -1158,10 +1163,38 @@ country_event = { # Reorganize the Republican Party
 			long_name = COR_social_liberal_patton_party_long
 			name = COR_social_liberal_patton_party 
 			}
-		}
+                country_event = {
+			id = constate.11071
+			days = 30
+			}
+                }
+	}
+}
+country_event = { # Question of Democracy
+	id = constate.11060
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.11060"}
+	title = constate.11060.t
+	desc = constate.11060.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Restore Democracy
+		name = constate.11060.a
+		add_stability = -0.02
+		add_political_power = 20
+		country_event = {
+			id = constate.1105
+			days = 3
+			}
+		country_event = {
+			id = constate.1106
+			days = 6
+			}
 	}
 	option = { # No
-		name = constate.1105.b
+		name = constate.11060.b
 		add_stability = 0.02
 		add_political_power = -20
 	}
@@ -1194,8 +1227,117 @@ country_event = { # Choosing a Vice President
 			add_ideas = COR_James_Francis_Byrnes_hog_sco
 		}
 	}
+	option = { #Van Moseley
+		name = constate.1107.c
+		add_stability = 0.01
+		add_political_power = 20
+		hidden_effect = {
+			add_ideas = COR_George_Van_Horn_Moseley_hog_npo
+		country_event = {
+			id = constate.11070
+			days = 60
+			}
+		}
+	}
 }
+country_event = { # Question of Retirement
+	id = constate.11070
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.11070"}
+	title = constate.11070.t
+	desc = constate.11070.d
+	picture = GFX_report_event_generic_diplomacy1
 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Make him Retire
+		name = constate.11070.a
+		add_stability = -0.02
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "George Van Horn Moseley"
+			desc = ""
+			picture = "gfx/leaders/TEX/Portrait_TEX_George_Van_Horn_Moseley.png"
+			expire = "1965.1.1"
+			ideology = junta_subtype
+			traits = { backroom_backstabber }
+		}
+	}
+	option = { # No
+		name = constate.11070.b
+		add_stability = 0.02
+		add_political_power = -20
+	}
+}
+country_event = {
+	id = constate.11071
+	immediate = { log = "[GetDateText]: [Root.GetName]: event constate.11071" }
+	title = constate.11071.t
+	desc = constate.11071.d
+	picture = GFX_news_USA_capitol_hill
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = constate.11071.a
+		set_politics = {
+				ruling_party = social_conservative
+			}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.3
+		}
+	}
+	option = {
+		name = constate.11071.b
+		set_politics = {
+				ruling_party = market_liberal
+			}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.3
+		}
+	}
+	option = {
+		name = constate.11071.c
+		set_politics = {
+				ruling_party = social_liberal
+			}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.3
+		}
+	}
+	option = {
+		name = constate.11071.e
+		set_politics = {
+				ruling_party = social_democrat
+			}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.3
+		}
+	}	
+}
+country_event = { # Limbaugh
+	id = constate.11072
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.11072"}
+	title = constate.11072.t
+	desc = constate.11072.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # lol
+		name = constate.11072.a
+		add_political_power = -30
+	}
+}
 country_event = { # The Initiative
 	id = constate.1108
 	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.1108"}
@@ -3158,25 +3300,25 @@ country_event = { # Deportation Policy
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		add_war_support = 0.08
 		if = {
-		limit = {
+			limit = {
+				BBR = {
+					exists = no
+				}
+			}
 			BBR = {
-			exists = no
+				add_state_core = 1167
+				add_state_core = 1168
+				add_state_core = 1169
+				add_state_core = 1170
 			}
+			release_puppet = BBR
 		}
-		BBR = {
-			add_state_core = 1167
-			add_state_core = 1168
-			add_state_core = 1169
-			add_state_core = 1170
-			}
-		}
-		release_puppet = BBR
 		else = {
-		BBR = {
-		add_manpower = 12500
-		increase_ruling_party_popularity_by_5 = yes
-		}
-		add_manpower = -12500
+			BBR = {
+				add_manpower = 12500
+				increase_ruling_party_popularity_by_5 = yes
+			}
+			add_manpower = -12500
 		}
 	}
 	option = { # Agree with the moderates
@@ -3184,7 +3326,7 @@ country_event = { # Deportation Policy
 		add_stability = 0.05
 		add_manpower = -10000
 		LIB = {
-		add_manpower = 10000
+			add_manpower = 10000
 		}
 		add_political_power = -15
 		add_popularity = { ideology = national_populist popularity = 0.05 }
@@ -4501,25 +4643,25 @@ country_event = { # Combatting Cultural Parasitism
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		add_war_support = 0.08
 		if = {
-		limit = {
+			limit = {
+				BBR = {
+					exists = no
+				}
+			}
 			BBR = {
-			exists = no
+				add_state_core = 1167
+				add_state_core = 1168
+				add_state_core = 1169
+				add_state_core = 1170
 			}
+			release_puppet = BBR
 		}
-		BBR = {
-			add_state_core = 1167
-			add_state_core = 1168
-			add_state_core = 1169
-			add_state_core = 1170
-			}
-		}
-		release_puppet = BBR
 		else = {
-		BBR = {
-		add_manpower = 12500
-		increase_ruling_party_popularity_by_5 = yes
-		}
-		add_manpower = -12500
+			BBR = {
+				add_manpower = 12500
+				increase_ruling_party_popularity_by_5 = yes
+			}
+			add_manpower = -12500
 		}
 	}
 }
@@ -6693,4 +6835,213 @@ country_event = { #wtf tot Yockey is real
 		}
 	}
 }
+country_event = { # Crump
+	id = constate.6767
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.6"}
+	title = constate.6767.t
+	desc = constate.6767.d
+	picture = GFX_report_event_USA_military_trial
 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Crump
+		name = constate.6767.a
+		add_stability = -0.02
+		add_political_power = 20
+		hidden_effect = {
+		remove_all_ministers = yes
+		add_ideas = COR_Joseph_Boyle_hog_ade
+		add_ideas = COR_Gordon_Weaver_Browning_for_ade
+		add_ideas = COR_Harry_Hill_McAlister_eco_ade
+		add_ideas = COR_N_J_Ford_sec_ade
+                set_country_flag = COR_memphis_commission 
+		create_country_leader = {
+			name = "E.H. Crump"
+			desc = "POLITICS_CRUMP_DESC"
+			picture = "gfx/leaders/COR/Portrait_COR_E_H_Crump.png"
+			expire = "1965.1.1"
+			ideology = social_machine_subtype
+			traits = { }
+			}
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = "Tennessee Democratic Committee"
+			name = "Memphis Commission" 
+                }
+	}
+}
+country_event = { # Ministers recommmend not going after Crump
+	id = constate.6768
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.301"}
+	title = constate.6768.t
+	desc = constate.6768.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = constate.6768.a
+		add_stability = -0.02
+	}
+	option = {
+		name = constate.6768.b
+			hidden_effect = {
+				country_event = {
+					id = constate.6769
+					days = 2
+				}
+                }
+		add_political_power = -25
+	}
+}
+country_event = { # Crump mobilizes (politically) against russell
+	id = constate.6769
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.301"}
+	title = constate.6769.t
+	desc = constate.6769.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = constate.6769.a
+			hidden_effect = {
+				country_event = {
+					id = constate.6767
+					days = 2
+				}
+                }
+		add_stability = -0.02
+	}
+	option = {
+		name = constate.6769.b
+		add_political_power = -25
+	}
+}
+country_event = {
+	id = constate.6770
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.6770"}
+	title = constate.6770.t
+	desc = constate.6770.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = COR
+		owns_state = 386
+		owns_state = 358
+		owns_state = 797
+		owns_state = 375
+	}
+
+	option = {
+		name = constate.6770.a
+		add_political_power = -10
+	}
+}
+country_event = {
+	id = constate.6771
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.6770"}
+	title = constate.6771.t
+	desc = constate.6771.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = constate.6771.a
+		add_political_power = 10
+	}
+	option = {
+		name = constate.6771.b
+		add_stability = -0.02
+		add_political_power = -10
+	}
+	option = {
+		name = constate.6771.c
+                hidden_effect = { remove_ideas_with_trait = economy_minister }
+                add_ideas = COR_Beulah_George_Tann_eco_ade
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = constate.6772
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.6772"}
+	title = constate.6772.t
+	desc = constate.6772.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = constate.6772.a
+		add_political_power = 10
+	}
+}
+country_event = {
+	id = constate.6773
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.6773"}
+	title = constate.6773.t
+	desc = constate.6773.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = constate.6773.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = constate.6774
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.6774"}
+	title = constate.6774.t
+	desc = constate.6774.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = constate.6774.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = constate.6775
+	immediate = {log = "[GetDateText]: [Root.GetName]: event constate.6775"}
+	title = constate.6775.t
+	desc = constate.6775.d
+	picture = GFX_report_event_USA_american_brigade
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = constate.6770.a
+		add_political_power = 10
+	}
+	option = {
+		name = constate.6770.a
+		add_political_power = -10
+	}
+}

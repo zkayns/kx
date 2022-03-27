@@ -69,6 +69,53 @@ spooky_portraits = {
 		}
 	}
 	if = {	
+		limit = { has_country_leader = { name = "Jerman Lepcha" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_SKM_Jerman_Lepcha_fun.png"
+		}
+		set_country_leader_name = {
+			name = "Jerma Lepcha"
+		}
+	}
+	if = {	
+		limit = { 
+			has_country_leader = { 
+				name = "Franklin D. Roosevelt Jr." 
+				ruling_only = yes 
+			} 
+			NOT = {
+				has_country_flag = NYC_BLACKSHIRT
+			}
+		}
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_NYC_Franklin_Delano_Roosevelt_Jr_fun.png"
+		}
+		set_country_leader_name = {
+			name = "Franklin D. Roosevelt"
+		}
+	}
+	else_if = {	
+		limit = { 
+			OR = {
+				has_country_leader = { 
+					name = "Franklin D. Roosevelt Jr." 
+					ruling_only = yes 
+				}
+				has_country_leader = { 
+					name = "Franklin D. Roosevelt" 
+					ruling_only = yes 
+				}
+			} 
+			has_country_flag = NYC_BLACKSHIRT
+		}
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_NYC_Franklin_Delano_Roosevelt_Jr_Blackshirt_fun.png"
+		}
+		set_country_leader_name = {
+			name = "Franklin D. Roosevelt"
+		}
+	}
+	if = {	
 		limit = { has_country_leader = { name = "L. Ron Hubbard" ruling_only = yes } }
 		set_country_leader_portrait = {
 			portrait = "gfx/leaders/FUN/CAL_L_Ron_Hubbard_fun.png"
@@ -1059,6 +1106,17 @@ spooky_portraits = {
 		} } 
 		BAT = {
 			set_cosmetic_tag = BAT_FUN
+		}
+	}
+	if = {	
+		limit = { MEX = {
+			has_country_flag = mex_aztlan
+			NOT = {
+				has_cosmetic_tag = MEX_LARP_FUN
+			}
+		} } 
+		MEX = {
+			set_cosmetic_tag = MEX_LARP_FUN
 		}
 	}
 	if = {	

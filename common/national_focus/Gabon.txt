@@ -634,7 +634,7 @@ focus_tree = {
 				desc = "POLITICS_AUBAME_DESC"
 				picture = "gfx/leaders/GAB/Portrait_GAB_Jean_Hilaire_Aubame.png"
 				expire = "1965.1.1"
-				ideology = soccon_republican_panafricanism_subtype
+				ideology = christian_democracy_subtype
 			}
 			set_party_name = {
 				ideology = social_conservative
@@ -683,6 +683,7 @@ focus_tree = {
 				remove_ideas = GAB_president_for_life
 				remove_ideas = GAB_fang_supremacy
 				remove_ideas = GAB_bwati_national_religion
+				remove_ideas = GBR_colonial_government
 			}
 		}
 	}

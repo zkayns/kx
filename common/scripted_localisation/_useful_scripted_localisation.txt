@@ -308,6 +308,12 @@ defined_text = {
 		}
 		localization_key = militant_atheism_subtype
 	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = technocracy_subtype
+		}
+		localization_key = technocracy_subtype
+	}
 
 	text = {
 		trigger = {
@@ -392,6 +398,12 @@ defined_text = {
 			has_country_leader_ideology = syn_georgism_subtype
 		}
 		localization_key = syn_georgism_subtype
+	}
+		text = {
+		trigger = {
+			has_country_leader_ideology = eco_syndicalism_subtype
+		}
+		localization_key = eco_syndicalism_subtype
 	}
 
 	text = {
@@ -514,6 +526,12 @@ defined_text = {
 		}
 		localization_key = bellamyism_subtype
 	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = eco_anarchism_subtype
+		}
+		localization_key = eco_anarchism_subtype
+	}
 
 	text = {
 		trigger = {
@@ -611,6 +629,12 @@ defined_text = {
 		}
 		localization_key = georgism_subtype
 	}
+		text = {
+		trigger = {
+			has_country_leader_ideology = socdem_dixiecrat_subtype
+		}
+		localization_key = socdem_dixiecrat_subtype
+	}
 
 	text = {
 		trigger = {
@@ -696,7 +720,14 @@ defined_text = {
 		}
 		localization_key = soclib_tridemism_subtype
 	}
-
+ 
+	text = {
+		trigger = {
+			has_country_leader_ideology = mccarthyism_subtype
+		}
+		localization_key = mccarthyism_subtype
+	}
+ 
 	text = {
 		trigger = {
 			has_country_leader_ideology = market_liberal_subtype
@@ -836,6 +867,12 @@ defined_text = {
 		}
 		localization_key = dixiecrat_subtype
 	}
+		text = {
+		trigger = {
+			has_country_leader_ideology = national_conservative_subtype
+		}
+		localization_key = national_conservative_subtype
+	}
 
 	text = {
 		trigger = {
@@ -950,6 +987,12 @@ defined_text = {
 			has_country_leader_ideology = kemalism_subtype
 		}
 		localization_key = kemalism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = social_machine_subtype
+		}
+		localization_key = social_machine_subtype
 	}
 
 	text = {
@@ -1071,6 +1114,12 @@ defined_text = {
 			has_country_leader_ideology = hussitism_subtype
 		}
 		localization_key = hussitism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = pataut_authoritarian_liberalism_subtype
+		}
+		localization_key = pataut_authoritarian_liberalism_subtype
 	}
 	
 	text = {
@@ -1247,6 +1296,12 @@ defined_text = {
 		}
 		localization_key = mathengeism_subtype
 	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = national_restorationism_subtype
+		}
+		localization_key = national_restorationism_subtype
+	}
 	text = {
 		trigger = {
 			has_country_leader_ideology = toy_santaism_subtype
@@ -1285,8 +1340,8 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_country_leader_ideology = commie_elfism_group
+			has_country_leader_ideology = commie_elfism_subtype
 		}
-		localization_key = commie_elfism_group
+		localization_key = commie_elfism_subtype
 	}
 }
