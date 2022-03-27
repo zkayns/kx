@@ -1,6 +1,6 @@
 ﻿l_english:
 
-HKG_focus:0 "Hong Kong Focus Tree"
+HKG_focus:0 "[HKG.GetName] Focus Tree"
 
 HKG_authoritarian_democrat:0 "Hong Kong"
 HKG_authoritarian_democrat_ADJ:0 "Hong Kong"
@@ -213,9 +213,10 @@ HKG_establish_intel:0 "Establish Fifth Columnists"
 HKG_kill_heung_chin:0 "Assassinate Heung Chin"
 HKG_secure_tsing_yi:0 "Secure Tsing Yi"
 HKG_opium_decisions:0 "Expand the Opium Business"
-HKG_opium_decisions_desc:0 "opium much?"
+HKG_opium_decisions_desc:0 "opium much?\n\n[HKG_indochinese_opium_text]\n\n[HKG_burmese_opium_text]\n\n[HKG_thai_opium_text]\n\n[HKG_indian_opium_text]"
 HKG_refit_the_port:0 "Refit the Ports for Trafficking Operations"
 HKG_indochinese_opium:0 "Enter the Indochinese Market"
+HKG_indochinese_opium_manpower:0 "Send Men to Indochina"
 HKG_burmese_opium:0 "Enter the Burmese Market"
 HKG_thai_opium:0 "Enter the Thai Market"
 HKG_indian_opium:0 "Enter the Indian Market"
@@ -240,9 +241,16 @@ HKG_canton_invasion_decisions_desc:0 "invading canton much?"
 1000_men_blocked:0 "£GFX_manpower_texticon §H1000§!"
 
 ### SCRIPTED LOC
-HKG_sun_influece_text:0 "\n\n\nThe §XSun Yee On§!'s influence: [?HKG_sun_yee_on_influence_var]\n"
-HKG_14k_influece_text:0 "The §V14K§!'s influence: [?HKG_14k_influence_var] \n\n\n£rifle_texticon §HWeapons§! available for operations: [?HKG_guns_var]\n£GFX_manpower_texticon §HManpower§! available for operations: [?HKG_men_var]"
-
+HKG_sun_influece_text:0 "\n\n\nThe §XSun Yee On§!'s influence: [HKG_sun_influence_colour]([?HKG_sun_yee_on_influence_var])\n"
+HKG_14k_influece_text:0 "The §V14K§!'s influence is currently: [HKG_14k_influence_colour]([?HKG_14k_influence_var]) \n\n\n£rifle_texticon §HWeapons§! available for operations: [?HKG_guns_var]\n£GFX_manpower_texticon §HManpower§! available for operations: [?HKG_men_var]"
+HKG_low:0 "§Rlow§!"
+HKG_moderate:0 "§Omoderate§!"
+HKG_high:0 "§Hhigh§!"
+HKG_absolute:0 "§Gabsolute§!"
+HKG_indochinese_opium_text2:0 "Our current progress in establishing an £GFX_opium_texticon opium trade network in §BIndochina§! is: [?HKG_indochinese_opium_progress]%"
+HKG_burmese_opium_text2:0 "Our current progress in establishing an £GFX_opium_texticon opium trade network in §GBurma§! is: [?HKG_burmese_opium_progress]%"
+HKG_thai_opium_text2:0 "Our current progress in establishing an £GFX_opium_texticon opium trade network in §gThailand§! is: [?HKG_thai_opium_progress]%"
+HKG_indian_opium_text2:0 "Our current progress in establishing an £GFX_opium_texticon opium trade network in §FIndia§! is: [?HKG_indian_opium_progress]%"
 
 #### Tooltips
 
@@ -324,6 +332,8 @@ HKG_burmese_opium_tt:0 "§GThis will allow us to begin expanding our opium netwo
 HKG_thai_opium_tt:0 "§GThis will allow us to begin expanding our opium network in§! [SIA.GetNameWithFlag]"
 HKG_indian_opium_tt:0 "§GThis will allow us to begin expanding our opium network in§! [DEH.GetNameWithFlag]"
 HKG_port_refitted:0 "Our ports have been refitted for smuggling operations"
+HKG_entered_market_tt:0 "We've made an entrance to this region"
+HKG_opium_progress_plus_5:0 "The opium network will come §G5% closer§! to completion."
 
 #################
 #### Focuses ####
@@ -456,6 +466,14 @@ HKG_illegal_gambling:0 "Carte Blanche for Illegal Gambling"
 HKG_illegal_gambling_desc:0 "d"
 HKG_kill_canton:0 "Set Sights on Canton"
 HKG_kill_canton_desc:0 "d"
+HKG_pacify_guangdong:0 "Pacify Guangdong"
+HKG_pacify_guangdong_desc:0 "d"
+HKG_pacify_guangxi:0 "Pacify Guangxi"
+HKG_pacify_guangxi_desc:0 "d"
+HKG_send_li_mi:0 "Colonel Li's Playground"
+HKG_send_li_mi_desc:0 "d"
+HKG_new_guanxi_help:0 "Li Zongren's Realm"
+HKG_retain_triad_leadership:0 "Chariman Kot's Domain"
 HKG_black_market:0 "Control the Black Market"
 HKG_black_market_desc:0 "d"
 HKG_36_oaths:0 "Second Oath Taking"

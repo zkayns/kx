@@ -29,3 +29,138 @@ defined_text = {
 		localization_key = ""
 	}
 }
+
+defined_text = {
+	name = HKG_14k_influence_colour
+	text = {
+		trigger = {
+			check_variable = { HKG_14k_influence_var < 30 }
+		}
+		localization_key = HKG_low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { HKG_14k_influence_var < 60 }
+				check_variable = { HKG_14k_influence_var > 29 }
+			}
+		}
+		localization_key = HKG_moderate
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { HKG_14k_influence_var < 80 }
+				check_variable = { HKG_14k_influence_var > 59 }
+			}
+		}
+		localization_key = HKG_high
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { HKG_14k_influence_var > 79 }
+			}
+		}
+		localization_key = HKG_absolute
+	}
+}
+
+defined_text = {
+	name = HKG_sun_influence_colour
+	text = {
+		trigger = {
+			check_variable = { HKG_sun_yee_on_influence_var < 30 }
+		}
+		localization_key = HKG_low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { HKG_sun_yee_on_influence_var < 60 }
+				check_variable = { HKG_sun_yee_on_influence_var > 29 }
+			}
+		}
+		localization_key = HKG_moderate
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { HKG_sun_yee_on_influence_var < 80 }
+				check_variable = { HKG_sun_yee_on_influence_var > 59 }
+			}
+		}
+		localization_key = HKG_high
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { HKG_sun_yee_on_influence_var > 79 }
+			}
+		}
+		localization_key = HKG_absolute
+	}
+}
+
+defined_text = {
+	name = HKG_indochinese_opium_text
+	text = {
+		trigger = {
+			has_country_flag = HKG_indochinese_opium_flag
+		}
+		localization_key = HKG_indochinese_opium_text2
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = HKG_indochinese_opium_flag }
+		}
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = HKG_burmese_opium_text
+	text = {
+		trigger = {
+			has_country_flag = HKG_burmese_opium_flag
+		}
+		localization_key = HKG_burmese_opium_text2
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = HKG_burmese_opium_flag }
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = HKG_thai_opium_text
+	text = {
+		trigger = {
+			has_country_flag = HKG_thai_opium_flag
+		}
+		localization_key = HKG_thai_opium_text2
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = HKG_thai_opium_flag }
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = HKG_indian_opium_text
+	text = {
+		trigger = {
+			has_country_flag = HKG_indian_opium_flag
+		}
+		localization_key = HKG_indian_opium_text2
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = HKG_indian_opium_flag }
+		}
+		localization_key = ""
+	}
+}

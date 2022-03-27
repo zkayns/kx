@@ -235,3 +235,39 @@ HKG_14k_improve_economy = {
 		}
 	}
 }
+
+HKG_create_indochinese_opium = {
+	set_variable = { HKG_indochinese_opium_progress = 0 }
+	clamp_variable = {
+		var = HKG_indochinese_opium_progress
+		min = 0
+		max = 100
+	}
+}
+
+HKG_create_burmese_opium = {
+	set_variable = { HKG_burmese_opium_progress = 0 }
+	clamp_variable = {
+		var = HKG_burmese_opium_progress
+		min = 0
+		max = 100
+	}
+}
+
+HKG_create_thai_opium = {
+	set_variable = { HKG_thai_opium_progress = 0 }
+	clamp_variable = {
+		var = HKG_thai_opium_progress
+		min = 0
+		max = 100
+	}
+}
+
+HKG_create_indian_opium = {
+	set_variable = { HKG_indian_opium_progress = 0 }
+	clamp_variable = {
+		var = HKG_indian_opium_progress
+		min = 0
+		max = 100
+	}
+}

@@ -1394,6 +1394,44 @@ HKG_opium_decisions = {
 			custom_effect_tooltip = HKG_indochinese_opium_tt
 			hidden_effect = {
 				set_country_flag = HKG_indochinese_opium_flag
+				HKG_create_indochinese_opium = yes
+			}
+		}
+	}
+	HKG_indochinese_opium_manpower = {
+		icon = GFX_decision_caravan
+		modifier = {
+			political_power_gain = -0.1
+			weekly_manpower = -300
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			custom_trigger_tooltip = {
+				tooltip = HKG_entered_market_tt
+				trigger = { has_country_flag = HKG_indochinese_opium_flag }
+			}
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+			has_country_flag = HKG_indochinese_opium_flag
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 20
+		days_remove = 28
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium"
+			
+			custom_effect_tooltip = HKG_opium_progress_plus_5
+			hidden_effect = {
+				add_to_variable = { HKG_indochinese_opium_progress = 5 }
 			}
 		}
 	}
@@ -1426,6 +1464,7 @@ HKG_opium_decisions = {
 			custom_effect_tooltip = HKG_burmese_opium_tt
 			hidden_effect = {
 				set_country_flag = HKG_burmese_opium_flag
+				HKG_create_burmese_opium = yes
 			}
 		}
 	}
@@ -1458,6 +1497,7 @@ HKG_opium_decisions = {
 			custom_effect_tooltip = HKG_thai_opium_tt
 			hidden_effect = {
 				set_country_flag = HKG_thai_opium_flag
+				HKG_create_thai_opium = yes
 			}
 		}
 	}
@@ -1490,6 +1530,7 @@ HKG_opium_decisions = {
 			custom_effect_tooltip = HKG_indian_opium_tt
 			hidden_effect = {
 				set_country_flag = HKG_indian_opium_flag
+				HKG_create_indian_opium = yes
 			}
 		}
 	}

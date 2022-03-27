@@ -1884,6 +1884,120 @@ focus_tree = {
 		}
 	}
 	focus = { 
+		id = HKG_pacify_guangdong
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 5
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_kill_canton
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_kill_canton
+		x = -1
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_war_support = 0.05
+		}
+	}
+	focus = { 
+		id = HKG_pacify_guangxi
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 5
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_kill_canton
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_kill_canton
+		x = 1
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_war_support = 0.05
+		}
+	}
+	focus = { 
+		id = HKG_send_li_mi
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 5
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_pacify_guangxi
+		}
+		prerequisite = { 
+			focus = HKG_pacify_guangdong
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_kill_canton
+		x = -5
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_war_support = 0.05
+		}
+	}
+	focus = { 
+		id = HKG_new_guanxi_help
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 5
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_pacify_guangxi
+		}
+		prerequisite = { 
+			focus = HKG_pacify_guangdong
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_kill_canton
+		x = 0
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_war_support = 0.05
+		}
+	}
+	focus = { 
+		id = HKG_retain_triad_leadership
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 5
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_pacify_guangxi
+		}
+		prerequisite = { 
+			focus = HKG_pacify_guangdong
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_kill_canton
+		x = 5
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_war_support = 0.05
+		}
+	}
+	focus = { 
 		id = HKG_all_that_glitters
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 5
@@ -2104,1016 +2218,6 @@ focus_tree = {
 					id = hktriads.76
 					days = 4
 			}
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -1
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something1
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 1
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something2
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something1
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 0
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something3
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something2
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -3
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something4
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something2
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 0
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something5
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something2
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 3
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something6
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something3
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -3
-		y = 4
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something7
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something4
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -1
-		y = 4
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something12
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something4
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 1
-		y = 4
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something8
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something5
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 3
-		y = 4
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something9
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something6
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -3
-		y = 5
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something10
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something7
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something12
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 0
-		y = 5
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something11
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something8
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 3
-		y = 5
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something13
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something9
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something10
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something11
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 0
-		y = 6
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something14
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something13
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -2
-		y = 7
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something15
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something13
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 2
-		y = 7
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something16
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something15
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 1
-		y = 8
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something17
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something18
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 3
-		y = 9
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something19
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something18
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 5
-		y = 9
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something18
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something15
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 4
-		y = 8
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something20
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something16
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 1
-		y = 9
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something25
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something17
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something19
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something20
-		}
-		mutually_exclusive = {
-			focus = HKG_sun_yee_on_something21
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 3
-		y = 10
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something21
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something25
-		}
-		mutually_exclusive = {
-			focus = HKG_sun_yee_on_something22
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 1
-		y = 11
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something22
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something25
-		}
-		mutually_exclusive = {
-			focus = HKG_sun_yee_on_something21
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 5
-		y = 11
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something23
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something22
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 5
-		y = 12
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something24
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something22
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 7
-		y = 12
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something26
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something23
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 4
-		y = 13
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something27
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something23
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 6
-		y = 13
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something28
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something24
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 8
-		y = 13
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something29
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something21
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -1
-		y = 12
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something30
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something21
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 1
-		y = 12
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something31
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something30
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 2
-		y = 13
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something32
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something30
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 0
-		y = 13
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something33
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something29
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -2
-		y = 13
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something34
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something26
-			focus = HKG_sun_yee_on_something33
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something27
-			focus = HKG_sun_yee_on_something32
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something31
-			focus = HKG_sun_yee_on_something28
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = 3
-		y = 14
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something36
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something14
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -1
-		y = 8
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something35
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something14
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -4
-		y = 8
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something37
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something36
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -1
-		y = 9
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something38
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something35
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -3
-		y = 9
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something39
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something35
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -5
-		y = 9
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something40
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something37
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -1
-		y = 10
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = {
-		id = HKG_sun_yee_on_something41
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something38
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -3
-		y = 10
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something42
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something39
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -5
-		y = 10
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = { 
-		id = HKG_sun_yee_on_something43
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something40
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something41
-		}
-		prerequisite = { 
-			focus = HKG_sun_yee_on_something42
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_sun_yee_on
-		x = -3
-		y = 11
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_political_power = 150
-			add_stability = 0.1
 		}
 	}
 	focus = { 
