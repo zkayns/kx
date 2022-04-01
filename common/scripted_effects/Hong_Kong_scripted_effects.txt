@@ -236,6 +236,8 @@ HKG_14k_improve_economy = {
 	}
 }
 
+### OPIUM
+
 HKG_create_indochinese_opium = {
 	set_variable = { HKG_indochinese_opium_progress = 0 }
 	clamp_variable = {

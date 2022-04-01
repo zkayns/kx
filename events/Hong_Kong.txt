@@ -3470,8 +3470,143 @@ country_event = { # racketeering
 	is_triggered_only = yes
 
 	option = {
-		name = hktriads.76.a
+		name = hktriads.77.a
 		add_ideas = HKG_racketeering_idea
 		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+
+country_event = { # mekong river outposts
+	id = hktriads.78
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.78" }
+	title = hktriads.78.t
+	desc = hktriads.78.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.78.a
+		custom_effect_tooltip = HKG_opium_progress_plus_7.5
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 7.5 }
+		}
+	}
+}
+
+country_event = { # hoa traders
+	id = hktriads.79
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.79" }
+	title = hktriads.79.t
+	desc = hktriads.79.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.79.a
+		custom_effect_tooltip = HKG_opium_progress_plus_7.5
+		add_war_support = 0.02
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 7.5 }
+		}
+	}
+}
+
+country_event = { # monsoon hits our outposts
+	id = hktriads.8000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8000" }
+	title = hktriads.8000.t
+	desc = hktriads.8000.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8000.a
+		custom_effect_tooltip = HKG_opium_progress_minus_2.5
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = -2.5 }
+		}
+	}
+	option = {
+		name = hktriads.8000.b
+		add_political_power = -50
+	}
+}
+
+country_event = { # port of haiphong
+	id = hktriads.8001
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8001" }
+	title = hktriads.8001.t
+	desc = hktriads.8001.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8001.a
+		custom_effect_tooltip = HKG_opium_progress_plus_10
+		add_political_power = -50
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 10 }
+		}
+	}
+	option = {
+		name = hktriads.8001.b
+	}
+}
+
+country_event = { # conflict with lao smugglers
+	id = hktriads.8002
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8002" }
+	title = hktriads.8002.t
+	desc = hktriads.8002.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8002.a
+		custom_effect_tooltip = HKG_opium_progress_plus_5
+		remove_equipment_from_stockpile = {
+			type = infantry_equipment
+			amount = -300
+			producer = HKG
+		}
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 5 }
+		}
+	}
+	option = {
+		name = hktriads.8002.b
+		custom_effect_tooltip = HKG_opium_progress_minus_5
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = -5 }
+		}
+	}
+}
+
+country_event = { # opium production booming
+	id = hktriads.8003
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8003" }
+	title = hktriads.8003.t
+	desc = hktriads.8003.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8003.a
+		custom_effect_tooltip = HKG_opium_progress_plus_20
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 20 }
+		}
+	}
+}
+
+country_event = { # indochinese opium finalized
+	id = hktriads.80
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.80" }
+	title = hktriads.80.t
+	desc = hktriads.80.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.80.a
+		add_political_power = 60
+		add_stability = 0.03
+		add_ideas = HKG_indochinese_opium_idea
+		hidden_effect = {
+			clr_country_flag = HKG_indochinese_opium_flag
+		}
 	}
 }

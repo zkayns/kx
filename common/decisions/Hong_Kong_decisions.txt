@@ -373,9 +373,9 @@ HKG_triad_conflict_decisions = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
 			custom_trigger_tooltip = {
-					tooltip = HKG_guns_men_tt
-					check_variable = { HKG_guns_var > 149 }
-					check_variable = { HKG_men_var > 249 }
+				tooltip = HKG_guns_men_tt
+				check_variable = { HKG_guns_var > 149 }
+				check_variable = { HKG_men_var > 249 }
 			}
 		}
 		visible = {
@@ -444,9 +444,9 @@ HKG_triad_conflict_decisions = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
 			custom_trigger_tooltip = {
-					tooltip = HKG_guns_men_tt
-					check_variable = { HKG_guns_var > 199 }
-					check_variable = { HKG_men_var > 299 }
+				tooltip = HKG_guns_men_tt
+				check_variable = { HKG_guns_var > 199 }
+				check_variable = { HKG_men_var > 299 }
 			}
 		}
 		visible = {
@@ -560,8 +560,8 @@ HKG_triad_conflict_decisions = {
 			has_country_flag = HKG_sun_yee_on_chosen_flag
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
 			custom_trigger_tooltip = {
-					tooltip = HKG_guns_men_tt
-					check_variable = { HKG_men_var > 999 }
+				tooltip = HKG_guns_men_tt
+				check_variable = { HKG_men_var > 999 }
 			}
 		}
 		visible = {
@@ -1207,9 +1207,9 @@ HKG_triad_conflict_decisions = {
 			has_country_flag = HKG_14k_intel_flag
 			NOT = { has_country_flag = HKG_triad_conflict_doing_stuff }
 			custom_trigger_tooltip = {
-					tooltip = HKG_guns_men_tt
-					check_variable = { HKG_guns_var > 399 }
-					check_variable = { HKG_men_var > 599 }
+				tooltip = HKG_guns_men_tt
+				check_variable = { HKG_guns_var > 399 }
+				check_variable = { HKG_men_var > 599 }
 			}
 		}
 		visible = {
@@ -1395,6 +1395,22 @@ HKG_opium_decisions = {
 			hidden_effect = {
 				set_country_flag = HKG_indochinese_opium_flag
 				HKG_create_indochinese_opium = yes
+				country_event = {
+					id = hktriads.8000
+					days = 28
+				}
+				country_event = {
+					id = hktriads.8001
+					days = 50
+				}
+				country_event = {
+					id = hktriads.8002
+					days = 84
+				}
+				country_event = {
+					id = hktriads.8003
+					days = 140
+				}
 			}
 		}
 	}
@@ -1408,7 +1424,165 @@ HKG_opium_decisions = {
 			has_completed_focus = HKG_rev_opium_trade
 			custom_trigger_tooltip = {
 				tooltip = HKG_entered_market_tt
-				trigger = { has_country_flag = HKG_indochinese_opium_flag }
+				has_country_flag = HKG_indochinese_opium_flag
+			}
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+			has_country_flag = HKG_indochinese_opium_flag
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 20
+		days_remove = 28
+		days_re_enable = 90
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium"
+			
+			custom_effect_tooltip = HKG_opium_progress_plus_5
+			hidden_effect = {
+				add_to_variable = { HKG_indochinese_opium_progress = 5 }
+			}
+		}
+	}
+	HKG_indochinese_opium_bribe = {
+		icon = GFX_decision_generic_agreement
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			custom_trigger_tooltip = {
+				tooltip = HKG_entered_market_tt
+				has_country_flag = HKG_indochinese_opium_flag
+			}
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+			has_country_flag = HKG_indochinese_opium_flag
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 20
+		days_remove = 21
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium_bribe"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium_bribe"
+			
+			custom_effect_tooltip = HKG_opium_progress_plus_5
+			hidden_effect = {
+				add_to_variable = { HKG_indochinese_opium_progress = 5 }
+			}
+		}
+	}
+	HKG_indochinese_opium_guns = {
+		icon = GFX_decision_soldierly_discipline
+		modifier = {
+			political_power_gain = -0.10
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			custom_trigger_tooltip = {
+				tooltip = HKG_entered_market_tt
+				has_country_flag = HKG_indochinese_opium_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = HKG_guns_men_tt
+				has_equipment = { infantry_equipment > 449 }
+			}
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+			has_country_flag = HKG_indochinese_opium_flag
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		custom_cost_text = 450_infantry_equipment
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 449 }
+		}
+		days_remove = 35
+		days_re_enable = 100
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium_guns"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium_guns"
+			
+			custom_effect_tooltip = HKG_opium_progress_plus_10
+			hidden_effect = {
+				add_to_variable = { HKG_indochinese_opium_progress = 10 }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -450
+					producer = HKG
+				}
+			}
+		}
+	}
+	HKG_indochinese_opium_mekong = {
+		icon = GFX_decision_global_trade
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			custom_trigger_tooltip = {
+				tooltip = HKG_entered_market_tt
+				has_country_flag = HKG_indochinese_opium_flag
+			}
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+			has_country_flag = HKG_indochinese_opium_flag
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 20
+		days_remove = 35
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium_mekong"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium_mekong"
+			
+			country_event = {
+				id = hktriads.78
+				days = 4
+			}
+		}
+	}
+	HKG_indochinese_opium_hoa = {
+		icon = GFX_decision_generic_agreement
+		modifier = {
+			political_power_gain = -0.15
+		}
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			custom_trigger_tooltip = {
+				tooltip = HKG_entered_market_tt
+				has_country_flag = HKG_indochinese_opium_flag
 			}
 		}
 		visible = {
@@ -1424,15 +1598,49 @@ HKG_opium_decisions = {
 		fire_only_once = yes
 		
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium"
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium_hoa"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium_hoa"
 			
-			custom_effect_tooltip = HKG_opium_progress_plus_5
-			hidden_effect = {
-				add_to_variable = { HKG_indochinese_opium_progress = 5 }
+			country_event = {
+				id = hktriads.79
+				days = 2
 			}
+		}
+	}
+	HKG_indochinese_opium_final = {
+		icon = GFX_decision_go_outside
+		
+		available = {
+			has_completed_focus = HKG_rev_opium_trade
+			custom_trigger_tooltip = {
+				tooltip = HKG_entered_market_tt
+				has_country_flag = HKG_indochinese_opium_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = HKG_opium_finished
+				check_variable = { HKG_indochinese_opium_progress > 99 }
+			}
+		}
+		visible = {
+			has_country_flag = HKG_opium_decisions_allowed
+			has_country_flag = HKG_indochinese_opium_flag
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 20
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_indochinese_opium_hoa"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_indochinese_opium_hoa"
+			
+			country_event = hktriads.80
 		}
 	}
 	HKG_burmese_opium = {
