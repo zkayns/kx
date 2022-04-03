@@ -3577,7 +3577,7 @@ country_event = { # conflict with lao smugglers
 	}
 }
 
-country_event = { # opium production booming
+country_event = { # opium production booming in indochina
 	id = hktriads.8003
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8003" }
 	title = hktriads.8003.t
@@ -3589,6 +3589,132 @@ country_event = { # opium production booming
 		custom_effect_tooltip = HKG_opium_progress_plus_20
 		hidden_effect = {
 			add_to_variable = { HKG_indochinese_opium_progress = 20 }
+		}
+	}
+}
+
+country_event = { # Xishuangbanna mercenaries
+	id = hktriads.8004
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8004" }
+	title = hktriads.8004.t
+	desc = hktriads.8004.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8004.a
+		custom_effect_tooltip = HKG_opium_progress_plus_10
+		add_political_power = -25
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 5 }
+		}
+	}
+	option = {
+		name = hktriads.8004.b
+		custom_effect_tooltip = HKG_opium_progress_minus_2.5
+		add_war_support = 0.05
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = -2.5 }
+		}
+	}
+}
+
+country_event = { # hpakant jade mines
+	id = hktriads.8005
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8005" }
+	title = hktriads.8005.t
+	desc = hktriads.8005.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8005.a
+		custom_effect_tooltip = HKG_opium_progress_plus_10
+		add_stability = -0.075
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 10 }
+		}
+	}
+	option = {
+		name = hktriads.8005.b
+	}
+}
+
+country_event = { # mong hsat airbase
+	id = hktriads.8006
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8006" }
+	title = hktriads.8006.t
+	desc = hktriads.8006.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8006.a
+		custom_effect_tooltip = HKG_opium_progress_plus_10
+		add_political_power = -25
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 10 }
+		}
+	}
+}
+
+country_event = { # chao pho
+	id = hktriads.8007
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8007" }
+	title = hktriads.8007.t
+	desc = hktriads.8007.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8007.a
+		custom_effect_tooltip = HKG_opium_progress_plus_15
+		add_political_power = -25
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 15 }
+		}
+	}
+	option = {
+		name = hktriads.8007.b
+		custom_effect_tooltip = HKG_opium_progress_plus_5
+		add_political_power = 25
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 5 }
+		}
+	}
+}
+
+country_event = { # wa peoples
+	id = hktriads.8008
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8008" }
+	title = hktriads.8008.t
+	desc = hktriads.8008.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8008.a
+		custom_effect_tooltip = HKG_opium_progress_plus_20
+		add_stability = -0.03
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 20 }
+		}
+	}
+}
+
+country_event = { # Thanon Thong Chai
+	id = hktriads.8009
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.8009" }
+	title = hktriads.8009.t
+	desc = hktriads.8009.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.8009.a
+		add_war_support = -0.05
+		add_manpower = -2000
+	}
+	option = {
+		name = hktriads.8009.b
+		custom_effect_tooltip = HKG_opium_progress_minus_5
+		add_war_support = 0.05
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = -5 }
 		}
 	}
 }
@@ -3607,6 +3733,106 @@ country_event = { # indochinese opium finalized
 		add_ideas = HKG_indochinese_opium_idea
 		hidden_effect = {
 			clr_country_flag = HKG_indochinese_opium_flag
+		}
+	}
+}
+
+country_event = { # burmese opium finalized
+	id = hktriads.81
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.81" }
+	title = hktriads.81.t
+	desc = hktriads.81.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.81.a
+		add_political_power = 60
+		add_stability = 0.03
+		add_ideas = HKG_burmese_opium_idea
+		hidden_effect = {
+			clr_country_flag = HKG_burmese_opium_flag
+		}
+	}
+}
+
+country_event = { # shan poppy fields
+	id = hktriads.82
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.82" }
+	title = hktriads.82.t
+	desc = hktriads.82.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.82.a
+		custom_effect_tooltip = HKG_opium_progress_plus_15
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 15 }
+		}
+	}
+}
+
+country_event = { # protecting business in kachin
+	id = hktriads.83
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.83" }
+	title = hktriads.83.t
+	desc = hktriads.83.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.83.a
+		custom_effect_tooltip = HKG_opium_progress_plus_20
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 20 }
+		}
+	}
+}
+
+country_event = { # thai opium finalized
+	id = hktriads.84
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.84" }
+	title = hktriads.84.t
+	desc = hktriads.84.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.84.a
+		add_political_power = 60
+		add_stability = 0.03
+		add_ideas = HKG_thai_opium_idea
+		hidden_effect = {
+			clr_country_flag = HKG_thai_opium_flag
+		}
+	}
+}
+
+country_event = { # isan workers
+	id = hktriads.85
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.85" }
+	title = hktriads.85.t
+	desc = hktriads.85.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.85.a
+		custom_effect_tooltip = HKG_opium_progress_plus_15
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 15 }
+		}
+	}
+}
+
+country_event = { # disguised fields
+	id = hktriads.86
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.86" }
+	title = hktriads.86.t
+	desc = hktriads.86.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.86.a
+		custom_effect_tooltip = HKG_opium_progress_plus_15
+		hidden_effect = {
+			add_to_variable = { HKG_indochinese_opium_progress = 15 }
 		}
 	}
 }

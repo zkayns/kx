@@ -1406,5 +1406,18 @@ ideas = {
 				industrial_factory_donations = 2
 			}
 		}
+		HKG_voltron_opium_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.2
+				global_building_slots_factor = 0.2
+				local_resources_factor = 0.2
+				industrial_factory_donations = 10
+			}
+		}
 	}
 }

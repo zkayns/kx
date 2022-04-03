@@ -116,6 +116,12 @@ defined_text = {
 		}
 		localization_key = ""
 	}
+	text = {
+		trigger = {
+			has_idea = HKG_indochinese_opium_idea
+		}
+		localization_key = HKG_indochinese_opium_completed
+	}
 }
 defined_text = {
 	name = HKG_burmese_opium_text
@@ -130,6 +136,12 @@ defined_text = {
 			NOT = { has_country_flag = HKG_burmese_opium_flag }
 		}
 		localization_key = ""
+	}
+	text = {
+		trigger = {
+			has_idea = HKG_burmese_opium_idea
+		}
+		localization_key = HKG_burmese_opium_completed
 	}
 }
 
@@ -147,20 +159,10 @@ defined_text = {
 		}
 		localization_key = ""
 	}
-}
-
-defined_text = {
-	name = HKG_indian_opium_text
 	text = {
 		trigger = {
-			has_country_flag = HKG_indian_opium_flag
+			has_idea = HKG_thai_opium_idea
 		}
-		localization_key = HKG_indian_opium_text2
-	}
-	text = {
-		trigger = {
-			NOT = { has_country_flag = HKG_indian_opium_flag }
-		}
-		localization_key = ""
+		localization_key = HKG_thai_opium_completed
 	}
 }
