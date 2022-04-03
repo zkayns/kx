@@ -7106,9 +7106,9 @@ country_event = { #alliance name
 		ai_chance = { factor = 25 }
 		if = {
 			limit = { is_faction_leader = yes }
-			set_faction_name = "Mediterrainean Axis"
+			set_faction_name = "Mediterranean Axis"
 		}
-		else = { create_faction = "Mediterrainean Axis" }
+		else = { create_faction = "Mediterranean Axis" }
 		set_country_flag = ITA_activate_italian_bloc_decisions
 	}
 }
@@ -7224,7 +7224,7 @@ country_event = { #Event triggered Alliance Choice, used for Neosanfedisti
 	}
 	
 	option = {
-		name = itaforpol.2.c #Join Austria
+		name = itaforpol.2.f #Join Austria
 		trigger = {
 			NOT = { has_country_flag = ITA_austria_faction_asked }
 			country_exists = AUS
