@@ -70,7 +70,7 @@ if = {
 }
 
 set_politics = {
-	ruling_party = social_liberal
+	ruling_party = authoritarian_democrat
 	last_election = "1888.6.15"
 	election_frequency = 48
 	elections_allowed = no
@@ -81,10 +81,10 @@ set_popularities = {
 	radical_socialist = 3
 	syndicalist = 5
 	social_democrat = 13
-	social_liberal = 41
+	social_liberal = 11
 	market_liberal = 21
 	social_conservative = 10
-	authoritarian_democrat = 3
+	authoritarian_democrat = 31
 	paternal_autocrat = 2
 	national_populist = 0
 }
@@ -95,6 +95,8 @@ add_ideas = {
 	PHI_Quintin_Paredes_for_sli
 	PHI_Elpidio_Quirino_eco_sli
 	PHI_Jose_Yulo_sec_sli
+	PHI_economic_paralysis
+	PHI_ilustrado
 }
 
 country_event = { id = phil.0 days = 1 } #Intro
@@ -124,8 +126,8 @@ create_country_leader = {
 	ideology = national_populist_subtype
 }
 create_country_leader = {
-	name = "Emilio Aguinaldo"
-	picture = "gfx/leaders/PHI/Portrait_Philippines_Emilio_Aguinaldo.png"
+	name = "Theodore Roosevelt III"
+	picture = "gfx/leaders/PHI/Portrait_Philippines_Theodore_Roosevelt_III.png"
 	expire = "1960.1.1"
 	ideology = authoritarian_democrat_subtype
 }

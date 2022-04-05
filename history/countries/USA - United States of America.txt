@@ -257,24 +257,24 @@ set_autonomy = {
 # Resetting politics for all puppets which come earlier in the load order
 "PHI" = {
 	set_politics = {
-		ruling_party = social_liberal
-		last_election = "1888.6.15"
-		election_frequency = 48
-		elections_allowed = no
-}
+	ruling_party = authoritarian_democrat
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+		}
 
-    set_popularities = {
-        totalist = 2
-        radical_socialist = 3
-        syndicalist = 5
-        social_democrat = 13
-        social_liberal = 41
-        market_liberal = 21
-        social_conservative = 10
-        authoritarian_democrat = 3
-        paternal_autocrat = 2
-        national_populist = 0
-    }
+	set_popularities = {
+		totalist = 2
+		radical_socialist = 3
+		syndicalist = 5
+		social_democrat = 13
+		social_liberal = 11
+		market_liberal = 21
+		social_conservative = 10
+		authoritarian_democrat = 31
+		paternal_autocrat = 2
+		national_populist = 0
+	}
 }
 
 create_country_leader = {# William Haywood

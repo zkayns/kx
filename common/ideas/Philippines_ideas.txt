@@ -10,6 +10,26 @@ ideas = {
 			modifier = { consumer_goods_factor = 0.05 }
 			picture = economic_control_icon
 		}
+		PHI_economic_paralysis = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_economic_paralysis"}
+			modifier = { 
+				consumer_goods_factor = 0.15
+				local_resources_factor = -0.3
+				stability_factor = -0.25
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+			picture = economic_control_icon
+		}
+		PHI_ilustrado = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_ilustrado" }
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			modifier = {
+				war_support_weekly = -0.001
+				political_power_cost = 0.25
+			}
+		}		
 		PHI_aid_small = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_aid_small"}
 			modifier = { consumer_goods_factor = 0.025 }
