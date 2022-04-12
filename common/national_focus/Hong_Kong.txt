@@ -34,7 +34,7 @@ focus_tree = {
 				country_event = {
 						id = hongkong.5
 						days = 42
-						}
+				}
 			}
 		}
 	}
@@ -1829,6 +1829,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			country_event = {
+				id = hktriads.88
+				days = 4
+			}
 		}
 	}
 	focus = { 
@@ -1838,6 +1842,9 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_idea = HKG_expert_counterfeiters_idea
+			has_idea = HKG_gambling_idea
+			has_idea = HKG_racketeering_idea
 		}
 		prerequisite = { 
 			focus = HKG_reign_over_business
@@ -1852,7 +1859,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			
+			country_event = hktriads.87
 		}
 	}
 	focus = { 
@@ -1878,6 +1885,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
 			unlock_decision_category_tooltip = HKG_canton_invasion_decisions
 			add_war_support = 0.05
+			every_state = {
+				limit = { 
+					is_core_of = GXC
+				}
+				add_claim_by = HKG
+			}
 			hidden_effect = {
 				set_country_flag = HKG_kill_canton_flag
 			}

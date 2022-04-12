@@ -47,11 +47,30 @@ country_event = { #Introduction event
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.2" }
 	title = hongkong.2.t
 	desc = hongkong.2.d
+	picture = GFX_news_event_HKG_port_1
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
 		name = hongkong.2.a
+		country_event = {
+			id = hongkong.2000
+			days = 5
+		}
+	}
+}
+
+country_event = { #refugees
+	id = hongkong.2000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hongkong.2000" }
+	title = hongkong.2000.t
+	desc = hongkong.2000.d
+	picture = GFX_news_event_HKG_refugees
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = hongkong.2000.a
 	}
 }
 
@@ -3834,5 +3853,38 @@ country_event = { # disguised fields
 		hidden_effect = {
 			add_to_variable = { HKG_indochinese_opium_progress = 15 }
 		}
+	}
+}
+
+country_event = { # black market supremacy
+	id = hktriads.87
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.87" }
+	title = hktriads.87.t
+	desc = hktriads.87.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.87.a
+		custom_effect_tooltip = HKG_crime_voltron_tt
+		add_political_power = 50
+		hidden_effect = {
+			add_ideas = HKG_crime_voltron_idea
+			remove_ideas = HKG_expert_counterfeiters_idea
+			remove_ideas = HKG_gambling_idea
+			remove_ideas = HKG_racketeering_idea
+		}
+	}
+}
+
+country_event = { # new 36 oaths
+	id = hktriads.88
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.88" }
+	title = hktriads.88.t
+	desc = hktriads.88.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.88.a
+		add_stability = 0.075
 	}
 }

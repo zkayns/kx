@@ -4096,6 +4096,30 @@ spriteTypes = {
 		name = "GFX_report_event_NYC_generoso_pope_duce"
 		texturefile = "gfx/event_pictures/North America/New_York/report_event_NYC_generoso_pope_duce.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_HKG_destruction"
+		texturefile = "gfx/event_pictures/Hong_Kong/news_event_HKG_destruction.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_HKG_funeral"
+		texturefile = "gfx/event_pictures/Hong_Kong/news_event_HKG_funeral.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_HKG_port_1"
+		texturefile = "gfx/event_pictures/Hong_Kong/news_event_HKG_port_1.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_HKG_port_2"
+		texturefile = "gfx/event_pictures/Hong_Kong/news_event_HKG_port_2.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_HKG_port_3"
+		texturefile = "gfx/event_pictures/Hong_Kong/news_event_HKG_port_3.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_HKG_refugees"
+		texturefile = "gfx/event_pictures/Hong_Kong/news_event_HKG_refugees.png"
+	}
 	
 
 	### Colombia ###

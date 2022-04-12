@@ -206,7 +206,7 @@ HKG_triad_conflict_plus_1000_men = {
 	add_to_variable = { HKG_men_var = 1000 }
 }
 HKG_14k_improve_economy = {
-	if = {[
+	if = {
 		limit = { has_idea = HKG_bankruptcy_aftermath_idea_triad }
 		swap_ideas = {
 			remove_idea = HKG_bankruptcy_aftermath_idea_triad

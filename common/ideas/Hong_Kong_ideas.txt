@@ -1367,6 +1367,28 @@ ideas = {
 				stability_factor = -0.05
 			}
 		}
+		HKG_crime_voltron_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				industrial_concern_cost_factor = -0.25
+				weapons_manufacturer_cost_factor = -0.25
+				tank_manufacturer_cost_factor = -0.25
+				naval_manufacturer_cost_factor = -0.25
+				aircraft_manufacturer_cost_factor = -0.25
+				stability_factor = -0.075
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.10
+				line_change_production_efficiency_factor = 0.10
+				trade_opinion_factor = -0.5
+				min_export = 0.1
+			}
+		}
 		HKG_indochinese_opium_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
