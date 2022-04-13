@@ -237,4 +237,20 @@ opinion_modifiers = {
 	NYC_citizen_kane = {
 		value = 100
 	}
+
+	HKG_agreed_to_peace1 = {
+		value = 60
+	}
+	
+	HKG_agreed_to_peace2 = {
+		value = 60
+	}
+
+	HKG_snitched1 = {
+		value = -60
+	}
+	
+	HKG_snitched2 = {
+		value = -60
+	}
 }

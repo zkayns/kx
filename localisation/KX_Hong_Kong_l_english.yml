@@ -377,6 +377,10 @@ HKG_crime_voltron_tt:0 "§GOur economy ideas will be merged into a single idea.�
 HKG_canton_invasion_infiltration_tt:0 "We will obtain a §Gbonus to Army and Civilian Intel§! when the Canton War begins."
 HKG_canton_invasion_soldiers_tt:0 "§GEight infantry regiments§! will rise up in Guangdong when the Canton War begins."
 HKG_canton_invasion_allies_tt:0 "Should any country accept, they §Gwill break their alliance with Liangguang§! when the Canton War begins."
+HKG_agreed_to_peace1:0 "Neutral in the Canton War"
+HKG_agreed_to_peace2:0 "Increased Our Treasury"
+HKG_snitched1:0 "Loyal to Federalists"
+HKG_snitched2:0 "Tried to Bribe Us"
 
 #################
 #### Focuses ####
@@ -974,11 +978,11 @@ hktriads.27.d:0 "we need to get wo on lok on our side to help us fight 14k"
 hktriads.27.a:0 "idk threaten them or something -> no support"
 hktriads.27.b:0 "offer them concessions -> leads to getting support"
 
-hktriads.2701.t:0 "The Wo On Lok [something]!"
+hktriads.2701.t:0 "Wo On Lok Defiant!"
 hktriads.2701.d:0 "related to decision"
 hktriads.2701.a:0 "-syo pop"
 
-hktriads.2702.t:0 "The Wo On Lok Submits!"
+hktriads.2702.t:0 "Wo On Lok Submits!"
 hktriads.2702.d:0 "related to decision"
 hktriads.2702.a:0 "+syo pop"
 
@@ -1260,14 +1264,14 @@ hktriads.7000.d:0 "we're in control"
 hktriads.7000.a:0 "heck yes"
 
 hktriads.71.t:0 "The Hong Kong Jewish Club"
-hktriads.71.d:0 "when he isn't around it's gonna be mad easier to make a move on the juice"
+hktriads.71.d:0 "disband it"
 hktriads.71.a:0 "mhm"
 
-hktriads.72.t:0 "cohen escapes (confirmed 100)"
-hktriads.72.d:0 "we didn't get him but he escaped so w/e"
+hktriads.72.t:0 "expulsion of the jews"
+hktriads.72.d:0 "goodbye"
 hktriads.72.a:0 "seize their shit"
 
-hktriads.73.t:0 "seized juice's shit and they gone"
+hktriads.73.t:0 "seized their and they gone"
 hktriads.73.d:0 "i mean what choice did they have"
 hktriads.73.a:0 "dsdafgwes"
 
@@ -1377,3 +1381,16 @@ hktriads.87.a:0 "splendid"
 hktriads.88.t:0 "Retake the Thirty-Six Oaths"
 hktriads.88.d:0 "second initiation ritual for everyone as a symbol of a new age for the triads"
 hktriads.88.a:0 "splendid"
+
+hktriads.89.t:0 "[HKG.GetName] Offers Gold for Neutrality"
+hktriads.89.d:0 "the triads asked us to break our alliance with the federalists in exchange for gold"
+hktriads.89.a:0 "sure i like gold"
+hktriads.89.b:0 "no"
+
+hktriads.90.t:0 "[FROM.GetName] Agrees to the Deal!"
+hktriads.90.d:0 "they won't help the federalists in the war but we will have to pay them"
+hktriads.90.a:0 "nice"
+
+hktriads.91.t:0 "[FROM.GetName] Pledges Loyalty to the Federalist Cause!"
+hktriads.91.d:0 "they will help the federalists"
+hktriads.91.a:0 "zamn"

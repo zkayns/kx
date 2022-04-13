@@ -163,6 +163,9 @@ country_event = { #Organizing countermeasures
 
 	option = {
 		name = hongkong.6.a
+		ai_chance = {
+			factor = 70
+		}
 		add_manpower = -150
 		hidden_effect = {
 			set_country_flag = HKG_triadwar_eliminate_leaders
@@ -170,6 +173,9 @@ country_event = { #Organizing countermeasures
 	}
 	option = {
 		name = hongkong.6.b
+		ai_chance = {
+			factor = 30
+		}
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = -250
@@ -213,6 +219,9 @@ country_event = { #Countermeasures
 
 	option = {
 		name = hongkong.7.a
+		ai_chance = {
+			factor = 60
+		}
 		trigger = {
 			has_country_flag = HKG_triadwar_eliminate_leaders
 		}
@@ -226,6 +235,9 @@ country_event = { #Countermeasures
 	}
 	option = {
 		name = hongkong.7.b
+		ai_chance = {
+			factor = 40
+		}
 		trigger = {
 			has_country_flag = HKG_triadwar_eliminate_leaders
 		}
@@ -240,6 +252,9 @@ country_event = { #Countermeasures
 	}
 	option = {
 		name = hongkong.7.c
+		ai_chance = {
+			factor = 40
+		}
 		trigger = {
 			has_country_flag = HKG_triadwar_tackle_outposts
 		}
@@ -257,6 +272,9 @@ country_event = { #Countermeasures
 	}
 	option = {
 		name = hongkong.7.e
+		ai_chance = {
+			factor = 60
+		}
 		trigger = {
 			has_country_flag = HKG_triadwar_tackle_outposts
 		}
@@ -802,11 +820,17 @@ country_event = { #Conflicted Loyalties
 
 	option = {
 		name = hktriads.1.a
+		ai_chance = {
+			factor = 10
+		}
 		add_manpower = -400
-		add_political_power = -15
+		add_political_power = -60
 	}
 	option = {
 		name = hktriads.1.b
+		ai_chance = {
+			factor = 40
+		}
 		custom_effect_tooltip = HKG_loyalties_tt1
 		add_timed_idea = {
 			idea = HKG_loyalties_crack_idea
@@ -821,6 +845,9 @@ country_event = { #Conflicted Loyalties
 	}
 	option = {
 		name = hktriads.1.c
+		ai_chance = {
+			factor = 50
+		}
 		custom_effect_tooltip = HKG_loyalties_tt2
 		add_ideas = HKG_loyalties_appease_idea
 		hidden_effect = {
@@ -856,11 +883,17 @@ country_event = { #Conflicted Loyalties pt. 3
 
 	option = {
 		name = hktriads.3.a
+		ai_chance = {
+			factor = 20
+		}
 		remove_ideas = HKG_loyalties_appease_idea
 		add_ideas = HKG_cronies_payment_idea
 	}
 	option = {
 		name = hktriads.3.b
+		ai_chance = {
+			factor = 80
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.4
@@ -1142,11 +1175,17 @@ country_event = { # introduction to 49ers
 
 	option = {
 		name = hktriads.21.a
+		ai_chance = {
+			factor = 70
+		}
 		add_manpower = 30000
 		add_political_power = -25
 	}
 	option = {
 		name = hktriads.21.b
+		ai_chance = {
+			factor = 30
+		}
 		add_ideas = HKG_better_49ers_idea
 		add_political_power = 25
 	}
@@ -1638,6 +1677,9 @@ country_event = { # SYO allying WOL
 
 	option = {
 		name = hktriads.27.a
+		ai_chance = {
+			factor = 34
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.2701
@@ -1647,6 +1689,9 @@ country_event = { # SYO allying WOL
 	}
 	option = {
 		name = hktriads.27.b
+		ai_chance = {
+			factor = 66
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.2702
@@ -1808,6 +1853,9 @@ country_event = { #legationary arsenal 1
 
 	option = {
 		name = hktriads.34.a
+		ai_chance = {
+			factor = 70
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.3401
@@ -1817,6 +1865,9 @@ country_event = { #legationary arsenal 1
 	}
 	option = {
 		name = hktriads.34.b
+		ai_chance = {
+			factor = 30
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.3402
@@ -1835,6 +1886,9 @@ country_event = { #legationary arsenal 2
 
 	option = {
 		name = hktriads.3401.a
+		ai_chance = {
+			factor = 90
+		}
 		trigger = {
 			check_variable = { HKG_guns_var > 399 }
 			check_variable = { HKG_men_var > 599 }
@@ -1853,6 +1907,9 @@ country_event = { #legationary arsenal 2
 	}
 	option = {
 		name = hktriads.3401.b
+		ai_chance = {
+			factor = 10
+		}
 		add_political_power = -25
 		custom_effect_tooltip = HKG_triad_conflict_14k_plus_plus_tt
 		hidden_effect = {
@@ -2030,6 +2087,9 @@ country_event = { # two-gun cohen's assistance?
 
 	option = {
 		name = hktriads.38.a
+		ai_chance = {
+			factor = 50
+		}
 		custom_effect_tooltip = HKG_cohen_general_tt
 		add_political_power = -25
 		custom_effect_tooltip = HKG_triad_conflict_14k_plus_tt
@@ -2052,12 +2112,16 @@ country_event = { # two-gun cohen's assistance?
 	}
 	option = {
 		name = hktriads.38.b
-		add_stability = 0.05
-		hidden_effect = {
+		ai_chance = {
+			factor = 5
 		}
+		add_stability = 0.05
 	}
 	option = {
 		name = hktriads.38.c
+		ai_chance = {
+			factor = 45
+		}
 		add_stability = -0.1
 		add_ideas = HKG_jewish_suppression_idea
 		custom_effect_tooltip = HKG_triad_conflict_14k_plus_plus_tt
@@ -2139,6 +2203,9 @@ country_event = { # should we kill heung chin
 
 	option = {
 		name = hktriads.42.a
+		ai_chance = {
+			factor = 40
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.4200
@@ -2148,6 +2215,9 @@ country_event = { # should we kill heung chin
 	}
 	option = {
 		name = hktriads.42.b
+		ai_chance = {
+			factor = 60
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.4201
@@ -2523,6 +2593,9 @@ country_event = { # council of 18 syndicates pt.1 introduction
 
 	option = {
 		name = hktriads.55.a
+		ai_chance = {
+			factor = 30
+		}
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		add_political_power = 25
 		hidden_effect = {
@@ -2536,6 +2609,9 @@ country_event = { # council of 18 syndicates pt.1 introduction
 	}
 	option = {
 		name = hktriads.55.b
+		ai_chance = {
+			factor = 40
+		}
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		add_political_power = 25
 		hidden_effect = {
@@ -2549,6 +2625,9 @@ country_event = { # council of 18 syndicates pt.1 introduction
 	}
 	option = {
 		name = hktriads.55.c
+		ai_chance = {
+			factor = 40
+		}
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		add_political_power = 25
 		hidden_effect = {
@@ -2571,6 +2650,9 @@ country_event = { # council of 18 syndicates pt.2 first meeting
 
 	option = {
 		name = hktriads.56.a
+		ai_chance = {
+			factor = 20
+		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
 			add_timed_idea = {
 				idea = HKG_18_syndicates_military_3
@@ -2592,6 +2674,9 @@ country_event = { # council of 18 syndicates pt.2 first meeting
 	}
 	option = {
 		name = hktriads.56.b
+		ai_chance = {
+			factor = 30
+		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
 			add_timed_idea = {
 				idea = HKG_18_syndicates_economy_3
@@ -2613,6 +2698,9 @@ country_event = { # council of 18 syndicates pt.2 first meeting
 	}
 	option = {
 		name = hktriads.56.c
+		ai_chance = {
+			factor = 50
+		}
 		if = { limit = { has_country_flag = HKG_18_syndicates_3_months } 
 			add_timed_idea = {
 				idea = HKG_18_syndicates_politics_3
@@ -2729,10 +2817,16 @@ country_event = { # destroy wo on lok
 
 	option = {
 		name = hktriads.59.a
+		ai_chance = {
+			factor = 30
+		}
 		add_stability = -0.075
 	}
 	option = {
 		name = hktriads.59.b
+		ai_chance = {
+			factor = 50
+		}
 		add_war_support = 0.02
 		hidden_effect = {
 			country_event = {
@@ -2743,6 +2837,9 @@ country_event = { # destroy wo on lok
 	}
 	option = {
 		name = hktriads.59.c
+		ai_chance = {
+			factor = 20
+		}
 		add_stability = 0.02
 		hidden_effect = {
 			country_event = {
@@ -2762,6 +2859,9 @@ country_event = { # destroy wo on lok - kill 1
 
 	option = {
 		name = hktriads.60.a
+		ai_chance = {
+			factor = 80
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.62
@@ -2771,6 +2871,9 @@ country_event = { # destroy wo on lok - kill 1
 	}
 	option = {
 		name = hktriads.60.b
+		ai_chance = {
+			factor = 20
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.63
@@ -2789,6 +2892,9 @@ country_event = { # destroy wo on lok - negotiate
 
 	option = {
 		name = hktriads.61.a
+		ai_chance = {
+			factor = 55
+		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.60
@@ -2798,6 +2904,9 @@ country_event = { # destroy wo on lok - negotiate
 	}
 	option = {
 		name = hktriads.61.b
+		ai_chance = {
+			factor = 45
+		}
 		add_stability = -0.075
 	}
 }
@@ -2905,6 +3014,9 @@ country_event = { # sun yee on remnants pt. 1
 
 	option = {
 		name = hktriads.67.a
+		ai_chance = {
+			factor = 40
+		}
 		trigger = {
 			AND = {
 				has_idea = HKG_jewish_suppression_idea1
@@ -2922,6 +3034,9 @@ country_event = { # sun yee on remnants pt. 1
 	}
 	option = {
 		name = hktriads.67.b
+		ai_chance = {
+			factor = 40
+		}
 		trigger = {
 			has_idea = HKG_wo_on_lok_sun_yee_on_ally
 		}
@@ -2935,6 +3050,9 @@ country_event = { # sun yee on remnants pt. 1
 	}
 	option = {
 		name = hktriads.67.c
+		ai_chance = {
+			factor = 100
+		}
 		trigger = {
 			NOT = { has_idea = HKG_wo_on_lok_sun_yee_on_ally }
 		}
@@ -3557,6 +3675,9 @@ country_event = { # port of haiphong
 
 	option = {
 		name = hktriads.8001.a
+		ai_chance = {
+			factor = 95
+		}
 		custom_effect_tooltip = HKG_opium_progress_plus_10
 		add_political_power = -50
 		hidden_effect = {
@@ -3565,6 +3686,9 @@ country_event = { # port of haiphong
 	}
 	option = {
 		name = hktriads.8001.b
+		ai_chance = {
+			factor = 5
+		}
 	}
 }
 
@@ -3577,6 +3701,9 @@ country_event = { # conflict with lao smugglers
 
 	option = {
 		name = hktriads.8002.a
+		ai_chance = {
+			factor = 100
+		}
 		custom_effect_tooltip = HKG_opium_progress_plus_5
 		remove_equipment_from_stockpile = {
 			type = infantry_equipment
@@ -3589,6 +3716,9 @@ country_event = { # conflict with lao smugglers
 	}
 	option = {
 		name = hktriads.8002.b
+		ai_chance = {
+			factor = 1
+		}
 		custom_effect_tooltip = HKG_opium_progress_minus_5
 		hidden_effect = {
 			add_to_variable = { HKG_indochinese_opium_progress = -5 }
@@ -3621,6 +3751,9 @@ country_event = { # Xishuangbanna mercenaries
 
 	option = {
 		name = hktriads.8004.a
+		ai_chance = {
+			factor = 99
+		}
 		custom_effect_tooltip = HKG_opium_progress_plus_10
 		add_political_power = -25
 		hidden_effect = {
@@ -3629,6 +3762,9 @@ country_event = { # Xishuangbanna mercenaries
 	}
 	option = {
 		name = hktriads.8004.b
+		ai_chance = {
+			factor = 1
+		}
 		custom_effect_tooltip = HKG_opium_progress_minus_2.5
 		add_war_support = 0.05
 		hidden_effect = {
@@ -3646,6 +3782,9 @@ country_event = { # hpakant jade mines
 
 	option = {
 		name = hktriads.8005.a
+		ai_chance = {
+			factor = 99
+		}
 		custom_effect_tooltip = HKG_opium_progress_plus_10
 		add_stability = -0.075
 		hidden_effect = {
@@ -3654,6 +3793,9 @@ country_event = { # hpakant jade mines
 	}
 	option = {
 		name = hktriads.8005.b
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -3683,6 +3825,9 @@ country_event = { # chao pho
 
 	option = {
 		name = hktriads.8007.a
+		ai_chance = {
+			factor = 70
+		}
 		custom_effect_tooltip = HKG_opium_progress_plus_15
 		add_political_power = -25
 		hidden_effect = {
@@ -3691,6 +3836,9 @@ country_event = { # chao pho
 	}
 	option = {
 		name = hktriads.8007.b
+		ai_chance = {
+			factor = 30
+		}
 		custom_effect_tooltip = HKG_opium_progress_plus_5
 		add_political_power = 25
 		hidden_effect = {
@@ -3725,11 +3873,17 @@ country_event = { # Thanon Thong Chai
 
 	option = {
 		name = hktriads.8009.a
+		ai_chance = {
+			factor = 80
+		}
 		add_war_support = -0.05
 		add_manpower = -2000
 	}
 	option = {
 		name = hktriads.8009.b
+		ai_chance = {
+			factor = 20
+		}
 		custom_effect_tooltip = HKG_opium_progress_minus_5
 		add_war_support = 0.05
 		hidden_effect = {
@@ -3885,6 +4039,70 @@ country_event = { # new 36 oaths
 
 	option = {
 		name = hktriads.88.a
-		add_stability = 0.075
+		add_stability = 0.05
+	}
+}
+
+country_event = { # an offer from the 14k
+	id = hktriads.89
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.89" }
+	title = hktriads.89.t
+	desc = hktriads.89.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.89.a
+		ai_chance = {
+			factor = 68
+		}
+		set_country_flag = HKG_agreed_to_peace
+		HKG = { country_event = { id = hktriads.90 days = 3 } }
+	}
+	option = {
+		name = hktriads.89.b
+		ai_chance = {
+			factor = 32
+		}
+		HKG = { country_event = { id = hktriads.91 days = 3 } }
+	}
+}
+
+country_event = { # they accepted
+	id = hktriads.90
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.90" }
+	title = hktriads.90.t
+	desc = hktriads.90.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.90.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = HKG_agreed_to_peace1
+		}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = HKG_agreed_to_peace2
+		}
+	}
+}
+
+country_event = { # they accepted
+	id = hktriads.91
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.91" }
+	title = hktriads.91.t
+	desc = hktriads.91.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.91.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = HKG_snitched1
+		}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = HKG_snitched2
+		}
 	}
 }

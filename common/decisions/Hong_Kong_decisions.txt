@@ -2407,6 +2407,9 @@ HKG_canton_invasion_decisions = {
 		
 		available = {
 			has_completed_focus = HKG_kill_canton
+			GXC = {
+				is_faction_leader = yes
+			}
 			NOT = { has_war_with = GXC }
 			OR = {
 				HNN = { is_in_faction_with = GXC }
@@ -2417,6 +2420,9 @@ HKG_canton_invasion_decisions = {
 		}
 		visible = {
 			has_country_flag = HKG_kill_canton_flag
+			GXC = {
+				is_faction_leader = yes
+			}
 		}
 
 		ai_will_do = {
