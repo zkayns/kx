@@ -505,8 +505,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/obammunism_group.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_national_marxist_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/national_marxist_group.png"
+		name = "GFX_ideology_germanic_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/germanic_socialism_group.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_left_eurasianism_subtype"
@@ -706,6 +706,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_eco_anarchism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/eco_anarchism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_sandinismo_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/sandinismo_group.png"
 	}
 	
 	spriteType = {
@@ -923,6 +927,10 @@ spriteTypes = {
 		name = "GFX_ideology_paternal_socialism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/paternal_socialism_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_soccon_ukrainian_conservatism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_ukrainian_conservatism_group.png"
+	}
 	
 	spriteType = {
 		name = "GFX_ideology_autdem_christian_democracy_subtype"
@@ -1004,6 +1012,10 @@ spriteTypes = {
 		name = "GFX_ideology_authdem_pan_asianism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/authdem_pan_asianism_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_ukrainian_conservatism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/ukrainian_conservatism_group.png"
+	}
 	
 	spriteType = {
 		name = "GFX_ideology_junta_subtype"
@@ -1084,6 +1096,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_pataut_authoritarian_liberalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/pataut_authoritarian_liberalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_ukrainian_conservatism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_ukrainian_conservatism_group.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_pataut_pan_asianism_subtype"
