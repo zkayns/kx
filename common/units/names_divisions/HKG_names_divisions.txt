@@ -1,5 +1,5 @@
 HKG_MIL_01 = {
-	name = "Hong Kong Police Squadron"
+	name = "Militia Divisions"
 
 	for_countries = { HKG }
 
@@ -39,7 +39,7 @@ HKG_MIL_01 = {
 }
 
 HKG_MIL_02 = {
-	name = "Anti-Socialist Brigade"
+	name = "Infantry Divisions"
 
 	for_countries = { HKG }
 
@@ -79,7 +79,7 @@ HKG_MIL_02 = {
 }
 
 HKG_INF_01 = {
-	name = "Sun Yee On Regiment"
+	name = "Infantry Divisions"
 
 	for_countries = { HKG }
 
@@ -90,30 +90,58 @@ HKG_INF_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { HKG_INF_02 }
 
-	fallback_name = "%d. Infantry Regiment""
+	fallback_name = "%d. Sun Yee On Bubing Zhen""
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "%dst Infantry Regiment" }
-		2 = { "%dnd Infantry Regiment" }
-		3 = { "%drd Infantry Regiment" }
-		4 = { "%dth Infantry Regiment" }
-		5 = { "%dth Infantry Regiment" }
-		6 = { "%dth Infantry Regiment" }
-		7 = { "%dth Infantry Regiment" }
-		8 = { "%dth Infantry Regiment" }
-		9 = { "%dth Infantry Regiment" }
-		10 = { "%dth Infantry Regiment" }
-		11 = { "%dth Infantry Regiment" }
-		12 = { "%dth Infantry Regiment" }
-		13 = { "%dth Infantry Regiment" }
-		14 = { "%dth Infantry Regiment" }
-		15 = { "%dth Infantry Regiment" }
-		16 = { "%dth Infantry Regiment" }
-		17 = { "%dth Infantry Regiment" }
-		18 = { "%dth Infantry Regiment" }
-		19 = { "%dth Infantry Regiment" }
-		20 = { "%dth Infantry Regiment" }
+		1 = { "%d. Bubing Zhen" }
+		2 = { "%d. Bubing Zhen" }
+		3 = { "%d. Bubing Zhen" }
+		4 = { "%d. Bubing Zhen" }
+		5 = { "%d. Bubing Zhen" }
+		6 = { "%d. Bubing Zhen" }
+		7 = { "%d. Bubing Zhen" }
+		8 = { "%d. Bubing Zhen" }
+		9 = { "%d. Bubing Zhen" }
+		10 = { "%d. Bubing Zhen" }
+		11 = { "%d. Bubing Zhen" }
+		12 = { "%d. Bubing Zhen" }
+		13 = { "%d. Bubing Zhen" }
+		14 = { "%d. Bubing Zhen" }
+		15 = { "%d. Bubing Zhen" }
+		16 = { "%d. Bubing Zhen" }
+		17 = { "%d. Bubing Zhen" }
+		18 = { "%d. Bubing Zhen" }
+		19 = { "%d. Bubing Zhen" }
+		20 = { "%d. Bubing Zhen" }
+	}
+}
+
+HKG_INF_02 = {
+	name = "Infantry Divisions"
+
+	for_countries = { HKG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HKG_INF_02 }
+
+	fallback_name = "%d. Sun Yee On Bubing Zhen""
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d. Shenzen Bubing Zhen" }
+		2 = { "%d. Huizhou Bubing Zhen" }
+		3 = { "%d. Dongguan Bubing Zhen" }
+		4 = { "%d. Qingyuan Bubing Zhen" }
+		5 = { "%d. Heyuan Bubing Zhen" }
+		6 = { "%d. Jiangmen Bubing Zhen" }
+		7 = { "%d. Zhaoqing Bubing Zhen" }
+		8 = { "%d. Jieyang Bubing Zhen" }
 	}
 }

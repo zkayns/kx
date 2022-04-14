@@ -1441,5 +1441,69 @@ ideas = {
 				industrial_factory_donations = 10
 			}
 		}
+		HKG_concessions_from_hkg = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		HKG_concessions_to_hnn = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		HKG_concessions_to_yun = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		HKG_concessions_to_szc = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		HKG_concessions_to_xsm = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		HKG_canton_war_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_war_with = GXC
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				planning_speed = 0.1
+				army_org_factor = 0.15
+				war_support_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = GXC
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+		}
 	}
 }

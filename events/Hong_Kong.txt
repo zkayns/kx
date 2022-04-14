@@ -1,5 +1,6 @@
 add_namespace = hongkong
 add_namespace = hktriads
+add_namespace = hknews
 
 country_event = { #Introduction event
 	id = hongkong.0
@@ -4104,5 +4105,50 @@ country_event = { # they accepted
 			target = ROOT
 			modifier = HKG_snitched2
 		}
+	}
+}
+
+country_event = { # victory in the canton war
+	id = hktriads.92
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.92" }
+	title = hktriads.92.t
+	desc = hktriads.92.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.92.a
+		add_political_power = 100
+		every_owned_state = {
+			limit = {
+				NOT = { is_core_of = HKG }
+			}
+			set_demilitarized_zone = yes
+		}
+	}
+}
+
+### NEWS EVENTS
+
+news_event = { #The Canton War
+	id = hknews.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hknews.1" }
+	title = hknews.1.t
+	desc = hknews.1.d
+	picture = GFX_news_event_china_war
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	show_major = {
+		regional_asia_news = yes
+	}
+
+	option = {
+		name = hknews.1
 	}
 }

@@ -273,3 +273,156 @@ HKG_create_indian_opium = {
 		max = 100
 	}
 }
+
+### CANTON WAR
+
+HKG_begin_canton_war = {
+	if = {
+		limit = {
+			has_country_flag = HKG_canton_invasion_infiltrated
+		}
+		add_intel = {
+			target = GXC
+			civilian_intel = 50
+		}
+		add_intel = {
+			target = GXC
+			army_intel = 40
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HKG_canton_invasion_soldiered
+		}
+		load_oob = "HKG_14K_canton"
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HKG_canton_invasion_allied
+			HNN = { has_country_flag = HKG_agreed_to_peace }
+		}
+		HNN = {
+			add_timed_idea = {
+				idea = HKG_concessions_from_hkg
+				days = 90
+			}
+			leave_faction = yes
+			white_peace_with_ROOT = yes
+			diplomatic_relation = {
+				country = HKG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_timed_idea = {
+			idea = HKG_concessions_to_hnn
+			days = 90
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HKG_canton_invasion_allied
+			YUN = { has_country_flag = HKG_agreed_to_peace }
+		}
+		YUN = {
+			add_timed_idea = {
+				idea = HKG_concessions_from_hkg
+				days = 90
+			}
+			leave_faction = yes
+			white_peace_with_ROOT = yes
+			diplomatic_relation = {
+				country = HKG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_timed_idea = {
+			idea = HKG_concessions_to_yun
+			days = 90
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HKG_canton_invasion_allied
+			SZC = { has_country_flag = HKG_agreed_to_peace }
+		}
+		SZC = {
+			add_timed_idea = {
+				idea = HKG_concessions_from_hkg
+				days = 90
+			}
+			leave_faction = yes
+			white_peace_with_ROOT = yes
+			diplomatic_relation = {
+				country = HKG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_timed_idea = {
+			idea = HKG_concessions_to_szc
+			days = 90
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HKG_canton_invasion_allied
+			XSM = { has_country_flag = HKG_agreed_to_peace }
+		}
+		XSM = {
+			add_timed_idea = {
+				idea = HKG_concessions_from_hkg
+				days = 90
+			}
+			leave_faction = yes
+			white_peace_with_ROOT = yes
+			diplomatic_relation = {
+				country = HKG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_timed_idea = {
+			idea = HKG_concessions_to_xsm
+			days = 90
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HKG_canton_invasion_allied
+			XSM = { has_country_flag = HKG_agreed_to_peace }
+		}
+		XSM = {
+			add_timed_idea = {
+				idea = HKG_concessions_from_hkg
+				days = 90
+			}
+			leave_faction = yes
+			white_peace_with_ROOT = yes
+			diplomatic_relation = {
+				country = HKG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_timed_idea = {
+			idea = HKG_concessions_to_xsm
+			days = 90
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HKG_canton_invasion_tacticed
+		}
+		add_idea = HKG_canton_war_idea
+	}
+	random_other_country = {
+		news_event = {
+			id = hknews.1
+			days = 1
+		}
+	}
+	clr_country_flag = HKG_kill_canton_flag
+}
+		

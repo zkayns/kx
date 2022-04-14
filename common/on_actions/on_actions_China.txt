@@ -110,6 +110,13 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					tag = HKG
+					FROM = { tag = GXC }
+				}
+				country_event = hktriads.92
+			}
+			if = {
+				limit = {
 					FROM = { tag = GEA }
 				}
 				SQI = {
