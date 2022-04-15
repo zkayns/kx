@@ -455,7 +455,7 @@ country_event = { #Triads in retreat!
 			ideology = national_populist
 			long_name = HKG_national_populist_party1_long
 			name = HKG_national_populist_party1 
-			}
+		}
 		create_country_leader = {
 			name = "Kot Siu-wong"
 			desc = "POLITICS_KOT_SIUWONG_DESC"
@@ -4123,6 +4123,142 @@ country_event = { # victory in the canton war
 				NOT = { is_core_of = HKG }
 			}
 			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = hktriads.93
+				days = 18
+			}
+			set_cosmetic_tag = HKG_14K_LIANGGUANG2
+		}
+	}
+}
+
+country_event = { # future of the country
+	id = hktriads.93
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.93" }
+	title = hktriads.93.t
+	desc = hktriads.93.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.93.a
+		trigger = {
+			NOT = { GXC = { has_country_leader = { name = "Li Zongren" ruling only = yes } } }
+		}
+		add_political_power = -25
+		hidden_effect = {
+			country_event = hktriads.94
+			days = 6
+		}
+	}
+	option = {
+		name = hktriads.93.b
+		trigger = {
+			has_country_flag = HKG_li_mi_alive
+		}
+		add_political_power = -50
+		hidden_effect = {
+			country_event = hktriads.95
+			days = 4
+		}
+	}
+	option = {
+		name = hktriads.93.c
+		add_political_power = 25
+		hidden_effect = {
+			country_event = hktriads.96
+			days = 4
+		}
+	}
+}
+
+country_event = { # li zongren contacted
+	id = hktriads.94
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.94" }
+	title = hktriads.94.t
+	desc = hktriads.94.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.94.a
+		hidden_effect = {
+			country_event = hktriads.9400
+			days = 5
+		}
+	}
+}
+
+country_event = { # li zongren contacted
+	id = hktriads.9400
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.9400" }
+	title = hktriads.9400.t
+	desc = hktriads.9400.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.9400.a
+		create_country_leader = {
+			name = "Li Zongren"
+			desc = "POLITICS_LI_ZONGREN_14K_DESC"
+			picture = "gfx/leaders/YUN/Portrait_Yunnan_Li_Zongren.png"
+			expire = "1965.1.1"
+			ideology = crime_syndicate_subtype
+			traits = { }
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = HKG_paternal_autocrat_party_14KGXC_long
+			name = HKG_paternal_autocrat_party_14KGXC
+		}
+		complete_national_focus = HKG_pacify_guangxi
+		complete_national_focus = HKG_pacify_guangdong
+		hidden_effect = {
+			set_country_flag = HKG_triads_new_guangxi
+			country_event = {
+				id = hktriads.9401
+				days = 5
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 599
+						state = 1055
+						state = 1625
+						state = 1053
+						state = 591
+						state = 1054
+					}
+				}
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
+
+country_event = { # li mi appointed
+	id = hktriads.95
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.95" }
+	title = hktriads.95.t
+	desc = hktriads.95.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.95.a
+		create_country_leader = {
+			name = "Li Mi"
+			desc = "POLITICS_LI_MI_DESC"
+			picture = "gfx/leaders/HKG/Portrait_HKG_Li_Mi_general.png"
+			expire = "1965.1.1"
+			ideology = crime_syndicate_subtype
+			traits = { }
+		}
+		hidden_effect = {
+			set_country_flag = HKG_triads_li_mi
+			country_event = {
+				id = hktriads.9500
+				days = 4
+			}
 		}
 	}
 }

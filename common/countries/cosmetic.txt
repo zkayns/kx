@@ -2247,6 +2247,10 @@ HKG_14K_LIANGGUANG = {
 	color = rgb { 0 58 167 }
 	color_ui = rgb { 0 58 167 }
 }
+HKG_14K_LIANGGUANG2 = {
+	color = rgb { 247 51 18 }
+	color_ui = rgb { 247 51 18 }
+}
 HKG_14K_KMT = {
 	color = rgb { 0 0 152 }
 	color_ui = rgb { 0 0 152 }

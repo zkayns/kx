@@ -14,6 +14,9 @@ HKG_14K_paternal_autocrat_DEF:0 "United Syndicates of Hong Kong"
 HKG_14K_LIANGGUANG_paternal_autocrat:0 "Liangguang Clique"
 HKG_14K_LIANGGUANG_paternal_autocrat_ADJ:0 "Liangguang"
 HKG_14K_LIANGGUANG_paternal_autocrat_DEF:0 "The Liangguang Clique"
+HKG_14K_LIANGGUANG2_paternal_autocrat:0 "United Syndicates of Liangguang"
+HKG_14K_LIANGGUANG2_paternal_autocrat_ADJ:0 "Liangguang"
+HKG_14K_LIANGGUANG2_paternal_autocrat_DEF:0 "United Syndicates of Liangguang"
 HKG_14K_LIANGGUANG_national_populist:0 "Liangguang Clique"
 HKG_14K_LIANGGUANG_national_populist_ADJ:0 "Liangguang"
 HKG_14K_LIANGGUANG_national_populist_DEF:0 "The Liangguang Clique"
@@ -73,6 +76,8 @@ HKG_paternal_autocrat_party1:0 "Sun Yee On"
 HKG_paternal_autocrat_party1_long:0 "Sun Yee On Triad"
 HKG_paternal_autocrat_party2:0 "14K"
 HKG_paternal_autocrat_party2_long:0 "14K Triad"
+HKG_paternal_autocrat_party_14KGXC:0 "14K-New Guangxi"
+HKG_paternal_autocrat_party_14KGXC_long:0 "14K Triad-New Guangxi Alliance"
 HKG_national_populist_party:0 "Sun Yee On"
 HKG_national_populist_party_long:0 "Sun Yee On Triad"
 HKG_national_populist_party1:0 "14K"
@@ -391,6 +396,9 @@ HKG_snitched1:0 "Loyal to Federalists"
 HKG_snitched2:0 "Tried to Bribe Us"
 HKG_canton_invasion_tactics_tt:0 "We will obtain a §Gbuff to attack and defence§! against Liangguang when the Canton War begins."
 HKG_canton_invasion_war_tt:0 "§HAll modifiers from previous decisions will become active.§!"
+HKG_canton_victory:0 "We've achieved victory in the Canton War"
+HKG_triads_new_guangxi:0 "The 14K-New Guangxi Alliance is in effect"
+HKG_triads_li_mi:0 "Colonel Li has been appointed Governor"
 
 #################
 #### Focuses ####
@@ -1404,6 +1412,28 @@ hktriads.90.a:0 "nice"
 hktriads.91.t:0 "[FROM.GetName] Pledges Loyalty to the Federalist Cause!"
 hktriads.91.d:0 "they will help the federalists"
 hktriads.91.a:0 "zamn"
+
+hktriads.92.t:0 "Victory in the Canton War!"
+hktriads.92.d:0 "we've won and now we have to deal with resistance and leadership"
+hktriads.92.a:0 "okay"
+
+hktriads.93.t:0 "Question of Leadership"
+hktriads.93.d:0 "who should take the reins now"
+hktriads.93.a:0 "try to contact li zongren"
+hktriads.93.b:0 "li mi"
+hktriads.93.c:0 "kot siu-wong"
+
+hktriads.94.t:0 "contact with li zongren established"
+hktriads.94.d:0 "hey want to govern our country?"
+hktriads.94.a:0 "pls"
+
+hktriads.9400.t:0 "Li Zongren Takes the Reins!"
+hktriads.9400.d:0 "after long negotations with kot siu-wongs delegates li zongren has agreed to work with him but insists to meet the chairman at once for futher talks"
+hktriads.9400.a:0 "see you in hong kong, general"
+
+hktriads.95.t:0 "Colonel Li Appointed Governor!"
+hktriads.95.d:0 "li mi becomes temporary governor of the two provinces and is tasked with restoring order to them"
+hktriads.95.a:0 "slick"
 
 ### WORLD NEWS
 

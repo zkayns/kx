@@ -424,5 +424,6 @@ HKG_begin_canton_war = {
 		}
 	}
 	clr_country_flag = HKG_kill_canton_flag
+	set_country_flag = HKG_canton_victory
 }
 		
