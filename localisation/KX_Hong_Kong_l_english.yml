@@ -177,6 +177,7 @@ HKG_18_syndicates_politics_3:0 "18 Syndicates Council - Focus on Internal Issues
 HKG_18_syndicates_politics_6:0 "18 Syndicates Council - Focus on Internal Issues"
 HKG_18_syndicates_politics_12:0 "18 Syndicates Council - Focus on Internal Issues"
 HKG_chairman_general:0 "Chairman-General's Reign"
+HKG_chairman_general2:0 "Chairman-General's Reign"
 HKG_expert_counterfeiters_idea:0 "Booming Counterfeiting Business"
 HKG_gambling_idea:0 "Gambling Profiteering"
 HKG_racketeering_idea:0 "Extorting Business Owners"
@@ -399,6 +400,8 @@ HKG_canton_invasion_war_tt:0 "§HAll modifiers from previous decisions will beco
 HKG_canton_victory:0 "We've achieved victory in the Canton War"
 HKG_triads_new_guangxi:0 "The 14K-New Guangxi Alliance is in effect"
 HKG_triads_li_mi:0 "Colonel Li has been appointed Governor"
+HKG_triads_kot_siuwong:0 "Chairman Kot has kept the power for himself"
+HKG_li_mi_start_tt:0 "§HColonel Li will begin his venture to subdue the newly conquered territories. Be wary that for his mission there are only two ways home: death or victory.§!"
 
 #################
 #### Focuses ####
@@ -741,6 +744,23 @@ hongkong.2.a:0 "The Pearl of the Orient will thrive!"
 hongkong.2000.t:0 "westerners leave en-masse"
 hongkong.2000.d:0 "due to the very unstable situations many refugees are leaving for aog or shanghai"
 hongkong.2000.a:0 "dang"
+
+hongkong.2001.t:0 "Requesting British Guarantees"
+hongkong.2001.d:0 "due to the very real threat of warlords on our borders we will ask the british government to protect our independence until we restore order in the city"
+hongkong.2001.a:0 "do it"
+
+hongkong.2002.t:0 "[HKG.GetName] Requests Protection!"
+hongkong.2002.d:0 "the newly independent city of hk asks for protection from the warlords while it's dealing with the internal situation"
+hongkong.2002.a:0 "cool"
+hongkong.2002.a:0 "no"
+
+hongkong.2003.t:0 "[FROM.GetName] Agrees to Protect Us!"
+hongkong.2003.d:0 "canada/britain agreed"
+hongkong.2003.a:0 "cool"
+
+hongkong.2004.t:0 "[FROM.GetName] Refuses to Protect Us!"
+hongkong.2004.d:0 "canada/britain refused"
+hongkong.2004.a:0 "fuk"
 
 hongkong.3.t:0 "Crackdown on Gun Traffickers"
 hongkong.3.d:0 "confiscating illegal firearms to the best of their abilities which isn't much at this point"
@@ -1330,7 +1350,7 @@ hktriads.8001.b:0 "its not worth it"
 hktriads.8002.t:0 "Conflict with Lao Smugglers"
 hktriads.8002.d:0 "local smugglers in lao dont like us taking over their business, should we act on them?"
 hktriads.8002.a:0 "do it"
-hktriads.8002.a:0 "its not worth it"
+hktriads.8002.b:0 "its not worth it"
 
 hktriads.8003.t:0 "Indochinese Opium Production Booming"
 hktriads.8003.d:0 "we've been successful in establishing poppy fields so far and the crops are coming in nicely"
@@ -1359,10 +1379,10 @@ hktriads.8008.t:0 "Enlist the 'Wild Wa'"
 hktriads.8008.d:0 "people of the Wa culture have been known for their partaking in the drug trade"
 hktriads.8008.a:0 "make the move"
 
-hktriads.8008.t:0 "Tough Conditions in the Thanon Thong Chai"
-hktriads.8008.d:0 "a mountain range we've been using is not actually a very good route and we're losing many transports due to bad conditions"
-hktriads.8008.a:0 "do i look like i care?"
-hktriads.8008.b:0 "set up an alternative route"
+hktriads.8009.t:0 "Tough Conditions in the Thanon Thong Chai"
+hktriads.8009.d:0 "a mountain range we've been using is not actually a very good route and we're losing many transports due to bad conditions"
+hktriads.8009.a:0 "do i look like i care?"
+hktriads.8009.b:0 "set up an alternative route"
 
 hktriads.80.t:0 "Success in Indochina!"
 hktriads.80.d:0 "when the network is finished"
@@ -1429,11 +1449,29 @@ hktriads.94.a:0 "pls"
 
 hktriads.9400.t:0 "Li Zongren Takes the Reins!"
 hktriads.9400.d:0 "after long negotations with kot siu-wongs delegates li zongren has agreed to work with him but insists to meet the chairman at once for futher talks"
-hktriads.9400.a:0 "see you in hong kong, general"
+hktriads.9400.a:0 "see you in hong kong, general
+
+hktriads.9401.t:0 "Tale of Two Generals"
+hktriads.9401.d:0 "kot siu-wong and li discuss their vision for power sharing and the future of the country in general"
+hktriads.9401.a:0 "a"
 
 hktriads.95.t:0 "Colonel Li Appointed Governor!"
 hktriads.95.d:0 "li mi becomes temporary governor of the two provinces and is tasked with restoring order to them"
 hktriads.95.a:0 "slick"
+
+hktriads.9500.t:0 "Li Mi's March West"
+hktriads.9500.d:0 "li mi organizes an expedition to secure the border regions of guangxi and guangdong"
+hktriads.9500.a:0 "slick"
+
+hktriads.96.t:0 "Chairman Kot Cements His Power"
+hktriads.96.d:0 "unwilling to trust anyone with governing the newly conquered territories, kot consolidates the power in his hands"
+hktriads.96.a:0 "slick"
+
+hktriads.9600.t:0 "Extraordinary Meeting of the Council of 18 Syndicates"
+hktriads.9600.d:0 "kot siu-wong meets with other triad higher-ups to ask them for support with pacifying liangguang"
+hktriads.9600.a:0 "dont spend much resources"
+hktriads.9600.b:0 "spend some resources"
+hktriads.9600.c:0 "spend a lot of resources"
 
 ### WORLD NEWS
 

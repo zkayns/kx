@@ -1321,6 +1321,21 @@ ideas = {
 				command_power_gain = 0.2
 			}
 		}
+		HKG_chairman_general2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			available = {
+				has_country_flag = HKG_14k_in_charge
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = -0.075
+				drift_defence_factor = 0.5
+				command_power_gain = 0.3
+			}
+		}
 		HKG_expert_counterfeiters_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
@@ -1489,9 +1504,6 @@ ideas = {
 		HKG_canton_war_idea = {
 			on_add = { 
 				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
-			}
-			available = {
-				has_war_with = GXC
 			}
 			picture = FIU_getting_pirated
 			modifier = {

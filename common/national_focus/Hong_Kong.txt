@@ -1916,6 +1916,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_command_power = -50
+			add_political_power = -15
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -1949,12 +1951,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_command_power = -50
+			add_political_power = -15
 			every_owned_state = {
 				limit = {
 					OR = {
 						state = 594
 						state = 1056
-						state = 1054
 					}
 				}
 				set_demilitarized_zone = no
@@ -2032,7 +2035,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HKG_railway_lines
-		icon = GFX_goal_ideology_paternal_autocrat
+		icon = BAY_RAILWAYS
 		cost = 5
 		available = {
 			has_government = paternal_autocrat
@@ -2565,6 +2568,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_pacify_guangxi
@@ -2589,6 +2593,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_retain_triad_leadership
@@ -2610,6 +2615,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_poppy_fields
@@ -2634,6 +2640,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_poppy_fields
@@ -2658,11 +2665,10 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_kill_yunnan_eco
-		}
-		prerequisite = { 
 			focus = HKG_guiyang
 		}
 		mutually_exclusive = {
@@ -2685,6 +2691,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_retain_triad_leadership
@@ -2706,6 +2713,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_secure_cities
@@ -2727,6 +2735,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_no_commies
@@ -2748,6 +2757,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_secure_cities
@@ -2772,6 +2782,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_secure_cities
@@ -2796,6 +2807,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_show_kindness
@@ -2821,6 +2833,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_kill_salvationists
@@ -2852,6 +2865,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_kill_salvationists
@@ -2887,6 +2901,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = HKG_show_kindness
 			focus = HKG_payment_in_plunder
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		mutually_exclusive = {
 			focus = HKG_kill_salvationists
@@ -2908,6 +2923,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			has_country_flag = HKG_triads_kot_siuwong
 		}
 		prerequisite = { 
 			focus = HKG_show_kindness

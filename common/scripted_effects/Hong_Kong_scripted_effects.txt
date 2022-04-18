@@ -290,13 +290,13 @@ HKG_begin_canton_war = {
 			army_intel = 40
 		}
 	}
-	else_if = {
+	if = {
 		limit = {
 			has_country_flag = HKG_canton_invasion_soldiered
 		}
 		load_oob = "HKG_14K_canton"
 	}
-	else_if = {
+	if = {
 		limit = {
 			has_country_flag = HKG_canton_invasion_allied
 			HNN = { has_country_flag = HKG_agreed_to_peace }
@@ -319,7 +319,7 @@ HKG_begin_canton_war = {
 			days = 90
 		}
 	}
-	else_if = {
+	if = {
 		limit = {
 			has_country_flag = HKG_canton_invasion_allied
 			YUN = { has_country_flag = HKG_agreed_to_peace }
@@ -342,7 +342,7 @@ HKG_begin_canton_war = {
 			days = 90
 		}
 	}
-	else_if = {
+	if = {
 		limit = {
 			has_country_flag = HKG_canton_invasion_allied
 			SZC = { has_country_flag = HKG_agreed_to_peace }
@@ -365,7 +365,7 @@ HKG_begin_canton_war = {
 			days = 90
 		}
 	}
-	else_if = {
+	if = {
 		limit = {
 			has_country_flag = HKG_canton_invasion_allied
 			XSM = { has_country_flag = HKG_agreed_to_peace }
@@ -388,7 +388,7 @@ HKG_begin_canton_war = {
 			days = 90
 		}
 	}
-	else_if = {
+	if = {
 		limit = {
 			has_country_flag = HKG_canton_invasion_allied
 			XSM = { has_country_flag = HKG_agreed_to_peace }
@@ -411,7 +411,7 @@ HKG_begin_canton_war = {
 			days = 90
 		}
 	}
-	else_if = {
+	if = {
 		limit = {
 			has_country_flag = HKG_canton_invasion_tacticed
 		}
@@ -424,6 +424,5 @@ HKG_begin_canton_war = {
 		}
 	}
 	clr_country_flag = HKG_kill_canton_flag
-	set_country_flag = HKG_canton_victory
 }
 		
