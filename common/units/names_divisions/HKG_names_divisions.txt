@@ -8,7 +8,7 @@ HKG_MIL_01 = {
 	division_types = { "militia" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { HKG_INF_01 }
+	#link_numbering_with = { HKG_MIL_01 }
 
 	fallback_name = "%d. Hong Kong Police Squadron"
 
@@ -45,10 +45,10 @@ HKG_MIL_02 = {
 
 	can_use = { always = yes }
 
-	division_types = { "militia" }
+	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { HKG_INF_02 }
+	#link_numbering_with = { HKG_MIL_02 }
 
 	fallback_name = "%d. Anti-Socialist Brigade"
 
@@ -90,58 +90,18 @@ HKG_INF_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { HKG_INF_02 }
 
-	fallback_name = "%d. Sun Yee On Bubing Zhen""
+	fallback_name = "%d. Paobing Zhen""
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "%d. Bubing Zhen" }
-		2 = { "%d. Bubing Zhen" }
-		3 = { "%d. Bubing Zhen" }
-		4 = { "%d. Bubing Zhen" }
-		5 = { "%d. Bubing Zhen" }
-		6 = { "%d. Bubing Zhen" }
-		7 = { "%d. Bubing Zhen" }
-		8 = { "%d. Bubing Zhen" }
-		9 = { "%d. Bubing Zhen" }
-		10 = { "%d. Bubing Zhen" }
-		11 = { "%d. Bubing Zhen" }
-		12 = { "%d. Bubing Zhen" }
-		13 = { "%d. Bubing Zhen" }
-		14 = { "%d. Bubing Zhen" }
-		15 = { "%d. Bubing Zhen" }
-		16 = { "%d. Bubing Zhen" }
-		17 = { "%d. Bubing Zhen" }
-		18 = { "%d. Bubing Zhen" }
-		19 = { "%d. Bubing Zhen" }
-		20 = { "%d. Bubing Zhen" }
-	}
-}
-
-HKG_INF_02 = {
-	name = "Infantry Divisions"
-
-	for_countries = { HKG }
-
-	can_use = { always = yes }
-
-	division_types = { "infantry" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { HKG_INF_02 }
-
-	fallback_name = "%d. Sun Yee On Bubing Zhen""
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered = {
-		1 = { "%d. Shenzen Bubing Zhen" }
-		2 = { "%d. Huizhou Bubing Zhen" }
-		3 = { "%d. Dongguan Bubing Zhen" }
-		4 = { "%d. Qingyuan Bubing Zhen" }
-		5 = { "%d. Heyuan Bubing Zhen" }
-		6 = { "%d. Jiangmen Bubing Zhen" }
-		7 = { "%d. Zhaoqing Bubing Zhen" }
-		8 = { "%d. Jieyang Bubing Zhen" }
+		1 = { "Shenzen Paobing Zhen" }
+		2 = { "Huizhou Paobing Zhen" }
+		3 = { "Dongguan Paobing Zhen" }
+		4 = { "Qingyuan Paobing Zhen" }
+		5 = { "Heyuan Paobing Zhen" }
+		6 = { "Jiangmen Paobing Zhen" }
+		7 = { "Zhaoqing Paobing Zhen" }
+		8 = { "Jieyang Paobing Zhen" }
 	}
 }

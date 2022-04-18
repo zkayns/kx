@@ -417,6 +417,7 @@ HKG_begin_canton_war = {
 		}
 		add_idea = HKG_canton_war_idea
 	}
+	transfer_state = 593
 	random_other_country = {
 		news_event = {
 			id = hknews.1

@@ -1,6 +1,6 @@
 division_template = {
 	name = "14K Paobing Zhen"
-	division_names_group = HKG_INF_02
+	division_names_group = HKG_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }

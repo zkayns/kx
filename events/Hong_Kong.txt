@@ -849,6 +849,30 @@ country_event = { #Triads takeover!
 				limit = { has_template = "Hong Kong Police Force" }
 				delete_unit_template_and_units = { division_template = "Hong Kong Police Force" }
 			}
+			diplomatic_relation = {
+				country = CAN
+				relation = non_aggression_pact
+				active = no
+			}
+			diplomatic_relation = {
+				country = ENG
+				relation = non_aggression_pact
+				active = no
+			}
+			CAN = {
+				diplomatic_relation = {
+					country = HKG
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = HKG
+					relation = guarantee
+					active = no
+				}
+			}
 		}
 	}
 	option = {
@@ -4252,12 +4276,12 @@ country_event = { # victory in the canton war
 			}
 			set_demilitarized_zone = yes
 		}
-		remove_ideas = HKG_canton_war_idea
 		hidden_effect = {
 			country_event = {
 				id = hktriads.93
 				days = 18
 			}
+			remove_ideas = HKG_canton_war_idea
 			set_cosmetic_tag = HKG_14K_LIANGGUANG2
 			set_country_flag = HKG_canton_victory
 		}
