@@ -84,7 +84,7 @@ set_popularities = {
 	social_liberal = 11
 	market_liberal = 21
 	social_conservative = 10
-	authoritarian_democrat = 31
+	authoritarian_democrat = 33
 	paternal_autocrat = 2
 	national_populist = 0
 }
@@ -97,6 +97,7 @@ add_ideas = {
 	PHI_Jose_Yulo_sec_sli
 	PHI_economic_paralysis
 	PHI_ilustrado
+	PHI_dynastic_poison
 }
 
 country_event = { id = phil.0 days = 1 } #Intro

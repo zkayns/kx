@@ -29,6 +29,15 @@ ideas = {
 				war_support_weekly = -0.001
 				political_power_cost = 0.25
 			}
+		}
+		PHI_dynastic_poison = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_dynastic_poison"}
+			modifier = { 
+				production_factory_max_efficiency_factor = -0.2 
+				conscription_factor	= -0.33
+				max_command_power_mult = -0.5 
+			}
+			picture = KTG_Mitteleuropean_Industrial_Support
 		}		
 		PHI_aid_small = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_aid_small"}
