@@ -4276,6 +4276,7 @@ country_event = { # victory in the canton war
 			}
 			set_demilitarized_zone = yes
 		}
+		add_ideas = HKG_overstretched_idea
 		hidden_effect = {
 			country_event = {
 				id = hktriads.93
@@ -4284,6 +4285,7 @@ country_event = { # victory in the canton war
 			remove_ideas = HKG_canton_war_idea
 			set_cosmetic_tag = HKG_14K_LIANGGUANG2
 			set_country_flag = HKG_canton_victory
+			clr_country_flag = HKG_canton_war_in_progress
 		}
 	}
 }
@@ -4297,6 +4299,9 @@ country_event = { # future of the country
 
 	option = {
 		name = hktriads.93.a
+		ai_chance = {
+			factor = 80
+		}
 		trigger = {
 			NOT = { GXC = { has_country_leader = { name = "Li Zongren" ruling_only = yes } } }
 		}
@@ -4310,6 +4315,9 @@ country_event = { # future of the country
 	}
 	option = {
 		name = hktriads.93.b
+		ai_chance = {
+			factor = 25
+		}
 		trigger = {
 			has_country_flag = HKG_li_mi_alive
 		}
@@ -4323,6 +4331,9 @@ country_event = { # future of the country
 	}
 	option = {
 		name = hktriads.93.c
+		ai_chance = {
+			factor = 80
+		}
 		add_political_power = 25
 		hidden_effect = {
 			country_event = {
@@ -4486,6 +4497,7 @@ country_event = { # kot siu-wong meets the council of the 18 syndicates
 
 	option = {
 		name = hktriads.9600.a
+		custom_effect_tooltip = "Our assets will pacify Liangguang over the course of the next four months."
 		add_political_power = -15
 		every_owned_state = {
 			limit = {
@@ -4493,9 +4505,18 @@ country_event = { # kot siu-wong meets the council of the 18 syndicates
 			}
 			add_compliance = 10
 		}
+		country_event = {
+			id = hktriads.9601
+			days = 100
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -250
+		}
 	}
 	option = {
 		name = hktriads.9600.b
+		custom_effect_tooltip = "Our assets will pacify Liangguang over the course of the next two months."
 		add_political_power = -50
 		every_owned_state = {
 			limit = {
@@ -4503,9 +4524,18 @@ country_event = { # kot siu-wong meets the council of the 18 syndicates
 			}
 			add_compliance = 20
 		}
+		country_event = {
+			id = hktriads.9602
+			days = 50
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -500
+		}
 	}
 	option = {
 		name = hktriads.9600.c
+		custom_effect_tooltip = "Our assets will begin pacifying Liangguang immediately!"
 		add_political_power = -100
 		every_owned_state = {
 			limit = {
@@ -4515,6 +4545,10 @@ country_event = { # kot siu-wong meets the council of the 18 syndicates
 		}
 		complete_national_focus = HKG_pacify_guangxi
 		complete_national_focus = HKG_pacify_guangdong
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -750
+		}
 		hidden_effect = {
 			every_owned_state = {
 				limit = {
@@ -4529,6 +4563,159 @@ country_event = { # kot siu-wong meets the council of the 18 syndicates
 				}
 				set_demilitarized_zone = no
 			}
+		}
+	}
+}
+
+country_event = { # li mi captures guangdong
+	id = hktriads.97
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.97" }
+	title = hktriads.97.t
+	desc = hktriads.97.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.97.a
+		add_war_support = 0.025
+	}
+}
+
+country_event = { # li mi captures guangxi
+	id = hktriads.98
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.98" }
+	title = hktriads.98.t
+	desc = hktriads.98.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.98.a
+		add_war_support = 0.025
+	}
+}
+
+country_event = { # li mi captures guangxi
+	id = hktriads.99
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.99" }
+	title = hktriads.99.t
+	desc = hktriads.99.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.99.a
+		add_war_support = 0.025
+	}
+}
+
+country_event = { # i am the state
+	id = hktriads.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.100" }
+	title = hktriads.100.t
+	desc = hktriads.100.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.100.a
+		add_stability = -0.03
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 675
+			producer = HKG
+		}
+	}
+}
+
+country_event = { # question of mayorship
+	id = hktriads.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.101" }
+	title = hktriads.101.t
+	desc = hktriads.101.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.101.a
+		add_stability = 0.05
+		add_political_power = -25
+	}
+	option = {
+		name = hktriads.101.b
+		add_stability = 0.02
+	}
+	option = {
+		name = hktriads.101.c
+		add_stability = -0.05
+		add_political_power = 25
+	}
+}
+
+country_event = { # qiongzhou
+	id = hktriads.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.102" }
+	title = hktriads.102.t
+	desc = hktriads.102.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.102.a
+		add_war_support = 0.05
+		every_owned_state = {
+			limit = {
+				state = 591
+			}
+			set_demilitarized_zone = no
+		}
+	}
+}
+
+country_event = { # ostasien border
+	id = hktriads.103
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.103" }
+	title = hktriads.103.t
+	desc = hktriads.103.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.103.a
+		add_war_support = 0.05
+		every_owned_state = {
+			limit = {
+				state = 1053
+			}
+			set_demilitarized_zone = no
+		}
+	}
+}
+
+country_event = { # nanling
+	id = hktriads.104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.104" }
+	title = hktriads.104.t
+	desc = hktriads.104.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.104.a
+		add_war_support = 0.05
+		every_owned_state = {
+			limit = {
+				state = 599
+			}
+			set_demilitarized_zone = no
 		}
 	}
 }

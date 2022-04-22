@@ -112,6 +112,7 @@ on_actions = {
 				limit = {
 					tag = HKG
 					FROM = { tag = GXC }
+					HKG = { has_country_flag = HKG_canton_war_in_progress }
 				}
 				country_event = hktriads.92
 			}

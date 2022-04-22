@@ -192,6 +192,11 @@ HKG_concessions_to_yun:0 "Monetary Concessions to Yunnan"
 HKG_concessions_to_szc:0 "Monetary Concessions to Sichuan"
 HKG_concessions_to_xsm:0 "Monetary Concessions to Xibei San Ma"
 HKG_canton_war_idea:0 "The Canton War"
+HKG_inspire_locals_idea:0 "Colonel's Private Legion"
+HKG_rely_on_triads_idea:0 "Reliance on 49ers"
+HKG_overstretched_idea:0 "Overstretched Occupation Force"
+HKG_overstretched_idea1:0 "Restoring Order in Liangguang"
+HKG_overstretched_idea2:0 "Restoring Order in Liangguang"
 hog_staunch_anti_socialist:0 "Staunch Anti-Socialist"
 hog_jewish_compromiser:0 "The Jewish Compromiser"
 two_gun_cohen:0 "'Two-Gun' Cohen"
@@ -402,6 +407,8 @@ HKG_triads_new_guangxi:0 "The 14K-New Guangxi Alliance is in effect"
 HKG_triads_li_mi:0 "Colonel Li has been appointed Governor"
 HKG_triads_kot_siuwong:0 "Chairman Kot has kept the power for himself"
 HKG_li_mi_start_tt:0 "§HColonel Li will begin his venture to subdue the newly conquered territories. Be wary that for his mission there are only two ways home: death or victory.§!"
+HKG_motorized_tt:0 "§GFour motorized units§! will be formed to assist the pacification force."
+HKG_li_mi_warning_tt:0 "§RColonel Li's influence will rise dramatically.§!"
 
 #################
 #### Focuses ####
@@ -558,7 +565,7 @@ HKG_rely_on_triads:0 "Rely on Triad Members"
 HKG_rely_on_triads_desc:0 "d"
 HKG_qiongya:0 "Cross the Qiongzhou Strait"
 HKG_qiongya_desc:0 "d"
-HKG_ostasien:0 "Secure the Ostasien Border"
+HKG_ostasien:0 "Secure the Indochinese Border"
 HKG_ostasien_desc:0 "d"
 HKG_interior:0 "Push to the Nanling Mountains"
 HKG_interior_desc:0 "d"
@@ -1412,7 +1419,7 @@ hktriads.86.t:0 "Disguising Our Fields"
 hktriads.86.d:0 "the many rice rubber and sugarcane fields in thailand can serve a cover for our opium fields"
 hktriads.86.a:0 "splendid"
 
-hktriads.87.t:0 "Supremacy Over the Black Market"
+hktriads.87.t:0 "Supremacy Over the Chinese Black Market"
 hktriads.87.d:0 "merging the eco ideas into one"
 hktriads.87.a:0 "splendid"
 
@@ -1472,6 +1479,40 @@ hktriads.9600.d:0 "kot siu-wong meets with other triad higher-ups to ask them fo
 hktriads.9600.a:0 "dont spend much resources"
 hktriads.9600.b:0 "spend some resources"
 hktriads.9600.c:0 "spend a lot of resources"
+
+hktriads.97.t:0 "Order Restored in Guangdong"
+hktriads.97.d:0 "li mi"
+hktriads.97.a:0 "slick"
+
+hktriads.98.t:0 "Order Restored in Guangxi"
+hktriads.98.d:0 "li mi"
+hktriads.98.a:0 "slick"
+
+hktriads.99.t:0 "Hong Kong-Nanning Hot Line"
+hktriads.99.d:0 "li mi"
+hktriads.99.a:0 "slick"
+
+hktriads.100.t:0 "Full Authority in the Colonel's Hands"
+hktriads.100.d:0 "temporarily replacing the mayors and judges with people loyal to him"
+hktriads.100.a:0 "slick"
+
+hktriads.101.t:0 "Question of Mayorship"
+hktriads.101.d:0 "li mi"
+hktriads.101.a:0 "keep the current mayors and judges"
+hktriads.101.b:0 "keep the current mayors"
+hktriads.101.c:0 "extort the current mayors and judges"
+
+hktriads.102.t:0 "Incorporating Hainan"
+hktriads.102.d:0 "li mi"
+hktriads.102.a:0 "a"
+
+hktriads.103.t:0 "Indochinese Incursion Threat"
+hktriads.103.d:0 "li mi"
+hktriads.103.a:0 "a"
+
+hktriads.104.t:0 "Nanling Open-pit Mines"
+hktriads.104.d:0 "li mi"
+hktriads.104.a:0 "a"
 
 ### WORLD NEWS
 

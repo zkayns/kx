@@ -1517,5 +1517,63 @@ ideas = {
 				defense_bonus_against = 0.2
 			}
 		}
+		HKG_inspire_locals_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = -0.05
+				local_supplies = 0.05
+			}
+		}
+		HKG_rely_on_triads_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				political_power_gain = 0.1
+				conscription_factor = -0.05
+			}
+		}
+		HKG_overstretched_idea = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_factory_max_efficiency_factor = -0.075
+				production_factory_efficiency_gain_factor = -0.075
+				political_power_gain = -0.1
+				stability_factor = -0.05
+			}
+		}
+		HKG_overstretched_idea1 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				political_power_gain = -0.1
+				stability_factor = -0.05
+			}
+		}
+		HKG_overstretched_idea2 = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HKG_better_49ers_idea"
+			}
+			picture = FIU_getting_pirated
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
 	}
 }
