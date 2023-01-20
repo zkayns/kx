@@ -1864,1268 +1864,6 @@ focus_tree = {
 		}
 	}
 	focus = { 
-		id = HKG_kill_canton
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		prerequisite = { 
-			focus = HKG_black_market
-		}
-		prerequisite = { 
-			focus = HKG_36_oaths
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_14k
-		x = 0
-		y = 7
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			unlock_decision_category_tooltip = HKG_canton_invasion_decisions
-			add_war_support = 0.05
-			every_state = {
-				limit = { 
-					is_core_of = GXC
-				}
-				add_claim_by = HKG
-			}
-			hidden_effect = {
-				set_country_flag = HKG_kill_canton_flag
-			}
-		}
-	}
-	focus = { 
-		id = HKG_pacify_guangdong
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_canton_victory
-		}
-		prerequisite = { 
-			focus = HKG_kill_canton
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_kill_canton
-		x = -1
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_command_power = -50
-			add_political_power = -15
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 592
-						state = 593
-						state = 800
-						state = 1012
-						state = 801
-					}
-				}
-				set_demilitarized_zone = no
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_flag = HKG_triads_li_mi
-					}
-					country_event = {
-						id = hktriads.97
-						days = 3
-					}
-				}
-			}
-		}
-	}
-	focus = { 
-		id = HKG_pacify_guangxi
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_canton_victory
-			has_completed_focus = HKG_pacify_guangdong
-		}
-		prerequisite = { 
-			focus = HKG_kill_canton
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_kill_canton
-		x = 1
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_command_power = -50
-			add_political_power = -15
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 594
-						state = 1056
-					}
-				}
-				set_demilitarized_zone = no
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_flag = HKG_triads_li_mi
-					}
-					country_event = {
-						id = hktriads.98
-						days = 5
-					}
-				}
-			}
-		}
-	}
-	focus = { 
-		id = HKG_send_li_mi
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_pacify_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_pacify_guangdong
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_kill_canton
-		x = -10
-		y = 2
-		
-		bypass = {
-			hidden_trigger = {
-				has_country_flag = HKG_triads_li_mi
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			custom_effect_tooltip = "Colonel Li Mi has been tasked with securing control in the newly conquered provinces."
-		}
-	}
-	focus = { 
-		id = HKG_telegraph
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_send_li_mi
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = -3
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_tech_bonus = {
-                name = electric_bonus
-                bonus = 1
-                uses = 2
-                category = electronics
-            }
-			random_owned_state = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-				    type = radar_station
-				    level = 1
-				    instant_build = yes
-			    }
-		    }
-			set_technology = { radio_detection = 1 popup = no }
-			country_event = {
-				id = hktriads.99
-				days = 3
-			}
-		}
-	}
-	focus = { 
-		id = HKG_supply
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_send_li_mi
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = 0
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			594 = {
-			    add_building_construction = {
-				    type = supply_node
-					province = 7044
-				    level = 1
-				    instant_build = yes
-			    }
-		    }
-			593 = {
-			    add_building_construction = {
-				    type = supply_node
-					province = 7152
-				    level = 1
-				    instant_build = yes
-			    }
-		    }
-			add_equipment_to_stockpile = {
-				type = convoy
-				amount = 75
-			}
-		}
-	}
-	focus = { 
-		id = HKG_railway_lines
-		icon = BAY_RAILWAYS
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_supply
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = 0
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			build_railway = {
-				level = 1
-				path = { 7108 1202 12095 1194 7152 1187 1087 4152 }
-			}
-			build_railway = {
-				level = 2
-				path = { 7044 12023 10050 7137}
-			}
-			add_equipment_to_stockpile = {
-				type = train_equipment
-				amount = 50
-			}
-		}
-	}
-	focus = { 
-		id = HKG_motorized
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_send_li_mi
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = 3
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_tech_bonus = {
-				name = RUS_Mechanised_Divisions
-				bonus = 0.75
-				uses = 2
-				category = cat_mechanized_equipment
-				category = motorized_equipment
-			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment_1
-				amount = 125
-				producer = HKG
-			}
-			custom_effect_tooltip = HKG_motorized_tt
-			hidden_effect = {
-				load_oob = "HKG_motorized_oob"
-			}
-		}
-	}
-	focus = { 
-		id = HKG_inspire_locals
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_motorized
-		}
-		mutually_exclusive = {
-			focus = HKG_rely_on_triads
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = 2
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			custom_effect_tooltip = HKG_li_mi_warning_tt
-			add_manpower = 15000
-			add_ideas = HKG_inspire_locals_idea
-			if = {
-				limit = {
-					has_idea = HKG_overstretched_idea
-				}
-				swap_ideas = {
-					remove_idea = HKG_overstretched_idea
-					add_idea = HKG_overstretched_idea1
-				}
-			}
-			if = {
-				limit = {
-					has_idea = HKG_overstretched_idea1
-				}
-				swap_ideas = {
-					remove_idea = HKG_overstretched_idea1
-					add_idea = HKG_overstretched_idea2
-				}
-			}
-		}
-	}
-	focus = { 
-		id = HKG_rely_on_triads
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_motorized
-		}
-		mutually_exclusive = {
-			focus = HKG_inspire_locals
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = 4
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_manpower = 5000
-			add_stability = -0.05
-			add_ideas = HKG_rely_on_triads_idea
-			add_popularity = { ideology = paternal_autocrat popularity = 0.06 }
-			if = {
-				limit = {
-					has_idea = HKG_overstretched_idea
-				}
-				swap_ideas = {
-					remove_idea = HKG_overstretched_idea
-					add_idea = HKG_overstretched_idea1
-				}
-			}
-			if = {
-				limit = {
-					has_idea = HKG_overstretched_idea1
-				}
-				swap_ideas = {
-					remove_idea = HKG_overstretched_idea1
-					add_idea = HKG_overstretched_idea2
-				}
-			}
-		}
-	}
-	focus = { 
-		id = HKG_french_words
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_telegraph
-		}
-		mutually_exclusive = {
-			focus = HKG_subdue_administrations
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = -4
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			custom_effect_tooltip = HKG_li_mi_warning_tt
-			add_stability = -0.05
-			country_event = hktriads.100
-			if = {
-				limit = {
-					has_idea = HKG_overstretched_idea
-				}
-				swap_ideas = {
-					remove_idea = HKG_overstretched_idea
-					add_idea = HKG_overstretched_idea1
-				}
-			}
-			if = {
-				limit = {
-					has_idea = HKG_overstretched_idea1
-				}
-				swap_ideas = {
-					remove_idea = HKG_overstretched_idea1
-					add_idea = HKG_overstretched_idea2
-				}
-			}
-		}
-	}
-	focus = { 
-		id = HKG_subdue_administrations
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_telegraph
-		}
-		mutually_exclusive = {
-			focus = HKG_french_words
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = -2
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			country_event = hktriads.101
-			if = {
-				limit = {
-					has_idea = HKG_overstretched_idea
-				}
-				swap_ideas = {
-					remove_idea = HKG_overstretched_idea
-					add_idea = HKG_overstretched_idea1
-				}
-			}
-			if = {
-				limit = {
-					has_idea = HKG_overstretched_idea1
-				}
-				swap_ideas = {
-					remove_idea = HKG_overstretched_idea1
-					add_idea = HKG_overstretched_idea2
-				}
-			}
-		}
-	}
-	focus = { 
-		id = HKG_qiongya
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_french_words
-			focus = HKG_subdue_administrations
-		}
-		prerequisite = { 
-			focus = HKG_railway_lines
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = -3
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_command_power = -50
-			country_event = {
-				id = hktriads.102
-				days = 5
-			}
-		}
-	}
-	focus = {
-		id = HKG_ostasien
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_inspire_locals
-			focus = HKG_rely_on_triads
-		}
-		prerequisite = { 
-			focus = HKG_railway_lines
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = 3
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_command_power = -50
-			country_event = {
-				id = hktriads.103
-				days = 5
-			}
-		}
-	}
-	focus = {
-		id = HKG_interior
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_inspire_locals
-			focus = HKG_rely_on_triads
-		}
-		prerequisite = { 
-			focus = HKG_railway_lines
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = 0
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_command_power = -50
-			country_event = {
-				id = hktriads.104
-				days = 5
-			}
-		}
-	}
-	focus = {
-		id = HKG_heart_of_darkness
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_li_mi
-		}
-		prerequisite = { 
-			focus = HKG_qiongya
-		}
-		prerequisite = { 
-			focus = HKG_ostasien
-		}
-		prerequisite = { 
-			focus = HKG_interior
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_send_li_mi
-		x = 0
-		y = 4
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_new_guanxi_help
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_pacify_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_pacify_guangdong
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_kill_canton
-		x = 0
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_flying_army
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_new_guanxi_help
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = -1
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_monopoly_on_banditry
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_new_guanxi_help
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = 1
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_bitter_sweet
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_flying_army
-		}
-		prerequisite = { 
-			focus = HKG_monopoly_on_banditry
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = 0
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_kill_federalists
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_flying_army
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = -2
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_draw_closer_to_kot
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_blue_shirts
-		}
-		prerequisite = { 
-			focus = HKG_bitter_sweet
-		}
-		mutually_exclusive = {
-			focus = HKG_prioritize_new_guangxi
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = 3
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_fake_tridemism
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_kill_federalists
-		}
-		prerequisite = { 
-			focus = HKG_bitter_sweet
-		}
-		mutually_exclusive = {
-			focus = HKG_true_tridemism
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = -1
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_true_tridemism
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_kill_federalists
-		}
-		prerequisite = { 
-			focus = HKG_bitter_sweet
-		}
-		mutually_exclusive = {
-			focus = HKG_fake_tridemism
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = -3
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_duumvirate
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_prioritize_new_guangxi
-			focus = HKG_draw_closer_to_kot
-		}
-		prerequisite = { 
-			focus = HKG_fake_tridemism
-			focus = HKG_true_tridemism
-		}
-
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = 0
-		y = 4
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_prioritize_new_guangxi
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_blue_shirts
-		}
-		prerequisite = { 
-			focus = HKG_bitter_sweet
-		}
-		mutually_exclusive = {
-			focus = HKG_draw_closer_to_kot
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = 1
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		id = HKG_blue_shirts
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_new_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_monopoly_on_banditry
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_new_guanxi_help
-		x = 2
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_retain_triad_leadership
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_pacify_guangxi
-		}
-		prerequisite = { 
-			focus = HKG_pacify_guangdong
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_kill_canton
-		x = 10
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_poppy_fields
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_retain_triad_leadership
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = -2
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_kill_yunnan_eco
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_poppy_fields
-		}
-		mutually_exclusive = {
-			focus = HKG_guiyang
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = -3
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_guiyang
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_poppy_fields
-		}
-		mutually_exclusive = {
-			focus = HKG_kill_yunnan_eco
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = -1
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_zhuang
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_kill_yunnan_eco
-			focus = HKG_guiyang
-		}
-		mutually_exclusive = {
-			focus = HKG_kill_yunnan_eco
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = -2
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_secure_cities
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_retain_triad_leadership
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 3
-		y = 1
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_no_commies
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_secure_cities
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 5
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_sinocentrism
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_no_commies
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 5
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_payment_in_plunder
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_secure_cities
-		}
-		mutually_exclusive = {
-			focus = HKG_show_kindness
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 1
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_show_kindness
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_secure_cities
-		}
-		mutually_exclusive = {
-			focus = HKG_payment_in_plunder
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 3
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_kill_salvationists
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_show_kindness
-			focus = HKG_payment_in_plunder
-		}
-		mutually_exclusive = {
-			focus = HKG_incorporate_hui
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 1
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_nat_rev
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_kill_salvationists
-			focus = HKG_incorporate_hui
-		}
-		prerequisite = { 
-			focus = HKG_zhuang
-		}
-		prerequisite = { 
-			focus = HKG_sinocentrism
-		}
-		mutually_exclusive = {
-			focus = HKG_syndicate
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 3
-		y = 4
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_syndicate
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_kill_salvationists
-			focus = HKG_incorporate_hui
-		}
-		prerequisite = { 
-			focus = HKG_zhuang
-		}
-		prerequisite = { 
-			focus = HKG_sinocentrism
-		}
-		mutually_exclusive = {
-			focus = HKG_nat_rev
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = -1
-		y = 4
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_incorporate_hui
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-		}
-		prerequisite = { 
-			focus = HKG_show_kindness
-			focus = HKG_payment_in_plunder
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		mutually_exclusive = {
-			focus = HKG_kill_salvationists
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 3
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
-		id = HKG_incorporate_hui
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_triads_kot_siuwong
-		}
-		prerequisite = { 
-			focus = HKG_show_kindness
-			focus = HKG_payment_in_plunder
-		}
-		mutually_exclusive = {
-			focus = HKG_kill_salvationists
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_retain_triad_leadership
-		x = 3
-		y = 3
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_war_support = 0.05
-		}
-	}
-	focus = { 
 		id = HKG_all_that_glitters
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 5
@@ -3346,6 +2084,359 @@ focus_tree = {
 					id = hktriads.76
 					days = 4
 			}
+		}
+	}
+	focus = { 
+		id = HKG_kill_canton
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 5
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_black_market
+		}
+		prerequisite = { 
+			focus = HKG_36_oaths
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_14k
+		x = 0
+		y = 7
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			unlock_decision_category_tooltip = HKG_canton_invasion_decisions
+			custom_effect_tooltip = HKG_kill_canton_tt
+			add_war_support = 0.05
+			
+			hidden_effect = {
+				set_country_flag = HKG_kill_canton_flag
+				every_state = {
+					limit = { 
+						is_core_of = GXC
+					}
+					add_claim_by = HKG
+				}
+			}
+		}
+	}
+	focus = { 
+		id = HKG_canton_war
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			always = no
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = HKG_meet_the_new_boss
+		x = 0
+		y = 11
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			custom_effect_tooltip = HKG_canton_war_tt
+		}
+	}
+	focus = { 
+		id = HKG_hold_canton
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+			controls_state = 592
+		}
+		prerequisite = { 
+			focus = HKG_canton_war
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = 0
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			592 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1047
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = HKG_commission_trucks
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+		}
+		prerequisite = { 
+			focus = HKG_canton_war
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = 2
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 125
+			}
+		}
+	}
+	focus = { 
+		id = HKG_improve_supply_nodes
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+		}
+		prerequisite = { 
+			focus = HKG_commission_trucks
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = 3
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = HKG
+				}
+				add_building_construction = {
+					type = supply_node
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = HKG_recruit_disgruntled
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+		}
+		prerequisite = { 
+			focus = HKG_canton_war
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = -2
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			country_event = hktriads.106
+		}
+	}
+	focus = { 
+		id = HKG_cross_pearl_river
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+		}
+		prerequisite = { 
+			focus = HKG_hold_canton
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = 0
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_timed_idea = {
+				idea = HKG_cross_pearl_river_idea
+				days = 35
+			}
+		}
+	}
+	focus = { 
+		id = HKG_push_west
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+			controls_state = 593
+			controls_state = 800
+			controls_state = 1012
+			controls_state = 592
+		}
+		prerequisite = { 
+			focus = HKG_cross_pearl_river
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = 0
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_timed_idea = {
+				idea = HKG_canton_push_west
+				days = 50
+			}
+		}
+	}
+	focus = { 
+		id = HKG_bolster_recon
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+		}
+		prerequisite = { 
+			focus = HKG_canton_war
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = -3
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_timed_idea = {
+				idea = HKG_focus_on_recon
+				days = 35
+			}
+		}
+	}
+	focus = { 
+		id = HKG_lessons_canton_war
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_bolster_recon
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = -4
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_tech_bonus = {
+				name = HKG_land
+				bonus = 1
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+	focus = { 
+		id = HKG_salvage_gxc_weapons
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+		}
+		prerequisite = { 
+			focus = HKG_canton_war
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = 3
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 800
+				producer = GXC
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 45
+				producer = GXC
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 20
+				producer = GXC
+			}
+		}
+	}
+	focus = { 
+		id = HKG_promote_distinguished_leaders
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+		}
+		prerequisite = { 
+			focus = HKG_recruit_disgruntled
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = -3
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_command_power = 40
+			add_timed_idea = {
+				idea = HKG_promote_leaders
+				days = 50
+			}
+		}
+	}
+	focus = { 
+		id = HKG_pows
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		available = {
+			has_government = paternal_autocrat
+			has_country_flag = HKG_triads_in_charge
+			has_war_with = GXC
+		}
+		prerequisite = { 
+			focus = HKG_salvage_gxc_weapons
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_canton_war
+		x = 4
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			country_event = hktriads.105
 		}
 	}
 	focus = { 

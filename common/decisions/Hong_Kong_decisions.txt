@@ -2547,3 +2547,40 @@ HKG_canton_invasion_decisions = {
 			}
 		}
 	}
+	HKG_negotiate_with_chen = {
+		icon = GFX_decision_champagne_glass
+		
+		available = {
+			has_completed_focus = HKG_kill_canton
+			NOT = { has_war_with = GXC }
+			GXC = { has_country_leader = { name = "Chen Mingshu" ruling_only = yes } }
+		}
+		visible = {
+			has_country_flag = HKG_kill_canton_flag
+			GXC = { has_country_leader = { name = "Chen Mingshu" ruling_only = yes } }
+		}
+
+		ai_will_do = {
+			factor = 5000
+		}
+		fire_only_once = yes
+		days_remove = 25
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HKG_negotiate_with_chen"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_negotiate_with_chen"
+			
+			custom_effect_tooltip = HKG_negotiate_with_chen_tt
+			hidden_effect = {
+				GXC = {
+					country_event = {
+						id = hktriads.107
+						days = 3
+					}
+				}
+			}
+		}
+	}
+}

@@ -955,6 +955,30 @@ country_event = { #Triads takeover!
 				limit = { has_template = "Hong Kong Police Force" }
 				delete_unit_template_and_units = { division_template = "Hong Kong Police Force" }
 			}
+			diplomatic_relation = {
+				country = CAN
+				relation = non_aggression_pact
+				active = no
+			}
+			diplomatic_relation = {
+				country = ENG
+				relation = non_aggression_pact
+				active = no
+			}
+			CAN = {
+				diplomatic_relation = {
+					country = HKG
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = HKG
+					relation = guarantee
+					active = no
+				}
+			}
 		}
 	}
 }
@@ -3673,12 +3697,12 @@ country_event = { # dealing with jews pt.2
 		add_political_power = 10
 		swap_ideas = {
 				remove_idea = HKG_jewish_suppression_idea1
-				add_idea = HKG_jewish_suppression_idea
+				add_idea = HKG_jewish_suppression_idea2
 		}
 		hidden_effect = {
 			country_event = {
 				id = hktriads.73
-				days = 10
+				days = 37
 			}
 		}
 	}
@@ -3695,7 +3719,7 @@ country_event = { # dealing with jews pt.3
 		name = hktriads.73.a
 		add_stability = 0.03
 		add_popularity = { ideology = paternal_autocrat popularity = 0.06 }
-		remove_ideas = HKG_jewish_suppression_idea
+		remove_ideas = HKG_jewish_suppression_idea2
 		326 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -4716,6 +4740,42 @@ country_event = { # nanling
 				state = 599
 			}
 			set_demilitarized_zone = no
+		}
+	}
+}
+
+country_event = { # canton war - pows
+	id = hktriads.105
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.105" }
+	title = hktriads.105.t
+	desc = hktriads.105.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.105.a
+		add_war_support = 0.15
+		add_command_power = 20
+	}
+	option = {
+		name = hktriads.105.b
+		add_manpower = 12679
+	}
+}
+
+country_event = { # canton war - disgruntled citizens
+	id = hktriads.106
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.106" }
+	title = hktriads.106.t
+	desc = hktriads.106.d
+	is_triggered_only = yes
+
+	option = {
+		name = hktriads.106.a
+		add_manpower = 38514
+		add_stability = 0.03
+		add_timed_idea = {
+			idea = HKG_pay_gxc_troops
+			days = 50
 		}
 	}
 }
