@@ -23,6 +23,139 @@ head_of_government = { ### Head of Government ###
 			}
 			
 		}
+		NVN_Chee_Dodge_hog_ade = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Earl_Kemp_Long_hog_sde"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_pragmatic_statesman
+			}
+			
+		}
+		NVN_Chee_Dodge_hog_mli = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Earl_Kemp_Long_hog_sde"
+			}
+			traits = {
+				head_of_government
+				market_liberal
+				hog_pragmatic_statesman
+			}
+			
+		}
+		NVN_Chee_Dodge_hog_pau = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Earl_Kemp_Long_hog_sde"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_pragmatic_statesman
+			}
+			
+		}
+		NVN_Ira_Hayes_hog_ade = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Earl_Kemp_Long_hog_sde"
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_respected_war_hero
+			}
+			
+		}
+		NVN_Ira_Hayes_hog_sde = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Earl_Kemp_Long_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_reformist_soldier
+			}
+			
+		}
+		NVN_Thomas_Dodge_hog_mil = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Earl_Kemp_Long_hog_sde"
+			}
+			traits = {
+				head_of_government
+				market_liberal
+				hog_political_protege
+			}
+			
+		}
+		NVN_Jay_Morago_hog_sde = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Earl_Kemp_Long_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_political_protege
+			}
+			
+		}
 
 	FSA_Eugene_Talmadge_hog_sco = {
 			allowed = { original_tag = FSA }
@@ -508,6 +641,144 @@ head_of_government = { ### Head of Government ###
 			
 		}
 
+		NVN_Thomas_Henry_Dodge_for_mli = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Kate_Richards_OHare_for_rso"
+			}
+			traits = {
+				foreign_minister
+				market_liberal
+				for_apologetic_clerk
+			}
+			
+		}
+
+		NVN_Thomas_Henry_Dodge_for_pau = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Kate_Richards_OHare_for_rso"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_apologetic_clerk
+			}
+			
+		}
+
+		NVN_Jay_Morago_for_sde = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Kate_Richards_OHare_for_rso"
+			}
+			traits = {
+				foreign_minister
+				social_democrat
+				for_general_staffer
+			}
+			
+		}
+
+		NVN_Marchus_Kanuho_for_mli = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Kate_Richards_OHare_for_rso"
+			}
+			traits = {
+				foreign_minister
+				market_liberal
+				for_great_compromiser
+			}
+			
+		}
+
+		NVN_Marchus_Kanuho_for_ade = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Kate_Richards_OHare_for_rso"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_great_compromiser
+			}
+			
+		}
+		NVN_Chato_for_sco = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Kate_Richards_OHare_for_rso"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_ideological_crusader
+			}
+			
+		}
+		NVN_David_Monongye_for_sli = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Kate_Richards_OHare_for_rso"
+			}
+			traits = {
+				foreign_minister
+				social_liberal
+				for_ideological_crusader
+			}
+			
+		}
+
 		FSA_Lee_Hays_for_rso = {
 			allowed = { original_tag = FSA }
 			available = {
@@ -806,6 +1077,145 @@ head_of_government = { ### Head of Government ###
 			}
 			
 		}
+
+		NVN_Deshna_Clah_Cheschillige_eco_pau = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Covington_Hall_eco_rso"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_mixed_economy
+			}
+			
+		}
+
+		NVN_Louis_Gonzaga_Mendez_Jr_eco_ade = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Covington_Hall_eco_rso"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_administrative_genius
+			}
+			
+		}
+
+		NVN_Lutakawi_eco_sde = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Covington_Hall_eco_rso"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_reformer
+			}
+			
+		}
+
+		NVN_Deshna_Clah_Cheschillige_eco_ade = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Covington_Hall_eco_rso"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_mixed_economy
+			}
+			
+		}
+
+			NVN_Deshna_Clah_Cheschillige_eco_mli = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Covington_Hall_eco_rso"
+			}
+			traits = {
+				economy_minister
+				market_liberal
+				eco_mixed_economy
+			}
+			
+		}
+		NVN_Dan_Evehema_eco_sli = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Covington_Hall_eco_rso"
+			}
+			traits = {
+				economy_minister
+				social_liberal
+				eco_administrative_genius
+			}
+			
+		}
+		NVN_Naiche_eco_sco = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Covington_Hall_eco_rso"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_battlefield_support_proponent
+			}
+			
+		}
+
 
 		FSA_James_L_Holloway_III_eco_sde = {
 			allowed = { original_tag = FSA }
@@ -1342,6 +1752,146 @@ head_of_government = { ### Head of Government ###
 				security_minister
 				radical_socialist
 				sec_crime_fighter
+			}
+			
+		}
+
+		NVN_Annie_Dodge_Wauneka_sec_pau = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Clay_Fulks_sec_rso"
+			}
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_preserver_of_culture
+			}
+			
+		}
+
+		NVN_Antonio_Buck_Sr_sec_sde = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Clay_Fulks_sec_rso"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_man_of_the_people
+			}
+			
+		}
+
+		NVN_Chester_Nez_sec_ade = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Clay_Fulks_sec_rso"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_compassionate_gentleman
+			}
+			
+		}
+
+		NVN_Dan_Katchongva_sec_sli = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Clay_Fulks_sec_rso"
+			}
+			traits = {
+				security_minister
+				social_liberal
+				sec_preserver_of_culture
+			}
+			
+		}
+
+		NVN_Henry_Taliman_sec_mli = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Clay_Fulks_sec_rso"
+			}
+			traits = {
+				security_minister
+				market_liberal
+				sec_man_of_the_people
+			}
+			
+		}
+
+		NVN_Henry_Taliman_sec_ade = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Clay_Fulks_sec_rso"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_man_of_the_people
+			}
+			
+		}
+
+		NVN_Robert_Geronimo_sec_sco = {
+			allowed = { original_tag = NVN }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FSA_Clay_Fulks_sec_rso"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_silent_lawyer
 			}
 			
 		}
@@ -3867,7 +4417,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea CGL_Luren_D_Dickinson_sec_mli"
 			}
@@ -3887,7 +4437,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea CGL_Charles_Coughlin_sec_ade"
 			}
@@ -3907,7 +4457,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea CGL_Elizabeth_Dilling_sec_ade"
 			}
@@ -3927,7 +4477,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea CGL_Harry_Bennett_sec_ade"
 			}
@@ -4687,7 +5237,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_John_Steinbeck_hog_rso" 
 			}
@@ -4705,7 +5255,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Orson_Welles_hog_sde" 
 			}
@@ -4741,7 +5291,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Fred_Trump_hog_mli" 
 			}
@@ -4776,7 +5326,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Jimmy_Walker_hog_sco" 
 			}
@@ -4794,7 +5344,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_George_Washington_Olvany_hog_sco" 
 			}
@@ -4812,7 +5362,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Arthur_W_Wallander_hog_ade" 
 			}
@@ -4830,7 +5380,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Lewis_Valentine_hog_ade" 
 			}
@@ -4848,7 +5398,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Meyer_Lansky_hog_pau" 
 			}
@@ -4866,7 +5416,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Lucky_Luciano_hog_pau" 
 			}
@@ -4975,7 +5525,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Ella_Winter_for_rso" 
 			}
@@ -4993,7 +5543,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Rexford_Tugwell_for_sde" 
 			}
@@ -5011,7 +5561,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Grover_Whalen_for_sli" 
 			}
@@ -5029,7 +5579,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Jospeh_V_McKee_for_mli" 
 			}
@@ -5064,7 +5614,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Lewis_Nixon_for_sco" 
 			}
@@ -5082,7 +5632,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Arthur_W_Wallander_for_ade" 
 			}
@@ -5100,7 +5650,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_John_Francis_ORyan_for_ade" 
 			}
@@ -5118,7 +5668,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Frank_Costello_for_pau" 
 			}
@@ -5229,7 +5779,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Sinclair_Lewis_eco_rso" 
 			}
@@ -5247,7 +5797,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Vito_Marcantonio_eco_sde" 
 			}
@@ -5265,7 +5815,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Henry_Morgenthau_Jr_eco_sli" 
 			}
@@ -5283,7 +5833,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Fred_Trump_eco_mli" 
 			}
@@ -5318,7 +5868,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Jeremiah_T_Mahoney_eco_sco" 
 			}
@@ -5336,7 +5886,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_William_ODwyer_eco_ade" 
 			}
@@ -5354,7 +5904,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Tommy_Gagliano_eco_pau" 
 			}
@@ -5464,7 +6014,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Henry_Valentine_Miller_sec_rso" 
 			}
@@ -5482,7 +6032,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Sidney_Hillman_sec_sde" 
 			}
@@ -5500,7 +6050,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Hubert_Thomas_Delany_sec_sli" 
 			}
@@ -5536,7 +6086,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Elizabeth_Christ_Trump_sec_mli" 
 			}
@@ -5571,7 +6121,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Carmine_DeSapio_sec_sco" 
 			}
@@ -5589,7 +6139,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_George_S_Dougherty_sec_ade" 
 			}
@@ -5607,7 +6157,7 @@ head_of_government = { ### Head of Government ###
 					always = no
 				}
 			}
-			
+			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea NYC_Anthony_Carfano_sec_pau" 
 			}
@@ -5828,6 +6378,24 @@ head_of_government = { ### Head of Government ###
 				hog_political_protege
 			}
 		}
+		ARZ_Harry_C_Wheeler_hog_ade = {
+			allowed = { original_tag = ARZ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARZ_Robert_Taylor_Jones_hog_ade" 
+			}
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_old_general
+			}
+		}
 	}
 	person_of_influence = {
 		### Foreign Minister ###
@@ -5867,6 +6435,25 @@ head_of_government = { ### Head of Government ###
 				foreign_minister
 				social_conservative
 				for_great_compromiser
+			}
+		}
+
+		ARZ_Harry_C_Wheeler_for_ade = {
+			allowed = { original_tag = ARZ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARZ_Robert_Taylor_Jones_for_sco" 
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_the_cloak_n_dagger_schemer
 			}
 		}
 		
@@ -5909,6 +6496,25 @@ head_of_government = { ### Head of Government ###
 				eco_industrialiser
 			}
 		}
+
+		ARZ_Harry_C_Wheeler_eco_ade = {
+			allowed = { original_tag = ARZ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARZ_Robert_Taylor_Jones_eco_sco" 
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_mixed_economy
+			}
+		}
 		
 		### Security Minister ###
 		
@@ -5946,6 +6552,24 @@ head_of_government = { ### Head of Government ###
 				security_minister
 				market_liberal
 				sec_back_stabber
+			}
+		}
+		ARZ_Harry_C_Wheeler_sec_ade = {
+			allowed = { original_tag = ARZ }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARZ_Barry_Morris_Goldwater_sec_mli" 
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_secret_police_chief
 			}
 		}
 	}

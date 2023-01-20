@@ -220,7 +220,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_end_the_feudal_system
-		icon = VNC_revoke_noble_priviliges
+		icon = GFX_VNC_revoke_noble_priviliges
 		prerequisite = { focus = ALB_industrialisation_programmes }
 		relative_position_id = ALB_aftermath_of_black_monday
 		x = 1
@@ -454,7 +454,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_tax_incentives
-		icon = GRU_CONS_TAX_CUT
+		icon = GFX_GRU_CONS_TAX_CUT
 		prerequisite = { focus = ALB_fund_the_bank }
 		prerequisite = { focus = ALB_minor_industrialisation }
 		relative_position_id = ALB_aftermath_of_black_monday
@@ -823,7 +823,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_liberalisation
-		icon = VNC_model_of_dem_socialism
+		icon = GFX_VNC_model_of_dem_socialism
 		prerequisite = { focus = ALB_reform_the_justice_system }
 		prerequisite = { focus = ALB_freedom_of_press }
 		relative_position_id = ALB_albanian_elections_of_1936
@@ -1265,7 +1265,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_research_new_doctrines
-		icon = MON_doctrines_I
+		icon = GFX_MON_doctrines_I
 		prerequisite = { focus = ALB_armour_research }
 		prerequisite = { focus = ALB_motorised_infantry }
 		relative_position_id = ALB_albanian_national_army
@@ -1361,13 +1361,7 @@ focus_tree = {
 				name = ALB_fighter_effort
 				bonus = 1
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = light_fighter
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1398,7 +1392,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_create_bombers
-		icon = MON_bomber_focus
+		icon = GFX_MON_bomber_focus
 		prerequisite = { focus = ALB_fighter_effort }
 		relative_position_id = ALB_albanian_naval_force
 		x = 3
@@ -1413,10 +1407,7 @@ focus_tree = {
 				name = ALB_create_bombers
 				bonus = 1
 				uses = 1
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
-				category = tactical_bomber
+				category = cas_bomber
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1528,15 +1519,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_naval_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ALB_naval_doctrines
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				technology = convoy_interdiction_ti
-				technology = unrestricted_submarine_warfare
-				technology = wolfpacks
-				technology = advanced_submarine_warfare
-				technology = combined_operations_raiding
+				category = naval_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1690,7 +1677,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_cementing_the_power_of_the_king
-		icon = BAY_SECURING_OUR_KINGDOM
+		icon = GFX_BAY_SECURING_OUR_KINGDOM
 		prerequisite = { focus = ALB_establishment_of_german_schools }
 		prerequisite = { focus = ALB_abolition_of_republican_institutions }
 		relative_position_id = ALB_restoration_of_the_king
@@ -1713,7 +1700,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_setting_up_austrian_companies
-		icon = BAY_AUSTRIAN_INVESTORS
+		icon = GFX_BAY_AUSTRIAN_INVESTORS
 		prerequisite = { focus = ALB_prioritise_the_needs_of_catholics }
 		prerequisite = { focus = ALB_abolition_of_republican_institutions }
 		relative_position_id = ALB_restoration_of_the_king
@@ -1793,7 +1780,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_providing_austria_with_oil
-		icon = GRU_CORPORATE_TAKE_OIL
+		icon = GFX_GRU_CORPORATE_TAKE_OIL
 		prerequisite = { focus = ALB_cementing_the_power_of_the_king }
 		prerequisite = { focus = ALB_setting_up_austrian_companies }
 		relative_position_id = ALB_restoration_of_the_king
@@ -1871,14 +1858,14 @@ focus_tree = {
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
-                select_effect = {
-                     hidden_effect = {
-                        country_event = {
-                             id = albania.54
-                             days = 17
-                        }
-                     }
-                }
+				select_effect = {
+					hidden_effect = {
+						country_event = {
+							id = albania.54
+							days = 17
+						}
+					}
+				}
 		cost = 8
 		ai_will_do = {
 			factor = 100
@@ -2058,7 +2045,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALB_Resist_Austria
-		icon = BAY_TAKE_AUSTRIA
+		icon = GFX_BAY_TAKE_AUSTRIA
 		x = 1
 		y = 3
 		relative_position_id = ALB_King_Zog
@@ -2125,7 +2112,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Closen_Islamic_Ties"
 			add_opinion_modifier = {
-				target = OTT
+				target = TUR
 				modifier = KR_friendly
 			}
 			add_opinion_modifier = {
@@ -2279,7 +2266,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Legitimacy_Secured"
 			add_ideas = ALB_Legitimacy_idea
-			country_event = albania.71
+			hidden_effect = {
+				country_event = {
+					id = albania.71
+				}
+			}
 		}
-	}         
+	}		
 }

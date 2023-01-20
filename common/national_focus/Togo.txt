@@ -22,7 +22,7 @@ focus_tree = {
 
 	focus = {
 		id = TOG_stablizing_situation
-		icon = GFX_goal_togoland
+		icon = GFX_goal_TOG_post_collapse_stability
 		prerequisite = {}
 		available = {
 			has_war = no
@@ -41,7 +41,7 @@ focus_tree = {
 
 	focus = {
 		id = TOG_elections
-		icon = GFX_NGR_parliment_election
+		icon = GFX_goal_TOG_elections
 		available = {
 			has_country_flag = TOG_republic
 		}
@@ -68,7 +68,7 @@ focus_tree = {
 
 	focus = {
 		id = TOG_military_rule
-		icon = GFX_goal_NFA_military_supremacy
+		icon = GFX_goal_TOG_dadjo_regime
 		available = {
 			has_country_flag = TOG_provisional_junta
 		}
@@ -95,7 +95,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOG_german_rule
-		icon = GFX_goal_MAF_RFG_Army
+		icon = GFX_goal_TOG_germans_holds_on
 		available = {
 			has_country_flag = TOG_germans_stay
 		}
@@ -122,7 +122,7 @@ focus_tree = {
 
 	focus = {
 		id = TOG_olyimpio
-		icon = GFX_goal_ideology_market_liberal
+		icon = GFX_goal_TOG_olympio
 		available = {
 			has_country_flag = TOG_republic
 			has_government = market_liberal
@@ -161,7 +161,7 @@ focus_tree = {
 
 	focus = {
 		id = TOG_northern_alliance
-		icon = GFX_goal_ideology_social_conservative
+		icon = GFX_goal_TOG_tove
 		available = {
 			has_country_flag = TOG_republic
 			has_government = social_conservative
@@ -718,7 +718,7 @@ focus_tree = {
 
 	focus = {
 		id = TOG_republic_of_togo
-		icon = VNC_model_of_modern_republicanism
+		icon = GFX_VNC_model_of_modern_republicanism
 		available = {
 			has_country_flag = TOG_republic
 		}
@@ -1800,10 +1800,10 @@ focus_tree = {
 		log = "[GetDateText]: [Root.GetName]: Focus TOG_prime_railways"
 			877 = {
 			add_building_construction = {
-			 type = infrastructure
-			 level = 2
-			 instant_build = yes
-			 }
+			type = infrastructure
+			level = 2
+			instant_build = yes
+			}
 		}
 
 	}
@@ -1831,7 +1831,7 @@ focus_tree = {
 
 	focus = {
 		id = TOG_foreign_business
-		icon = GFX_goal_SWI_international_aid
+		icon = GFX_goal_TOG_world_stage
 		available = {
 			has_country_flag = TOG_stable
 		}
@@ -1922,53 +1922,53 @@ focus_tree = {
 		}
 	}
 focus = {
-        id = TOG_maf_reclaim
-        icon = GFX_goal_MAF_african_kaiserreich
-        available = {
-            has_country_flag = TOG_stable
-        }
-        available = {
-            has_government = authoritarian_democrat
-        }
+		id = TOG_maf_reclaim
+		icon = GFX_goal_MAF_african_kaiserreich
+		available = {
+			has_country_flag = TOG_stable
+		}
+		available = {
+			has_government = authoritarian_democrat
+		}
 	available = {
 		is_subject = no	
 	}
-        prerequisite = { 
-            focus = TOG_demands_to_the_french
-        }
-        prerequisite = {
-            focus = TOG_unification_with_ashanti
-        }
-        relative_position_id = TOG_stablizing_situation
-        x = 0
-        y = 9
-        cost = 8
-        
-        ai_will_do = {
-            factor = 50
-        }
-        
-        completion_reward = {
-      custom_effect_tooltip = KIK_gain_wargoals_tt
+		prerequisite = { 
+			focus = TOG_demands_to_the_french
+		}
+		prerequisite = {
+			focus = TOG_unification_with_ashanti
+		}
+		relative_position_id = TOG_stablizing_situation
+		x = 0
+		y = 9
+		cost = 8
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		completion_reward = {
+	custom_effect_tooltip = KIK_gain_wargoals_tt
 set_country_flag = TOG_MAF_TIME
-            hidden_effect = {
-                every_country = {
-                    limit = { is_in_array = { global.MAF_collapse_tags = THIS } }
-                    ROOT = {
-                        create_wargoal = {
-                            type = annex_everything target = PREV
-                        }
-                    }
-                }
-                every_state = {
-                    limit = { has_state_flag = MAF_claim }
-                    TOG = {
-                        add_state_core = PREV
-                    }
-                }
-            }
-            
-            }
-        }
-    }
+			hidden_effect = {
+				every_country = {
+					limit = { is_in_array = { global.MAF_collapse_tags = THIS } }
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything target = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = { has_state_flag = MAF_claim }
+					TOG = {
+						add_state_core = PREV
+					}
+				}
+			}
+			
+			}
+		}
+	}
 }

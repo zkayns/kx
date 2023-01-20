@@ -75,7 +75,7 @@ country_event = { # GRU setup
 					social_conservative = 6
 					authoritarian_democrat = 5
 				}
-				load_focus_tree = { tree = gru-totalist }
+					load_focus_tree = GRU_focus_tree
 				set_party_name = {
 					ideology = totalist
 					long_name = GRU_occu_long
@@ -328,8 +328,8 @@ country_event = { # CONGRESS
 			}
 			create_country_leader = {
 				name = "Paul Lensch"
-                                desc = "POLITICS_PAUL_LENSCH_DESC"
-				picture = "gfx/leaders/GRU/Portrait_GRU_Paul_Lensch.png"      
+								desc = "POLITICS_PAUL_LENSCH_DESC"
+				picture = "gfx/leaders/GRU/Portrait_GRU_Paul_Lensch.png"	  
 				expire = "1965.1.1"
 				ideology = germanic_socialism_subtype
 				traits = { gru_froncophobe }
@@ -429,7 +429,7 @@ country_event = { # CONGRESS
 			}
 			create_country_leader = {
 				name = "Paul Lensch"
-                                desc = "POLITICS_PAUL_LENSCH_DESC"
+								desc = "POLITICS_PAUL_LENSCH_DESC"
 				picture = "gfx/leaders/GRU/Portrait_GRU_Paul_Lensch.png"
 				expire = "1965.1.1"
 				ideology = germanic_socialism_subtype
@@ -627,7 +627,7 @@ country_event = { # CONGRESS
 			}
 			create_country_leader = {
 				name = "Paul Lensch"
-                                desc = "POLITICS_PAUL_LENSCH_DESC"
+								desc = "POLITICS_PAUL_LENSCH_DESC"
 				picture = "gfx/leaders/GRU/Portrait_GRU_Paul_Lensch.png"
 				expire = "1965.1.1"
 				ideology = germanic_socialism_subtype
@@ -3725,7 +3725,7 @@ country_event = { # Future of Germany MarLibs
 				desc = "GRU_Krupp_DESC"
 				picture = "gfx/leaders/GRU/Portrait_GRU_Gustav_Krupp.png"
 				expire = "1965.1.1"
-				ideology = corporatocracy_subtype
+				ideology = right_technocracy_subtype
 			}
 			set_party_name = {
 				ideology = authoritarian_democrat
@@ -4062,6 +4062,33 @@ country_event = { # pick-a-kaiser
 			}
 		}
 	}
+}
+
+country_event = { # pick-a-flag
+	id = rotermorgenmisc.1002
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.1002"
+	}
+	title = rotermorgenmisc.1002.t
+	desc = rotermorgenmisc.1002.d
+	is_triggered_only = yes
+	picture = GFX_report_event_GRU_flag
+	
+	option = { #Auwi 
+		name = rotermorgenmisc.1002.a
+		set_cosmetic_tag = GRU_GSVP
+	}
+	
+	option = { #Victoria 
+		name = rotermorgenmisc.1002.b
+		set_cosmetic_tag = GRU_GSVP2
+	}
+
+	option = { #Rupprecht 
+		name = rotermorgenmisc.1002.c
+		set_cosmetic_tag = GRU_GSVP3
+	}
+
 }
 
 

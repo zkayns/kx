@@ -750,9 +750,10 @@ ban.14.b:0 "They mean business - cooperation may be preferable"
 ban.15.t:0 "Attempt on Otto Roth's Life!"
 ban.15.d:0 "Of course our nation is under attack again! While Otto roth was pondering his government's policies, the glass behind him gave way and a shower of glass and wood splinters impacted Roth, who was now on the ground. His aides and guards rushed to his position, only for another shot to ring out and hit his leg. Roth was quickly in safety, and tended to. A thorough police investigation has revealed that the perpetrators of the attack were the Iron Guard, and that the apprehended suspect was hired by them with the intent of destabilizing the country by killing Roth. Needless to say, we dodged one bullet."
 ban.15.a:0 "Perhaps the Royalists were right!"
+ban.15.b:0 "The small wound becomes infected..."
 
 ban.16.t:0 "Otto Roth Assassinated!"
-ban.16.d:0 "Father of Banat, Otto Roth, has tragically been assassinated! Whilst overlooking his courtyard a bullet struck him directly in the head, piercing through the window and leaving him dead instantly. Roth’s guards were alerted immediately by the sound of glass smashing however by the time they had arrived at his room it was already too late, Roth’s corpse lay stretched across the floor whilst the assassin who had positioned himself from the rooftop had already fled. Although the assassin remains unknown it is clear that they are a legionary terrorist, Romania has been funding these vile barbarians to cause havoc across the nation..."
+ban.16.d:0 "Father of Banat, Otto Roth, whilst in the midst of giving a speech to our young nation, was tragically struck twice in the chest and leg. While rushed to safety, the unclean state of the position of the speech resulted in the rapid infection of the wound by a ravenous bacterium, and this morning, Roth passed away in his sleep due to the rabid infection. The legionary terrorist has been apprehended, but the wrench thrown into the Banatian cogs will take years to get dislodged..."
 ban.16.a:0 "I feel a storm brewing."
 
 ban.17.t:0 "Denounced!"
@@ -898,7 +899,7 @@ ban.48.a:0 "Direct them towards industrial development."
 ban.48.b:0 "Higher-class work is in shortage."
 
 ban.49.t:0 "Petru Groza's Debut!"
-ban.49.d:0 "It is safe to say that due to the backing of Codreanu, our regime is in a strong position to dictate over the people of Banat. Few would openly oppose our military might, with our propaganda plastered across the nation and legionnaires patrolling the streets such rebellious behaviour would surely be suicidal…\n\nHowever there is one figure who is either brave or foolish enough to openly attack Horia Sima, Petru Groza commands a sizable force of syndicalists who wish to tear down the newly formed Iron Guard government. Even we cannot deny his charismatic rhetoric, hence why he has the potential to be more than just a nuisance. The threat of a left-wing uprising so soon after we have barely marched on the Banatian Senate is not something Sima expected, despite this we are prepared for further violence. The legionaries are eager for more battle!"
+ban.49.d:0 "It is safe to say that due to the backing of Codreanu, our regime is in a strong position to dictate over the people of Banat. Few would openly oppose our military might, with our propaganda plastered across the nation and legionnaires patrolling the streets such rebellious behaviour would surely be suicidal...\n\nHowever there is one figure who is either brave or foolish enough to openly attack Horia Sima, Petru Groza commands a sizable force of syndicalists who wish to tear down the newly formed Iron Guard government. Even we cannot deny his charismatic rhetoric, hence why he has the potential to be more than just a nuisance. The threat of a left-wing uprising so soon after we have barely marched on the Banatian Senate is not something Sima expected, despite this we are prepared for further violence. The legionaries are eager for more battle!"
 ban.49.a:0 "Kill that rabblerouser!"
 
 ban.50.t:0 "Petru Groza's Call"
@@ -1273,7 +1274,7 @@ ban.136.a:0 "Come and take it then, Banatian!"
 ban.137.t:0 "Use of the Military"
 ban.137.d:0 "The military has proven itself loyal to the cause of Albert Bartha and his stratocratic regime. Power is motivating, after all, but not to Bartha. The only real reason why he would ever need an expansion in power is if unscrupulous dolts decide to oppose his plans and actions. Only then will he need to take direct control, which will come right from Timisoara. But dealing with opposition forces, such as rebellious citizens, is also a fine move - one which only the most stupid of politicians could try to not do."
 ban.137.a:0 "Use it to deal with all opposition force."
-ban.137.b:0 "Use it to personally elevate Alberth Bartha."
+ban.137.b:0 "Use it to personally elevate Albert Bartha."
 
 ban.138.t:0 "Unrest Plagues the Streets"
 ban.138.d:0 "As our situation spirals further down the drain every day, the people are taking notice. Protests line the streets, and even have begun blocking vehicles. From each avenue to alleyway, people crowd, musing about how horrible our government is. Of course, they are very incorrect! But there is just too much."
@@ -1298,7 +1299,7 @@ ban.142.d:0 "After many days of intense criticism of the government, the turmoil
 ban.142.a:0 "That was too close."
 
 ban.143.t:0 "Reinvigorated Military"
-ban.143.d:0 "The small military is battered from all the internal strife, but now they have seen hope and glory! It's time to strike on them! We're planning a mass arrest on the next big protests, and scare all the rest off. It is a requirement for the greater good later on, which has to be obtained through these controversial methods.\nBut for now, the military has their heads high up for the first time in aweeks, their talk is commonplace, and you can generally just see improvement. Let's hope to see victory!"
+ban.143.d:0 "The small military is battered from all the internal strife, but now they have seen hope and glory! It's time to strike on them! We're planning a mass arrest on the next big protests, and scare all the rest off. It is a requirement for the greater good later on, which has to be obtained through these controversial methods.\nBut for now, the military has their heads high up for the first time in weeks, their talk is commonplace, and you can generally just see improvement. Let's hope to see victory!"
 ban.143.a:0 "Let's try now!"
 
 ban.144.t:0 "Effects of the Attempt"

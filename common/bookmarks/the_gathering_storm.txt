@@ -19,8 +19,8 @@ bookmarks = {
 
 			focuses = {
 				FRA_communism_reborn
-				FRA_glory_to_the_chairman
-				FRA_france_awake
+				FRA_defender
+				FRA_who_shall_lead
 			}
 		}
 		
@@ -38,6 +38,38 @@ bookmarks = {
 			}
 		}
 
+		"RUS" = {
+			history = "RUS_KR_GATHERING_STORM_DESC"
+			ideology = social_liberal
+			ideas = {
+				rus_unfinished_land_reform
+				rus_industry_lack
+				rus_brest_litovsk
+			}
+
+			focuses = {
+				RUS_Revolutionary_Front
+				RUS_Soc_Lib_Dictator
+				RUS_Jakobsons_Socdem_Eurasia
+			}
+		}
+		
+		"AUS" = {
+			minor = no
+			history = "AUS_KR_GATHERING_STORM_DESC"
+			ideology = social_conservative
+			ideas = {
+				AUS_financial_ties_broken
+				AUS_fatherland_front
+				AUS_karl_habsburg
+			}
+			focuses = {
+				AUS_austro-marxism
+				AUS_one_party_empire
+				AUS_united_states
+			}
+		}
+		
 		"GER" = {
 			history = "GER_KR_GATHERING_STORM_DESC"
 			ideology = authoritarian_democrat
@@ -53,52 +85,6 @@ bookmarks = {
 				GER_kurt_von_schleichers_chancellorship
 			}
 		}
-		
-		"AUS" = {
-			minor = no
-			history = "AUS_KR_GATHERING_STORM_DESC"
-			ideology = social_conservative
-			ideas = {
-				AUS_fatherland_front
-                                AUS_karl_habsburg
-			}
-			focuses = {
-				AUS_patriotize_army
-				AUS_god_wills_it
-				AUS_one_party_empire
-			}
-		}
-		
-		"RUS" = {
-			history = "RUS_KR_GATHERING_STORM_DESC"
-			ideology = social_liberal
-			ideas = {
-				rus_unfinished_land_reform
-				rus_industry_lack
-				rus_brest_litovsk
-			}
-
-			focuses = {
-				RUS_Drozdovsky_Takes_Over
-				RUS_Question_Of_The_Duma
-				RUS_Jakobsons_Socdem_Eurasia
-			}
-		}
-
-		"CAN" = {
-			history = "CAN_KR_GATHERING_STORM_DESC"
-			ideology = market_liberal
-			ideas = {
-				CAN_anglo_french_tensions_2
-				CAN_great_depression_2
-			}
-
-			focuses = {
-				CAN_draft_bill_c7
-				CAN_preparations_for_war
-				CAN_canadian_referendum
-			}
-		}
 
 		"USA" = {
 			history = "USA_HOTB_GATHERING_STORM_DESC"
@@ -109,9 +95,9 @@ bookmarks = {
 				USA_syndicalist_strike_idea
 			}
 			focuses = {
-				USA_return_to_true_americanism
-				USA_last_bastion
-				USA_by_the_people_for_the_people
+				USA_preserve_founders_vision
+				USA_everypot_a_chicken
+				USA_salute_the_chief
 			}
 		}
 
@@ -131,23 +117,65 @@ bookmarks = {
 			}
 		}
 		
-		"---" = {
-			history = "OTHER_KR_GATHERING_STORM_DESC"
+		"CAN" = {
+			history = "CAN_KR_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+				CAN_anglo_french_tensions_2
+				CAN_great_depression_2
+			}
+
+			focuses = {
+				CAN_draft_bill_c7
+				CAN_preparations_for_war
+				CAN_canadian_referendum
+			}
 		}
 		
-		"SKM" = {
-			minor = yes
-			history = "SKM_KR_GATHERING_STORM_DESC"
+		"NFA" = {
+			history = "NFA_KR_GATHERING_STORM_DESC"
 			ideology = authoritarian_democrat
 			ideas = {
-				SKM_puppet_chogyal
-				SKM_aristocratic_government
-				SKM_democratic_government
+				NFA_anti_communard
+				NFA_native_unrest_2
+				NFA_internal_unrest
 			}
 			focuses = {
-				skm_old_kazis
-				skm_kazi_takeover
-				skm_wholesome_kazis
+				NFA_napoleon_restoration
+				NFA_troops_on_the_streets
+				NFA_sede_es_petri
+			}
+		}
+
+		"COG" = {
+			minor = yes
+			history = "COG_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				COG_Resistance_Colonial_Rule
+				COG_German_Influence 
+				COG_Desertion_Crisis
+			}
+			focuses = {
+				COG_king_exile 
+				COG_new_governor_general 
+				COG_kaisers_congo
+			}
+		}
+
+		"CZE" = {
+			minor = yes
+			history = "CZE_KR_GATHERING_STORM_DESC"
+			ideology = social_liberal
+			ideas = {
+				BOH_sudeten_german_divide
+				BOH_rural_divide
+				BOH_legacy_of_coronation
+			}
+			focuses = {
+				CZE_moderate_lawful_progress
+				BOH_death_of_masaryk
+				CZE_hustle_with_hussites
 			}
 		}
 
@@ -158,28 +186,95 @@ bookmarks = {
 			ideas = {
 				MEX_asa_rebellion
 				MEX_dl_opposition
-				MEX_revolution_economic
+				MEX_church_question
 			}
 			focuses = {
 				MEX_PCM_the_lenin_of_the_west
 				MEX_fateful_day
-				MEX_GOL_heirs_of_the_aztecs
+				MEX_GOL_old_or_new
 			}
 		}
 
-		"BRM" = {
+
+		"SKM" = {
 			minor = yes
-			history = "BRM_KR_GATHERING_STORM_DESC"
+			history = "SKM_KR_GATHERING_STORM_DESC"
 			ideology = authoritarian_democrat
 			ideas = {
-				BRM_young_officers
-				BRM_birds
-				BRM_ostasien_officers
+								skm_chogyal
+				skm_red_sun
+				skm_pink_spot
 			}
 			focuses = {
-				BRM_vanquish_siam
-				BRM_peacock_astride
-				BRM_request_reichspakt_entry
+				skm_socdem_victory
+				skm_true_shambala
+				skm_jermanism
+			}
+		}
+
+		
+		"IRE" = {
+			minor = yes
+			history = "IRE_KR_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+				IRE_Ulster_Issue
+				IRE_Unraveling_Political_Scene
+				IRE_Threat_Across_Isle
+			}
+			focuses = {
+				IRE_Ruby_Isle
+				IRE_Democratic_Mandate
+				IRE_Monarchy
+			}
+		}
+	
+
+		"SOM" = {
+			minor = yes
+			history = "SOM_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				SOM_iron_fist_of_warsangali
+				SOM_foodplease
+				SOM_Islamic_Socialist
+			}
+			focuses = {
+				SOM_SRSP_Victory
+				SOM_SYL_Victory
+				SOM_GSL_Victory
+			}
+		}
+
+		"LEP" = {
+			minor = yes
+			history = "LEP_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				LEP_Conspicuous_Kleptocracy
+				LEP_Nanking_Kommission
+				LEP_Tsingtau_Collaboration2
+			}
+			focuses = {
+				LEP_centralize_power
+				LEP_five_provinces_one_marshal
+				LEP_prepare_for_shitshow
+			}
+		}
+
+		"MON" = {
+			minor = yes
+			history = "MON_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				MON_claims_of_greatness
+				MON_warlord 
+				MON_jebtsundamba_khutuktu_idea
+			}
+			focuses = {
+				MON_true_man 
+				MON_the_russians_arent_watching 
+				MON_ja_lama_in_power
 			}
 		}
 

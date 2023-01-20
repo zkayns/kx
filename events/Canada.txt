@@ -287,6 +287,13 @@ country_event = {
 		ai_chance = {
 			factor = 40
 			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = GBR_return_of_the_king
+					option = GBR_RETURN_OF_THE_KING_DEMOCRACY_SOCCON
+				}
+			}
+			modifier = {
 				factor = 0.5
 				has_government = market_liberal
 				check_variable = { CAN_liberal_support < 1 }
@@ -307,6 +314,19 @@ country_event = {
 		name = canada.8.b #We should push for a moderate candidate
 		ai_chance = {
 			factor = 40
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = GBR_return_of_the_king
+						option = GBR_RETURN_OF_THE_KING_DEMOCRACY_AUTDEM
+					}
+					has_game_rule = {
+						rule = GBR_return_of_the_king
+						option = GBR_RETURN_OF_THE_KING_AUTDEM
+					}
+				}
+			}
 			modifier = {
 				factor = 0.25
 				has_government = social_conservative
@@ -333,6 +353,19 @@ country_event = {
 		name = canada.8.c #A vote by the Exiles should be organized
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = GBR_return_of_the_king
+						option = GBR_RETURN_OF_THE_KING_DEMOCRACY_AUTDEM
+					}
+					has_game_rule = {
+						rule = GBR_return_of_the_king
+						option = GBR_RETURN_OF_THE_KING_AUTDEM
+					}
+				}
+			}
 		}
 		GBR = { set_country_flag = GBR_Eden_PM }
 		add_ideas = CAN_Anthony_Eden_lobe_ade
@@ -649,10 +682,10 @@ country_event = {
 		trigger = { tag = CAN }
 		hidden_effect = {
 			random_list = {
-				55 = {
+				45 = {
 					country_event = { id = canada.21 days = 2 } #Detroit wins
 				}
-				45 = {
+				55 = {
 					country_event = { id = canada.22 days = 2 } #Toronto wins
 				}
 			}
@@ -1631,6 +1664,13 @@ country_event = {
 					option = CAN_POLITICAL_PATH_AUTHORITARIAN
 				}
 			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_political_path
+					option = CAN_POLITICAL_PATH_LIBERAL_SOCDEM
+				}
+			}
 		}
 		clear_variable = CAN_conservative_support
 		clear_variable = CAN_liberal_support
@@ -1677,6 +1717,13 @@ country_event = {
 				has_game_rule = {
 					rule = CAN_political_path
 					option = CAN_POLITICAL_PATH_LIBERAL
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_political_path
+					option = CAN_POLITICAL_PATH_LIBERAL_SOCDEM
 				}
 			}
 		}
@@ -2313,9 +2360,15 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					has_game_rule = {
-						rule = CAN_political_path
-						option = CAN_POLITICAL_PATH_LIBERAL
+					OR = {
+						has_game_rule = {
+							rule = CAN_political_path
+							option = CAN_POLITICAL_PATH_LIBERAL
+						}
+						has_game_rule = {
+							rule = CAN_political_path
+							option = CAN_POLITICAL_PATH_LIBERAL_SOCDEM
+						}
 					}
 				}
 				country_event = { id = canada.59 days = 1 }
@@ -2689,7 +2742,7 @@ country_event = {
 				}
 			}
 		}
-		else = {
+		else_if = {
 			limit = { has_global_flag = CAN_king_george_VI }
 			create_country_leader = {
 				name = "George VI"
@@ -3187,7 +3240,7 @@ country_event = {
 				}
 			}
 		}
-		else = {
+		else_if = {
 			limit = { has_global_flag = CAN_king_george_VI }
 			create_country_leader = {
 				name = "George VI"
@@ -3570,7 +3623,7 @@ country_event = {
 				name = "John Bracken"
 				picture = "gfx/leaders/CAN/Portrait_Canada_John_Bracken.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 		}
 	}
@@ -4424,6 +4477,47 @@ country_event = { #PatAut Flavor
 		add_popularity = { ideology = market_liberal popularity = -0.025 }
 		add_popularity = { ideology = social_conservative popularity = -0.025 }
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		set_global_flag = CAN_absolute_monarchy
+	}
+}
+
+country_event = {
+	id = canada.117
+	immediate = { log = "[GetDateText]: [Root.GetName]: event canada.117" }
+	title = canada.117.t
+	picture = GFX_report_event_CAN_quebec1
+
+	is_triggered_only = yes
+	
+	desc = {
+		text = canada.117.d.notfra
+		trigger = { NOT = { has_war_with = FRA } }
+	}
+	desc = {
+		text = canada.117.d.fra
+		trigger = { has_war_with = FRA }
+	}
+
+	trigger = {
+		controls_all_owned_states = yes
+	}
+
+	option = {
+		name = canada.117.a
+		add_stability = -0.025
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 466 #Quebec
+					state = 468 #Saint Lawrence
+					state = 832 #Montreal
+				}
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 0.5
+			}
+		}
 	}
 }
 
@@ -5652,6 +5746,10 @@ country_event = {
 		trigger = {
 			country_exists = TEX
 			OR = {
+				has_game_rule = {
+					rule = CAN_acw_support
+					option = CAN_ACW_SUPPORT_TEX
+				}
 				has_authoritarian_government = yes
 				NOT = {
 					country_exists = USA
@@ -7359,7 +7457,7 @@ country_event = {
 	option = { # appoint Lord Mountbatten
 		name = canada.302.b
 		ai_chance = {
-			factor = 40
+			factor = 30
 		}
 		add_political_power = 50
 		if = {
@@ -7408,6 +7506,28 @@ country_event = {
 			country_event = canada.303
 		}
 	}
+	option = { # Appoint a Canadian
+		name = canada.302.e_2
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -50
+		CAN = {
+			set_country_flag = CAN_gov_gen_banting
+			add_opinion_modifier = { target = ROOT modifier = KR_approves_of_govt }
+			country_event = canada.303
+		}
+	}
+	option = { # Unite the Thrones
+		name = canada.302.f
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -50
+		CAN = {
+			country_event = canada.3031
+		}
+	}
 }
 
 # Canada gets its new Governor General
@@ -7433,6 +7553,10 @@ country_event = {
 		text = canada.303.d.mcnaughton
 		trigger = { has_country_flag = CAN_gov_gen_mcnaughton }
 	}
+	desc = {
+		text = canada.303.d.banting
+		trigger = { has_country_flag = CAN_gov_gen_banting }
+	}
 
 	is_triggered_only = yes
 
@@ -7452,28 +7576,28 @@ country_event = {
 				desc = "POLITICS_ALBERT_WINDSOR_DESC"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
 				expire = "1965.1.1"
-				ideology = national_liberalism_subtype
+				ideology = classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Prince Albert"
 				desc = "POLITICS_ALBERT_WINDSOR_DESC"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
 				expire = "1965.1.1"
-				ideology = marlib_national_liberalism_subtype
+				ideology = marlib_classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Prince Albert"
 				desc = "POLITICS_ALBERT_WINDSOR_DESC"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 			create_country_leader = {
 				name = "Prince Albert"
 				desc = "POLITICS_ALBERT_WINDSOR_DESC"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_toryism_subtype
 			}
 			create_country_leader = {
 				name = "Prince Albert"
@@ -7497,25 +7621,25 @@ country_event = {
 				name = "Lord Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1965.1.1"
-				ideology = national_liberalism_subtype
+				ideology = classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Lord Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1965.1.1"
-				ideology = marlib_national_liberalism_subtype
+				ideology = marlib_classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Lord Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 			create_country_leader = {
 				name = "Lord Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_toryism_subtype
 			}
 			create_country_leader = {
 				name = "Lord Louis Mountbatten"
@@ -7530,37 +7654,37 @@ country_event = {
 			subtract_from_variable = { CAN_was_king_popularity = 1 }
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
-				ideology = national_liberalism_subtype
+				ideology = classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
-				ideology = marlib_national_liberalism_subtype
+				ideology = marlib_classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_toryism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 			}
@@ -7585,25 +7709,25 @@ country_event = {
 				name = "Andrew McNaughton"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
 				expire = "1965.1.1"
-				ideology = national_liberalism_subtype
+				ideology = classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
 				expire = "1965.1.1"
-				ideology = marlib_national_liberalism_subtype
+				ideology = marlib_classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_toryism_subtype
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
@@ -7612,6 +7736,63 @@ country_event = {
 				ideology = paternal_autocrat_subtype
 			}
 		}
+		if = {
+			limit = { has_country_flag = CAN_gov_gen_banting }
+			add_political_power = 50
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = socdem_democratic_socialism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = classical_liberalism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = marlib_classical_liberalism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = toryism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = authdem_toryism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+			}
+		}
+	}
+}
+
+# King of Canada
+country_event = {
+	id = canada.3031
+	immediate = { log = "[GetDateText]: [Root.GetName]: event canada.3031" }
+	title = canada.3031.t
+	picture = GFX_report_event_royal_parade
+	desc = canada.3031.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = canada.3031.a
+		drop_cosmetic_tag = yes
+		add_stability = 0.06
 	}
 }
 
@@ -7861,6 +8042,13 @@ country_event = {
 		ai_chance = {
 			factor = 30
 			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_referendum
+					option = CAN_REFERENDUM_MEMBER_OR_THE_EMPIRE
+				}
+			}
+			modifier = {
 				factor = 1.5
 				check_variable = { CAN_was_king_popularity < 3 }
 			}
@@ -7924,6 +8112,13 @@ country_event = {
 		name = canada.315.b #We are a loyal member of the Empire
 		ai_chance = {
 			factor = 70
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_referendum
+					option = CAN_POLITICAL_REPUBLIC
+				}
+			}
 			modifier = {
 				factor = 1.5
 				check_variable = { CAN_was_king_popularity > 2 }
@@ -8486,6 +8681,20 @@ country_event = {
 			planning_skill = 3
 			logistics_skill = 3
 		}
+		create_corps_commander = { # Thomas George Prince
+			name = "Thomas George Prince"
+			portrait_path = "gfx/leaders/CAN/Portrait_CAN_thomas_prince.png"
+			traits = {
+				career_officer
+				commando
+				trait_engineer
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 5
+		}
 		create_navy_leader = {
 			name = "Horatio Nelson Lay"
 			portrait_path = "gfx/leaders/CAN/Portrait_Canada_Horatio_Lay.png"
@@ -8542,11 +8751,11 @@ country_event = { #Kingdom of Iceland
 			factor = 50
 		}
 		trigger = {
-            has_country_leader = {
-                name = "Edward VIII"
-                ruling_only = yes
-            }
-        }
+			has_country_leader = {
+				name = "Edward VIII"
+				ruling_only = yes
+			}
+		}
 		ICE = {
 		set_cosmetic_tag = ICE_KINGDOM
 		ICE_eddy = yes
@@ -8571,17 +8780,17 @@ country_event = {
 		owns_state = 932
 		has_completed_focus = CAN_assert_royal_prerogatives
 		has_government = paternal_autocrat
-    }
+	}
 
 	fire_only_once = yes
 
 	option = {
 		name = canada.999.a
 		CAN = {
-            add_state_core = 463
-		    add_state_core = 386
-		    add_state_core = 385
-		    add_state_core = 387
+			add_state_core = 463
+			add_state_core = 386
+			add_state_core = 385
+			add_state_core = 387
 		}
 		CAN = {
 			puppet = NEE
@@ -8609,52 +8818,52 @@ country_event = {
 			factor = 50
 		}
 		AML = {
-            add_state_core = 388
-		    add_state_core = 389
-		    add_state_core = 390
-		    add_state_core = 381
-		    add_state_core = 384
-		    add_state_core = 382
-		    add_state_core = 383
-		    add_state_core = 387
-		    add_state_core = 373
-		    add_state_core = 1175
-		    add_state_core = 1164
-		    add_state_core = 1157
-		    add_state_core = 1163
-		    add_state_core = 1150
-		    transfer_state = 388
-		    transfer_state = 389
-		    transfer_state = 390
-		    transfer_state = 381
-		    transfer_state = 384
-		    transfer_state = 382
-		    transfer_state = 383
-		    transfer_state = 373
-		    transfer_state = 1175
-		    transfer_state = 1164
-		    transfer_state = 1157
-		    transfer_state = 1163
-		    transfer_state = 1150
+			add_state_core = 388
+			add_state_core = 389
+			add_state_core = 390
+			add_state_core = 381
+			add_state_core = 384
+			add_state_core = 382
+			add_state_core = 383
+			add_state_core = 387
+			add_state_core = 373
+			add_state_core = 1175
+			add_state_core = 1164
+			add_state_core = 1157
+			add_state_core = 1163
+			add_state_core = 1150
+			transfer_state = 388
+			transfer_state = 389
+			transfer_state = 390
+			transfer_state = 381
+			transfer_state = 384
+			transfer_state = 382
+			transfer_state = 383
+			transfer_state = 373
+			transfer_state = 1175
+			transfer_state = 1164
+			transfer_state = 1157
+			transfer_state = 1163
+			transfer_state = 1150
 			set_politics = {
 				ruling_party = authoritarian_democrat
 				elections_allowed = no
-		    }
+			}
 			set_party_name = {
 			ideology = authoritarian_democrat
 			long_name = "Midwestern Administration Zone"
 			name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "Midwestern Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = national_populist
 				long_name = "Midwestern Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_cosmetic_tag = AML_Dominion
 			create_country_leader = {
 				name = "Harold Alexander"
@@ -8692,26 +8901,26 @@ country_event = {
 			transfer_state = 380
 			transfer_state = 1174
 			transfer_state = 379
-            set_politics = {
+			set_politics = {
 				ruling_party = authoritarian_democrat
 				elections_allowed = no
-		    }
+			}
 			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Utahn Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "Utahn Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = national_populist
 				long_name = "Utahn Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
-            set_cosmetic_tag = DSR_Dominion
+			}
+			set_cosmetic_tag = DSR_Dominion
 			create_country_leader = {
 				name = "Harry Crerar"
 				desc = ""
@@ -8748,25 +8957,25 @@ country_event = {
 			transfer_state = 1096
 			transfer_state = 1161
 			transfer_state = 1166
-            set_politics = {
+			set_politics = {
 				ruling_party = authoritarian_democrat
 				elections_allowed = no
-		    }
+			}
 			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Texan Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "Texan Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = national_populist
 				long_name = "Texan Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_cosmetic_tag = TXS_Dominion
 			create_country_leader = {
 				name = "Bernard Montgomery"
@@ -8794,37 +9003,37 @@ country_event = {
 			}
 		}
 		CAL = {
-		    transfer_state = 378
-		    transfer_state = 829
-	        transfer_state = 797
-		    transfer_state = 798
-		    transfer_state = 1165
-            add_state_core = 386
-		    add_state_core = 378
-	        add_state_core = 829
+			transfer_state = 378
+			transfer_state = 829
+			transfer_state = 797
+			transfer_state = 798
+			transfer_state = 1165
+			add_state_core = 386
+			add_state_core = 378
+			add_state_core = 829
 			add_state_core = 385
-		    add_state_core = 797
+			add_state_core = 797
 			add_state_core = 798
 			add_state_core = 1165
 			set_politics = {
 				ruling_party = authoritarian_democrat
 				elections_allowed = no
-		    }
+			}
 			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Californian Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
-            set_party_name = {
+			}
+			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "Californian Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
-            set_party_name = {
+			}
+			set_party_name = {
 				ideology = national_populist
 				long_name = "Californian Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_cosmetic_tag = CAL_Dominion
 			create_country_leader = {
 				name = "Andrew McNaughton"
@@ -8834,7 +9043,7 @@ country_event = {
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
-            create_country_leader = {
+			create_country_leader = {
 				name = "Andrew McNaughton"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton.png"
@@ -8876,7 +9085,7 @@ country_event = {
 			add_state_core = 1167
 			add_state_core = 1171
 			add_state_core = 1172
-            transfer_state = 372
+			transfer_state = 372
 			transfer_state = 374
 			transfer_state = 371
 			transfer_state = 370
@@ -8900,22 +9109,22 @@ country_event = {
 			set_politics = {
 				ruling_party = authoritarian_democrat
 				elections_allowed = no
-		    }
+			}
 			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Southern Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "Southern Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = national_populist
 				long_name = "Southern Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_cosmetic_tag = FSA_Dominion
 			create_country_leader = {
 				name = "J.F.C Fuller"
@@ -8942,8 +9151,8 @@ country_event = {
 				traits = {}
 			}
 		}
-        CGL = {
-            add_state_core = 394
+		CGL = {
+			add_state_core = 394
 			add_state_core = 393
 			add_state_core = 395
 			add_state_core = 396
@@ -8955,7 +9164,7 @@ country_event = {
 			add_state_core = 1154
 			add_state_core = 1151
 			add_state_core = 1153
-            transfer_state = 391
+			transfer_state = 391
 			transfer_state = 392
 			transfer_state = 394
 			transfer_state = 393
@@ -8967,25 +9176,25 @@ country_event = {
 			transfer_state = 1154
 			transfer_state = 1151
 			transfer_state = 1153
-            set_politics = {
+			set_politics = {
 				ruling_party = authoritarian_democrat
 				elections_allowed = no
-		    }
+			}
 			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Great Lake Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
-            set_party_name = {
+			}
+			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "Great Lake Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
-            set_party_name = {
+			}
+			set_party_name = {
 				ideology = national_populist
 				long_name = "Great Lake Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_cosmetic_tag = CGL_Dominion
 			create_country_leader = {
 				name = "Orde Wingate"
@@ -8995,7 +9204,7 @@ country_event = {
 				ideology = authdem_junta_subtype
 				traits = {}
 				}
-            create_country_leader = {
+			create_country_leader = {
 				name = "Orde Wingate"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Orde_Wingate.png"
@@ -9003,7 +9212,7 @@ country_event = {
 				ideology = junta_subtype
 				traits = {}
 				}
-            create_country_leader = {
+			create_country_leader = {
 				name = "Orde Wingate"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Orde_Wingate.png"
@@ -9013,40 +9222,40 @@ country_event = {
 			}
 		}
 		NEE = {
-            add_state_core = 357 #Maine
-		    add_state_core = 358 #NYC
-		    add_state_core = 796 #Upstate
-		    add_state_core = 934 #New Hampshire
-		    add_state_core = 933 #Vermont
-		    add_state_core = 932 #Massachusetts
-		    add_state_core = 931 #Connecticut
-		    add_state_core = 935 #Rhode Island
-            transfer_state = 357
-		    transfer_state = 796
-		    transfer_state = 934
-		    transfer_state = 933
-		    transfer_state = 932
-		    transfer_state = 931
-		    transfer_state = 935
+			add_state_core = 357 #Maine
+			add_state_core = 358 #NYC
+			add_state_core = 796 #Upstate
+			add_state_core = 934 #New Hampshire
+			add_state_core = 933 #Vermont
+			add_state_core = 932 #Massachusetts
+			add_state_core = 931 #Connecticut
+			add_state_core = 935 #Rhode Island
+			transfer_state = 357
+			transfer_state = 796
+			transfer_state = 934
+			transfer_state = 933
+			transfer_state = 932
+			transfer_state = 931
+			transfer_state = 935
 			set_politics = {
 				ruling_party = paternal_autocrat
 				elections_allowed = no
-		    }
-            set_party_name = {
+			}
+			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "New English Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "New English Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = national_populist
 				long_name = "New English Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_cosmetic_tag = NEE_Dominion_other
 			create_country_leader = {
 				name = "Georges Vanier"
@@ -9064,7 +9273,7 @@ country_event = {
 				ideology = junta_subtype
 				traits = {}
 			}
-            create_country_leader = {
+			create_country_leader = {
 				name = "Georges Vanier"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier.png"
@@ -9074,36 +9283,36 @@ country_event = {
 			}
 		}
 		USA = {
-            transfer_state = 361
-		    transfer_state = 1159
-		    transfer_state = 1160
-		    transfer_state = 360
-		    transfer_state = 930
-		    transfer_state = 1162
-		    transfer_state = 358
-            transfer_state = 929
-            transfer_state = 359
-            set_politics = {
+			transfer_state = 361
+			transfer_state = 1159
+			transfer_state = 1160
+			transfer_state = 360
+			transfer_state = 930
+			transfer_state = 1162
+			transfer_state = 358
+			transfer_state = 929
+			transfer_state = 359
+			set_politics = {
 				ruling_party = paternal_autocrat
 				elections_allowed = no
-		    }
-            set_party_name = {
+			}
+			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Federal Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
-            set_party_name = {
+			}
+			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "Federal Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
-            set_party_name = {
+			}
+			set_party_name = {
 				ideology = national_populist
 				long_name = "Federal Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
-            set_cosmetic_tag = USA_Dominion
-            create_country_leader = {
+			}
+			set_cosmetic_tag = USA_Dominion
+			create_country_leader = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
@@ -9119,7 +9328,7 @@ country_event = {
 				ideology = junta_subtype
 				traits = {}
 			}
-            create_country_leader = {
+			create_country_leader = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
@@ -9135,10 +9344,10 @@ country_event = {
 			factor = 30
 		}
 		CAN = {
-            add_state_core = 463
-		    add_state_core = 386
-		    add_state_core = 385
-		    add_state_core = 387
+			add_state_core = 463
+			add_state_core = 386
+			add_state_core = 385
+			add_state_core = 387
 		}
 		add_stability = 0.1
 		CAN = {
@@ -9149,16 +9358,16 @@ country_event = {
 			transfer_state = 387
 		}
 		USA = {
-            transfer_state = 361
-		    transfer_state = 1159
-		    transfer_state = 1160
-		    transfer_state = 360
-		    transfer_state = 930
-		    transfer_state = 1162
-		    transfer_state = 358
-            transfer_state = 929
-            transfer_state = 359
-            transfer_state = 391
+			transfer_state = 361
+			transfer_state = 1159
+			transfer_state = 1160
+			transfer_state = 360
+			transfer_state = 930
+			transfer_state = 1162
+			transfer_state = 358
+			transfer_state = 929
+			transfer_state = 359
+			transfer_state = 391
 			transfer_state = 392
 			transfer_state = 394
 			transfer_state = 393
@@ -9170,7 +9379,7 @@ country_event = {
 			transfer_state = 1154
 			transfer_state = 1151
 			transfer_state = 1153
-            transfer_state = 372
+			transfer_state = 372
 			transfer_state = 374
 			transfer_state = 371
 			transfer_state = 370
@@ -9191,60 +9400,60 @@ country_event = {
 			transfer_state = 1167
 			transfer_state = 1171
 			transfer_state = 1172
-		    transfer_state = 378
-		    transfer_state = 829
-	        transfer_state = 797
-		    transfer_state = 798
-		    transfer_state = 1165
-		    transfer_state = 375
-		    transfer_state = 833
-		    transfer_state = 1096
-		    transfer_state = 1161
-		    transfer_state = 1166
-		    transfer_state = 377
-		    transfer_state = 376
-		    transfer_state = 380
-		    transfer_state = 1174
-		    transfer_state = 379
-   		    transfer_state = 388
-		    transfer_state = 389
-		    transfer_state = 390
-		    transfer_state = 381
-		    transfer_state = 384
-		    transfer_state = 382
-		    transfer_state = 383
-		    transfer_state = 373
-		    transfer_state = 1175
-		    transfer_state = 1164
-		    transfer_state = 1157
-		    transfer_state = 1163
-		    transfer_state = 1150
+			transfer_state = 378
+			transfer_state = 829
+			transfer_state = 797
+			transfer_state = 798
+			transfer_state = 1165
+			transfer_state = 375
+			transfer_state = 833
+			transfer_state = 1096
+			transfer_state = 1161
+			transfer_state = 1166
+			transfer_state = 377
+			transfer_state = 376
+			transfer_state = 380
+			transfer_state = 1174
+			transfer_state = 379
+   			transfer_state = 388
+			transfer_state = 389
+			transfer_state = 390
+			transfer_state = 381
+			transfer_state = 384
+			transfer_state = 382
+			transfer_state = 383
+			transfer_state = 373
+			transfer_state = 1175
+			transfer_state = 1164
+			transfer_state = 1157
+			transfer_state = 1163
+			transfer_state = 1150
 			set_politics = {
 				ruling_party = paternal_autocrat
 				elections_allowed = no
-		    }
+			}
 			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Federal Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = "Federal Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_party_name = {
 				ideology = national_populist
 				long_name = "Federal Administration Zone"
 				name = "Canadian Military Occupation"
-		    }
+			}
 			set_cosmetic_tag = USA_Dominion
 			create_country_leader = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_junta_subtype
 				traits = {}
 			}
 			create_country_leader = {

@@ -729,6 +729,9 @@ RUS_Alliance_decisions = {
 				has_global_flag = USA_civil_war_over_flag
 				has_global_flag = USA_civil_war_avoided_flag
 			}
+			NOT = {
+				has_global_flag = PSA_rockies_ceasefire
+			}
 		}
 
 		cost = 25
@@ -828,13 +831,25 @@ RUS_Alliance_decisions = {
 SOV_Spreading_The_Revolution_decisions = {
 	SOV_Form_USSR = {
 		icon = generic_form_nation
-		allowed = { is_russian_tag = yes }
+		
 		visible = {
 			is_subject = no
 			OR = {
 				has_country_leader = {
 					ruling_only = yes
 					name = "Grigory Zinoviev"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Dmitriy Ulyanov"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Sergey Syrtsov"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Semyon Budyonny"
 				}
 				has_country_leader = {
 					ruling_only = yes
@@ -878,6 +893,14 @@ SOV_Spreading_The_Revolution_decisions = {
 				}
 				has_country_leader = {
 					ruling_only = yes
+					name = "Aleksandr Shliapnikov"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Aleksandra Kollontai"
+				}
+				has_country_leader = {
+					ruling_only = yes
 					name = "Sergey Kirov"
 				}
 				has_country_leader = {
@@ -886,7 +909,27 @@ SOV_Spreading_The_Revolution_decisions = {
 				}
 				has_country_leader = {
 					ruling_only = yes
+					name = "Lev Gershtein"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Mikhail Likhach"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Mikhail Gendelman"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Nikolay Ivanov"
+				}
+				has_country_leader = {
+					ruling_only = yes
 					name = "Solomon Lozovskiy"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Rafail Abramovich"
 				}
 				has_country_leader = {
 					ruling_only = yes
@@ -913,14 +956,14 @@ SOV_Spreading_The_Revolution_decisions = {
 		}
 		
 		available = {
-			202 = { is_controlled_by_ROOT_or_subject = yes }
-			206 = { is_controlled_by_ROOT_or_subject = yes }
-			96 = { is_controlled_by_ROOT_or_subject = yes }
-			1091 = { is_controlled_by_ROOT_or_subject = yes }
-			231 = { is_controlled_by_ROOT_or_subject = yes }
-			990 = { is_controlled_by_ROOT_or_subject = yes }
-			230 = { is_controlled_by_ROOT_or_subject = yes }
-			408 = { is_controlled_by_ROOT_or_subject = yes }
+			202 = { is_controlled_by_ROOT_or_ally = yes }
+			206 = { is_controlled_by_ROOT_or_ally = yes }
+			96 = { is_controlled_by_ROOT_or_ally = yes }
+			1091 = { is_controlled_by_ROOT_or_ally = yes }
+			231 = { is_controlled_by_ROOT_or_ally = yes }
+			990 = { is_controlled_by_ROOT_or_ally = yes }
+			230 = { is_controlled_by_ROOT_or_ally = yes }
+			408 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 		fire_only_once = yes
 		ai_will_do = {
@@ -1077,10 +1120,27 @@ SOV_Spreading_The_Revolution_decisions = {
 					name = SOV_psrsi_party
 					long_name = SOV_psrsi_party_long
 				}
+				if = {
+					limit = {
+						OR = { 
+							has_idea = SOV_Lev_Kamenev_hog_rso
+							has_idea = SOV_Mikhail_I_Kalinin_hog_rso
+							has_idea = SOV_Georgy_Chicherin_hog_rso
+							has_idea = SOV_Grigory_Sokolnikov_hog_rso 
+						}
+					}
+					set_party_name = {
+						ideology = radical_socialist
+						name = SOV_union_totalist_party
+						long_name = SOV_union_totalist_party_long
+					}
+				}
+				else = {
 				set_party_name = {
 					ideology = radical_socialist
 					name = SOV_snsp_party
 					long_name = SOV_snsp_party_long
+				}
 				}
 				set_party_name = {
 					ideology = social_democrat
@@ -1088,7 +1148,17 @@ SOV_Spreading_The_Revolution_decisions = {
 					long_name = SOV_ssdrp_party_long
 				}
 			}
+			if = {
+				limit = {
+					NOT = { has_idea = RUS_Yakov_Fishman_hog_tot }
+				}
+			set_party_name = {
+				ideology = totalist
+				name = SOV_union_totalist_party
+				long_name = SOV_union_totalist_party_long
+			}
 		}
+	}
 	}
 		
 	SOV_Join_The_Internationale = {
@@ -1133,11 +1203,8 @@ SOV_Spreading_The_Revolution_decisions = {
 		icon = generic_civil_support
 		
 		available = {
-			if = {
-				limit = { is_in_faction = yes }
-				NOT = { has_country_flag = RUS_invited_country }
-				at_peace_or_same_enemies_as_FROM = yes
-			}
+			NOT = { has_country_flag = RUS_invited_country }
+			at_peace_or_same_enemies_as_FROM = yes
 		}
 
 		visible = {
@@ -2774,7 +2841,7 @@ SOV_Spreading_The_Revolution_decisions = {
 			can_declare_war_on = FROM
 		}
 
-		targets = { TUR OTT }
+		targets = { TUR }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = RUS_SOV_Open_The_Straits
@@ -3563,52 +3630,63 @@ SOV_Spreading_The_Revolution_decisions = {
 		icon = generic_civil_support
 		name = RUS_Demand_Tuva
 		available = {
-			is_neighbor_of = FROM
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
 			FROM = {
+				has_war = yes
 				is_subject = no
 			}
 		}
 
 		visible = {
+			329 = { is_owned_by_ROOT_or_ally = no }
 			can_declare_war_on = FROM
-			329 = { is_owned_by_ROOT_or_ally = no }			
 		}
 
 		targets = { MON }
 		target_root_trigger = {
 			OR = {
+				has_completed_focus = RUS_Mongolian_Issue
 				has_completed_focus = SOV_Mongolian_Issue
 				has_completed_focus = DKB_The_Eastern_Threat
 			}
 		}
 		target_trigger = {
 			can_declare_war_on = FROM
+			FROM = {
+				owns_state = 329 #Tuva
+				is_subject = no
+			}
 		}
-		
+
 		cost = 10
 		days_remove = 14
 		fire_only_once = yes
+		cancel_if_not_visible = yes
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
+				RUS_dont_attack_if_vulnerable_or_preparing = yes
 			}
 			modifier = {
 				factor = 0
-				strength_ratio = {
-					tag = FROM
-					ratio < 0.8
-				}
+				FROM = { RUS_dont_attack_if_target_is_stronger = yes }
 			}
 			modifier = {
 				factor = 0
-				has_country_flag = imminent_war
+				FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
 			}
 		}
-
+		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOV_Demand_Tuva target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }

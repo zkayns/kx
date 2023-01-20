@@ -457,7 +457,7 @@ country_event = { #Komitet Polaków na Litwie
 			ideology = social_liberal
 			popularity = 0.03
 		}
-                hidden_effect = {
+				hidden_effect = {
 			country_event = { id = LIT.25 days = 6 }
 		}
 	}
@@ -506,10 +506,16 @@ country_event = { #The Polish Dilemma
 			ruling_party = social_democrat
 			elections_allowed = yes
 		}
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:radical_socialist }
-		add_to_coalition = yes
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = marlib_will_join_coalition_tt
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = radsoc_will_join_coalition_tt
 		hidden_effect = {
 			hold_election = ROOT
 			remove_all_minister_types = yes
@@ -558,8 +564,11 @@ country_event = { #The Polish Dilemma
 			ruling_party = social_conservative
 			elections_allowed = yes
 		}
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		add_to_coalition = yes
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = soclib_will_join_coalition_tt
 		hidden_effect = {
 			hold_election = ROOT
 			complete_national_focus = LIT_new_seimas
@@ -679,8 +688,11 @@ country_event = { #LTS pull in LKDP old guard
 			ideology = authoritarian_democrat
 			popularity = 0.03
 		}
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		add_to_coalition = yes
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = soccon_will_join_coalition_tt
 	}
 }
 country_event = { #Inauguration of the new Seimas
@@ -4445,6 +4457,7 @@ country_event = { #The Vilnius Uprising
 			news_event = { id = worldnews.43 days = 1 }
 			country_event = { id = LIT.301 days = 2 }
 			country_event = { id = LIT.302 days = 3 }
+			country_event = { id = lithuania.29 days = 12 }
 			remove_ideas = LIT_increased_welfare_spending
 			remove_ideas = LIT_agrarian_tax_relief
 			remove_ideas = LIT_agricultural_revival
@@ -4548,7 +4561,7 @@ country_event = { # We gained territory
 		hidden_effect = {
 			if = {
 				limit = { tag = POL }
-				XXA = {
+				NSW = {
 					random_unit_leader = {
 						limit = { has_id = 76615 } #Lucjan Zeligowski
 						set_nationality = FROM
@@ -6041,7 +6054,9 @@ country_event = {
 		add_political_power = -20
 		hidden_effect = {
 			if = {
-				limit = { country_exists = RUS }
+				limit = { 
+					country_exists = RUS
+				}
 				RUS = { country_event = { id = lithuania.32 days = 7 } }
 			}
 		}

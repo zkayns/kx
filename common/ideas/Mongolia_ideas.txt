@@ -94,8 +94,8 @@ ideas = {
 			removal_cost = -1
 		}
 
-	
-	MON_claims_of_greatness= {
+
+		MON_claims_of_greatness= {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MON_claims_of_greatness"}
 			allowed = {always = no}
 			picture = GFX_idea_MON_claims_of_greatness
@@ -103,146 +103,148 @@ ideas = {
 				stability_factor= 0.15
 				war_support_factor= 0.10
 			}
-		
-	
-	}
-	MON_buryat_immigration= {
-		on_add = {log = "[GetDateText]: [Root.GetName]: add idea MON_buryat_immigration"}
-		allowed = {always = no}
-		available = {
-			OR = {
-				NOT = { country_exists = BRY }
-				AND = {
-					country_exists = BRY
-					BRY = { 
-						OR = {
-							has_government = totalist
-							has_government = paternal_autocrat
+		}
+
+		MON_buryat_immigration= {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MON_buryat_immigration"}
+			allowed = {always = no}
+			available = {
+				OR = {
+					NOT = { country_exists = BRY }
+					AND = {
+						country_exists = BRY
+						BRY = { 
+							OR = {
+								has_government = totalist
+								has_government = paternal_autocrat
+							}
 						}
 					}
 				}
 			}
-		}
-		picture = GFX_idea_MON_buryat_immigration
-		modifier = {
-			conscription = 0.04
-		}
-	}
-	
-	MON_rus_help = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_russian_eco_aid"}
-		name = MON_rus_help_loc
-		allowed = { always = no }
-		picture = GFX_idea_MON_rus_help
-		modifier = {
-			consumer_goods_factor = -0.025
-			production_speed_buildings_factor = 0.075
-		}
-	}
-	
-	MON_rus_help_less = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_russian_eco_aid"}
-		name = MON_rus_help_loc
-		allowed = { always = no }
-		picture = MON_rus_help
-		modifier = {
-			consumer_goods_factor = -0.025
-		}
-	}
-		
-	MON_jap_help = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MMON_jap_help"}
-		allowed = { always = no }
-		picture = GFX_idea_MON_jap_help
-		modifier = {
-			consumer_goods_factor = -0.025
-			production_speed_buildings_factor = 0.15
-		}
-	}
-		
-	MON_warlord = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_warlord"}
-		allowed = { always = no }
-		picture = GFX_idea_MON_warlord
-		modifier = {
-			stability_factor = -0.10
-		}
-	}
-	MON_gada_meiren = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_gada_meiren"}
-		allowed = { always = no }
-		picture = GFX_idea_MON_gada_meiren
-		modifier = {
-			stability_factor = -0.10
-			conscription = -0.04
-		}
-	}
-	MON_modern_kahn = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_modern_kahn"}
-		allowed = { always = no }
-		picture = GFX_idea_MON_modern_kahn
-		equipment_bonus = {
-			armor = {
-				build_cost_ic = -0.10
-				instant = yes
-			}
-			motorized_equipment = {
-				build_cost_ic = -0.20
-				instant = yes
+			picture = GFX_idea_MON_buryat_immigration
+			modifier = {
+				conscription = 0.04
 			}
 		}
-	}
-	MON_sternbergs_men = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_sternberg's_men"}
-		allowed = { always = no }
-		picture = MON_sternberg's_men
-		modifier = {
-			army_org_Factor = 0.075
-			army_morale_factor = 0.075
-			army_speed_factor = 0.05
+
+		MON_rus_help = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_russian_eco_aid"}
+			name = MON_rus_help_loc
+			allowed = { always = no }
+			picture = GFX_idea_MON_rus_help
+			modifier = {
+				consumer_goods_factor = -0.025
+				production_speed_buildings_factor = 0.075
+			}
 		}
-	}
-    MON_jebtsundamba_khutuktu_idea = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_8th_jebtsundamba_khutuktu_idea"}
-		allowed = { always = no }
-		picture = MON_Jebtsundamba_Khutughtu
-		modifier = {
-			stability_factor = 0.05
+
+		MON_rus_help_less = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_russian_eco_aid"}
+			name = MON_rus_help_loc
+			allowed = { always = no }
+			picture = MON_rus_help
+			modifier = {
+				consumer_goods_factor = -0.025
+			}
 		}
-	}
-	   
-	MON_jebtsundamba_khutuktu_NS_idea = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_jebtsundamba_khutuktu_NS_idea"}
-		allowed = { always = no }
-		picture = MON_Jebtsundamba_Khutughtu
-		modifier = {
-			stability_factor = 0.05
-		}
-	}
-	   
-	MON_9_jebtsundamba_khutuktu_idea = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_9_jebtsundamba_khutuktu_idea"}
-		allowed = { always = no }
-		picture = MON_9_Jebtsundamba_Khutughtu
-		modifier = {
-			stability_factor = 0.05
-		}
-	}
-	
-	MON_worker_camps = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_worker_camps"}
-		allowed = { always = no }
-		picture = GFX_idea_MON_worker_camps
-		modifier = {
-			stability_factor = -0.1
-			industrial_capacity_factory = 0.2
 			
+		MON_jap_help = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MMON_jap_help"}
+			allowed = { always = no }
+			picture = GFX_idea_MON_jap_help
+			modifier = {
+				consumer_goods_factor = -0.025
+				production_speed_buildings_factor = 0.15
+			}
 		}
-	}
+			
+		MON_warlord = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_warlord"}
+			allowed = { always = no }
+			picture = GFX_idea_MON_warlord
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+		MON_gada_meiren = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_gada_meiren"}
+			allowed = { always = no }
+			picture = GFX_idea_MON_gada_meiren
+			modifier = {
+				stability_factor = -0.10
+				conscription = -0.04
+			}
+		}
+		MON_modern_kahn = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_modern_kahn"}
+			allowed = { always = no }
+			picture = GFX_idea_MON_modern_kahn
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+		}
+		MON_sternbergs_men = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_sternberg's_men"}
+			allowed = { always = no }
+			picture = MON_sternberg's_men
+			modifier = {
+				army_org_Factor = 0.075
+				army_morale_factor = 0.075
+				army_speed_factor = 0.05
+			}
+		}
+		MON_jebtsundamba_khutuktu_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_8th_jebtsundamba_khutuktu_idea"}
+			allowed = { always = no }
+			picture = MON_Jebtsundamba_Khutughtu
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		
+		MON_jebtsundamba_khutuktu_NS_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_jebtsundamba_khutuktu_NS_idea"}
+			allowed = { always = no }
+			picture = MON_Jebtsundamba_Khutughtu
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		
+		MON_9_jebtsundamba_khutuktu_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_9_jebtsundamba_khutuktu_idea"}
+			allowed = { always = no }
+			picture = MON_9_Jebtsundamba_Khutughtu
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		
+		MON_worker_camps = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_worker_camps"}
+			allowed = { always = no }
+			picture = GFX_idea_MON_worker_camps
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.2
+				
+			}
+		}
 		MON_nomadic_society = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_nomadic_society"}
 			picture = MON_ger
 			modifier = {
+				out_of_supply_factor = -0.2
+				supply_node_range = 0.5
+				supply_consumption_factor = -0.25
 				stability_factor = 0.10
 				war_support_factor = -0.10
 				industry_air_damage_factor = -0.2
@@ -547,7 +549,7 @@ ideas = {
 		}
 		MON_liberal_nation_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_liberal_nation_idea"}
-			picture = generic_democratic_drift_bonus
+			picture = generic_liberalism
 			modifier = {
 				stability_factor = 0.15
 				political_power_gain = 0.1
@@ -555,7 +557,7 @@ ideas = {
 		}
 		MON_liberal_nation_idea2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_liberal_nation_idea2"}
-			picture = generic_democratic_drift_bonus
+			picture = generic_liberalism
 			modifier = {
 				stability_factor = 0.15
 				political_power_gain = 0.25
@@ -623,6 +625,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_nomadic_society2"}
 			picture = MON_ger
 			modifier = {
+				out_of_supply_factor = -0.2
+				supply_node_range = 0.5
+				supply_consumption_factor = -0.25
 				stability_factor = 0.15
 				war_support_factor = -0.10
 				industry_air_damage_factor = -0.2
@@ -634,6 +639,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_nomadic_society3"}
 			picture = MON_ger
 			modifier = {
+				out_of_supply_factor = -0.2
+				supply_node_range = 0.5
+				supply_consumption_factor = -0.25
 				stability_factor = 0.2
 				war_support_factor = -0.10
 				industry_air_damage_factor = -0.2
@@ -644,6 +652,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_nomadic_society4"}
 			picture = MON_ger
 			modifier = {
+				out_of_supply_factor = -0.2
+				supply_node_range = 0.5
+				supply_consumption_factor = -0.25
 				stability_factor = 0.25
 				war_support_factor = -0.05
 				industry_air_damage_factor = -0.2
@@ -662,7 +673,7 @@ ideas = {
 		}
 		MON_mongol_nationalism_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_mongol_nationalism_idea"}
-			picture = big_entente_idea
+			picture = generic_ultranationalism
 			modifier = {
 				war_support_factor = 0.05
 				conscription_factor = 0.25
@@ -671,7 +682,7 @@ ideas = {
 		}
 		MON_mongol_nationalism_idea2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_mongol_nationalism_idea2"}
-			picture = big_entente_idea
+			picture = generic_ultranationalism
 			modifier = {
 				war_support_factor = 0.075
 				conscription_factor = 0.3
@@ -681,7 +692,7 @@ ideas = {
 		}
 		MON_mongol_nationalism_idea3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_mongol_nationalism_idea3"}
-			picture = big_entente_idea
+			picture = generic_ultranationalism
 			modifier = {
 				war_support_factor = 0.1
 				conscription_factor = 0.35
@@ -731,7 +742,7 @@ ideas = {
 		}
 		MON_sternberg_purge_big_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_sternberg_purge_big_idea"}
-			picture = generic_purge
+			picture = generic_purge_idea
 			modifier = {
 				war_support_factor = -0.25
 				army_org_factor = -0.25
@@ -819,6 +830,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_nomadic_society2bud"}
 			picture = MON_ger
 			modifier = {
+				out_of_supply_factor = -0.2
+				supply_node_range = 0.5
+				supply_consumption_factor = -0.25
 				stability_factor = 0.15
 				war_support_factor = -0.10
 				industry_air_damage_factor = -0.2
@@ -830,6 +844,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_nomadic_society3bud"}
 			picture = MON_ger
 			modifier = {
+				out_of_supply_factor = -0.2
+				supply_node_range = 0.5
+				supply_consumption_factor = -0.25
 				stability_factor = 0.2
 				war_support_factor = -0.10
 				industry_air_damage_factor = -0.2
@@ -841,6 +858,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_nomadic_society4bud"}
 			picture = MON_ger
 			modifier = {
+				out_of_supply_factor = -0.2
+				supply_node_range = 0.5
+				supply_consumption_factor = -0.25
 				stability_factor = 0.25
 				war_support_factor = -0.10
 				industry_air_damage_factor = -0.2
@@ -929,7 +949,7 @@ ideas = {
 		}
 		MON_welfare_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_welfare_idea"}
-			picture = HUN_treaty_of_triannon
+			picture = generic_welfare_state
 			modifier = {
 				stability_factor = 0.15
 				political_power_gain = -0.15
@@ -938,7 +958,7 @@ ideas = {
 		}
 		MON_welfare_idea2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_welfare_idea2"}
-			picture = HUN_treaty_of_triannon
+			picture = generic_welfare_state
 			modifier = {
 				stability_factor = 0.2
 				political_power_gain = -0.25
@@ -948,7 +968,7 @@ ideas = {
 		}
 		MON_seize_wealth_from_the_chinese = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_welfare_idea2"}
-			picture = GEO_wealth_idea
+			picture = Wealth_Idea
 			modifier = {
 				stability_factor = 0.2
 				political_power_gain = -0.25
@@ -957,11 +977,11 @@ ideas = {
 		}
 		MON_peasant_revolt = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_peasant_revolt"}
-			picture = chi_wargaming_division
+			picture = RUS_land_reforms
 			modifier = {
-				stability_factor = 0.2
-				political_power_gain = -0.25
-				consumer_goods_factor = 0.05
+				stability_factor = 0.1
+				MONTHLY_POPULATION = 0.06
+				consumer_goods_factor = -0.08
 			}
 		}
 		MON_secure_dictatorship_idea = {
@@ -1018,42 +1038,45 @@ ideas = {
 			}
 		}
 		MON_Mad_Khan_idea = {
-            on_add = {log = "[GetDateText]: [Root.GetName]: add idea MON_Mad_Khan_idea"}
-            allowed = { always = no }
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MON_Mad_Khan_idea"}
+			allowed = { always = no }
 			removal_cost = -1
-            picture = MON_The_Mad_Khan
-            targeted_modifier = {
+			picture = MON_The_Mad_Khan
+			targeted_modifier = {
 				tag = XSM
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
 			}
-        }
+		}
 		Eurasian_alliance_idea = {
-            on_add = {log = "[GetDateText]: [Root.GetName]: add idea Eurasian_alliance_idea"}
-            allowed = { always = no }
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Eurasian_alliance_idea"}
+			allowed = { always = no }
 			available = { is_in_faction_with = MON }
 			removal_cost = -1
-            picture = idea_Eurasia
+			picture = idea_Eurasia
 			modifier = {
-			    political_power_gain = 0.05
+				political_power_gain = 0.05
 			}
 
-        }
+		}
 		MON_edgy_lone_wolf_idea = {
-            allowed = { always = no }
+			allowed = { always = no }
 			removal_cost = -1
-            picture = MON_The_Mad_Khan
+			picture = MON_The_Mad_Khan
 			modifier = {
 				non_core_manpower = 0.05
 				conscription = 0.03
 				compliance_gain = 0.15
-				army_morale_factor = 0.05
+				justify_war_goal_time = -0.75
+				enemy_justify_war_goal_time = -0.75
+				generate_wargoal_tension = -0.5
+				enemy_declare_war_tension = -0.5
 			}
-        }
+		}
 		MON_shared_chinese_industrial_investment_small = {
-            allowed = { always = no }
+			allowed = { always = no }
 			removal_cost = -1
-            picture = state_economy
+			picture = state_economy
 			modifier = {
 				consumer_goods_factor = -0.04
 				local_resources_factor = 0.05
@@ -1064,11 +1087,11 @@ ideas = {
 				mic_to_target_factor = 0.2
 				trade_cost_for_target_factor = -0.3
 			}
-        }
+		}
 		MON_shared_chinese_industrial_investment_big = {
-            allowed = { always = no }
+			allowed = { always = no }
 			removal_cost = -1
-            picture = MON_The_Mad_Khan
+			picture = MON_The_Mad_Khan
 			modifier = {
 				consumer_goods_factor = -0.075
 				local_resources_factor = 0.1
@@ -1079,11 +1102,11 @@ ideas = {
 				mic_to_target_factor = 0.3
 				trade_cost_for_target_factor = -0.5
 			}
-        }
+		}
 		MON_chinese_industrial_investment_small = {
-            allowed = { always = no }
+			allowed = { always = no }
 			removal_cost = -1
-            picture = state_economy
+			picture = state_economy
 			modifier = {
 				consumer_goods_factor = -0.04
 				local_resources_factor = 0.05
@@ -1094,11 +1117,11 @@ ideas = {
 				mic_to_target_factor = 0.2
 				trade_cost_for_target_factor = -0.5
 			}
-        }
+		}
 		MON_chinese_industrial_investment_big = {
-            allowed = { always = no }
+			allowed = { always = no }
 			removal_cost = -1
-            picture = MON_The_Mad_Khan
+			picture = MON_The_Mad_Khan
 			modifier = {
 				consumer_goods_factor = -0.075
 				local_resources_factor = 0.1
@@ -1109,11 +1132,11 @@ ideas = {
 				mic_to_target_factor = 0.2
 				trade_cost_for_target_factor = -0.5
 			}
-        }
+		}
 		MON_qing_industrial_sharing = {
-            allowed = { always = no }
+			allowed = { always = no }
 			removal_cost = -1
-            picture = GFX_idea_MON_buryat_immigration
+			picture = GFX_idea_MON_buryat_immigration
 			modifier = {
 				consumer_goods_factor = -0.03
 				production_speed_buildings_factor = 0.05
@@ -1125,11 +1148,11 @@ ideas = {
 				mic_to_target_factor = 0.10
 				trade_cost_for_target_factor = -0.25
 			}
-        }
+		}
 		MON_mantetsu_influence_MON = {
-            allowed = { always = no }
+			allowed = { always = no }
 			removal_cost = -1
-            picture = mantetsu_industrial_subsidiaries
+			picture = mantetsu_industrial_subsidiaries
 			modifier = {
 				consumer_goods_factor = -0.035
 				production_speed_buildings_factor = 0.05
@@ -1139,11 +1162,11 @@ ideas = {
 				cic_to_target_factor = 0.35
 				trade_cost_for_target_factor = -0.25
 			}
-        }
+		}
 		MON_mantetsu_influence = {
-            allowed = { always = no }
+			allowed = { always = no }
 			removal_cost = -1
-            picture = mantetsu_industrial_subsidiaries
+			picture = mantetsu_industrial_subsidiaries
 			modifier = {
 				production_speed_buildings_factor = 0.075
 				production_factory_max_efficiency_factor = 0.075
@@ -1153,7 +1176,7 @@ ideas = {
 				cic_to_target_factor = 0.30
 				trade_cost_for_target_factor = -0.25
 			}
-        }
+		}
 		
 		MON_ja_lama_army_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_traditional_army_idea"}
@@ -1348,5 +1371,175 @@ ideas = {
 				stability_factor = -0.05
 			}
 		}
+		MON_isolation_in_steppe = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_bastion_of_liberty_idea"}
+			picture = NGR_federalism
+			modifier = {
+				army_core_attack_factor = 0.1
+				MONTHLY_POPULATION = 0.05
+				army_core_defence_factor = 0.1
+			}
+		}
+				#Syndies
+		MON_aid_from_mongolia = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_welfare_idea2"}
+			picture = MON_aid_mongol
+			modifier = {
+				stability_factor = 0.07
+				consumer_goods_factor = -0.06
+				weekly_manpower = 15
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		MON_aid_to_france = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_welfare_idea2"}
+			picture = MON_aid_france
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.03
+				production_factory_max_efficiency_factor = -0.04
+			}
+		}
+		MON_foreign_modernizations = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_chinese_colonization_idea2"}
+			picture = MON_foreign_modern
+			modifier = {
+				MONTHLY_POPULATION = 0.06
+					party_popularity_stability_factor = 0.05
+				production_speed_buildings_factor = 0.07
+				research_speed_factor = 0.05
+			}
+		}
+		MON_kurultais = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_traditional_army_idea"}
+			picture = MON_kurultais_union
+			modifier = {
+				production_speed_buildings_factor = 0.08
+				production_factory_max_efficiency_factor = 0.09
+				industrial_capacity_factory = 0.08
+				line_change_production_efficiency_factor = 0.06
+			}
+		}
+		MON_easing_purges_n_spreading_liberty = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_traditional_army_idea"}
+			picture = MON_easing_purges_spreading_liberty
+			modifier = {
+				trade_opinion_factor = 0.2
+				political_power_gain = 0.07
+				stability_factor = 0.07
+				party_popularity_stability_factor = 0.1
+			}
+		}
+		MON_healing_stepp_with_syndie = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_traditional_army_idea"}
+			picture = MON_healing_stepp_with_syndical
+			modifier = {
+				stability_weekly_factor = 0.01
+				political_power_gain = 0.05
+				local_manpower = 0.04
+				party_popularity_stability_factor = 0.06
+				consumer_goods_factor = -0.05
+			}
+		}
+				#Gada
+		MON_alliance_with_bogd_khan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_secure_dictatorship_idea3"}
+			picture = MON_ally_with_bogd_khan
+			modifier = {
+				war_support_factor = 0.08
+				political_power_gain = 0.06
+				resistance_growth = -0.05
+			}
+		}
+		MON_red_religion_tengri = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_mongol_nationalism_idea"}
+			picture = MON_tengri_red
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.10
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		MON_crimson_muqali = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_mongol_nationalism_idea"}
+			picture = MON_crimson_muqali_gada
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		MON_red_khan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MON_mongol_nationalism_idea"}
+			picture = MON_red_khan_paradise
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				party_popularity_stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+				#Tots - Bolsheviks
+		MON_bolshevik_allies = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SKM_peasant_economy"}
+			picture = MON_bolshie_allies
+			modifier = {
+				weekly_manpower = 75
+				resistance_growth = -0.15
+				totalist_drift = 0.02
+				industrial_capacity_factory = 0.03
+			}
+		}
+		MON_bolshevik_expertise = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SKM_peasant_economy"}
+			picture = MON_bolshie_expertise
+			modifier = {
+				surrender_limit = 0.15
+				totalist_drift = 0.03
+				local_non_core_manpower = 0.1
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.10
+			}
+		}
+				#Tots - Chinese
+		MON_KMT_connections = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SKM_peasant_council"}
+			picture = MON_Kuomintang_connections
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				local_supplies = 0.1
+				stability_factor = 0.03
+			}
+		}	
+		MON_sino_mongolian_cooperatives = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KIV_no_corruption" }
+			picture = MON_sino_mongolian_com_cooperatives
+			modifier = {
+				local_non_core_manpower = 0.1
+				resistance_growth = -0.15
+				industrial_capacity_factory = 0.08
+				line_change_production_efficiency_factor = 0.06
+			}
+		} 
+		MON_centralized_industrialization_now = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KIV_no_corruption" }
+			picture = MON_central_industralization
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.07
+				industrial_capacity_factory = 0.07
+			}
+		}   
+		MON_mongolian_culture_rev = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SKM_egalitarian_sikkim"}
+			picture = MON_mongolian_culture_revolution
+			modifier = {
+				conscription_factor = 0.20
+				army_morale_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}		
 	}
 }

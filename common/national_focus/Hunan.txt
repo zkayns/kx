@@ -1,6 +1,6 @@
 ##################################
-# Hunan National Focus 			 #
-#      By Roniius & Pietrus      #
+# Hunan National Focus 			#
+#	By Roniius & Pietrus	#
 ##################################
 
 focus_tree = {
@@ -490,7 +490,7 @@ focus_tree = {
 
 	focus = {
 		id = HNN_Sham_Democracy
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_goal_HNN_the_old_governor
 		x = 10
 		y = 0
 		cost = 5
@@ -2826,7 +2826,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HNN_Import_Fighters"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = small_plane_airframe
 				amount = 25
 				producer = GER
 			}

@@ -6,7 +6,7 @@ state = {
 	state_category = two
 
 	history = {
-		owner = ARM
+		owner = AZE
 		add_core_of = AZE
 		add_core_of = ARM
 		victory_points = {
@@ -33,6 +33,6 @@ state = {
 	}
 
 	provinces = {
-		1467 4660 6642 6997 9715 11708 12450 13418
+		1467 4660 6642 6997 7689 7738 7809 9715 10536 11708 12517 13418
 	}
 }

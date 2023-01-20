@@ -850,73 +850,82 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = sprd.23.a
-		random_list = {
-			40 = {
-				modifier = {
-					factor = 0
-					OR = {
-						has_game_rule = {
-							rule = SPR_civil_war
-							option = SPR_CIVIL_WAR_AVOIDED_CNT
-						}
-						has_game_rule = {
-							rule = SPR_civil_war
-							option = SPR_CIVIL_WAR_AVOIDED_CAR
-						}
+		name = sprd.23.a #Establishment Victory
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SPR_civil_war
+						option = SPR_CIVIL_WAR_AVOIDED_CNT
 					}
-				}
-				custom_effect_tooltip = SPR_ruling_party_wins
-				hidden_effect = {
-					country_event = {
-						id = sprd.34
-						hours = 5
+					has_game_rule = {
+						rule = SPR_civil_war
+						option = SPR_CIVIL_WAR_AVOIDED_CAR
 					}
 				}
 			}
-			30 = {
-				modifier = {
-					factor = 0
-					OR = {
-						has_game_rule = {
-							rule = SPR_civil_war
-							option = SPR_CIVIL_WAR_AVOIDED_SPR
-						}
-						has_game_rule = {
-							rule = SPR_civil_war
-							option = SPR_CIVIL_WAR_AVOIDED_CAR
-						}
+		}
+		custom_effect_tooltip = SPR_ruling_party_wins
+		hidden_effect = {
+			country_event = {
+				id = sprd.34
+				hours = 5
+			}
+		}
+	}
+	
+	option = {
+		name = sprd.23.b #Cnt Fai victory
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SPR_civil_war
+						option = SPR_CIVIL_WAR_AVOIDED_SPR
 					}
-				}
-				custom_effect_tooltip = SPR_CNT_wins
-				hidden_effect = {
-					country_event = {
-						id = sprd.35
-						hours = 5
+					has_game_rule = {
+						rule = SPR_civil_war
+						option = SPR_CIVIL_WAR_AVOIDED_CAR
 					}
 				}
 			}
-			30 = {
-				modifier = {
-					factor = 0
-					OR = {
-						has_game_rule = {
-							rule = SPR_civil_war
-							option = SPR_CIVIL_WAR_AVOIDED_SPR
-						}
-						has_game_rule = {
-							rule = SPR_civil_war
-							option = SPR_CIVIL_WAR_AVOIDED_CNT
-						}
+		}
+		custom_effect_tooltip = SPR_CNT_wins
+		hidden_effect = {
+			country_event = {
+				id = sprd.35
+				hours = 5
+			}
+		}
+	}
+	
+	option = {
+		name = sprd.23.c #Carlist Victory
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SPR_civil_war
+						option = SPR_CIVIL_WAR_AVOIDED_SPR
+					}
+					has_game_rule = {
+						rule = SPR_civil_war
+						option = SPR_CIVIL_WAR_AVOIDED_CNT
 					}
 				}
-				custom_effect_tooltip = SPR_CAR_wins
-				hidden_effect = {
-					country_event = {
-						id = sprd.36
-						hours = 5
-					}
-				}
+			}
+		}
+		custom_effect_tooltip = SPR_CAR_wins
+		hidden_effect = {
+			country_event = {
+				id = sprd.36
+				hours = 5
 			}
 		}
 	}
@@ -1025,6 +1034,13 @@ country_event = {
 		name = sprd.27.a #Name him as Alfonso's successor
 		ai_chance = {
 			factor = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SPR_future_of_the_monarchy
+					option = SPR_FUTURE_OF_THE_MONARCHY_REPUBLIC
+				}
+			}
 		}
 		add_political_power = 40
 		create_country_leader = {
@@ -1034,6 +1050,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = autdem_christian_democracy_subtype
 		}
+		set_country_flag = SPR_King_Juan
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.1
@@ -1043,6 +1060,13 @@ country_event = {
 		name = sprd.27.b #No, the time of the kingdom is over
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SPR_future_of_the_monarchy
+					option = SPR_FUTURE_OF_THE_MONARCHY_NEW_KING
+				}
+			}
 		}
 		add_political_power = -100
 		create_country_leader = {
@@ -1076,6 +1100,13 @@ country_event = {
 		name = sprd.27.a #Name him as Alfonso's successor
 		ai_chance = {
 			factor = 60
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SPR_future_of_the_monarchy
+					option = SPR_FUTURE_OF_THE_MONARCHY_REPUBLIC
+				}
+			}
 		}
 		add_political_power = 40
 		create_country_leader = {
@@ -1085,6 +1116,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = autdem_christian_democracy_subtype
 		}
+		set_country_flag = SPR_King_Jaime
 		if = {
 			limit = {
 				NOT = { has_government = authoritarian_democrat }
@@ -1102,6 +1134,13 @@ country_event = {
 		name = sprd.27.b #No, the time of the kingdom is over
 		ai_chance = {
 			factor = 40
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SPR_future_of_the_monarchy
+					option = SPR_FUTURE_OF_THE_MONARCHY_NEW_KING
+				}
+			}
 		}
 		add_political_power = -100
 		create_country_leader = {
@@ -1159,6 +1198,13 @@ country_event = {
 		name = sprd.30.b #It's not a good idea
 		ai_chance = {
 			factor = 5
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SPR_forpol
+					option = SPR_FORPOL_REICHSPAKT
+				}
+			}
 		}
 		add_political_power = -20
 		SPR = {
@@ -1207,6 +1253,13 @@ country_event = {
 		name = sprd.30.b #It's not a good idea
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SPR_forpol
+					option = SPR_FORPOL_ENTENTE
+				}
+			}
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -1282,7 +1335,7 @@ country_event = {
 		name = sprd.34.a
 		add_stability = 0.10
 		add_popularity = {
-			ideology = social_conservative
+			ideology = authoritarian_democrat
 			popularity = 0.2
 		}
 		set_country_flag = election_success
@@ -1358,6 +1411,10 @@ country_event = {
 					target = SPR
 					transfer_troops = yes
 				}
+			SPR = {
+			CNT = { transfer_technology = yes }
+			}
+			CNT = { set_capital = { state = 41 } }
 				set_country_flag = election_success
 				add_stability = 0.10
 				transfer_technology = yes
@@ -1477,6 +1534,10 @@ country_event = {
 					target = SPR
 					transfer_troops = yes
 				}
+			SPR = {
+			CAR = { transfer_technology = yes }
+			}
+			CAR = { set_capital = { state = 41 } }
 				set_country_flag = election_success
 				add_stability = 0.10
 				transfer_technology = yes
@@ -3673,35 +3734,76 @@ country_event = { #Constitutional monarchy?
 		add_stability = 0.05
 		hidden_effect = {
 			set_country_flag = SPR_constitutional_monarchy
-			create_country_leader = {
-				name = "Jaime I"
-				desc = "POLITICS_JAIME_BOURBON_DESC"
-				picture = "gfx/leaders/SPR/Portrait_SPR_Jaime_I.png"
-				expire = "1965.1.1"
-				ideology = christian_democracy_subtype
-			}
-			create_country_leader = {
-				name = "Jaime I"
-				desc = "POLITICS_JAIME_BOURBON_DESC"
-				picture = "gfx/leaders/SPR/Portrait_SPR_Jaime_I.png"
-				expire = "1965.1.1"
-				ideology = liberal_conservative_subtype
-			}
-			create_country_leader = {
-				name = "Jaime I"
-				desc = "POLITICS_JAIME_BOURBON_DESC"
-				picture = "gfx/leaders/SPR/Portrait_SPR_Jaime_I.png"
-				expire = "1965.1.1"
-				ideology = radical_liberalism_subtype
-			}
 			if = {
-				limit = { has_country_flag = SPR_allow_psoe }
+				limit = {
+					has_country_flag = SPR_King_Jaime
+				}
 				create_country_leader = {
 					name = "Jaime I"
 					desc = "POLITICS_JAIME_BOURBON_DESC"
 					picture = "gfx/leaders/SPR/Portrait_SPR_Jaime_I.png"
 					expire = "1965.1.1"
-					ideology = socdem_democratic_socialism_subtype
+					ideology = christian_democracy_subtype
+				}
+				create_country_leader = {
+					name = "Jaime I"
+					desc = "POLITICS_JAIME_BOURBON_DESC"
+					picture = "gfx/leaders/SPR/Portrait_SPR_Jaime_I.png"
+					expire = "1965.1.1"
+					ideology = liberal_conservative_subtype
+				}
+				create_country_leader = {
+					name = "Jaime I"
+					desc = "POLITICS_JAIME_BOURBON_DESC"
+					picture = "gfx/leaders/SPR/Portrait_SPR_Jaime_I.png"
+					expire = "1965.1.1"
+					ideology = radical_liberalism_subtype
+				}
+				if = {
+					limit = { has_country_flag = SPR_allow_psoe }
+					create_country_leader = {
+						name = "Jaime I"
+						desc = "POLITICS_JAIME_BOURBON_DESC"
+						picture = "gfx/leaders/SPR/Portrait_SPR_Jaime_I.png"
+						expire = "1965.1.1"
+						ideology = socdem_democratic_socialism_subtype
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_King_Juan
+				}
+				create_country_leader = {
+					name = "Juan III"
+					desc = "POLITICS_JUAN_BOURBON_DESC"
+					picture = "gfx/leaders/SPR/Portrait_SPR_Juan_III.png"
+					expire = "1965.1.1"
+					ideology = christian_democracy_subtype
+				}
+				create_country_leader = {
+					name = "Juan III"
+					desc = "POLITICS_JUAN_BOURBON_DESC"
+					picture = "gfx/leaders/SPR/Portrait_SPR_Juan_III.png"
+					expire = "1965.1.1"
+					ideology = liberal_conservative_subtype
+				}
+				create_country_leader = {
+					name = "Juan III"
+					desc = "POLITICS_JUAN_BOURBON_DESC"
+					picture = "gfx/leaders/SPR/Portrait_SPR_Juan_III.png"
+					expire = "1965.1.1"
+					ideology = radical_liberalism_subtype
+				}
+				if = {
+					limit = { has_country_flag = SPR_allow_psoe }
+					create_country_leader = {
+						name = "Juan III"
+						desc = "POLITICS_JUAN_BOURBON_DESC"
+						picture = "gfx/leaders/SPR/Portrait_SPR_Juan_III.png"
+						expire = "1965.1.1"
+						ideology = socdem_democratic_socialism_subtype
+					}
 				}
 			}
 		} 
@@ -4165,7 +4267,7 @@ country_event = { #Constitutional republic?
 		}
 		name = sprd.103.b
 		add_stability = -0.05
-		set_country_flag = SPR_francoism
+		set_country_flag = SPR_francoist
 	}
 }
 
@@ -4364,7 +4466,7 @@ country_event = {
 	option = {
 		name = sprc.332.a
 		hidden_effect = {
-			set_state_controller = 818
+			transfer_state = 818
 			load_OOB = CAR_Guantanamo
 			CUB = {
 				country_event = {
@@ -4390,7 +4492,7 @@ country_event = {
 	option = {
 		name = sprc.333.a
 		hidden_effect = {
-			set_province_controller = 1550
+			transfer_state = 820
 			load_OOB = CAR_Santiago
 			CUB = {
 				country_event = {
@@ -4415,9 +4517,13 @@ country_event = {
 
 	option = {
 		name = sprc.334.a
-		declare_war_on = {
-			target = CAR
+		create_wargoal = {
 			type = annex_everything
+			target = CAR
+		}
+	add_timed_idea = {
+	idea = CUB_southern_unrest
+	days = 200
 		}
 	}
 }

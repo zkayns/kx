@@ -326,6 +326,10 @@ spriteTypes = {
 		name = "SPA_CNT_refugees"
 		texturefile = "gfx/event_pictures/Europe/Spain/SPA_CNT_refugees.png"
 	}
+	spriteType = {
+		name = "CAR_Carlist_Flag"
+		texturefile = "gfx/event_pictures/Europe/Spain/CAR_Carlist_Flag.png"
+	}
 
 	## Ottomans
 
@@ -3243,6 +3247,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/North America/United_States/USA_americans_will_fight_for_liberty.png"
 	}
 	spriteType = {
+		name = "GFX_USA_army"
+		texturefile = "gfx/event_pictures/North America/United_States/USA_army.png"
+	}
+	spriteType = {
 		name = "GFX_USA_Oer_the_ramparts_we_watch_copy"
 		texturefile = "gfx/event_pictures/North America/United_States/USA_Oer_the_ramparts_we_watch_copy.png"
 	}
@@ -4689,6 +4697,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Europe/Netherlands/HOL_sneek_conspiracy.png"
 	}
 	spriteType = {
+		name = "GFX_report_event_NEE_honey"
+		texturefile = "gfx/event_pictures/North_America/New England/NEE_honey.png"
+	}
+	spriteType = {
 		name = "GFX_HOL_strike"
 		texturefile = "gfx/event_pictures/Europe/Netherlands/HOL_strike.png"
 	}
@@ -4758,6 +4770,70 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_REX_propaganda"
 		texturefile = "gfx/event_pictures/Europe/Wallonia/REX_propaganda.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Degrelle_Stare"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Degrelle_Stare.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Degrelle_Yelling"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Degrelle_AAA.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Degrelle_Desk"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Degrelle_Desk.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Degrelle_Arrest"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Degrelle_Arrest.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Degrelle_Fun"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Degrelle_Fun.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Burgundy"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Burgundy.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Rex_Banner"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Rex_Banner.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Rex_Poster"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Rex_Poster.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Rex_Poster_2"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Rex_Poster_2.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Rex_Poster_3"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Rex_Poster_3.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Tintin"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Tintin.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Tintin_Africa"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Tintin_Africa.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Matthys"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Matthys.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Deffontaine"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Deffontaine.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Charlemagne"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Charlemagne.png"
+	}
+	spriteType = {
+		name = "GFX_WLL_Capet"
+		texturefile = "gfx/event_pictures/Europe/Wallonia/WLL_Capet.png"
 	}
 	spriteType = {
 		name = "GFX_Ardenne_Castle"
@@ -7122,5 +7198,29 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_sikkim_crowd"
 		texturefile = "gfx/event_pictures/Asia/Sikkim/sikkim_crowd.png"
+	}
+	spriteType = {
+		name = "GFX_news_rocket_mail"
+		texturefile = "gfx/event_pictures/Asia/Sikkim/rocket_mail.png"
+	}
+	spriteType = {
+		name = "GFX_news_national_park"
+		texturefile = "gfx/event_pictures/Asia/Sikkim/national_park.png"
+	}
+	spriteType = {
+		name = "GFX_news_sikkim_mountain_2"
+		texturefile = "gfx/event_pictures/Asia/Sikkim/sikkim_mountain_2.png"
+	}
+	spriteType = {
+		name = "GFX_news_helen_lepcha"
+		texturefile = "gfx/event_pictures/Asia/Sikkim/helen_lepcha.png"
+	}
+	spriteType = {
+		name = "GFX_news_trilochan_pokhrel"
+		texturefile = "gfx/event_pictures/Asia/Sikkim/trilochan_pokhrel.png"
+	}
+	spriteType = {
+		name = "GFX_news_sikkim_council"
+		texturefile = "gfx/event_pictures/Asia/Sikkim/sikkim_council.png"
 	}
 }

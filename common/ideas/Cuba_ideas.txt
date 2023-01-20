@@ -343,7 +343,7 @@ ideas = {
 			modifier = {
 				conscription_factor = 0.1
 			}
-			picture = authoritarian_democrat
+			picture = NFA_trad
 		}
 
 		CUB_education_natpop = {
@@ -385,11 +385,11 @@ ideas = {
 		CUB_airinvest1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CUB_airinvest1"}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
@@ -403,11 +403,11 @@ ideas = {
 		CUB_airinvest2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CUB_airinvest2"}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.15
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					instant = yes
 					build_cost_ic = -0.15
 				}
@@ -1264,7 +1264,7 @@ ideas = {
 				consumer_goods_factor = -0.01
 			}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = 0.02
 					instant = yes
 				}
@@ -1713,6 +1713,14 @@ ideas = {
 				}
 			}
 			picture = ast_volunteer_defence_corps
+		}
+		CUB_southern_unrest = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CUB_southern_unrest"}
+			modifier = {
+				ai_call_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
+			}
+			picture = CAR_cuban_war
 		}
 	}
 

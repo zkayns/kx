@@ -22,8 +22,24 @@ set_technology = {
 	tech_mountaineers = 1
 	tech_engineers = 1
 	gw_artillery = 1
-	### Air ###
-	early_fighter = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		#set_air_oob = "GEO_air_bba"
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+		}
+		GEO_BBA_air_variants = yes
+	else = {
+		#set_air_oob = "GEO_air_legacy"
+		set_technology = {
+			early_fighter = 1
+		}
+	}
 }
 
 ### Navy - MtG ###
@@ -37,6 +53,8 @@ if = {
 		basic_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
 		basic_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
 		
 		basic_naval_mines = 1
 
@@ -93,16 +111,17 @@ set_country_flag = KX_GEO_FUTURE_IS_CERTAIN
 country_event = { id = geo.1 days = 1 } # Intro event
 country_event = { id = geo.6 days = 38 }
 country_event = { id = geo.67 days = 510 } # South Ossetian autonomy
+country_event = { id = geo.126 days = 1461 random = 5000 } # Robeson Tune
 create_country_leader = {
 	name = "Leo Shengelaia"
 	desc = "POLITICS_LEO_SHENGELAIA_DESC"
 	picture = "gfx/leaders/GEO/Portrait_GEO_Leo_Shengelaia.png" 
 	expire = "1965.1.1"
-	ideology = agrarian_socialism_subtype
+	ideology = narodism_subtype
 }
 
 create_country_leader = {
-	name = "Ioseb B. Jughashvili"
+	name = "Ioseb 'Koba' Jughashvili"
 	desc = "POLITICS_STALIN_DESC"
 	picture = "gfx/leaders/GEO/Portrait_GEO_Ioseb_Jughashvili.png"
 	expire = "1965.1.1"
@@ -227,6 +246,17 @@ create_corps_commander = {
 	planning_skill = 3
 	logistics_skill = 2
 	id = 3503
+}
+
+create_corps_commander = {
+	name = "Valerian Tevzadze"
+	portrait_path = "gfx/leaders/GEO/Portrait_GEO_Valerian_Tevzadze.png"
+	traits = { commando }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_navy_leader = {

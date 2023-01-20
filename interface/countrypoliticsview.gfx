@@ -1,5 +1,19 @@
 spriteTypes = {
-
+	
+	#BOP stuff
+	corneredTileSpriteType = {
+		name = "GFX_bop_button"
+		size= { x=40 y=48 }
+		textureFile = "gfx/interface/bop/bop_button.png"
+		borderSize = { x=2 y=2 }
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		
+	}
+	spriteType = {
+		name = "GFX_bop_glow_effect"
+		textureFile = "gfx/interface/bop/bop_button.png"
+	}
+	
 	#Autonomy Stuff
 
 	spriteType = {
@@ -568,10 +582,73 @@ spriteTypes = {
 		name = "GFX_ideology_militant_atheism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/militant_atheism_group.png"
 	}
-	
 	spriteType = {
 		name = "GFX_ideology_technocracy_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/technocracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_maximato_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/maximato_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tot_developing_leftism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_developing_leftism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_richytskyi_thought_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/richytskyi_thought_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tot_tridemism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_tridemism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tot_leftcraftism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_leftcraftism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_pastoralism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/anarcho_pastoralism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_hardliner_bolshevism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/hardliner_bolshevism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_red_ustase_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/red_ustase_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tot_mexicayotlism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_mexicayotlism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tot_kadroism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_kadroism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socialist_security_state_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socialist_security_state_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_william_foster_thought_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/william_foster_thought_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_bolshevism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/anarcho_bolshevism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_lovestoneism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/lovestoneism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_volkisch_communitarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/volkisch_communitarianism_group.png"
 	}
 	
 	spriteType = {
@@ -626,6 +703,26 @@ spriteTypes = {
 	    name = "GFX_ideology_eco_syndicalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/eco_syndicalism_group.png"
 	}
+	spriteType = {
+	    name = "GFX_ideology_syn_developing_leftism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/syn_developing_leftism_group.png"
+	}
+	spriteType = {
+	    name = "GFX_ideology_esperanto_syndicalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/esperanto_syndicalism_group.png"
+	}
+	spriteType = {
+	    name = "GFX_ideology_syn_mexicayotlism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/syn_mexicayotlism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_syn_islamic_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/syn_islamic_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_syn_buddhist_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/syn_buddhist_socialism_group.png"
+	}
 
 	spriteType = {
 		name = "GFX_ideology_christian_socialism_subtype"
@@ -652,6 +749,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/market_socialist_group.png"
 	}
 	spriteType = {
+		name = "GFX_ideology_bukharinist_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/bukharinist_group.png"
+	}
+	spriteType = {
 		name = "GFX_ideology_fascism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/fascism_group.png"
 	}
@@ -672,6 +773,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/alcoholism_group.png"
 	}
 	spriteType = {
+		name = "GFX_ideology_radsoc_austromarxism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/austromarxism_group.png"
+	}
+	spriteType = {
 		name = "GFX_ideology_radsoc_red_junta_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/red_junta_group.png"
 	}
@@ -685,11 +790,15 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ideology_radsoc_obammunism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/obammunism_group.png"
+		texturefile = "gfx/interface/ideologies/subideologies/moderate_obammunism_group.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_radsoc_communism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/radsoc_communism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_national_communism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/national_communism_group.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_zhdanovism_subtype"
@@ -714,6 +823,66 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_left_nationalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/left_nationalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_boer_nationalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_boer_nationalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_indigenous_communitarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_indigenous_communitarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_developing_leftism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/developing_leftism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_mexicayotlism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/mexicayotlism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_leftcraftism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/leftcraftism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_narodism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/narodism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_utopian_technocracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/utopian_technocracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_quaker_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/quaker_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_popular_patriotism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_popular_patriotism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_islamic_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/islamic_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_buddhist_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/buddhist_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_eco_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/eco_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_frontier_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/frontier_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_hiveism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/social_hiveism_group.png"
 	}
 	
 	spriteType = {
@@ -788,6 +957,114 @@ spriteTypes = {
 		name = "GFX_ideology_socdem_left_nationalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/socdem_left_nationalism_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_socdem_agrarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_agrarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_indigenous_communitarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/indigenous_communitarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_developing_leftism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_developing_leftism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_christian_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_christian_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_figuerismo_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/figuerismo_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_colonial_govt_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_colonial_govt_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_vlasovism_socdem_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/vlasovism_socdem_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_narodism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_narodism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_popular_patriotism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/popular_patriotism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_bonapartism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_bonapartism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_sandinismo_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_sandinismo_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_mexicayotlism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_mexicayotlism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_humanistic_capitalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_humanistic_capitalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_paternal_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_paternal_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_utopian_technocracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_utopian_technocracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_reformed_belgicism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_reformed_belgicism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_teetotalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/teetotalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_islamic_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_islamic_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_buddhist_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_buddhist_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_islamism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_islamism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_clientelism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_clientelism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_kleptocracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_kleptocracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_tribal_councilism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_tribal_councilism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_jeffersonianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_jeffersonianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_mercenary_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_mercenary_democracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_mladorossi_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_mladorossi_group.png"
+	}
 	
 	spriteType = {
 		name = "GFX_ideology_centrist_subtype"
@@ -841,7 +1118,67 @@ spriteTypes = {
 		name = "GFX_ideology_soclib_tridemism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/soclib_tridemism_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_soclib_indigenous_communitarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_indigenous_communitarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_tribal_councilism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_tribal_councilism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_meritocratic_liberalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/meritocratic_liberalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_colonial_govt_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_colonial_govt_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_narodism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_narodism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_kimbanguism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_kimbanguism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_classical_liberalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/classical_liberalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_humanistic_capitalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_humanistic_capitalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_dixiecrat_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_dixiecrat_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_islamism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_islamism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_jacksonianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_jacksonianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_jeffersonianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/jeffersonianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_christian_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_christian_democracy_group.png"
+	}
 	
+	spriteType = {
+		name = "GFX_ideology_free_market_capitalist_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/free_market_capitalist_group.png"
+	}
 	spriteType = {
 		name = "GFX_ideology_libertarian_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/libertarian_group.png"
@@ -885,6 +1222,50 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_pan_asianism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/pan_asianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tribal_councilism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tribal_councilism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_colonial_govt_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_colonial_govt_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_humanistic_capitalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/humanistic_capitalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_progressive_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/progressive_democracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_classical_liberalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_classical_liberalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_centrist_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_centrist_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_reformed_belgicism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_reformed_belgicism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_islamism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_islamism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_hamiltonianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_hamiltonianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_mercenary_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/mercenary_democracy_group.png"
 	}
 
 	spriteType = {
@@ -942,6 +1323,54 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_soccon_ukrainian_conservatism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/soccon_ukrainian_conservatism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soccon_bonapartism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_bonapartism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soccon_tribal_chiefdom_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_tribal_chiefdom_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soccon_tribal_councilism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_tribal_councilism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_clientelism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/clientelism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soccon_colonial_govt_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_colonial_govt_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_christian_technocracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/christian_technocracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soccon_oligarchy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_oligarchy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_toryism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/toryism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soccon_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soccon_islamism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_islamism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_whiggism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/whiggism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soccon_mercenary_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_mercenary_democracy_group.png"
 	}
 	
 	spriteType = {
@@ -1028,6 +1457,66 @@ spriteTypes = {
 		name = "GFX_ideology_ukrainian_conservatism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/ukrainian_conservatism_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_authdem_bonapartism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_bonapartism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_boer_nationalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_boer_nationalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tribal_chiefdom_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tribal_chiefdom_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_vlasovism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/vlasovism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_washingtonism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/washingtonism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_caudillo_populism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_caudillo_populism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_revolution_nationale_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_revolution_nationale_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_toryism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_toryism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_bolivarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_bolivarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_agrarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_agrarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_islamism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/islamism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_hamiltonianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/hamiltonianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_jacksonianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_jacksonianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authdem_austropopulism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_austropopulism_group.png"
+	}
 	
 	spriteType = {
 		name = "GFX_ideology_junta_subtype"
@@ -1051,7 +1540,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ideology_pataut_ancap_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/ancap_group.png"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_ancap_group.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_jacksonianism_subtype"
@@ -1102,6 +1591,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/pataut_christian_democracy_group.png"
 	}
 	spriteType = {
+		name = "GFX_ideology_austropopulism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/austropopulism_group.png"
+	}
+	spriteType = {
 		name = "GFX_ideology_hussitism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/hussitism_group.png"
 	}
@@ -1116,6 +1609,74 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_pataut_pan_asianism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/pataut_pan_asianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_bonapartism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/bonapartism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_boer_nationalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/boer_nationalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_caudillo_populism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/caudillo_populism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_tribal_chiefdom_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_tribal_chiefdom_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_baltic_christianity_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_baltic_christianity_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_clientelism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_clientelism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_ukrainian_nationalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/ukrainian_nationalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_washingtonism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_washingtonism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_right_technocracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/right_technocracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_revolution_nationale_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/revolution_nationale_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_neo_porfiriatoismo_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/neo_porfiriatoismo_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_bolivarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/bolivarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_belgicism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_belgicism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_flemish_nationalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/flemish_nationalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_legionarism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_legionarism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_islamism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_islamism_group.png"
 	}
 	
 	spriteType = {
@@ -1239,6 +1800,92 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/national_restorationism_group.png"
 	}
 	spriteType = {
+		name = "GFX_ideology_natpop_bonapartism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_bonapartism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_boer_nationalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_boer_nationalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_tribal_chiefdom_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_tribal_chiefdom_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_baltic_christianity_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/baltic_christianity_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_crnogoroslavlje_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/crnogoroslavlje_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_maurrassism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/maurrassisme_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_kadroism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/kadroism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_belgicism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/belgicism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_autentico_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/autentico_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_bolivarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_bolivarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tseghakronism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tseghakronism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_bolivarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_bolivarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_rexism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/rexism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_flemish_nationalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_flemish_nationalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_popular_patriotism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_popular_patriotism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_reformed_belgicism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/reformed_belgicism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_pan_somalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_pan_somalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_vasconcelosismo_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/vasconcelosismo_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_volkisch_communitarianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_volkisch_communitarianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_wandervogel_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/wandervogel_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_pan_asianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_pan_asianism_group.png"
+	}
+	
+	### YOU GO IN THE CORNER OF SHAME ###
+	spriteType = {
 		name = "GFX_ideology_toy_santaism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/toy_santaism_group.png"
 	}
@@ -1261,6 +1908,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_commie_elfism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/commie_elfism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_heat_miserism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/heat_miserism_group.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_heat_miserism_subtype"

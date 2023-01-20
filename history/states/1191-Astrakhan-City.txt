@@ -6,6 +6,7 @@ state = {
 		owner = DKB
 		buildings = {
 			infrastructure = 3
+			air_base = 3
 			industrial_complex = 2
 			arms_factory = 1
 			9753 = {
@@ -21,7 +22,7 @@ state = {
 	}
 
 	provinces = {
-		9753 757 3461 3726 6758 6760 9440 9735 11579 11706
+		757 9753 
 	}
 	manpower = 216345
 	state_category = four

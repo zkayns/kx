@@ -363,6 +363,8 @@ political_actions = {
 			}
 		}
 	}
+}
+WHR_foreign_policy = {
 	WHR_reclaim_vilnya = {
 		icon = generic_nationalism
 
@@ -387,6 +389,13 @@ political_actions = {
 			add_state_claim = 94 #Vawkavysk
 			add_state_claim = 96 #Vilnius
 			add_state_claim = 655 #Bialystok
+			if = {
+				limit = {
+					has_elected_government = yes
+					LIT = { has_elected_government = yes }				
+				}
+				country_event = whrpol.32
+			}
 		}
 	}
 	WHR_reclaim_homiel = {
@@ -395,9 +404,21 @@ political_actions = {
 		allowed = { tag = WHR }
 
 		visible = {
-			OR = {
-				NOT = { is_in_faction_with = UKR }
-				NOT = { country_exists = UKR }
+			country_exists = UKR
+			NOT = {
+				is_in_faction_with = GER
+				is_in_faction_with = RUS
+				has_war_with = UKR
+				is_subject_of = UKR
+			}
+			UKR = {
+				NOT = {
+					is_in_faction_with = WHR
+					is_in_faction_with = GER
+					is_in_faction_with = RUS
+					is_in_faction_with = AUS
+					is_in_faction_with = FRA
+				}
 			}
 		}
 
@@ -413,6 +434,70 @@ political_actions = {
 			add_state_claim = 93 #Brest
 			add_state_claim = 241 #Gomel
 			add_state_claim = 997 #Polesia
+			add_state_claim = 1230 #Starodub
+			if = {
+				limit = { 
+					country_exists = UKR 
+					UKR = {
+						OR = {
+							controls_state = 93
+							controls_state = 241
+							controls_state = 997
+							controls_state = 1230
+						}
+					}
+				}
+				UKR = {
+					country_event = {
+						days = 2
+						id = whiteruthenia.68
+					}
+				}
+			}
+		}
+	}
+	WHR_reclaim_smolensk = {
+		icon = generic_nationalism
+
+		allowed = { tag = WHR }
+
+		visible = {
+			can_declare_war_on = 219.owner
+			NOT = { is_in_faction_with = GER }
+			219 = {
+				owner = {
+					OR = {
+						is_in_faction = no
+						is_faction_leader = yes
+					}
+				}
+			}
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_reclaim_homiel"
+			add_state_claim = 1287 
+			add_state_claim = 1292 
+			add_state_claim = 243
+			add_state_claim = 775 
+			add_state_claim = 242
+			add_state_claim = 1293
+			add_state_claim = 210
+			219 = {
+				owner = {
+					country_event = {
+						days = 2
+						id = whiteruthenia.57
+					}
+				}
+			}
 		}
 	}
 	WHR_integrate_state_easy = {
@@ -443,7 +528,7 @@ political_actions = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 94 241 755 }
+		targets = { 94 241 755 1292 }
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ROOT
@@ -494,7 +579,7 @@ political_actions = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 96 97 997 }
+		targets = { 96 97 997 1287 243 }
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ROOT
@@ -545,7 +630,7 @@ political_actions = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 93 242 243 205 }
+		targets = { 93 242 1293 205 880 210 }
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ROOT
@@ -600,7 +685,7 @@ political_actions = {
 		}
 
 		state_target = yes
-		targets = { 93 96 97 241 242 243 755 997 }
+		targets = { 93 96 97 241 242 1287 1292 1293 243 755 997 }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = WHR_National_Awakening
@@ -683,7 +768,7 @@ political_actions = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 93 96 97 241 242 243 755 997 }
+		targets = { 93 96 97 241 242 243 1287 1292 1293 755 997 }
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ROOT
@@ -726,49 +811,6 @@ political_actions = {
 						compliance_gain = -0.10 #Turn off the compliance boost
 					}
 				}
-			}
-		}
-	}
-	WHR_secede_from_RP = {
-		icon = hand_out
-
-		allowed = { tag = WHR }
-
-		available = {
-			controls_all_owned_states = yes
-			OR = {
-				NOT = { country_exists = GER }
-				GER = { has_capitulated = yes }
-			}
-		}
-		visible = {
-			WHR_bnp_in_power = no
-			WHR_bcr_in_power = no
-			WHR_is_monarchy = no
-			country_exists = INT
-			has_capitulated = no
-		}
-
-		cost = 50
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_secede_from_RP"
-			if = {
-				limit = {
-					RUS = {
-						has_war_with = WHR
-						has_capitulated = no
-					}
-				}
-				RUS = { country_event = whrpol.37 }
-			}
-			else = {
-				INT = { country_event = whrpol.41 }
 			}
 		}
 	}
@@ -878,7 +920,7 @@ political_actions = {
 				has_completed_focus = WHR_Belarus_Proud_and_Free
 				has_completed_focus = WHR_White_Ruthenia_New_Loyal
 				has_completed_focus = WHR_Belarus_Moral_Fair
-				has_completed_focus = WHR_Belarus_Proud_and_Free
+				has_completed_focus = WHR_Belarus_Pure_And_True
 			}
 		}
 		targets = { GER }
@@ -1844,12 +1886,12 @@ WHR_Civil_War = { #Coup/Civil War
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 194
+				state = 1295
 			}
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_Mozyr_Assault"
+			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_Final_Blow"
 			WHR_reduce_power_struggle = yes
 		}
 	}
@@ -2017,7 +2059,7 @@ WHR_industrialization = { #Industrialize WHR
 	WHR_Industrialize_Novogrudok = {
 		icon = generic_construction
 		available = {
-			204 = { is_owned_and_controlled_by = ROOT }
+			1295 = { is_owned_and_controlled_by = ROOT }
 		}
 		cost = 75
 		days_remove = 120
@@ -2027,12 +2069,12 @@ WHR_industrialization = { #Industrialize WHR
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 204
+				state = 1295
 			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_Industrialize_Novogrudok"
-			204 = {
+			1295 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex

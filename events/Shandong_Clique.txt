@@ -3096,8 +3096,9 @@ country_event = { # Shangqing Owns Beijing
 		country_event = {
 			id = qieygd.4
 			days = 5
-			}
+		}
 		set_country_flag = SQI_national_government
+		set_country_flag = has_united_china
 		set_cosmetic_tag = SQI_QIE
 	}
 }
@@ -3268,6 +3269,12 @@ country_event = {#
 	option = {
 		name = shandong.447.a
 		country_event = shandong.448
+		hidden_effect = {
+				 country_event = {
+					 id = china_shared.1000
+					 days = 75
+				 }
+			}
 		ai_chance = {
 			factor = 30
 		}
@@ -3291,6 +3298,12 @@ country_event = {#
 	option = {
 		name = shandong.447.e
 		country_event = shandong.451
+		hidden_effect = {
+				 country_event = {
+					 id = china_shared.1000
+					 days = 75
+				 }
+			}
 		ai_chance = {
 			factor = 0
 		}
@@ -3301,6 +3314,12 @@ country_event = {#
 		}
 		name = shandong.447.f
 		country_event = shandong.452
+		hidden_effect = {
+				 country_event = {
+					 id = china_shared.1000
+					 days = 75
+				 }
+			}
 		ai_chance = {
 			factor = 0
 		}
@@ -3316,6 +3335,12 @@ country_event = {#
 		}
 		name = shandong.447.g
 		country_event = shandong.454
+		hidden_effect = {
+				 country_event = {
+					 id = china_shared.1000
+					 days = 75
+				 }
+			}
 		ai_chance = {
 			factor = 0
 		}
@@ -3344,7 +3369,7 @@ country_event = {#
 			ideology = paternal_autocrat
 			long_name = "Zongchang Dynasty"
 			name = "Zongchang Dynasty"
-		    }
+			}
 		set_cosmetic_tag = MON_CHINA_EMPIRE
 		country_event = {
 			id = shandong.453
@@ -3384,7 +3409,7 @@ country_event = {#
 
 	option = {
 		name = shandong.450.a
-		clear_cosmetic_tag = yes
+		drop_cosmetic_tag = yes
 		set_cosmetic_tag = SQI_Zhang_Clique
 		country_event = {
 			id = shandong.453
@@ -3523,7 +3548,7 @@ country_event = {#
 			ideology = paternal_autocrat
 			long_name = "House of Romanov"
 			name = "House of Romanov"
-		    }
+			}
 		RUS = {
 			give_guarantee = SQI
 			}
@@ -3542,7 +3567,7 @@ country_event = {#
 			ideology = paternal_autocrat
 			long_name = "House of Wrangel"
 			name = "House of Wrangel"
-		    }
+			}
 		RUS = {
 			give_guarantee = SQI
 			}
@@ -3561,7 +3586,7 @@ country_event = {#
 			ideology = paternal_autocrat
 			long_name = "House of Yusupov"
 			name = "House of Yusupov"
-		    }
+			}
 		RUS = {
 			give_guarantee = SQI
 			}
@@ -3580,7 +3605,7 @@ country_event = {#
 			ideology = paternal_autocrat
 			long_name = "House of Annenkov"
 			name = "House of Annenkov"
-		    }
+			}
 		RUS = {
 			give_guarantee = SQI
 			}
@@ -3608,4 +3633,54 @@ country_event = {#
 		set_cosmetic_tag = SQI_KITAI_2
 		}
 	}
+country_event = {#
+	id = shandong.456
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shandong.447" }
+	title = shandong.456.t
+	desc = shandong.456.d
+	picture = GFX_report_event_QIE_imperial_guard
+
+	fire_only_once = yes
+	trigger = {
+	has_country_leader = { name = "Song Zheyuan" ruling_only = yes }
+	has_cosmetic_tag = ROC
+	has_war = no
+	owns_state = 608
+	NOT = { country_exists = QIE }
+	}
+	option = {
+		name = shandong.456.a
+		}
+	option = {
+		name = shandong.456.b
+		create_country_leader = {
+			name = "Hóngwu"
+			desc = "POLITICS_HONGWU_DESC"
+			picture = "gfx/leaders/LEC/Portrait_LEC_Hongwu.png"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+		}
+		set_cosmetic_tag = LEC_MING
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = "Ming Dynasty"
+			name = "Ming Dynasty"
+			}
+		}
+	option = {
+		name = shandong.456.c
+		create_country_leader = {
+			name = "Da Yi"
+			desc = "SHANG_EMPEROR_DESC"
+			picture = "gfx/leaders/FNG/Portrait_FNG_Kong_Lingyi.png"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+		}
+		set_cosmetic_tag = SHANG_EMPIRE
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = "Shang Dynasty"
+			name = "Shang Dynasty"
+			}
+		}
 

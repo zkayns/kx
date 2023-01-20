@@ -62,8 +62,10 @@ MAF = "countries/WestEur.txt"
 MLT = "countries/WestEur.txt"
 NEE = "countries/WestEur.txt"
 NFA = "countries/WestEur.txt"
+FAR = "countries/WestEur.txt"
 NGF = "countries/GermanUnion.txt"
 NOR = "countries/WestEur.txt"
+NRM = "countries/WestEur.txt"
 NZL = "countries/WestEur.txt"
 OCC = "countries/WestEur.txt"
 PAP = "countries/WestEur.txt" #Papal States
@@ -103,7 +105,6 @@ GEO = "countries/EastEur.txt"
 GRE = "countries/EastEur.txt"
 GRR = "countries/EastEur.txt"
 MNT = "countries/EastEur.txt"
-OTT = "countries/EastEur.txt"
 ROM = "countries/EastEur.txt"
 RUS = "countries/EastEur.txt"
 SER = "countries/EastEur.txt"
@@ -173,7 +174,6 @@ MYS = "countries/Indian.txt" #Mysore
 NEP = "countries/Indian.txt"
 SKM = "countries/Indian.txt"
 PRF = "countries/Indian.txt"
-RAJ = "countries/Indian.txt"
 TRV = "countries/Indian.txt" #Travancore
 
 ### MidEast ###
@@ -273,7 +273,6 @@ MLW = "countries/African.txt" #Malawi
 MRT = "countries/African.txt"
 MZB = "countries/African.txt"
 NMB = "countries/African.txt"
-NBL = "countries/African.txt" #Herero Revolt
 NER = "countries/African.txt"
 NGR = "countries/African.txt"
 RWA = "countries/African.txt" #Rwanda
@@ -295,6 +294,7 @@ LPD = "countries/African.txt" #Leopoldville
 UMN = "countries/African.txt" #UMHK
 KAS = "countries/African.txt" #Kasai
 CIV = "countries/African.txt"
+DJI = "countries/African.txt" #Djbouti
 
 ### No national units
 

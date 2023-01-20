@@ -41,6 +41,9 @@ create_prussia = {
 						long_name = DDR_pataut_party_long
 						name = DDR_pataut_party
 				}
+				GER = {
+				DDR = { transfer_technology = yes }
+				}
 				set_politics = {
 					ruling_party = paternal_autocrat
 					last_election = "1936.11.16"
@@ -300,6 +303,9 @@ create_bavaria = {
 					BAY_LEFT_RESISTANCE
 					BAY_MEMORIES_OF_GERMANY
 				}
+				GER = {
+				BAY = { transfer_technology = yes }
+				}
 				
 				set_popularities = {
 				totalist = 0
@@ -406,6 +412,9 @@ create_rhenish_state = {
 						long_name = WGR_soccon_party_long
 						name = WGR_soccon_party
 				}
+				GER = {
+				WGR = { transfer_technology = yes }
+				}
 				set_politics = {
 					ruling_party = social_conservative
 					last_election = "1936.11.16"
@@ -500,6 +509,9 @@ create_north_german_state = {
 					ruling_party = radical_socialist
 					last_election = "1936.11.16"
 					elections_allowed = no
+				}
+				GER = {
+				NGF = { transfer_technology = yes }
 				}
 				set_popularities = {
 				totalist = 5
@@ -599,8 +611,8 @@ north_germany_dies = {
 		#State
 		add_state_core = 60
 		add_state_core = 65
-        transfer_state = 60
-        transfer_state = 65	
+		transfer_state = 60
+		transfer_state = 65	
 				
 		#Country
 		set_cosmetic_tag = SAX
@@ -633,13 +645,13 @@ north_germany_dies = {
 
 		#State
 		add_state_core = 62
-        add_state_core = 63
-        add_state_core = 68
-        add_state_core = 776
-        transfer_state = 62
-        transfer_state = 63
-        transfer_state = 68
-        transfer_state = 776
+		add_state_core = 63
+		add_state_core = 68
+		add_state_core = 776
+		transfer_state = 62
+		transfer_state = 63
+		transfer_state = 68
+		transfer_state = 776
 				
 		#Country
 		set_cosmetic_tag = POM
@@ -672,9 +684,9 @@ north_germany_dies = {
 
 		#State
 		add_state_core = 66
-        add_state_core = 67
-        transfer_state = 66
-        transfer_state = 67
+		add_state_core = 67
+		transfer_state = 66
+		transfer_state = 67
 				
 		#Country
 		set_cosmetic_tag = SIL
@@ -738,9 +750,9 @@ north_germany_dies = {
 
 		#State
 		add_state_core = 58
-        add_state_core = 839
-        transfer_state = 58
-        transfer_state = 839
+		add_state_core = 839
+		transfer_state = 58
+		transfer_state = 839
 				
 		#Country
 		set_cosmetic_tag = SCH

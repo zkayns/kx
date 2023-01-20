@@ -26,6 +26,8 @@ leader_traits = {
 	trilateral_british = {}
 	trilateral_jewish = {}
 	trilateral_chinese = {}
+	taoiseach = {}
+	vice_president = {}
 
 #####################
 # Military Staff

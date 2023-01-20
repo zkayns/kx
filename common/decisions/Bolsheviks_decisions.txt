@@ -3559,6 +3559,7 @@ SOV_dealing_with_opposition = {
 			add_political_power = -100
 			add_stability = -0.2
 			clr_country_flag = SOV_peasant_riots_1
+			country_event = bolsheviks.12
 			hidden_effect = {
 				country_event = {
 					id = bolsheviks.43
@@ -3678,7 +3679,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			has_country_flag = mayakovsky_returned
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15
@@ -3761,7 +3762,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			NOT = { has_country_flag = gastev_dead }
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15
@@ -3844,7 +3845,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			NOT = { has_country_flag = lunacharsky_dead }
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15
@@ -3927,7 +3928,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			NOT = { has_country_flag = zinoviev_dead }
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15
@@ -4010,7 +4011,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			NOT = { has_country_flag = kamenev_dead }
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15
@@ -4093,7 +4094,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			NOT = { has_country_flag = sokolnikov_dead }
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15
@@ -4176,7 +4177,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			NOT = { has_country_flag = chicherin_dead }
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15
@@ -4259,7 +4260,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			NOT = { has_country_flag = molotov_dead }
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15
@@ -4342,7 +4343,7 @@ SOV_NKVD_decisions = {
 		}
 		visible = {
 			NOT = { has_country_flag = kaganovich_dead }
-			NOT = { has_completed_focus = SOV_Congress_Of_Soviets }
+			NOT = { has_country_flag = congress_of_soviets_ended }
 		}
 		cost = 35
 		days_remove = 15

@@ -376,7 +376,6 @@ terrain_madang = { }
 terrain_rabaul = { }
 terrain_port_moresby = { }
 terrain_mandalay = { }
-terrain_portland = { }
 terrain_fiume = { }
 terrain_dubrovnik = { }
 terrain_anqing = { }
@@ -601,5 +600,19 @@ terrain_monclova = { }
 terrain_tampico = { }
 terrain_oaxaca = { }
 terrain_villahermosa = { }
+terrain_window_rock = { }
+terrain_vaduz = { }
+terrain_darjeeling = { }
+terrain_gangtok = { }
+terrain_katerinoslav = { }
+terrain_kremenchuk = { }
+terrain_mariupol = { }
+terrain_mykolaiv = { }
+terrain_novosib = { }
+terrain_poltava = { }
+terrain_rivne = { }
+terrain_slovyansk = { }
+terrain_yuzivka = { }
+terrain_zhytomyr = { }
 
 

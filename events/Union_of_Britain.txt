@@ -882,7 +882,7 @@ country_event = { # Ireland can ask for protection
 		ai_chance = {
 			factor = 40
 			modifier = {
-                factor = 0
+				factor = 0
 				OR = {
 					has_game_rule = {
 						rule = IRE_forpol
@@ -912,7 +912,7 @@ country_event = { # Ireland can ask for protection
 		ai_chance = {
 			factor = 40
 			modifier = {
-                factor = 0
+				factor = 0
 				OR = {
 					has_game_rule = {
 						rule = IRE_forpol
@@ -952,7 +952,7 @@ country_event = { # Ireland can ask for protection
 		ai_chance = {
 			factor = 20
 			modifier = {
-                factor = 0
+				factor = 0
 				OR = {
 					has_game_rule = {
 						rule = IRE_forpol
@@ -5155,7 +5155,7 @@ country_event = {
 				days = 7
 			}
 		}
-    }
+	}
 }
 
 country_event = {
@@ -5175,9 +5175,39 @@ country_event = {
 			factor = 75
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ENG_revolution
-					option = ENG_REVOLUTION_FAILURE_RESTORATION
+				OR = {
+					has_game_rule = {
+						rule = ENG_revolution
+						option = ENG_REVOLUTION_FAILURE_RESTORATION
+					}
+					has_game_rule = {
+						rule = ENG_revolution
+						option = ENG_REVOLUTION_FAILURE_COUNTERREV
+					}
+					has_game_rule = {
+						rule = ENG_revolution
+						option = ENG_REVOLUTION_FAILURE_HOBART_KING
+					}
+					has_game_rule = {
+						rule = ENG_revolution
+						option = ENG_REVOLUTION_FAILURE_HOBART_CROMWELL
+					}
+					has_game_rule = {
+						rule = ENG_revolution
+						option = ENG_REVOLUTION_FAILURE_RAMSAY
+					}
+					has_game_rule = {
+						rule = ENG_revolution
+						option = ENG_REVOLUTION_FAILURE_LEGION
+					}
+					has_game_rule = {
+						rule = ENG_revolution
+						option = ENG_REVOLUTION_FAILURE_ATTLEE
+					}
+					has_game_rule = {
+						rule = ENG_revolution
+						option = ENG_REVOLUTION_FAILURE
+					}
 				}
 			}
 		}
@@ -5209,7 +5239,9 @@ country_event = {
 			}
 		}
 		name = uob.212.b
+		leave_faction = yes
 		clr_country_flag = mosley_chairman
+		separate_peace_all_wars = yes
 		hidden_effect = {
 			random_other_country = {
 				news_event = {
@@ -8073,7 +8105,7 @@ country_event = { # Scotland Breaks Off!
 				id = sctrevolt.1
 				days = 1
 			}
-	    }
+		}
 		
 		SCT = {
 			change_tag_from = ENG
@@ -8142,7 +8174,7 @@ country_event = { # Scotland Breaks Off!
 				id = sctrevolt.1
 				days = 1
 			}
-	    }
+		}
 		
 		hidden_effect = {
 			ENG = {
@@ -8211,7 +8243,7 @@ country_event = { # Wales Breaks Off Too!
 				id = wales.1
 				days = 1
 			}
-	    }
+		}
 	}
 	
 	option = {
@@ -8241,7 +8273,7 @@ country_event = { # Wales Breaks Off Too!
 				id = wales.1
 				days = 1
 			}
-	    }
+		}
 	}
 }
 
@@ -8443,7 +8475,7 @@ country_event = {
 					desc = "POLITICS_HOBART_DESC"
 					picture = "gfx/leaders/ENG/Portrait_England_Percy_Hobart.png"
 					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
+					ideology = authdem_junta_subtype
 					traits = {}
 				}
 				create_country_leader = {# Percy Hobart
@@ -8873,7 +8905,7 @@ country_event = { # arrests
 
 	option = { 
 		name = uobflavour.32.a
-        add_political_power = 50
+		add_political_power = 50
 		hidden_effect = {
 			news_event = {
 				id = uobflavour.35
@@ -8893,7 +8925,7 @@ country_event = { # cable speech
 
 	option = { 
 		name = uobflavour.35.a
-        add_political_power = 100
+		add_political_power = 100
 	}
 }
 
@@ -8907,7 +8939,7 @@ country_event = { # cable battle
 
 	option = { 
 		name = uobflavour.36.a
-        add_political_power = -150
+		add_political_power = -150
 		add_timed_idea = {
 			idea = ENG_cable_street_idea
 			days = 90
@@ -8925,7 +8957,7 @@ country_event = { # protests
 
 	option = { 
 		name = uobflavour.33.a
-        add_political_power = -100
+		add_political_power = -100
 	}
 }
 
@@ -8954,7 +8986,7 @@ country_event = { # national council
 
 	option = { 
 		name = uobflavour.37.a
-        add_political_power = -100
+		add_political_power = -100
 	}
 }
 
@@ -8968,7 +9000,7 @@ country_event = { # fun camps
 
 	option = { 
 		name = uobflavour.38.a
-        add_political_power = -100
+		add_political_power = -100
 	}
 }
 country_event = { #officers grumble
@@ -9047,7 +9079,7 @@ country_event = { #officers grumble
 			}
 		}
 		add_stability = -0.05 
-        random_unit_leader = {
+		random_unit_leader = {
 			limit = { has_id = 251 }			
 			remove_unit_leader = yes
 		}

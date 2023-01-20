@@ -779,7 +779,7 @@ focus_tree = {
 ### Venetian Navy ###
 	focus = {# Modernize the Navy
 		id = VNC_modernize_the_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_VNC_Venetian_Navy
 		cost = 8.00
 		x = 24
 		y = 0
@@ -1101,6 +1101,9 @@ focus_tree = {
 		cost = 8.00
 		x = 37
 		y = 0
+		available = {
+			has_design_based_on = small_plane_airframe
+		}
 		ai_will_do = {
 			factor = 15
 			modifier = {
@@ -1112,9 +1115,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus VNC_army_air_upgrade"
 			air_experience = 10
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = small_plane_airframe
 				amount = 40
-				producer = VNC
 			}
 		}
 		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
@@ -1137,7 +1139,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus VNC_navy_air_upgrade"
 			air_experience = 10
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment_1
+				type = small_plane_naval_bomber_airframe
 				amount = 30
 				producer = VNC
 			}
@@ -1146,7 +1148,7 @@ focus_tree = {
 	}
 	focus = {# Aeronautica Militare
 		id = VNC_aeronautica_militare
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_goal_VNC_Venetian_Air_Force
 		cost = 8.00
 		prerequisite = {
 			focus = VNC_army_air_upgrade
@@ -1219,9 +1221,7 @@ focus_tree = {
 				name = VNC_offensive_priorty
 				bonus = 1
 				uses = 1
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				category = light_fighter
 			}
 			swap_ideas = {
 				remove_idea = VNC_aeronautica_militare_idea
@@ -1290,9 +1290,7 @@ focus_tree = {
 				name = VNC_defned_la_serenissim
 				bonus = 1
 				uses = 1
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				category = light_fighter
 			}
 			swap_ideas = {
 				remove_idea = VNC_aeronautica_militare_idea
@@ -1390,7 +1388,7 @@ focus_tree = {
 ### Venetian Army ###
 	focus = {# Venetian Army
 		id = VNC_venetian_army
-		icon = GFX_goal_LEC_police3
+		icon = GFX_goal_VNC_Venetian_Army
 		cost = 8.00
 		x = 31
 		y = 0

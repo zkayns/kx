@@ -51,13 +51,13 @@ country_event = { # the Coup
 		create_country_leader = {
 			name = "Thomas Dixon"
 			desc = "POLITICS_TDIXON_DESC"
-			picture = "gfx/leaders/ALA/Portrait_ALA_Thomas_Dixon.png"
+			picture = "gfx/leaders/ALA/Portrait_AIF_Thomas_Dixon.png"
 			expire = "1965.1.1"
 			ideology = left_townerism_subtype
 			traits = {  }
 		}	
-        remove_all_ministers = yes
-        add_ideas = {
+		remove_all_ministers = yes
+		add_ideas = {
 			ALA_Thomas_New_Moon_Dixon_hog_npo
 			ALA_Joseph_Bruner_for_npo
 			ALA_Fred_Bauer_eco_npo
@@ -87,7 +87,7 @@ country_event = { # the Coup
 			create_field_marshal = {# 
 				name = "Joe Medicine Crow"
 				desc = ""
-				portrait_path = "gfx/leaders/ALA/Portrait_ALA_Medicine_Crow.png"
+				portrait_path = "gfx/leaders/ALA/Portrait_AIF_Medicine_Crow.png"
 				traits = {
 					war_hero
 				}
@@ -374,7 +374,7 @@ country_event = { #Red Man's Burden
 		}
 		hidden_effect = {
 			ALA = {
-				add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 500000 }
+				add_equipment_to_stockpile = { type = small_plane_airframe_0 amount = 500000 }
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 100000000 }
 				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100000000 }
 			}
@@ -543,11 +543,11 @@ country_event = { # Indianizing Canada
 }
 
 country_event = { #Baste Huwhite Reseravtions
-    id = REDAlaska.101
-    immediate = {log = "[GetDateText]: [Root.GetName]: event REDAlaska.101"}
-    title = REDAlaska.101.t
-    desc = REDAlaska.101.d
-    picture = GFX_report_event_USA_indians
+	id = REDAlaska.101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event REDAlaska.101"}
+	title = REDAlaska.101.t
+	desc = REDAlaska.101.d
+	picture = GFX_report_event_USA_indians
 
 	fire_only_once = yes
 
@@ -583,7 +583,7 @@ country_event = { #Baste Huwhite Reseravtions
 				create_country_leader = {
 					name = "Alastair of the Anglos"
 					desc = "POLITICS_CUCKEDBRIT_DESC"
-					picture = "gfx/leaders/ALA/ALA_Alastair.png"
+					picture = "gfx/leaders/AIF/AIF_Alastair.png"
 					expire = "1965.1.1"
 					ideology = national_populist_subtype
 					traits = {}
@@ -659,7 +659,7 @@ country_event = { #Baste Huwhite Reseravtions
 				create_country_leader = {
 					name = "Conseil Souverain"
 					desc = "POLITICS_CONSEIL_SOUVERAIN_DESC"
-					picture = "gfx/leaders/ALA/ALA_Conseil_Souverain.png"
+					picture = "gfx/leaders/AIF/AIF_Conseil_Souverain.png"
 					expire = "1965.1.1"
 					ideology = national_populist_subtype
 					traits = {}
@@ -735,7 +735,7 @@ country_event = { #Baste Huwhite Reseravtions
 				create_country_leader = {
 					name = "Sir Mather"
 					desc = "POLITICS_MATHER_DESC"
-					picture = "gfx/leaders/ALA/ALA_Mather.png"
+					picture = "gfx/leaders/AIF/AIF_Mather.png"
 					expire = "1965.1.1"
 					ideology = national_populist_subtype
 					traits = {}
@@ -834,7 +834,7 @@ country_event = { #Puppet Event
 country_event = { #Iroquois 
 	id = REDAlaska.103
 	title = REDAlaska.103.t
-        desc = REDAlaska.103.d
+		desc = REDAlaska.103.d
 	picture = GFX_report_event_generic_trial_big
 
 	is_triggered_only = no
@@ -896,7 +896,7 @@ country_event = { #Iroquois
 country_event = { #Wabanakia and Iroquois 
 	id = REDAlaska.104
 	title = REDAlaska.104.t
-        desc = REDAlaska.104.d
+		desc = REDAlaska.104.d
 	picture = GFX_report_event_generic_trial_big
 
 	is_triggered_only = no
@@ -918,7 +918,7 @@ country_event = { #Wabanakia and Iroquois
 		add_stability = -0.1
 		WAB = {
 			add_state_core = 464
-                        add_state_core = 357
+						add_state_core = 357
 			add_state_core = 934
 			add_state_core = 488
 			add_state_core = 465
@@ -946,7 +946,7 @@ country_event = { #Wabanakia and Iroquois
 		add_stability = -0.1
 		WAB = {
 			add_state_core = 464
-                        add_state_core = 357
+						add_state_core = 357
 			add_state_core = 934
 			add_state_core = 488
 			add_state_core = 465

@@ -1,5 +1,5 @@
 ########################
-#   Qing Decisions     #
+#   Qing Decisions	#
 #  by MantisToboggan   #
 ########################
 
@@ -613,7 +613,7 @@ QIE_manage_german_influence = { #ways to buy down german support or gain PP by s
 }
 
 #german weaponry decisions
-QIE_buy_german_eqip_decisions = {	#purchase german small arms
+QIE_buy_german_eqip_decisions = { #purchase german small arms
 	QIE_buy_ger_rifles = {
 		icon = generic_prepare_civil_war
 		available = {
@@ -1141,7 +1141,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 			modifier = {
 				add = 80
 				stockpile_ratio = {
-					archetype = fighter_equipment
+					archetype = small_plane_airframe
 					ratio < 0.75
 				}
 			}
@@ -1159,7 +1159,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_buy_ger_fighter"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = small_plane_airframe
 				amount = 150
 				producer = GER
 			}
@@ -1185,7 +1185,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 			modifier = {
 				add = 80
 				stockpile_ratio = {
-					archetype = CAS_equipment
+					archetype = small_plane_cas_airframe
 					ratio < 0.75
 				}
 			}
@@ -1203,7 +1203,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_buy_ger_cas"
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_1
+				type = small_plane_cas_airframe
 				amount = 150
 				producer = GER
 			}
@@ -1229,7 +1229,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 			modifier = {
 				add = 80
 				stockpile_ratio = {
-					archetype = tac_bomber_equipment
+					archetype = medium_plane_airframe
 					ratio < 0.75
 				}
 			}
@@ -1247,7 +1247,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_buy_ger_tac"
 			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment_0
+				type = medium_plane_airframe
 				amount = 150
 				producer = GER
 			}
@@ -1555,9 +1555,9 @@ QIE_hire_mercenaries_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_hire_legation_exiles"
 			navy_experience = 15
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = QIE_hire_legation_exiles
-				bonus = 1
+				cost_reduction = 1
 				uses = 1
 				category = cat_trade_interdiction
 			}
@@ -1635,9 +1635,9 @@ QIE_hire_mercenaries_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_hire_flying_tigers"
 			air_experience = 30
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = QIE_hire_flying_tigers
-				bonus = 1
+				cost_reduction = 1
 				uses = 1
 				category = air_doctrine
 			}
@@ -1924,13 +1924,11 @@ QIE_comission_sicilian_ships = {
 QIE_yiguandao_decisions_category = {
 	QIE_raise_yiguandao_militia = {
 		icon = generic_prepare_civil_war
-		allowed = { always = no }				# Activated by focus QIE_zhang_tianran_backer (Manchu)
+		allowed = { tag = QIE }				# Activated by focus QIE_zhang_tianran_backer (Manchu)
 		fire_only_once = no
 		days_re_enable = 75
 		days_remove = 30
-		available = {
-			NOT = { has_country_flag = QIE_yiguandao_couped }
-		}
+		available = { NOT = { has_country_flag = QIE_yiguandao_couped } }
 		ai_will_do = {
 			factor = 15
 			modifier = {
@@ -1942,18 +1940,9 @@ QIE_yiguandao_decisions_category = {
 				national_populist > 0.25
 			}
 		}
-
-		visible = {
-			NOT = {
-				has_government = national_populist
-			}
-		}
-
+		visible = { NOT = { has_government = national_populist } }
 		custom_cost_text = QIE_5_YIGUANDAO
-		custom_cost_trigger = {
-			check_variable = { party_popularity@national_populist < 0.95 }
-		}
-
+		custom_cost_trigger = { check_variable = { party_popularity@national_populist < 0.95 } }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision QIE_raise_yiguandao_militia"
 			custom_effect_tooltip = QIE_yiguandao_militia_TT
@@ -1965,24 +1954,18 @@ QIE_yiguandao_decisions_category = {
 				QIE_recalculate_yiguandao_influence = yes
 			}
 		}
-
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_raise_yiguandao_militia"
-			hidden_effect = {
-				load_oob = QIE_yiguandao_militia
-			}
+			hidden_effect = { load_oob = QIE_yiguandao_militia }
 		}
 	}
 	QIE_refugee_workforce = {
 		icon = generic_agreement
-		allowed = { always = no }				# Activated by focus QIE_zhang_tianran_backer (Manchu)
+		allowed = { tag = QIE }				# Activated by focus QIE_zhang_tianran_backer (Manchu)
 		fire_only_once = no
 		days_remove = 180
 		days_re_enable = 365
-		available = {
-			NOT = { has_country_flag = QIE_yiguandao_couped }
-		}
-		
+		available = { NOT = { has_country_flag = QIE_yiguandao_couped } }
 		ai_will_do = {
 			factor = 50
 			modifier = {
@@ -1990,20 +1973,10 @@ QIE_yiguandao_decisions_category = {
 				national_populist > 0.25
 			}
 		}
-
-		visible = {
-			NOT = { has_government = national_populist }
-		}
-
+		visible = { NOT = { has_government = national_populist } }
 		custom_cost_text = QIE_4_YIGUANDAO
-		custom_cost_trigger = {
-			check_variable = { party_popularity@national_populist < 0.96 }
-		}
-
-		highlight_states = {
-			highlight_state_targets = { state = 608 }
-		}
-
+		custom_cost_trigger = { check_variable = { party_popularity@national_populist < 0.96 } }
+		highlight_states = { highlight_state_targets = { state = 608 } }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_refugee_workforce"
 			608 = {
@@ -2014,7 +1987,6 @@ QIE_yiguandao_decisions_category = {
 				}
 			}
 		}
-
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision QIE_refugee_workforce"
 			hidden_effect = {
@@ -2028,20 +2000,15 @@ QIE_yiguandao_decisions_category = {
 	}
 	QIE_yiguandao_infiltraitors = {
 		icon = generic_prepare_civil_war
-		allowed = { always = no }				# Activated by focus QIE_zhang_tianran_backer (Manchu)
+		allowed = { tag = QIE }				# Activated by focus QIE_zhang_tianran_backer (Manchu)
 		available = {
 			has_war = yes
 			NOT = { has_country_flag = QIE_yiguandao_couped }
 		}
-
 		fire_only_once = no
 		days_remove = 200
-
 		custom_cost_text = QIE_3_YIGUANDAO
-		custom_cost_trigger = {
-			check_variable = { party_popularity@national_populist < 0.97 }
-		}
-
+		custom_cost_trigger = { check_variable = { party_popularity@national_populist < 0.97 } }
 		ai_will_do = {
 			factor = 50
 			modifier = {
@@ -2049,16 +2016,11 @@ QIE_yiguandao_decisions_category = {
 				national_populist > 0.3
 			}
 		}
-
 		modifier = {
 			recon_factor = 0.075
 			resistance_growth_on_our_occupied_states = 0.075
 		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_yiguandao_infiltraitors"
-		}
-
+		remove_effect = { log = "[GetDateText]: [Root.GetName]: Decision remove QIE_yiguandao_infiltraitors" }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision QIE_yiguandao_infiltraitors"
 			hidden_effect = {
@@ -2077,10 +2039,8 @@ QIE_yiguandao_decisions_category = {
 			has_war = yes
 			NOT = { has_country_flag = QIE_yiguandao_couped }
 		}
-
 		fire_only_once = no
 		days_re_enable = 60
-
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -2088,12 +2048,8 @@ QIE_yiguandao_decisions_category = {
 				national_populist > 0.25
 			}
 		}
-
 		custom_cost_text = QIE_2_YIGUANDAO
-		custom_cost_trigger = {
-			check_variable = { party_popularity@national_populist < 0.98 }
-		}
-
+		custom_cost_trigger = { check_variable = { party_popularity@national_populist < 0.98 } }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision QIE_hold_prayer_meeting"
 			add_war_support = 0.05
@@ -2110,9 +2066,7 @@ QIE_yiguandao_decisions_category = {
 	}
 	QIE_arrest_yiguandao_priest = {
 		icon = generic_agreement
-		available = {
-			NOT = { has_country_flag = QIE_yiguandao_couped }
-		}
+		available = { NOT = { has_country_flag = QIE_yiguandao_couped } }
 		allowed = { always = no }				# Activated by focus QIE_zhang_tianran_backer (Manchu)
 		ai_will_do = {
 			base = 0
@@ -2125,19 +2079,11 @@ QIE_yiguandao_decisions_category = {
 				national_populist > 0.17
 			}
 		}
-
-		visible = {
-			NOT = { has_government = national_populist }
-		}
-
+		visible = { NOT = { has_government = national_populist } }
 		custom_cost_text = QIE_MINUS_5_YIGUANDAO
-		custom_cost_trigger = {
-			check_variable = { party_popularity@national_populist > 0.05 }
-		}
-
+		custom_cost_trigger = { check_variable = { party_popularity@national_populist > 0.05 } }
 		fire_only_once = no
 		days_re_enable = 60
-
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision QIE_arrest_yiguandao_priest"
 			add_political_power = -50
@@ -2263,70 +2209,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -2343,9 +2233,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -2418,70 +2306,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -2498,9 +2330,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -2798,70 +2628,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -2878,9 +2652,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -2959,70 +2731,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -3039,9 +2755,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -3174,70 +2888,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -3254,9 +2912,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -3389,61 +3045,7 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -3553,61 +3155,7 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -3721,70 +3269,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -3801,9 +3293,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -3882,61 +3372,7 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -4043,61 +3479,7 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -4215,70 +3597,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -4295,9 +3621,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -4381,70 +3705,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -4461,9 +3729,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -4546,70 +3812,14 @@ QIE_zhili_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect =  {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -4626,9 +3836,7 @@ QIE_zhili_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -5033,70 +4241,14 @@ QIE_anqing_diplomacy_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -5113,9 +4265,7 @@ QIE_anqing_diplomacy_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -5921,61 +5071,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -6284,61 +5380,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -6482,61 +5524,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -6644,61 +5632,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -6806,61 +5740,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -6968,70 +5848,14 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -7048,9 +5872,7 @@ QIE_manchu_reunite_china_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -7224,61 +6046,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -7379,61 +6147,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -7534,61 +6248,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -7698,61 +6358,7 @@ QIE_manchu_reunite_china_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -8563,61 +7169,7 @@ QIE_endgame_FP_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
@@ -8726,70 +7278,14 @@ QIE_endgame_FP_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
 							days = 7
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -8806,9 +7302,7 @@ QIE_endgame_FP_decisions_category = {
 							days = 13
 						}
 						if = {
-							limit = {
-								is_subject = yes
-							}
+							limit = { is_subject = yes }
 							overlord = {
 								country_event = {
 									id = qiefor.134
@@ -8889,61 +7383,7 @@ QIE_endgame_FP_decisions_category = {
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			hidden_effect = {
 				if = {
-					limit = {
-						FROM = {
-							decryption_progress = {
-								target = ROOT
-								value > 0.5
-							}
-						}
-					}
-					FROM = {
-						country_event = {
-							id = qiefor.132
-							days = 7
-						}
-						if = {
-							limit = {
-								is_subject = yes
-							}
-							overlord = {
-								country_event = {
-									id = qiefor.134
-									days = 7
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								NOT = {
-									has_tech = basic_encryption
-								}
-								FROM = {
-									has_tech = basic_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = improved_encryption
-								}
-								FROM = {
-									has_tech = improved_decryption
-								}
-							}
-							AND = {
-								NOT = {
-									has_tech = advanced_encryption
-								}
-								FROM = {
-									has_tech = advanced_decryption
-								}
-							}
-						}
-					}
+					limit = { CHN_decryption_battle = yes }
 					FROM = {
 						country_event = {
 							id = qiefor.132
