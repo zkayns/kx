@@ -90,7 +90,7 @@ political_actions = {
 		}
 
 		visible = {
-			has_completed_focus = CEA_united_states_of_latin_africa
+			has_completed_focus = CEA_red_equatorial_africa
 		}
 
 		fire_only_once = yes
@@ -156,7 +156,7 @@ political_actions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CEA_attack_sand_france_decision"
 			declare_war_on = {
-				target = FRA
+				target = NFA
 				type = annex_everything
 			}
 		}
@@ -196,7 +196,7 @@ political_actions = {
 		}
 		is_good = no
 		fire_only_once = yes
-		days_mission_timeout = 210
+		days_mission_timeout = 500
 		ai_will_do = { factor = 100 }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CEA_secure_control_soc"
@@ -226,7 +226,6 @@ political_actions = {
 		allowed = { tag = CEA }
 		available = {
 			NOT = {
-				country_exists = NFA
 				country_exists = LBA
 				country_exists = TRP
 				country_exists = HAU
@@ -238,12 +237,10 @@ political_actions = {
 				country_exists = MAL
 				country_exists = BFA
 				country_exists = MRT
-				country_exists = MOR
 			}
 			owns_state = 663 
 			owns_state = 448 
-			owns_state = 459 
-			owns_state = 461 
+			owns_state = 459
 			owns_state = 459 
 			owns_state = 878 
 			owns_state = 556 
@@ -267,20 +264,22 @@ political_actions = {
 			every_state = {
 				limit = {
 					OR = {
-						is_core_of = NFA
 						is_core_of = LBA
 						is_core_of = TRP
 						is_core_of = HAU
 						is_core_of = KBR
 						is_core_of = CMR
 						is_core_of = ALG
+						is_core_of = TUN
 						is_core_of = WAD
 						is_core_of = NER
 						is_core_of = MAL
 						is_core_of = BFA
+						is_core_of = SEN
 						is_core_of = MRT
 						is_core_of = MOR
 						is_core_of = EGY
+						is_core_of = ERI
 						is_core_of = ETH
 						is_core_of = SOM
 						is_core_of = ZZB
@@ -288,6 +287,9 @@ political_actions = {
 				}
 				CEA = {
 					add_state_core = PREV
+				}
+				hidden_effect = {
+				450 = { add_core_of = CEA }
 				}
 			}
 		}
@@ -1063,7 +1065,7 @@ CEA_socialist_latin_african_unity = {
 		icon = generic_agreement
 		allowed = { original_tag = CEA }
 		available = {
-			has_completed_focus = CEA_united_states_of_latin_africa
+			has_completed_focus = CEA_red_equatorial_africa
 			has_war = no
 			is_subject = no
 			NOT = { 
@@ -1071,11 +1073,11 @@ CEA_socialist_latin_african_unity = {
 			}
 		}
 		visible = {
-			has_completed_focus = CEA_united_states_of_latin_africa
+			has_completed_focus = CEA_red_equatorial_africa
 		}
 
 		target_root_trigger = {
-			has_completed_focus = CEA_united_states_of_latin_africa
+			has_completed_focus = CEA_red_equatorial_africa
 		}
 
 		target_trigger = {
@@ -1179,16 +1181,16 @@ CEA_socialist_latin_african_unity = {
 		icon = generic_prepare_civil_war
 		allowed = { original_tag = CEA }
 		available = {
-			has_completed_focus = CEA_united_states_of_latin_africa
+			has_completed_focus = CEA_red_equatorial_africa
 			has_war = no
 			is_subject = no
 		}
 		visible = {
-			has_completed_focus = CEA_united_states_of_latin_africa
+			has_completed_focus = CEA_red_equatorial_africa
 		}
 
 		target_root_trigger = {
-			has_completed_focus = CEA_united_states_of_latin_africa
+			has_completed_focus = CEA_red_equatorial_africa
 		}
 
 		target_trigger = {

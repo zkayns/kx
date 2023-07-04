@@ -9634,6 +9634,35 @@ country_event = { #Reynders declares State of Emergency
 			has_country_flag = hol_vnh_dictatorship
 			has_country_flag = hol_junta_consolidated
 		}
+		NOT = {
+			is_ai = yes
+			OR = {
+				has_game_rule = {
+					rule = HOL_election_1937
+					option = HOL_ELECTION_1937_SOCDEM_WILHELMINA
+				}
+				has_game_rule = {
+					rule = HOL_election_1937
+					option = HOL_ELECTION_1937_SOCDEM_JULIANA
+				}
+				has_game_rule = {
+					rule = HOL_election_1937
+					option = HOL_ELECTION_1937_SOCDEM_REPUBLIC
+				}
+				has_game_rule = {
+					rule = HOL_election_1937
+					option = HOL_ELECTION_1937_SOCCON_MARLIB_LEFT
+				}
+				has_game_rule = {
+					rule = HOL_election_1937
+					option = HOL_ELECTION_1937_SOCCON_MARLIB_RIGHT
+				}
+				has_game_rule = {
+					rule = HOL_election_1937
+					option = HOL_ELECTION_1937_SOCCON_ALONE
+				}
+			}
+		}
 		has_stability < -0.1
 		OR = {
 			has_idea = HOL_idea_instability
@@ -17332,7 +17361,7 @@ country_event = {
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
 					fixed_ship_radar_slot = empty
 					fixed_ship_engine_slot = cruiser_ship_engine_2
-					fixed_ship_secondaries_slot = dp_ship_secondaries
+					fixed_ship_secondaries_slot = dp_light_battery_1
 					fixed_ship_armor_slot = ship_armor_cruiser_2
 					front_1_custom_slot =  ship_light_medium_battery_2
 					mid_1_custom_slot = ship_anti_air_2
@@ -17358,7 +17387,7 @@ country_event = {
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
 					fixed_ship_radar_slot = empty
 					fixed_ship_engine_slot = cruiser_ship_engine_3
-					fixed_ship_secondaries_slot = dp_ship_secondaries
+					fixed_ship_secondaries_slot = dp_light_battery_1
 					fixed_ship_armor_slot = ship_armor_cruiser_2
 					front_1_custom_slot =  ship_light_medium_battery_3
 					mid_1_custom_slot = ship_anti_air_2
@@ -17380,7 +17409,7 @@ country_event = {
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
 					fixed_ship_radar_slot = empty
 					fixed_ship_engine_slot = cruiser_ship_engine_3
-					fixed_ship_secondaries_slot = dp_ship_secondaries
+					fixed_ship_secondaries_slot = dp_light_battery_1
 					fixed_ship_armor_slot = ship_armor_cruiser_1
 					front_1_custom_slot =  ship_light_medium_battery_3
 					mid_1_custom_slot = ship_anti_air_2
@@ -17418,7 +17447,7 @@ country_event = {
 				fixed_ship_fire_control_system_slot = ship_fire_control_system_2
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_secondaries_slot = dp_ship_secondaries
+				fixed_ship_secondaries_slot = dp_light_battery_1
 				fixed_ship_armor_slot = ship_armor_bc_1
 				front_1_custom_slot =  ship_anti_air_2
 				mid_1_custom_slot = ship_anti_air_2
@@ -17468,11 +17497,11 @@ country_event = {
 				fixed_ship_fire_control_system_slot = ship_fire_control_system_2
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_3
-				fixed_ship_secondaries_slot = dp_ship_secondaries
+				fixed_ship_secondaries_slot = dp_light_battery_1
 				fixed_ship_armor_slot = ship_armor_bc_1
 				front_1_custom_slot =  ship_anti_air_3
 				mid_1_custom_slot = ship_anti_air_3
-				mid_2_custom_slot = dp_ship_secondaries
+				mid_2_custom_slot = dp_light_battery_1
 				rear_1_custom_slot = ship_anti_air_3
 			}
 		}

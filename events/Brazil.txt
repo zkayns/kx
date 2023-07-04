@@ -318,6 +318,9 @@ country_event = {
 
 	option = {
 		name = bra.14.a
+		ai_chance = {
+			factor = 30
+		}
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.02
@@ -337,11 +340,36 @@ country_event = {
 	
 	option = {
 		name = bra.14.b
+		ai_chance = {
+			factor = 50
+		}
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.02
 		}
 		set_country_flag = BRA_AIB_Nominee_Santos
+	}
+	
+	option = {
+		name = bra.14.c
+		ai_chance = {
+			factor = 20
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.02
+		}
+		set_country_flag = BRA_AIB_Nominee_Salgado
+		create_country_leader = {
+			name = "Plinio Salgado"
+			desc = "POLITICS_SALDAGO_DESC"
+			picture = "gfx/leaders/BRA/Portrait_BRA_Plinio_Salgado.png"
+			expire = "1965.1.1"
+			ideology = integralism_subtype
+			traits = {
+				nationalist_symbol
+			}
+		}
 	}
 }
 
@@ -998,6 +1026,15 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = BRA_AIB_Nominee_Salgado
+				}
+				country_event = {
+					id = bra.431
+					days = 30
+				}
+			}
 		}
 	}
 	option = {
@@ -1241,7 +1278,7 @@ country_event = {
 	id = bra.430
 	title = bra.430.t
 	desc = bra.430.d
-	picture = GFX_report_event_BRA_integralist
+	picture = GFX_report_event_BRA_santos
 
 	is_triggered_only = yes
 
@@ -1268,6 +1305,81 @@ country_event = {
 
 	option = {
 		name = bra.41.a
+		set_country_flag = BRA_elections
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		complete_national_focus = BRA_AIB
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.20
+		}
+		add_ideas = {
+			BRA_Gustavo_Dodt_Barroso_hog_npo
+			BRA_Dom_Miguel_de_Lima_Valverde_for_npo
+			BRA_Raymundo_Delmiriano_Padilha_eco_npo
+			BRA_Joao_Candido_Felisberto_sec_npo
+		}
+		hidden_effect = {
+			news_event = {
+				id = worldnews.250
+				days = 2
+			}
+
+			country_event = {
+				id = bra.100
+				days = 30
+				random = 6
+			}
+
+			country_event = {
+				id = bra.24
+				days = 75
+				random = 15
+			}
+
+			country_event = {
+				id = bra.101
+				days = 190
+				random = 15
+			}
+		}
+	}
+}
+
+# Salgado takes office
+country_event = {
+	id = bra.431
+	title = bra.431.t
+	desc = bra.431.d
+	picture = GFX_report_event_BRA_salgado
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_elected_government = yes
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event bra.431"
+		remove_all_ministers = yes
+		hidden_effect = {
+			create_country_leader = {
+				name = "Getúlio Vargas"
+				desc = "POLITICS_GETULIO_VARGAS_BRA_DESC"
+				picture = "gfx/leaders/BRA/Portrait_BRA_Getulio_Vargas.png"
+				expire = "1965.1.1"
+				ideology = moderate_authoritarianism_subtype
+				traits = {
+					tenacious_negotiator
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bra.431.a
 		set_country_flag = BRA_elections
 		set_politics = {
 			ruling_party = national_populist
@@ -1485,7 +1597,7 @@ country_event = {
 				desc = "POLITICS_GUSTAVO_CAPANEMA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Gustavo_Capanema.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					figurehead_president
 				}
@@ -1494,7 +1606,7 @@ country_event = {
 				name = "Borges de Medeiros"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Borges_De_Medeiros.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					figurehead_president
 				}
@@ -1504,7 +1616,7 @@ country_event = {
 				desc = "POLITICS_PRESTES_MAIA_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Francisco_Prestes_Maia.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					quartermaster_general
 				}
@@ -1563,7 +1675,7 @@ country_event = {
 				desc = "POLITICS_GUSTAVO_CAPANEMA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Gustavo_Capanema.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					figurehead_president
 				}
@@ -1572,7 +1684,7 @@ country_event = {
 				name = "Borges de Medeiros"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Borges_De_Medeiros.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					tenacious_negotiator
 				}
@@ -1582,7 +1694,7 @@ country_event = {
 				desc = "POLITICS_PRESTES_MAIA_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Francisco_Prestes_Maia.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					quartermaster_general
 				}
@@ -1641,7 +1753,7 @@ country_event = {
 				desc = "POLITICS_GUSTAVO_CAPANEMA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Gustavo_Capanema.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					figurehead_president
 				}
@@ -1650,7 +1762,7 @@ country_event = {
 				name = "Borges de Medeiros"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Borges_De_Medeiros.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					tenacious_negotiator
 				}
@@ -1660,7 +1772,7 @@ country_event = {
 				desc = "POLITICS_PRESTES_MAIA_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Francisco_Prestes_Maia.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					quartermaster_general
 				}
@@ -1719,7 +1831,7 @@ country_event = {
 				desc = "POLITICS_GUSTAVO_CAPANEMA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Gustavo_Capanema.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					figurehead_president
 				}
@@ -1728,7 +1840,7 @@ country_event = {
 				name = "Borges de Medeiros"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Borges_De_Medeiros.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					tenacious_negotiator
 				}
@@ -1738,7 +1850,7 @@ country_event = {
 				desc = "POLITICS_PRESTES_MAIA_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Francisco_Prestes_Maia.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					quartermaster_general
 				}
@@ -1888,7 +2000,7 @@ country_event = {
 				desc = "POLITICS_JURACY_BAH_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Magalhaes.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					backroom_backstabber
 				}
@@ -1898,7 +2010,7 @@ country_event = {
 				desc = "POLITICS_MENEGHETTI_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Ildo_Meneghetti.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					reluctant_interventionist
 				}
@@ -1908,7 +2020,7 @@ country_event = {
 				desc = "POLITICS_VITAL_BAH_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Vital.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					appeaser
 				}
@@ -1967,7 +2079,7 @@ country_event = {
 				desc = "POLITICS_JURACY_BAH_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Magalhaes.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					backroom_backstabber
 				}
@@ -1977,7 +2089,7 @@ country_event = {
 				desc = "POLITICS_MENEGHETTI_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Ildo_Meneghetti.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					reluctant_interventionist
 				}
@@ -1987,7 +2099,7 @@ country_event = {
 				desc = "POLITICS_VITAL_BAH_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Vital.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					appeaser
 				}
@@ -2045,7 +2157,7 @@ country_event = {
 				desc = "POLITICS_JURACY_BAH_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Magalhaes.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					backroom_backstabber
 				}
@@ -2055,7 +2167,7 @@ country_event = {
 				desc = "POLITICS_MENEGHETTI_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Ildo_Meneghetti.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					reluctant_interventionist
 				}
@@ -2065,7 +2177,7 @@ country_event = {
 				desc = "POLITICS_VITAL_BAH_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Vital.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					appeaser
 				}
@@ -2124,7 +2236,7 @@ country_event = {
 				desc = "POLITICS_JURACY_BAH_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Magalhaes.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					backroom_backstabber
 				}
@@ -2134,7 +2246,7 @@ country_event = {
 				desc = "POLITICS_MENEGHETTI_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Ildo_Meneghetti.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					reluctant_interventionist
 				}
@@ -2144,7 +2256,7 @@ country_event = {
 				desc = "POLITICS_VITAL_BAH_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Vital.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					appeaser
 				}
@@ -2293,7 +2405,7 @@ country_event = {
 				desc = "POLITICS_CARDOSO_MELO_SPO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Jose_Cardoso_Melo.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					strict_austerity_adherent
 				}
@@ -2303,7 +2415,7 @@ country_event = {
 				desc = "POLITICS_BARBOSA_MARTINS_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Wilson_Barbosa_Martins.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					smooth_talking_charmer
 				}
@@ -2313,7 +2425,7 @@ country_event = {
 				desc = "POLITICS_RAUL_PILLA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pilla.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					financial_expert
 				}
@@ -2371,7 +2483,7 @@ country_event = {
 				desc = "POLITICS_CARDOSO_MELO_SPO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Jose_Cardoso_Melo.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					strict_austerity_adherent
 				}
@@ -2381,7 +2493,7 @@ country_event = {
 				desc = "POLITICS_BARBOSA_MARTINS_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Wilson_Barbosa_Martins.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					smooth_talking_charmer
 				}
@@ -2391,7 +2503,7 @@ country_event = {
 				desc = "POLITICS_RAUL_PILLA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pilla.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					financial_expert
 				}
@@ -2449,7 +2561,7 @@ country_event = {
 				desc = "POLITICS_CARDOSO_MELO_SPO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Jose_Cardoso_Melo.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					strict_austerity_adherent
 				}
@@ -2459,7 +2571,7 @@ country_event = {
 				desc = "POLITICS_BARBOSA_MARTINS_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Wilson_Barbosa_Martins.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					smooth_talking_charmer
 				}
@@ -2469,7 +2581,7 @@ country_event = {
 				desc = "POLITICS_RAUL_PILLA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pilla.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					financial_expert
 				}
@@ -2527,7 +2639,7 @@ country_event = {
 				desc = "POLITICS_CARDOSO_MELO_SPO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Jose_Cardoso_Melo.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					strict_austerity_adherent
 				}
@@ -2537,7 +2649,7 @@ country_event = {
 				desc = "POLITICS_BARBOSA_MARTINS_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Wilson_Barbosa_Martins.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					smooth_talking_charmer
 				}
@@ -2547,7 +2659,7 @@ country_event = {
 				desc = "POLITICS_RAUL_PILLA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pilla.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					financial_expert
 				}
@@ -2696,7 +2808,7 @@ country_event = {
 				desc = "POLITICS_AFFONSO_CAMARGO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Affonso_Camargo.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					reluctant_interventionist
 				}
@@ -2706,7 +2818,7 @@ country_event = {
 				desc = "POLITICS_MANUEL_TOLEDO_SPO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Manuel_Toledo.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					tenacious_negotiator
 				}
@@ -2716,7 +2828,7 @@ country_event = {
 				desc = "POLITICS_TEIXEIRA_GYZ_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Ludovico.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					silent_workhorse
 				}
@@ -2774,7 +2886,7 @@ country_event = {
 				desc = "POLITICS_AFFONSO_CAMARGO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Affonso_Camargo.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					reluctant_interventionist
 				}
@@ -2784,7 +2896,7 @@ country_event = {
 				desc = "POLITICS_MANUEL_TOLEDO_SPO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Manuel_Toledo.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					tenacious_negotiator
 				}
@@ -2794,7 +2906,7 @@ country_event = {
 				desc = "POLITICS_TEIXEIRA_GYZ_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Ludovico.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					silent_workhorse
 				}
@@ -2852,7 +2964,7 @@ country_event = {
 				desc = "POLITICS_AFFONSO_CAMARGO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Affonso_Camargo.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					reluctant_interventionist
 				}
@@ -2862,7 +2974,7 @@ country_event = {
 				desc = "POLITICS_MANUEL_TOLEDO_SPO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Manuel_Toledo.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					tenacious_negotiator
 				}
@@ -2872,7 +2984,7 @@ country_event = {
 				desc = "POLITICS_TEIXEIRA_GYZ_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Ludovico.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					silent_workhorse
 				}
@@ -2930,7 +3042,7 @@ country_event = {
 				desc = "POLITICS_AFFONSO_CAMARGO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Affonso_Camargo.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					reluctant_interventionist
 				}
@@ -2940,7 +3052,7 @@ country_event = {
 				desc = "POLITICS_MANUEL_TOLEDO_SPO_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Manuel_Toledo.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					tenacious_negotiator
 				}
@@ -2950,7 +3062,7 @@ country_event = {
 				desc = "POLITICS_TEIXEIRA_GYZ_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Ludovico.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					silent_workhorse
 				}
@@ -3099,7 +3211,7 @@ country_event = {
 				desc = "POLITICS_TANCREDO_NEVES_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Tancredo_Neves.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					economic_reformer
 				}
@@ -3108,7 +3220,7 @@ country_event = {
 				name = "Joaquim Francisco de Assis"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Assis_Brasil.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					silent_workhorse
 				}
@@ -3118,7 +3230,7 @@ country_event = {
 				desc = "POLITICS_AFONSO_FEATHER_JUNIOR_RJM_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Afonso_Pena_Jr.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					editor
 				}
@@ -3176,7 +3288,7 @@ country_event = {
 				desc = "POLITICS_TANCREDO_NEVES_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Tancredo_Neves.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					economic_reformer
 				}
@@ -3185,7 +3297,7 @@ country_event = {
 				name = "Joaquim Francisco de Assis"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Assis_Brasil.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					silent_workhorse
 				}
@@ -3195,7 +3307,7 @@ country_event = {
 				desc = "POLITICS_AFONSO_FEATHER_JUNIOR_RJM_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Afonso_Pena_Jr.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					editor
 				}
@@ -3253,7 +3365,7 @@ country_event = {
 				desc = "POLITICS_TANCREDO_NEVES_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Tancredo_Neves.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					economic_reformer
 				}
@@ -3262,7 +3374,7 @@ country_event = {
 				name = "Joaquim Francisco de Assis"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Assis_Brasil.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					silent_workhorse
 				}
@@ -3272,7 +3384,7 @@ country_event = {
 				desc = "POLITICS_AFONSO_FEATHER_JUNIOR_RJM_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Afonso_Pena_Jr.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					editor
 				}
@@ -3331,7 +3443,7 @@ country_event = {
 				desc = "POLITICS_TANCREDO_NEVES_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Tancredo_Neves.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					economic_reformer
 				}
@@ -3340,7 +3452,7 @@ country_event = {
 				name = "Joaquim Francisco de Assis"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Assis_Brasil.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					silent_workhorse
 				}
@@ -3350,7 +3462,7 @@ country_event = {
 				desc = "POLITICS_AFONSO_FEATHER_JUNIOR_RJM_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Afonso_Pena_Jr.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					editor
 				}
@@ -3498,7 +3610,7 @@ country_event = {
 				desc = "POLITICS_OSVALDO_ARANHA_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Osvaldo_Aranha.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					reluctant_interventionist 
 				}
@@ -3508,7 +3620,7 @@ country_event = {
 				desc = "POLITICS_JK_RJM_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Juscelino_Kubitschek.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					captain_of_industry
 				}
@@ -3518,7 +3630,7 @@ country_event = {
 				desc = "POLITICS_LANDRY_SALES_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Landry_Sales.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					economic_reformer
 				}
@@ -3584,7 +3696,7 @@ country_event = {
 				desc = "POLITICS_OSVALDO_ARANHA_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Osvaldo_Aranha.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					reluctant_interventionist 
 				}
@@ -3594,7 +3706,7 @@ country_event = {
 				desc = "POLITICS_JK_RJM_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Juscelino_Kubitschek.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					captain_of_industry
 				}
@@ -3604,7 +3716,7 @@ country_event = {
 				desc = "POLITICS_LANDRY_SALES_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Landry_Sales.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					economic_reformer
 				}
@@ -3664,7 +3776,7 @@ country_event = {
 				desc = "POLITICS_OSVALDO_ARANHA_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Osvaldo_Aranha.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					reluctant_interventionist 
 				}
@@ -3674,7 +3786,7 @@ country_event = {
 				desc = "POLITICS_JK_RJM_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Juscelino_Kubitschek.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					captain_of_industry
 				}
@@ -3684,7 +3796,7 @@ country_event = {
 				desc = "POLITICS_LANDRY_SALES_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Landry_Sales.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					economic_reformer
 				}
@@ -3744,7 +3856,7 @@ country_event = {
 				desc = "POLITICS_OSVALDO_ARANHA_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Osvaldo_Aranha.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					reluctant_interventionist 
 				}
@@ -3754,7 +3866,7 @@ country_event = {
 				desc = "POLITICS_JK_RJM_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Juscelino_Kubitschek.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = classical_liberalism_subtype 
 				traits = {
 					captain_of_industry
 				}
@@ -3764,7 +3876,7 @@ country_event = {
 				desc = "POLITICS_LANDRY_SALES_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Landry_Sales.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = humanistic_capitalism_subtype 
 				traits = {
 					economic_reformer
 				}
@@ -4383,7 +4495,7 @@ country_event = {
 			desc = "POLITICS_CANDIDO_RONDON_HOS_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Candido_Rondon.png"
 			expire = "1965.1.1"
-			ideology = social_liberal_subtype
+			ideology = radical_liberalism_subtype 
 			traits = {
 					cornered_fox
 				}
@@ -8005,7 +8117,7 @@ country_event = {
 				desc = "POLITICS_GUSTAVO_CAPANEMA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Gustavo_Capanema.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = soccon_oligarchy_subtype 
 				traits = {
 					figurehead_president
 				}
@@ -8980,7 +9092,7 @@ country_event = {
 			desc = "POLITICS_ISIDORO_DIAS_LOPES_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Isidoro_Dias.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype 
 			traits = {
 					nationalist_symbol
 				}
@@ -9156,7 +9268,7 @@ country_event = {
 			desc = "POLITICS_MINERVINO_OLIVEIRA_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Minervino_Oliveira.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype 
 			traits = {
 					economic_reformer
 				}
@@ -10131,7 +10243,7 @@ country_event = {
 			desc = "POLITICS_MARIA_LACERDA_DE_MOURA_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Maria_Lacerda_Moura.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					anarchist_zeal
 				}
@@ -10164,7 +10276,7 @@ country_event = {
 			desc = "POLITICS_ASTROJILDO_PEREIRA_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Astrojildo_Pereira.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					economic_reformer
 				}
@@ -10196,7 +10308,7 @@ country_event = {
 			desc = "POLITICS_AVELINO_FOSCOLO_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Avelino_Foscolo.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					anarchist_zeal
 				}
@@ -10243,9 +10355,9 @@ country_event = {
 		create_country_leader = {
 			name = "Everardo Dias"
 			desc = "POLITICS_EVERARDO_DIAS_DESC"
-			picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_3.png"
+			picture = "gfx/leaders/BRA/Portrait_BRA_Everardo_Dias.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					anarchist_zeal
 				}
@@ -10277,7 +10389,7 @@ country_event = {
 			desc = "POLITICS_CANDIDO_PORTINARI_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Candido_Portinari.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					propaganda_expert
 				}
@@ -10309,7 +10421,7 @@ country_event = {
 			desc = "POLITICS_DJALMA_MARANHAO_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Djalma_Maranhao.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					editor
 				}
@@ -10358,7 +10470,7 @@ country_event = {
 			desc = "POLITICS_ELISA_KAUFFMAN_ABRAMOVICH_BRA_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Elisa_Kauffman_Abramovich.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					divided_interests
 				}
@@ -10379,7 +10491,7 @@ country_event = {
 			desc = "POLITICS_OTTO_ACLIDES_OHLWEILER_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Otto_Ohlweiler.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					silent_workhorse
 				}
@@ -10399,7 +10511,7 @@ country_event = {
 			desc = "POLITICS_JOAO_MANGABEIRA_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Joao_Mangabeira.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					economic_reformer
 				}
@@ -10436,7 +10548,7 @@ country_event = {
 			desc = "POLITICS_APOLONIO_DE_CARVALHO_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Apolonio.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					economic_reformer
 				}
@@ -10449,7 +10561,7 @@ country_event = {
 			desc = "POLITICS_JORGE_AMADO_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Jorge_Amado.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					editor
 				}
@@ -10462,7 +10574,7 @@ country_event = {
 			desc = "POLITICS_CLAUDIO_SANTORO_AMA_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Claudio_Santoro.png"
 			expire = "1965.1.1"
-			ideology = anarchism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 			traits = {
 					figurehead_president
 				}
@@ -10764,7 +10876,7 @@ country_event = {
 			desc = "POLITICS_CARLOS_LACERDA_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Carlos_Lacerda.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					propaganda_expert
 				}
@@ -10788,7 +10900,7 @@ country_event = {
 			desc = "POLITICS_LUIS_CARLOS_PRESTES_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Luis_Carlos_Prestes.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					war_industrialist
 				}
@@ -10812,7 +10924,7 @@ country_event = {
 			desc = "POLITICS_PATRICIA_REHDER_GALVAO_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Pagu.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					tenacious_negotiator
 				}
@@ -10857,7 +10969,7 @@ country_event = {
 			desc = "POLITICS_OSWALD_DE_ANDRADE_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Oswald_de_Andrade.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					smooth_talking_charmer
 				}
@@ -10892,7 +11004,7 @@ country_event = {
 			desc = "POLITICS_PEDRO_VENTURA_POMAR_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Pomar.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					economic_reformer
 				}
@@ -10927,7 +11039,7 @@ country_event = {
 			desc = "POLITICS_LILLIA_RIPOLL_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Lilla_Ripoll.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					editor
 				}
@@ -10977,7 +11089,7 @@ country_event = {
 			desc = "POLITICS_OTTO_ALCIDES_OHLWEILER_SYN_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Otto_Ohlweiler.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					silent_workhorse
 				}
@@ -10997,7 +11109,7 @@ country_event = {
 			desc = "POLITICS_EUGENIA_ALVARO_MOREYRA_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Eugenia_Moreyra.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					hedonist
 				}
@@ -11018,7 +11130,7 @@ country_event = {
 			desc = "POLITICS_RACHEL_DE_QUEIROZ_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Rachel_de_Queiroz.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					editor
 				}
@@ -11056,7 +11168,7 @@ country_event = {
 			desc = "POLITICS_ARMANDA_ALVARO_ALBERTO_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Armanda.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					silent_workhorse
 				}
@@ -11077,7 +11189,7 @@ country_event = {
 			desc = "POLITICS_MAURICO_GRABOIS_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Mauricio_Grabois.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					armaments_organizer
 				}
@@ -11097,7 +11209,7 @@ country_event = {
 			desc = "POLITICS_AMA_JOAO_AMAZONAS_DESC"
 			picture = "gfx/leaders/BRA/Portrait_BRA_Joao_Amazonas.png"
 			expire = "1965.1.1"
-			ideology = syndicalist_subtype
+			ideology = centralized_syndicalism_subtype
 			traits = {
 					tenacious_negotiator
 				}
@@ -12231,7 +12343,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_IV_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Henrique.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = christian_democracy_subtype 
 				traits = {
 					nationalist_symbol
 				}
@@ -12241,7 +12353,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_IV_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Henrique.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = soclib_christian_democracy_subtype 
 				traits = {
 					nationalist_symbol
 				}
@@ -12251,7 +12363,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_IV_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Henrique.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = liberal_conservative_subtype 
 				traits = {
 					nationalist_symbol
 				}
@@ -12261,7 +12373,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_IV_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Henrique.png"
 				expire = "1965.1.1"
-				ideology = socdem_democratic_socialism_subtype
+				ideology = socdem_christian_socialism_subtype 
 				traits = {
 					nationalist_symbol
 				}
@@ -12271,7 +12383,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_IV_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Henrique.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = autdem_christian_democracy_subtype 
 				traits = {
 					nationalist_symbol
 				}
@@ -12281,7 +12393,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_IV_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Henrique.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = absolute_monarchy_subtype 
 				traits = {
 					nationalist_symbol
 				}
@@ -12314,6 +12426,15 @@ country_event = {
 					BRA_Arlindo_Veiga_dos_Santos_hog_npo
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = BRA_AIB_Nominee_Salgado
+				}
+				remove_ideas_with_trait = head_of_government
+				add_ideas = {
+					BRA_Plinio_Salgado_hog_npo
+				}
+			}
 		}
 	}
 	option = {
@@ -12329,7 +12450,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_III_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Gastao.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = christian_democracy_subtype 
 				traits = {
 					nationalist_symbol
 				}
@@ -12339,7 +12460,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_III_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Gastao.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = soclib_christian_democracy_subtype
 				traits = {
 					nationalist_symbol
 				}
@@ -12349,7 +12470,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_III_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Gastao.png"
 				expire = "1965.1.1"
-				ideology = market_liberal_subtype
+				ideology = liberal_conservative_subtype
 				traits = {
 					nationalist_symbol
 				}
@@ -12359,7 +12480,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_III_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Gastao.png"
 				expire = "1965.1.1"
-				ideology = socdem_democratic_socialism_subtype
+				ideology = socdem_christian_socialism_subtype
 				traits = {
 					nationalist_symbol
 				}
@@ -12369,7 +12490,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_III_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Gastao.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = autdem_christian_democracy_subtype
 				traits = {
 					nationalist_symbol
 				}
@@ -12379,7 +12500,7 @@ country_event = {
 				desc = "POLITICS_PEDRO_III_BRA_DESC"
 				picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_Gastao.png"
 				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
+				ideology = absolute_monarchy_subtype
 				traits = {
 					nationalist_symbol
 				}

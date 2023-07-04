@@ -2,7 +2,7 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "coronation_march_bokassa.ogg"
+	file = "dief_chief.ogg"
 	volume = 1
 }
 

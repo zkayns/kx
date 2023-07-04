@@ -103,7 +103,7 @@ RUS_mensheviks_party_long:0 "Rossiyskaya Sotsial-Demokraticheskaya Rabochaya Par
 RUS_social_rev_party:0 "PSR"
 RUS_social_rev_party_long:0 "Partiya Sotsialistov-Revolyutsionerov\n§gThe Party of Socialists-Revolutionaries has been the dominant party in Russia for the last 20 years. The party has existed in a coalition with the Kadets under the leadership of President Kerensky, but almost none of the SR's reforms were made. Victor Chernov, leader of the SRs, believes that agrarian socialism is the best path to appease various socialist groups in Russia, but it is unlikely that he can revamp the economic system without the help of other parties.§!"
 RUS_tsar_party:0 "RMS"
-RUS_tsar_party_long:0 "Russkyi Monarchicheskyi Soyuz\n§ggThe Russian Monarchist Union is organization, representing monarchists in Russia that support a Tsarist autocracy.§!"
+RUS_tsar_party_long:0 "Russkyi Monarchicheskyi Soyuz\n§gThe Russian Monarchist Union is organization, representing monarchists in Russia that support a Tsarist autocracy.§!"
 RUS_chernosot_party:0 "RNSMA"
 RUS_chernosot_party_long:0 "Russkiy Narodniy Soyuz imeni Mikhaila Arkhangela\n§gThe Russian People's Union of Archangel Michael is a conservative national-legionary monarchist organization led by Vladimir Purishkevich. It supports Tsarist autocracy and a radical policy detailing widespread persecution of the country’s Jewish minority.§!"
 RUS_solidarist_party:0 "NSNP"
@@ -263,23 +263,19 @@ russia.28.a:0 "Gorgulov secures his power."
 russia.28.b:0 "Abakumov destroys Green Armies"
 russia.28.c:0 "Solidarists rise to power, backed by Abakumov"
 
-russia.29.t:0 "Nominating Vlasov as Vozhd"
-russia.29.d:0 "The more or less democratic central cabinet of the NSNP party decided to nominate the Field Marshall, Chief of Staff Vlasov as a new Vozhd of Nation. Though the executive and legislative power of his will be shared with NSNP ministers, he will still have special authorities to guide our nation in the future."
-russia.29.a:0 "Long Live Vlasov!"
-russia.29.b:0 "Better stay with Baydalakov"
+russia.30.t:0 "Socialist Demonstrations in Petrograd Turned Into Riots"
+russia.30.d:0 "The assassination of President Kerensky, as envisioned by his assassin, was supposed to be the salvation of Russia. Salvation from corruption, arrogance, lying officials, German domination, and the dominance of big capital. But in light of the assassin's personality, his fanaticism, his pseudoscientific and near-religious judgments, at least the leadership of the socialist parties realized that the president's death only threw Russia into chaos. With the collapse of the ruling coalition and the resignation of the government, it became at least obvious to the leadership of the NSP, PLSR and RSDRP that liberal ministers and SRs were not capable of pulling Russia out of chaos in this situation. And only elections, fair and honest, are capable. It is necessary to take power into their own hands, and to demand fair conditions. \n\nWith these thoughts, in major cities a strike of workers was organized, demanding an immediate increase in wages and working conditions. The so-called \"Popular Front\" of the left-wing socialist parties also turned to political demands - the formation of a unified socialist government and the legalization of radical left-wing parties in order to save Russia from the dictatorship and terror that, in their opinion, the extreme right-wing deputies were going to carry out. \n\nAppealing to the mind of the SR ministers still capable of influencing something, referring to the socialist bills and promises stifled by Kerensky, the Popular Front hoped for the prudence of the SR lobby and satisfaction of both economic and political demands.\n\nHowever, the strikes had already degenerated into haphazard and unorganized chaos. Some of the more radical workers had shifted from slogans of socialist democracy to calls to overthrow the government by force and establish Soviet rule without waiting for any elections. Against this background, the SRs are under tremendous pressure. The wrong decision could wreak havoc not only in Russia, but also in the party itself."
+russia.30.a:0 "Under great pressure, the government calls for the police to disperse the crowd."
+russia.30.b:0 "Accept their terms, decide the Party Legalisation issue separately."
 
-russia.30.t:0 "Socialist Demonstration"
-russia.30.d:0 "Socialist demonstrations are taking place now in Petrograd. Even if PSR is considered a socialist party, a lot of socialist promises were strangled during Kerensky's presidency. Various leaders of socialist movements demand an 8-hour shift, protection of workers' right and allowing Bolshevik party to participate in elections."
-russia.30.a:0 "Invite the police to disperse the crowd."
-russia.30.b:0 "Let them protest!"
-
-russia.31.t:0 "Nationalist March"
-russia.31.d:0 "A former PSR member, Boris Savinkov, has organized his own party during the civil war. Despite the fact that his Narodnye Respublikantsy have seats in the Duma, no legislative initiations, offered by Savinkov were admitted. A lot of right movements, such as Trubetzkoy's Evraziytsy, various monarchist movements and Chernosotentsy are also present at the march." 
-russia.31.a:0 "Another group of radicals try to destabilize the situation. Invite the police!"
-russia.31.b:0 "Let them protest!"
+russia.31.t:0 "NRPR Initiates Protest March"
+russia.31.d:0 "As a direct reaction to the government's decisions to succumb to the tricks of the Socialists, Boris Savinkov's People's Republicans could not stand idly by. While socialist demonstrations were still taking place in the city, detachments of the Combat Organization of the NPRR (BO-NPRR) appeared in Petrograd, heading for the center of the city in the direction of the Winter Palace. Residents of the city could watch from their windows as a huge crowd of radical activists closed in on the procession. In the vanguard of the procession were BO fighters, carrying banners reading \"Down with the Liberal Ministers\" ('Doloy Ministrov Liberalov') and \"Let's Restore Russia's Greatness\" ('Vosstanovim Velichie Rossii'). \n\nBoris Savinkov himself was seen leading the march, along with his associate and part-time head of the BO, Viktor Abakumov, who led the fighters. It was not long before the People's Republicans reached the square in front of the Winter Palace, where Savinkov addressed the assembled activists, fighters, and onlookers from the rostrum. He gave a fiery speech to his supporters, calling for the immediate banning of all socialist parties, the arrest of provocateurs and trade union leaders, and a \"People's Tribunal\" on the Kadets and the SRs, the ministers who had allowed chaos in the country. However, this was not the end.\n\nThe heated crowd took Savinkov's calls to heart, and some of the most radicalized citizens marched to the Field Of Mars, where a socialist rally was being held. It was becoming clear that soon the city risked becoming the center of violent unrest, which should not be allowed to happen in any case. However, it was unclear whether the increased contingent of police detachments would be able to cope. The responsibility placed on the shoulders of the government is greater than ever. The negotiators from the Winter Palace reported to the government that Savinkov had given an ultimatum to ban the activities of the Socialist parties within a short time and officially report this to the population by radio. Only then did he vow to stop the march and prevent bloodshed in the city." 
+russia.31.a:0 "Another group of radicals try to destabilize the situation. Arrest provocateurs!"
+russia.31.b:0 "Give in to his demands in a hope it prevents the bloodshed!"
 
 russia.32.t:0 "Clashes in Petrograd"
-russia.32.d:0 "The police was unsuccesful to disperse the demonstrations and now there are reports that there are armed clashes in the streets of Petrograd."
+russia.32.d.accept_sav:0 "The government decided not to give in to Savinkov's ultimatum, announcing his arrest. The police surrounded Palace Square, limiting the violent crowd's ability to head toward the Field of Mars. Under the onslaught of the police, the NRPR supporters were surrounded on the square. Some of the provocateurs were arrested, but the police detachments failed to arrest Abakumov and Savinkov because of the crowd of defenders preventing this. The radio broadcast demanded that the protesters immediately disperse to their homes. Despite all the opposition from the police, clashes could not be avoided. Some of the nationalist-minded crowd was still able to leave the police barrier and reach Field Of Mars. Despite their small number, they had a big scuffle with the socialists. On Palace Square, a number of protesters clashed with the police, demanding passage to the Field Of Mars.\n\nIt seems that the government had no choice but to try to negotiate with both sides. And there can only be one compromise - fair elections, in which the strongest party will win. However, there is a more radical option - to involve the army. By appealing to the General Staff, the government could impose a curfew and martial law in Petrograd in order to disperse the demonstrations with the help of the army and bring stability back to the city."
+russia.32.d.reject_sav:0 "The government decided to give in to Savinkov's ultimatum, and has announced that in order to prevent another Revolution, the activities of RSDRP, PLSR and NSP are hereby outlawed. However, the police has also surrounded Palace Square, limiting the violent crowd's ability to head toward the Field of Mars. Under the onslaught of the police, the NRPR supporters were surrounded on the square. The radio broadcast demanded that the protesters immediately disperse to their homes. Despite all the opposition from the police, clashes could not be avoided. Some of the nationalist-minded crowd was still able to leave the police barrier and reach Field Of Mars. Despite their small number, they had a big scuffle with the socialists. On Palace Square, a number of protesters clashed with the police, demanding passage to the Field Of Mars.\n\nIt seems that the government had no choice but to try to negotiate with both sides at this point. And there can only be one compromise - fair elections, in which the strongest party will win. However, there is a more radical option - to involve the army. By appealing to the General Staff, the government could impose a curfew and martial law in Petrograd in order to disperse the demonstrations with the help of the army and bring stability back to the city."
 russia.32.a:0 "Try to negotiate with opposition leaders."
 russia.32.b:0 "That's enough. Send in the army!"
 
@@ -289,28 +285,7 @@ russia.33.d-army:0 "The protesters have separated and the army with the help of 
 russia.33.a:0 "We managed to negotiate with Socialists."
 russia.33.b:0 "We managed to negotiate with Nationalists."
 russia.33.c:0 "The army have stabilized the situation."
-russia.33.d:0 "We could not negotiate with either side, so the army dispersed the demonstrations."
-russia.33.e:0 "We could not negotiate with either side, so the army dispersed the demonstrations."
-
-russia.34.t:0 "PSR-Mensheviks Coalition Secures The Majority In Duma"
-russia.34.d:0 "As PSR and Mensheviks parties are close ideologically, they managed to reach an agreement in many vital questions, so the coalition is successfully formed."
-russia.34.a:0 "As expected."
-
-russia.35.t:0 "PSR Failed To Form A Coalition With Kadety"
-russia.35.d:0 "PSR-KDP was a ruling coalition for a long time under the presidency of Kerensky. Unfortunately, without his charismatic leadership, the coalition has broken apart and will probably never be formed again."
-russia.35.a:0 "As expected"
-
-russia.36.t:0 "PSR Failed to Form A Coalition"
-russia.36.d:0 "Despite PSR and Mensheviks parties being close ideologically, they were unable to reach an agreement in many vital questions, because of PSR appeasing the nationalist demonstration, so the coalition talks have failed."
-russia.36.a:0 "We must find another way!"
-
-russia.37.t:0 "PSR Failed to Form A Coalition with Mensheviks"
-russia.37.d:0 "Our brutal actions during the demonstrations have led to Mensheviks' refusal of a coalition. We have to call for snap elections as soon as possible before the situation gets out of the control."
-russia.37.a:0 "We failed to form a coalition with Mensheviks."
-
-russia.38.t:0 "PSR-NRPR Coalition Secures The Majority In Duma"
-russia.38.d:0 "Despite PSR and NRPR being very diverse parties, the charisma of Boris Savinkov may have helped his party to form a coalition with PSR. While many people say that this coalition is a forced measure for PSR, the others fear that Savinkov can use it to come to power."
-russia.38.a:0 "What?! Nationalists in the government?!"
+russia.33.d:0 "We have stabilized the situation, negotiating with both sides."
 
 russia.39.t:0 "Calling For Snap Elections"
 russia.39.d:0 "With PSR leading a minority government, we should immediately announce snap legislative elections. This news will have drastic impact on the ruling party as the popularity of radical left and right organisations is getting higher and higher. The elections are going to be held in May, so PSR has a couple of months more to win the popularity of the people."
@@ -726,6 +701,7 @@ rus_divided_marine:0 "Divided Naval Staff"
 rus_divided_marine_desc:0 "Our marine since the civil war has stayed small and weakened, being the least of our priorities. Thus the higher naval staff has been prone to debates that haven't been answered officially by the government. Some of our officers want to stick to the classic fleet-in-being doctrine while others want to test the other innovative paths of using submarines or carriers primarily."
 rus_investigation:0 "Investigation"
 rus_investigation_desc:0 "An investigation into Kerensky assassination attempt is now conducted by Police." 
+
 rus_nep:0 "New Economic Policy"
 rus_nep_1:0 "New Economic Policy"
 rus_nep_2:0 "New Economic Policy"
@@ -743,8 +719,8 @@ rus_black_monday2:0 "Further Stabilisation"
 rus_mechanization_focus:0 "Agriculture Improvements"
 rus_party_land:0 "Party Land"
 rus_military_industrial:0 "Military-Industrial Complex"
-rus_memories_of_rev:0 "Memories of Russian Revolution"
-rus_memories_of_rev_desc:0 "In October 1917, the Bolsheviks seized power in the country, which led to a Civil War with millions of victims. Due to the defeat of the Reds and the post-war anti-Bolshevik rhetoric, revolutionary socialism is not in demand by the people who suffered from the crimes of Bolshevism."
+RUS_scars_of_russian_revolution:0 "Scars of Russian Revolution"
+RUS_scars_of_russian_revolution_desc:0 "In October 1917, the bloody Bolsheviks seized power in the country, leading to a Civil War with millions of victims, as well as frenzied Red terror. Thanks to the defeat of the Reds and the post-war anti-Bolshevik rhetoric, revolutionary socialism was not in demand among the people who suffered the crimes of Bolshevism."
 rus_investments:0 "Foreign Investments"
 rus_investments_desc:0 "Other countries have invested in our country."
 rus_investments1:0 "Foreign Investments"
@@ -758,7 +734,7 @@ rus_investments4_desc:0 "Other countries have invested in our country."
 rus_austerity_measures:0 "Austerity Measures"
 ger_brest_litovsk:0 "Reparations Paid"
 rus_brest_litovsk:0 "Treaty of Minsk"
-rus_brest_litovsk_desc:0 "In 1920, the White forces in Russia had to ratify the Treaty of Brest-Litovsk, signed by the Bolshevik government two years earlier. The document was called the Minsk Treaty. Under it, Russia renounced all territorial claims to Finland, the United Baltic Duchy and Lithuania, White Ruthenia and Ukraine. In all the above countries established a monarchy with representatives of the German dynasties. At the insistence of the Ottoman Empire, Russia also renounced its claims to Ardahan, Kars and Batumi.\n\nThe treaty was signed by the Supreme Leader of Russia, Alexander Kolchak, Prime Minister Sazonov and Alexander Kerensky.\n§W--------------§!\n§RIf Russia declares war on any of the mentioned states, it can sparkle German intervention:§!\n§Y[UKR.GetName]\n[WHR.GetName]\n[LIT.GetName]\n[BAT.GetName]\n[FIN.GetName]§!"
+rus_brest_litovsk_desc:0 "In 1920, the White forces in Russia had to ratify the Treaty of Brest-Litovsk, signed by the Bolshevik government two years earlier. The document was called the Minsk Treaty. Under it, Russia renounced all territorial claims to Finland, the United Baltic Duchy and Lithuania, White Ruthenia and Ukraine. In all the above countries established a monarchy with representatives of the German dynasties. At the insistence of the Ottoman Empire, Russia also renounced its claims to Ardahan, Kars and Batumi.\n\nThe treaty was signed by the Supreme Leader of Russia, Alexander Kolchak, Prime Minister Sazonov and Alexander Kerensky.\n§W--------------§!\n§RIf Russia declares war on any of the mentioned states, it can spark a German intervention:§!\n§Y[UKR.GetName]\n[WHR.GetName]\n[LIT.GetName]\n[BAT.GetName]\n[FIN.GetName]§!"
 rus_riga_accords:0 "German–Russian Trade and Credit Agreement"
 rus_riga_accords_desc:0 "The German–Russian Trade and Credit Agreement, more commonly known as the Riga Agreement, provided a framework for massive German investment in Russia. Criticized by many opposition leaders as a betrayal, it allowed Russia to finally bring her faltering economy, almost completely destroyed by the Civil War, under control and to partially industrialize."
 RUS_german_influence_is_low_enough:0 "§gGerman Influence§! is §Glow enough§!"
@@ -931,9 +907,8 @@ POLITICS_ANASTASIA_DESC:0"Little is known about the now Tsarina Anastasia I. The
 POLITICS_ANASTASIA_MLAD_DESC:0"Little is known about the now Tsarina Anastasia I. The pretender to the Russian Throne claimed to be the lost Daughter of Nicholas II, who escaped Execution on that faithful day. However, there seems to be little evidence to back up her claims; other than extravagant (yet accurate) stories of here life on the old Imperial Court. She has become a decisive figure within the Romanov Family; some have let her back into their lives, while others scoff and turn away. Regardless of the Royal Court’s opinions, the central Government never took here claims with a hint of seriousness... Until now.\n\n With the most widely accepted heirs to the throne siding with the “Mladorossi” and their perverted ideals, the most widely accepted claimant to the throne became Anastasia. And when the time came to restore the Monarchy, she was the one chosen to reclaim the legacy of the Tsars. So, long live Tsarina Anastasia! Long Live the Russian Empire!"
 
 ### Focuses ###
+russia_focus:0 "Russian Focus Tree"
 
-
-RUS_KERENSKY_FOCUS:0 "Kerensky's Focus Tree"
 RUS_President_Kerensky:0 "President Kerensky"
 RUS_President_Kerensky_desc:0 "To think that someone yet again was so brave and so foolish to fire at me, the saviour of free and just Russia. The years after the civil war were a disaster, my Nation has only spiralled ever downwards. The time for games is over. I shall take every decisive action I need to to save this land."
 
@@ -1323,12 +1298,6 @@ RUS_Military_Spirit_desc:0 "The post-war young generation is told to be "lost", 
 RUS_State_Revanchism:0 "State Revanchism"
 RUS_State_Revanchism_desc:0 "Now that Russia has stabilised and grown stronger under the rule of her army she must now grow, we must reclaim the land that has been stolen to us and liberate their peoples that are chanting for our return!"
 
-RUS_Restart_the_Pogroms_Denikin:0 "Restart the Pogroms"
-RUS_Restart_the_Pogroms_Denikin_desc:0 ""
-
-RUS_Reinstate_Pale_of_Settlement_Den:0 "Reinstate the Pale of Settlement"
-RUS_Reinstate_Pale_of_Settlement_Den_desc:0 ""
-
 ### Monarchy Focuses ###
 RUS_Devoted_Subjects:0 "Devoted Subjects"
 RUS_Devoted_Subjects_desc:0 "In every home of Russia, people hang a photo of the Tsar and his family upon the wall. Whenever the Tsar participates in a public event, he is cheered and beloved. He stands above party politics and is a symbol of our unity."
@@ -1336,14 +1305,11 @@ RUS_Devoted_Subjects_desc:0 "In every home of Russia, people hang a photo of the
 RUS_God_Save_the_Tsar:0 "God Save the Tsar!"
 RUS_God_Save_the_Tsar_desc:0 "God, save the Tsar!\nStrong, sovereign,\nReign for glory, for our glory!"
 
-RUS_Restart_the_Pogroms:0 "Restart the Pogroms"
-RUS_Restart_the_Pogroms_desc:0 "Life was better when the Jewish population was kept in check. With our coming expansion into the old Pale of Settlement, the government, with the help of the Yellowshirts, shall start the Pogroms anew."
+RUS_Galvanize_Yellowshirt_Chauvinism:0 "Galvanize Yellowshirt Chauvinism"
+RUS_Galvanize_Yellowshirt_Chauvinism_desc:0 "There are many proud Russians that have come to outwardly express their disdain towards all the traitors of the Motherland ever since our government came to power. Let us use their zeal and recruit the masses into our Yellowshirt paramilitary to maintain order and social cohesion inside the Tsardom."
 
 RUS_Yellow_Shirts:0 "Fund Yellow Shirts"
 RUS_Yellow_Shirts_desc:0 "Yellow Shirts are Blackhundredist Combat Squads..."
-
-RUS_Reinstate_Pale_of_Settlement:0 "Reinstate Pale of Settlement"
-RUS_Reinstate_Pale_of_Settlement_desc:0 ""
 
 RUS_Orthodoxy:0 "Orthodoxy"
 RUS_Orthodoxy_desc:0 ""Orthodoxy.." The Russian nation was and always will be an ardent believer of Orthodox Christianity."
@@ -1513,7 +1479,7 @@ RUS_The_Great_Purge:0 "The Great Purge"
 RUS_The_Great_Purge_desc:0 "Some would suggest that our new Vozhd is paranoid. They would be deservedly shot for treason against the state. There are still many traitors with dangerous ideas lurking in the shadows, terrorising Russia. Abakumov shall cut out this cancer once and for all. With any means necessary."
 
 RUS_Expand_The_Combat_Squads:0 "Expand The Combat Squads"
-RUS_Expand_The_Combat_Squads_desc:0 "While Savikov greatly expanded the powers and position of the Combat Squads, it’s still not enough. They need even more powers to adequately deal with the internal enemies of the state. Non shall espace their ever present gaze."
+RUS_Expand_The_Combat_Squads_desc:0 "While Savinkov greatly expanded the powers and position of the Combat Squads, it’s still not enough. They need even more powers to adequately deal with the internal enemies of the state. None shall escape their ever present gaze."
 
 RUS_Art_Of_Propaganda:0 "The Art Of Propaganda"
 RUS_Art_Of_Propaganda_desc:0 "People’s opinons and beliefs are a delicate thing. If our rule is to survive, we need to make sure that we master and effectively use various propaganda channels like movies, books, posters etc."
@@ -1595,7 +1561,7 @@ RUS_Strengthen_Chairman_desc:0 "For the revolution to be succesful  and the prol
 RUS_Dictatorship_Of_Red_Army:0 "Dictatorship of the Red Army"
 RUS_Dictatorship_Of_Red_Army_desc:0 "If revolution is to survive the turbulent times that await there must be a strong rulling class. The men of the Red Army must make up the government apparatus."
 RUS_Independent_Trade_Unions:0 "Independent Trade Unions"
-RUS_Independent_Trade_Unions_desc:0 ""
+RUS_Independent_Trade_Unions_desc:0 "Trade unions are a sign of a strong and competitive Economy, to ensure the common worker is not exploited we must guarantee that trade unions remain outside of the control of employers or the Government."
 RUS_Control_Trade_Unions:0 "Control Trade Unions"
 RUS_Control_Trade_Unions_desc:0 "The issue of the Trade Unions, which has been previously discussed at the Socialist Congress shall be deal with once and for all."
 RUS_Cut_Red_Tape:0 "Fight Bureaucratisation"
@@ -1631,7 +1597,7 @@ RUS_Cement_Chairman_Authority_desc:0 "With our actions we have ensured that the 
 RUS_Revolutionary_Commissars:0 "Revolutionary Commissars"
 RUS_Revolutionary_Commissars_desc:0 "Revolutionary Commisars are to our socialist state what ministers are to republics. They keep the flame of revolution lit for the coming ages."
 RUS_Labour_Camps:0 "Labour Camps"
-RUS_Labour_Camps_desc:0 "Prisioners are useless on their own, some would even say parasites on the good people of Russia. To make sure that they contribute to society they have to be forced into newly created labour camps and made to work for the Motherland."
+RUS_Labour_Camps_desc:0 "Prisoners are useless on their own, some would even say parasites on the good people of Russia. To make sure that they contribute to society they have to be forced into newly created labour camps and made to work for the Motherland."
 RUS_Prodrazvyorstka:0 "Prodrazvyorstka"
 RUS_Prodrazvyorstka_desc:0 "Prodrazvyorstka, or food appointment,is a policy and of confiscation of grain and other agricultural products from peasants at nominal fixed prices according to specified quotas. To ensure that our people are equal and content, we must launch a campaign to strike at the greed of the hoarding peasants."
 RUS_Class_War:0 "Class War"
@@ -1984,6 +1950,9 @@ RUS_Expansionism_tooltip:0 "§CBy taking Expansionism, you will have more aggres
 RUS_Realpolitik:0 "Realpolitik"
 RUS_Realpolitik_desc:0 "Realpolitik is politics or diplomacy based primarily on considerations of given circumstances and factors, rather than explicit ideological notions or moral and ethical premises. The term Realpolitik is sometimes used pejoratively to imply politics that are coercive, amoral, or Machiavellian. We enjoy this notion."
 
+RUS_Bring_Back_Cossacks:0 "Bring Back the Cossacks"
+RUS_Bring_Back_Cossacks_desc:0 "The lands known to the world as Don-Kuban have been part of Russia for centuries. That grand link has sadly been severed by the chaos of the Civil War and German meddling, which resulted in rebellious and treacherous Cossack leaders seceding from the Motherland. Despite their elite being rotten, we know these brave men always held Russia in their patriotic hearts. It's high time to welcome them back into Russia, by force if need be."
+
 RUS_Into_The_Caucasus:0 "Into the Caucasus"
 RUS_Into_The_Caucasus_desc:0 "The Caucasus is wealthy and, historically, part of Russia. The people who live there might not think so anymore, but with enough military muscles that shouldn't be a problem. Germany will however keep a close eye on us, and we should tread carefully in the region."
 
@@ -2020,7 +1989,7 @@ RUS_allies_JAP_flag:0 "We have aligned with the Japanese"
 RUS_Demand_West_Karelia:0 "Demand West Karelia"
 RUS_Demand_West_Karelia_desc:0 "We have given the Finns so much through the ages, and how do they pay us back? They steal Karelia. It must be returned."
 
-RUS_Buy_State_Bonds_In_White_Ruthenia:0 "Question of the Belarus"
+RUS_Buy_State_Bonds_In_White_Ruthenia:0 "Question of the Belaya Rus"
 RUS_Buy_State_Bonds_In_White_Ruthenia_desc:0 "There are many in White Ruthenia that are still fond of Russia, some even calling for return to the Motherland. All of that is good to hear, but it doesn’t mean they can get absorbed by us right now. By focusing our efforts on their economy we can influence them in a more subtle way."
 
 RUS_Resolve_Ukranian_Problem:0 "Russian Population in Ukraine"
@@ -2035,8 +2004,8 @@ RUS_Attack_Afghanistan_desc:0 "Afghanistan was always of vital importance for ou
 RUS_Referendum_In_Vladivostok:0 "Referendum in [TRM.Capital.GetName]"
 RUS_Referendum_In_Vladivostok_desc:0 "With a government in Vladivostok that is receptive to our diplomatic offers we can conduct a referendum that would finally return the Far East to Russia."
 
-RUS_Another_Amur_Incident:0 "Take Over Transamur"
-RUS_Another_Amur_Incident_desc:0 "The Far Eastern Republic was born out of Kolchak’s treachery and Japanese support. Those two forces are mocking us, occupying our rightful territories. We must wipe that traitorous stain off the face of the earth!"
+RUS_Reclaim_Far_East:0 "Take Over Transamur"
+RUS_Reclaim_Far_East_desc:0 "The Far Eastern Republic was born out of Kolchak’s treachery and Japanese support. Those two forces are mocking us, occupying our rightful territories. We must wipe that traitorous stain off the face of the earth!"
 
 RUS_Negotiate_For_Vladivostok:0 "An Olive Branch for the Far East"
 RUS_Negotiate_For_Vladivostok_desc:0 "With the Japanese ascendant in the far east, the safest option to see a reunification of Russia would be to do so on terms agreeable to both our powers, lest we waste blood and bullets foolishly chasing after the memory of the Russo-Japanese war."
@@ -2100,6 +2069,15 @@ RUS_Project_Zheltorossiya:0 "Project \"Zheltorossiya\""
 RUS_Project_Zheltorossiya_desc:0 "The „Yellow Russia” endeavor was a plan to create a dependant state in Manchuria that could be colonized, russified and, in the end, incorporated into our nation. Now that we hold those lands our ambitions can come to fruition."
 
 ### Leader Descriptions ###
+
+### Autonomies ##
+kr_autonomy_russian_imperial_autonomy: "Personal Union"
+UKR_RUS_monarchy: "General-Governorate of Malorussia"
+UKR_RUS_monarchy_ADJ: "Malorussian"
+UKR_RUS_monarchy_DEF: "the General-Governorate of Malorussia"
+WHR_RUS_monarchy: "General-Governorate of Belorussia"
+WHR_RUS_monarchy_ADJ: "Belorussian"
+WHR_RUS_monarchy_DEF: "the General-Governorate of Belorussia"
 
 
 ### Decisions ###
@@ -2205,32 +2183,6 @@ RUS_Tyrnyauz_Tungsten_Mining:0 "Tyrnyauz Tungsten Mining"
 RUS_Romashkino_Oil_Field:0 "Romashkino Oil Field"
 RUS_Kachkanar_Exploitation:0 "Kachkanar Exploitation"
 
-
-RUS_Pogroms_decisions:0 "The Pale of Settlement"
-RUS_Pogroms_decisions_desc:0 "In the Russian Empire there were large-scale targeted and repeated anti-Jewish violent riots. Our current government suggests that we should restart the pogroms with the help of Yellowshirts - Blackhundredist Paramilitaries. Even though the main Jewish population now lives outside Russian territory, we should expand into our Western neighbours and reinstate the Pale of Settlement."
-RUS_Pogroms_tooltip:0 "§RAnti-Jewish pogroms will now take place in Russia§!\n" 
-
-RUS_Resettle_Braslaw:0 "Resettle Jews to [207.GetName]"
-RUS_Resettle_Mogilev:0 "Resettle Jews to [1087.GetName]"
-RUS_Resettle_Minsk:0 "Resettle Jews to [206.GetName]"
-RUS_Resettle_Mozyr:0 "Resettle Jews to [194.GetName]"
-RUS_Resettle_Pinsk:0 "Resettle Jews to [204.GetName]"
-RUS_Resettle_Brest:0 "Resettle Jews to [93.GetName]"
-RUS_Resettle_Vilna:0 "Resettle Jews to [96.GetName]"
-RUS_Resettle_Kovno:0 "Resettle Jews to [11.GetName]"
-RUS_Resettle_Warsaw:0 "Resettle Jews to [10.GetName]"
-RUS_Resettle_Plock:0 "Resettle Jews to [98.GetName]"
-RUS_Resettle_Lublin:0 "Resettle Jews to [92.GetName]"
-RUS_Resettle_Volyn:0 "Resettle Jews to [792.GetName]"
-RUS_Resettle_Kiev:0 "Resettle Jews to [202.GetName]"
-RUS_Resettle_Gomel:0 "Resettle Jews to [241.GetName]"
-RUS_Resettle_Cherkasy:0 "Resettle Jews to [203.GetName]"
-RUS_Resettle_Podolia:0 "Resettle Jews to [791.GetName]"
-RUS_Resettle_Malorossiya:0 "Resettle Jews to Malorossiya"
-RUS_Resettle_Poltava:0 "Resettle Jews to [259.GetName]"
-RUS_Resettle_Crimea:0 "Resettle Jews to [137.GetName]"
-RUS_Resettle_Bessarabia:0 "Resettle Jews to [78.GetName]"
-
 ### Foreign Policy Decisions ###
 
 RUS_Foreign_Policy_decisions:0 "Foreign Policy"
@@ -2275,12 +2227,16 @@ RUS_Attack_Caucasus_desc_ARM:0 "Now that we’ve consolidated our hold on the Ca
 RUS_Attack_Caucasus_desc_KUB:0 "The Don-Kuban Union has finally broken apart and the Kuban cossacks tried to create their own state. Surrounded by Don Cossacks, they are likely to tie themselves deeply with Ukraine. If not, however, we shall take them under our protection."
 RUS_Attack_Caucasus_desc_KLY:0 "The Kalmyks are Buddhists, located far away from their brothers. In the Delta of Volga River they are surrounded by hostile Cossacks, Muslim Mountaineers - and us. Perhaps we should protect them from the enemies?"
 RUS_Attack_Caucasus_desc_MNT:0 "Our country tried to counquer Caucasus Mountains and its dwellers for centuries and finally we did. However, they felt under the control of Don-Kuban Union. Now, being rather weak and independent, we shall once again offer them our protection."
+RUS_Attack_Caucasus_ABK:0 "The Abkhazian Obstacle"
+RUS_Attack_Caucasus_desc_ABK:0 "With the Georgians failing to keep Abkhazia and Prichernomorye region under their control, the self-proclaimed [ABK.GetNameDef] is now claiming all of this land, which is indeed our legitimate territory."
+RUS_Attack_Caucasus_CRM:0 "Retake the Crimean Peninsula"
+RUS_Attack_Caucasus_desc_CRM:0 "The Crimean Peninsula has long been home to numerous ethnic Russians and was a stronghold of the Black Sea Fleet under the Russian Empire. Now that the Crimean Peninsula is free from Ukrainian (and by extension Reichspakt) control, the opportunity to retake these lands has never been bigger."
 RUS_Claim_Greater_Armenia:0 "Claim Greater Armenia"
 RUS_Claim_Greater_Armenia_desc:0 "Although we now control Armenia, there are still a great many more Armenians who lay outside of its borders. We shall give an ultimatum to the Turks to hand these lands over to us, less they wish to incur military action."
 
 RUS_Claim_The_Straits:0 "Claim the Straits"
 RUS_Claim_The_Straits_desc:0 "Russia has always aspired to control the City of the World's Desire, although fate has cruelly kept this just out of our grasp. We are presented with an invaluable opportunity to take the Bosphorusunder our control."
-RUS_Attack_Ottomans:0 "Attack [FROM.GetNameDef]"
+RUS_Attack_Ottomans:0 "'End' the Centuries-Long Rivalry"
 RUS_Attack_Ottomans_desc:0 "Our oldest adversary has stood in our way for too long. The time has come to put this Sick Man out of his misery and reassert our position as the dominant power in Eastern Europe once more."
 RUS_Ultimatum_To_Persia_tooltip:0 "§HUltimatum to var:420.owner§!\n"
 
@@ -2347,11 +2303,11 @@ RUS_Demand_Karelia_desc:0 "Rather than pursue the relatively worthless lands tha
 RUS_Plebiscite_In_Karelia:0 "Plebescite in Karelia"
 RUS_Plebiscite_In_Karelia:0 "Rather than pursue the relatively worthless lands that encompass most of Finland, we shall instead merely seek the return of the Karelian territories that were wrongfully stolen during the Russian Civil War. Perhaps we should hold a plebiscite to know the opinion of the Karelians?"
 
-RUS_Buy_White_Ruthenia:0 "Buy State Bonds in [WHR.GetNameDef]"
-RUS_Buy_White_Ruthenia_desc:0 "White Ruthenia was occupied by the Germans in 1918 and later Berlin installed a loyal regime with the German prince on the top. But even now the White Ruthenian economy is unstable and weak, if we compare it with the other Eastern European countries. We can reach an agreement about the purchase of almost all their state bonds, and if they agree with it, we will be able to control their economy, their government and maybe will incorporate them later."
+RUS_secret_deal_with_belarus: "Propose a Secret Deal with [FROM.GetNameDef]"
+RUS_secret_deal_with_belarus_desc: "The [WHR.GetAdjective]s have baulked under German rule since the end of the Weltkrieg.\nAn impoverished region long neglected by the Tsars, they have been doing their best to build a social democratic state and develop their national identity underneath the noses of the Germans, who gave them their autonomy after forming the Ostwall. Their loyalty to Germany and clamping down on radicalism has meant a superficially socialist regime has stayed in power, but perhaps we can offer them something more than the Germans can...\n\n§YIf [WHR.GetNameDef] accepts this proposal, at the start of any war we may have with Germany, they will leave the Reichspakt and join to fight at our side. They will become our Autonomous puppet, and will also be granted the states of [1287.GetName], [755.GetName], [1292.GetName] and [243.GetName].§!"
 
-RUS_Intervene_In_White_Ruthenia:0 "Question of Belarus"
-RUS_Intervene_In_White_Ruthenia_desc:0 "White Ruthenia was occupied by the Germans in 1918 and later Berlin installed a loyal regime with the German prince on the top. But now White Ruthenia does not have any prince on the throne and their loyalty to the Germans is questionable."
+RUS_Intervene_In_White_Ruthenia:0 "Question of Belaya Rus"
+RUS_Intervene_In_White_Ruthenia_desc:0 "White Ruthenia was occupied by the Germans in 1918 and later Berlin installed a loyal regime with the German prince on the top. Despite the regime this puppet has, their people are truly Russians."
 
 RUS_Intervene_In_Ukraine:0 "Russian Population in Ukraine"
 RUS_Intervene_In_Ukraine_desc:0 "The new government of the Ukraine is not only dangerous to the whole stability of the region, it persecutes the Russian minority in the East Ukraine and the Crimea. We should try to negotiate with their government or intervene directly - if nessessary."
@@ -2474,6 +2430,8 @@ RUS_Attack_Caucasus_MNT_tooltip:0 "§HDwellers on the Mountain-Heights§!\n"
 RUS_Attack_Caucasus_AZE_tooltip:0 "§HThe Baku Oil Fields§!\n"
 RUS_Attack_Caucasus_GEO_tooltip:0 "§HThe Georgian Question§!\n"
 RUS_Attack_Caucasus_ARM_tooltip:0 "§HStatus of Armenia§!\n"
+RUS_Attack_Caucasus_ABK_tooltip:0 "§HAttack [ABK.GetNameDef]§!\n"
+RUS_Attack_Caucasus_CRM_tooltip:0 "§HAttack [CRM.GetNameDef]§!\n"
 RUS_Attack_Ottomans_OTT_tooltip:0 "§HAttack [OTT.GetNameDef]§!\n"
 RUS_Attack_Ottomans_TUR_tooltip:0 "§HAttack [TUR.GetNameDef]§!\n"
 RUS_Attack_Persia_tooltip:0 "§HCrush [PER.GetNameDef]§!\n"
@@ -3027,7 +2985,6 @@ rusfor.148.a:0 "A toast to our new friends!"
 RUS_KER_blocks_china:0 "Germany Blocks Intervention in China"
 RUS_KER_blocks_transamur:0 "Germany Blocks Intervention in Transamur"
 
-
 rusfor.1000.t:0 "Report from Russia"
 rusfor.1000.d:0 "Our secret service reports that Russia plans to once again secure the Caucasus region. Such a drastic step means a direct threat to the stability of Eastern Europe which was set by the Treaty of Brest-Litovsk. What shall we do?"
 rusfor.1000.a:0 "Demand that Russia respects the Minsk treaty!"
@@ -3411,17 +3368,17 @@ rusfor.10820.d:0 "With the outbreak of Civil War in Transamur, there are numerou
 rusfor.10820.a:0 "Intervene in the Civil War!
 rusfor.10820.b:0 "We are at war with Transamur only. We will deal with the others later."
 
-rusfor.1083.t:0 "The Russians claim Transamur!"
+rusfor.1083.t:0 "The Russians Claim Transamur!"
 rusfor.1083.d:0 "Following the re-establishment of Russian control over the Trans-Siberian railroad the Russians have announced that the Transmur-Primorsk region is rightfully a Russian province! Can we afford to oppose an increasingly powerful Russia for the sake of Transamur or should we concentrate on China?"
 rusfor.1083.a:0 "Send a warning, Transamur is our protectorate!"
 rusfor.1083.b:0 "Abandon Transamur to its fate."
 
-rusfor.1084.t:0 "Russian Troops arrive in [TRM.Capital.GetName]!"
+rusfor.1084.t:0 "Russian Troops Invade Transamur!"
 rusfor.1084.d:0 "Following the re-establishment of Russian control over the Trans-Siberian railroad the Russians have decided to enlist the support of some rebellious Transamurian capitalists in order to establish control over the Primorsk territory by force! Can we afford to oppose an increasingly powerful Russia for the sake of Transamur or should we concentrate on China?"
 rusfor.1084.a:0 "We shall defend Transamur!"
-rusfor.1084.b:0 "Abandon Transamur to its fate."
+rusfor.1084.b:0 "Abandon Transamur to its fate, but seize Vladivostok!"
 
-rusfor.10877.t:0 "The Russian army enters our territory"
+rusfor.10877.t:0 "The Russian Army Enters Our Territory"
 rusfor.10877.d:0 "Not fearing the threat of Japanese involvement the Russians have sent an army to Irkutsk with the hope to annex our territory. How shall we react to this aggression?"
 rusfor.10877.a:0 "We're no match for the Russians."
 rusfor.10877.b:0 "We'll never surrender!"
@@ -3431,7 +3388,7 @@ rusfor.1087.d:0 "Facing the threat of Russian military force and deprived of the
 rusfor.1087.a:0 "Put their leaders on trial and incorporate Transamur!"
 rusfor.1087.b:0 "Make them a buffer state between us and Japan - at least for now."
 
-rusfor.1088.t:0 "The Japanese have sent a warning"
+rusfor.1088.t:0 "The Japanese Have Sent a Warning"
 rusfor.1088.d:0 "The Japanese are not happy that we are interfering in Transamur's internal politics and have warned us that it is rightfully a Japanese protectorate. However, they have other military concerns at the moment and may not be willing to risk a two front war to protect a colony of minimal importance."
 rusfor.1088.a:0 "Call their bluff, send in the troops!"
 rusfor.1088.b:0 "It is just between us and them."
@@ -3448,7 +3405,7 @@ rusfor.1091.t:0 "[TRM.GetNameDef] Rejects Our Offer"
 rusfor.1091.d:0 "The [TRM.GetAdjective] Government denied our offer. We have the only way to act - reclaim our rightful territory."
 rusfor.1091.a:0 "Send troops to Transamur"
 
-rusfor.1092.t:0 "The Russians give an offer for Transamur"
+rusfor.1092.t:0 "The Russians Give an Offer for Transamur"
 rusfor.1092.d:0 "Following the re-establishment of Russian control over the Trans-Siberian railroad the Russians have asserted that the Transmur-Primorsk region is rightfully a Russian province, and yet curiously they have approached us directly for terms to reunite on agreeable terms. The primary terms are economic cooperation with the Co-Prosperity Sphere and no further aggression into regions of Japanese Interest, while this would certainly secure the Russian flank for the forseeable future and potentially give us even greater economic dividends than the Transamurian regime, we must question whether it would be worth giving up our control over the far east."
 rusfor.1092.a:0 "Such terms are agreeable, send it forth!"
 rusfor.1092.b:0 "Ridiculous, we will not betray our protectorates"
@@ -3463,22 +3420,35 @@ rusfor.1094.d:0 "Facing the threat of Russian military force and deprived of the
 rusfor.1094.a:0 "Put their leaders on trial and incorporate Transamur!"
 rusfor.1094.b:0 "Make them a buffer state between us and Japan - at least for now."
 
-rusfor.1095.t:0 "Transamur strikes first!"
+rusfor.1095.t:0 "Transamur Strikes First!"
 rusfor.1095.d:0 "Facing the threat of Russian military force and deprived of the support of the local capitalists and the Japanese, Transamur's government has seemingly in it's desperation lashed out at us, they have rejected the terms of our agreement with Japan and even now reports of troops attempting to cross the border and bombardments are flooding in from all fronts."
 rusfor.1095.a:0 "We shall have someone's head for this!"
 
-rusfor.1096.t:0 "The Russians give an offer for Co-Prosperity Membership"
+rusfor.1096.t:0 "The Russians Give an Offer for Co-Prosperity Membership"
 rusfor.1096.d:0 "Following the reunification of Russia with the Transmur government, and thus the end of our control of the region, curiously the [FROM.GetNameDef] have approached us with the offer of an alliance. The primary terms are that we would relinquish any and all claims to the territories they rightfully control, including the Transmur-Primorsk region, while this would certainly secure the Russian flank for the forseeable future and potentially give us even greater economic dividends than the Transamurian regime, many of our general staff are ambievalent as to whether it is worth giving up our ambitions over the far east."
 rusfor.1096.a:0 "Transamur's time is over, let us unite against common foes"
 rusfor.1096.b:0 "The Russians?, in OUR alliance?"
 
-rusfor.1097.t:0 "The Japanese welcome us"
+rusfor.1097.t:0 "The Japanese Welcome Us"
 rusfor.1097.d:0 "Facing the implicit threat of Russian military force and already having lost control of our rightful Transamurian territory, Japan has seen fit to swallow their pride and accept our aid against common foes."
 rusfor.1097.a:0 "Good Choice"
 
-rusfor.1098.t:0 "The Japanese rebuff our advances"
+rusfor.1098.t:0 "The Japanese Rebuff our Advances"
 rusfor.1098.d:0 "Facing the implicit threat of Russian military force and already having lost control of our rightful Transamurian territory, Japan has seemingly decided to regardless stubbornly reject our offers of alliance."
 rusfor.1098.a:0 "That shall going down in the history books as a fatal mistake"
+
+rusfor.1110.t:0 "Russia Seizes [654.GetName] and [811.GetName]"
+rusfor.1110.d:0 "Our government has awoken this morning to the news that Russian troops have crossed the border and taken control of Ulala and Minusinsk, previously annexed by von Ungern-Sternberg. How shall answer this insult?"
+rusfor.1110.a:0 "Bow down to the Russians..."
+rusfor.1110.b:0 "Send a written letter to politely refuse their offer."
+
+rusfor.1111.t:0 "Mongolia Surrenders!"
+rusfor.1111.d:0 "The Mongols bowed down and accepted our rightful claim on the Russian lands they possessed, we are now in possession of Northern Mongolia once more!"
+rusfor.1111.a:0 "Great!"
+
+rusfor.1112.t:0 "Border Clashes in Tuva!"
+rusfor.1112.d:0 "We have just received a response from the [MON.GetAdjective] government, refusing to surrender Tuva and presenting a series of flimsy excuses as to why the state is rightfully [MON.GetAdjective] territory. They have mobilised, and clashes have already begun between [MON.GetAdjective] and [ROOT.GetAdjective] troops."
+rusfor.1112.a:0 "We shall crush them! Onwards, onto Urga!"
 
 rusfor.1113.t:0 "Russia Seizes Tuva"
 rusfor.1113.d:0 "Our government has awoken this morning to the news that Russian troops have crossed the border and taken control of Tuva and Khem Beldyr. How shall answer this insult?"
@@ -4900,10 +4870,6 @@ russia.450.a:0 "The enemies of the people have nowhere to hide!"
 
 ### Senate Events ###
 
-rusd.142.t:0 "Pogrom"
-rusd.142.d:0 "Today Blackhundredist Paramilitaries has conducted another Pogrom that happened in our country."
-rusd.142.a:0 "Everything for the country!"
-
 rusd.143.t:0 "Avenge For 1905"
 rusd.143.d:0 "The very idea of liberalism, democracy, republicanism is a poison, that envenoms the lives of Russian citizens. We are an Orthodox state, led by our mighty Tsar and blessed by God. The distemper has pervaded the mind of Russians with the nonsense that they can rule themselves. The ones have overthrown the Tsar, the others have killed them. Everything has led to Revolution, Civil War, blood and vain 15 years of republican rule. But now it is time to end republicanism in Russia. We shall now protect the Russian monarchy once and for all."
 rusd.143.a:0 "Long Live Russia! One and Indivisible!"
@@ -5425,7 +5391,7 @@ rusd.180.a:0 "Long live the Republic!"
 
 rusd.181.t:0 "Sergei Rachmaninoff Returns to Russia"
 rusd.181.d:0 "Sergei Rachmaninoff, one of the most prolific Russian-born composers of the 20th century has finally returned to his ancestral homeland after almost 20 years of self imposed exile. The gifted pianist and romantic composer had fled Russia during the Russian Revolution, settling in New York City with his family after Social-Revolutionaries seized his personal estate as communal property; leading to Rachmaninoff leaving Russia and vowing never to return.\n\n With the Civil war in full swing, Rachmaninoff and his family have had many brushes with violence; with Rachmaninoff himself narrowly managing to escape Red Guard militias after they advanced on the Cincinnati Symphony Orchestra while he was conducting his 3rd Symphony, only managing to escape due to red-guard members mistaking him for a Bolshevik émigré.\n\n The horrific violence that grips his adoptive home of America; coupled with a lucrative offer from a Petrograd based recording company and promise of a formal apology from SR representatives for the seizure of his property has moved Rachmaninoff to finally end his exile and return to his ancestral home of Russia.\n\n While Rachmaninoff had made himself at home in America, gradually gaining solvency and adjusting to the warmer climate in the United States (which was more suitable to him due to a myriad of health issues); he will now bid America adieu and continue on with his musical endeavors in the concert halls of Moscow and Petrograd; and while the aging composer still holds out hope that he can return to America once the violence ceases, the chances such an occurrence grow slimmer by the day."
-rusd.181.a:0 "While he has returned under tragic circumstances; we welcome him home."
+rusd.181.a:0 "While he has returned under tragic circumstances, we welcome him home."
 
 russia.3678.t:0 "Cosmism Spreads in Popularity"
 russia.3678.d:0 "Russia is a land full of radicalism, creativity, and an ever-broadening concept of the human experience, making our wild nation home to all sorts of strange and varied movements. From the Social Futurists to the God-Builders, many of these movements have tied themselves to Russian Socialism and Bolshevism, but one movement in particular has been gaining popularity across the state. \n\nCalled Cosmism, this new philosophical and cultural wave emerged at the turn of the 19th century, and has since expanded and diversified as we have marched through the decades. Based on notions tied to Transhumanism, Interplanetary Travel, and Cosmological Evolution, Cosmism was first inspired by Science Fiction authors such as Jules Vernse and H.G Wells, but has since evolved into a true movement. \n\nWith the early forefathers of this new wave of thought such as Nikolai Fyodorovich Fyodorov, Nikolai Kibalchich, and Konstantin Tsiolkovsky all having passed on, the Russian Cosmists have floated around, tying themselves to different Socialist groups such as the Prolekult and the Left-Eurasianists, taking on new ideas along the way. For instance, Alexander Bogdanov - Bolshevik theorist and physician - has long tinkered with the idea of using blood transfusions in order to extend human life expectancy while the followers of the late Tsiolkovsky instead push for interplanetary travel, stellar exploration, and cosmic colonization. Others, like Alexander Chizevsky have dabbled with the idea of Heliobiology, or studying how the Sun and its solar rays impact biology and evolution here on Earth, while some have left the physical realm entirely to theorize on the beyond, such as Vladimir Vernadsky and his notion of the Noosphere - a a new geological layer formed from human thought and evolved rationality called the Sphere of Reason that represents the highest form of biospheric development. Though wildly varied and differing in their views and goals, these strange Cosmist groups and figures all share one foundational idea - that a purely Socialist society is the only type of society that can provide the necessary structures needed for these ideas to flourish and carry humanity onwards to the next step of our evolution."
@@ -6509,6 +6475,15 @@ RUS_Savinkov_Flag_Changer:0 "Choose Our Flag"
 
 RUS_brestlitovsk:0 "Treaty of Minsk"
 
+#####Helicopterrus
+
+russia.3000.t:0 "Vertical Developments"
+russia.3000.d:0 "Utilizing economic ties with domestic businesses and military contractors, we have been able to develop experimental ‘helicopter’ prototypes for the armies of Russia and her allies. Named the TsAGI A-4, these unique aerial vehicles were developed using the work of Spanish aviation pioneer Juan de la Cierva, and are capable of vertical take-off and landing, making them perfect for use in rough terrain. Though expensive and fragile, we have been able to send a few models to the major allies, allowing our armies and the armies of our friends to utilize this unique technology to further our ambitions. With our growing airfleet also using autogyros, rotabuggies, and other novel transports devised by crack scientists and our allied lackeys, we shall be able to ferry our populace, our goods, and our troops all around the world without issue or delay while also delivering devastating payloads at a moment’s notice. Just be careful not to crash any, for we only have a fragile few, and they are currently very temperamental and very hard to replace."
+russia.3000.a:0 "Onwards and upwards!"
+
+russia.3001.t:0 "Experimental Technologies from the Russian Bear"
+russia.3001.d:0 "Seeking to put their recent technological breakthroughs to the test, Russian aeronautical engineers working off Spanish and Anglo-American designs came together to create new military hardware to be tested on the frontlines here at the fringes of the Russian sphere. The centerpiece invention of these new shipments is the TsAGI A-4. These ‘hoverflies’ are unique aircraft that can take off and land vertically, and have been dubbed helicopters or advanced autogyros by the initial designers. Primarily designed to quickly ferry supplies and precious cargo in and out of rough areas and terrain, some of these helicopters have also been out-fitted with weaponry, functioning as basic light aerial gunships and bombers while also being adept at recon and supply. Looking more like something out of Da Vinci’s sketchbooks and less like a real war machine, we shall give these new helicopters and the other tech the Russians sent us a thorough testing against the varied enemies of our alliance."
+russia.3001.a:0 "We will ensure these are put to good use."
 
 
 ####Drozdovsky stuff
@@ -7097,8 +7072,12 @@ RUS_buryat_autonomy:0 "Autonomous State of Buryat-Mongolia"
 
 RUS_Conduct_Border_Exercize:0 "Conduct a Border Exercise"
 RUS_Speech_About_Peaceful_Unification:0 "Hold a Speech about Peaceful Unification"
+RUS_Speech_About_Peaceful_Unification_take_three: "You may still take this decision up to §Ythree§! times.\n"
+RUS_Speech_About_Peaceful_Unification_amount_taken: "You have taken the decision §Y[?ROOT.RUS_Speech_About_Peaceful_Unification_amount_var] times§! thus far.\n\n"
+RUS_Speech_About_Peaceful_Unification_warning: "§YNOTE:§!\n§gIf we will find ourselves in a §Roffensive war§! against §C[TRM.GetName]§! we will face debuffs.\n§RThe more times you take the decision - the more serious is the debuff§!.§!"
 
 RUS_negotiating_siberia:0 "Getting ready for Siberian War"
+RUS_Demand_Minusinsk_Ulala: "Demand Minusinsk & Ulala"
 
 ### General Staff rework ###
 unlock_special_cos_minister:0 "Unlocks special §YChief of Staff§! minister:\n"

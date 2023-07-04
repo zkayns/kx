@@ -64,7 +64,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 2
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		available_if_capitulated = yes
 		prerequisite = { focus = CEA_yong_dictator }
 		ai_will_do = {
@@ -91,7 +91,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 2
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		available_if_capitulated = yes
 		prerequisite = { focus = CEA_yong_dictator }
 		ai_will_do = {
@@ -115,7 +115,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_rally_people }
 		prerequisite = { focus = CEA_opening_consolidation }
 		ai_will_do = {
@@ -145,7 +145,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = { 
 			has_country_flag = CEA_GERMAN_LARP 
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		prerequisite = { focus = CEA_situation_in_cameroon }
 		mutually_exclusive = { focus = CEA_a_french_leader }
@@ -177,7 +177,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			has_completed_focus = CEA_a_mighty_coronation
 		}
 		prerequisite = { focus = CEA_a_german_leader }
@@ -202,7 +202,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_army_with_state }
 		ai_will_do = {
 			factor = 1
@@ -231,7 +231,7 @@ focus_tree = {
 		y = 3
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_prussian_constitution }
 		ai_will_do = {
 			factor = 1
@@ -253,7 +253,7 @@ focus_tree = {
 		y = 4
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_our_german_roots }
 		prerequisite = { focus = CEA_bokassa_reform_plan }
 		ai_will_do = {
@@ -282,7 +282,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = { 
 			has_country_flag = CEA_FRENCH_LARP
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		prerequisite = { focus = CEA_situation_in_cameroon }
 		mutually_exclusive = { focus = CEA_a_german_leader }
@@ -315,7 +315,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			has_completed_focus = CEA_a_mighty_coronation
 		}
 		prerequisite = { focus = CEA_a_french_leader }
@@ -340,7 +340,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_a_proper_empire }
 		ai_will_do = {
 			factor = 1
@@ -369,7 +369,7 @@ focus_tree = {
 		y = 3
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_first_consul }
 		ai_will_do = {
 			factor = 1
@@ -391,7 +391,7 @@ focus_tree = {
 		y = 4
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_french_culture }
 		prerequisite = { focus = CEA_bokassa_reform_plan }
 		ai_will_do = {
@@ -424,7 +424,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = { 
 			has_country_flag = CEA_EMPIRE_TIME
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		select_effect = {
 			country_event = {
@@ -453,7 +453,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_a_mighty_coronation }
 		ai_will_do = {
 			factor = 1
@@ -485,7 +485,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_all_under_MESEAN }
 		ai_will_do = {
 			factor = 1
@@ -540,7 +540,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			has_completed_focus = CEA_a_mighty_coronation
 		}
 		prerequisite = { focus = CEA_next_great_conflict }
@@ -565,7 +565,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			has_completed_focus = CEA_a_mighty_coronation
 		}
 		prerequisite = { focus = CEA_next_great_conflict }
@@ -591,7 +591,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_intensify_border_patrols }
 		prerequisite = { focus = CEA_prepare_war_plans }
 		ai_will_do = {
@@ -647,7 +647,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			NOT = {
 				country_exists = CMR
 			}
@@ -702,7 +702,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		prerequisite = { focus = CEA_strike_first }
 		mutually_exclusive = { focus = CEA_lead_the_askari_struggle }
@@ -728,7 +728,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			NOT = {
 				country_exists = CMR
 			}
@@ -786,7 +786,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			NOT = {
 				country_exists = CMR
 			}
@@ -820,7 +820,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			has_completed_focus = CEA_a_mighty_coronation
 		}
 		prerequisite = { focus = CEA_situation_in_cameroon }
@@ -848,7 +848,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			has_country_flag = CEA_kept_cannibalism 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 		}
 		prerequisite = { focus = CEA_fate_of_our_protein_supply }
 		mutually_exclusive = { focus = CEA_continue_cannibalism }
@@ -872,7 +872,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_abandon_cannibalism }
 		ai_will_do = {
 			factor = 1
@@ -894,7 +894,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_a_new_protein_supply }
 		mutually_exclusive = { focus = CEA_beef }
 		ai_will_do = {
@@ -917,7 +917,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_a_new_protein_supply }
 		mutually_exclusive = { focus = CEA_chicken }
 		ai_will_do = {
@@ -940,7 +940,7 @@ focus_tree = {
 		y = 3
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_chicken focus = CEA_beef }
 		ai_will_do = {
 			factor = 1
@@ -975,7 +975,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = { 
 			has_country_flag = CEA_kept_cannibalism
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		prerequisite = { focus = CEA_fate_of_our_protein_supply }
 		mutually_exclusive = { focus = CEA_abandon_cannibalism }
@@ -1003,7 +1003,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = { 
 			has_country_flag = CEA_the_secret
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		prerequisite = { focus = CEA_continue_cannibalism }
 		mutually_exclusive = { focus = CEA_embrace_cannibalism }
@@ -1024,7 +1024,7 @@ focus_tree = {
 		y = 3
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_what_you_dont_know_cant_hurt_you }
 		prerequisite = { focus = CEA_expand_pork_farms }
 		ai_will_do = {
@@ -1060,7 +1060,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = { 
 			has_country_flag = CEA_embraced_cannibalism
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		prerequisite = { focus = CEA_continue_cannibalism }
 		mutually_exclusive = { focus = CEA_what_you_dont_know_cant_hurt_you }
@@ -1081,7 +1081,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_what_you_dont_know_cant_hurt_you focus = CEA_embrace_cannibalism }
 		ai_will_do = {
 			factor = 1
@@ -1112,7 +1112,7 @@ focus_tree = {
 		y = 3
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_embrace_cannibalism }
 		prerequisite = { focus = CEA_expand_pork_farms }
 		ai_will_do = {
@@ -1151,7 +1151,7 @@ focus_tree = {
 				}
 			}
 			is_in_faction_with = NFA
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_fall_of_algiers"
@@ -1181,7 +1181,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 			has_country_flag = CEA_french_forces
 		}
 		prerequisite = { focus = CEA_fall_of_algiers }
@@ -1206,7 +1206,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 			has_country_flag = CEA_french_forces
 		}
 		prerequisite = { focus = CEA_fall_of_algiers }
@@ -1233,7 +1233,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 			has_country_flag = CEA_french_forces
 			has_country_flag = CEA_algiers_retaken
 		}
@@ -1262,7 +1262,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 			has_country_flag = CEA_french_forces
 			custom_trigger_tooltip = {
 				tooltip = CEA_algiers_retaken
@@ -1293,7 +1293,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 			has_country_flag = CEA_assumed_control_flag
 		}
 		prerequisite = { focus = CEA_retake_algiers }
@@ -1316,7 +1316,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat 
+			CEA_has_bokassa = yes 
 			owns_state = 16
 		}
 		prerequisite = { focus = CEA_operation_hundred_days }
@@ -1343,7 +1343,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_coronation_in_paris }
 		ai_will_do = {
 			factor = 1
@@ -1373,7 +1373,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_coronation_in_paris }
 		ai_will_do = {
 			factor = 1
@@ -1403,7 +1403,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_coronation_in_paris }
 		ai_will_do = {
 			factor = 1
@@ -1422,7 +1422,7 @@ focus_tree = {
 		y = 3
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_napoleonic_restoration }
 		prerequisite = { focus = CEA_a_black_emperor }
 		ai_will_do = {
@@ -1454,7 +1454,7 @@ focus_tree = {
 		cost = 8
 		available_if_capitulated = yes
 		available = { 
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 			has_completed_focus = CEA_napoleonic_restoration
 		}
 		prerequisite = { focus = CEA_operation_hundred_days }
@@ -1478,7 +1478,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_what_napoleon_couldnt_do }
 		ai_will_do = {
 			factor = 1
@@ -1500,7 +1500,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_what_napoleon_couldnt_do }
 		ai_will_do = {
 			factor = 1
@@ -1562,7 +1562,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_what_napoleon_couldnt_do }
 		ai_will_do = {
 			factor = 1
@@ -1600,7 +1600,7 @@ focus_tree = {
 		y = 3
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_end_the_eagle }
 		prerequisite = { focus = CEA_strike_austria }
 		ai_will_do = {
@@ -1663,7 +1663,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_operation_hundred_days }
 		ai_will_do = {
 			factor = 1
@@ -1684,7 +1684,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = { 
 			has_completed_focus = CEA_a_new_old_empire
-			has_government = paternal_autocrat
+			CEA_has_bokassa = yes
 		}
 		prerequisite = { focus = CEA_new_napoleonic_army }
 		ai_will_do = {
@@ -1727,7 +1727,7 @@ focus_tree = {
 		y = 4
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_crush_the_reds }
 		ai_will_do = {
 			factor = 1
@@ -1746,7 +1746,7 @@ focus_tree = {
 		y = 5
 		cost = 8
 		available_if_capitulated = yes
-		available = { has_government = paternal_autocrat }
+		available = { CEA_has_bokassa = yes }
 		prerequisite = { focus = CEA_russias_final_breath }
 		prerequisite = { focus = CEA_a_new_old_empire }
 		prerequisite = { focus = CEA_french_pork_farms }
@@ -2098,7 +2098,6 @@ focus_tree = {
 			always = no
 		}
 		bypass = {
-			always = no
 			owns_state = 16 #Paris
 		}
 		completion_reward = {
@@ -2391,10 +2390,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_accept_german_throne"
-			country_event = {
-				id = cea.32
-				days = 1
-			}
+			custom_effect_tooltip = CEA_bokassa_kaiser_tt
 		}
 	}
 	
@@ -2626,7 +2622,7 @@ focus_tree = {
 			add_ideas = CEA_the_conquering_kaiser
 			hidden_effect = {
 				country_event = {
-					id = cea.34
+					id = cea.35
 					days = 70
 				}
 			}
@@ -2711,6 +2707,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_into_the_french_congo"
+			every_state = {
+			limit = { is_core_of = KOG }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = TKE }
+			add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = KOG
@@ -2739,6 +2743,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_crush_gabon"
+			every_state = {
+			limit = { is_core_of = GAB }
+			add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = GAB
@@ -2769,6 +2777,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_riches_of_the_congo"
+			every_state = {
+			limit = { is_core_of = COG }
+			add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = COG
@@ -2812,8 +2824,23 @@ focus_tree = {
 				is_neighbor_of = UGA
 			}
 		}
+		bypass = {
+			NOT = {
+			country_exists = KEN
+			country_exists = KIK
+			country_exists = UGA
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_secure_kenya_uganda"
+			every_state = {
+			limit = { is_core_of = KEN }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_claimed_by = KEN }
+			add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = KEN
@@ -2846,8 +2873,25 @@ focus_tree = {
 			has_war = no
 			is_neighbor_of = TZN
 		}
+		bypass = {
+			NOT = {
+			country_exists = TZN
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_crush_the_madman"
+			every_state = {
+			limit = { is_core_of = TZN }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = RWA }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = BRD }
+			add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = RWA
@@ -2883,6 +2927,10 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_secure_angola"
+			every_state = {
+			limit = { is_core_of = ANG }
+			add_claim_by = CEA
+			}
 			owner = {
 				create_wargoal = {
 					type = annex_everything
@@ -2908,6 +2956,13 @@ focus_tree = {
 			has_war = no
 			is_neighbor_of = NGR
 		}
+		bypass = {
+			NOT = {
+			country_exists = NGR
+			country_exists = HAU
+			country_exists = KBR
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_liberate_nigeria"
 			create_wargoal = {
@@ -2921,6 +2976,10 @@ focus_tree = {
 			create_wargoal = {
 				type = annex_everything
 				target = KBR
+			}
+			every_state = {
+			limit = { is_core_of = NGR }
+			add_claim_by = CEA
 			}
 		}
 	}
@@ -2944,8 +3003,19 @@ focus_tree = {
 				country_exists = NGR
 			}
 		}
+		bypass = {
+			NOT = {
+			country_exists = DAH
+			country_exists = TOG
+			country_exists = GHA
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_west_africa_under_one_banner"
+			every_state = {
+			limit = { is_core_of = CIV }
+			add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = DAH
@@ -2980,8 +3050,53 @@ focus_tree = {
 				country_exists = NGR
 			}
 		}
+		bypass = {
+			NOT = {
+			country_exists = NFA
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_end_the_french"
+			every_state = {
+			limit = { is_core_of = ALG }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = MAL }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = MRT }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = WAD }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = MAL }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = NER }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = SEN }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = GNA }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = SIE }
+			add_claim_by = CEA
+			}
+			every_state = {
+			limit = { is_core_of = BFA }
+			add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = NFA
@@ -4554,57 +4669,154 @@ focus_tree = {
 				type = annex_everything
 				target = NFA
 			}
+			every_state = {
+				limit = {
+					is_core_of = CMR
+				}
+				add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = CMR
+			}
+			every_state = {
+				limit = {
+					is_core_of = WAD
+				}
+				add_claim_by = CEA
 			}
 			create_wargoal = {
 				type = annex_everything
 				target = WAD
 			}
+			every_state = {
+				limit = {
+					is_core_of = NER
+				}
+				add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = NER
+			}
+			every_state = {
+				limit = {
+					is_core_of = MAL
+				}
+				add_claim_by = CEA
 			}
 			create_wargoal = {
 				type = annex_everything
 				target = MAL
 			}
+			every_state = {
+				limit = {
+					is_core_of = ALG
+				}
+				add_claim_by = CEA
+			}
+			every_state = {
+				limit = {
+					is_core_of = TUN
+				}
+				add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = ALG
+			}
+			every_state = {
+				limit = {
+					is_core_of = MRT
+				}
+				add_claim_by = CEA
 			}
 			create_wargoal = {
 				type = annex_everything
 				target = MRT
 			}
+			every_state = {
+				limit = {
+					is_core_of = BFA
+				}
+				add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = BFA
+			}
+			every_state = {
+				limit = {
+					is_core_of = MOR
+				}
+				add_claim_by = CEA
 			}
 			create_wargoal = {
 				type = annex_everything
 				target = MOR
 			}
+			every_state = {
+				limit = {
+					is_core_of = HAU
+				}
+				add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = HAU
+			}
+			every_state = {
+				limit = {
+					is_core_of = KBR
+				}
+				add_claim_by = CEA
 			}
 			create_wargoal = {
 				type = annex_everything
 				target = KBR
 			}
+			every_state = {
+				limit = {
+					is_core_of = NGR
+				}
+				add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = NGR
+			}
+			every_state = {
+				limit = {
+					is_core_of = LBA
+				}
+				add_claim_by = CEA
 			}
 			create_wargoal = {
 				type = annex_everything
 				target = LBA
 			}
+			every_state = {
+				limit = {
+					is_core_of = TRP
+				}
+				add_claim_by = CEA
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = TRP
+			}
+			every_state = {
+				limit = {
+					is_core_of = SEN
+				}
+				add_claim_by = CEA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SEN
+			}
+			hidden_effect = {
+			add_state_claim = 450
 			}
 		}
 	}

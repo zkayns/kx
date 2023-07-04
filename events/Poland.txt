@@ -485,6 +485,7 @@ country_event = { # The Regency and Sejm in Danger"
 			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
+		set_country_flag = POL_ready_to_go_foreign
 		hidden_effect = {
 			unlock_national_focus = POL_the_great_debate
 			add_popularity = {
@@ -591,6 +592,7 @@ country_event = { # Chaos in the Countryside
 			ruling_party = totalist
 			elections_allowed = no
 		}
+		set_country_flag = POL_ready_to_go_foreign
 		hidden_effect = {
 			unlock_national_focus = POL_the_great_debate
 			set_party_name = {
@@ -689,6 +691,7 @@ country_event = { # Chaos in the Countryside
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
 		}
+		set_country_flag = POL_ready_to_go_foreign
 		hidden_effect = {
 			set_cosmetic_tag = POL_REPUBLIC
 			unlock_national_focus = POL_the_great_debate
@@ -765,7 +768,7 @@ country_event = { # Chaos in the Countryside
 			name = "Rada Odrodzenia Polski"
 			picture = "gfx/leaders/POL/Portrait_POL_Rada_Odrodzenia_Polski.png"
 			expire = "1965.1.1"
-			ideology = fundementalism_subtype
+			ideology = militarism_subtype
 		}
 		hidden_effect = {
 			unlock_national_focus = POL_the_great_debate
@@ -1290,7 +1293,6 @@ country_event = { # The decision of Mendog
 				}
 			}
 		}
-		remove_ideas = POL_austro_german_squabbles
 		set_cosmetic_tag = POL_PLC
 		hidden_effect = {
 			GER = { add_to_faction = ROOT }
@@ -1312,6 +1314,7 @@ country_event = { # The decision of Mendog
 			remove_ideas = {
 				POL_eternal_regency
 				POL_german_industry
+                                POL_austro_german_squabbles
 			}
 			add_ideas = {
 				PLC_scattered_bureaucracy_idea
@@ -4089,13 +4092,15 @@ country_event = { # Galician Demands - Yes
 				transfer_troops = no
 			}
 			add_state_core = 88
+			add_state_core = 1314
+			add_state_core = 1319
 			add_state_core = 89
 			add_state_core = 91
-						add_state_core = 1124
+			add_state_core = 1124
 			add_state_core = 1125
-						add_state_core = 1126
+			add_state_core = 1126
 			add_state_core = 1127
-						add_state_core = 1140
+			add_state_core = 1140
 		}
 		else = {
 			FROM = {
@@ -4103,6 +4108,8 @@ country_event = { # Galician Demands - Yes
 					limit = {
 						OR = {
 							state = 88
+							state = 1314
+							state = 1319
 							state = 89
 							state = 91
 							state = 1124
@@ -4239,14 +4246,16 @@ country_event = { # Galician Demands - No
 			can_declare_war_on = 91.owner
 		}
 		add_state_core = 88
+		add_state_core = 1314
+		add_state_core = 1319
 		add_state_core = 89
 		add_state_core = 91
 		add_state_core = 91
-				add_state_core = 1124
+		add_state_core = 1124
 		add_state_core = 1125
-				add_state_core = 1126
-	add_state_core = 1127
-				add_state_core = 1140
+		add_state_core = 1126
+		add_state_core = 1127
+		add_state_core = 1140
 		declare_war_on = {
 			target = GAL
 			type = annex_everything
@@ -5336,13 +5345,18 @@ country_event = { ## Poles are goin' Syndie REEEEEE
 
 	option = { # return or die
 		name = poland.227.a
+		trigger = {
+			POL = {
+				is_ai = yes
+			}
+		}
 		ai_chance = { 
 			factor = 25 
 			modifier = {
-				factor = -20
-				POL = {
-					is_ai = no
-			
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_FALSE
 				}
 			}
 		}
@@ -5358,6 +5372,13 @@ country_event = { ## Poles are goin' Syndie REEEEEE
 		name = poland.227.b
 		ai_chance = { 
 			factor = 75
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_TRUE
+				}
+			}
 		}
 		add_political_power = 10
 		if = {
@@ -5503,19 +5524,24 @@ country_event = { ## Poles are goin' Nat REEEEEE
 
 	option = { # return or die
 		name = poland.2270.a
+		trigger = {
+			POL = {
+				is_ai = yes
+			}
+		}
 		ai_chance = { 
 			factor = 50 
 			modifier = {
-				factor = -40
-				POL = {
-					is_ai = no
-			
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_FALSE
 				}
 			}
 		}
 		FROM = {
 			country_event = {
-				id = poland.228
+				id = poland.2280
 				days = 1
 			}
 		}
@@ -5525,6 +5551,13 @@ country_event = { ## Poles are goin' Nat REEEEEE
 		name = poland.2270.b
 		ai_chance = { 
 			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_TRUE
+				}
+			}
 		}
 		add_political_power = 10
 		if = {
@@ -5586,7 +5619,7 @@ country_event = { # Germany no bully
 		ai_chance = { factor = 70 }
 		FROM = {
 			country_event = {
-				id = poland.229
+				id = poland.2290
 				days = 1
 			}
 		}
@@ -5611,7 +5644,7 @@ country_event = { # Germany no bully
 	}
 }
 
-country_event = { # Syndie Poles are fighting
+country_event = { # Nat Poles are fighting
 	id = poland.2290
 	immediate = { log = "[GetDateText]: [Root.GetName]: event poland.2290" }
 	title = poland.2290.t
@@ -5656,6 +5689,7 @@ country_event = { # Poland gives in
 	option = { # go us
 		name = poland.2301.a
 		add_political_power = 50
+		add_to_faction = FROM
 	}
 }
 
@@ -5710,32 +5744,8 @@ country_event = { # Transition to a monarchy
 			election_frequency = 48
 			elections_allowed = yes
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					GER = {
-						has_country_flag = POL_troller
-					}
-				}
-				POL_setup_fryderyk = yes
-				add_stability = 0.05
-				else = {
-					POL_setup_karol = yes
-				}
-			}
-			add_popularity = {
-				ideology = paternal_autocrat
-				popularity = 0.20
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
+		mark_focus_tree_layout_dirty = yes
 		remove_all_ministers = yes
-		add_ideas = {
-			POL_Archbishop_A_Kakowski_hog_pau
-			POL_Jozef_Targowski_for_ade
-			POL_Andrzej_Wierzbicki_eco_ade
-			POL_Stanislaw_Bukowiecki_sec_ade
-		}
 		reverse_add_opinion_modifier = {
 			target = FROM
 			modifier = KR_close_allies
@@ -5886,6 +5896,8 @@ country_event = { #buy west galicia, AUS pov
 				add_ideas = POL_austrian_purchase_small
 				transfer_state = 1124
 				transfer_state = 1125
+				transfer_state = 1314
+				transfer_state = 1319
 				transfer_state = 88
 			}
 		}
@@ -5986,6 +5998,8 @@ country_event = { #buy galicia, AUS pov
 				transfer_state = 1124
 				transfer_state = 1125
 				transfer_state = 88
+				transfer_state = 1314
+				transfer_state = 1319
 			}
 		}
 		POL = { country_event = poland.404 }
@@ -6042,6 +6056,8 @@ country_event = { #Galicia sold
 		}
 		hidden_effect = {
 			add_state_core = 88
+			add_state_core = 1314
+			add_state_core = 1319
 			add_state_core = 89
 			add_state_core = 91
 			add_state_core = 1124
@@ -6065,6 +6081,8 @@ country_event = { #West Galicia sold
 		name = poland.404.a
 		add_ideas = POL_austrian_purchase_small
 		transfer_state = 1124
+		transfer_state = 1314
+		transfer_state = 1319
 		transfer_state = 1125
 		transfer_state = 88
 		hidden_effect = {
@@ -6590,16 +6608,38 @@ country_event = {# Fate of German Relations
 	
 	option = { #Independence Later
 		name = poland.463.b
-		ai_chance = {
-			factor = 25
+		ai_chance = { 
+			factor = 25 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_NEUTRALITY }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_UKRAINE }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_AUSTRIA }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_RUSSIA }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_ENTENTE }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_INTERNATIONALE }
+				}
+			}
 		}
 		set_country_flag = POL_WK_Independence
 	}
 	
 	option = { #Stay with Germany
 		name = poland.463.c
-		ai_chance = {
-			factor = 50
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_NEUTRALITY }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_UKRAINE }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_AUSTRIA }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_RUSSIA }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_ENTENTE }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_INTERNATIONALE }
+				}
+			}
 		}
 		set_country_flag = POL_ready_to_go_foreign
 	}
@@ -6620,8 +6660,14 @@ country_event = {# Poland Defies us!
 			modifier = {
 				factor = -40
 				POL = {
-					is_ai = no
-			
+					is_ai = no			
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_FALSE
 				}
 			}
 		}
@@ -6635,14 +6681,31 @@ country_event = {# Poland Defies us!
 		name = poland.464.b
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_TRUE
+				}
+			}
 		}
-		
+		embargo_FROM = yes
 	}
 	
 	option = { #Eh
 		name = poland.464.c
+		trigger = {
+			FROM = { has_socialist_government = no }
+		}
 		ai_chance = {
 			factor = 30
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_TRUE
+				}
+			}
 		}
 		POL = {
 			country_event = {
@@ -6666,6 +6729,17 @@ country_event = {# Germany Demands we stay in the RP
 		name = poland.4640.a
 		ai_chance = { 
 			factor = 50 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_NEUTRALITY }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_UKRAINE }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_AUSTRIA }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_RUSSIA }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_ENTENTE }
+					has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_INTERNATIONALE }
+				}
+			}
 		}
 		GER = {
 			add_to_faction = POL
@@ -6675,7 +6749,14 @@ country_event = {# Germany Demands we stay in the RP
 	option = { #Eh
 		name = poland.4640.b
 		ai_chance = {
-			factor = 20
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_foreign_policy
+					option = POL_FOREIGN_POLICY_REICHSPAKT
+				}
+			}
 		}
 		GER = {
 			country_event = {
@@ -6703,7 +6784,13 @@ country_event = {# Poland Refuses to stay in the RP
 				factor = -40
 				POL = {
 					is_ai = no
-			
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_FALSE
 				}
 			}
 		}
@@ -6717,6 +6804,13 @@ country_event = {# Poland Refuses to stay in the RP
 		name = poland.4641.b
 		ai_chance = {
 			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_TRUE
+				}
+			}
 		}
 		
 	}
@@ -6936,6 +7030,13 @@ country_event = {# Poland Declares Independence
 		name = poland.471.a
 		ai_chance = {
 			factor = 75
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_FALSE
+				}
+			}
 		}
 		declare_war_on = {
 			target = POL
@@ -6947,6 +7048,13 @@ country_event = {# Poland Declares Independence
 		name = poland.471.a
 		ai_chance = {
 			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = POL_german_internvation
+					option = POL_GERMAN_INTERVENTION_TRUE
+				}
+			}
 		}
 		POL = {
 			give_military_access = GER
@@ -7046,7 +7154,7 @@ country_event = {
 			desc = "PPOLITICS_ADAM_DOBOSZYNSKI_DESC"
 			picture = "gfx/leaders/GAL/Portrait_GAL_Adam_Doboszynski.png"
 			expire = "1965.1.1"
-			ideology = fundementalism_subtype
+			ideology = natpop_neo_feudalism_subtype
 		}
 	}
 
@@ -7215,7 +7323,7 @@ country_event = {
 			name = "Pankracy"
 			picture = "gfx/leaders/POL/Portrait_POL_Pankracy.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = anarcho_bolshevism_subtype 
 		}
 		add_popularity = {
 			ideology = totalist
@@ -7263,100 +7371,5 @@ country_event = {
 	option = {
 		name = poland.313.a
 		add_stability = 0.01
-	}
-
-	option = {
-		name = poland.313.b
-		hidden_effect = {
-			country_event = {
-				id = poland.314
-				days = 3
-			}
-			drop_cosmetic_tag = yes
-		}
-	}
-}
-	 
-country_event = { 
-	id = poland.314
-	immediate = { log = "[GetDateText]: [Root.GetName]: event poland.314" }
-	title = poland.314.t
-	desc = poland.314.d
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = poland.314.a
-		set_politics = {
-			ruling_party = authoritarian_democrat
-			elections_allowed = no
-		}
-		hidden_effect = {
-			set_country_flag = POL_Temporal_Rift
-			POL_temporal_rift = yes
-			set_cosmetic_tag = POL_FUTURE
-			ROOT = {
-				transfer_state = 1127
-				transfer_state = 1126
-				transfer_state = 1125
-				transfer_state = 88
-				transfer_state = 1124
-				transfer_state = 67
-				transfer_state = 66
-				transfer_state = 86
-				transfer_state = 68
-				transfer_state = 63
-				transfer_state = 776
-				transfer_state = 777
-				add_state_core = 1127
-				add_state_core = 1126
-				add_state_core = 1125
-				add_state_core = 88
-				add_state_core = 1124
-				add_state_core = 67
-				add_state_core = 66
-				add_state_core = 86
-				add_state_core = 68
-				add_state_core = 63
-				add_state_core = 776
-				add_state_core = 777
-			}
-		}
-	}
-}
-
-country_event = { 
-	id = poland.315
-	immediate = { log = "[GetDateText]: [Root.GetName]: event poland.315" }
-	title = poland.315.t
-	desc = poland.315.d
-	picture = NOR_street_fighting
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = poland.315.a
-		swap_ideas = {
-			remove_idea = POL_When_Vistula_Run_Red_idea
-			add_idea = POL_When_Vistula_Run_Red_2_idea
-		}
-		add_war_support = -0.04
-		add_manpower = -1943
-	}
-}
-
-country_event = { 
-	id = poland.316
-	immediate = { log = "[GetDateText]: [Root.GetName]: event poland.316" }
-	title = poland.316.t
-	desc = poland.316.d
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = poland.316.a
-		create_country_leader = {
-			name = "Mateusz Morawiecki"
-			picture = "gfx/leaders/POL/Portrait_POL_Mateusz_Morawiecki.png"
-			expire = "1965.1.1"
-			ideology = oligarchy_subtype 
-		}
 	}
 }

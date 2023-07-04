@@ -430,15 +430,6 @@ DKB_jesse_RUS_national_populist:0 "Russian National People's State"
 DKB_jesse_RUS_national_populist_ADJ:0 "Russian"
 DKB_jesse_RUS_national_populist_DEF:0 "the Russian National People's State"
 
-DKB_Novorussia_authoritarian_democrat:0 "Novorossiya"
-DKB_Novorussia_authoritarian_democrat_ADJ:0 "Novorossiyan"
-DKB_Novorussia_authoritarian_democrat_DEF:0 "the Confederation of Novorossiya"
-
-DKB_Novorussia_RUS_authoritarian_democrat:0 "Novorossiya"
-DKB_Novorussia_RUS_authoritarian_democrat_ADJ:0 "Novorossiyan"
-DKB_Novorussia_RUS_authoritarian_democrat_DEF:0 "the Federal State of Novorossiya"
-
-
 DKB_UCH_totalist:0 "United Cossack Host"
 DKB_UCH_totalist_ADJ:0 "Cossack"
 DKB_UCH_totalist_DEF:0 "the United Cossack Host"
@@ -633,6 +624,8 @@ DKB_cooperation:0 "Cooperation!"
 
 DKU_Naval_Exercises:0 "[ROOT.GetAdjective]-Ukrainian Naval Exercises"
 
+roa_general:0 "ROA General"
+roa_general_desc:0 "This general is associated with the Russian Liberation Army"
 cossack_state_tooltip:0 "\n§GA special cossack unit can be recruited every 90 days§!"
 DKB_ROA_generals_will_serve_us_tooptip:0 "§BGenerals of the Russian Liberation Army shall join our armed forces.§!"
 DKB_decossackisation_tt:0 "Our country will suffer from Decossackization" 
@@ -765,7 +758,7 @@ DKB_armed_neutrality:0 "Declare Armed Neutrality"
 DKB_armed_neutrality_desc:0 "There are many countries that would love to annex our lands and what do we say to them? Come and take it! We must build up a defence system ready to fight the coming Russian Hordes."
 DKB_the_dream_is_dead:0 "The Dream is Dead"
 DKB_the_dream_is_dead_desc:0 "The Dream of the Don-Kuban Union has truly been dead ever since the tragdy of 1930. It is time that we move on from that and into a new bright future for all Don Cossacks."
-DKB_the_dream_is_dead_tooltip:0"§RThe Dream of the Don-Kuban Union must be forgotten for good.§!"
+DKB_the_dream_is_dead_tooltip:0"§RThe All-Russian amibitions should be forgotten for good.§!"
 
 
 DKB_coup:0 "Bogaevsky's Victory"
@@ -840,13 +833,13 @@ DKB_deal_with_khanate:0 "Deal With Turkestan"
 DKB_deal_with_khanate_desc:0 "The Turkic people of the land are in our way, and it seems like they will most likely stay in our way. Because of this, we are planning to forcibly remove them through any means necessary. After this, we shall be the masters of the Steppes!"
 
 DKB_demand_mongolian_submission:0 "Demand Mongolian Submission"
-DKB_demand_mongolian_submission_desc:0 "Ugren’s Accursed Madhouse must be tamed! We the peoples of Rossiya shall no longer tolerate his insanity or his controls of the railroads! Follow us or die, there shall be no other compromise than that!"
+DKB_demand_mongolian_submission_desc:0 "Ungern’s Accursed Madhouse must be tamed! We the peoples of Rossiya shall no longer tolerate his insanity or his controls of the railroads! Follow us or die, there shall be no other compromise than that!"
 
 DKB_demand_left_bank_dnepr:0 "Demand the Left Bank of Dnieper"
 DKB_demand_left_bank_dnepr_desc:0 "Malorossiya, the left bank of Dnieper; in the aftermath of the war the Ukrainians took the left bank and began forcing their ways upon the local Russians. Now, things have changed, and we shall demand what is rightfully ours."
 
-DKB_kill_the_predator:0 "Kill the Predator!"
-DKB_kill_the_predator_desc:0 "Kill the Predator, the Muscovite Terror, the Beast who has longed pursued and hunted us and sought to use us for its own gain! We the people of United Cossack Host shall become hunters and turn the Muscovites into the hunted. Fear us, run from us, try to bribe us, do whatever you can to hide! We will come for you and destroy all you have created! Glory to the Cossack People!"
+DKB_kill_the_predator:0 "Liberate the Motherland!"
+DKB_kill_the_predator_desc:0 "The Russia has fallen under the pressure of socialist scum, bolsheviks and all kind of anti-Russian traitors. We, the Cossack people, the peoples of Caucasus and Steppe, shall restore the glory to our Motherland."
 
 DKB_annex_tsargrad:0 "Claim Tsaritsyn"
 DKB_annex_tsargrad_desc:0 "With the Caucasus now firmly under our control, the time has come to join our fellow brothers in the Reichspakt and stake our own claims on Russia. A war is coming, there is no doubt about that, but when we sit at the victor's table, we too can get a piece of the Russian pie."
@@ -936,9 +929,9 @@ DKB_Maintain_Cossack_Rule_desc:0 "The only group fit to lead Russia is the Cossa
 DKB_ataman_power:0 "All Power to the Ataman"
 DKB_ataman_power_desc:0 "Recent events have shown that giving too much power to incompetent people leads to unfortunate events. We shall give the wise Ataman Krasnov supreme power over the Krug, to avoid another crisis or coup attempt. What remains of the Krug shall be purged of all disloyal elements."
 
-DKB_restore_don_kuban:0 "1930 Avenged"
-DKB_restore_don_kuban_desc:0 "The damage done by the fall of the great Don-Kuban Union in 1930 has finally been undone. We can now integrate the states that abandoned us so long ago. The years of shame are over, let the years of glory begin!"
-DKB_dream_fullfilled:0 "§GWe will restore the Don-Kuban Union under a centralized Don Cossack Government.§!"
+DKB_restore_don_kuban:0 "The Don-Caucasian Union"
+DKB_restore_don_kuban_desc:0 "We can now integrate the states that abandoned us so long ago. The years of shame are over, let the years of glory begin!"
+DKB_dream_fullfilled:0 "§GWe will restore the Don-Caucasian Union under a centralized Don Cossack Government.§!"
 
 
 DKB_Naval_Industry:0 "Naval Industry"
@@ -999,6 +992,7 @@ DKB_Smolensk_Conference:0 "Smolensk Conference"
 DKB_Smolensk_Conference_desc:0 "The German Empire may be the strongest force in the world, but their attention is divided across many fronts. We, on the other hand, can afford to put significant pressure on our neighbors to the West to create a sphere of influence or something more, if we so choose. So, shall we reach out to the Germans?"
 
 DKB_Fate_of_our_Allies:0 "Fate of Our Allies"
+DKB_Fate_of_our_Allies_desc:0 "While they served as an important part of your road to reclaiming the Motherland, the Hosts of Amur and Orenburg have outlived their usefulness. The time has come to incorporate their lands back into Russia proper, by force if necessary."
 
 DKB_On_Our_Own:0 "On Our Own"
 DKB_On_Our_Own_desc:0 "Despite our best attempts, it seems that we are all alone in the world. Though it has been some time since we have been truly independent peoples, we have not forgotten the skills it takes to run an effective administration. It will take some time for us to find our footing, but once we do, we shall be all the better for it."
@@ -1258,7 +1252,7 @@ DKB_await_the_fatherlands_call:0 "Await the Fatherland's Call"
 DKB_await_the_fatherlands_call_desc:0 "While People like von Leeb think starting a war with Russia on our own is a good idea, von Pannwitz is wiser than that. He knows that Germany will soon find itself at war with Russia, we must just await the Fatherland's Call to Arms."
 
 DKB_together_for_land:0 "Together For Victory"
-DKB_together_for_land_desc:0 "While People like von Leeb think starting a war with Russia on our own is a good idea, and while others wish for us to wait until Germany herself rides against Russia, there is another option. While Germany will not support a war for nothing, should we promise to hand over claimed lands to our allies the Reichspact, Germany may just be swayed to support us. Either way, the coming wars shall be costly, and if Germany is truly ready and willing for a war with Russia remains to be seen."
+DKB_together_for_land_desc:0 "While People like von Leeb think starting a war with Russia on our own is a good idea, and while others wish for us to wait until Germany herself rides against Russia, there is another option. While Germany will not support a war for nothing, should we promise to hand over claimed lands to our allies the Reichspakt, Germany may just be swayed to support us. Either way, the coming wars shall be costly, and if Germany is truly ready and willing for a war with Russia remains to be seen."
 
 DKB_raze_russia:0 "Raze Russia"
 DKB_raze_russia_desc:0 "Screw Berlin! We are ready to march on Russia with or without the support of the so-called 'rightful' German Government! Under von Leeb's and von Pannwitz's command we will raze Russia to the foundation and rebuild it in the image of the Germanic Eagle!"
@@ -1506,7 +1500,7 @@ DKB_The_New_Ostdeutsch_Heer:0 "The New Ostdeutsch Heer"
 DKB_The_New_Ostdeutsch_Heer_desc:0 "We have done it! The Ostheer has been substantially modernized and reformed into a proper army. The enemies of Germany shall tremble when they hear that the Ostheer is arriving!"
 DKB_cores_on_land_ger:0 "§GWe will gain cores on all the land we have already conquered.§!"
 DKB_germans_will_not_support:0 "§RThe§! §gGermans§! §Rwill not support us!§!"
-DKB_germans_will_support_for_land:0 "§GThe§! §gGermans§! §Gwill support us, in exchange for us handing over land to our allies in the Reichspact!§!"
+DKB_germans_will_support_for_land:0 "§GThe§! §gGermans§! §Gwill support us, in exchange for us handing over land to our allies in the Reichspakt!§!"
 DKB_Siberian_Auto:0 "§GWe will give the Tobolsk Autonomy administrative authority over Siberia.§!"
 DKB_core_all_russian_land_west_of_ural:0 "§GWe will gain cores on all Russian land west of the Ural Mountains.§!"
 DKB_will_gain_cores_on_all_Russian_land_ger:0 "§GWe will gain cores on all Russian land.§!"
@@ -1874,6 +1868,12 @@ germans.24.t:0 "A Kick on the Front Door"
 germans.24.d:0 "As the news arrived in Moskau, everyone new what was about to happen. As no clear leader had been set by Berlin, Von Pannwitz was the first to take action and declare himself the legitimate government in Saratov. Meanwhike, in Moskau proper Siegfried Kasche would quickly rise to prominence as the opposing candidate. With the Ostheer divided and soon enough fighting each other, other powers decided to take action. From an organised syndicalist resistance to traitors within the Committee itself to the so-called "Markovites" and even the mad “Strasserists”, many different factions have sprung up vying for power. As Russia burns and devolves into anarchy, one can only wonder what the future of this dammed land will be."
 germans.24.a:0 "You only need to kick down the front door..."
 DKB_collapse_tooltip:0 "§R...and the whole Rotten Structure comes crashing down.§!"
+
+germans.240.t:0 "A New Leader for the Reichskommissariat"
+germans.240.d:0 "With the collapse of the Reichskommissariat seeming immanent, leadership is direly needed. Rising to the task, Cossack factions under Atman von Pannwitz has made a strong case for becoming the new Reichskommissar. At the same time, army cliques led by general Keitel have appealed to the Colonial Office in Berlin to take charge over whats left of our territories. Who will come to lead Moskowien?"
+germans.240.a:0 "We have to regroup at our birthplace. To Don and Saratov with Pannwitz!"
+germans.240.b:0 "The army can be the only salvation of our state. Hail Ostheer and Keitel!"
+germans.240.c:0 "The Position of Reichskomissar remains empty."
 
 germans.25.t:0 "The Red Barons Wings"
 germans.25.d:0 "Having migrated East as part of the many germans left unemployed by Black Monday, a young german engineer would start a relatively small motors company, wanting to focus on building tractors for the growing german farmer population in the region. However, his luck would change as he participated in an aircraft competition hosted by none other than the Red Baron himself as part of the government funded program of supporting new entrepreneurs. Having won with flying colours, this would be a new beginning for the young engineer. \n\nNow the “Roter Baron” Eastern Aircraft Company is one of the rising stars in the market, having gained much popularity thanks to personal endorsement by the National War Hero and great quality of their aircraft, already having signed contracts with many of Mitteleuropa’s eastern members, mostly focusing on personnel carriers and private transports. Their next goal is armaments, particularly long-range bombers, for which they have already signed contracts with the Reichskomissariat. One of those is the jokingly called “Uralbomber”, named after it’s first experimental test flight almost crashed into said mountain range. \n\nWhatever the future of the company may be, they have already left a notable mark on history and the aviation market."
@@ -2278,7 +2278,7 @@ dkb.205.d:0 "The Government of the Country we offered to to join our faction has
 dkb.205.a:0 "To Arms!"
 
 dkb.211.t:0 "Moving to Moscow"
-dkb.211.d:0 "Moscow hasn't been the capital of a united Russian State since 1712 when Peter The Great made what is now Petrograd the capital. Since the illegitimate Petrograd Regime used the city we should perhaps consider using Moscow as our new capital, not only to distance ourselves from the petrograd regime but as a callback to the foundation of Russia."
+dkb.211.d:0 "Moscow hasn't been the capital of a united Russian State since 1712 when Peter The Great made what is now Petrograd the capital. Since the illegitimate Petrograd Regime used the city we should perhaps consider using Moscow as our new capital, not only to distance ourselves from the Petrograd regime but as a callback to the foundation of Russia."
 dkb.211.a:0 "Long Live Russia, One and Indivisible!"
 
 dkb.212.t:0 "Moving to Saint Petersburg"
@@ -2655,7 +2655,8 @@ DKU_Increase_Taxes_desc:0 "To further facilitate our economic recovery efforts, 
 
 DKU_Rely_On_Germany:0 "Rely on Germany"
 DKU_Rely_On_Germany_desc:0 "With our position in Europe and with the Russian Bear to the north, the Kaiserreich has long been interested in our state. In order to rebuild our economy quickly and to facilitate better relations between our two nations, who have long interacted since our independence, we should rely on Germany in our future economic development."
-
+DKU_Ourselves_Alone:0 "Ourselves Alone"
+DKU_Ourselves_Alone_desc:0 "We can't ask either Germany or Russia for help and we have to fix our economy ourselves as true sovereign state, as our glorious Cossack ancestry suggests we should have always done."
 DKU_Rely_On_Russia:0 "Rely on Russia"
 DKU_Rely_On_Russia_desc:0 "Russia, the closest World Power to our great state, has a long and turbid history with our people. Regardless, they are our best option to choose as a benefactor given their proximity and existing ties to our economy. In order to facilitate better relations between our two nations and rapidly repair our economy, we should rely on Germany in our future economic development."
 
@@ -2758,7 +2759,7 @@ DKB_reduce_aftermath_tt:0 "The effects of £pol_idea Aftermath of the Russian Co
 
 DKB_aftermath_modifier:0 "£pol_idea Aftermath of the Russian Conquest"
 DKB_aftermath_idea:0 "Aftermath of the Russian Conquest"
-DKB_aftermath_idea_desc:0 "With the conquest of the Russian core states, our country is facing an economic, social and political crisis, that destabilizes our nation. We should deal with the effects of the war devastation first before we can consolidate our rule in the Motherland.\n§W--------------\n[AftermathPP][AftermathStability][AftermathWarSupport][AftermathConstructionSpeed][AftermathMaxEfficiency][AftermathFactoryOutput][AftermathArmyOrg][AftermathArmyMorale][AftermathRulingPartyDrift]" 
+DKB_aftermath_idea_desc:0 "With the conquest of the Russian core states, our country is facing an economic, social and political crisis, that destabilizes our nation. We should deal with the effects of the war devastation first before we can consolidate our rule in the Motherland.\n§W--------------\n[AftermathPP][AftermathStability][AftermathWarSupport][AftermathConstructionSpeed][AftermathMaxEfficiency][AftermathFactoryOutput][AftermathArmyOrg][AftermathRulingPartyDrift]" 
 
 DKB_aftermath_uch_idea:0 "Aftermath of the Russian Conquest"
 DKB_aftermath_uch_idea_desc:0 "With the conquest of the Russian core states, our country is facing an economic, social and political crisis, that destabilizes our nation. We should deal with the effects of the war devastation first before we can consolidate our rule in the Motherland."
@@ -2819,7 +2820,7 @@ DKU_Special_Cossack_Unit_Spawn:0 "Recruit Special Cossack Unit"
 
 ### Bookmarks for Kuban region ###
 DKB_KR_GATHERING_STORM_DESC:0 "Initially created in 1918 in direct opposition to the Bolsheviks, the Don Republic would be reincorporated into Russia following a White victory. Due to disagreements with Kerensky, the Don Cossacks would join the failed coup by former Supreme Leader Kolchak in 1925. Due to German involvement with the Coup’s aftermath, the Don was granted a renewed independence from Russia. In the time since then, the Don Host has become home to a variety of movements, from Socialists hiding in the shadows to General Vlasov and his Commitee with suchs to liberate Russia. With their German lifeline faulting day by day, the future of the Don and perhaps all of Russia hangs in the balance."
-KUB_KR_GATHERING_STORM_DESC:0 "Proclaimed in 1918, Kuban People's Republic was on the right side of the hedge in the chaos of the Russian Civil War. A stable economic growth, democracy and cooperation made it possible for Kuban to become one of the most successful splinter states of the Russian Empire. Unceasing conflicts between two parliamentary groups, pro-Ukranian and pro-Russian ensured good relations both with Russia and Reichspact. However, who knows if it is not just a calm before the storm."
+KUB_KR_GATHERING_STORM_DESC:0 "Proclaimed in 1918, Kuban People's Republic was on the right side of the hedge in the chaos of the Russian Civil War. A stable economic growth, democracy and cooperation made it possible for Kuban to become one of the most successful splinter states of the Russian Empire. Unceasing conflicts between two parliamentary groups, pro-Ukranian and pro-Russian ensured good relations both with Russia and Reichspakt. However, who knows if it is not just a calm before the storm."
 MTR_KR_GATHERING_STORM_DESC:0 "The Mountain Republic is a good example of how more than 18 nationalities live together in one country. Since 1918 Tapa Chermoyev, a Chechen oil industrialist and millioner has been in control, which quickly turned the state into an oligarchic republic. The discontent with the government is growing and the society is radicalizing, with socialists and islamists getting more and more powerful. Will Chermoyev secure his shaky rule?"
 #flag
 DKB_krasnov_stays:0 "§YAtaman Krasnov§! is still alive"
@@ -2857,6 +2858,7 @@ DKU_Leeb_Victory:0 "Restore the German Nation!"
 
 ### New Decisions for balance ###
 DKU_expansion:0 "Foreign Policy"
+DKU_superevent: "Unification of Don-Kuban"
 DKU_attack_kuban:0 "The Question of Kuban Cossacks"
 DKU_attack_kalmykia:0 "Bring Back Kalmyk Steppe"
 DKU_attack_mountain:0 "Issue of Islamic Separatists"
@@ -2869,7 +2871,7 @@ DKB_attack_transamur:0 "$DKB_ties_with_transamur$"
 DKU_attack_russia:0 "Reclaim the Motherland"
 
 #minsters
-DKB_Sergey_Syrcov_hog_tot:0 "Sergey Syrcov"
+DKB_Sergey_Syrcov_hog_tot:0 "Sergey Syrtsov"
 DKB_Valentin_Trifonov_hog_rso:0 "Valentin Trifonov"
 DKB_Luka_L_Bych_hog_mli:0 "Luka L. Bych"
 DKB_Gavriil_of_Don_hog_ade:0 "Gavriil of Don"

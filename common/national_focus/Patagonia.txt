@@ -1118,6 +1118,9 @@ focus_tree = {
 			1028 = {
 				add_core_of = FOP
 			}
+			579 = {
+				add_core_of = FOP
+			}
 			create_wargoal = {
 			target = CHL
 			type = annex_everything
@@ -4615,6 +4618,20 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FOP_resource_exploitation_scheme"
 			custom_effect_tooltip = FOP_resources_tooltip
+			custom_effect_tooltip = ARG_deisions_grant_steel_tooltip
+			custom_effect_tooltip = tooltip_white_line
+			activate_targeted_decision = { target = THIS decision = ARG_Ancidar_preliminary_excavation_studies }
+			activate_targeted_decision = { target = THIS decision = ARG_Patagonia_preliminary_excavation_studies }
+			activate_targeted_decision = { target = THIS decision = ARG_Santiago_del_Estero_preliminary_excavation_studies }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = ARG_deisions_grant_oil_tooltip
+			custom_effect_tooltip = tooltip_white_line
+			activate_targeted_decision = { target = 512 decision = ARG_YPF_expansion_dec }
+			activate_targeted_decision = { target = 512 decision = ARG_expand_local_infrastructure_tier1 }
+			activate_targeted_decision = { target = 1029 decision = ARG_YPF_expansion_dec }
+			activate_targeted_decision = { target = 1029 decision = ARG_expand_local_infrastructure_tier1 }
+			activate_targeted_decision = { target = 510 decision = ARG_YPF_expansion_limited_dec }
+			activate_targeted_decision = { target = 579 decision = ARG_YPF_expansion_limited_dec }
 		}
 	}
 
@@ -5222,7 +5239,7 @@ focus_tree = {
 			add_war_support = 0.08
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
-				amount = 15000
+				amount = 1500
 				producer = FOP
 			}
 		}
@@ -5357,7 +5374,7 @@ focus_tree = {
 		}
 	}
 	
-	##############
+##############
 # Who would ever play as Andesia?
 #############
 	focus = {

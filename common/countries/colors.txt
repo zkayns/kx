@@ -675,6 +675,10 @@ MON = {
 	color = rgb { 92 92 92 }
 	color_ui = rgb { 92 92 92 }
 }
+MOL = {
+	color = rgb { 255 153 153 }
+	color_ui = rgb { 255 153 153 }
+}
 MOR = {
 	color = rgb { 191 110 62 }
 	color_ui = rgb { 191 110 62 }
@@ -742,6 +746,10 @@ OCC = {
 OMA = {
 	color = rgb { 98 134 153 }
 	color_ui = rgb { 98 134 153 }
+}
+ABK = {
+	color = rgb { 0 105 62 }
+	color_ui = rgb { 0 105 62 }
 }
 TUR = {
 	color = rgb { 169 17 1 }
@@ -1294,4 +1302,8 @@ SZK = {
 BUK = {
 	color = rgb { 150 200 75 }
 	color_ui = rgb { 150 200 75 }
+}
+NFL = {
+	color = rgb { 200 16 46 }
+	color_ui = rgb { 200 16 46 }
 }

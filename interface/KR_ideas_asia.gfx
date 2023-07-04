@@ -369,6 +369,10 @@ spriteTypes = {
 		name = "GFX_idea_SQI_jiangsu_exploitation"
 		texturefile = "gfx/interface/ideas/ideas/SQI_jiangsu_exploitation.png"
 	}
+	spriteType = {
+		name = "GFX_idea_SQI_QIE_relationship"
+		texturefile = "gfx/interface/ideas/ideas/SQI_QIE_relationship.png"
+	}
 
 	### SIA ###
 	spriteType = {
@@ -557,6 +561,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CHI_defence_idea"
 		texturefile = "gfx/interface/ideas/ideas/CHI_defence_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_demobilised_nra"
+		texturefile = "gfx/interface/ideas/ideas/CHI_demobilised_nra.png"
 	}
 
 	#GEA

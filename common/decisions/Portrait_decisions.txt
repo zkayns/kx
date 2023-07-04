@@ -667,7 +667,10 @@ political_actions = {
 	CAN_Edward_Picker = {
 		icon = GFX_decision_portraits_picker
 		allowed = { 
-			tag = CAN
+			OR = {
+				tag = CAN
+				tag = GBR
+			}
 		}
 		visible = {
 			has_country_leader = {
@@ -688,5 +691,249 @@ political_actions = {
 			country_event = portrait_picker.32
 		}
 	}
-}
+	
+	TEX_Huey_Picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = { 
+			OR = {
+				tag = TEX 
+				tag = CAL 
+				tag = USA 
+			}
+		}
+		
+		visible = {
+			has_country_leader = {
+				name = "Huey Long"
+				ruling_only = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TEX_Huey_Picker"
+			country_event = portrait_picker.35
+		}
+	}     
+	
+	CAN_WLMK_Picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = { 
+			OR = {
+				tag = CAN
+				tag = GBR
+			}
+		}
+		visible = {
+			OR = {
+				has_country_leader = {
+					name = "William Lyon Mackenzie King"
+					ruling_only = yes
+				}
+				has_idea = CAN_William_Lyon_Mackenzie_King_hog_mli
+			}
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_Edward_Picker"
+			country_event = portrait_picker.33
+		}
+	}
+	
+	CAN_arcand_Picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = { 
+			tag = CAN
+		}
+		visible = {
+			OR = {
+				has_country_leader = {
+					name = "Adrien Arcand"
+					ruling_only = yes
+				}
+				has_idea = CAN_Adrien_Arcand_hog_npo
+			}
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_Edward_Picker"
+			country_event = portrait_picker.360
+		}
+	}
+	
+	CAN_cambridge_Picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = { 
+			tag = CAN
+		}
+		visible = {
+			has_country_leader = {
+				name = "Alexander Cambridge"
+				ruling_only = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_Edward_Picker"
+			country_event = portrait_picker.361
+		}
+	}
+	
+	VIN_Bao_Dai_Picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = {
+		tag = VIN
+			}
+		visible = {
+			has_country_flag = VIN_Bao_Dai_Portrait_Unlock
+			has_country_leader = {
+				name = "Bao Dai"
+				ruling_only = yes
+				}
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision VIN_Bao_Dai_Picker"
+			country_event = portrait_picker.34
+		}
+	}
 
+COR_Yockey_Picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = {
+		OR = {
+			tag = COR
+			tag = USA
+			}
+		}
+		visible = {
+			has_country_leader = {
+				name = "Francis Parker Yockey"
+				ruling_only = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision COR_Yockey_Picker"
+			country_event = portrait_picker.36
+		}
+	}
+	
+	JAP_Yasuhito_Picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = {
+		OR = {
+			tag = JAP
+			tag = FNG
+			tag = SQI
+			tag = CAL
+			}
+		}
+		visible = {
+			has_country_leader = {
+				name = "Yasuhito"
+				ruling_only = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision JAP_Yasuhito_Picker"
+			country_event = portrait_picker.37
+		}
+	}
+
+    CAL_Nixon_Picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = {
+			tag = CAL
+		}
+		visible = {
+			has_country_leader = {
+				name = "Richard Nixon"
+				ruling_only = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision JAP_Yasuhito_Picker"
+			country_event = portrait_picker.38
+		}
+	}
+
+    IRE_joyce_picker = {
+		icon = GFX_decision_portraits_picker
+		allowed = {
+			tag = IRE
+		}
+		visible = {
+			has_idea = IRE_James_Joyce_hog_rso
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision JAP_Yasuhito_Picker"
+			country_event = portrait_picker.39
+		}
+	}
+}

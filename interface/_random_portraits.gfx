@@ -766,6 +766,15 @@ spriteTypes = {
 		name = "GFX_Portrait_Mixed_Generic_2_small"
 		texturefile = "gfx/interface/ministers/Generic/Portrait_Mixed_Generic_2.png"
 	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Mixed_Generic_3"
+		texturefile = "gfx/leaders/Generic/Portrait_Mixed_Generic_3.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Mixed_Generic_3_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Mixed_Generic_3.png"
+	}
 
 	######################
 	######################
@@ -873,6 +882,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_America_Generic_land_11_small"
 		texturefile = "gfx/interface/ministers/Generic/Portrait_America_Generic_land_11.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_America_Generic_land_12"
+		texturefile = "gfx/leaders/Generic/Portrait_America_Generic_land_12.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_America_Generic_land_12_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_America_Generic_land_12.png"
 	}
 
 	spriteType = {
@@ -1173,6 +1191,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Britain_Generic_land_10_small"
 		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_10.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_11"
+		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_land_11.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_11_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_11.png"
 	}
 
 	spriteType = {
@@ -2063,7 +2090,20 @@ spriteTypes = {
 		name = "GFX_Portrait_Russia_Generic_navy_5_small"
 		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_navy_5.png"
 	}
-
+	
+	###############
+	### Cossack ###
+	###############
+	
+	spriteType = {
+		name = "GFX_Portrait_Cossack_Generic_land_1"
+		texturefile = "gfx/leaders/Generic/Portrait_Cossack_Generic_land_1.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Cossack_Generic_land_1_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Cossack_Generic_land_1.png"
+	}
+	
 	##############
 	### TURKEY ###
 	##############
@@ -2223,17 +2263,49 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/Generic/Portrait_CHL_generic_general_2.png"
 	}
 	
+	##############
+	### Mexico ###
+	##############
+
+	spriteType = {
+		name = "GFX_Portrait_Mexico_Generic"
+		texturefile = "gfx/leaders/Generic/Portrait_Mexico_Generic.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Mexico_Generic_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Mexico_Generic.png"
+	}
+	
+	
 	###############
 	### YUCATAN ###
 	###############
 
 	spriteType = {
 		name = "GFX_Portrait_YUC_Generic"
-		texturefile = "gfx/leaders/Generic/Portrait_YUC_Generic.png"
+		texturefile = "gfx/leaders/YUC/Portrait_YUC_Generic.png"
 	}
 	spriteType = {
 		name = "GFX_Portrait_YUC_Generic_small"
 		texturefile = "gfx/interface/ministers/Generic/Portrait_YUC_Generic.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_YUC_Generic_2"
+		texturefile = "gfx/leaders/YUC/Portrait_YUC_Generic_2.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_YUC_Generic_2_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_YUC_Generic_2.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_YUC_Generic_3"
+		texturefile = "gfx/leaders/YUC/Portrait_YUC_Generic_3.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_YUC_Generic_3_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_YUC_Generic_3.png"
 	}
 	
 	#################
@@ -2616,7 +2688,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Portrait_Joseph_Ibn_Al_Bi-Den"
+		name = "GFX_Portrait_Pope_Biden"
 		texturefile = "gfx/leaders/BDN/Portrait_Pope_Biden.png"
 	}
 	spriteType = {
@@ -2661,7 +2733,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Portrait_Biden_Son_of_Heaven_Biden"
+		name = "GFX_Portrait_Biden_Son_of_Heaven"
 		texturefile = "gfx/leaders/BDN/Portrait_Biden_Son_of_Heaven.png"
 	}
 	spriteType = {

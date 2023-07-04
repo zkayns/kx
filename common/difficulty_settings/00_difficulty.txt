@@ -1,5 +1,11 @@
 difficulty_settings = {
 	difficulty_setting = {
+		key = "custom_diff_strong_abk"
+		modifier = diff_strong_ai_generic
+		countries = { ABK }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_eth"
 		modifier = diff_strong_ai_generic
 		countries = { ETH }
@@ -222,6 +228,12 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_dah"
+		modifier = diff_strong_ai_generic
+		countries = { DAH }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_den"
 		modifier = diff_strong_ai_generic
 		countries = { DEN }
@@ -267,6 +279,12 @@ difficulty_settings = {
 		key = "custom_diff_strong_dji"
 		modifier = diff_strong_ai_generic
 		countries = { DJI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_emi"
+		modifier = diff_strong_ai_generic
+		countries = { EMI }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
@@ -396,6 +414,12 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_gha"
+		modifier = diff_strong_ai_generic
+		countries = { GHA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_tzn"
 		modifier = diff_strong_ai_generic
 		countries = { TZN }
@@ -411,6 +435,12 @@ difficulty_settings = {
 		key = "custom_diff_strong_gua"
 		modifier = diff_strong_ai_generic
 		countries = { GUA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_hau"
+		modifier = diff_strong_ai_generic
+		countries = { HAU }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
@@ -618,6 +648,12 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_lom"
+		modifier = diff_strong_ai_generic
+		countries = { LOM }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_xsm"
 		modifier = diff_strong_ai_generic
 		countries = { XSM }
@@ -695,10 +731,22 @@ difficulty_settings = {
 		countries = { NYC }
 		multiplier = 2.0
 	}
+    difficulty_setting = {
+		key = "custom_diff_strong_nor"
+		modifier = diff_strong_ai_generic
+		countries = { NOR }
+		multiplier = 2.0
+	}
 	difficulty_setting = {
 		key = "custom_diff_strong_nsw"
 		modifier = diff_strong_ai_generic
 		countries = { NSW }
+		multiplier = 2.0
+	}
+    difficulty_setting = {
+		key = "custom_diff_strong_nvn"
+		modifier = diff_strong_ai_generic
+		countries = { NVN }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
@@ -720,7 +768,7 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
-		key = "custom_diff_strong_ott"
+		key = "custom_diff_strong_tur"
 		modifier = diff_strong_ai_generic
 		countries = { TUR }
 		multiplier = 2.0
@@ -735,6 +783,12 @@ difficulty_settings = {
 		key = "custom_diff_strong_pan"
 		modifier = diff_strong_ai_generic
 		countries = { PAN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_pap"
+		modifier = diff_strong_ai_generic
+		countries = { PAP }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
@@ -864,6 +918,12 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_srd"
+		modifier = diff_strong_ai_generic
+		countries = { SRD }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_sct"
 		modifier = diff_strong_ai_generic
 		countries = { SCT }
@@ -972,6 +1032,12 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_tog"
+		modifier = diff_strong_ai_generic
+		countries = { TOG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_trs"
 		modifier = diff_strong_ai_generic
 		countries = { TRS }
@@ -987,6 +1053,18 @@ difficulty_settings = {
 		key = "custom_diff_strong_bul"
 		modifier = diff_strong_ai_generic
 		countries = { BUL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_tus"
+		modifier = diff_strong_ai_generic
+		countries = { TUS }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_sic"
+		modifier = diff_strong_ai_generic
+		countries = { SIC }
 		multiplier = 2.0
 	}
 	difficulty_setting = {
@@ -1041,6 +1119,12 @@ difficulty_settings = {
 		key = "custom_diff_strong_vnc"
 		modifier = diff_strong_ai_generic
 		countries = { VNC }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_vin"
+		modifier = diff_strong_ai_generic
+		countries = { VIN }
 		multiplier = 2.0
 	}
 	difficulty_setting = {

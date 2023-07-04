@@ -119,7 +119,7 @@ create_country_leader = {
 	desc = "POLITICS_JAVIER_CARLIST_DESC"
 	picture = "gfx/leaders/CAR/Portrait_Javier_I.png"
 	expire = "1965.1.1"
-	ideology = absolute_monarchy_subtype
+	ideology = carlism_subtype
 }
 
 create_country_leader = {
@@ -135,7 +135,7 @@ create_country_leader = {
 	desc = "POLITICS_CARLOS_PIO_DESC"
 	picture = "gfx/leaders/CAR/Portrait_CAR_Carlos_VIII.png"
 	expire = "1965.1.1"
-	ideology = integralism_subtype
+	ideology = natpop_carlism_subtype
 }
 
 create_country_leader = {
@@ -485,17 +485,5 @@ create_navy_leader = { #Auto-Generated
 	attack_skill = 1
 	coordination_skill = 1
 	id = 317
-}
-
-create_navy_leader = { #Auto-Generated
-	name = "Enrique Líster Forján"
-	portrait_path = "gfx/leaders/CAR/Portrait_CAR_Enrique_Lister.png"
-	traits = { }
-	skill = 1
-	maneuvering_skill = 1
-	defense_skill = 1
-	attack_skill = 1
-	coordination_skill = 1
-	id = 318
 }
 

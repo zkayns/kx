@@ -2083,6 +2083,13 @@ focus_tree = {
 		y = 8
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = PLC_PRIME_MINISTER
+					option = PLC_PRIME_MINISTER_BECK
+				}
+			}
 		}
 
 		completion_reward = {
@@ -4272,6 +4279,9 @@ focus_tree = {
 						state = 259
 						state = 792
 						state = 997
+						state = 1287
+						state = 1292
+						state = 1293
 					}
 				}
 				add_claim_by = ROOT
@@ -4488,7 +4498,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			
+
+			every_state = {
+				limit = {
+					is_core_of = GAL
+				}
+				add_core_of = POL
+			}
 			if = {
 				limit = {
 					country_exists = GAL
@@ -4589,8 +4605,12 @@ focus_tree = {
 					}
 				}
 			}
-			add_state_core = 81
-			add_state_core = 46
+			add_state_core = 80
+			add_state_core = 713
+			add_state_core = 1320
+			add_state_core = 78
+			add_state_core = 1222
+			add_state_core = 79
 		}
 	}
 	

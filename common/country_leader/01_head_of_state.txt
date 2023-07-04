@@ -1168,6 +1168,12 @@ leader_traits = {
 		research_speed_factor = 9
 		army_speed_factor = 9
 	}
+	lost_in_timeless_oblivion = { #Biden
+		random = no
+		army_attack_factor = -0.6
+		war_support_factor = -0.6
+		political_power_gain = -0.6
+	}
 	
 	#### Kivu
 	father_of_nzere = { #Gonzauge
@@ -1524,6 +1530,11 @@ leader_traits = {
 	IRE_Irish_King = {
 		war_support_factor = 0.04
 		stability_factor = 0.02
+	}
+	
+	IRE_Ilegitimate_King = {
+		political_power_cost = 0.03
+		stability_factor = -0.02
 	}
 	
 	IRE_UFOlogist = {

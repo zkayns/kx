@@ -299,6 +299,12 @@ BRG_king = {
 		desc = "RULE_OPTION_BRG_LOGS_BOOBA_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = BRG_KING_SARK_BOOBA
+		text = "RULE_OPTION_BRG_SARK_BOOBA"
+		desc = "RULE_OPTION_BRG_SARK_BOOBA_DESC"
+		allow_achievements = yes
+	}
 }
 
 GBR_return_of_the_king = {
@@ -352,15 +358,9 @@ IRE_future = {
 		allow_achievements = yes
 	}
 	option = {
-		name = IRE_FUTURE_AUTHDEM
-		text = "RULE_OPTION_IRE_FUTURE_AUTHDEM"
-		desc = "RULE_OPTION_IRE_FUTURE_AUTHDEM_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = IRE_FUTURE_PATAUT
-		text = "RULE_OPTION_IRE_FUTURE_PATAUT"
-		desc = "RULE_OPTION_IRE_FUTURE_PATAUT_DESC"
+		name = IRE_FUTURE_DEMOCRACY_MARLIB
+		text = "RULE_OPTION_IRE_FUTURE_DEMOCRACY_MARLIB"
+		desc = "RULE_OPTION_IRE_FUTURE_DEMOCRACY_MARLIB_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -370,9 +370,9 @@ IRE_future = {
 		allow_achievements = yes
 	}
 	option = {
-		name = IRE_FUTURE_DEMOCRACY_MARLIB
-		text = "RULE_OPTION_IRE_FUTURE_DEMOCRACY_MARLIB"
-		desc = "RULE_OPTION_IRE_FUTURE_DEMOCRACY_MARLIB_DESC"
+		name = IRE_FUTURE_MONARCHY
+		text = "RULE_OPTION_IRE_FUTURE_MONARCHY"
+		desc = "RULE_OPTION_IRE_FUTURE_MONARCHY_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -393,6 +393,107 @@ IRE_future = {
 		desc = "RULE_OPTION_IRE_FUTURE_SYNDIE_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = IRE_FUTURE_AUTHDEM
+		text = "RULE_OPTION_IRE_FUTURE_AUTHDEM"
+		desc = "RULE_OPTION_IRE_FUTURE_AUTHDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_FUTURE_PATAUT
+		text = "RULE_OPTION_IRE_FUTURE_PATAUT"
+		desc = "RULE_OPTION_IRE_FUTURE_PATAUT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_FUTURE_NATPOP
+		text = "RULE_OPTION_IRE_FUTURE_NATPOP"
+		desc = "RULE_OPTION_IRE_FUTURE_NATPOP_DESC"
+		allow_achievements = yes
+	}
+}
+IRE_monarch = {
+	name = "IRE_MONARCH"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_IRE_MONARCH_RANDOM"
+		desc = "RULE_OPTION_IRE_MONARCH_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_JAOCHIM
+		text = "RULE_OPTION_IRE_JAOCHIM"
+		desc = "RULE_OPTION_IRE_JAOCHIM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_JAOCHIM_PU
+		text = "RULE_OPTION_IRE_JAOCHIM_PU"
+		desc = "RULE_OPTION_IRE_JAOCHIM_PU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_OSKAR
+		text = "RULE_OPTION_IRE_OSKAR"
+		desc = "RULE_OPTION_IRE_OSKAR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_OSKAR_PU
+		text = "RULE_OPTION_IRE_OSKAR_PU"
+		desc = "RULE_OPTION_IRE_OSKAR_PU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_VARGAS
+		text = "RULE_OPTION_IRE_VARGAS"
+		desc = "RULE_OPTION_IRE_VARGAS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_ONEILL
+		text = "RULE_OPTION_IRE_ONEILL"
+		desc = "RULE_OPTION_IRE_ONEILL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_TRENCH
+		text = "RULE_OPTION_IRE_TRENCH"
+		desc = "RULE_OPTION_IRE_TRENCH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_OBREIN
+		text = "RULE_OPTION_IRE_OBREIN"
+		desc = "RULE_OPTION_IRE_OBREIN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_MCDONNELL
+		text = "RULE_OPTION_IRE_MCDONNELL"
+		desc = "RULE_OPTION_IRE_MCDONNELL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_MCDONNELL_LARPY
+		text = "RULE_OPTION_IRE_MCDONNELL_LARPY"
+		desc = "RULE_OPTION_IRE_MCDONNELL_LARPY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_MCDONNELL_IRISH
+		text = "RULE_OPTION_IRE_MCDONNELL_IRISH"
+		desc = "RULE_OPTION_IRE_MCDONNELL_IRISH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IRE_FUNNY_OBREIN
+		text = "RULE_OPTION_IRE_FUNNY_OBREIN"
+		desc = "RULE_OPTION_IRE_FUNNY_OBREIN_DESC"
+		allow_achievements = yes
+	}
+	
 }
 
 IRE_forpol = {
@@ -736,6 +837,227 @@ HUN_independence = {
 		name = HUN_PATAUT
 		text = "RULE_OPTION_HUN_PATAUT"
 		desc = "RULE_OPTION_HUN_PATAUT_DESC"
+		allow_achievements = yes
+	}
+}
+
+
+BOH_independence = {
+	name = "BOH_INDEPENDENCE"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_BOH_INDEPENDENCE_RANDOM"
+		desc = "RULE_OPTION_BOH_INDEPENDENCE_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_AUSTRIA
+		text = "RULE_OPTION_BOH_AUSTRIA"
+		desc = "RULE_OPTION_BOH_AUSTRIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_AUSTRIA_SOCDEM
+		text = "RULE_OPTION_BOH_AUSTRIA_SOCDEM"
+		desc = "RULE_OPTION_BOH_AUSTRIA_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_AUSTRIA_SOCLIB
+		text = "RULE_OPTION_BOH_AUSTRIA_SOCLIB"
+		desc = "RULE_OPTION_BOH_AUSTRIA_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_AUSTRIA_MARLIB
+		text = "RULE_OPTION_BOH_AUSTRIA_MARLIB"
+		desc = "RULE_OPTION_BOH_AUSTRIA_MARLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_AUSTRIA_SOCCON
+		text = "RULE_OPTION_BOH_AUSTRIA_SOCCON"
+		desc = "RULE_OPTION_BOH_AUSTRIA_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_CZE
+		text = "RULE_OPTION_BOH_CZE"
+		desc = "RULE_OPTION_BOH_CZE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_CZE_SOCDEM
+		text = "RULE_OPTION_BOH_CZE_SOCDEM"
+		desc = "RULE_OPTION_BOH_CZE_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_CZE_SOCLIB
+		text = "RULE_OPTION_BOH_CZE_SOCLIB"
+		desc = "RULE_OPTION_BOH_CZE_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_CZE_MARLIB
+		text = "RULE_OPTION_BOH_CZE_MARLIB"
+		desc = "RULE_OPTION_BOH_CZE_MARLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_CZE_SOCCON
+		text = "RULE_OPTION_BOH_CZE_SOCCON"
+		desc = "RULE_OPTION_BOH_CZE_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_CZE_AUTHDEM
+		text = "RULE_OPTION_BOH_CZE_AUTHDEM"
+		desc = "RULE_OPTION_BOH_CZE_AUTHDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_BOHEMIA
+		text = "RULE_OPTION_BOH_BOHEMIA"
+		desc = "RULE_OPTION_BOH_BOHEMIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_BOHEMIA_SOCDEM
+		text = "RULE_OPTION_BOH_BOHEMIA_SOCDEM"
+		desc = "RULE_OPTION_BOH_BOHEMIA_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_BOHEMIA_SOCLIB
+		text = "RULE_OPTION_BOH_BOHEMIA_SOCLIB"
+		desc = "RULE_OPTION_BOH_BOHEMIA_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_BOHEMIA_MARLIB
+		text = "RULE_OPTION_BOH_BOHEMIA_MARLIB"
+		desc = "RULE_OPTION_BOH_BOHEMIA_MARLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_BOHEMIA_SOCCON
+		text = "RULE_OPTION_BOH_BOHEMIA_SOCCON"
+		desc = "RULE_OPTION_BOH_BOHEMIA_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOH_BOHEMIA_AUTHDEM
+		text = "RULE_OPTION_BOH_BOHEMIA_AUTHDEM"
+		desc = "RULE_OPTION_BOH_BOHEMIA_AUTHDEM_DESC"
+		allow_achievements = yes
+	}
+}
+
+CZE_independence = {
+	name = "CZE_INDEPENDENCE"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_CZE_INDEPENDENCE_RANDOM"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_SOCDEM
+		text = "RULE_OPTION_CZE_INDEPENDENCE_SOCDEM"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_SOCLIB
+		text = "RULE_OPTION_CZE_INDEPENDENCE_SOCLIB"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_SOCLIB_ALT
+		text = "RULE_OPTION_CZE_INDEPENDENCE_SOCLIB_ALT"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_SOCLIB_ALT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_MARLIB
+		text = "RULE_OPTION_CZE_INDEPENDENCE_MARLIB"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_MARLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_MARLIB_SVK
+		text = "RULE_OPTION_CZE_INDEPENDENCE_MARLIB_SVK"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_MARLIB_SVK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_SOCCON
+		text = "RULE_OPTION_CZE_INDEPENDENCE_SOCCON"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_NATIONAL
+		text = "RULE_OPTION_CZE_INDEPENDENCE_NATIONAL"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_NATIONAL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_TRADERS
+		text = "RULE_OPTION_CZE_INDEPENDENCE_TRADERS"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_TRADERS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_ALCOHOL
+		text = "RULE_OPTION_CZE_INDEPENDENCE_ALCOHOL"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_ALCOHOL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_SYNDIE
+		text = "RULE_OPTION_CZE_INDEPENDENCE_SYNDIE"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_SYNDIE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_TOTALIST
+		text = "RULE_OPTION_CZE_INDEPENDENCE_TOTALIST"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_TOTALIST_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_KINGDOM_LOBKOWICZ
+		text = "RULE_OPTION_CZE_INDEPENDENCE_KINGDOM_LOBKOWICZ"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_KINGDOM_LOBKOWICZ_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_KINGDOM_SCHWARZENBURG
+		text = "RULE_OPTION_CZE_INDEPENDENCE_KINGDOM_SCHWARZENBURG"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_KINGDOM_SCHWARZENBURG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_HUSSITE_REPUBLIC
+		text = "RULE_OPTION_CZE_INDEPENDENCE_HUSSITE_REPUBLIC"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_HUSSITE_REPUBLIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_HUSSITE_KINGDOM
+		text = "RULE_OPTION_CZE_INDEPENDENCE_HUSSITE_KINGDOM"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_HUSSITE_KINGDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_INDEPENDENCE_VLAJKA
+		text = "RULE_OPTION_CZE_INDEPENDENCE_VLAJKA"
+		desc = "RULE_OPTION_CZE_INDEPENDENCE_VLAJKA_DESC"
 		allow_achievements = yes
 	}
 }
@@ -1251,43 +1573,55 @@ LOM_foreign_policy = {
 	}
 }
 
-SRD_reform = {
-	name = "SRD_REFORM"
+SRD_path = {
+	name = SRD_PATH
 	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
 	option = {
 		name = DEFAULT
-		text = "RULE_OPTION_SRD_REFORM_RANDOM"
-		desc = "RULE_OPTION_SRD_REFORM_RANDOM_DESC"
+		text = RULE_OPTION_SRD_PATH_RANDOM
+		desc = RULE_OPTION_SRD_PATH_RANDOM_DESC
 		allow_achievements = yes
 	}
 	option = {
-		name = SRD_REFORM_DEMOCRACY_SOCLIB
-		text = "RULE_OPTION_SRD_REFORM_DEMOCRACY_SOCLIB"
-		desc = "RULE_OPTION_SRD_REFORM_DEMOCRACY_SOCLIB_DESC"
+		name = SRD_PATH_PATAUT
+		text = RULE_OPTION_SRD_PATH_PATAUT
+		desc = RULE_OPTION_SRD_PATH_PATAUT_DESC
 		allow_achievements = yes
 	}
 	option = {
-		name = SRD_REFORM_DEMOCRACY_MARLIB
-		text = "RULE_OPTION_SRD_REFORM_DEMOCRACY_MARLIB"
-		desc = "RULE_OPTION_SRD_REFORM_DEMOCRACY_MARLIB_DESC"
+		name = SRD_PATH_AUTDEM
+		text = RULE_OPTION_SRD_PATH_AUTDEM
+		desc = RULE_OPTION_SRD_PATH_AUTDEM_DESC
 		allow_achievements = yes
 	}
 	option = {
-		name = SRD_REFORM_DEMOCRACY_SOCCON
-		text = "RULE_OPTION_SRD_REFORM_DEMOCRACY_SOCCON"
-		desc = "RULE_OPTION_SRD_REFORM_DEMOCRACY_SOCCON_DESC"
+		name = SRD_PATH_AUT_MARLIB
+		text = RULE_OPTION_SRD_PATH_AUT_MARLIB
+		desc = RULE_OPTION_SRD_PATH_AUT_MARLIB_DESC
 		allow_achievements = yes
 	}
 	option = {
-		name = SRD_REFORM_DEMOCRACY_SOCDEM
-		text = "RULE_OPTION_SRD_REFORM_DEMOCRACY_SOCDEM"
-		desc = "RULE_OPTION_SRD_REFORM_DEMOCRACY_SOCDEM_DESC"
+		name = SRD_PATH_SOCCON
+		text = RULE_OPTION_SRD_PATH_SOCCON
+		desc = RULE_OPTION_SRD_PATH_SOCCON_DESC
 		allow_achievements = yes
 	}
 	option = {
-		name = SRD_REFORM_ABSOLUTE
-		text = "RULE_OPTION_SRD_REFORM_ABSOLUTE"
-		desc = "RULE_OPTION_SRD_REFORM_ABSOLUTE_DESC"
+		name = SRD_PATH_MARLIB
+		text = RULE_OPTION_SRD_PATH_MARLIB
+		desc = RULE_OPTION_SRD_PATH_MARLIB_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = SRD_PATH_SOCLIB
+		text = RULE_OPTION_SRD_PATH_SOCLIB
+		desc = RULE_OPTION_SRD_PATH_SOCLIB_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = SRD_PATH_SOCDEM
+		text = RULE_OPTION_SRD_PATH_SOCDEM
+		desc = RULE_OPTION_SRD_PATH_SOCDEM_DESC
 		allow_achievements = yes
 	}
 }
@@ -2383,6 +2717,24 @@ FIN_future = {
 		allow_achievements = yes
 	}
 	option = {
+		name = FIN_FUTURE_KINGDOM_SOCCON
+		text = "RULE_OPTION_FIN_FUTURE_KINGDOM_SOCCON"
+		desc = "RULE_OPTION_FIN_FUTURE_KINGDOM_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIN_FUTURE_DEMOCRACY
+		text = "RULE_OPTION_FIN_FUTURE_DEMOCRACY"
+		desc = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIN_FUTURE_DEMOCRACY_PEOPLES_UNION #SocDem
+		text = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_PEOPLES_UNION"
+		desc = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_PEOPLES_UNION_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = FIN_FUTURE_DEMOCRACY_SOCDEM #SocDem
 		text = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_SOCDEM"
 		desc = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_SOCDEM_DESC"
@@ -2401,6 +2753,12 @@ FIN_future = {
 		allow_achievements = yes
 	}
 	option = {
+		name = FIN_FUTURE_DEMOCRACY_NATIONAL_PROGRESSIVE #MarLib
+		text = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_NATIONAL_PROGRESSIVE"
+		desc = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_NATIONAL_PROGRESSIVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = FIN_FUTURE_DEMOCRACY_NATIONAL_COALITION #SocCon
 		text = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_NATIONAL_COALITION"
 		desc = "RULE_OPTION_FIN_FUTURE_DEMOCRACY_NATIONAL_COALITION_DESC"
@@ -2416,6 +2774,12 @@ FIN_future = {
 		name = FIN_FUTURE_LAPUA
 		text = "RULE_OPTION_FIN_FUTURE_LAPUA"
 		desc = "RULE_OPTION_FIN_FUTURE_LAPUA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIN_FUTURE_RADSOC
+		text = "RULE_OPTION_FIN_FUTURE_RADSOC"
+		desc = "RULE_OPTION_FIN_FUTURE_RADSOC_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -2475,6 +2839,12 @@ FIN_foreign_policy = {
 		name = FIN_FOREIGN_POLICY_NORDIC
 		text = "RULE_OPTION_FIN_FOREIGN_POLICY_NORDIC"
 		desc = "RULE_OPTION_FIN_FOREIGN_POLICY_NORDIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIN_FOREIGN_POLICY_ENTENTE
+		text = "RULE_OPTION_FIN_FOREIGN_POLICY_ENTENTE"
+		desc = "RULE_OPTION_FIN_FOREIGN_POLICY_ENTENTE_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -3995,27 +4365,15 @@ PLC_prime_minister = {
 		allow_achievements = yes
 	}
 	option = {
-		name = PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST_GERMAN_INTERVENTION
-		text = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST_GERMAN_INTERVENTION"
-		desc = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST_GERMAN_INTERVENTION_DESC"
+		name = PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST
+		text = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST"
+		desc = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST_GERMAN_ACQUIESCENCE
-		text = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST_GERMAN_ACQUIESCENCE"
-		desc = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_NATIONALIST_GERMAN_ACQUIESCENCE_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST_GERMAN_INTERVENTION
-		text = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST_GERMAN_INTERVENTION"
-		desc = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST_GERMAN_INTERVENTION_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST_GERMAN_ACQUIESCENCE
-		text = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST_GERMAN_ACQUIESCENCE"
-		desc = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST_GERMAN_ACQUIESCENCE_DESC"
+		name = PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST
+		text = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST"
+		desc = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_SYNDICALIST_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -4028,6 +4386,12 @@ PLC_prime_minister = {
 		name = PLC_PRIME_MINISTER_DEMOCRACY_DEMOCRACTIC_SOCLIB
 		text = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_DEMOCRACTIC_SOCLIB"
 		desc = "RULE_OPTION_PLC_PRIME_MINISTER_DEMOCRACY_DEMOCRACTIC_SOCLIB_DESC"
+		allow_achievements = yes
+	}	
+	option = {
+		name = PLC_PRIME_MINISTER_BECK #Beck
+		text = "RULE_OPTION_PLC_PRIME_MINISTER_BECK"
+		desc = "RULE_OPTION_PLC_PRIME_MINISTER_BECK_DESC"
 		allow_achievements = yes
 	}
 }
@@ -4083,15 +4447,32 @@ PLC_foreign_policy = {
 		allow_achievements = yes
 	}
 	option = {
-		name = PLC_FOREIGN_POLICY_NEUTRAL_GERMAN_INTERVENTION
-		text = "RULE_OPTION_PLC_FOREIGN_POLICY_NEUTRAL_GERMAN_INTERVENTION"
-		desc = "RULE_OPTION_PLC_FOREIGN_POLICY_NEUTRAL_GERMAN_INTERVENTION_DESC"
+		name = PLC_FOREIGN_POLICY_NEUTRAL
+		text = "RULE_OPTION_PLC_FOREIGN_POLICY_NEUTRAL"
+		desc = "RULE_OPTION_PLC_FOREIGN_POLICY_NEUTRAL_DESC"
+		allow_achievements = yes
+	}
+}
+
+POL_german_internvation = {
+	name = "POL_GERMAN_INTERVENTION"
+	group = "RULE_GROUP_KAISERREICH_RULES_EASTERN_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_POL_GERMAN_INTERVENTION_RANDOM"
+		desc = "RULE_OPTION_POL_GERMAN_INTERVENTION_RANDOM_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = PLC_FOREIGN_POLICY_NEUTRAL_GERMAN_ACQUIESCENCE
-		text = "RULE_OPTION_PLC_FOREIGN_POLICY_NEUTRAL_GERMAN_ACQUIESCENCE"
-		desc = "RULE_OPTION_PLC_FOREIGN_POLICY_NEUTRAL_GERMAN_ACQUIESCENCE_DESC"
+		name = POL_GERMAN_INTERVENTION_TRUE
+		text = "RULE_OPTION_POL_GERMAN_INTERVENTION_TRUE"
+		desc = "RULE_OPTION_POL_GERMAN_INTERVENTION_TRUE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = POL_GERMAN_INTERVENTION_FALSE
+		text = "RULE_OPTION_POL_GERMAN_INTERVENTION_FALSE"
+		desc = "RULE_OPTION_POL_GERMAN_INTERVENTION_FALSE_DESC"
 		allow_achievements = yes
 	}
 }
@@ -4126,6 +4507,12 @@ ROM_transylvania_revolt = {
 		name = DEFAULT
 		text = "RULE_OPTION_ROM_TRANSYLVANIA_REVOLT_RANDOM"
 		desc = "RULE_OPTION_ROM_TRANSYLVANIA_REVOLT_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROM_TRANSYLVANIA_REVOLT_PLAYER
+		text = "RULE_OPTION_ROM_TRANSYLVANIA_REVOLT_PLAYER"
+		desc = "RULE_OPTION_ROM_TRANSYLVANIA_REVOLT_PLAYER_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -4771,14 +5158,56 @@ WHR_situation = {
 	group = "RULE_GROUP_KAISERREICH_RULES_EASTERN_EUROPE"
 	option = {
 		name = DEFAULT
-		text = "RULE_OPTION_WHR_SITUATION_RANDOM"
-		desc = "RULE_OPTION_WHR_SITUATION_RANDOM_DESC"
+		text = "WHR_SITUATION_RANDOM"
+		desc = "WHR_SITUATION_RANDOM_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_SITUATION_ULADZIMIR_DEMOCRACY_SOCIAL_CONSERVATIVE_BNP
-		text = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_SOCIAL_CONSERVATIVE_BNP"
-		desc = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_SOCIAL_CONSERVATIVE_BNP_DESC"
+		name = WHR_SITUATION_ANARCHISTS_TOT
+		text = "WHR_SITUATION_ANARCHISTS_TOT"
+		desc = "WHR_SITUATION_ANARCHISTS_TOT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WHR_SITUATION_ANARCHISTS_RADSOC
+		text = "WHR_SITUATION_ANARCHISTS_RADSOC"
+		desc = "WHR_SITUATION_ANARCHISTS_RADSOC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WHR_SITUATION_BRA
+		text = "WHR_SITUATION_BRA"
+		desc = "WHR_SITUATION_BRA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WHR_SITUATION_BPSR
+		text = "WHR_SITUATION_BPSR"
+		desc = "WHR_SITUATION_BPSR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WHR_SITUATION_BSRH
+		text = "WHR_SITUATION_BSRH"
+		desc = "WHR_SITUATION_BSRH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WHR_SITUATION_BSDP
+		text = "WHR_SITUATION_BSDP"
+		desc = "WHR_SITUATION_BSDP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WHR_SITUATION_BSDP_KING
+		text = "WHR_SITUATION_BSDP_KING"
+		desc = "WHR_SITUATION_BSDP_KING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WHR_SITUATION_BPSF
+		text = "WHR_SITUATION_BPSF"
+		desc = "WHR_SITUATION_BPSF_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -4788,69 +5217,27 @@ WHR_situation = {
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_SITUATION_ULADZIMIR_DEMOCRACY_SOCIAL_DEMOCRAT_BSDP
-		text = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_SOCIAL_DEMOCRAT_BSDP"
-		desc = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_SOCIAL_DEMOCRAT_BSDP_DESC"
+		name = WHR_SITUATION_BNP
+		text = "WHR_SITUATION_BNP"
+		desc = "WHR_SITUATION_BNP_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_SITUATION_RADICAL_SOCIALIST_BSDP_GERMAN_INTERVENTION
-		text = "WHR_SITUATION_RADICAL_SOCIALIST_BSDP_GERMAN_INTERVENTION"
-		desc = "WHR_SITUATION_RADICAL_SOCIALIST_BSDP_GERMAN_INTERVENTION_DESC"
+		name = WHR_SITUATION_CENTRAL_RADA
+		text = "WHR_SITUATION_CENTRAL_RADA"
+		desc = "WHR_SITUATION_CENTRAL_RADA_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_SITUATION_RADICAL_SOCIALIST_BSDP_GERMAN_ACQUIESCENCE
-		text = "WHR_SITUATION_RADICAL_SOCIALIST_BSDP_GERMAN_ACQUIESCENCE"
-		desc = "WHR_SITUATION_RADICAL_SOCIALIST_BSDP_GERMAN_ACQUIESCENCE_DESC"
+		name = WHR_SITUATION_SIGISMUND_COUP
+		text = "WHR_SITUATION_SIGISMUND_COUP"
+		desc = "WHR_SITUATION_SIGISMUND_COUP_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_SITUATION_MONBOL_GERMAN_INTERVENTION
-		text = "WHR_SITUATION_MONBOL_GERMAN_INTERVENTION"
-		desc = "WHR_SITUATION_MONBOL_GERMAN_INTERVENTION_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_SITUATION_MONBOL_GERMAN_ACQUIESCENCE
-		text = "WHR_SITUATION_MONBOL_GERMAN_ACQUIESCENCE"
-		desc = "WHR_SITUATION_MONBOL_GERMAN_ACQUIESCENCE_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_SITUATION_BPSF_GERMAN_INTERVENTION
-		text = "WHR_SITUATION_BPSF_GERMAN_INTERVENTION"
-		desc = "WHR_SITUATION_BPSF_GERMAN_INTERVENTION_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_SITUATION_BPSF_GERMAN_ACQUIESCENCE
-		text = "WHR_SITUATION_BPSF_GERMAN_ACQUIESCENCE"
-		desc = "WHR_SITUATION_BPSF_GERMAN_ACQUIESCENCE_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_SITUATION_ULADZIMIR_DEMOCRACY_SYNDICALIST_BPSR_GERMAN_INTERVENTION
-		text = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_SYNDICALIST_BPSR_GERMAN_INTERVENTION"
-		desc = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_SYNDICALIST_BPSR_GERMAN_INTERVENTION_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_SITUATION_ULADZIMIR_DEMOCRACY_SYNDICALIST_BPSR_GERMAN_ACQUIESCENCE
-		text = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_SYNDICALIST_BPSR_GERMAN_ACQUIESCENCE"
-		desc = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_SYNDICALIST_BPSR_GERMAN_ACQUIESCENCE_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_SITUATION_ULADZIMIR_DEMOCRACY_TOTALIST_KPB_GERMAN_INTERVENTION
-		text = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_TOTALIST_KPB_GERMAN_INTERVENTION"
-		desc = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_TOTALIST_KPB_GERMAN_INTERVENTION_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_SITUATION_ULADZIMIR_DEMOCRACY_TOTALIST_KPB_GERMAN_ACQUIESCENCE
-		text = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_TOTALIST_KPB_GERMAN_ACQUIESCENCE"
-		desc = "RULE_OPTION_WHR_SITUATION_ULADZIMIR_DEMOCRACY_TOTALIST_KPB_GERMAN_ACQUIESCENCE_DESC"
+		name = WHR_SITUATION_GERMAN_GOVERNMENT
+		text = "WHR_SITUATION_GERMAN_GOVERNMENT"
+		desc = "WHR_SITUATION_GERMAN_GOVERNMENT_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -4860,25 +5247,35 @@ WHR_situation = {
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_SITUATION_SIGISMUND_COUP
-		text = "RULE_OPTION_WHR_SITUATION_SIGISMUND_COUP"
-		desc = "RULE_OPTION_WHR_SITUATION_SIGISMUND_COUP_DESC"
+		name = WHR_SITUATION_KRYVIA
+		text = "WHR_SITUATION_KRYVIA"
+		desc = "WHR_SITUATION_KRYVIA_DESC"
+		allow_achievements = yes
+	}	
+}
+
+WHR_german_intervention = {
+	name = "WHR_GERMAN_INTERVENTION"
+	group = "RULE_GROUP_KAISERREICH_RULES_EASTERN_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_WHR_GERMAN_INTERVENTION_RANDOM"
+		desc = "RULE_OPTION_WHR_GERMAN_INTERVENTION_RANDOM_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_FUTURE_CENTRAL_RADA
-		text = "RULE_OPTION_WHR_FUTURE_CENTRAL_RADA"
-		desc = "RULE_OPTION_WHR_FUTURE_CENTRAL_RADA_DESC"
+		name = WHR_GERMAN_INTERVENTION_TRUE
+		text = "RULE_OPTION_WHR_GERMAN_INTERVENTION_TRUE"
+		desc = "RULE_OPTION_WHR_GERMAN_INTERVENTION_TRUE_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_FUTURE_KRYVIA
-		text = "RULE_OPTION_WHR_FUTURE_KRYVIA"
-		desc = "RULE_OPTION_WHR_FUTURE_KRYVIA_DESC"
+		name = WHR_GERMAN_INTERVENTION_FALSE
+		text = "RULE_OPTION_WHR_GERMAN_INTERVENTION_FALSE"
+		desc = "RULE_OPTION_WHR_GERMAN_iNTERVENTION_FALSE_DESC"
 		allow_achievements = yes
 	}
 }
-
 WHR_foreign_policy = {
 	name = "WHR_FOREIGN_POLICY"
 	group = "RULE_GROUP_KAISERREICH_RULES_EASTERN_EUROPE"
@@ -4895,27 +5292,9 @@ WHR_foreign_policy = {
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_INTERVENTION
-		text = "RULE_OPTION_WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_INTERVENTION"
-		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_INTERVENTION_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_ACQUIESCENCE
-		text = "RULE_OPTION_WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_ACQUIESCENCE"
-		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_ACQUIESCENCE_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_INTERVENTION
-		text = "RULE_OPTION_WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_INTERVENTION"
-		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_INTERVENTION_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_ACQUIESCENCE
-		text = "RULE_OPTION_WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_ACQUIESCENCE"
-		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_ACQUIESCENCE_DESC"
+		name = WHR_FOREIGN_POLICY_NEUTRALITY
+		text = "RULE_OPTION_WHR_FOREIGN_POLICY_NEUTRALITY"
+		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_NEUTRALITY_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -4925,21 +5304,9 @@ WHR_foreign_policy = {
 		allow_achievements = yes
 	}
 	option = {
-		name = WHR_FOREIGN_POLICY_RUSSIA_FAIL
-		text = "RULE_OPTION_WHR_FOREIGN_POLICY_RUSSIA_FAIL"
-		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_RUSSIA_FAIL_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_FOREIGN_POLICY_RUSSIA_GERMAN_INTERVENTION
-		text = "RULE_OPTION_WHR_FOREIGN_POLICY_RUSSIA_GERMAN_INTERVENTION"
-		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_RUSSIA_GERMAN_INTERVENTION_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = WHR_FOREIGN_POLICY_RUSSIA_GERMAN_ACQUIESCENCE
-		text = "RULE_OPTION_WHR_FOREIGN_POLICY_RUSSIA_GERMAN_ACQUIESCENCE"
-		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_RUSSIA_GERMAN_ACQUIESCENCE_DESC"
+		name = WHR_FOREIGN_POLICY_RUSSIA_SECRET_PACT
+		text = "RULE_OPTION_WHR_FOREIGN_POLICY_RUSSIA_SECRET_PACT"
+		desc = "RULE_OPTION_WHR_FOREIGN_POLICY_RUSSIA_SECRET_PACT_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -5084,7 +5451,7 @@ OTT_russian_deal = {
 
 TUR_path = {
 	name = TUR_PATH
-	group = RULE_GROUP_KAISERREICH_RULES_EUROPE
+	group = RULE_GROUP_KAISERREICH_RULES_BALKAN
 	option = {
 		name = DEFAULT
 		text = RULE_OPTION_TUR_PATH_RANDOM
@@ -5119,7 +5486,7 @@ TUR_path = {
 
 TUR_forpol = {
 	name = TUR_FORPOL
-	group = RULE_GROUP_KAISERREICH_RULES_EUROPE
+	group = RULE_GROUP_KAISERREICH_RULES_BALKAN
 	option = {
 		name = DEFAULT
 		text = RULE_OPTION_TUR_FORPOL_RANDOM
@@ -5392,6 +5759,60 @@ ALB_election = {
 		desc = "RULE_OPTION_ALB_ELECTION_KING_ZOGU_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = ALB_ELECTION_KING_WIED
+		text = "RULE_OPTION_ALB_ELECTION_KING_WIED"
+		desc = "RULE_OPTION_ALB_ELECTION_KING_WIED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_ELECTION_HOXHA_UTOPIA
+		text = "RULE_OPTION_ALB_ELECTION_HOXHA_UTOPIA"
+		desc = "RULE_OPTION_ALB_ELECTION_HOXHA_UTOPIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_ELECTION_HOXHA_ARDLYRIA
+		text = "RULE_OPTION_ALB_ELECTION_HOXHA_ARDLYRIA"
+		desc = "RULE_OPTION_ALB_ELECTION_HOXHA_ARDLYRIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_ELECTION_HOXHA_ODRYSIA
+		text = "RULE_OPTION_ALB_ELECTION_HOXHA_ODRYSIA"
+		desc = "RULE_OPTION_ALB_ELECTION_HOXHA_ODRYSIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_ELECTION_HOXHA_PELASGIA
+		text = "RULE_OPTION_ALB_ELECTION_HOXHA_PELASGIA"
+		desc = "RULE_OPTION_ALB_ELECTION_HOXHA_PELASGIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_ELECTION_XOXE
+		text = "RULE_OPTION_ALB_ELECTION_XOXE"
+		desc = "RULE_OPTION_ALB_ELECTION_XOXE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_ELECTION_MALESHOVA
+		text = "RULE_OPTION_ALB_ELECTION_MALESHOVA"
+		desc = "RULE_OPTION_ALB_ELECTION_MALESHOVA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_ELECTION_FUNDO
+		text = "RULE_OPTION_ALB_ELECTION_FUNDO"
+		desc = "RULE_OPTION_ALB_ELECTION_FUNDO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_ELECTION_NEXHIJME
+		text = "RULE_OPTION_ALB_ELECTION_NEXHIJME"
+		desc = "RULE_OPTION_ALB_ELECTION_NEXHIJME_DESC"
+		allow_achievements = yes
+	}
 }
 
 ALB_foreign_policy = {
@@ -5413,6 +5834,12 @@ ALB_foreign_policy = {
 		name = ALB_FOREIGN_POLICY_AUSTRIA
 		text = "RULE_OPTION_ALB_FOREIGN_POLICY_AUSTRIA"
 		desc = "RULE_OPTION_ALB_FOREIGN_POLICY_AUSTRIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALB_FOREIGN_POLICY_RUSSIA
+		text = "RULE_OPTION_ALB_FOREIGN_POLICY_RUSSIA"
+		desc = "RULE_OPTION_ALB_FOREIGN_POLICY_RUSSIA_DESC"
 		allow_achievements = yes
 	}
 }
@@ -5661,6 +6088,12 @@ GRE_foreign_policy = {
 		allow_achievements = yes
 	}
 	option = {
+		name = GRE_FOREIGN_POLICY_RUSSIA
+		text = "RULE_OPTION_GRE_FOREIGN_POLICY_RUSSIA"
+		desc = "RULE_OPTION_GRE_FOREIGN_POLICY_RUSSIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = GRE_FOREIGN_POLICY_INTERNATIONALE
 		text = "RULE_OPTION_GRE_FOREIGN_POLICY_INTERNATIONALE"
 		desc = "RULE_OPTION_GRE_FOREIGN_POLICY_INTERNATIONALE_DESC"
@@ -5856,11 +6289,10 @@ GEO_path = {
 		desc = "RULE_OPTION_GEO_PATH_GRAINEATER_DESC"
 		allow_achievements = yes
 	}
-	
 	option = {
-		name = GEO_PATH_MENSHEVIK_SOCLIB
-		text = "RULE_OPTION_GEO_PATH_MENSHEVIK_SOCLIB"
-		desc = "RULE_OPTION_GEO_PATH_MENSHEVIK_SOCLIB_DESC"
+		name = GEO_PATH_RADSOC
+		text = "RULE_OPTION_GEO_PATH_RADSOC"
+		desc = "RULE_OPTION_GEO_PATH_RADSOC_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -5870,9 +6302,45 @@ GEO_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = GEO_PATH_MENSHEVIK_SOCLIB
+		text = "RULE_OPTION_GEO_PATH_MENSHEVIK_SOCLIB"
+		desc = "RULE_OPTION_GEO_PATH_MENSHEVIK_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEO_PATH_SOCLIB
+		text = "RULE_OPTION_GEO_PATH_SOCLIB"
+		desc = "RULE_OPTION_GEO_PATH_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEO_PATH_RADSOC_SOCLIB
+		text = "RULE_OPTION_GEO_PATH_RADSOC_SOCLIB"
+		desc = "RULE_OPTION_GEO_PATH_RADSOC_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEO_PATH_SOCLIB_RADSOC
+		text = "RULE_OPTION_GEO_PATH_SOCLIB_RADSOC"
+		desc = "RULE_OPTION_GEO_PATH_SOCLIB_RADSOC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEO_PATH_MARLIB
+		text = "RULE_OPTION_GEO_PATH_MARLIB"
+		desc = "RULE_OPTION_GEO_PATH_MARLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = GEO_PATH_SOCCON
 		text = "RULE_OPTION_GEO_PATH_SOCCON"
 		desc = "RULE_OPTION_GEO_PATH_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEO_PATH_MARLIB_KINGDOM
+		text = "RULE_OPTION_GEO_PATH_MARLIB_KINGDOM"
+		desc = "RULE_OPTION_GEO_PATH_MARLIB_KINGDOM_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -5882,9 +6350,21 @@ GEO_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = GEO_PATH_AUTHDEM
+		text = "RULE_OPTION_GEO_PATH_AUTHDEM"
+		desc = "RULE_OPTION_GEO_PATH_AUTHDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = GEO_PATH_ABSOLUTIST
 		text = "RULE_OPTION_GEO_PATH_ABSOLUTIST"
 		desc = "RULE_OPTION_GEO_PATH_ABSOLUTIST_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GEO_PATH_NATPOP
+		text = "RULE_OPTION_GEO_PATH_NATPOP"
+		desc = "RULE_OPTION_GEO_PATH_NATPOP_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -5893,6 +6373,70 @@ GEO_path = {
 		desc = "RULE_OPTION_GEO_PATH_GEO_PATH_MENSHEVIK_REBEL_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = GEO_PATH_MENSHEVIK_REBEL_JUGELI
+		text = "RULE_OPTION_GEO_PATH_GEO_PATH_MENSHEVIK_REBEL_JUGELI"
+		desc = "RULE_OPTION_GEO_PATH_GEO_PATH_MENSHEVIK_REBEL_JUGELI_DESC"
+		allow_achievements = yes
+	}
+}
+ABK_fate = {
+	name = "ABK_EXISTING"
+	group = "RULE_GROUP_KAISERREICH_RULES_CAUCASUS"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_ABK_RANDOM"
+		desc = "RULE_OPTION_ABK_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ABK_GUARANTEED
+		text = "RULE_OPTION_ABK_GUARANTEED"
+		desc = "RULE_OPTION_ABK_GUARANTEED_DESC"
+		allow_achievements = yes
+	}
+}
+
+ABK_path = {
+	name = "ABK_PATH"
+	group = "RULE_GROUP_KAISERREICH_RULES_CAUCASUS"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_ABK_PATH_RANDOM"
+		desc = "RULE_OPTION_ABK_PATH_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ABK_KIARAZ_NATIONALIST
+		text = "RULE_OPTION_ABK_KIARAZ_NATIONALIST"
+		desc = "RULE_OPTION_ABK_KIARAZ_NATIONALIST_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = ABK_KIARAZ_COMMUNIST
+		text = "RULE_OPTION_ABK_KIARAZ_COMMUNIST"
+		desc = "RULE_OPTION_ABK_KIARAZ_COMMUNIST_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ABK_SPDA
+		text = "RULE_OPTION_ABK_SPDA"
+		desc = "RULE_OPTION_ABK_SPDA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ABK_KINGDOM
+		text = "RULE_OPTION_ABK_KINGDOM"
+		desc = "RULE_OPTION_ABK_KINGDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ABK_BASARIA
+		text = "RULE_OPTION_ABK_BASARIA"
+		desc = "RULE_OPTION_ABK_BASARIA_DESC"
+		allow_achievements = yes
+	}	
 }
 ARM_path = {
 	name = ARM_PATH
@@ -5916,9 +6460,27 @@ ARM_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = ARM_PATH_AUTHDEM
+		text = RULE_OPTION_ARM_PATH_AUTDEM
+		desc = RULE_OPTION_ARM_PATH_AUTDEM_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = ARM_PATH_SOCCON
+		text = RULE_OPTION_ARM_PATH_SOCCON
+		desc = RULE_OPTION_ARM_PATH_SOCCON_DESC
+		allow_achievements = yes
+	}
+	option = {
 		name = ARM_PATH_MARLIB
 		text = RULE_OPTION_ARM_PATH_MARLIB
 		desc = RULE_OPTION_ARM_PATH_MARLIB_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = ARM_PATH_SOCLIB
+		text = RULE_OPTION_ARM_PATH_SOCLIB
+		desc = RULE_OPTION_ARM_PATH_SOCLIB_DESC
 		allow_achievements = yes
 	}
 	option = {
@@ -5957,6 +6519,12 @@ ARM_forpol = {
 		allow_achievements = yes
 	}
 	option = {
+		name = ARM_FORPOL_PER
+		text = RULE_OPTION_ARM_FORPOL_PER
+		desc = RULE_OPTION_ARM_FORPOL_PER_DESC
+		allow_achievements = yes
+	}
+	option = {
 		name = ARM_FORPOL_RUS
 		text = RULE_OPTION_ARM_FORPOL_RUS
 		desc = RULE_OPTION_ARM_FORPOL_RUS_DESC
@@ -5987,21 +6555,45 @@ CAN_political_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = CAN_POLITICAL_PATH_LIBERAL_SOCDEM
+		text = "RULE_OPTION_CAN_POLITICAL_PATH_LIBERAL_SOCDEM"
+		desc = "RULE_OPTION_CAN_POLITICAL_PATH_LIBERAL_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = CAN_POLITICAL_PATH_CONSERVATIVE
 		text = "RULE_OPTION_CAN_POLITICAL_PATH_CONSERVATIVE"
 		desc = "RULE_OPTION_CAN_POLITICAL_PATH_CONSERVATIVE_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = CAN_POLITICAL_PATH_AUTHORITARIAN
-		text = "RULE_OPTION_CAN_POLITICAL_PATH_AUTHORITARIAN"
-		desc = "RULE_OPTION_CAN_POLITICAL_PATH_AUTHORITARIAN_DESC"
+		name = CAN_POLITICAL_PATH_SOCCRED_AUTDEM
+		text = "RULE_OPTION_CAN_POLITICAL_PATH_SOCCRED_AUTDEM"
+		desc = "RULE_OPTION_CAN_POLITICAL_PATH_SOCCRED_AUTDEM_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = CAN_POLITICAL_PATH_LIBERAL_SOCDEM
-		text = "RULE_OPTION_CAN_POLITICAL_PATH_LIBERAL_SOCDEM"
-		desc = "RULE_OPTION_CAN_POLITICAL_PATH_LIBERAL_SOCDEM_DESC"
+		name = CAN_POLITICAL_PATH_SOCCRED_PATAUT
+		text = "RULE_OPTION_CAN_POLITICAL_PATH_SOCCRED_PATAUT"
+		desc = "RULE_OPTION_CAN_POLITICAL_PATH_SOCCRED_PATAUT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CAN_POLITICAL_PATH_ABSOLUTE_MONARCHY
+		text = "RULE_OPTION_CAN_POLITICAL_PATH_ABSOLUTE_MONARCHY"
+		desc = "RULE_OPTION_CAN_POLITICAL_PATH_ABSOLUTE_MONARCHY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CAN_POLITICAL_PATH_ABSOLUTE_MONARCHY_UK
+		text = "RULE_OPTION_CAN_POLITICAL_PATH_ABSOLUTE_MONARCHY_UK"
+		desc = "RULE_OPTION_CAN_POLITICAL_PATH_ABSOLUTE_MONARCHY_UK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CAN_POLITICAL_PATH_NATPOP
+		text = "RULE_OPTION_CAN_POLITICAL_PATH_NATPOP"
+		desc = "RULE_OPTION_CAN_POLITICAL_PATH_NATPOP_DESC"
 		allow_achievements = yes
 	}
 }
@@ -6366,6 +6958,18 @@ ALA_independence = {
 		desc = "RULE_OPTION_ALA_INDEPENDENCE_GUARENTEE_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = ALA_INDEPENDENCE_CANADA
+		text = "RULE_OPTION_ALA_INDEPENDENCE_CANADA"
+		desc = "RULE_OPTION_ALA_INDEPENDENCE_CANADA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALA_INDEPENDENCE_PSA
+		text = "RULE_OPTION_ALA_INDEPENDENCE_PSA"
+		desc = "RULE_OPTION_ALA_INDEPENDENCE_PSA_DESC"
+		allow_achievements = yes
+	}
 }
 
 ALA_POLITICAL_PATH = {
@@ -6482,6 +7086,269 @@ NYC_independence = {
 		name = NYC_FED
 		text = "RULE_OPTION_NYC_FED"
 		desc = "RULE_OPTION_NYC_FED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INTERVENE_ACW
+		text = "RULE_OPTION_NYC_INTERVENE_ACW"
+		desc = "RULE_OPTION_NYC_INTERVENE_ACW_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_ENTENTE
+		text = "RULE_OPTION_NYC_INDEP_ENTENTE"
+		desc = "RULE_OPTION_NYC_INDEP_ENTENTE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_REICHSPAKT
+		text = "RULE_OPTION_NYC_INDEP_REICHSPAKT"
+		desc = "RULE_OPTION_NYC_INDEP_REICHSPAKT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_INTERNATIONALE
+		text = "RULE_OPTION_NYC_INDEP_INTERNATIONALE"
+		desc = "RULE_OPTION_NYC_INDEP_INTERNATIONALE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_AUSTRIA
+		text = "RULE_OPTION_NYC_INDEP_AUSTRIA"
+		desc = "RULE_OPTION_NYC_INDEP_AUSTRIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_ITALY
+		text = "RULE_OPTION_NYC_INDEP_ITALY"
+		desc = "RULE_OPTION_NYC_INDEP_ITALY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_KIMBANGU
+		text = "RULE_OPTION_NYC_INDEP_KIMBANGU"
+		desc = "RULE_OPTION_NYC_INDEP_KIMBANGU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_KIVU
+		text = "RULE_OPTION_NYC_INDEP_KIVU"
+		desc = "RULE_OPTION_NYC_INDEP_KIVU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_HAITI
+		text = "RULE_OPTION_NYC_INDEP_HAITI"
+		desc = "RULE_OPTION_NYC_INDEP_HAITI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_MAUMAU
+		text = "RULE_OPTION_NYC_INDEP_MAUMAU"
+		desc = "RULE_OPTION_NYC_INDEP_MAUMAU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST
+		text = "RULE_OPTION_NYC_CONQUEST"
+		desc = "RULE_OPTION_NYC_CONQUEST_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_ENTENTE
+		text = "RULE_OPTION_NYC_CONQUEST_ENTENTE"
+		desc = "RULE_OPTION_NYC_CONQUEST_ENTENTE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_REICHSPAKT
+		text = "RULE_OPTION_NYC_CONQUEST_REICHSPAKT"
+		desc = "RULE_OPTION_NYC_CONQUEST_REICHSPAKT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_INTERNATIONALE
+		text = "RULE_OPTION_NYC_CONQUEST_INTERNATIONALE"
+		desc = "RULE_OPTION_NYC_CONQUEST_INTERNATIONALE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_AUSTRIA
+		text = "RULE_OPTION_NYC_CONQUEST_AUSTRIA"
+		desc = "RULE_OPTION_NYC_CONQUEST_AUSTRIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_ITALY
+		text = "RULE_OPTION_NYC_CONQUEST_ITALY"
+		desc = "RULE_OPTION_NYC_CONQUEST_ITALY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_KIMBANGU
+		text = "RULE_OPTION_NYC_CONQUEST_KIMBANGU"
+		desc = "RULE_OPTION_NYC_CONQUEST_KIMBANGU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_KIVU
+		text = "RULE_OPTION_NYC_CONQUEST_KIVU"
+		desc = "RULE_OPTION_NYC_CONQUEST_KIVU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_HAITI
+		text = "RULE_OPTION_NYC_CONQUEST_HAITI"
+		desc = "RULE_OPTION_NYC_CONQUEST_HAITI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_CONQUEST_MAUMAU
+		text = "RULE_OPTION_NYC_CONQUEST_MAUMAU"
+		desc = "RULE_OPTION_NYC_CONQUEST_MAUMAU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_INDEP_NEUTRALITY
+		text = "RULE_OPTION_NYC_INDEP_NEUTRALITY"
+		desc = "RULE_OPTION_NYC_INDEP_NEUTRALITY_DESC"
+		allow_achievements = yes
+	}
+}
+
+NYC_path = {
+	name = "NYC_PATH"
+	group = "RULE_GROUP_KAISERREICH_RULES_NORTH_AMERICA"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_NYC_PATH_RANDOM"
+		desc = "RULE_OPTION_NYC_PATH_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_LA_GUARDIA
+		text = "RULE_OPTION_NYC_PATH_LA_GUARDIA"
+		desc = "RULE_OPTION_NYC_PATH_LA_GUARDIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_TRUMP
+		text = "RULE_OPTION_NYC_PATH_TRUMP"
+		desc = "RULE_OPTION_NYC_PATH_TRUMP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_WELLES
+		text = "RULE_OPTION_NYC_PATH_WELLES"
+		desc = "RULE_OPTION_NYC_PATH_WELLES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_STEINBECK
+		text = "RULE_OPTION_NYC_PATH_STEINBECK"
+		desc = "RULE_OPTION_NYC_PATH_STEINBECK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_ROOSEVELT
+		text = "RULE_OPTION_NYC_PATH_ROOSEVELT"
+		desc = "RULE_OPTION_NYC_PATH_ROOSEVELT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_TAMMANY
+		text = "RULE_OPTION_NYC_PATH_TAMMANY"
+		desc = "RULE_OPTION_NYC_PATH_TAMMANY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_CHRISTIAN_PROT
+		text = "RULE_OPTION_NYC_PATH_CHRISTIAN_PROT"
+		desc = "RULE_OPTION_NYC_PATH_CHRISTIAN_PROT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_CHRISTIAN_UNITY
+		text = "RULE_OPTION_NYC_PATH_CHRISTIAN_UNITY"
+		desc = "RULE_OPTION_NYC_PATH_CHRISTIAN_UNITY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_CHRISTIAN_CATH
+		text = "RULE_OPTION_NYC_PATH_CHRISTIAN_CATH"
+		desc = "RULE_OPTION_NYC_PATH_CHRISTIAN_CATH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_NYPD
+		text = "RULE_OPTION_NYC_PATH_NYPD"
+		desc = "RULE_OPTION_NYC_PATH_NYPD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_MAFIA_LUCIANO
+		text = "RULE_OPTION_NYC_PATH_MAFIA_LUCIANO"
+		desc = "RULE_OPTION_NYC_PATH_MAFIA_LUCIANO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_MAFIA_LANKSY
+		text = "RULE_OPTION_NYC_PATH_MAFIA_LANKSY"
+		desc = "RULE_OPTION_NYC_PATH_MAFIA_LANKSY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_MAFIA_BENNY
+		text = "RULE_OPTION_NYC_PATH_MAFIA_BENNY"
+		desc = "RULE_OPTION_NYC_PATH_MAFIA_BENNY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_HARLEM_HOLSTEIN
+		text = "RULE_OPTION_NYC_PATH_HARLEM_HOLSTEIN"
+		desc = "RULE_OPTION_NYC_PATH_HARLEM_HOLSTEIN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_HARLEM_CLAIR
+		text = "RULE_OPTION_NYC_PATH_HARLEM_CLAIR"
+		desc = "RULE_OPTION_NYC_PATH_HARLEM_CLAIR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_BLACK_GARVEYITES
+		text = "RULE_OPTION_NYC_PATH_BLACK_GARVEYITES"
+		desc = "RULE_OPTION_NYC_PATH_BLACK_GARVEYITES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_BLACK_ISLAM
+		text = "RULE_OPTION_NYC_PATH_BLACK_ISLAM"
+		desc = "RULE_OPTION_NYC_PATH_BLACK_ISLAM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_BLACK_UNIONISTS
+		text = "RULE_OPTION_NYC_PATH_BLACK_UNIONISTS"
+		desc = "RULE_OPTION_NYC_PATH_BLACK_UNIONISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_RADICALS_DEBS
+		text = "RULE_OPTION_NYC_PATH_RADICALS_DEBS"
+		desc = "RULE_OPTION_NYC_PATH_RADICALS_DEBS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_RADICALS_MOSES
+		text = "RULE_OPTION_NYC_PATH_RADICALS_MOSES"
+		desc = "RULE_OPTION_NYC_PATH_RADICALS_MOSES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NYC_PATH_RADICALS_SOCRATES
+		text = "RULE_OPTION_NYC_PATH_RADICALS_SOCRATES"
+		desc = "RULE_OPTION_NYC_PATH_RADICALS_SOCRATES_DESC"
 		allow_achievements = yes
 	}
 }
@@ -6862,6 +7729,71 @@ NEE_start_path = {
 #		desc = "RULE_OPTION_NEE_START_PATH_LIBPROG_1940_DESC"
 #		allow_achievements = yes
 #	}
+}
+
+NEE_NEWSONS = {
+	name = "NEE_NEWSONS_PATH"
+	group = "RULE_GROUP_KAISERREICH_RULES_NORTH_AMERICA"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_NEE_NEWSONS_RANDOM"
+		desc = "RULE_OPTION_NEE_NEWSONS_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_PERSHING #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_PERSHING"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_PERSHING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_PERSHING_DEMOCRACY #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_PERSHING_DEMOCRACY"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_PERSHING_DEMOCRACY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_PERSHING_ARMY #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_PERSHING_ARMY"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_PERSHING_ARMY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_GROVES #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_GROVES"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_GROVES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_GROVES_REVOLT #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_GROVES_REVOLT"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_GROVES_REVOLT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_GROVES_LOYAL #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_GROVES_LOYAL"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_GROVES_LOYAL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_BINGHAM #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_BINGHAM"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_BINGHAM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_BINGHAM_NEE #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_BINGHAM_NEE"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_BINGHAM_NEE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_BINGHAM_AMERICA #
+		text = "RULE_OPTION_NEE_NEWSONS_NEE_BINGHAM_AMERICA"
+		desc = "RULE_OPTION_NEE_NEWSONS_NEE_BINGHAM_AMERICA_DESC"
+		allow_achievements = yes
+	}
 }
 
 CSA_post_civil_war = {
@@ -7970,6 +8902,41 @@ MEX_foreign_policy = {
 		name = MEX_FOREIGN_POLICY_NEUTRALITY
 		text = "RULE_OPTION_MEX_FOREIGN_POLICY_NEUTRALITY"
 		desc = "RULE_OPTION_MEX_FOREIGN_POLICY_NEUTRALITY_DESC"
+		allow_achievements = yes
+	}
+}
+
+MEX_reconquista_path = {
+	name = "MEX_RECONQUISTA_PATH"
+	group = "RULE_GROUP_KAISERREICH_RULES_NORTH_AMERICA"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_MEX_RECONQUISTA_PATH_RANDOM"
+		desc = "RULE_OPTION_MEX_RECONQUISTA_PATH_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MEX_RECONQUISTA_PATH_PEACE
+		text = "RULE_OPTION_MEX_RECONQUISTA_PATH_PEACE"
+		desc = "RULE_OPTION_MEX_RECONQUISTA_PATH_PEACE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MEX_RECONQUISTA_PATH_WAR
+		text = "RULE_OPTION_MEX_RECONQUISTA_PATH_WAR"
+		desc = "RULE_OPTION_MEX_RECONQUISTA_PATH_WAR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MEX_RECONQUISTA_PATH_CEDE
+		text = "RULE_OPTION_MEX_RECONQUISTA_PATH_CEDE"
+		desc = "RULE_OPTION_MEX_RECONQUISTA_PATH_CEDE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MEX_RECONQUISTA_PATH_FEDS
+		text = "RULE_OPTION_MEX_RECONQUISTA_PATH_FEDS"
+		desc = "RULE_OPTION_MEX_RECONQUISTA_PATH_FEDS_DESC"
 		allow_achievements = yes
 	}
 }
@@ -10034,6 +11001,18 @@ SOM_clans = {
 		desc = "RULE_OPTION_SOM_WARSANGALI_PATAUT_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = SOM_WARSANGALI_NATPOP
+		text = "RULE_OPTION_SOM_WARSANGALI_NATPOP"
+		desc = "RULE_OPTION_SOM_WARSANGALI_NATPOP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SOM_WARSANGALI_BARRE
+		text = "RULE_OPTION_SOM_WARSANGALI_BARRE"
+		desc = "RULE_OPTION_SOM_WARSANGALI_BARRE_DESC"
+		allow_achievements = yes
+	}
 }
 
 EGY_election = {
@@ -11127,6 +12106,12 @@ PRF_foreign = {
 		name = PRF_FOREIGN_JAP
 		text = "RULE_OPTION_PRF_FOREIGN_JAP"
 		desc = "RULE_OPTION_PRF_FOREIGN_JAP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = PRF_FOREIGN_OTT
+		text = "RULE_OPTION_PRF_FOREIGN_OTT"
+		desc = "RULE_OPTION_PRF_FOREIGN_OTT_DESC"
 		allow_achievements = yes
 	}
 	option = {

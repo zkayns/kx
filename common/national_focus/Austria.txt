@@ -2483,6 +2483,7 @@ focus_tree = {
 			add_state_claim = 108
 			add_state_claim = 107
 			add_state_claim = 765
+			add_state_claim = 1269
 			if = {
 				limit = {
 					NOT = { is_ally_with = BUL }
@@ -2557,6 +2558,7 @@ focus_tree = {
 			add_state_claim = 79
 			add_state_claim = 78
 			add_state_claim = 1222
+			add_state_claim = 1320
 			if = {
 				limit = {
 					NOT = { is_ally_with = BUL }
@@ -2922,7 +2924,6 @@ focus_tree = {
 
 		available = {
 			NOT = {
-				has_subject = SLO
 				has_subject = TRS
 				owns_state = 9
 				owns_state = 43
@@ -2931,6 +2932,17 @@ focus_tree = {
 				owns_state = 109
 				HUN = { owns_state = 109 }
 			}
+						OR = {
+						AND = {
+							SLO = { exists = yes }
+							has_subject = SLO
+						}
+						AND = {
+							SLO = { exists = no }
+							NOT = { has_subject = SLO }
+						}
+						}
+							
 			has_war = no
 		}
 
@@ -3920,7 +3932,29 @@ focus_tree = {
 			hidden_effect = {
 				every_country = {
 					limit = {
-						has_idea = AUS_part_of_the_Empire
+						OR = {
+							has_idea = AUS_part_of_the_Empire
+							AND = {
+								OR = {
+									tag = HUN
+									tag = CRO
+									tag = CZE
+									tag = SVK
+									tag = TRS
+									tag = PGU
+									tag = CPU
+									tag = TRS
+									tag = WSU
+									tag = BAN
+									tag = BUK
+									tag = BOS
+									tag = SKS
+									tag = SLO
+									tag = VNC
+								}
+								is_subject_of = AUS
+							}
+						}
 						NOT = {
 							has_idea = HUN_financial_ties_broken
 						}
@@ -4776,6 +4810,7 @@ focus_tree = {
 			threat > 0.1
 			is_subject = no
 			AUS_no_black_monday = yes
+						is_faction_leader = yes
 		}
 
 		ai_will_do = {
@@ -4829,7 +4864,12 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = AUS_potb_albania_tooltip
 				ALB = {
-					any_neighbor_country = { is_ally_with = AUS }
+					any_neighbor_country = { 
+						AND = {
+						is_ally_with = AUS 
+						NOT = { tag = CRO }
+						}
+					}
 				}
 			}
 			ALB = {
@@ -5734,6 +5774,7 @@ focus_tree = {
 			NOT = {
 				is_subject = yes
 			}
+						has_war = no
 		}
 		
 		prerequisite = { focus = AUS_new_workforce_profits }
@@ -5776,19 +5817,12 @@ focus_tree = {
 				name = "Jörg Lanz von Liebenfels"
 				ruling_only = yes
 			}
-		}
-		
-				available = {
-			has_completed_focus = AUS_one_party_empire
+						has_completed_focus = AUS_one_party_empire
+						NOT = { is_puppet = yes }
+			has_war = no
 		}
 		
 		prerequisite = { focus = AUS_patriotize_army }
-		
-		available = {
-			NOT = {
-				is_puppet = yes
-			}
-		}
 		
 		ai_will_do = { 
 			factor = 10
@@ -5999,19 +6033,12 @@ focus_tree = {
 				name = "Jörg Lanz von Liebenfels"
 				ruling_only = yes
 			}
+						has_completed_focus = AUS_one_party_empire
+						NOT = { is_puppet = yes }
+			has_war = no
 		}
 
-				available = {
-			has_completed_focus = AUS_one_party_empire
-		}
-		
 		prerequisite = { focus = AUS_days_and_nights }
-		
-		available = {
-			NOT = {
-				is_puppet = yes
-			}
-		}
 		
 		ai_will_do = { 
 			factor = 10
@@ -6026,6 +6053,7 @@ focus_tree = {
 			add_state_claim = 108
 			add_state_claim = 765
 			add_state_claim = 767
+			add_state_claim = 1269
 			
 			if = {
 				limit = {
@@ -6038,6 +6066,7 @@ focus_tree = {
 					add_state_core = 108
 					add_state_core = 765
 					add_state_core = 767
+					add_state_core = 1269
 				}
 			}
 		}
@@ -6055,16 +6084,11 @@ focus_tree = {
 				name = "Jörg Lanz von Liebenfels"
 				ruling_only = yes
 			}
+						NOT = { is_puppet = yes }
+			has_war = no
 		}
 		
 		prerequisite = { focus = AUS_one_party_empire }
-		
-		available = {
-			NOT = {
-				is_puppet = yes
-			}
-			country_exists = FRA
-		}
 		
 		ai_will_do = { 
 			factor = 10
@@ -6292,19 +6316,19 @@ focus_tree = {
 			
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 15000
+				amount = 5000
 				producer = AUS
 			}
 			
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				amount = 2000
+				amount = 500
 				producer = AUS
 			}
 			
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-				amount = 1500
+				amount = 500
 				producer = AUS
 			}
 			

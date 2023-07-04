@@ -76,6 +76,7 @@ RUS_internationale_strategy_plan = {
 	focus_factors = {
 		RUS_The_Iron_Curtain = 0
 		RUS_join_the_co_prosperity_sphere = 0
+		RUS_The_Fourth_Internationale = 0
 	}
 
 	weight = {
@@ -99,6 +100,7 @@ RUS_accord_strategy_plan = {
 		RUS_Feast_In_Time_Of_Plague = 0
 		RUS_Approach_Our_Old_Allies = 0
 		RUS_join_the_co_prosperity_sphere = 0
+		RUS_Join_The_Internationale = 0
 	}
 
 	weight = {
@@ -303,55 +305,6 @@ CUB_new_allies_strategy_plan = {
 		}
 	}
 
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-GEA_future_interal_strategy_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-		original_tag = GEA
-		OR = {
-			has_game_rule = { rule = GEA_future option = GEA_FUTURE_COLLABORATION_REVOLT_NO }
-			has_game_rule = { rule = GEA_future option = GEA_FUTURE_COLLABORATION_REVOLT_YES }
-			has_game_rule = { rule = GEA_future option = GEA_FUTURE_COLLABORATION_REVOLT_YES_VIETNAM }
-		}
-	}
-	
-	focus_factors = {
-		GEA_budget1 = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-GEA_future_budget_strategy_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-		original_tag = GEA
-		OR = {
-			has_game_rule = { rule = GEA_future option = GEA_FUTURE_FISCAL_AUSTERITY_REVOLT_NO }
-			has_game_rule = { rule = GEA_future option = GEA_FUTURE_FISCAL_AUSTERITY_REVOLT_YES }
-		}
-	}
-	
-	focus_factors = {
-		GEA_internal1 = 0
-	}
-	
 	weight = {
 		factor = 1.0
 		modifier = {
@@ -1209,123 +1162,6 @@ POL_sejm_election_continue_strategy_plan = {
 	}
 }
 
-WHR_internationale_strategy_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-		original_tag = WHR
-		has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_INTERNATIONALE }
-	}
-	
-	focus_factors = {
-		WHR_own_faction = 0
-		WHR_intermarium = 0
-		WHR_russian_alliance = 0
-		WHR_reichspact = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-WHR_intermarium_strategy_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-		original_tag = WHR
-		has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_POLAND_UKRAINE }
-	}
-	
-	focus_factors = {
-		WHR_own_faction = 0
-		WHR_russian_alliance = 0
-		WHR_internationale = 0
-		WHR_reichspact = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-WHR_neutrality_strategy_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-		original_tag = WHR
-		OR = {
-			has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_ACQUIESCENCE }
-			has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_INTERVENTION }
-		}
-	}
-	
-	focus_factors = {
-		WHR_intermarium = 0
-		WHR_russian_alliance = 0
-		WHR_internationale = 0
-		WHR_reichspact = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-WHR_germany_strategy_plan = {
-	enable = {
-	original_tag = WHR
-		has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_STAY_WITH_GERMAN }
-	}
-	
-	focus_factors = {
-		WHR_own_faction = 0
-		WHR_intermarium = 0
-		WHR_russian_alliance = 0
-		WHR_internationale = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-WHR_soviets_strategy_plan = {
-	enable = {
-	original_tag = WHR
-		has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_RUSSIA }
-	}
-	
-	focus_factors = {
-		WHR_own_faction = 0
-		WHR_intermarium = 0
-		WHR_reichspact = 0
-		WHR_internationale = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
 
 LOM_constitutional_duchy_strategy_plan = {
 	name = ""
@@ -1359,32 +1195,6 @@ LOM_absolute_duchy_strategy_plan = {
 	
 	focus_factors = {
 		LOM_universal_suffrage = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-SRD_democracy_strategy_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-		original_tag = SRD
-		OR = {
-			has_game_rule = { rule = SRD_reform option = SRD_REFORM_DEMOCRACY_SOCLIB }
-			has_game_rule = { rule = SRD_reform option = SRD_REFORM_DEMOCRACY_MARLIB }
-			has_game_rule = { rule = SRD_reform option = SRD_REFORM_DEMOCRACY_SOCCON }
-			has_game_rule = { rule = SRD_reform option = SRD_REFORM_DEMOCRACY_SOCDEM }
-		}
-	}
-	
-	focus_factors = {
-		SRD_legitimate_kingdom = 0
 	}
 	
 	weight = {

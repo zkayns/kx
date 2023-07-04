@@ -184,6 +184,11 @@ country_event = {
 		
 	option = {
 		name = sikkim.4.b
+		trigger = {
+		SKM = {
+		is_subject = no
+			}
+		}
 		hidden_effect = {
 		BHC = {
 		increase_ruling_party_popularity_by_2 = yes
@@ -216,6 +221,8 @@ country_event = {
 		complete_national_focus = skm_soccon_victory
 		hidden_effect = {
 		Tashi_Parties = yes
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Kaz_Lhendup_Dorjee_hog_ade
 		country_event = {
 			id = sikkim.68
 			days = 100
@@ -233,6 +240,8 @@ country_event = {
 		}
 		complete_national_focus = skm_soccon_victory
 		hidden_effect = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Kaz_Lhendup_Dorjee_hog_ade
 		Tashi_Parties = yes
 		country_event = {
 			id = sikkim.68
@@ -251,6 +260,8 @@ country_event = {
 		}
 		complete_national_focus = skm_marlib_victory
 		hidden_effect = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Kashiraj_Pradhan_hog_sli
 		Tashi_Parties = yes
 		country_event = {
 			id = sikkim.68
@@ -269,6 +280,8 @@ country_event = {
 		}
 		complete_national_focus = skm_soclib_victory
 		hidden_effect = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Kashiraj_Pradhan_hog_sli
 		Tashi_Parties = yes
 		country_event = {
 			id = sikkim.68
@@ -287,6 +300,8 @@ country_event = {
 		}
 		complete_national_focus = skm_socdem_victory
 		hidden_effect = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Tashi_Tshering_hog_rso
 		Tashi_Parties = yes
 			}
 		country_event = {
@@ -360,6 +375,7 @@ country_event = {
 		ai_chance = {
 			factor = 95
 		}
+		set_country_flag = TIB_Supported_Sikkim
 		give_guarantee = SKM
 		SKM = {
 		add_equipment_to_stockpile = {
@@ -910,11 +926,13 @@ country_event = { #Sikkim Peace Event
 
 	trigger = {
 		tag = BHC
-		has_war_with = TIB
 		BHC = {
+		has_war_with = TIB
+		OR = {
 			owns_state = 888
+			controls_state = 888
+			}
 		}
-		controls_state = 888
 	}
 
 	option = {
@@ -1244,6 +1262,8 @@ country_event = {
 			popularity = 0.3
 		}
 		complete_national_focus = skm_marlib_victory
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Kashiraj_Pradhan_hog_sli
 	}
 	option = {
 		name = sikkim.36.c
@@ -1255,6 +1275,8 @@ country_event = {
 			popularity = 0.3
 		}
 		complete_national_focus = skm_soclib_victory
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Kashiraj_Pradhan_hog_sli
 	}
 	option = {
 		name = sikkim.36.e
@@ -1266,6 +1288,13 @@ country_event = {
 			popularity = 0.3
 		}
 		complete_national_focus = skm_socdem_victory
+		hidden_effect = {
+		remove_all_ministers = yes
+		add_ideas = SKM_Trilochan_Pokhrel_hog_rso
+		add_ideas = SKM_Jerman_Lepcha_for_rso
+		add_ideas = SKM_Brihaspati_Parsai_eco_rso
+		add_ideas = SKM_Jaharman_Rai_sec_rso
+		}
 	}
 	option = {
 		name = sikkim.36.f
@@ -1278,6 +1307,8 @@ country_event = {
 		}
 		set_country_flag = skm_buddhist
 		complete_national_focus = skm_natpop_victory
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Sonam_Tshering_hog_npo
 	}
 }
 country_event = {
@@ -1448,9 +1479,9 @@ country_event = {
 	option = {
 		name = sikkim.43.a
 		set_technology = {
-			heilcopter = 1
+			helicopter = 1
 		}
-		add_equipment_to_stockpile = { type = heilcopter_1 amount = 100 }
+		add_equipment_to_stockpile = { type = helicopter_1 amount = 100 }
 	}
 }
 country_event = {
@@ -1473,21 +1504,11 @@ country_event = {
 	option = {
 		name = sikkim.44.a
 		every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
@@ -1500,21 +1521,11 @@ country_event = {
 				add_to_faction = SKM
 			}
 		every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
@@ -1527,21 +1538,11 @@ country_event = {
 				add_to_faction = SKM
 			}
 		every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
@@ -1572,26 +1573,16 @@ country_event = {
 	option = {
 		name = sikkim.45.a
 		every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
 			days = 10
-		}
+			}
 		}
 	option = {
 		name = sikkim.45.b
@@ -1599,26 +1590,16 @@ country_event = {
 				add_to_faction = SKM
 			}
 		every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
 			days = 10
-		}
+			}
 		}
 		option = {
 		name = sikkim.45.c
@@ -1626,26 +1607,16 @@ country_event = {
 				add_to_faction = SKM
 			}
 		every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
 			days = 10
-		}
+			}
 		}
 }
 country_event = {
@@ -1669,21 +1640,11 @@ country_event = {
 	option = {
 		name = sikkim.46.a
 	every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
@@ -1696,21 +1657,11 @@ country_event = {
 				add_to_faction = SKM
 			}
 		every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
@@ -1721,21 +1672,11 @@ country_event = {
 		name = sikkim.46.c
 		create_faction =  "Harmonious Peoples Accord"
 		every_state = {
-		limit = { is_core_of = DEH }
+					limit = {
+						is_on_continent = india
+					}
 		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = BHC }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = PRF }
-		add_core_of = SKM
-			}
-		320 = { add_core_of = SKM }
-		1095 = { add_core_of = SKM }
-		321 = { add_core_of = SKM }
-		422 = { add_core_of = SKM }
+		}
 		country_event = sikkim.65
 		country_event = {
 			id = sikkim.54
@@ -1775,48 +1716,40 @@ country_event = {
 		name = sikkim.47.a
 		set_cosmetic_tag = SKM_CHINA
 		every_state = {
-		limit = { is_claimed_by = QIE }
-		add_core_of = SKM
-			}
-		every_state = {
-		limit = { is_core_of = QIE }
-		add_core_of = SKM
+                limit = {
+					is_claims_china = yes
+					}
+				add_core_of = SKM
 			}
 		}
 	option = {
 		name = sikkim.47.b
 		set_cosmetic_tag = SKM_CHINA_2
 		every_state = {
-		limit = { is_claimed_by = QIE }
-		add_core_of = SKM
+                limit = {
+					is_claims_china = yes
+					}
+				add_core_of = SKM
 			}
-		every_state = {
-		limit = { is_core_of = QIE }
-		add_core_of = SKM
-		}
 	}
 	option = {
 		name = sikkim.47.c
 		set_cosmetic_tag = SKM_CHINA_3
 		every_state = {
-		limit = { is_claimed_by = QIE }
-		add_core_of = SKM
-		}
-		every_state = {
-		limit = { is_core_of = QIE }
-		add_core_of = SKM
-		}
+                limit = {
+					is_claims_china = yes
+					}
+				add_core_of = SKM
+			}
 	}
 	option = {
 		name = sikkim.47.e
 		every_state = {
-		limit = { is_claimed_by = QIE }
-		add_core_of = SKM
-		}
-		every_state = {
-		limit = { is_core_of = QIE }
-		add_core_of = SKM
-		}
+                limit = {
+					is_claims_china = yes
+					}
+				add_core_of = SKM
+			}
 	}
 }
 	
@@ -1832,6 +1765,11 @@ country_event = {
 
 	option = {
 		name = sikkim.48.a
+		trigger = {
+		NOT = {
+		has_government = totalist
+			}
+		}
 		complete_national_focus = skm_jermanism
 		}
 	option = {
@@ -1922,6 +1860,8 @@ country_event = {
 	option = {
 		name = sikkim.50.b
 		complete_national_focus = skm_marlib_victory
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Kashiraj_Pradhan_hog_sli
 		}
 	}
 
@@ -2072,36 +2012,78 @@ country_event = {
 			}
 		}
 		every_state = {
-			limit = { 
-				OR = {
-					is_claimed_by = TIB
-					is_core_of = TIB
-					is_core_of = MON
-					is_core_of = FNG 
-					is_core_of = QIE 
-				}
-			}
-			add_claim_by = SKM
-		}
-		create_wargoal = {
-				type = annex_everything
-				target = TIB
-		}
-		create_wargoal = {
-				type = annex_everything
-				target = MON
-		}
-		create_wargoal = {
-				type = annex_everything
-				target = ETS
-		}
-		create_wargoal = {
-				type = annex_everything
-				target = FNG
+                limit = {
+					is_claims_china = yes
+					}
+				add_claim_by = SKM
 		}
 		create_wargoal = {
 			type = annex_everything
 			target = QIE
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = GXC
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = YUN
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = HNN
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = LEP
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ANQ
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SQI
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SZC
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = CHI
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SHX
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FNG
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = XSM
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = ETS
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = TAN
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = SIK
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = TIB
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = MON
 		}
 	}
 	
@@ -2111,17 +2093,26 @@ country_event = {
 			factor = 0
 		}
 		every_state = {
-			limit = {
-				OR = {
-					is_core_of = PRF
-					is_core_of = DEH
-					is_core_of = BHC
-					is_claimed_by = PRF
-					is_claimed_by = DEH
-					is_claimed_by = BHC
-				}
-			}
-			add_claim_by = SKM
+					limit = {
+						is_on_continent = india
+					}
+		add_claim_by = SKM
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = DEH
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = BHC
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = PRF
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = MAD
 		}
 	}
 	option = {
@@ -2280,6 +2271,23 @@ country_event = {
 	}
 	set_cosmetic_tag = SKM_kazis_old
 	}
+	option = {
+		name = sikkim.56.b
+	increase_ruling_party_popularity_by_5 = yes
+	create_field_marshal = {
+	name = "Rangjung Rigpe Dorje"
+	portrait_path = "gfx/leaders/SKM/Portrait_SKM_Rangjung_Rigpe_Dorje.png"
+	traits = {
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	}
+	set_cosmetic_tag = SKM_kazis_old
+	}
 }
 
 country_event = {
@@ -2341,6 +2349,8 @@ country_event = {
 			elections_allowed = no
 		}
 		hidden_effect = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Kaz_Lhendup_Dorjee_hog_ade
 		create_country_leader = {
 		name = "Interregnum"
 		picture = "gfx/leaders/SKM/Portrait_SKM_Interregnum.png"
@@ -2386,6 +2396,10 @@ country_event = {
 		set_country_flag = skm_buddhist
 		complete_national_focus = skm_natpop_victory
 		set_cosmetic_tag = SKM_kazis_old
+		hidden_effect = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Sonam_Tshering_hog_npo
+		}
 	}
 	option = {
 		name = sikkim.59.b
@@ -2455,9 +2469,12 @@ country_event = {
 			elections_allowed = no
 		}
 		hidden_effect = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Sonam_Tshering_hog_npo
 		create_country_leader = {
-		name = "Interregnum"
-		picture = "gfx/leaders/SKM/Portrait_SKM_Interregnum.png"
+		name = "Sonam Tshering"
+		desc = ""
+		picture = "gfx/leaders/SKM/Portrait_SKM_Sonam_Tshering.png"
 		expire = "1965.1.1"
 		ideology = fundementalism_subtype
 			}
@@ -2465,6 +2482,8 @@ country_event = {
 		set_country_flag = skm_buddhist
 		complete_national_focus = skm_natpop_victory
 		set_cosmetic_tag = SKM_kazis_old
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Sonam_Tshering_hog_npo
 	}
 }
 country_event = {
@@ -2504,15 +2523,13 @@ country_event = {
 	desc = sikkim.64.d
 	picture = GFX_news_roerich_sikkim
 	trigger = {
+	tag = SKM
 	SKM = {
 	is_ai = no
 	has_country_flag = skm_roerich
 	}
 	TIB = {
-	has_country_leader = { 
-				name = "Nicholas Roerich"
-				ruling_only = yes
-			}
+	has_country_leader = { name = "Nicholas Roerich" ruling_only = yes }
 		}
 	}
 	fire_only_once = yes
@@ -2629,12 +2646,16 @@ country_event = {
 		name = sikkim.67.a
 		add_political_power = 100
 	}
-	#option = {
-	#	name = sikkim.67.b
-	#}
+	option = {
+		name = sikkim.67.b
+		remove_ideas_with_trait = head_of_government
+	add_ideas = SKM_Nicholas_Roerich_hog_tot
+	}
 	option = {
 		name = sikkim.67.c
 	create_country_leader = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = SKM_Nicholas_Roerich_hog_tot
 		name = "Nicholas Roerich"
 		desc = "POLITICS_NICHOLAS_ROERICH_DESC"
 		picture = "gfx/leaders/TIB/Portrait_TIB_Nicholas_Roerich.png"
@@ -2669,6 +2690,7 @@ country_event = {
 	picture = GFX_news_sikkim_forts
 
 	trigger = {
+        tag = SKM
 	SKM = {
 	owns_state = 324
 		}
@@ -2715,6 +2737,7 @@ country_event = {
 	picture = GFX_news_sikkim_forts
 
 	trigger = {
+	tag = SKM
 	SKM = {
 		owns_state = 322
 	}
@@ -2772,7 +2795,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = sikkim.71.a
+	name = sikkim.71.a
 	set_country_flag = TIB_Tashi_Exile
 	country_event = {
 			id = sikkim.72
@@ -2832,6 +2855,7 @@ country_event = {
 	picture = GFX_news_tashi_sitting
 
 	trigger = {
+	tag = TIB
 	TIB = {
 	owns_state = 888
 	has_country_flag = TIB_Tashi_Exile
@@ -2862,5 +2886,152 @@ country_event = {
 		}
 		increase_ruling_party_popularity_by_2 = yes
 		888 = { add_core_of = TIB }
+	}
+}
+
+country_event = { #Sikkim Peace Event but in reverse
+	id = sikkim.74
+	immediate = { log = "[GetDateText]: [Root.GetName]: event sikkim.74 FROM = [From.GetName]" }
+	title = sikkim.74.t
+	desc = sikkim.74.d
+	picture = GFX_news_sikkim_mountain
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = TIB
+		TIB = {
+		has_war_with = BHC
+		OR = {
+			owns_state = 888
+			controls_state = 888
+			}
+		}
+	}
+
+	option = {
+		name = sikkim.74.a
+		ai_chance = {
+			base = 100
+		}
+		BHC = {
+			country_event = sikkim.75
+		}
+	}
+
+	option = {
+		name = sikkim.74.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_political_power = -50
+	}
+}
+country_event = { #Sikkim Peace Event
+	id = sikkim.75
+	immediate = { log = "[GetDateText]: [Root.GetName]: event sikkim.30 FROM = [From.GetName]" }
+	title = sikkim.75.t
+	desc = sikkim.75.d
+	picture = GFX_news_judging_lepcha
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = sikkim.75.a
+		ai_chance = {
+			base = 100
+		}
+
+		BHC = {
+			TIB = {
+			white_peace_with_ROOT = yes
+			transfer_state = 888
+			}
+		}
+	}
+
+	option = {
+		name = sikkim.75.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_political_power = -50
+	}
+}
+
+country_event = {
+	id = sikkim.76
+	immediate = { log = "[GetDateText]: [Root.GetName]: event sikkim.76" }
+	title = sikkim.64.t
+	desc = sikkim.64.d
+	picture = GFX_news_roerich_sikkim
+	trigger = {
+	tag = TIB
+	TIB = {
+	is_ai = no
+	has_country_leader = { name = "Nicholas Roerich" ruling_only = yes }
+	}
+	SKM = {
+	has_country_flag = skm_roerich
+		}
+	}
+	fire_only_once = yes
+
+	option = {
+		name = sikkim.64.a
+		TIB = {
+			annex_country = {
+			target = SKM
+			transfer_troops = yes
+			}
+		}
+		every_state = {
+			limit = { is_core_of = SKM
+				}
+				add_core_of = TIB
+				}
+			}
+	option = {
+		name = sikkim.64.b
+		}
+	}
+	
+country_event = { #Eastern Socialist Union
+	id = sikkim.77
+	immediate = { log = "[GetDateText]: [Root.GetName]: event sikkim.77 FROM = [From.GetName]" }
+	title = sikkim.77.t
+	desc = sikkim.77.d
+	picture = GFX_news_bharatiya_commune
+
+	fire_only_once = yes
+	trigger = {
+	tag = SKM
+	SKM = {
+	is_guaranteed_by = BHC
+	}
+	BHC = {
+	is_faction_leader = yes
+		}
+	}
+	
+	option = {
+		name = sikkim.77.a
+		ai_chance = {
+			base = 100
+		}
+		BHC = {
+		add_to_faction = SKM
+		}
+	}
+
+	option = {
+		name = sikkim.77.b
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = 50
 	}
 }

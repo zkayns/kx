@@ -28,6 +28,7 @@ leader_traits = {
 	trilateral_chinese = {}
 	taoiseach = {}
 	vice_president = {}
+	chief_mouser = {}
 
 #####################
 # Military Staff

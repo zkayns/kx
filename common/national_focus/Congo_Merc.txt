@@ -388,6 +388,9 @@ focus_tree = {
 					promote_leader = yes
 				}
 			}
+			set_country_flag = MSF_BROTHERS_VISIBLE
+			set_country_flag = LEADER_GUI_VISIBLE
+			set_country_flag = DOUBLE_LEADER_GUI_VISIBLE
 			custom_effect_tooltip = MSF_thord_gray_tt
 			add_ideas = MSF_Ivor_Thord_Gray_carm
 			hidden_effect = {
@@ -520,7 +523,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MSF_mother_base"
 			set_capital = { state = 881 }
-			881 = { set_state_name = "Mother Base" }
+			881 = { 
+				set_state_name = "Mother Base" 
+				set_state_flag = renamed_state_mother_base
+			}
 			set_province_name = {
 				id = 13950
 				name = "Mother Base"
@@ -1028,6 +1034,10 @@ focus_tree = {
 			add_political_power = 100
 			set_cosmetic_tag = MSF_knight_larp
 			hidden_effect = {
+				country_event = {
+					id = outerheaven.36
+					days = 6
+				}
 				country_event = {
 					id = outerheaven.10
 					days = 30
@@ -1645,6 +1655,10 @@ focus_tree = {
 			add_political_power = 100
 			set_cosmetic_tag = MSF_soldiers_republic
 			hidden_effect = {
+				country_event = {
+					id = outerheaven.35
+					days = 6
+				}
 				country_event = {
 					id = outerheaven.15
 					days = 30

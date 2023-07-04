@@ -1798,7 +1798,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRE_megali_idea
-		icon = GFX_GRE_megali
+		icon = GFX_GRE_megali2
 		cost = 5.00
 		prerequisite = {
 			focus = GRE_war_industry
@@ -2301,6 +2301,9 @@ focus_tree = {
 					add_state_claim = 106
 					add_state_claim = 766
 					add_state_claim = 44
+					add_state_claim = 1268
+					add_state_claim = 1269
+					add_state_claim = 1271
 					add_state_claim = 841
 					add_state_claim = 765
 					add_state_claim = 767
@@ -2310,6 +2313,9 @@ focus_tree = {
 					add_state_claim = 163
 					add_state_claim = 104
 					add_state_claim = 103
+					add_state_claim = 1143
+					add_state_claim = 1270
+					add_state_claim = 1206
 				}
 
 	}
@@ -7065,7 +7071,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRE_hellenic_shipyards
-		icon = GFX_GRE_hellenic_shipyard
+		icon = GFX_GRE_hellenic_shipyard2
 		cost = 5.00
 		prerequisite = {
 			focus = GRE_merchant_marine

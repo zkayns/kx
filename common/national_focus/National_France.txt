@@ -7030,6 +7030,7 @@ focus_tree = {
 			GER = {
 				country_event = { id = natfra.189 days = 1 }
 			}
+			set_global_flag = CAN_german_tension
 		}		
 	}
 
@@ -7195,6 +7196,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = natfra.149 days = 1 }
 			add_war_support = 0.02
+			set_global_flag = CAN_german_tension
 		}		
 	}
 
@@ -15282,7 +15284,7 @@ focus_tree = {
 			add_state_core = 35
 			add_state_core = 978
 			add_state_core = 165
-                        add_state_core = 29
+						add_state_core = 29
 		}		
 	}
 	focus = {

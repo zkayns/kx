@@ -62,7 +62,7 @@ country_event = { #RCW
 		ai_chance = {
 			base = 20
 			modifier = {
-				factor = 10000
+				factor = 1000
 				has_game_rule = {
 					rule = RUS_RCW
 					option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -130,7 +130,7 @@ country_event = { #RCW
 		random_list = {
 			25 = {
 				modifier = {
-					factor = 10000
+					factor = 1000
 					has_game_rule = {
 						rule = RUS_RCW
 						option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -156,7 +156,7 @@ country_event = { #RCW
 			}
 			50 = {
 				modifier = {
-					factor = 10000
+					factor = 1000
 					has_game_rule = {
 						rule = RUS_RCW
 						option = RULE_OPTION_RUSSIAN_CIVIL_WAR_DISABLED
@@ -227,7 +227,7 @@ country_event = { #RCW
 		random_list = {
 			25 = {
 				modifier = {
-					factor = 10000
+					factor = 1000
 					has_game_rule = {
 						rule = RUS_RCW
 						option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -253,7 +253,7 @@ country_event = { #RCW
 			}
 			50 = {
 				modifier = {
-					factor = 10000
+					factor = 1000
 					has_game_rule = {
 						rule = RUS_RCW
 						option = RULE_OPTION_RUSSIAN_CIVIL_WAR_DISABLED
@@ -421,7 +421,7 @@ country_event = { #RCW
 				has_government = syndicalist
 			}
 			modifier = {
-				factor = 10000
+				factor = 1000
 				has_game_rule = {
 					rule = RUS_RCW
 					option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -607,7 +607,7 @@ country_event = { #RCW
 		ai_chance = {
 			base = 30
 			modifier = {
-				factor = 10000
+				factor = 1000
 				has_game_rule = {
 					rule = RUS_RCW
 					option = RULE_OPTION_RUSSIAN_CIVIL_WAR_DISABLED
@@ -727,7 +727,7 @@ country_event = { #RCW
 				}
 			}
 			modifier = {
-				factor = 10000
+				factor = 1000
 				has_game_rule = {
 					rule = RUS_RCW
 					option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -954,7 +954,7 @@ country_event = { #RCW
 		ai_chance = {
 			base = 40
 				modifier = {
-					factor = 10000
+					factor = 1000
 					AND = {
 						has_game_rule = {
 							rule = RUS_RCW
@@ -973,7 +973,7 @@ country_event = { #RCW
 		ai_chance = {
 			base = 10
 			modifier = {
-				factor = 10000
+				factor = 1000
 				has_game_rule = {
 					rule = RUS_RCW
 					option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -1009,7 +1009,7 @@ country_event = { #RCW
 		random_list = {
 			85 = {
 				modifier = {
-					factor = 10000
+					factor = 1000
 					AND = {
 						has_game_rule = {
 							rule = RUS_RCW
@@ -1031,7 +1031,7 @@ country_event = { #RCW
 			}
 			15 = {
 				modifier = {
-					factor = 10000
+					factor = 1000
 					has_game_rule = {
 						rule = RUS_RCW
 						option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -1138,7 +1138,7 @@ country_event = { #RCW
 					has_completed_focus = RUS_Recreate_The_Cheka
 				}
 				modifier = {
-					factor = 10000
+					factor = 1000
 					AND = {
 						has_game_rule = {
 							rule = RUS_RCW
@@ -1160,7 +1160,7 @@ country_event = { #RCW
 			}
 			10 = {
 				modifier = {
-					factor = 10000
+					factor = 1000
 					has_game_rule = {
 						rule = RUS_RCW
 						option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -1198,7 +1198,7 @@ country_event = { #RCW
 					has_completed_focus = RUS_Recreate_The_Cheka
 				}
 				modifier = {
-					factor = 10000
+					factor = 1000
 					AND = {
 						is_ai = yes
 						has_game_rule = {
@@ -1222,7 +1222,7 @@ country_event = { #RCW
 			}
 			40 = {
 				modifier = {
-					factor = 10000
+					factor = 1000
 					has_game_rule = {
 						rule = RUS_RCW
 						option = RULE_OPTION_RUSSIAN_CIVIL_WAR_GUARANTEED
@@ -1607,19 +1607,7 @@ country_event = { #RCW
 	option = {
 		name = rcw.24.a
 		ai_chance = {
-			base = 70
-			modifier = {
-				factor = 1.5
-				don_is_pro_german = no
-			}
-			modifier = {
-				factor = 1.2
-				195 = { owner = { has_socialist_government = yes } }
-			}
-			modifier = {
-				factor = 1.2
-				195 = { owner = { has_government = national_populist } }
-			}
+			base = 90
 		}
 		add_political_power = -100
 		hidden_effect = {
@@ -1636,11 +1624,7 @@ country_event = { #RCW
 	option = {
 		name = rcw.24.b
 		ai_chance = {
-			base = 30
-			modifier = {
-				factor = 1.5
-				DKB = { has_completed_focus = DKB_progerman_politic }
-			}
+			base = 10
 		}
 		add_political_power = 25
 		add_stability = 0.05
@@ -1657,17 +1641,6 @@ country_event = { #RCW
 	option = {
 		name = rcw.25.a
 		setup_western_russian_army = yes
-		if = {
-			limit = {
-				ROOT = { NOT = { tag = SOV } }
-			}
-			SOV = {
-				country_event = {
-					id = rcw.26
-					days = 2
-				}
-			}
-		}
 		if = {
 			limit = {
 				ROOT = { NOT = { tag = RUS } }
@@ -1747,6 +1720,10 @@ country_event = { #RCW
 				days = 2
 			}
 		}
+		declare_war_on = {
+			target = WRA
+			type = civil_war
+		}
 		WRA = { change_tag_from = ROOT }
 	}
 }
@@ -1800,67 +1777,27 @@ country_event = { #RCW
 	
 	option = {
 		name = rcw.27.a
-		trigger = {
-			OR = {
-				is_in_faction_with = GER
-				is_subject_of = GER
-			}
-		}
 		ai_chance = {
 			factor = 90
 		}
-		GER = {
-			country_event = {
-				id = rcw.28
-				days = 2
+		if = {
+			limit = {
+				OR = {
+					has_socialist_government = yes
+					has_government = social_democrat
+				}
+			}
+			RUS = {
+				country_event = {
+					id = rcw.28
+					days = 2
+					random = 48
+				}
 			}
 		}
 	}
 	option = {
 		name = rcw.27.b
-		trigger = {
-			NOT = {
-				is_in_faction_with = GER
-				is_subject_of = GER
-			}
-		}
-		ai_chance = {
-			factor = 90
-		}
-		1287 = {
-			add_claim_by = WHR
-		}
-		1292 = {
-			add_claim_by = WHR
-		}
-		243 = {
-			add_claim_by = WHR
-		}
-		755 = {
-			add_claim_by = WHR
-		}
-		242 = {
-			owner = {
-				country_event = {
-					id = rcw.31
-					days = 2
-				}
-			}
-		}
-		every_state = {
-			limit = {
-				OR = {
-					state = 1287
-					state = 1292
-					state = 243
-					state = 755
-				}
-			}
-			WHR = { transfer_state = PREV }
-		}
-	}
-	option = {
-		name = rcw.27.c
 		ai_chance = {
 			factor = 10
 		}
@@ -1880,15 +1817,6 @@ country_event = { #RCW
 		name = rcw.28.a
 		ai_chance = {
 			base = 30
-			modifier = {
-				factor = 2
-				FROM = {
-					OR = {
-						has_socialist_government = yes
-						has_government = social_democrat
-					}
-				}
-			}
 		}
 		FROM = {
 			country_event = {
@@ -1902,12 +1830,10 @@ country_event = { #RCW
 		ai_chance = {
 			base = 70
 			modifier = {
-				factor = 0.5
-				FROM = {
-					OR = {
-						has_socialist_government = yes
-						has_government = social_democrat
-					}
+				factor = 1.2
+				OR = {
+					country_exists = WRA
+					country_exists = BAT
 				}
 			}
 		}
@@ -1929,10 +1855,45 @@ country_event = { #RCW
 	
 	option = {
 		name = rcw.29.a
-		add_stability = -0.05
+		add_stability = 0.05
 		add_opinion_modifier = {
 			target = FROM
 			modifier = KR_hates_govt
+		}
+	}
+	option = {
+		name = rcw.29.b
+		add_stability = -0.05
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = KR_hates_govt
+		}
+		242 = {
+			owner = {
+				country_event = {
+					id = rcw.31
+					days = 2
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 1287
+					state = 1292
+					state = 243
+					state = 755
+					state = 242
+					state = 1293
+				}
+			}
+			if = {
+				limit = {
+					NOT = { is_claimed_by = WHR }
+				}
+				add_claim_by = WHR
+			}
+			transfer_state_to = WHR
 		}
 	}
 }
@@ -1946,40 +1907,40 @@ country_event = { #RCW
 	
 	option = {
 		name = rcw.30.a
-		242 = {
-			add_claim_by = WHR
-		}
-		243 = {
-			add_claim_by = WHR
-		}
-		755 = {
-			add_claim_by = WHR
-		}
-                1292 = {
-			add_claim_by = WHR
-		}
-                1293 = {
-			add_claim_by = WHR
-		}
-		242 = {
-			owner = {
-				country_event = {
-					id = rcw.31
-					days = 2
-				}
-			}
-		}
 		every_state = {
 			limit = {
 				OR = {
-					state = 242
+					state = 1287
+					state = 1292
 					state = 243
 					state = 755
-                                        state = 1292
-                                        state = 1293
+					state = 242
+					state = 1293
 				}
 			}
-			WHR = { transfer_state = PREV }
+			if = {
+				limit = {
+					NOT = { is_claimed_by = WHR }
+				}
+				add_claim_by = WHR
+			}
+			transfer_state_to = WHR
+		}
+		give_military_access = FROM
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		FROM = {
+			every_enemy_country = {
+				WHR = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
 		}
 	}
 }
@@ -1993,9 +1954,26 @@ country_event = { #RCW
 	
 	option = {
 		name = rcw.31.a
+		ai_chance = {
+			base = 1
+		}
 		add_opinion_modifier = {
 			target = FROM
 			modifier = KR_outraged
+		}
+		add_stability = -0.05
+	}
+	option = {
+		name = rcw.31.b
+		trigger = {
+			is_owner_neighbor_of = WHR
+		}
+		ai_chance = {
+			base = 99
+		}
+		declare_war_on = {
+			target = WHR
+			type = annex_everything
 		}
 		add_stability = -0.05
 	}
@@ -3153,7 +3131,10 @@ country_event = {
 		hidden_effect = {
 			every_state = {
 				limit = {
-					is_core_rrf_state = yes
+					OR = {
+						is_core_rrf_state = yes
+						state = 821
+					}
 				}
 				add_core_of = RUS
 				remove_core_of = RRF
@@ -3187,7 +3168,10 @@ country_event = {
 		hidden_effect = {
 			every_state = {
 				limit = {
-					is_core_rrf_state = yes
+					OR = {
+						is_core_rrf_state = yes
+						state = 821
+					}
 				}
 				add_core_of = RUS
 				remove_core_of = RRF
@@ -3210,7 +3194,10 @@ country_event = {
 		hidden_effect = {
 			every_state = {
 				limit = {
-					is_core_rrf_state = yes
+					OR = {
+						is_core_rrf_state = yes
+						state = 821
+					}
 				}
 				add_core_of = RUS
 				remove_core_of = RRF
@@ -3233,7 +3220,10 @@ country_event = {
 		hidden_effect = {
 			every_state = {
 				limit = {
-					is_core_rrf_state = yes
+					OR = {
+						is_core_rrf_state = yes
+						state = 821
+					}
 				}
 				add_core_of = RUS
 				remove_core_of = RRF
@@ -3256,7 +3246,10 @@ country_event = {
 		hidden_effect = {
 			every_state = {
 				limit = {
-					is_core_rrf_state = yes
+					OR = {
+						is_core_rrf_state = yes
+						state = 821
+					}
 				}
 				add_core_of = RUS
 				remove_core_of = RRF
@@ -3274,7 +3267,10 @@ country_event = {
 		hidden_effect = {
 			every_state = {
 				limit = {
-					is_core_rrf_state = yes
+					OR = {
+						is_core_rrf_state = yes
+						state = 821
+					}
 				}
 				add_core_of = RUS
 				remove_core_of = RRF
@@ -3298,7 +3294,7 @@ country_event = { #RCW
 		ai_chance = {
 			base = 15
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					has_game_rule = {
 						rule = RUS_post_assassination
@@ -3353,7 +3349,7 @@ country_event = { #RCW
 				}	
 			}
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					has_game_rule = {
 						rule = RUS_post_assassination
@@ -3462,7 +3458,7 @@ country_event = { #RCW
 		ai_chance = {
 			factor = 45
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					has_game_rule = {
 						rule = RUS_post_assassination
@@ -3525,7 +3521,7 @@ country_event = { #RCW
 			remove_ideas = rus_divided_staff2
 			remove_ideas = rus_divided_marine
 			remove_ideas = rus_brest_litovsk
-			remove_ideas = rus_memories_of_rev
+			remove_ideas = RUS_scars_of_russian_revolution
 			RUS_remove_riga_accords = yes		
 			every_country = {
 				limit = {
@@ -3582,7 +3578,7 @@ country_event = { #RCW
 		ai_chance = {
 			factor = 55
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					has_game_rule = {
 						rule = RUS_post_assassination
@@ -3683,7 +3679,7 @@ country_event = { #RCW
 			remove_ideas = rus_divided_staff2
 			remove_ideas = rus_divided_marine
 			remove_ideas = rus_brest_litovsk
-			remove_ideas = rus_memories_of_rev
+			remove_ideas = RUS_scars_of_russian_revolution
 			RUS_remove_riga_accords = yes		
 			every_country = {
 				limit = {
@@ -3771,7 +3767,7 @@ country_event = { #RCW
 		ai_chance = {
 			base = 80
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					has_game_rule = {
 						rule = RUS_post_assassination
@@ -3823,6 +3819,7 @@ country_event = { #RCW
 				limit = { is_demilitarized_zone = yes }
 				set_demilitarized_zone = no
 			}
+			activate_targeted_decision = { target = RRF decision = RCW_pact_with_rrf }
 			set_country_flag = make_russian_junta_tree_visible
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -3867,7 +3864,7 @@ country_event = { #RCW
 				}
 			}
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					has_game_rule = {
 						rule = RUS_post_assassination
@@ -3967,6 +3964,7 @@ country_event = { #RCW
 				limit = { is_demilitarized_zone = yes }
 				set_demilitarized_zone = no
 			}
+			activate_targeted_decision = { target = RRF decision = RCW_pact_with_rrf }
 			set_country_flag = make_russian_junta_tree_visible
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -4222,7 +4220,7 @@ country_event = { #RCW
 		ai_chance = {
 			factor = 85
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					has_game_rule = {
 						rule = RUS_post_assassination
@@ -4378,7 +4376,7 @@ country_event = { #RCW
 						remove_ideas = rus_divided_staff2
 						remove_ideas = rus_divided_marine
 						remove_ideas = rus_brest_litovsk
-						remove_ideas = rus_memories_of_rev
+						remove_ideas = RUS_scars_of_russian_revolution
 						RUS_remove_riga_accords = yes		
 						every_country = {
 							limit = {
@@ -4432,7 +4430,7 @@ country_event = { #RCW
 		ai_chance = {
 			factor = 85
 			modifier = {
-				factor = 10000
+				factor = 1000
 				OR = {
 					has_game_rule = {
 						rule = RUS_post_assassination
@@ -4528,7 +4526,7 @@ country_event = { #RCW
 			remove_ideas = rus_divided_staff2
 			remove_ideas = rus_divided_marine
 			remove_ideas = rus_brest_litovsk
-			remove_ideas = rus_memories_of_rev
+			remove_ideas = RUS_scars_of_russian_revolution
 			RUS_remove_riga_accords = yes		
 			every_country = {
 				limit = {
@@ -4681,6 +4679,7 @@ country_event = { #RCW
 				limit = { is_demilitarized_zone = yes }
 				set_demilitarized_zone = no
 			}
+			activate_targeted_decision = { target = RRF decision = RCW_pact_with_rrf }
 			set_country_flag = make_russian_junta_tree_visible
 			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
@@ -4733,7 +4732,7 @@ country_event = { #RCW
 		}
 		country_event = {
 			id = rcw.218
-			days = 2
+			days = 10
 		}
 		set_global_flag = RCW_preparations
 		hidden_effect = {
@@ -5099,16 +5098,16 @@ country_event = { #RCW
 				}
 			}
 			else = {
-			event_target:soviet_russia = {
-				every_state = {
-					limit = {
-						is_core_rrf_state = yes
+				RUS = {
+					every_state = {
+						limit = {
+							is_core_rrf_state = yes
+						}
+						PREV = { transfer_state_to = RVA }
+						PREV = { remove_state_core = THIS }
+						PREV = { add_state_claim = THIS }
+						add_core_of = RVA
 					}
-					PREV = { transfer_state_to = RVA }
-					PREV = { remove_state_core = THIS }
-					PREV = { add_state_claim = THIS }
-					add_core_of = RVA
-				}
 				}		
 			}
 			country_event = {

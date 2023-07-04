@@ -242,14 +242,14 @@ country_event = { #Socialists in the government
 		ai_chance = {
 			factor = 80
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
@@ -309,14 +309,14 @@ country_event = { #Socialists in the government
 		ai_chance = {
 			factor = 70
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
@@ -438,6 +438,16 @@ country_event = { #Socialists in the government
 		}
 		clr_country_flag = MTR_socialists_in_government
 		add_stability = -0.2
+		create_corps_commander = {
+			name = "Issa Pliyev"
+			portrait_path = "gfx/leaders/SOV/Issa_Pliyev.png"
+			traits = { cavalry_officer  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
 		hidden_effect = {
 			country_event = {
 				id = mtrcw.1
@@ -462,14 +472,14 @@ country_event = { #Majlis Quotas
 		ai_chance = {
 			factor = 70
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
@@ -513,7 +523,7 @@ country_event = { #Majlis Quotas
 		}
 		add_stability = 0.05
 		add_popularity = {
-			ideology = social_democrat
+			ideology = social_liberal
 			popularity = 0.12
 		}
 	}
@@ -833,6 +843,17 @@ country_event = { #Socialist Victory
 			var = MTR_nogai_support   
 			value = 0.25
 		}
+		create_corps_commander = {
+			name = "Issa Pliyev"
+			portrait_path = "gfx/leaders/SOV/Issa_Pliyev.png"
+			traits = { cavalry_officer  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		
 		hidden_effect = {
 			country_event = {
 				id = mtr.22
@@ -1454,28 +1475,28 @@ country_event = { #Oil Treaty
 		ai_chance = {
 			factor = 70
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}	
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CONF
 				}
 			}	
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_OKSP
@@ -1495,7 +1516,7 @@ country_event = { #Oil Treaty
 		ai_chance = {
 			factor = 30
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CHECH
@@ -1638,28 +1659,28 @@ country_event = { #Protests
 		ai_chance = {
 			factor = 60
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}	
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CONF
 				}
 			}	
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_OKSP
@@ -2251,7 +2272,7 @@ country_event = { #Azerbaijan
 			factor = 50
 			modifier = {
 				factor = 1.5
-				has_government = social_democrat
+				has_government = social_liberal
 			}
 		}
 		FROM = {
@@ -2499,7 +2520,7 @@ country_event = { #New party created
 	option = {
 		name = mtrel.2.a
 		add_popularity = {
-			ideology = social_conservative
+			ideology = authoritarian_democrat
 			popularity = -0.075
 		}
 		add_stability = 0.025
@@ -2507,16 +2528,11 @@ country_event = { #New party created
 		remove_ideas_with_trait = economy_minister
 		add_ideas = MTR_Ibragim_I_Gaidarov_eco_ade
 		setup_majlis_mechanic_socdem = yes
-		set_party_name = {
-			ideology = social_democrat
-			long_name = MTR_socdem_party_long
-			name = MTR_socdem_party
-		}
 		create_country_leader = {
 			name = "Vassan-Girey Dzhabagiyev"
 			picture = "gfx/leaders/MTR/Portrait_MTR_Vassan_Girey.png"
 			expire = "1965.1.1"
-			ideology = social_democrat_subtype
+			ideology = soclib_islamism_subtype
 		}
 	}
 }
@@ -2535,7 +2551,7 @@ country_event = { #Campaign starts
 		ai_chance = {
 			factor = 10
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_OKSP
@@ -2550,7 +2566,7 @@ country_event = { #Campaign starts
 		ai_chance = {
 			factor = 50
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CONF
@@ -2565,7 +2581,7 @@ country_event = { #Campaign starts
 		ai_chance = {
 			factor = 30
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CHECH
@@ -2636,13 +2652,13 @@ country_event = { #Campaign
 				has_country_flag = MTR_1936_SDPSK_campaign
 			}
 			add_popularity = {
-				ideology = social_democrat
+				ideology = social_liberal
 				popularity = 0.025
 			}
 		}
 		else = {
 			add_popularity = {
-				ideology = social_conservative
+				ideology = authoritarian_democrat
 				popularity = 0.025
 			}
 		}
@@ -2734,7 +2750,7 @@ country_event = { #Campaign
 			}
 		}
 		set_politics = {
-			ruling_party = social_democrat
+			ruling_party = social_liberal
 			elections_allowed = yes
 		}
 		set_country_flag = MTR_Socdems_win
@@ -2817,13 +2833,13 @@ country_event = { #Campaign
 				has_country_flag = MTR_1936_SDPSK_campaign
 			}
 			add_popularity = {
-				ideology = social_democrat
+				ideology = social_liberal
 				popularity = -0.05
 			}
 		}
 		else = {
 			add_popularity = {
-				ideology = social_conservative
+				ideology = authoritarian_democrat
 				popularity = -0.05
 			}
 		}

@@ -835,15 +835,11 @@ news_event = {# The Illusion Shatters
 		log = "[GetDateText]: [Root.GetName]: event lepcollapse.17"
 		hidden_effect = {
 			if = {
-				limit = {
-					tag = QIE
-				}
+				limit = { tag = QIE }
 				dismantle_faction = yes
 			}
 			if = {
-				limit = {
-					tag = LEP
-				}
+				limit = { tag = LEP }
 				set_global_flag = LEP_collapse
 				set_country_flag = LEP_collapsed
 				country_event = {
@@ -852,18 +848,14 @@ news_event = {# The Illusion Shatters
 				}
 			}
 			if = {
-				limit = {
-					tag = SZC
-				}
+				limit = { tag = SZC }
 				country_event = {
 					id = sichuan.7
 					days = 10
 				}
 			}
 			if = {
-				limit = {
-					tag = SHX
-				}
+				limit = { tag = SHX }
 				country_event = {
 					id = shx.7
 					days = 5
@@ -4120,7 +4112,7 @@ country_event = { #Heads up to Fengtian of LEP intervention to support QIE
 		trigger = { has_country_flag = ger_intervention_ask }
 	}
 	desc = { #QIE has asked for intervention directly
-		text = lep.205._noger
+		text = lep.205.d_noger
 		trigger = { NOT = { has_country_flag = ger_intervention_ask } }
 	}
 
@@ -5645,6 +5637,7 @@ country_event = { # von falkenhausen becomes the boss
 				name = LEP_paternal_autocrat_party_aog
 				long_name = LEP_paternal_autocrat_party_aog_long
 			}
+			country_event = { id = allost.3 days = 20 }
 		}
 		add_ideas = { AOG_Alexander_von_Falkenhausen_hog_ade }
 		GEA = {
@@ -6277,7 +6270,7 @@ country_event = { #This is Qi's China
 		}
 	}
 	option = {
-		name = lepfp.6.e #Hongwu Ming
+		name = lepfp.f.e #Hongwu Ming
 		ai_chance = { factor = 20 }
 		set_cosmetic_tag = LEC_MING
 		set_country_flag = LEP_hongwu_leader
@@ -6751,6 +6744,7 @@ country_event = { # The Burning of the Head-Office
 	option = {
 		name = allost.3.a
 		add_stability = -0.06
+		country_event = { id = allost.4 days = 1 }
 	}
 }
 
@@ -7056,7 +7050,7 @@ country_event = { # rid ourselves of Puyi?
 		add_stability = 0.1
 		QIE_tranfer_manchus_to_PREV = yes
 	}
-	
+
 	option = {
 		name = allost.17.b
 		ai_chance = {
@@ -7100,7 +7094,7 @@ country_event = { # chinese empire options, coup version
 		}
 	}
 	option = { #yes, Puppet Hongwu
-		name = allost.19.b
+		name = allost.18.b
 		ai_chance = { factor = 20 }
 		country_event = {
 			id = allost.22

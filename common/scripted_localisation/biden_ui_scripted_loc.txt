@@ -13,6 +13,10 @@ defined_text = {
 					ruling_only = yes
 				}
 				has_country_leader = {
+					name = "Elizabeth II"
+					ruling_only = yes
+				}
+				has_country_leader = {
 					name = "Henry IX"
 					ruling_only = yes
 				}
@@ -65,6 +69,10 @@ defined_text = {
 				}
 				has_country_leader = {
 					name = "Albert I"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Elizabeth II"
 					ruling_only = yes
 				}
 				has_country_leader = {
@@ -351,20 +359,48 @@ defined_text = {
 	name = GetHOGTitle
 	text = {
 		trigger = {
-			tag = CAN
-			NOT = {
-				country_exists = GBR
+			AND = {
+				tag = CAN
+				NOT = {
+					OR = {
+						has_country_flag = CAN_gov_gen
+						has_country_flag = CAN_president
+					}
+				}
 			}
 		}
 		localization_key = PM_OR_LEADER
 	}
 	text = {
 		trigger = {
-			tag = CAN
-			country_exists = GBR
+			AND = {
+				tag = CAN
+				has_country_flag = CAN_gov_gen
+			}
 		}
 		localization_key = GG_OR_LEADER
 	}	
+	text = {
+		trigger = {
+			AND = {
+				tag = CAN
+				has_country_flag = CAN_president
+			}
+		}
+		localization_key = PM_OR_PRES
+	}	
+	text = {
+		trigger = {
+			tag = NFL
+		}
+		localization_key = GG_OR_LEADER
+	}
+	text = {
+		trigger = {
+			tag = GBR
+		}
+		localization_key = PM_OR_LEADER
+	}
 	text = {
 		trigger = {
 			tag = GER
@@ -379,9 +415,15 @@ defined_text = {
 	}		
 	text = {
 		trigger = {
-			tag = SRI
+			tag = SIC
 		}
 		localization_key = BR_OR_LEADER
+	}
+	text = {
+		trigger = {
+			tag = SRI
+		}
+		localization_key = KN_OR_LEADER
 	}
 	text = {
 		trigger = {
@@ -490,6 +532,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = KIV
+		}
+		localization_key = PM_OR_MK
+	}
+	
+	text = {
+		trigger = {
 			tag = LUX
 		}
 		localization_key = GD_OR_PM
@@ -588,6 +637,41 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = SRD
+		}
+		localization_key = PM_OR_LEADER
+	}
+	
+	text = {
+		trigger = {
+			tag = ITA
+		}
+		localization_key = PM_OR_LEADER
+	}
+	
+	text = {
+		trigger = {
+			tag = SIA
+		}
+		localization_key = PM_OR_LEADER
+	}
+	
+	text = {
+		trigger = {
+			tag = PRF
+		}
+		localization_key = NZ_OR_DW
+	}
+	
+	text = {
+		trigger = {
+			tag = SIR
+		}
+		localization_key = PM_OR_LEADER
+	}
+	
+	text = {
+		trigger = {
 			tag = RUS
 		}
 		localization_key = PM_OR_PRES
@@ -658,6 +742,20 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = VIN
+		}
+		localization_key = EM_OR_LEADER
+	}
+	
+	text = {
+		trigger = {
+			tag = BUL
+		}
+		localization_key = TS_OR_PM
+	}
+	
+	text = {
+		trigger = {
 			tag = QIE
 		}
 		localization_key = EM_OR_PRES
@@ -672,6 +770,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = DEH
+		}
+		localization_key = VI_OR_PM
+	}
+	
+	text = {
+		trigger = {
 			tag = SWI
 		}
 		localization_key = PR_OR_FC
@@ -679,20 +784,59 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			OR = {
-				has_country_leader = {
-					name = "Henry H. Arnold"
-					ruling_only = yes
+			tag = SKM
+		}
+		localization_key = CH_OR_PM
+	}
+	
+
+	
+	text = {
+		trigger = {
+			tag = EGY
+		}
+		localization_key = SUL_OR_PM
+	}
+	
+	text = {
+		trigger = {
+			tag = GAL
+		}
+		localization_key = IMP_OR_NAT
+	}
+	
+	text = {
+		trigger = {
+			tag = MSF
+		}
+		localization_key = BRO_OR_BRO
+	}
+	
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_country_leader = {
+						name = "Henry H. Arnold"
+						ruling_only = yes
+					}
+				
+					has_country_leader = {
+						name = "George Marshall"
+						ruling_only = yes
+					}
 				}
-			
-				has_country_leader = {
-					name = "George Marshall"
-					ruling_only = yes
-				}
+				tag = CAL
 			}
-			tag = CAL
 		}
 		localization_key = DI_OR_DI
+	}
+	
+	text = {
+		trigger = {
+			has_country_flag = BONNIE_VISIBLE
+		}
+		localization_key = ANARCH_OR_COANARCH
 	}
 }
 
@@ -716,6 +860,18 @@ defined_text = {
 	}	
 	text = {
 		trigger = {
+			tag = GBR
+		}
+		localization_key = PM_OR_LEADER2
+	}
+	text = {
+		trigger = {
+			tag = NFL
+		}
+		localization_key = GG_OR_LEADER2
+	}
+	text = {
+		trigger = {
 			tag = GER
 		}
 		localization_key = KZ_OR_LEADER2
@@ -728,9 +884,15 @@ defined_text = {
 	}		
 	text = {
 		trigger = {
-			tag = SRI
+			tag = SIC
 		}
 		localization_key = BR_OR_LEADER2
+	}
+	text = {
+		trigger = {
+			tag = SRI
+		}
+		localization_key = KN_OR_LEADER2
 	}
 	text = {
 		trigger = {
@@ -839,6 +1001,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = KIV
+		}
+		localization_key = PM_OR_MK2
+	}
+	
+	text = {
+		trigger = {
 			tag = LUX
 		}
 		localization_key = GD_OR_PM2
@@ -889,6 +1058,41 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = POR
+		}
+		localization_key = PM_OR_LEADER2
+	}
+	
+	text = {
+		trigger = {
+			tag = SRD
+		}
+		localization_key = PM_OR_LEADER2
+	}
+	
+	text = {
+		trigger = {
+			tag = ITA
+		}
+		localization_key = PM_OR_LEADER2
+	}
+	
+	text = {
+		trigger = {
+			tag = SIA
+		}
+		localization_key = PM_OR_LEADER2
+	}
+	
+	text = {
+		trigger = {
+			tag = PRF
+		}
+		localization_key = NZ_OR_DW2
+	}
+	
+	text = {
+		trigger = {
+			tag = SIR
 		}
 		localization_key = PM_OR_LEADER2
 	}
@@ -1007,6 +1211,20 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = VIN
+		}
+		localization_key = EM_OR_LEADER2
+	}
+	
+	text = {
+		trigger = {
+			tag = BUL
+		}
+		localization_key = TS_OR_PM2
+	}
+	
+	text = {
+		trigger = {
 			tag = QIE
 		}
 		localization_key = EM_OR_PRES2
@@ -1021,6 +1239,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = DEH
+		}
+		localization_key = VI_OR_PM2
+	}
+	
+	text = {
+		trigger = {
 			tag = SWI
 		}
 		localization_key = PR_OR_FC2
@@ -1028,20 +1253,57 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			OR = {
-				has_country_leader = {
-					name = "Henry H. Arnold"
-					ruling_only = yes
+			tag = SKM
+		}
+		localization_key = CH_OR_PM2
+	}
+	
+	text = {
+		trigger = {
+			tag = EGY
+		}
+		localization_key = SUL_OR_PM2
+	}
+	
+	text = {
+		trigger = {
+			tag = GAL
+		}
+		localization_key = IMP_OR_NAT2
+	}
+	
+	text = {
+		trigger = {
+			tag = MSF
+		}
+		localization_key = BRO_OR_BRO2
+	}
+	
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_country_leader = {
+						name = "Henry H. Arnold"
+						ruling_only = yes
+					}
+				
+					has_country_leader = {
+						name = "George Marshall"
+						ruling_only = yes
+					}
 				}
-			
-				has_country_leader = {
-					name = "George Marshall"
-					ruling_only = yes
-				}
+				tag = CAL
 			}
-			tag = CAL
 		}
 		localization_key = DI_OR_DI2
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = BONNIE_VISIBLE
+		}
+		localization_key = ANARCH_OR_COANARCH2
 	}
 }
 
@@ -1659,6 +1921,13 @@ defined_text = {
 		localization_key = POLITICS_JANNSENS_DESC
 	}	
 	
+	text = { #By Minister Ideas
+		trigger = {
+			has_idea = KIV_Joseph_Kasa_Vubu_hog_sli
+		}
+		localization_key = POLITICS_KASU_VUBU_DESC
+	}	
+	
 	### Mexicans ###
 	
 	text = {
@@ -1956,6 +2225,57 @@ defined_text = {
 		}
 		localization_key = POLITICS_VEIGA_DOS_SANTOS_BRA_DESC
 	}
+	
+	text = {
+		trigger = {
+			has_idea = BRA_Plinio_Salgado_hog_npo
+		}
+		localization_key = POLITICS_SALDAGO_DESC
+	}
+	
+	### Canada ###
+	
+	text = {
+		trigger = {
+			has_idea = CAN_Charles_Avery_Dunning_hog_sli
+		}
+		localization_key = POLITICS_DUNNING_DESC
+	}
+	
+	text = {
+		trigger = {
+			has_idea = CAN_William_Lyon_Mackenzie_King_hog_mli
+		}
+		localization_key = POLITICS_MACKENZIE_KING_DESC
+	}
+	
+	### Other ###
+	
+	text = {
+		trigger = {
+			has_idea = BDN_Barry_O_Bama_hog_sde
+		}
+		localization_key = BDN_Barry_O_Bama_hog_sde_desc
+	}
+	
+	text = {
+		trigger = {
+			has_idea = BDN_Michael_D_Higgins_hog_sde
+		}
+		localization_key = BDN_Michael_D_Higgins_hog_sde_desc
+	}
+	
+}
+
+defined_text = {
+	name = GetOtherPrimeMinister
+	text = {
+		trigger = {
+			has_country_flag = MSF_BROTHERS_VISIBLE
+			
+		}
+		localization_key = "Gunnar Hallstrom"
+	}
 }
 
 defined_text = {
@@ -1963,119 +2283,226 @@ defined_text = {
 	text = {
 		trigger = {
 			has_idea = CAN_RB_Bennett_hog_sco
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
 		}
 		localization_key = CAN_RB_Bennett_hog_sco
 	}
 	text = {
 		trigger = {
 			has_idea = CAN_Major_James_Coldwell_hog_sde
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
 		}
 		localization_key = CAN_Major_James_Coldwell_hog_sde
 	}
 	text = {
 		trigger = {
+			has_idea = CAN_Tommy_Douglas_hog_sde
+		}
+		localization_key = CAN_Tommy_Douglas_hog_sde
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Hazen_Argue_hog_sde
+		}
+		localization_key = CAN_Hazen_Argue_hog_sde
+	}
+	text = {
+		trigger = {
 			has_idea = CAN_JS_Woodsworth_hog_sde
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
 		}
 		localization_key = CAN_JS_Woodsworth_hog_sde
 	}
 	text = {
 		trigger = {
 			has_idea = CAN_Louis_St_Laurent_hog_sli
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
 		}
 		localization_key = CAN_Louis_St_Laurent_hog_sli
 	}
 	text = {
 		trigger = {
+			has_idea = CAN_Lester_B_Pearson_hog_sli
+		}
+		localization_key = CAN_Lester_B_Pearson_hog_sli
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Charles_Avery_Dunning_hog_sli
+			
+		}
+		localization_key = CAN_Charles_Avery_Dunning_hog_sli
+	}
+	text = {
+		trigger = {
 			has_idea = CAN_Charles_Gavan_Power_hog_mli
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			
 		}
 		localization_key = CAN_Charles_Gavan_Power_hog_mli
 	}
 	text = {
 		trigger = {
 			has_idea = CAN_William_Lyon_Mackenzie_King_hog_mli
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			
 		}
 		localization_key = CAN_William_Lyon_Mackenzie_King_hog_mli
 	}
 	text = {
 		trigger = {
 			has_idea = CAN_John_Bracken_hog_sco
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			
 		}
 		localization_key = CAN_John_Bracken_hog_sco
 	}
 	text = {
 		trigger = {
+			has_idea = CAN_Henry_Herbert_Stevens_hog_sco
+			
+		}
+		localization_key = CAN_Henry_Herbert_Stevens_hog_sco
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_George_A_Drew_hog_sco
+			
+		}
+		localization_key = CAN_George_A_Drew_hog_sco
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_John_Diefenbaker_hog_sco
+			
+		}
+		localization_key = CAN_John_Diefenbaker_hog_sco
+	}
+	text = {
+		trigger = {
 			has_idea = CAN_Robert_Manion_hog_sco
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			
 		}
 		localization_key = CAN_Robert_Manion_hog_sco
 	}
 	text = {
 		trigger = {
-			has_idea = CAN_Arthur_Meighen_hog_ade
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			has_idea = CAN_Arthur_Meighen_hog_sco
+			
 		}
-		localization_key = CAN_Arthur_Meighen_hog_ade
+		localization_key = CAN_Arthur_Meighen_hog_sco
 	}
 	text = {
 		trigger = {
 			has_idea = CAN_JH_Blackmore_hog_ade
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			
 		}
 		localization_key = CAN_JH_Blackmore_hog_ade
 	}
 	text = {
 		trigger = {
+			has_idea = CAN_Ernest_Manning_hog_ade
+			
+		}
+		localization_key = CAN_Ernest_Manning_hog_ade
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_CH_Douglas_hog_ade
+			
+		}
+		localization_key = CAN_CH_Douglas_hog_ade
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_W_A_C_Bennett_hog_ade
+			
+		}
+		localization_key = CAN_W_A_C_Bennett_hog_ade
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_William_Duncan_Herridge_hog_ade
+			
+		}
+		localization_key = CAN_William_Duncan_Herridge_hog_ade
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Solon_Earl_Low_hog_ade
+			
+		}
+		localization_key = CAN_Solon_Earl_Low_hog_ade
+	}
+	text = {
+		trigger = {
 			has_idea = CAN_Harry_Crerar_hog_pau
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			
 		}
 		localization_key = CAN_Harry_Crerar_hog_pau
 	}
 	text = {
 		trigger = {
-			has_idea = CAN_Henry_Herbert_Stevens_hog_npo
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			has_idea = CAN_Harold_Harmsworth_hog_pau
+			
 		}
-		localization_key = CAN_Henry_Herbert_Stevens_hog_npo
+		localization_key = CAN_Harold_Harmsworth_hog_pau
 	}
 	text = {
 		trigger = {
-			has_idea = CAN_John_Diefenbaker_hog_npo
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			has_idea = CAN_Lord_Beaverbrook_hog_pau
+			
 		}
-		localization_key = CAN_John_Diefenbaker_hog_npo
+		localization_key = CAN_Lord_Beaverbrook_hog_pau
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_William_Aberhart_hog_pau
+			
+		}
+		localization_key = CAN_William_Aberhart_hog_pau
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_John_Hargrave_hog_pau
+			
+		}
+		localization_key = CAN_John_Hargrave_hog_pau
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Real_Caouette_hog_pau
+			
+		}
+		localization_key = CAN_Real_Caouette_hog_pau
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Adrien_Arcand_hog_npo
+			
+		}
+		localization_key = CAN_Adrien_Arcand_hog_npo
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_JFC_Fuller_hog_npo
+			
+		}
+		localization_key = CAN_JFC_Fuller_hog_npo
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Anthony_Ludovici_hog_npo
+			
+		}
+		localization_key = CAN_Anthony_Ludovici_hog_npo
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_John_Ross_Taylor_hog_npo
+			
+		}
+		localization_key = CAN_John_Ross_Taylor_hog_npo
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Edward_VIII_hog_npo
+			
+		}
+		localization_key = CAN_Edward_VIII_hog_npo
 	}
 	text = {
 		trigger = {
@@ -2084,19 +2511,190 @@ defined_text = {
 				has_idea = CAN_King_Edward_VIII_hog_pau
 				has_idea = CAN_King_George_VI_hog_pau
 				has_idea = CAN_King_Henry_IX_hog_pau
+				AND = {
+					tag = CAN
+					NOT = {
+						has_idea_with_trait = head_of_government
+					}
+				}
 			}
-			NOT = {
-				has_country_flag = CAN_is_republic
-			}
+			
 		}
 		localization_key = "Vacant Office"
 	}
+	
+	### Newfies ###
+	
 	text = {
 		trigger = {
-			has_country_flag = CAN_is_republic
+			has_idea = NFL_Peter_John_Cashin_hog_sde
 		}
-		localization_key = ""
+		localization_key = NFL_Peter_John_Cashin_hog_sde
 	}
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Sam_Drover_hog_sde
+		}
+		localization_key = NFL_Sam_Drover_hog_sde
+	}
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Joey_Smallwood_hog_sli
+		}
+		localization_key = NFL_Joey_Smallwood_hog_sli
+	}
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Richard_Squires_hog_mli
+		}
+		localization_key = NFL_Richard_Squires_hog_mli
+	}
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Frederick_C_Alderdice_hog_sco
+		}
+		localization_key = NFL_Frederick_C_Alderdice_hog_sco
+	}
+	
+	### British PMs ###
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Henry_Page_Croft_hog_ade
+		}
+		localization_key = GBR_Henry_Page_Croft_hog_ade
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Ezra_Pound_hog_ade
+		}
+		localization_key = GBR_Ezra_Pound_hog_ade
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Robert_Cecil_hog_sco
+		}
+		localization_key = GBR_Robert_Cecil_hog_sco
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Robert_Vansittart_hog_sco
+		}
+		localization_key = GBR_Robert_Vansittart_hog_sco
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Anthony_Eden_hog_sco
+		}
+		localization_key = GBR_Anthony_Eden_hog_sco
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Edward_Halifax_hog_sco
+		}
+		localization_key = GBR_Edward_Halifax_hog_sco
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Stanley_Baldwin_hog_sco
+		}
+		localization_key = GBR_Stanley_Baldwin_hog_sco
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Neville_Chamberlain_hog_sco
+		}
+		localization_key = GBR_Neville_Chamberlain_hog_sco
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Douglas_Hogg_hog_sco
+		}
+		localization_key = GBR_Douglas_Hogg_hog_sco
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Hugh_Gaitskell_hog_sde
+		}
+		localization_key = GBR_Hugh_Gaitskell_hog_sde
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Clement_Attlee_hog_sde
+		}
+		localization_key = GBR_Clement_Attlee_hog_sde
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Malcolm_MacDonald_hog_sde
+		}
+		localization_key = GBR_Malcolm_MacDonald_hog_sde
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Derwent_Hall_Caine_hog_sde
+		}
+		localization_key = GBR_Derwent_Hall_Caine_hog_sde
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_John_Simon_hog_mli
+		}
+		localization_key = GBR_John_Simon_hog_mli
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Archibald_Sinclair_hog_mli
+		}
+		localization_key = GBR_Archibald_Sinclair_hog_mli
+	}
+	
+	text = { #No way to get them but they have portraits anyway
+		trigger = {
+			has_idea = GBR_Bernard_Montgomery_hog_pau
+		}
+		localization_key = GBR_Bernard_Montgomery_hog_pau
+	}
+	
+	text = { #No way to get them but they have portraits anyway
+		trigger = {
+			has_idea = GBR_Louis_Mountbatten_hog_pau
+		}
+		localization_key = GBR_Louis_Mountbatten_hog_pau
+	}
+	
+	text = { #No way to get them but they have portraits anyway
+		trigger = {
+			has_idea = GBR_Archibald_Ramsay_hog_npo
+		}
+		localization_key = GBR_Archibald_Ramsay_hog_npo
+	}
+
+	text = { #No way to get them but they have portraits anyway
+		trigger = {
+			has_idea = GBR_Rotha_Beryl_Lintorn_Orman_hog_npo
+		}
+		localization_key = GBR_Rotha_Beryl_Lintorn_Orman_hog_npo
+	}
+
 	###German Chancellors###
 	text = {
 		trigger = {
@@ -2403,6 +3001,9 @@ defined_text = {
 				has_country_flag = HOG_veiw
 				has_country_flag = UKR_had_election
 				has_government = social_democrat
+				NOT = {
+					has_country_flag = UKR_Vynnych_won
+				}
 			}
 		}
 		localization_key = "Symon Petliura"
@@ -2467,6 +3068,13 @@ defined_text = {
 			has_idea = LPD_Emile_Janssens_hog_pau
 		}
 		localization_key = LPD_Emile_Janssens_hog_pau
+	}
+	
+	text = {
+		trigger = {
+			has_idea = KIV_Joseph_Kasa_Vubu_hog_sli
+		}
+		localization_key = KIV_Joseph_Kasa_Vubu_hog_sli
 	}
 	
 	### Luxemourgers ###
@@ -3542,14 +4150,37 @@ defined_text = {
 		localization_key = CAL_Huey_Long_hog_sde
 	}
 	
-	### Irish Taoiseachs ###
+	### Pacific Other People ###
 	
 	text = {
 		trigger = {
-			has_idea = IRE_Maurice_Twomey_hog_rso
+			has_idea = CAL_Tamon_Yamaguchi_hog_npo
 		}
-		localization_key = IRE_Maurice_Twomey_hog_rso
+		localization_key = CAL_Tamon_Yamaguchi_hog_npo
 	}
+	
+	text = {
+		trigger = {
+			has_idea = CAL_Kichisaburo_Nomura_hog_pau
+		}
+		localization_key = CAL_Kichisaburo_Nomura_hog_pau
+	}
+
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_country_flag = MARSHALL_IN_POWER
+		}
+		localization_key = CAL_Henry_Arnold_hog_ade
+	}
+
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_country_flag = ARNOLD_IN_POWER
+		}
+		localization_key = CAL_George_Marshall_eco_ade
+	}
+	
+	### Irish Taoiseachs ###
 
 	text = {
 		trigger = {
@@ -3581,9 +4212,30 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = IRE_William_X_O'Brien_hog_sde
+		}
+		localization_key = IRE_William_X_O'Brien_hog_sde
+	}
+	
+	text = {
+		trigger = {
 			has_idea = IRE_Thomas_Johnson_hog_sde
 		}
 		localization_key = IRE_Thomas_Johnson_hog_sde
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Liam_Mellows_hog_sde
+		}
+		localization_key = IRE_Liam_Mellows_hog_sde
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Margaret_Buckley_hog_sde
+		}
+		localization_key = IRE_Margaret_Buckley_hog_sde
 	}
 	
 	text = {
@@ -3623,6 +4275,20 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = IRE_Ned_Cronin_hog_pau
+		}
+		localization_key = IRE_Ned_Cronin_hog_pau
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_William_Butler_Yeats_hog_pau
+		}
+		localization_key = IRE_William_Butler_Yeats_hog_pau
+	}
+	
+	text = {
+		trigger = {
 			has_idea = IRE_Betty_Sinclair_hog_tot
 		}
 		localization_key = IRE_Betty_Sinclair_hog_tot
@@ -3630,11 +4296,19 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			has_idea = IRE_Margaret_Buckley_hog_sde
+			has_idea = IRE_Maurice_Twomey_hog_rso
 		}
-		localization_key = IRE_Margaret_Buckley_hog_sde
+		localization_key = IRE_Maurice_Twomey_hog_rso
+	}
+
+	text = {
+		trigger = {
+			has_idea = IRE_James_Joyce_hog_rso
+		}
+		localization_key = IRE_James_Joyce_hog_rso
 	}
 	
+
 	### Danish PMs ###
 	
 	text = {
@@ -3952,13 +4626,31 @@ defined_text = {
 		localization_key = NOR_Vidkun_Quisling_hog_pau
 	}
 	
-	### Finnish PM (just the one) ###
+	### Finnish PM (just the three) ###
 	
 	text = { 
 		trigger = {
-			has_idea = FIN_Juho_Kusti_Paasikivi_hog_pau
+			has_idea = FIN_Juho_Kusti_Paasikivi_hog_sco
 		}
-		localization_key = FIN_Juho_Kusti_Paasikivi_hog_pau
+		localization_key = FIN_Juho_Kusti_Paasikivi_hog_sco
+	}
+	text = { 
+		trigger = {
+			has_idea = FIN_Pehr_Evind_Svinhufvud_hog_sco
+		}
+		localization_key = FIN_Pehr_Evind_Svinhufvud_hog_sco
+	}
+	text = { 
+		trigger = {
+			has_idea = FIN_Pehr_Evind_Svinhufvud_hog_pau
+		}
+		localization_key = FIN_Pehr_Evind_Svinhufvud_hog_pau
+	}
+	text = { 
+		trigger = {
+			has_idea = FIN_Kyosti_Kallio_hog_sli
+		}
+		localization_key = FIN_Kyosti_Kallio_hog_sli
 	}
 	
 	### Somali PMs ###
@@ -4125,6 +4817,13 @@ defined_text = {
 	
 	text = { 
 		trigger = {
+			has_idea = ROM_Armand_Calinescu_hog_pau
+		}
+		localization_key = ROM_Armand_Calinescu_hog_pau
+	}
+	
+	text = { 
+		trigger = {
 			has_idea = ROM_Virgil_Madgearu_hog_sde
 		}
 		localization_key = ROM_Virgil_Madgearu_hog_sde
@@ -4273,9 +4972,147 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = RUS
+			has_idea = RUS_Pavel_N_Milyukov_hog_mli
 		}
-		localization_key = [GetRussianPM]
+		localization_key = RUS_Pavel_N_Milyukov_hog_mli
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Sergey_M_Kirov_hog_syn
+		}
+		localization_key = RUS_Sergey_M_Kirov_hog_syn
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Maria_A_Spiridonova_hog_rso
+		}
+		localization_key = RUS_Maria_A_Spiridonova_hog_rso
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Isaak_Z_Shteinberg_hog_syn
+		}
+		localization_key = RUS_Isaak_Z_Shteinberg_hog_syn
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Nikolay_I_Bukharin_hog_syn
+		}
+		localization_key = RUS_Nikolay_I_Bukharin_hog_syn
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Aleksey_I_Rykov_hog_rso
+		}
+		localization_key = RUS_Aleksey_I_Rykov_hog_rso
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Vladimir_K_Volsky_hog_rso
+		}
+		localization_key = RUS_Vladimir_K_Volsky_hog_rso
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Irakliy_G_Tsereteli_hog_sde
+		}
+		localization_key = RUS_Irakliy_G_Tsereteli_hog_sde
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Rafail_Abramovich_hog_sde
+		}
+		localization_key = RUS_Rafail_Abramovich_hog_sde
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Aleksandr_N_Potresov_hog_sde
+		}
+		localization_key = RUS_Aleksandr_N_Potresov_hog_sde
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Vladimir_M_Zenzinov_hog_sde
+		}
+		localization_key = RUS_Vladimir_M_Zenzinov_hog_sde
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Aleksand_F_Kerensky_hog_sli
+		}
+		localization_key = RUS_Aleksand_F_Kerensky_hog_sli
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Nikolay_V_Nekrasov_hog_sli
+		}
+		localization_key = RUS_Nikolay_V_Nekrasov_hog_sli
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Vladimir_D_Nabokov_hog_mli
+		}
+		localization_key = RUS_Vladimir_D_Nabokov_hog_mli
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Aleksandr_I_Konovalov_hog_mli
+		}
+		localization_key = RUS_Aleksandr_I_Konovalov_hog_mli
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Vasiliy_V_Shulgin_hog_sco
+		}
+		localization_key = RUS_Vasiliy_V_Shulgin_hog_sco
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Georgiy_P_Ignatiev_hog_sco
+		}
+		localization_key = RUS_Georgiy_P_Ignatiev_hog_sco
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Felix_F_Yusupov_hog_ade
+		}
+		localization_key = RUS_Felix_F_Yusupov_hog_ade
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Nikolay_S_Trubetskoy_hog_sco
+		}
+		localization_key = RUS_Nikolay_S_Trubetskoy_hog_sco
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Vladimir_M_Purishkevich_hog_pau
+		}
+		localization_key = RUS_Vladimir_M_Purishkevich_hog_pau
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Patriarch_Sergius_hog_pau
+		}
+		localization_key = RUS_Patriarch_Sergius_hog_pau
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Nikolay_E_Markov_hog_npo
+		}
+		localization_key = RUS_Nikolay_E_Markov_hog_npo
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Boris_V_Savinkov_hog_npo
+		}
+		localization_key = RUS_Boris_V_Savinkov_hog_npo
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Viktor_M_Baydalakov_hog_npo
+		}
+		localization_key = RUS_Viktor_M_Baydalakov_hog_npo
 	}
 	
 	### South Africa ###
@@ -4724,6 +5561,592 @@ defined_text = {
 		localization_key = SWI_Albert_Meyer_hog_mli
 	}
 	
+	### Siamese PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Phraya_Phaholpholphayuhasena_hog_sli
+		}
+		localization_key = SIA_Phraya_Phaholpholphayuhasena_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			OR = {
+				has_idea = SIA_Phraya_Manopakornnitithada_hog_ade
+				has_idea = SIR_Phraya_Manopakornnitithada_hog_ade
+			}
+		}
+		localization_key = SIA_Phraya_Manopakornnitithada_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Plaek_Khittasangkha_hog_npo
+		}
+		localization_key = SIA_Plaek_Khittasangkha_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Savaeng_Piampongsarn_hog_sli
+		}
+		localization_key = SIA_Savaeng_Piampongsarn_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Seni_Pramoj_hog_sco
+		}
+		localization_key = SIA_Seni_Pramoj_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Phao_Sriyanond_hog_npo
+		}
+		localization_key = SIA_Phao_Sriyanond_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Sarit_Thanarat_hog_pau
+		}
+		localization_key = SIA_Sarit_Thanarat_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			OR = {
+				has_idea = SIA_Boworadet_Kritsadakorn_hog_pau
+				has_idea = SIR_Boworadet_Kritsadakorn_hog_pau
+			}
+		}
+		localization_key = SIA_Boworadet_Kritsadakorn_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Luang_Praditmanutham_hog_rso
+		}
+		localization_key = SIA_Luang_Praditmanutham_hog_rso
+	}
+	
+	### Delhi PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Narasimha_Chintaman_Kelkar_hog_sli
+		}
+		localization_key = DEH_Narasimha_Chintaman_Kelkar_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_V_S_Srinivasa_Sastri_hog_mli
+		}
+		localization_key = DEH_V_S_Srinivasa_Sastri_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Muhammad_Ali_Jinnah_hog_sde
+		}
+		localization_key = DEH_Muhammad_Ali_Jinnah_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Sir_Sikander_Hayat_Khan_hog_sco
+		}
+		localization_key = DEH_Sir_Sikander_Hayat_Khan_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Maharaja_Ganga_Singh_hog_sco
+		}
+		localization_key = DEH_Maharaja_Ganga_Singh_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Minocher_Rustom_Masani_hog_mli
+		}
+		localization_key = DEH_Minocher_Rustom_Masani_hog_mli
+	}
+	
+	### Vietnamese PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Nguyen_Tuong_Long_hog_sli
+		}
+		localization_key = VIN_Nguyen_Tuong_Long_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Bui_Quang_Chieu_hog_mli
+		}
+		localization_key = VIN_Bui_Quang_Chieu_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Ngo_Dinh_Diem_hog_ade
+		}
+		localization_key = VIN_Ngo_Dinh_Diem_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Pham_Qhuyn_hog_sco
+		}
+		localization_key = VIN_Pham_Qhuyn_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Tran_Trong_Kim_hog_sco
+		}
+		localization_key = VIN_Tran_Trong_Kim_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Henriette_Bui_Quang_Chieu_hog_mli
+		}
+		localization_key = VIN_Henriette_Bui_Quang_Chieu_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Nguyen_Tuong_Tam_hog_sli
+		}
+		localization_key = VIN_Nguyen_Tuong_Tam_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Nguyen_Phan_Long_hog_mli
+		}
+		localization_key = VIN_Nguyen_Phan_Long_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Nguyen_Phuc_Buu_Dinh_hog_pau
+		}
+		localization_key = VIN_Nguyen_Phuc_Buu_Dinh_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Le_Van_Vien_hog_pau
+		}
+		localization_key = VIN_Le_Van_Vien_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Duong_Van_Duong_hog_pau
+		}
+		localization_key = VIN_Duong_Van_Duong_hog_pau
+	}
+	
+	### Bulgarian PMs ###
+	
+	# text = { 
+		# trigger = {
+			# has_idea = BUL_Georgi_Mihov_Dimitrov_hog_sco
+		# }
+		# localization_key = BUL_Georgi_Mihov_Dimitrov_hog_sco
+	# }
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Aleksandar_Stamboliyski_hog_sco
+		}
+		localization_key = BUL_Aleksandar_Stamboliyski_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Yanko_Sakazov_hog_sde
+		}
+		localization_key = BUL_Yanko_Sakazov_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Atanas_Burov_hog_sli
+		}
+		localization_key = BUL_Atanas_Burov_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Stoyan_Kosturkov_hog_mli
+		}
+		localization_key = BUL_Stoyan_Kosturkov_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Aleksandar_Malinov_hog_ade
+		}
+		localization_key = BUL_Aleksandar_Malinov_hog_ade
+	}
+	
+	### Sikkim PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Kaz_Lhendup_Dorjee_hog_ade
+		}
+		localization_key = SKM_Kaz_Lhendup_Dorjee_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Tashi_Tshering_hog_rso
+		}
+		localization_key = SKM_Tashi_Tshering_hog_rso
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Kashiraj_Pradhan_hog_sli
+		}
+		localization_key = SKM_Kashiraj_Pradhan_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Nicholas_Roerich_hog_tot
+		}
+		localization_key = SKM_Nicholas_Roerich_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Sonam_Tshering_hog_npo
+		}
+		localization_key = SKM_Sonam_Tshering_hog_npo
+	}
+	
+	### Sardinia PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Giorgio_Bardanzellu_hog_ade
+		}
+		localization_key = SRD_Giorgio_Bardanzellu_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Pietro_Badoglio_hog_pau
+		}
+		localization_key = SRD_Pietro_Badoglio_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Luigi_Efisio_Marras_hog_sco
+		}
+		localization_key = SRD_Luigi_Efisio_Marras_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Roberto_Lucifero_d_Aprigliano_hog_ade
+		}
+		localization_key = SRD_Roberto_Lucifero_d_Aprigliano_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Luigi_Crespellani_hog_mli
+		}
+		localization_key = SRD_Luigi_Crespellani_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Alfredo_Corrias_hog_sco
+		}
+		localization_key = SRD_Alfredo_Corrias_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Camillo_Bellieni_hog_sli
+		}
+		localization_key = SRD_Camillo_Bellieni_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Emilio_Lussu_hog_sde
+		}
+		localization_key = SRD_Emilio_Lussu_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Mario_Berlinguer_hog_sde
+		}
+		localization_key = SRD_Mario_Berlinguer_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Ferruccio_Parri_hog_sli
+		}
+		localization_key = SRD_Ferruccio_Parri_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Bruno_Villabruna_hog_mli
+		}
+		localization_key = SRD_Bruno_Villabruna_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Adone_Zoli_hog_sco
+		}
+		localization_key = SRD_Adone_Zoli_hog_sco
+	}
+	
+	### Varios Italian People ###
+	
+	text = { 
+		trigger = {
+			has_idea = ITA_Galeazzo_Ciano_hog_npo
+		}
+		localization_key = ITA_Galeazzo_Ciano_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRI_Riccardo_Lombardi_hog_rso
+		}
+		localization_key = SRI_Riccardo_Lombardi_hog_rso
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRI_Arturo_Labriola_hog_rso
+		}
+		localization_key = SRI_Arturo_Labriola_hog_rso
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIC_Luigi_Sturzo_hog_sco
+		}
+		localization_key = SIC_Luigi_Sturzo_hog_sco
+	}
+	
+	### Princely Fed People ###
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Council_of_Princes_hog_ade
+		}
+		localization_key = PRF_Council_of_Princes_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Krishna_Raja_Wadiyar_IV_hog_ade
+		}
+		localization_key = PRF_Krishna_Raja_Wadiyar_IV_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Jayachamarajendra_Wadiyar_hog_ade
+		}
+		localization_key = PRF_Jayachamarajendra_Wadiyar_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Chithira_Thirunal_Balarama_Varma_hog_sco
+		}
+		localization_key = PRF_Chithira_Thirunal_Balarama_Varma_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Rajaram_II_of_Kolhapur_hog_ade
+		}
+		localization_key = PRF_Rajaram_II_of_Kolhapur_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Madapati_Hanumantha_Rao_hog_mli
+		}
+		localization_key = PRF_Madapati_Hanumantha_Rao_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Akbar_Hydari_hog_sco
+		}
+		localization_key = PRF_Akbar_Hydari_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Mirza_Muhammad_Ismail_hog_sco
+		}
+		localization_key = PRF_Mirza_Muhammad_Ismail_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Nawab_Fazal_Nawaz_Jung_Bahadur_hog_sco
+		}
+		localization_key = PRF_Nawab_Fazal_Nawaz_Jung_Bahadur_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Krushna_Chandra_Gajapati_hog_ade
+		}
+		localization_key = PRF_Krushna_Chandra_Gajapati_hog_ade
+	}
+	
+	### Egyptians ###
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Aly_Maher_hog_sco
+		}
+		localization_key = EGY_Aly_Maher_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Ibrahim_Abdel_Hady_hog_sli
+		}
+		localization_key = EGY_Ibrahim_Abdel_Hady_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Mostafa_El_Nahas_hog_mli
+		}
+		localization_key = EGY_Mostafa_El_Nahas_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Ahmed_Naguib_el_Hilaly_hog_sco
+		}
+		localization_key = EGY_Ahmed_Naguib_el_Hilaly_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Mohamed_Tawfik_Naseem_hog_ade
+		}
+		localization_key = EGY_Mohamed_Tawfik_Naseem_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Ahmad_Mahir_hog_sli
+		}
+		localization_key = EGY_Ahmad_Mahir_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Mohamed_Mahmoud_hog_mli
+		}
+		localization_key = EGY_Mohamed_Mahmoud_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Hussein_Serry_hog_sco
+		}
+		localization_key = EGY_Hussein_Serry_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Hassan_al_Banna_hog_ade
+		}
+		localization_key = EGY_Hassan_al_Banna_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Makram_Ebeid_hog_mli
+		}
+		localization_key = EGY_Makram_Ebeid_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Sayyid_Qutb_hog_ade
+		}
+		localization_key = EGY_Sayyid_Qutb_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Mohammed_Naguib_hog_sli
+		}
+		localization_key = EGY_Mohammed_Naguib_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Fouad_Serageddin_hog_mli
+		}
+		localization_key = EGY_Fouad_Serageddin_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Hassan_al_Hudaybi_hog_sco
+		}
+		localization_key = EGY_Hassan_al_Hudaybi_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Gamal_Abdel_Nasser_hog_sde
+		}
+		localization_key = EGY_Gamal_Abdel_Nasser_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Taha_Hussein_hog_sli
+		}
+		localization_key = EGY_Taha_Hussein_hog_sli
+	}
+	
+	### MSF People ###
+	
+	text = { 
+		trigger = {
+			has_idea = MSF_Ivor_Thord_Gray_hog_npo
+		}
+		localization_key = MSF_Ivor_Thord_Gray_hog_npo
+	}
+	
 	###Others###
 	
 	text = {
@@ -4781,6 +6204,28 @@ defined_text = {
 	
 	text = { #Not by Minister Ideas
 		trigger = {
+			has_idea = GAL_karol_olbracht
+			POL = {
+				NOT = {
+					POL_king_karol = yes
+				}
+			}
+		}
+		localization_key = "Karol Olbracht von Habsburg"
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_idea = GAL_karol_olbracht
+			POL = {
+				POL_king_karol = yes
+			}
+		}
+		localization_key = "Stanislaw Szeptycki"
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
 			has_country_flag = EDDY_CHEIF
 		}
 		localization_key = "Edward VII"
@@ -4792,9 +6237,32 @@ defined_text = {
 		}
 		localization_key = "APCC Council of Bidens"
 	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_idea = BDN_Michael_D_Higgins_hog_sde
+		}
+		localization_key = BDN_Michael_D_Higgins_hog_sde
+	}
+
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_idea = BDN_Barry_O_Bama_hog_sde
+		}
+		localization_key = BDN_Barry_O_Bama_hog_sde
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_country_flag = BONNIE_VISIBLE
+		}
+		localization_key = "Bonnie Parker"
+	}
 
 	#so on and so forth
 }
+
+### Leader Titles ###
 
 defined_text = {
 	name = MEXGetLeaderTitle
@@ -4817,7 +6285,7 @@ defined_text = {
 	text = {
 		trigger = {
 			has_country_leader = {
-				name = "María Josephia Sophia I"
+				name = "María I"
 				ruling_only = yes
 			}
 		}
@@ -4996,6 +6464,440 @@ defined_text = {
 }
 
 defined_text = {
+	name = DEHGetLeaderTitle
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					name = "Edward VIII"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Albert I"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Elizabeth II"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Henry IX"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "George VI"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "George V"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "Emperor"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_leader = {
+						name = "Edward VIII"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Albert I"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Henry IX"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "George VI"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "George V"
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		localization_key = "Viceroy"
+	}
+	
+}
+
+defined_text = {
+	name = SRIGetLeaderTitle
+	text = {
+		trigger = {
+			has_government = national_populist
+		}
+		localization_key = "Emperor"
+	}
+	text = {
+		trigger = {
+			has_country_flag = SRI_fasci_king
+		}
+		localization_key = "King"
+	}
+	text = {
+		trigger = {
+			has_country_flag = SRI_fasci_pope
+		}
+		localization_key = "Pope"
+	}
+	
+}
+
+defined_text = {
+	name = SRIGetPMTitle
+	text = {
+		trigger = {
+			has_government = national_populist
+		}
+		localization_key = "Baron"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_government = national_populist
+			}
+		}
+		localization_key = "Patrizio"
+	}
+}
+
+defined_text = {
+	name = PRFGetLeaderTitle
+	text = {
+		trigger = {
+			has_idea = PRF_Council_of_Princes_hog_ade
+		}
+		localization_key = "Council of Princes"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_idea = PRF_Council_of_Princes_hog_ade
+			}
+		}
+		localization_key = "National Diwan"
+	}
+}
+
+### _FUN Portraits ###
+
+defined_text = {
+	name = GetCampbellPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_AST_Eric_Campbell_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_AST_Eric_Campbell"
+	}
+}
+
+defined_text = {
+	name = GetDollfussPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_AUS_dolfuss_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_AUS_dolfuss"
+	}
+}
+
+defined_text = {
+	name = GetSalgadoPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_BRA_Plinio_Salgado_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_BRA_Plinio_Salgado"
+	}
+}
+
+defined_text = {
+	name = GetMerriamPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_CAL_Frank_Merrimam_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_CAL_Frank_Merrimam"
+	}
+}
+
+defined_text = {
+	name = GetArnoldPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_CAL_Henry_Arnold_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_CAL_Henry_Arnold"
+	}
+}
+
+defined_text = {
+	name = GetDelonclePortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_NFA_Eugene_Deloncle_Civ_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_NFA_Eugene_Deloncle"
+	}
+}
+
+defined_text = {
+	name = GetRocquePortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_NFA_Francois_de_la_Rocque_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_NFA_Francois_de_la_Rocque"
+	}
+}
+
+defined_text = {
+	name = GetCalinescuPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_ROM_Armand_Calinescu_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_ROM_Armand_Calinescu"
+	}
+}
+
+defined_text = {
+	name = GetCodreanuPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_ROM_Corneliu_Zelea_Codreanu_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_ROM_Corneliu_Zelea_Codreanu"
+	}
+}
+
+defined_text = {
+	name = GetSpiridonovaPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_RUS_Maria_Spiridonova_FUN"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Spiridonova_portrait"
+	}
+}
+
+defined_text = {
+	name = GetPibulsongkramPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_Siam_Plaek_Pibulsongkram_Civilian_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_Siam_Plaek_Phibunsongkhram"
+	}
+}
+
+defined_text = {
+	name = GetLepchaPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_SKM_Jerman_Lepcha_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_SKM_Jerman_Lepcha"
+	}
+}
+
+defined_text = {
+	name = GetVonsyatskyPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_TRM_Anastasiy_Vonsyatsky_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_TRM_Anastasiy_Vonsyatsky"
+	}
+}
+
+defined_text = {
+	name = GetLandonPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_USA_Alf_Landon_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_USA_Alf_Landon_KR"
+	}
+}
+
+defined_text = {
+	name = GetCurtisPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_USA_Charles_Curtis_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_USA_Charles_Curtis"
+	}
+}
+
+defined_text = {
+	name = GetLongPortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_USA_Huey_Long_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_USA_Huey_Long"
+	}
+}
+
+defined_text = {
+	name = GetBonniePortrait
+	text = {
+		trigger = {
+			has_global_flag = SPOOKY_PORTRAITS
+		}
+		localization_key = "GFX_Portrait_CSA_Bonnie_Parker_fun"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = SPOOKY_PORTRAITS
+			}
+		}
+		localization_key = "GFX_Portrait_CSA_Bonnie_Parker"
+	}
+}
+
+### Dynamic Portraits ###
+
+defined_text = {
 	name = GetMaurrasPortrait
 	text = {
 		trigger = {
@@ -5011,6 +6913,80 @@ defined_text = {
 	}
 }
 
+defined_text = {
+	name = GetJoycePortrait
+	text = {
+		trigger = {
+			has_country_flag = IRE_eyepatch_joyce
+		}
+		localization_key = "GFX_Portrait_Ireland_James_Joyce_Eyepatch"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = IRE_eyepatch_joyce
+			}
+		}
+		localization_key = "GFX_Portrait_Ireland_James_Joyce"
+	}
+}
+
+defined_text = {
+	name = GetWLMKPortrait
+	text = {
+		trigger = {
+			has_country_flag = CAN_WLMK_coat_portrait
+		}
+		localization_key = "GFX_Portrait_Canada_William_Lyon_Mackenzie_King_Coat"
+	}
+	text = {
+		trigger = {
+			has_country_flag = CAN_WLMK_hat_portrait
+		}
+		localization_key = "GFX_Portrait_Canada_William_Lyon_Mackenzie_King"
+	}
+	text = {
+		trigger = {
+			has_country_flag = CAN_WLMK_suit_portrait
+		}
+		localization_key = "GFX_Portrait_Canada_William_Lyon_Mackenzie_King_Suit"
+	}
+	text = {
+		localization_key = "GFX_Portrait_Canada_William_Lyon_Mackenzie_King"
+	}
+}
+
+defined_text = {
+	name = GetAdrienArcandPortrait
+	text = {
+		trigger = {
+			has_country_flag = CAN_scary_arcand
+		}
+		localization_key = "GFX_Portrait_Canada_Adrien_Arcand_Suit"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = CAN_scary_arcand
+			}
+		}
+		localization_key = "GFX_Portrait_Canada_Adrien_Arcand_KX"
+	}
+}
+
+
+### Diplo Veiw Portraits ###
+
+defined_text = {
+	name = GetOtherPMPortrait
+	text = {
+		trigger = {
+			has_country_flag = MSF_BROTHERS_VISIBLE
+			
+		}
+		localization_key = GFX_MSF_Gunnar_Hallstrom
+	}
+}
 
 defined_text = {
 	name = GetPMPortrait
@@ -5026,7 +7002,19 @@ defined_text = {
 			has_idea = CAN_Major_James_Coldwell_hog_sde
 			
 		}
-		localization_key = CAN_Major_James_Coldwell_hog_sde
+		localization_key = GFX_Portrait_Canada_Major_James_Coldwell
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Tommy_Douglas_hog_sde
+		}
+		localization_key = GFX_Portrait_Canada_Tommy_Douglas
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Hazen_Argue_hog_sde
+		}
+		localization_key = GFX_Portrait_Canada_Hazen_Argue
 	}
 	text = {
 		trigger = {
@@ -5044,6 +7032,19 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_idea = CAN_Lester_B_Pearson_hog_sli
+		}
+		localization_key = GFX_Portrait_Canada_Lester_B_Pearson
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Charles_Avery_Dunning_hog_sli
+			
+		}
+		localization_key = GFX_Portrait_Canada_Charles_Avery_Dunning
+	}
+	text = {
+		trigger = {
 			has_idea = CAN_Charles_Gavan_Power_hog_mli
 			
 		}
@@ -5054,7 +7055,7 @@ defined_text = {
 			has_idea = CAN_William_Lyon_Mackenzie_King_hog_mli
 			
 		}
-		localization_key = GFX_Portrait_Canada_William_Lyon_Mackenzie_King
+		localization_key = [GetWLMKPortrait]
 	}
 	text = {
 		trigger = {
@@ -5065,6 +7066,27 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_idea = CAN_Henry_Herbert_Stevens_hog_sco
+			
+		}
+		localization_key = GFX_Portrait_Canada_Henry_Herbert_Stevens
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_George_A_Drew_hog_sco
+			
+		}
+		localization_key = GFX_Portrait_Canada_George_A_Drew
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_John_Diefenbaker_hog_sco
+			
+		}
+		localization_key = GFX_Portrait_Canada_John_Diefenbaker
+	}
+	text = {
+		trigger = {
 			has_idea = CAN_Robert_Manion_hog_sco
 			
 		}
@@ -5072,7 +7094,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_idea = CAN_Arthur_Meighen_hog_ade
+			has_idea = CAN_Arthur_Meighen_hog_sco
 			
 		}
 		localization_key = GFX_Portrait_Canada_Arthur_Meighen
@@ -5086,25 +7108,115 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_idea = CAN_Harry_Crerar_hog_pau
+			has_idea = CAN_Ernest_Manning_hog_ade
+		}
+		localization_key = GFX_Portrait_Canada_Ernest_Manning
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_CH_Douglas_hog_ade
 			
+		}
+		localization_key = GFX_Portrait_Britain_Clifford_Hugh_Douglas
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_William_Duncan_Herridge_hog_ade
+			
+		}
+		localization_key = GFX_Portrait_Canada_William_Duncan_Herridge
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_W_A_C_Bennett_hog_ade
+			
+		}
+		localization_key = GFX_Portrait_Canada_W_A_C_Bennett
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Solon_Earl_Low_hog_ade
+			
+		}
+		localization_key = GFX_Portrait_Canada_Solon_Earl_Low
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Harry_Crerar_hog_pau
 		}
 		localization_key = GFX_Portrait_Canada_Harry_Crerar
 	}
 	text = {
 		trigger = {
-			has_idea = CAN_Henry_Herbert_Stevens_hog_npo
+			has_idea = CAN_Harold_Harmsworth_hog_pau
 			
 		}
-		localization_key = GFX_Portrait_Canada_Henry_Herbert_Stevens
+		localization_key = GFX_Portrait_England_Britain_Harold_Harmsworth
 	}
 	text = {
 		trigger = {
-			has_idea = CAN_John_Diefenbaker_hog_npo
+			has_idea = CAN_Lord_Beaverbrook_hog_pau
 			
 		}
-		localization_key = GFX_Portrait_Canada_John_Diefenbaker
+		localization_key = GFX_Portrait_Canada_Lord_Beaverbrook
 	}
+	text = {
+		trigger = {
+			has_idea = CAN_William_Aberhart_hog_pau
+			
+		}
+		localization_key = GFX_Portrait_Canada_William_Aberhart
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_John_Hargrave_hog_pau
+			
+		}
+		localization_key = GFX_Portrait_Britain_John_Hargrave
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Real_Caouette_hog_pau
+			
+		}
+		localization_key = GFX_Portrait_Quebec_Real_Caouette
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Adrien_Arcand_hog_npo
+			
+		}
+		localization_key = [GetAdrienArcandPortrait]
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_JFC_Fuller_hog_npo
+			
+		}
+		localization_key = GFX_Portrait_Canada_JFC_Fuller
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Anthony_Ludovici_hog_npo
+			
+		}
+		localization_key = GFX_Portrait_Britain_Anthony_Ludovici
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_John_Ross_Taylor_hog_npo
+			
+		}
+		localization_key = GFX_Portrait_Canada_John_Ross_Taylor
+	}
+	text = {
+		trigger = {
+			has_idea = CAN_Edward_VIII_hog_npo
+			
+		}
+		localization_key = GFX_Portrait_Canada_King_Edward_VIII_Evil
+	}
+	
 	text = {
 		trigger = {
 			OR = {
@@ -5112,6 +7224,12 @@ defined_text = {
 				has_idea = CAN_King_Edward_VIII_hog_pau
 				has_idea = CAN_King_George_VI_hog_pau
 				has_idea = CAN_King_Henry_IX_hog_pau
+				AND = {
+					tag = CAN
+					NOT = {
+						has_idea_with_trait = head_of_government
+					}
+				}
 			}
 			
 		}
@@ -5123,6 +7241,179 @@ defined_text = {
 		}
 		localization_key = ""
 	}
+	
+	### Newfies ###
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Peter_John_Cashin_hog_sde
+		}
+		localization_key = GFX_Portrait_Newfoundland_Peter_John_Cashin
+	}
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Sam_Drover_hog_sde
+		}
+		localization_key = GFX_Portrait_Newfoundland_Sam_Drover
+	}
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Joey_Smallwood_hog_sli
+		}
+		localization_key = GFX_Portrait_Newfoundland_Joey_Smallwood
+	}
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Richard_Squires_hog_mli
+		}
+		localization_key = GFX_Portrait_Newfoundland_Richard_Squires
+	}
+	
+	text = {
+		trigger = {
+			has_idea = NFL_Frederick_C_Alderdice_hog_sco
+		}
+		localization_key = GFX_Portrait_Newfoundland_Frederick_C_Alderdice
+	}
+	
+	### British PMs ###
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Henry_Page_Croft_hog_ade
+		}
+		localization_key = GFX_Portrait_Britain_Henry_Page_Croft
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Ezra_Pound_hog_ade
+		}
+		localization_key = GFX_Portrait_Britain_Ezra_Pound
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Robert_Cecil_hog_sco
+		}
+		localization_key = GFX_Portrait_Britain_Robert_Cecil
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Robert_Vansittart_hog_sco
+		}
+		localization_key = GFX_Portrait_Britain_Robert_Vansittart
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Anthony_Eden_hog_sco
+		}
+		localization_key = GFX_Portrait_Britain_Anthony_Eden
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Edward_Halifax_hog_sco
+		}
+		localization_key = GFX_Portrait_Britain_Lord_Halifax
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Stanley_Baldwin_hog_sco
+		}
+		localization_key = GFX_Portrait_Britain_Stanley_Baldwin
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Neville_Chamberlain_hog_sco
+		}
+		localization_key = GFX_Portrait_Britain_Neville_Chamberlain
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Douglas_Hogg_hog_sco
+		}
+		localization_key = GFX_Portrait_Britain_Douglas_Hogg
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Hugh_Gaitskell_hog_sde
+		}
+		localization_key = GFX_Portrait_Britain_Hugh_Gaitskell
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Clement_Attlee_hog_sde
+		}
+		localization_key = GFX_Portrait_England_Clem_Attlee
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Malcolm_MacDonald_hog_sde
+		}
+		localization_key = GFX_Portrait_Britain_Malcolm_MacDonald
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Derwent_Hall_Caine_hog_sde
+		}
+		localization_key = GFX_Portrait_Britain_Derwent_Hall_Caine
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_John_Simon_hog_mli
+		}
+		localization_key = GFX_Portrait_Britain_John_Simon
+	}
+	
+	text = {
+		trigger = {
+			has_idea = GBR_Archibald_Sinclair_hog_mli
+		}
+		localization_key = GFX_Portrait_Britain_Archibald_Sinclair
+	}
+	
+	text = { #No way to get them but they have portraits anyway
+		trigger = {
+			has_idea = GBR_Bernard_Montgomery_hog_pau
+		}
+		localization_key = GFX_Portrait_England_Bernard_Montgomery
+	}
+	
+	text = { #No way to get them but they have portraits anyway
+		trigger = {
+			has_idea = GBR_Louis_Mountbatten_hog_pau
+		}
+		localization_key = GFX_Portrait_Canada_Louis_Mountbatten
+	}
+	
+	text = { #No way to get them but they have portraits anyway
+		trigger = {
+			has_idea = GBR_Archibald_Ramsay_hog_npo
+		}
+		localization_key = GFX_Portrait_BRG_Ramsay
+	}
+
+	text = { #No way to get them but they have portraits anyway
+		trigger = {
+			has_idea = GBR_Rotha_Beryl_Lintorn_Orman_hog_npo
+		}
+		localization_key = GFX_Portrait_Canada_Rotha_Lintorn_Orman
+	}
+	
 	###German Chancellors###
 	text = {
 		trigger = {
@@ -5200,7 +7491,7 @@ defined_text = {
 		trigger = {
 			has_idea = GER_Manfred_Freiherr_von_Richthofen_hog_ade
 		}
-		localization_key = GFX_portrait_CGL_Manfred_von_Richtofen
+		localization_key = GFX_Portrait_Germany_Manfred_von_Richtofen_Kanzler
 	}
 	
 	text = { #Has a Portrait, but won't actually appear in game
@@ -5327,7 +7618,7 @@ defined_text = {
 		trigger = {
 			has_idea = AST_Eric_Campbell_hog_npo
 		}
-		localization_key = GFX_Portrait_AST_Eric_Campbell
+		localization_key = [GetCampbellPortrait]
 	}
 	
 	text = {
@@ -5416,6 +7707,9 @@ defined_text = {
 			AND = {
 				has_country_flag = UKR_had_election
 				has_government = social_democrat
+				NOT = {
+					has_country_flag = UKR_Vynnych_won
+				}
 			}
 		}
 		localization_key = GFX_Portrait_Ukraine_Symon_Petliura
@@ -5427,7 +7721,7 @@ defined_text = {
 				has_government = social_liberal
 			}
 		}
-		localization_key = GFX_Portrait_Ukraine_Dmitri_Dontsov
+		localization_key = GFX_Portrait_Ukraine_Dmitri_Doroshenko
 	}
 	text = {
 		trigger = {
@@ -5476,6 +7770,13 @@ defined_text = {
 			has_idea = LPD_Emile_Janssens_hog_pau
 		}
 		localization_key = GFX_Portrait_COG_Emile_Janssens
+	}
+	
+	text = {
+		trigger = {
+			has_idea = KIV_Joseph_Kasa_Vubu_hog_sli
+		}
+		localization_key = GFX_Portrait_KIV_Joseph_Kasa_Vubu
 	}
 	
 	### Luxemourgers ###
@@ -5546,7 +7847,7 @@ defined_text = {
 		trigger = {
 			has_idea = AUS_Engelbert_Dollfuss_hog_ade
 		}
-		localization_key = GFX_Portrait_AUS_dolfuss
+		localization_key = [GetDollfussPortrait]
 	}
 	
 	text = {
@@ -5780,7 +8081,7 @@ defined_text = {
 		trigger = {
 			has_idea = NFA_Francois_de_la_Rocque_hog_pau
 		}
-		localization_key = GFX_Portrait_NFA_Francois_de_la_Rocque
+		localization_key = [GetRocquePortrait]
 	}
 	
 	text = {
@@ -5794,7 +8095,7 @@ defined_text = {
 		trigger = {
 			has_idea = NFA_Eugene_Deloncle_hog_npo
 		}
-		localization_key = GFX_Portrait_NFA_Eugene_Deloncle
+		localization_key = [GetDelonclePortrait]
 	}
 	
 	text = {
@@ -5954,14 +8255,14 @@ defined_text = {
 		trigger = {
 			has_idea = USA_Huey_Long_veep_sde
 		}
-		localization_key = GFX_Portrait_USA_Huey_Long
+		localization_key = [GetLongPortrait]
 	}
 	
 	text = {
 		trigger = {
 			has_idea = USA_Alf_Landon_veep_sli
 		}
-		localization_key = GFX_Portrait_USA_Alf_Landon_KR
+		localization_key = [GetLandonPortrait]
 	}
 	
 	text = {
@@ -6031,7 +8332,7 @@ defined_text = {
 		trigger = {
 			has_idea = USA_Charles_Curtis_veep_mli
 		}
-		localization_key = GFX_Portrait_USA_Charles_Curtis
+		localization_key = [GetCurtisPortrait]
 	}
 	
 	text = {
@@ -6418,7 +8719,7 @@ defined_text = {
 		trigger = {
 			has_idea = CAL_Frank_Merriam_hog_mli
 		}
-		localization_key = GFX_Portrait_CAL_Frank_Merrimam
+		localization_key = [GetMerriamPortrait]
 	}
 	
 	text = {
@@ -6544,17 +8845,33 @@ defined_text = {
 		trigger = {
 			has_idea = CAL_Huey_Long_hog_sde
 		}
-		localization_key = GFX_Portrait_USA_Huey_Long
+		localization_key = [GetLongPortrait]
 	}
 	
-	### Irish Taoiseachs ###
+	### Pacific Other People ###
 	
 	text = {
 		trigger = {
-			has_idea = IRE_Maurice_Twomey_hog_rso
+			has_idea = CAL_Tamon_Yamaguchi_hog_npo
 		}
-		localization_key = GFX_Portrait_Ireland_Maurice_Twomey
+		localization_key = GFX_Portrait_JAP_Tamon_Yamaguchi
 	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_country_flag = MARSHALL_IN_POWER
+		}
+		localization_key = [GetArnoldPortrait]
+	}
+
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_country_flag = ARNOLD_IN_POWER 
+		}
+		localization_key = GFX_Portrait_CAL_george_marshall
+	}
+	
+	### Irish Taoiseachs ###
 
 	text = {
 		trigger = {
@@ -6586,9 +8903,30 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = IRE_William_X_O'Brien_hog_sde
+		}
+		localization_key = GFX_Portrait_Ireland_William_X_O_Brien
+	}
+	
+	text = {
+		trigger = {
 			has_idea = IRE_Thomas_Johnson_hog_sde
 		}
 		localization_key = GFX_Portrait_Ireland_Thomas_Johnson
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Liam_Mellows_hog_sde
+		}
+		localization_key = GFX_Portrait_Ireland_Liam_Mellows
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Margaret_Buckley_hog_sde
+		}
+		localization_key = GFX_Portrait_Ireland_Margaret_Buckley
 	}
 	
 	text = {
@@ -6628,6 +8966,20 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = IRE_Ned_Cronin_hog_pau
+		}
+		localization_key = GFX_Portrait_Ireland_Ned_Cronin
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_William_Butler_Yeats_hog_pau
+		}
+		localization_key = GFX_Portrait_Ireland_William_Butler_Yeats
+	}
+	
+	text = {
+		trigger = {
 			has_idea = IRE_Betty_Sinclair_hog_tot
 		}
 		localization_key = GFX_Portrait_Ireland_Betty_Sinclair
@@ -6635,9 +8987,16 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			has_idea = IRE_Margaret_Buckley_hog_sde
+			has_idea = IRE_Maurice_Twomey_hog_rso
 		}
-		localization_key = GFX_Portrait_Ireland_Margaret_Buckley
+		localization_key = GFX_Portrait_Ireland_Maurice_Twomey
+	}
+
+	text = {
+		trigger = {
+			has_idea = IRE_James_Joyce_hog_rso
+		}
+		localization_key = "[GetJoycePortrait]"
 	}
 	
 	### Danish PMs ###
@@ -6957,13 +9316,31 @@ defined_text = {
 		localization_key = GFX_Portrait_Norway_Vidkun_Quisling_Suit
 	}
 	
-	### Finnish PM (just the one) ###
+	### Finnish PM (just the three) ###
 	
 	text = { 
 		trigger = {
-			has_idea = FIN_Juho_Kusti_Paasikivi_hog_pau
+			has_idea = FIN_Juho_Kusti_Paasikivi_hog_sco
 		}
 		localization_key = GFX_Portrait_FIN_Juho_Kusti_Paasikivi
+	}
+	text = { 
+		trigger = {
+			has_idea = FIN_Pehr_Evind_Svinhufvud_hog_sco
+		}
+		localization_key = GFX_Portrait_FIN_Pehr_Evind_Svinhufvud
+	}
+	text = { 
+		trigger = {
+			has_idea = FIN_Pehr_Evind_Svinhufvud_hog_pau
+		}
+		localization_key = GFX_Portrait_FIN_Pehr_Evind_Svinhufvud
+	}
+	text = { 
+		trigger = {
+			has_idea = FIN_Kyosti_Kallio_hog_sli
+		}
+		localization_key = GFX_Portrait_Fin_Kyosti_Kallio
 	}
 	
 	### Somali PMs ###
@@ -7063,13 +9440,20 @@ defined_text = {
 		localization_key = GFX_Portrait_BRA_Arlindo_Veiga_dos_Santos_KX
 	}
 	
+	text = { 
+		trigger = {
+			has_idea = BRA_Plinio_Salgado_hog_npo
+		}
+		localization_key = [GetSalgadoPortrait]
+	}
+	
 	### Romanians ###
 	
 	text = { #Fired by Minister Ideas
 		trigger = {
 			has_idea = ROM_Corneliu_Codreanu_hog_npo
 		}
-		localization_key = GFX_Portrait_ROM_Corneliu_Zelea_Codreanu
+		localization_key = [GetCodreanuPortrait]
 	}
 	
 	text = { #Fired by Minister Ideas
@@ -7126,6 +9510,13 @@ defined_text = {
 			has_idea = ROM_Constantin_Sanatescu_hog_ade
 		}
 		localization_key = GFX_Portrait_ROM_Constantin_Sanatescu
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = ROM_Armand_Calinescu_hog_pau
+		}
+		localization_key = [GetCalinescuPortrait]
 	}
 	
 	text = { 
@@ -7290,7 +9681,7 @@ defined_text = {
 		trigger = {
 			has_idea = RUS_Maria_A_Spiridonova_hog_rso
 		}
-		localization_key = GFX_Spiridonova_portrait
+		localization_key = [GetSpiridonovaPortrait]
 	}
 	text = {
 		trigger = {
@@ -7417,13 +9808,6 @@ defined_text = {
 			has_idea = RUS_Viktor_M_Baydalakov_hog_npo
 		}
 		localization_key = GFX_Viktor_Baydalakov_portrait
-	}
-	text = {
-		trigger = {
-			tag = RUS
-			NOT = { has_idea_with_trait = head_of_government }
-		}
-		localization_key = GFX_Portrait_RUS_The_Senate
 	}
 	
 	### South Africa ###
@@ -7872,6 +10256,585 @@ defined_text = {
 		localization_key = GFX_Portrait_Switzerland_Albert_Meyer_KX
 	}
 	
+	### Siamese PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Phraya_Phaholpholphayuhasena_hog_sli
+		}
+		localization_key = GFX_Portrait_Siam_Phraya_Phaholponpayuhasena
+	}
+	
+	text = { 
+		trigger = {
+			OR = {
+				has_idea = SIA_Phraya_Manopakornnitithada_hog_ade
+				has_idea = SIR_Phraya_Manopakornnitithada_hog_ade
+			}
+		}
+		localization_key = GFX_Portrait_Siam_Phraya_Manopakornnitithada
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Plaek_Khittasangkha_hog_npo
+		}
+		localization_key = [GetPibulsongkramPortrait]
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Savaeng_Piampongsarn_hog_sli
+		}
+		localization_key = GFX_Portrait_Siam_Savaeng_Piampongsarn
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Seni_Pramoj_hog_sco
+		}
+		localization_key = GFX_Portrait_Siam_Seni_Pramoj
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Phao_Sriyanond_hog_npo
+		}
+		localization_key = GFX_Portrait_Siam_Phao_Sriyanond
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Sarit_Thanarat_hog_pau
+		}
+		localization_key = GFX_Portrait_Siam_Sarit_Thanarat
+	}
+	
+	text = { 
+		trigger = {
+			OR = {
+				has_idea = SIA_Boworadet_Kritsadakorn_hog_pau
+				has_idea = SIR_Boworadet_Kritsadakorn_hog_pau
+			}
+		}
+		localization_key = GFX_Portrait_Siam_Boworadet
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIA_Luang_Praditmanutham_hog_rso
+		}
+		localization_key = GFX_Portrait_Siam_Pridi_Panomyong
+	}
+	
+	### Delhi PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Narasimha_Chintaman_Kelkar_hog_sli
+		}
+		localization_key = GFX_Portrait_DEH_Narasimha_Chintaman_Kelkar
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_V_S_Srinivasa_Sastri_hog_mli
+		}
+		localization_key = GFX_Portrait_DEH_V_S_Srinivasa_Sastri
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Muhammad_Ali_Jinnah_hog_sde
+		}
+		localization_key = GFX_Portrait_DEH_Muhammad_Ali_Jinnah
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Sir_Sikander_Hayat_Khan_hog_sco
+		}
+		localization_key = GFX_Portrait_DEH_Sir_Sikander_Hayat_Khan
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Maharaja_Ganga_Singh_hog_sco
+		}
+		localization_key = GFX_Portrait_DEH_Maharaja_Ganga_Singh
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = DEH_Minocher_Rustom_Masani_hog_mli
+		}
+		localization_key = GFX_Portrait_DEH_Minocher_Rustom_Masani
+	}
+	
+	### Vietnamese PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Nguyen_Tuong_Long_hog_sli
+		}
+		localization_key = GFX_Portrait_Vietnam_Nguyen_Tuong_Long
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Bui_Quang_Chieu_hog_mli
+		}
+		localization_key = GFX_Portrait_INC_Bui_Quang_Chieu
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Ngo_Dinh_Diem_hog_ade
+		}
+		localization_key = GFX_Portrait_Vietnam_Ngo_Din_Diem
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Pham_Qhuyn_hog_sco
+		}
+		localization_key = GFX_Portrait_Vietnam_Pham_Quynh
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Tran_Trong_Kim_hog_sco
+		}
+		localization_key = GFX_Portrait_Vietnam_Tran_Trong_Kim
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Henriette_Bui_Quang_Chieu_hog_mli
+		}
+		localization_key = GFX_Portrait_Vietnam_Henriette_Bui_Quang_Chieu
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Nguyen_Tuong_Tam_hog_sli
+		}
+		localization_key = GFX_Portrait_Vietnam_Nguyen_Tuong_Tam
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Nguyen_Phan_Long_hog_mli
+		}
+		localization_key = GFX_Portrait_Vietnam_Nguyen_Phan_Long
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Nguyen_Phuc_Buu_Dinh_hog_pau
+		}
+		localization_key = GFX_Portrait_Vietnam_Buu_Loc
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Le_Van_Vien_hog_pau
+		}
+		localization_key = GFX_Portrait_Vietnam_Le_Van_Vien
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = VIN_Duong_Van_Duong_hog_pau
+		}
+		localization_key = GFX_Portrait_Vietnam_Duong_Van_Duong
+	}
+	
+	### Bulgarian PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Aleksandar_Stamboliyski_hog_sco
+		}
+		localization_key = GFX_Portrait_BUL_Aleksandar_Stamboliyski
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Yanko_Sakazov_hog_sde
+		}
+		localization_key = GFX_Portrait_BUL_Yanko_Sakazov
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Atanas_Burov_hog_sli
+		}
+		localization_key = GFX_Portrait_BUL_Atanas_Burov
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Stoyan_Kosturkov_hog_mli
+		}
+		localization_key = GFX_Portrait_BUL_Stoyan_Kosturkov
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = BUL_Aleksandar_Malinov_hog_ade
+		}
+		localization_key = GFX_Portrait_BUL_Aleksandar_Malinov
+	}
+	
+	### Sikkim PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Kaz_Lhendup_Dorjee_hog_ade
+		}
+		localization_key = GFX_Portrait_SKM_Lhendup_Dorjee
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Tashi_Tshering_hog_rso
+		}
+		localization_key = [GetLepchaPortrait]
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Kashiraj_Pradhan_hog_sli
+		}
+		localization_key = GFX_Portrait_SKM_Kashiraj_Pradhan
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Nicholas_Roerich_hog_tot
+		}
+		localization_key = GFX_Portrait_TIB_Nicholas_Roerich
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SKM_Sonam_Tshering_hog_npo
+		}
+		localization_key = GFX_Portrait_SKM_Sonam_Tshering
+	}
+	
+	### Sardinia PMs ###
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Giorgio_Bardanzellu_hog_ade
+		}
+		localization_key = GFX_Portrait_SRD_Giorgio_Bardanzellu
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Pietro_Badoglio_hog_pau
+		}
+		localization_key = GFX_Portrait_SRD_Pietro_Badoglio
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Luigi_Efisio_Marras_hog_sco
+		}
+		localization_key = GFX_Portrait_SRD_Luigi_Efisio_Marras
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Roberto_Lucifero_d_Aprigliano_hog_ade
+		}
+		localization_key = GFX_Portrait_SRD_Roberto_Lucifero_di_Aprigliano
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Luigi_Crespellani_hog_mli
+		}
+		localization_key = GFX_Portrait_SRD_Luigi_Crespellani
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Alfredo_Corrias_hog_sco
+		}
+		localization_key = GFX_Portrait_SRD_Alfredo_Corrias
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Camillo_Bellieni_hog_sli
+		}
+		localization_key = GFX_Portrait_SRD_Camillo_Bellieni
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Emilio_Lussu_hog_sde
+		}
+		localization_key = GFX_Portrait_SRD_Emilio_Lussu
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Mario_Berlinguer_hog_sde
+		}
+		localization_key = GFX_Portrait_SRD_Mario_Berlinguer
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Ferruccio_Parri_hog_sli
+		}
+		localization_key = GFX_Portrait_Italy_Ferruccio_Parri
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Bruno_Villabruna_hog_mli
+		}
+		localization_key = GFX_Portrait_Italy_Bruno_Villabruna
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRD_Adone_Zoli_hog_sco
+		}
+		localization_key = GFX_Portrait_SRD_Adone_Zoli
+	}
+	
+	### Varios Italian People ###
+	
+	text = { 
+		trigger = {
+			has_idea = ITA_Galeazzo_Ciano_hog_npo
+		}
+		localization_key = GFX_Portrait_ITA_Galeazzo_Ciano
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRI_Riccardo_Lombardi_hog_rso
+		}
+		localization_key = GFX_Portrait_SRI_Riccardo_Lombardi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SRI_Arturo_Labriola_hog_rso
+		}
+		localization_key = GFX_Portrait_SRI_Arturo_Labriola
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SIC_Luigi_Sturzo_hog_sco
+		}
+		localization_key = GFX_Portrait_ITA_Luigi_Sturzo
+	}
+	
+	### Princely Fed People ###
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Council_of_Princes_hog_ade
+		}
+		localization_key = GFX_Portrait_PRF_Council_of_Princes
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Krishna_Raja_Wadiyar_IV_hog_ade
+		}
+		localization_key = GFX_Portrait_PRF_Raja_Wadiyar_IV
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Jayachamarajendra_Wadiyar_hog_ade
+		}
+		localization_key = GFX_Portrait_PRF_Jayachamarajendra_Wadiyar
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Chithira_Thirunal_Balarama_Varma_hog_sco
+		}
+		localization_key = GFX_Portrait_PRF_Balarama_Varma_of_Travancore
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Rajaram_II_of_Kolhapur_hog_ade
+		}
+		localization_key = GFX_Portrait_PRF_Rajaram_III_of_Kolhapur
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Madapati_Hanumantha_Rao_hog_mli
+		}
+		localization_key = GFX_Portrait_Princely_Madapati_Hanumantha_Rao
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Akbar_Hydari_hog_sco
+		}
+		localization_key = GFX_Portrait_Princely_Akbar_Hydari
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Mirza_Muhammad_Ismail_hog_sco
+		}
+		localization_key = GFX_Portrait_Princely_Mirza_Muhammad_Ismail
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Nawab_Fazal_Nawaz_Jung_Bahadur_hog_sco
+		}
+		localization_key = GFX_Portrait_PRF_Bahadur_Yar_Jung
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = PRF_Krushna_Chandra_Gajapati_hog_ade
+		}
+		localization_key = GFX_Portrait_PRF_Krushna_Chandra_Gajapati
+	}
+	
+	### Egyptians ###
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Aly_Maher_hog_sco
+		}
+		localization_key = GFX_Portrait_Egypt_Aly_Maher
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Ibrahim_Abdel_Hady_hog_sli
+		}
+		localization_key = GFX_Portrait_Egypt_Ibrahim_Abdel_Hady_Pasha
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Mostafa_El_Nahas_hog_mli
+		}
+		localization_key = GFX_Portrait_Egypt_Mostafa_El_Nahas
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Ahmed_Naguib_el_Hilaly_hog_sco
+		}
+		localization_key = GFX_Portrait_Egypt_Ahmed_Naguib_el_Hilaly
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Mohamed_Tawfik_Naseem_hog_ade
+		}
+		localization_key = GFX_Portrait_Egypt_Mohamed_Tawfik_Naseem
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Ahmad_Mahir_hog_sli
+		}
+		localization_key = GFX_Portrait_Egypt_Ahmad_Mahir
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Mohamed_Mahmoud_hog_mli
+		}
+		localization_key = GFX_Portrait_Egypt_Mohamed_Mahmoud
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Hussein_Serry_hog_sco
+		}
+		localization_key = GFX_Portrait_Egypt_Hussein_Serry
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Hassan_al_Banna_hog_ade
+		}
+		localization_key = GFX_Portrait_Egypt_Hassan_al_Banna
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Makram_Ebeid_hog_mli
+		}
+		localization_key = GFX_Portrait_Egypt_Makram_Ebeid
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Sayyid_Qutb_hog_ade
+		}
+		localization_key = GFX_Portrait_Egypt_Sayyid_Qutb
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Mohammed_Naguib_hog_sli
+		}
+		localization_key = GFX_Portrait_EGY_Mohammed_Naguib
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Fouad_Serageddin_hog_mli
+		}
+		localization_key = GFX_Portrait_EGY_Fouad_Serageddin
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Hassan_al_Hudaybi_hog_sco
+		}
+		localization_key = GFX_Portrait_EGY_Hassan_al_Hudaybi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Gamal_Abdel_Nasser_hog_sde
+		}
+		localization_key = GFX_Portrait_EGY_Gamel_Abdel_Nasser_Civilian
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = EGY_Taha_Hussein_hog_sli
+		}
+		localization_key = GFX_Portrait_Egypt_Taha_Hussein
+	}
+	
+	### MSF People ###
+	
+	text = { 
+		trigger = {
+			has_idea = MSF_Ivor_Thord_Gray_hog_npo
+		}
+		localization_key = GFX_MSF_Ivor_Thord_Gray
+	}
+	
 	###Others###
 	
 	text = {
@@ -7904,7 +10867,7 @@ defined_text = {
 		trigger = {
 			has_idea = TRM_Anastasiy_Vonsyatsky_hog_npo
 		}
-		localization_key = GFX_Portrait_TRM_Anastasiy_Vonsyatsky
+		localization_key = [GetVonsyatskyPortrait]
 	}
 	
 	text = { #Fired by Minister Ideas
@@ -7936,9 +10899,52 @@ defined_text = {
 	
 	text = { #Not by Minister Ideas
 		trigger = {
+			has_idea = GAL_karol_olbracht
+			POL = {
+				NOT = {
+					POL_king_karol = yes
+				}
+			}
+		}
+		localization_key = GFX_Portrait_GAL_Karol_Olbracht
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_idea = GAL_karol_olbracht
+			POL = {
+				POL_king_karol = yes
+			}
+		}
+		localization_key = GFX_Portrait_GAL_Stanislaw_Szeptycki
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
 			has_country_flag = BIDEN_COUNCIL
 		}
 		localization_key = GFX_Portrait_Council_of_Bidens
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_idea = BDN_Michael_D_Higgins_hog_sde
+		}
+		localization_key = GFX_Portrait_Ireland_Michael_D_Higgins
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_idea = BDN_Barry_O_Bama_hog_sde
+		}
+		localization_key = GFX_Portrait_Barry_O_Bama
+	}
+
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_country_flag = BONNIE_VISIBLE
+		}
+		localization_key = [GetBonniePortrait]
 	}
 
 	#so on and so forth

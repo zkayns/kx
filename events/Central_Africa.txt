@@ -903,6 +903,11 @@ country_event = { # The Kaiser is DEAD
 		NOT = {
 			has_global_flag = Wilhelm_III_Dead
 		}
+		has_country_leader = {
+			name = "John Bedel Bokassa"
+			ruling_only = yes
+		}
+		has_completed_focus = CEA_host_the_kaiser
 	}
 
 	option = { #hoy shie
@@ -965,7 +970,7 @@ news_event = { #Wilhelm II is Dead
 	immediate = { log = "[GetDateText]: [Root.GetName]: event cea.29" }
 	title = cea.29.t
 	desc = cea.29.d
-	picture = GFX_news_event_GER_wilhelm_dead
+	picture = GFX_news_event_CEA_wilhelm_iii_dead
 
 	major = yes
 
@@ -973,6 +978,13 @@ news_event = { #Wilhelm II is Dead
 
 	trigger = {
 		wants_world_news = yes
+	}
+	
+	trigger = {
+		CEA = {
+			has_completed_focus = CEA_host_the_kaiser
+		}
+		has_global_flag = Wilhelm_II_Dead
 	}
 
 	show_major = {
@@ -1073,7 +1085,13 @@ country_event = { # Bokassa Crowned Kaiser
 
 	option = { #hoy shie
 		name = cea.31.a
-		unlock_national_focus = CEA_accept_german_throne
+		complete_national_focus = CEA_accept_german_throne
+		hidden_effect = {
+			country_event = {
+				id = cea.32
+				days = 5
+			}
+		}
 	}
 }
 
@@ -1091,7 +1109,6 @@ country_event = { # Bokassa Crowned Kaiser
 		name = cea.32.a
 		custom_effect_tooltip = CEA_BOKASSA_CROWNED_GERM
 		hidden_effect = {	
-			unlock_national_focus = CEA_accept_german_throne
 			create_country_leader = {
 				name = "Fredrick IV"
 				desc = "POLITICS_BOKASSA_FREDRICK_DESC"
@@ -1373,7 +1390,7 @@ country_event = { # The Bomimi Massacre
 	immediate = { log = "[GetDateText]: [Root.GetName]: event cea_flavour.1" }
 	title = cea_flavour.1.t
 	desc = cea_flavour.1.d
-	picture = GFX_report_event_CEA_bokassa_speech
+	picture = GFX_report_event_CEA_bokassa_uniform
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1930,6 +1947,15 @@ country_event = { # Kill Kamerun if they are still colonial
 	desc = cea_flavour.28.d
 	picture = GFX_report_event_CEA_bokassa_worried
 	
+	trigger = {
+		CMR = {	
+			OR = {
+				has_colonial_government = yes
+				has_government = social_conservative
+			}
+		}
+	}
+	
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1948,6 +1974,17 @@ country_event = { # Pact with Kamerun
 	title = cea_flavour.29.t
 	desc = cea_flavour.29.d
 	picture = GFX_report_event_CEA_bokassa_worried
+	
+	trigger = {
+		CMR = {	
+			NOT = {
+				OR = {
+					has_colonial_government = yes
+					has_government = social_conservative
+				}
+			}
+		}
+	}
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3169,7 +3206,7 @@ country_event = { # Natpop or PatAut
 			name = "Kamoun Mohamed al-Senoussi"
 			picture = "gfx/leaders/CEA/Portrait_CEA_Kamoun_Mohamed_Senoussi.png"
 			expire = "1965.1.1"
-			ideology = fundementalism_subtype
+			ideology = natpop_islamism_subtype
 			traits = {}
 		}
 		set_party_name = {
@@ -3242,6 +3279,9 @@ country_event = { # Big Fuckoff Formable
 	option = { # 
 		name = cea_flavour.73.a
 		set_cosmetic_tag = CEA_SULTANATE5
+	}
+	option = { # 
+		name = cea_flavour.73.c
 	}
 }
 

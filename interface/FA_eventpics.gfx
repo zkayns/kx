@@ -214,6 +214,10 @@ spriteTypes = {
 		name = "GFX_report_event_COG_rohm"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_rohm.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_COG_snake"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_snake.png"
+	}
 	
 	##Leopoldville##
 	spriteType = {
@@ -255,7 +259,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_LPD_armand"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_LPD_armand.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LPD_short_trooper"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_LPD_short_trooper.png"
 	}	
+	spriteType = {
+		name = "GFX_report_event_LPD_farnana"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_LPD_farnana.png"
+	}
 	##Congo Mercs##
 	spriteType = {
 		name = "GFX_report_event_KSV_napalm"
@@ -313,6 +325,10 @@ spriteTypes = {
 		name = "GFX_report_event_KSV_kurtz"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_kurtz.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_KSV_nest"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_NM.png"
+	}
 	
 	##Gabon##
 	spriteType = {
@@ -358,6 +374,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_GAB_sousatte"
 		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_sousatte.png"
+	}	
+	spriteType = {
+		name = "GFX_report_event_GAB_schomburgk"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_schomburgk.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_expedition"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_expedition.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_sketch"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_sketch.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_lake_bangweulu"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_lake_bangweulu.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_mokele_mbembe"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_mokele_mbembe.png"
 	}	
 	
 	## Central Africa ##
@@ -455,6 +491,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_CEA_bokassa_smoking"
 		texturefile = "gfx/event_pictures/Africa/Central_Africa/report_event_CEA_bokassa_smoking.png"
+	}	
+	
+	spriteType = {
+		name = "GFX_report_event_CEA_bokassa_uniform"
+		texturefile = "gfx/event_pictures/Africa/Central_Africa/report_event_CEA_bokassa_uniform.png"
 	}	
 	
 	spriteType = {
@@ -828,6 +869,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_CIV_dadjo"
 		texturefile = "gfx/event_pictures/Africa/Westafrika/report_event_CIV_dadjo.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_CIV_dadjo_comic"
+		texturefile = "gfx/event_pictures/Africa/Westafrika/report_event_CIV_dadjo_comic.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_CIV_grunitzky"
+		texturefile = "gfx/event_pictures/Africa/Westafrika/report_event_CIV_grunitzky.png"
 	}
 	
 	###Madagascar###

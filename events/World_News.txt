@@ -2263,7 +2263,7 @@ news_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.90" }
 	title = worldnews.90.t
 	desc = worldnews.90.d
-	picture = GFX_news_event_POL_election
+	picture = GFX_news_event_ENG_no_majority
 
 	major = yes
 	is_triggered_only = yes
@@ -5353,6 +5353,7 @@ news_event = {
 	major = yes
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
 		wants_world_news = yes
@@ -6803,18 +6804,6 @@ news_event = { #Wilhelm II is Dead
 				has_government = totalist
 				has_government = syndicalist
 				has_government = totalist
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					tag = CEA
-					has_country_flag = CEA_RESTORED_MAF
-				}
-			}
-			country_event = {
-				id = cea.27
-				days = 55
 			}
 		}
 	}
@@ -8980,6 +8969,27 @@ news_event = {
 	}
 }
 
+# NEE wins ACW
+news_event = {
+	id = worldnews.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.44" }
+	title = worldnews.44.t
+	desc = worldnews.44.d
+	picture = GFX_news_event_USA_victory_celebration
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	option = {
+		name = worldnews.44.a
+	}
+}
+
 
 # President Landon
 news_event = {
@@ -10949,6 +10959,17 @@ news_event = { # MEX - Aftermath of Zapata's Assassination - Coalition Governmen
 	}
 	option = {
 		name = worldnews.455.a
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = {
+		name = worldnews.455.b
+		trigger = {
+			NOT = {
+				tag = MEX
+			}
+		}
 	}
 }
 
@@ -12865,5 +12886,36 @@ news_event = { # Turkish Republic Proclamation
 
 	option = { # Seems to be the end for the Ottoman Caliphate
 		name = worldnews.484.a
+	}
+}
+
+# GSL Coup (Somalia)
+news_event = {
+	id = worldnews.1257
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.1257" }
+	title = worldnews.1257.t
+	desc = worldnews.1257.d
+	picture = GFX_news_event_SOM_GSL_Coup
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	show_major = {
+		NOT = {
+			tag = SOM
+		}
+		OR = {
+			regional_middle_east_news = yes
+			regional_africa_news = yes
+		}
+	}
+
+	option = {
+		name = worldnews.1257.a
 	}
 }

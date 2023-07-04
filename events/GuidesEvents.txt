@@ -1487,26 +1487,6 @@ country_event = { #MAF Guides Event
 	}
 }
 
-### Congo ###
-country_event = { #COG Guides Event
-	id = guides.63
-	immediate = { log = "[GetDateText]: [Root.GetName]: event guides.63" }
-	title = guides.63.t
-	desc = guides.63.d
-	picture = GFX_introduction_main
-
-	
-
-	is_triggered_only = yes
-
-	option = { #
-		name = guides.63.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
 ### Zambia ###
 country_event = { #ZAM Guides Event
 	id = guides.64
@@ -2726,6 +2706,98 @@ country_event = { #CEA Guide Event
 
 	option = { #
 		name = guides.122.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #GEA Guide Event
+	id = guides.123
+	immediate = { log = "[GetDateText]: [Root.GetName]: event guides.123" }
+	title = guides.123.t
+	desc = guides.123.d
+	picture = GFX_introduction_main
+
+	
+
+	is_triggered_only = yes
+
+	option = { #
+		name = guides.123.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #VIN Guide Event
+	id = guides.124
+	immediate = { log = "[GetDateText]: [Root.GetName]: event guides.124" }
+	title = guides.124.t
+	desc = guides.124.d
+	picture = GFX_introduction_main
+
+	
+
+	is_triggered_only = yes
+
+	option = { #
+		name = guides.124.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = { #ABK Guide Event
+	id = guides.125
+	immediate = { log = "[GetDateText]: [Root.GetName]: event guides.125" }
+	title = guides.125.t
+	desc = guides.125.d
+	picture = GFX_introduction_main
+
+	
+
+	is_triggered_only = yes
+
+	option = { #
+		name = guides.124.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = { #FIN Guide Event
+	id = guides.126
+	immediate = { log = "[GetDateText]: [Root.GetName]: event guides.126" }
+	title = guides.126.t
+	desc = guides.126.d
+	picture = GFX_introduction_main
+
+	
+
+	is_triggered_only = yes
+
+	option = { #
+		name = guides.126.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = { #ARZ/NVN Guide Event
+	id = guides.128
+	immediate = { log = "[GetDateText]: [Root.GetName]: event guides.128" }
+	title = guides.128.t
+	desc = guides.128.d
+	picture = GFX_introduction_main
+
+	
+
+	is_triggered_only = yes
+
+	option = { #
+		name = guides.128.a
 		ai_chance = {
 			factor = 100
 		}

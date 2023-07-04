@@ -28,36 +28,13 @@ units = {
 			ship = { name = "Hetman Petro Konashevych-Sahaidachnyi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Hetman Bohdan Khmelnytskyi Class" } } }
 			ship = { name = "Taras Shevchenko" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Hetman Bohdan Khmelnytskyi Class" } } }
 			
-			ship = { name = "Elpifidor-410" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-411" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-412" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-413" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-414" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-415" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-416" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-417" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-418" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-419" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-420" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-421" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-422" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-423" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-424" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-425" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-426" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-427" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-428" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-429" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-430" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			ship = { name = "Elpifidor-431" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Elpifidor Class" } } }
-			
 			ship = { name = "Svyrepyi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
 			ship = { name = "Smetlyvyi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
-			ship = { name = "Strogii" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
-			ship = { name = "№ 257" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
-			ship = { name = "№ 262" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
-			ship = { name = "№ 263" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
-			ship = { name = "№ 266" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
+			ship = { name = "Strohii" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
+			ship = { name = "No-257" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
+			ship = { name = "No-262" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
+			ship = { name = "No-263" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
+			ship = { name = "No-266" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Svyrepyi Class" } } }
 			
 			ship = { name = "Hnivnyi" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UKR version_name = "Zavyetnyi Class" } } }
 			ship = { name = "Bystryi" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UKR version_name = "Zavyetnyi Class" } } }
@@ -95,14 +72,14 @@ units = {
 			location = 3686 ###Change to proper province number
 			
 			ship = { name = "Burevisnyk" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
-			ship = { name = "Pelikan" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
+			ship = { name = "Pelikan" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
 			ship = { name = "Orlan" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
 			ship = { name = "Hahara" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
 			ship = { name = "Utka" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
 			ship = { name = "Krab" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Krab Class" } } }
-			ship = { name = "Kashalot" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Narval Class" } } }
-			ship = { name = "Kyt" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Narval Class" } } }
-			ship = { name = "Narval" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Narval Class" } } }
+			ship = { name = "Kashalot" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
+			ship = { name = "Kyt" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
+			ship = { name = "Narval" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Bars Class" } } }
 			ship = { name = "Karp" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Karp Class" } } }
 			ship = { name = "Losos" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Karp Class" } } }
 			ship = { name = "Sudak" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Karp Class" } } }
@@ -133,16 +110,5 @@ units = {
 			ship = { name = "PCh-118" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = UKR version_name = "Karas Class" } } }
 			ship = { name = "PCh-117" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = UKR version_name = "Karas Class" } } }
 		}
-	}
-	fleet = {
-		name = "Dunaiska Flotyliia"
-		naval_base = 11670 ###Change to proper province number
-		task_force = {
-			name = "Dunaiska Flotyliia"
-			location = 11670 ###Change to proper province number
-			ship = { name = "Terets" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Terets Class" } } }
-			ship = { name = "Donets" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Terets Class" } } }
-			ship = { name = "Zaporozhets" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Terets Class" } } }
-		}
-	}
+	}	
 }

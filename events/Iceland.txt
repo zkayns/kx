@@ -95,6 +95,9 @@ country_event = { #Iceland expands its fishing
 	desc = ice.1.d
 	picture = GFX_report_event_ICE_Sun_cod
 
+	trigger = {
+		is_subject = no
+	}
 
 	is_triggered_only = yes
 
@@ -4238,7 +4241,7 @@ country_event = { #Bri'ish Iceland
 		}
 		create_country_leader = {
 			name = "Edward VIII"
-			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII.png"
+			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII_SocCon.png"
 			desc = "POLITICS_EDWARD_VIII_DESC"
 			expire = "1965.1.1"
 			ideology = absolute_monarchy_subtype
@@ -4521,12 +4524,13 @@ country_event = { # Free State Restored
 		add_state_core = 135
 		add_state_core = 122
 		add_state_core = 132
-				add_state_core = 131
+		add_state_core = 131
 		add_state_core = 130
 		add_state_core = 119
 		add_state_core = 133
 		add_state_core = 128 
 		add_state_core = 129
+		add_state_core = 1317
 	}
 }
 
@@ -4602,17 +4606,15 @@ country_event = { # Avenging Norway
 			type = annex_everything
 			target = NOR
 			}
-		}
-		ICE = {
-
-			add_state_core = 142
-			add_state_core = 110
-			add_state_core = 143
-			add_state_core = 144
-			add_state_core = 937
-			add_state_core = 936
-			add_state_core = 1147
-			add_state_core = 1146
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = NOR
+					is_claimed_by = NOR
+				}
+			}
+			add_core_of = ICE
+			}
 		}
 	}
 }
@@ -4676,6 +4678,7 @@ country_event = { # Northman Refernce 2
 			limit = {
 				OR = {
 					is_core_of = DEN
+					is_claimed_by = DEN
 					is_core_of = SWE
 					is_core_of = FIN
 					is_core_of = EST
@@ -4797,7 +4800,6 @@ country_event = { # We love thule folks we love thule
 			}
 		}
 		ICE = {
-
 			add_state_core = 926
 			add_state_core = 101
 			add_state_core = 332
@@ -5249,6 +5251,10 @@ country_event = { # free ships
 
 	option = { #sure
 		name = ice.422.a
+		add_manpower = 2500
+		add_war_support = 0.075
+		hidden_effect = {
 		load_oob = ICE_viking
+		}
 	}
 }

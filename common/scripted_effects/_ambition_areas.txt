@@ -536,6 +536,7 @@ create_ambition_areas = {
 					is_core_of = CAT
 					is_claimed_by = CAT
 					state = 165
+					state = 1313
 					state = 166
 					state = 167
 					state = 177
@@ -1053,7 +1054,9 @@ create_ambition_areas = {
 			limit = {
 				OR = {
 					is_core_of = GEO
+					is_core_of = ABK
 					is_claimed_by = GEO
+					is_claimed_by = ABK
 					state = 231
 					state = 1213
 					state = 1082
@@ -1064,6 +1067,7 @@ create_ambition_areas = {
 				}
 			}
 			set_variable = { ambition_area_@GEO = 1 }
+			set_variable = { ambition_area_@ABK = 1 }
 		}
 		# GER = Germany
 		if = {
@@ -1763,6 +1767,7 @@ create_ambition_areas = {
 					is_core_of = MOR
 					is_claimed_by = MOR
 					state = 699
+					state = 1318
 					state = 461
 					state = 462
 					state = 290
@@ -2018,7 +2023,12 @@ create_ambition_areas = {
 					state = 86 #Posen
 					is_polish_claim_in_ukraine = yes
 					state = 776 #West Prussia
-					state = 777 #Masuria					
+					state = 777 #Masuria				
+					state = 94
+					state = 96
+					state = 207
+					state = 1295
+					state = 95
 				}
 			}
 			set_variable = { ambition_area_@POL = 1 }
@@ -2123,7 +2133,6 @@ create_ambition_areas = {
 					state = 80 #Silistra
 					state = 192 #Silistra
 					state = 791 #Silistra
-					state = 1245 #Silistra
 				}
 			}
 			set_variable = { ambition_area_@ROM = 1 }
@@ -2737,6 +2746,7 @@ create_ambition_areas = {
 					state = 89 #Stanislau
 					state = 91 #Lvov
 					state = 194 #Mozyr
+					state = 95 #Pinsk
 					state = 240 #Byelgorod
 					state = 821 #Sudzha
 					state = 218 #Rostov
@@ -2879,7 +2889,9 @@ create_ambition_areas = {
 					state = 242 #Smolensk
 					state = 243 #Roslavl
 					state = 755 #Vitebsk
-					state = 880 #Dvisnk
+					state = 1287
+					state = 1292
+					state = 1293
 					state = 997 #Polesie
 				}
 			}

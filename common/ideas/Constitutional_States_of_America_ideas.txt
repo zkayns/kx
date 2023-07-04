@@ -1420,6 +1420,7 @@ ideas = {
 		}
 			COR_muh_states_rights = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_conscription_2"}
+			allowed = { always = no }
 			picture = protect_the_humble
 			modifier = {
 					political_power_gain = 0.07
@@ -1430,6 +1431,7 @@ ideas = {
 			}
 			COR_svlid_republic = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_fourth_branch_idea"}
+			allowed = { always = no }
 			picture = citizen_dignities
 			modifier = {
 				party_popularity_stability_factor = 0.1
@@ -1443,6 +1445,7 @@ ideas = {
 				#McCarthy
 		COR_Red_Scare = {
 				on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_fourth_branch_idea"}
+				allowed = { always = no }
 			picture = socialist_purge
 			modifier = {
 				political_power_gain = 0.06
@@ -1454,6 +1457,7 @@ ideas = {
 		}
 		COR_Begone_Commie = {
 				on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_fourth_branch_idea"}
+				allowed = { always = no }
 			picture = socialist_purge
 			modifier = {
 				political_power_gain = 0.09
@@ -1465,6 +1469,7 @@ ideas = {
 		}
 			COR_state_loyalty = { #Court Moderates
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_courting_moderates_idea"}
+			allowed = { always = no }
 			picture = shadow_recruitment
 				modifier = {
 				political_power_gain = 0.05
@@ -1474,10 +1479,11 @@ ideas = {
 			}
 			COR_tail_gunner = { #Aggressive Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training"}
+			allowed = { always = no }
 			picture = WCC_all_army_mandate
 			modifier = {
 				training_time_army_factor = -0.1
-				conscription = 0.09
+				conscription = 0.03
 				non_core_manpower = 0.08
 				mobilization_speed = 0.07
 				war_support_weekly = 0.02
@@ -1488,6 +1494,7 @@ ideas = {
 				# End Focus
 		COR_Truly_Native = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_gospel_of_wealth_2"}
+			allowed = { always = no }
 			picture = KIK_democracy_idea
 			modifier = {
 				syndicalist_drift = -0.02
@@ -1645,6 +1652,7 @@ ideas = {
 		}
 		COR_Moseley_Commies = {
 			picture = socialist_purge
+			allowed = { always = no }
 			modifier = {
 				syndicalist_drift = -0.09
 				totalist_drift = -0.09
@@ -1654,6 +1662,7 @@ ideas = {
 		}
 		COR_Moseley_Democracy = {
 			picture = LPD_democracy_in_quotation_marks_idea
+			allowed = { always = no }
 			modifier = {
 				market_liberal_drift = -0.09
 				social_liberal_drift = -0.09
@@ -1674,7 +1683,7 @@ ideas = {
 					war_stability_factor = 0.05
 					political_power_gain = 0.1
 					command_power_gain = 0.03
-					required_garrison_factor = -1
+					required_garrison_factor = -0.1
 					resistance_activity = -0.05
 				monthly_population = -0.007
 			}
@@ -1699,6 +1708,7 @@ ideas = {
 				#The Good Rush
 			COR_anti_interventionism = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_conscription_2"}
+			allowed = { always = no }
 			picture = COR_against_american_interventionism
 			modifier = {
 				conscription_factor = -0.08
@@ -1710,6 +1720,7 @@ ideas = {
 			} 
 			COR_universal_disarm = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_conscription"}
+			allowed = { always = no }
 			picture = COR_disarm_american_dream
 			modifier = {
 				justify_war_goal_time = 0.6
@@ -2516,8 +2527,7 @@ ideas = {
 		}
 		COR_Liberia_plan_idea = {# Liberia Plan
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Liberia_plan_idea"}
-			allowed = { always = yes }
-			available = { has_government = social_conservative }
+			allowed = { always = no }
 			removal_cost = -1
 			picture = liberia_plan
 			modifier = {
@@ -2531,7 +2541,7 @@ ideas = {
 		}
 		COR_Liberian_plan_idea = {# Liberian Part of the Liberia Plan
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_Liberian_plan_idea"}
-			allowed = { always = yes }
+			allowed = { always = no }
 			available = {
 			LIB = { 
 			OR = {
@@ -3144,7 +3154,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_american_empire"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = COR_fighting_for_america
+			picture = COR_american_hegemon
 			modifier = {
 				ai_focus_aggressive_factor = 0.75
 				conversion_cost_civ_to_mil_factor = -0.15
@@ -3162,7 +3172,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_american_empire2"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = COR_fighting_for_america
+			picture = COR_american_hegemon
 			modifier = {
 				ai_focus_aggressive_factor = 0.75
 				conversion_cost_civ_to_mil_factor = -0.15
@@ -3181,7 +3191,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_american_empire3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = COR_fighting_for_america
+			picture = COR_american_hegemon
 			modifier = {
 				ai_focus_aggressive_factor = 0.75
 				conversion_cost_civ_to_mil_factor = -0.15
@@ -3201,7 +3211,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_american_empire3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = COR_fighting_for_america
+			picture = COR_american_hegemon
 			modifier = {
 				ai_focus_aggressive_factor = 0.75
 				conversion_cost_civ_to_mil_factor = -0.15
@@ -3220,7 +3230,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COR_american_empire3"}
 			allowed = { always = no }
 			removal_cost = -1
-			picture = COR_fighting_for_america
+			picture = COR_american_hegemon
 			modifier = {
 				ai_focus_aggressive_factor = 0.75
 				conversion_cost_civ_to_mil_factor = -0.15

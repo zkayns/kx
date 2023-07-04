@@ -81,6 +81,7 @@ focus_tree = {
 			add_war_support = -0.05
 			add_stability = 0.03
 			custom_effect_tooltip = som_locked_military_choice_tt
+			activate_mission = SOM_sultans_folly
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 	}
@@ -91,10 +92,27 @@ focus_tree = {
 		prerequisite = {
 			focus = SOM_crackdownonclanism
 		}
+		bypass = {
+		OR = {
+		has_completed_focus = SOM_SRSP_Victory
+		has_completed_focus = SOM_GSL_Victory
+		has_completed_focus = SOM_SYL_Victory
+			}
+		}
 		x = -1
 		y = 3
 		relative_position_id = SOM_strenght
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = SOM_clans
+					option = SOM_WARSANGALI_PATAUT
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOM_unityistrenght"
 			add_war_support = 0.15
@@ -108,10 +126,27 @@ focus_tree = {
 		prerequisite = {
 			focus = SOM_unityistrenght
 		}
+		bypass = {
+		OR = {
+		has_completed_focus = SOM_SRSP_Victory
+		has_completed_focus = SOM_GSL_Victory
+		has_completed_focus = SOM_SYL_Victory
+			}
+		}
 		x = -1
 		y = 4
 		relative_position_id = SOM_strenght
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = SOM_clans
+					option = SOM_WARSANGALI_PATAUT
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOM_formalizekingdomstructure"
 				country_event = {
@@ -129,10 +164,27 @@ focus_tree = {
 		prerequisite = {
 			focus = SOM_formalizekingdomstructure
 		}
+		bypass = {
+		OR = {
+		has_completed_focus = SOM_SRSP_Victory
+		has_completed_focus = SOM_GSL_Victory
+		has_completed_focus = SOM_SYL_Victory
+			}
+		}
 		x = -1
 		y = 5
 		relative_position_id = SOM_strenght
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = SOM_clans
+					option = SOM_WARSANGALI_PATAUT
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOM_tfwnoclans"
 			country_event = som.5
@@ -145,10 +197,40 @@ focus_tree = {
 		prerequisite = {
 			focus = SOM_tfwnoclans
 		}
+		bypass = {
+		OR = {
+		has_completed_focus = SOM_SRSP_Victory
+		has_completed_focus = SOM_GSL_Victory
+		has_completed_focus = SOM_SYL_Victory
+			}
+		}
 		x = -1
 		y = 6
 		relative_position_id = SOM_strenght
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = SOM_clans
+					option = SOM_WARSANGALI_PATAUT
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SOM_clans
+						option = SOM_WARSANGALI_BARRE
+					}
+					has_game_rule = {
+						rule = SOM_clans
+						option = SOM_WARSANGALI_NATPOP
+					}
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOM_forthegreatergood"
 			add_ideas = SOM_HANGASH
@@ -179,9 +261,19 @@ focus_tree = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = SOM_clans
-					option = SOM_WARSANGALI_PATAUT
+				OR = {
+					has_game_rule = {
+						rule = SOM_clans
+						option = SOM_WARSANGALI_PATAUT
+					}
+					has_game_rule = {
+						rule = SOM_clans
+						option = SOM_WARSANGALI_BARRE
+					}
+					has_game_rule = {
+						rule = SOM_clans
+						option = SOM_WARSANGALI_NATPOP
+					}
 				}
 			}
 		}
@@ -290,6 +382,13 @@ focus_tree = {
 		icon = GFX_RUS_Reform_The_Judicial_System
 		prerequisite = {
 			focus = SOM_forthegreatergood focus = SOM_justicetraditionsa
+		}
+		bypass = {
+		OR = {
+		has_completed_focus = SOM_SRSP_Victory
+		has_completed_focus = SOM_GSL_Victory
+		has_completed_focus = SOM_SYL_Victory
+			}
 		}
 		x = 0
 		y = 8
@@ -685,6 +784,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOM_pansomaliethos"
 			add_war_support = 0.1
 			add_ideas = SOM_great_again
+			hidden_effect = {
+			country_event = {
+				id = som.43
+				days = 14
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
@@ -1363,7 +1468,12 @@ focus_tree = {
 		mutually_exclusive = {	focus = SOM_unfiedarmy
 		}
 		available = {
+			OR = {
 			has_completed_focus = SOM_landofthefree
+			has_completed_focus = SOM_SRSP_Victory
+			has_completed_focus = SOM_GSL_Victory
+			has_completed_focus = SOM_SYL_Victory
+			}
 		}
 		x = 2
 		y = 2
@@ -1969,7 +2079,8 @@ focus_tree = {
 		y = 0
 		cost = 5
 		available = {
-		has_country_flag = SOM_SRSP
+			has_country_flag = SOM_SRSP
+			has_socialist_government = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -1986,6 +2097,9 @@ focus_tree = {
 		icon = GFX_goal_SOM_Cooperative_Agriculture
 		prerequisite = {
 			focus = SOM_SRSP_Victory
+		}
+		available = {
+			has_socialist_government = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -2006,6 +2120,9 @@ focus_tree = {
 		icon = GFX_goal_SOM_Nationalization_Spree
 		prerequisite = {
 			focus = SOM_Cooperative_Agriculture
+		}
+		available = {
+			has_socialist_government = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -2046,6 +2163,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SOM_SRSP_Victory
 		}
+		available = {
+			has_socialist_government = yes
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -2071,6 +2191,9 @@ focus_tree = {
 		icon = GFX_goal_SOM_Vanguardism
 		prerequisite = {
 			focus = SOM_Modernize_Somalia
+		}
+		available = {
+			has_socialist_government = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -2100,6 +2223,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SOM_Nationalization_Spree
 		}
+		available = {
+			has_socialist_government = yes
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -2123,6 +2249,9 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			has_socialist_government = yes
 		}
 		relative_position_id = SOM_SRSP_Victory
 		x = 0
@@ -2231,6 +2360,41 @@ focus_tree = {
 		set_cosmetic_tag = SOM_EAST_AFRICA
 		custom_effect_tooltip = socialist.horn.a.tt
 		hidden_effect = {
+		if = {
+		limit = { SOM = {  is_ai = no } }
+		create_wargoal = {
+				type = annex_everything
+				target = EGY
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SUD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = UGA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TZN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = RWA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BRD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ZZB
+			}
+		}
 		every_state = {
 		limit = { is_core_of = ERI }
 		add_core_of = SOM
@@ -2248,9 +2412,23 @@ focus_tree = {
 		add_core_of = SOM
 			}
 		every_state = {
-		limit = { is_core_of = KIK }
+		limit = { is_core_of = TZN }
 		add_core_of = SOM
 			}
+		every_state = {
+		limit = { is_core_of = RWA }
+		add_core_of = SOM
+			}
+		every_state = {
+		limit = { is_core_of = BRD }
+		add_core_of = SOM
+			}
+		every_state = {
+		limit = { is_core_of = ZZB }
+		add_core_of = SOM
+			}
+		925 = { add_core_of = SOM }
+		948 = { add_core_of = SOM }
 		}
 		swap_ideas = {
 			remove_idea = SOM_Proletarian_Perfection
@@ -2315,6 +2493,17 @@ focus_tree = {
 		268 = { add_core_of = SOM }
 		892 = { add_core_of = SOM }
 		925 = { add_core_of = SOM }
+		if = {
+		limit = { SOM = {  is_ai = no } }
+		create_wargoal = {
+				type = annex_everything
+				target = KEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KIK
+				}
+			}
 		}
 		swap_ideas = {
 			remove_idea = SOM_Socialist_Pan_Somali
@@ -2405,6 +2594,17 @@ focus_tree = {
 		268 = { add_core_of = SOM }
 		892 = { add_core_of = SOM }
 		925 = { add_core_of = SOM }
+		if = {
+		limit = { SOM = {  is_ai = no } }
+		create_wargoal = {
+				type = annex_everything
+				target = KEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KIK
+				}
+			}
 		}
 		custom_effect_tooltip = barre.horn.a.tt
 		swap_ideas = {
@@ -2429,6 +2629,7 @@ focus_tree = {
 		y = 8
 		cost = 5
 		completion_reward = {
+		custom_effect_tooltip = somali_foreign.tt
 		add_ideas = SOM_Social_State
 			log = "[GetDateText]: [Root.GetName]: Focus SOM_Securing_Social_State"
 		}
@@ -2459,6 +2660,9 @@ focus_tree = {
 	focus = {
 		id = SOM_Faith_And_Tribes
 		icon = GFX_goal_SOM_Faith_And_Tribes
+		available = {
+		has_country_leader = { ruling_only = yes name = "Haaji Mahammad Husseen" }
+		}
 		prerequisite = {
 			focus = SOM_GSL_Victory
 		}
@@ -2479,6 +2683,9 @@ focus_tree = {
 	focus = {
 		id = SOM_Militarism_And_Nationalism
 		icon = GFX_goal_SOM_Militarism_And_Nationalism
+		available = {
+		has_country_leader = { ruling_only = yes name = "Haaji Mahammad Husseen" }
+		}
 		prerequisite = {
 			focus = SOM_Faith_And_Tribes
 		}
@@ -2499,6 +2706,9 @@ focus_tree = {
 	focus = {
 		id = SOM_Pan_Somali_Herald
 		icon = GFX_goal_SOM_Pan_Somali_Herald
+		available = {
+		has_country_leader = { ruling_only = yes name = "Haaji Mahammad Husseen" }
+		}
 		prerequisite = {
 			focus = SOM_GSL_Victory
 		}
@@ -2524,6 +2734,9 @@ focus_tree = {
 	focus = {
 		id = SOM_Somali_Allies
 		icon = GFX_goal_SOM_Somali_Allies
+		available = {
+		has_country_leader = { ruling_only = yes name = "Haaji Mahammad Husseen" }
+		}
 		prerequisite = {
 			focus = SOM_Pan_Somali_Herald
 		}
@@ -2552,6 +2765,9 @@ focus_tree = {
 	focus = {
 		id = SOM_Anti_Socialism
 		icon = GFX_goal_SOM_Anti_Socialism
+		available = {
+		has_country_leader = { ruling_only = yes name = "Haaji Mahammad Husseen" }
+		}
 		prerequisite = {
 			focus = SOM_Somali_Allies
 		}
@@ -2663,6 +2879,21 @@ focus_tree = {
 		set_cosmetic_tag = SOM_ISLAMIC
 		custom_effect_tooltip = islam.horn.a.tt
 		hidden_effect = {
+		if = {
+		limit = { SOM = {  is_ai = no } }
+		create_wargoal = {
+				type = annex_everything
+				target = EGY
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SUD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KEN
+			}
+		}
 		every_state = {
 		limit = { is_core_of = ERI }
 		add_core_of = SOM
@@ -2679,10 +2910,7 @@ focus_tree = {
 		limit = { is_core_of = KEN }
 		add_core_of = SOM
 			}
-		every_state = {
-		limit = { is_core_of = KIK }
-		add_core_of = SOM
-			}
+		925 = { add_core_of = SOM }
 		}
 		swap_ideas = {
 			remove_idea = SOM_Islamic_Unity
@@ -2739,6 +2967,17 @@ focus_tree = {
 		set_cosmetic_tag = SOM_PAN_SOMALI
 		custom_effect_tooltip = pan.somali.a.tt
 		hidden_effect = {
+		if = {
+		limit = { SOM = {  is_ai = no } }
+		create_wargoal = {
+				type = annex_everything
+				target = KIK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KEN
+			}
+		}
 		944 = { add_core_of = SOM }
 		268 = { add_core_of = SOM }
 		892 = { add_core_of = SOM }
@@ -2832,9 +3071,20 @@ focus_tree = {
 		limit = { is_core_of = OMA }
 		add_core_of = SOM
 			}
-		every_state = {
-		limit = { is_core_of = KIK }
-		add_core_of = SOM
+		if = {
+		limit = { SOM = {  is_ai = no } }
+		create_wargoal = {
+				type = annex_everything
+				target = ERI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = YEM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = OMA
+				}
 			}
 		}
 		swap_ideas = {
@@ -2862,6 +3112,7 @@ focus_tree = {
 		y = 8
 		cost = 5
 		completion_reward = {
+		custom_effect_tooltip = somali_foreign.tt
 		add_ideas = SOM_National_State
 		add_research_slot = 1
 			log = "[GetDateText]: [Root.GetName]: Focus SOM_Securing_National_State"
@@ -3201,6 +3452,7 @@ focus_tree = {
 		y = 7
 		cost = 5
 		completion_reward = {
+		custom_effect_tooltip = somali_foreign.tt
 		if = {
 		limit = {
 		SOM = {
@@ -3221,6 +3473,17 @@ focus_tree = {
 		}
 		custom_effect_tooltip = pan.somali.a.tt
 		hidden_effect = {
+		if = {
+		limit = { SOM = {  is_ai = no } }
+		create_wargoal = {
+				type = annex_everything
+				target = KEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KIK
+				}
+			}
 		944 = { add_core_of = SOM }
 		268 = { add_core_of = SOM }
 		892 = { add_core_of = SOM }
@@ -3678,6 +3941,7 @@ focus_tree = {
 		y = 7
 		cost = 5
 		completion_reward = {
+		custom_effect_tooltip = somali_foreign.tt
 		set_cosmetic_tag = SOM_AJUURAAN
 		custom_effect_tooltip = ajuuraan.legit.horn.a.tt
 		hidden_effect = {
@@ -3697,10 +3961,7 @@ focus_tree = {
 		limit = { is_core_of = OMA }
 		add_core_of = SOM
 			}
-		every_state = {
-		limit = { is_core_of = KIK }
-		add_core_of = SOM
-			}
+		925 = { add_core_of = SOM }
 		}
 		add_ideas = SOM_True_Ajuran
 			log = "[GetDateText]: [Root.GetName]: Focus SOM_True_Ajuuraan"
@@ -3736,8 +3997,20 @@ focus_tree = {
 		y = 7
 		cost = 5
 		completion_reward = {
+		custom_effect_tooltip = somali_foreign.tt
 		custom_effect_tooltip = pan.somali.a.tt
 		hidden_effect = {
+		if = {
+		limit = { SOM = {  is_ai = no } }
+		create_wargoal = {
+				type = annex_everything
+				target = KEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KIK
+			}
+		}
 		944 = { add_core_of = SOM }
 		268 = { add_core_of = SOM }
 		892 = { add_core_of = SOM }
