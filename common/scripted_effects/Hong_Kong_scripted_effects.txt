@@ -415,7 +415,7 @@ HKG_begin_canton_war = {
 		limit = {
 			has_country_flag = HKG_canton_invasion_tacticed
 		}
-		add_idea = HKG_canton_war_idea
+		add_ideas = HKG_canton_war_idea
 	}
 	transfer_state = 593
 	random_other_country = {

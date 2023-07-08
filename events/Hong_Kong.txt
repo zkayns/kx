@@ -1350,19 +1350,8 @@ country_event = { # introduction to 49ers
 
 	option = {
 		name = hktriads.21.a
-		ai_chance = {
-			factor = 70
-		}
-		add_manpower = 30000
-		add_political_power = -25
-	}
-	option = {
-		name = hktriads.21.b
-		ai_chance = {
-			factor = 30
-		}
-		add_ideas = HKG_better_49ers_idea
-		add_political_power = 25
+		add_manpower = 20000
+		add_political_power = -15
 	}
 }
 
@@ -1569,7 +1558,7 @@ country_event = { # 14k's move (2/4) big success
 		name = hktriads.2402.a
 		custom_effect_tooltip = HKG_triad_conflict_minus_200_men_post_tt
 		custom_effect_tooltip = HKG_triad_conflict_sun_yee_on_plus_plus_tt
-		add_political_power = `25
+		add_political_power = 25
 		hidden_effect = {
 			HKG_triad_conflict_minus_200_men = yes
 			HKG_triad_conflict_sun_yee_on_plus_plus = yes
@@ -2487,10 +2476,90 @@ country_event = { # introduction event to triad war
 	desc = hktriads.45.d
 	is_triggered_only = yes
 
-	option = {
+option = {
 		name = hktriads.45.a
-		add_political_power = -25
+		add_political_power = 100
 		add_stability = -0.05
+		custom_effect_tooltip = HKG_sun_yee_on_chosen
+		hidden_effect = {
+			set_country_flag = HKG_sun_yee_on_chosen_flag
+			set_country_flag = HKG_decision_made
+			HKG_triad_conflict_setup_sun_yee_on = yes
+			country_event = {
+				id = hktriads.23
+				days = 14
+			}
+			country_event = {
+				id = hktriads.24
+				days = 30
+			}
+			country_event = {
+				id = hktriads.25
+				days = 48
+			}
+			country_event = {
+				id = hktriads.26
+				days = 64
+			}
+		}	
+		hidden_effect = {
+			set_country_flag = HKG_triad_conflict_start
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = "Sun Yee On/14K"
+				name = "Sun Yee On/14K"
+			}
+			create_country_leader = {
+				name = "Contested Leadership"
+				desc = "POLITICS_CHAOS_DESC"
+				picture = "gfx/leaders/HKG/Portrait_HKG_chaos.png"
+				expire = "1965.1.1"
+				ideology = crime_syndicate_subtype
+				traits = { triad_war }
+			}
+		}
+	}
+
+	option = {
+		name = hktriads.45.b
+		add_political_power = 100
+		add_stability = -0.05
+			custom_effect_tooltip = HKG_14k_chosen
+			hidden_effect = {
+			set_country_flag = HKG_14k_chosen_flag
+			set_country_flag = HKG_decision_made
+			HKG_triad_conflict_setup_14k = yes
+			if = {
+				limit = {
+					has_idea = HKG_better_49ers_idea
+				}
+			remove_ideas = HKG_better_49ers_idea
+			}
+			if = {
+				limit = {
+					has_idea = HKG_rich_vanguards_idea
+				}
+			remove_ideas = HKG_rich_vanguards_idea
+			}
+			if = {
+				limit = {
+					has_idea = HKG_powerful_vanguards_idea
+				}
+			remove_ideas = HKG_powerful_vanguards_idea
+			}
+			country_event = {
+				id = hktriads.35
+				days = 21
+			}
+			country_event = {
+				id = hktriads.36
+				days = 38
+			}
+			country_event = {
+				id = hktriads.37
+				days = 64
+			}
+		}		
 		hidden_effect = {
 			set_country_flag = HKG_triad_conflict_start
 			set_party_name = {
@@ -2557,7 +2626,7 @@ country_event = { # end of triad war
 		}
 		hidden_effect = {
 			complete_national_focus = HKG_sun_yee_on
-			set_country_flag = HKG_sun_yee_on_in_charge
+			set_country_flag = HKG_sun_yee_on_won_war
 			clr_country_flag = HKG_triad_conflict_start
 			clr_country_flag = HKG_14k_chosen_flag
 			clr_country_flag = HKG_sun_yee_on_chosen_flag
@@ -2591,7 +2660,7 @@ country_event = { # end of triad war
 		remove_all_ministers = yes
 		hidden_effect = {
 			complete_national_focus = HKG_14k
-			set_country_flag = HKG_14k_in_charge
+			set_country_flag = HKG_14k_won_war
 			clr_country_flag = HKG_triad_conflict_start
 			clr_country_flag = HKG_14k_chosen_flag
 			clr_country_flag = HKG_sun_yee_on_chosen_flag
@@ -3413,7 +3482,7 @@ country_event = { # sun yee on remnants - two gun cohen coup pt. 5
 			remove_ideas = HKG_jewish_suppression_idea1
 			set_country_flag = HKG_cohen_in_charge
 			clr_country_flag = HKG_triads_in_charge
-			clr_country_flag = HKG_14k_in_charge
+			clr_country_flag = HKG_14k_won_war
 			clr_country_flag = HKG_18_syndicates_active
 			add_popularity = { ideology = paternal_autocrat popularity = -0.40 }
 		}
@@ -3880,7 +3949,7 @@ country_event = { # conflict with lao smugglers
 			factor = 100
 		}
 		custom_effect_tooltip = HKG_opium_progress_plus_5
-		remove_equipment_from_stockpile = {
+		add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = -300
 			producer = HKG
@@ -4512,7 +4581,7 @@ country_event = { # kot siu-wong remains in power
 	}
 }
 
-country_event = { # kot siu-wong meets the council of the 18 syndicates
+country_event = { # pacifying liangguang
 	id = hktriads.9600
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hktriads.9600" }
 	title = hktriads.9600.t
@@ -4758,7 +4827,7 @@ country_event = { # canton war - pows
 	}
 	option = {
 		name = hktriads.105.b
-		add_manpower = 12679
+		add_manpower = 11000
 	}
 }
 
@@ -4771,7 +4840,7 @@ country_event = { # canton war - disgruntled citizens
 
 	option = {
 		name = hktriads.106.a
-		add_manpower = 38514
+		add_manpower = 38000
 		add_stability = 0.03
 		add_timed_idea = {
 			idea = HKG_pay_gxc_troops

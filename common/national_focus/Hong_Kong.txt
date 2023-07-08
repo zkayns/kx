@@ -591,7 +591,7 @@ focus_tree = {
 				set_country_flag = HKG_triad_conflict_start
 				country_event = {
 					id = hktriads.45
-					days = 3
+					days = 1
 				}
 			}
 		}
@@ -1359,7 +1359,7 @@ focus_tree = {
 				}
 				air_experience = 75
 				add_equipment_to_stockpile = {
-					type = fighter_equipment
+					type = small_plane_airframe
 					amount = 150
 					producer = HKG
 				}
@@ -1699,65 +1699,7 @@ focus_tree = {
 			country_event = hktriads.51
 		}
 	}
-	focus = { 
-		id = HKG_jews_question
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		prerequisite = { 
-			focus = HKG_14k_triad_allies
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_country_flag = HKG_jewish_resistance
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_14k
-		x = -3
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			add_stability = -0.05
-			country_event = {
-				id = hktriads.71
-				days = 4
-			}
-		}
-	}
-	focus = { 
-		id = HKG_expand_intel
-		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 5
-		prerequisite = { 
-			focus = HKG_expel_garrisons
-		}
-		available = {
-			has_government = paternal_autocrat
-			has_country_flag = HKG_triads_in_charge
-			has_idea = HKG_14k_intel_idea
-			has_completed_focus = HKG_kill_canton
-		}
-		cancel_if_invalid = yes
-		relative_position_id = HKG_14k
-		x = 3
-		y = 2
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
-			custom_effect_tooltip = HKG_14k_intel_tt
-			swap_ideas = {
-				remove_idea = HKG_14k_intel_idea
-				add_idea = HKG_14k_intel_idea1
-			}
-			hidden_effect = {
-				create_intelligence_agency = {
-					name = "Hong Kong Strategic Intelligence Agency"
-					icon = GFX_intelligence_agency_logo_KX_kmt_2
-				}
-			}
-		}
-	}
+	
 	focus = { 
 		id = HKG_new_regime
 		icon = GFX_goal_ideology_paternal_autocrat
@@ -2336,6 +2278,7 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			has_country_flag = HKG_triads_in_charge
+			NOT = { has_war_with = GXC }
 		}
 		prerequisite = { 
 			focus = HKG_bolster_recon
@@ -3800,6 +3743,299 @@ focus_tree = {
 		relative_position_id = HKG_guangxi_circle
 		x = 0
 		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+
+	focus = { 
+		id = HKG_rotschilds_of_the_east
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_jewish_king_of_china
+		x = 40
+		y = 0
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_honor_hkpf
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_rotschilds_of_the_east
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = 0
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_clp_dividends
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_rotschilds_of_the_east
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = -1
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_ally_big_families
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_clp_dividends
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = -1
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_british_presence
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_ally_big_families
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = -2
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_trade_contracts
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_rotschilds_of_the_east
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = 1
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_four_docks
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_trade_contracts
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = 1
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_incorporate_standard_chartered
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_four_docks
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = 2
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_reform_legco
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_british_presence
+		}
+		prerequisite = { 
+			focus = HKG_honor_hkpf
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = -1
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_encourage_entrepreneurship
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_incorporate_standard_chartered
+		}
+		prerequisite = { 
+			focus = HKG_honor_hkpf
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = 1
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_two_baronets
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_encourage_entrepreneurship
+		}
+		prerequisite = { 
+			focus = HKG_reform_legco
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_rotschilds_of_the_east
+		x = 0
+		y = 5
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_victor_sassoon
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_two_baronets
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_two_baronets
+		x = -7
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_philip_sassoon
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		available = {
+			has_government = market_liberal
+			has_country_flag = HKG_sassoons_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_two_baronets
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_two_baronets
+		x = 7
+		y = 1
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
