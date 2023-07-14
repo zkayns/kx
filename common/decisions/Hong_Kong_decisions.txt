@@ -1984,6 +1984,7 @@ hkg_debug_decisions = {
 		cost = 0
 		complete_effect = {
 			clr_country_flag = make_hkg_sassoon_tree_visible
+			clr_country_flag = make_hkg_police_tree_visible
 			clr_country_flag = make_hkg_cohen_tree_visible
 			set_country_flag = make_hkg_initial_tree_visible
 			mark_focus_tree_layout_dirty = yes
@@ -2000,6 +2001,7 @@ hkg_debug_decisions = {
 		cost = 0
 		complete_effect = {
 			clr_country_flag = make_hkg_sassoon_tree_visible
+			clr_country_flag = make_hkg_police_tree_visible
 			clr_country_flag = make_hkg_initial_tree_visible
 			set_country_flag = make_hkg_cohen_tree_visible
 			mark_focus_tree_layout_dirty = yes
@@ -2016,8 +2018,26 @@ hkg_debug_decisions = {
 		cost = 0
 		complete_effect = {
 			clr_country_flag = make_hkg_cohen_tree_visible
+			clr_country_flag = make_hkg_police_tree_visible
 			clr_country_flag = make_hkg_initial_tree_visible
 			set_country_flag = make_hkg_sassoon_tree_visible
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	hkg_load_police_tree = {
+		allowed = { tag = HKG }
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = make_hkg_police_tree_visible }
+			has_focus_tree = HKG_focus
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			clr_country_flag = make_hkg_cohen_tree_visible
+			clr_country_flag = make_hkg_initial_tree_visible
+			clr_country_flag = make_hkg_sassoon_tree_visible
+			set_country_flag = make_hkg_police_tree_visible
 			mark_focus_tree_layout_dirty = yes
 		}
 	}

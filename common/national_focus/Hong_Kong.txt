@@ -4124,4 +4124,633 @@ focus_tree = {
 			add_stability = 0.1
 		}
 	}
+	focus = { 
+		id = HKG_macintosh_at_the_helm
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		allow_branch = {
+			has_country_flag = make_hkg_police_tree_visible
+		}
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		cancel_if_invalid = yes
+		x = 8
+		y = 0
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_six_departments
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_macintosh_at_the_helm
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -4
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_wage_regulation_act
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_macintosh_at_the_helm
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -2
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_criminal_records
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_six_departments
+		}
+		prerequisite = { 
+			focus = HKG_wage_regulation_act
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -5
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_motorized_patrol_units
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_six_departments
+		}
+		prerequisite = { 
+			focus = HKG_wage_regulation_act
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -3
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_recruitment_promotion_equality
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_six_departments
+		}
+		prerequisite = { 
+			focus = HKG_wage_regulation_act
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -1
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_special_branch
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_criminal_records
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -5
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_water_police
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_motorized_patrol_units
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -3
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_women_police_constables
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_recruitment_promotion_equality
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -1
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_panopticon
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_special_branch
+		}
+		prerequisite = { 
+			focus = HKG_water_police
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -4
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_investigate_illicit_activities
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_women_police_constables
+		}
+		prerequisite = { 
+			focus = HKG_water_police
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -2
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_wipe_out_organized_crime
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_panopticon
+		}
+		prerequisite = { 
+			focus = HKG_investigate_illicit_activities
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = -3
+		y = 5
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_benevolent_dictatorship
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_macintosh_at_the_helm
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 4
+		y = 1
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_public_trust_campaigns
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_benevolent_dictatorship
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 2
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_judicary_system
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_benevolent_dictatorship
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 4
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_denounce_prejudice
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_benevolent_dictatorship
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 6
+		y = 2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_never_another_shanghai
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_public_trust_campaigns
+		}
+		prerequisite = { 
+			focus = HKG_judicary_system
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 1
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_draft_social_principles
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_public_trust_campaigns
+		}
+		prerequisite = { 
+			focus = HKG_judicary_system
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 3
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_tso_seen_wan
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_denounce_prejudice
+		}
+		prerequisite = { 
+			focus = HKG_judicary_system
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 5
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_cooperate_with_lof
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_denounce_prejudice
+		}
+		prerequisite = { 
+			focus = HKG_judicary_system
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 7
+		y = 3
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_protector_mythos
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_never_another_shanghai
+		}
+		prerequisite = { 
+			focus = HKG_draft_social_principles
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 2
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_actual_judicary_system
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_judicary_system
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 4
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_nonpartisan_cooperation_alliance
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_tso_seen_wan
+		}
+		prerequisite = { 
+			focus = HKG_cooperate_with_lof
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 6
+		y = 4
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_relinquish_emergency_powers
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_protector_mythos
+		}
+		prerequisite = { 
+			focus = HKG_actual_judicary_system
+		}
+		prerequisite = { 
+			focus = HKG_nonpartisan_cooperation_alliance
+		}
+		mutually_exclusive = {
+			focus = HKG_relinquish_emergency_powers
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 5
+		y = 5
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_liberal_stratocracy
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_protector_mythos
+		}
+		prerequisite = { 
+			focus = HKG_actual_judicary_system
+		}
+		prerequisite = { 
+			focus = HKG_nonpartisan_cooperation_alliance
+		}
+		mutually_exclusive = {
+			focus = HKG_relinquish_emergency_powers
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 3
+		y = 5
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = { 
+		id = HKG_fair_secure_hong_kong
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		available = {
+			has_government = authoritarian_democrat
+			has_country_flag = HKG_police_in_charge
+		}
+		prerequisite = { 
+			focus = HKG_wipe_out_organized_crime
+		}
+		prerequisite = { 
+			focus = HKG_relinquish_emergency_powers
+			focus = HKG_liberal_stratocracy
+		}
+		cancel_if_invalid = yes
+		relative_position_id = HKG_macintosh_at_the_helm
+		x = 0
+		y = 6
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HKG_hegemony"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
 }
