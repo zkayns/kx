@@ -24,14 +24,11 @@ HKG_opium_decisions = {
 	}
 }
 
-HKG_canton_invasion_decisions = {
-	icon = GFX_decision_category_kuomintang
-	priority = 200
-	allowed = {
-		original_tag = HKG
-	}
+hkg_debug_decisions = {
 	visible = {
-		tag = HKG
-		has_country_flag = HKG_kill_canton_flag
+		is_ai = no
+		is_debug = yes
 	}
+	allowed = { tag = HKG }
 }
+

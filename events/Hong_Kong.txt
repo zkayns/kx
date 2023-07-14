@@ -28,6 +28,7 @@ country_event = { #AI loading stuff
 		hidden_effect = { 
 			load_oob = HKG
 			country_lock_all_division_template = yes
+			set_country_flag = make_hkg_initial_tree_visible
 			country_event = {
 				id = hongkong.2
 				days = 1

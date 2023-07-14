@@ -1971,248 +1971,54 @@ HKG_opium_decisions = {
 		}
 	}
 }
-HKG_canton_invasion_decisions = {
-	HKG_canton_invasion_infiltration = {
-		icon = GFX_decision_soldierly_discipline
-		
-		available = {
-			has_completed_focus = HKG_kill_canton
-			NOT = { has_war_with = GXC }
-			has_manpower > 5000
-		}
-		visible = {
-			has_country_flag = HKG_kill_canton_flag
-		}
 
-		ai_will_do = {
-			factor = 100
+hkg_debug_decisions = {
+	hkg_load_initial_tree = {
+		allowed = { tag = HKG }
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = make_hkg_initial_tree_visible }
+			has_focus_tree = HKG_focus
 		}
-		fire_only_once = yes
-		cost = 20
-		days_remove = 30
-		
+		fire_only_once = no
+		cost = 0
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_canton_invasion_infiltration"
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_canton_invasion_infiltration"
-			
-			custom_effect_tooltip = HKG_canton_invasion_infiltration_tt 
-			add_manpower = -5000
-			hidden_effect = {
-				set_country_flag = HKG_canton_invasion_infiltrated
-			}
+			clr_country_flag = make_hkg_sassoon_tree_visible
+			clr_country_flag = make_hkg_cohen_tree_visible
+			set_country_flag = make_hkg_initial_tree_visible
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	HKG_canton_invasion_soldiers = {
-		icon = GFX_decision_soldierly_discipline
-		
-		available = {
-			has_completed_focus = HKG_kill_canton
-			NOT = { has_war_with = GXC }
-			has_manpower > 10000
-		}
+	hkg_load_cohen_tree = {
+		allowed = { tag = HKG }
 		visible = {
-			has_country_flag = HKG_kill_canton_flag
+			is_ai = no
+			NOT = { has_country_flag = make_hkg_cohen_tree_visible }
+			has_focus_tree = HKG_focus
 		}
-
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		cost = 30
-		days_remove = 60
-		
+		fire_only_once = no
+		cost = 0
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_canton_invasion_soldiers"
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_canton_invasion_soldiers"
-			
-			custom_effect_tooltip = HKG_canton_invasion_soldiers_tt 
-			add_manpower = -10000
-			hidden_effect = {
-				set_country_flag = HKG_canton_invasion_soldiered
-			}
+			clr_country_flag = make_hkg_sassoon_tree_visible
+			clr_country_flag = make_hkg_initial_tree_visible
+			set_country_flag = make_hkg_cohen_tree_visible
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	HKG_canton_invasion_allies = {
-		icon = GFX_decision_soldierly_discipline
-		
-		available = {
-			has_completed_focus = HKG_kill_canton
-			GXC = {
-				is_faction_leader = yes
-			}
-			NOT = { has_war_with = GXC }
-			OR = {
-				HNN = { is_in_faction_with = GXC }
-				YUN = { is_in_faction_with = GXC }
-				SZC = { is_in_faction_with = GXC }
-				XSM = { is_in_faction_with = GXC }
-			}
-		}
+	hkg_load_sassoon_tree = {
+		allowed = { tag = HKG }
 		visible = {
-			has_country_flag = HKG_kill_canton_flag
+			is_ai = no
+			NOT = { has_country_flag = make_hkg_sassoon_tree_visible }
+			has_focus_tree = HKG_focus
 		}
-
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		cost = 30
-		days_remove = 40
-		
+		fire_only_once = no
+		cost = 0
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_canton_invasion_allies"
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_canton_invasion_allies"
-			
-			custom_effect_tooltip = HKG_canton_invasion_allies_tt
-			if = {
-				limit = {
-					HNN = { 
-						is_in_faction_with = GXC 
-						is_subject = no
-					}
-					
-				}
-				HNN = { country_event = hktriads.89 }
-			}
-			else_if = {
-				limit = {
-					YUN = { 
-						is_in_faction_with = GXC 
-						is_subject = no
-					}
-				}
-				YUN = { country_event = hktriads.89 }
-			}
-			else_if = {
-				limit = {
-					SZC = { 
-						is_in_faction_with = GXC 
-						is_subject = no
-					}
-				}
-				SZC = { country_event = hktriads.89 }
-			}
-			else_if = {
-				limit = {
-					XSM = { 
-						is_in_faction_with = GXC 
-						is_subject = no
-					}
-				}
-				XSM = { country_event = hktriads.89 }
-			}
-			hidden_effect = {
-				set_country_flag = HKG_canton_invasion_allied
-			}
-		}
-	}
-	HKG_canton_invasion_tactics = {
-		icon = GFX_decision_soldierly_discipline
-		
-		available = {
-			has_completed_focus = HKG_kill_canton
-			NOT = { has_war_with = GXC }
-		}
-		visible = {
-			has_country_flag = HKG_kill_canton_flag
-		}
-		modifier = {
-			political_power_gain = -0.2
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		cost = 20
-		days_remove = 60
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_canton_invasion_tactics"
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_canton_invasion_tactics"
-			
-			custom_effect_tooltip = HKG_canton_invasion_tactics_tt 
-			hidden_effect = {
-				set_country_flag = HKG_canton_invasion_tacticed
-			}
-		}
-	}
-	HKG_canton_invasion_war = {
-		icon = GFX_decision_soldierly_discipline
-		
-		available = {
-			has_completed_focus = HKG_kill_canton
-			NOT = { has_war_with = GXC }
-		}
-		visible = {
-			has_country_flag = HKG_kill_canton_flag
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		days_remove = 14
-		war_with_on_remove = GXC
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_canton_invasion_war"
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_canton_invasion_war"
-			
-			custom_effect_tooltip = HKG_canton_invasion_war_tt
-			declare_war_on = {
-				target = GXC
-				type = annex_everything
-			}
-			hidden_effect = {
-				HKG_begin_canton_war = yes
-			}
-		}
-	}
-	HKG_negotiate_with_chen = {
-		icon = GFX_decision_champagne_glass
-		
-		available = {
-			has_completed_focus = HKG_kill_canton
-			NOT = { has_war_with = GXC }
-			GXC = { has_country_leader = { name = "Chen Mingshu" ruling_only = yes } }
-		}
-		visible = {
-			has_country_flag = HKG_kill_canton_flag
-			GXC = { has_country_leader = { name = "Chen Mingshu" ruling_only = yes } }
-		}
-
-		ai_will_do = {
-			factor = 5000
-		}
-		fire_only_once = yes
-		days_remove = 25
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HKG_negotiate_with_chen"
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HKG_negotiate_with_chen"
-			
-			custom_effect_tooltip = HKG_negotiate_with_chen_tt
-			hidden_effect = {
-				GXC = {
-					country_event = {
-						id = hktriads.107
-						days = 3
-					}
-				}
-			}
+			clr_country_flag = make_hkg_cohen_tree_visible
+			clr_country_flag = make_hkg_initial_tree_visible
+			set_country_flag = make_hkg_sassoon_tree_visible
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
