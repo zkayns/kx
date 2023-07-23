@@ -3,7 +3,7 @@ state = {		#Edirne
 	name = "STATE_341"
 
 	history = {
-		owner = OTT
+		owner = TUR
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -17,18 +17,15 @@ state = {		#Edirne
 			922 = {
 				bunker = 1
 			}
-			13633 = {
-				bunker = 1
-			}
 		}
 		victory_points = {
 			11842 5
 		}
-		add_core_of = OTT
+		add_core_of = TUR
 	}
 
 	provinces = {
-		922 3879 3893 6895 11842 13633
+		922 3879 3893 6895 11842
 	}
 	manpower = 741587
 	state_category = four

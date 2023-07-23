@@ -3,13 +3,14 @@ state = {
 	name = "STATE_594"
 	manpower = 3850000
 	state_category = four
+	local_supplies = 1.0 
 	resources = {
 		chromium = 4
+		steel = 6
+		tungsten = 7
 	}
-
 	history = {
 		owner = LEP
-		add_core_of = GXC
 		add_claim_by = LEP
 		add_core_of = GXC
 		add_claim_by = QIE

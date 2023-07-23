@@ -3,7 +3,7 @@ state = {
 	name = "STATE_355"
 
 	history = {
-		owner = OTT
+		owner = TUR
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -21,11 +21,11 @@ state = {
 		victory_points = {
 			11881 3
 		}
-		add_core_of = OTT
+		add_core_of = TUR
 	}
 
 	provinces = {
-		960 975 3965 3979 9932 9886 11881 11894
+		960 975 3965 3979 9932 11881 11894
 	}
 	manpower = 1240133
 	state_category = four

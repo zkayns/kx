@@ -15,26 +15,12 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 1775 y = 850 }
-
-	focus = {
-		id = SHX_Yan_In_Power
-		icon = GFX_goal_ideology_paternal_autocrat
-		x = 4
-		y = 0
-		cost = 0
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Yan_In_Power"
-		}
-	}
 	focus = {
 		id = SHX_The_Model_Governor
 		icon = GFX_goal_china_yan_xishan
-		prerequisite = {
-			focus = SHX_Yan_In_Power
-		}
-		relative_position_id = SHX_Yan_In_Power
-		x = 0
-		y = 1
+		allow_branch = { NOT = { has_country_flag = SHX_Feng_in_power } }
+		x = 4
+		y = 0
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_The_Model_Governor"
@@ -44,13 +30,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_A_Benevolent_Dictatorship
-		icon = GFX_goal_generic_controlled_board
+		icon = GFX_goal_FIU_popular_internationalism
 		prerequisite = {
 			focus = SHX_The_Model_Governor
 		}
-		relative_position_id = SHX_Yan_In_Power
+		relative_position_id = SHX_The_Model_Governor
 		x = -4
-		y = 2
+		y = 1
 		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_A_Benevolent_Dictatorship"
@@ -62,14 +48,14 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_A_Progressive_State
-		icon = GFX_goal_economic_control
+		icon = GFX_goal_TIB_Peaceful_Reformation_Guided_Piety
 		prerequisite = {
 			focus = SHX_A_Benevolent_Dictatorship
 			focus = SHX_The_First_Steps_To_Modernisation
 		}
-		relative_position_id = SHX_Yan_In_Power
-		x = -4
-		y = 3
+		relative_position_id = SHX_A_Benevolent_Dictatorship
+		x = 0
+		y = 1
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_A_Progressive_State"
@@ -78,13 +64,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_With_Progressive_Customs
-		icon = GFX_goal_SZC_break_with_tradition
+		icon = GFX_goal_generic_culture2
 		prerequisite = {
 			focus = SHX_A_Progressive_State
 		}
-		relative_position_id = SHX_Yan_In_Power
-		x = -4
-		y = 4
+		relative_position_id = SHX_A_Progressive_State
+		x = 0
+		y = 1
 		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_With_Progressive_Customs"
@@ -96,13 +82,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_The_First_Steps_To_Modernisation
-		icon = GFX_goal_workers_for_business
+		icon = GFX_goal_MON_Modernized_Pastoral_Arcadianism
 		prerequisite = {
 			focus = SHX_The_Model_Governor
 		}
-		relative_position_id = SHX_Yan_In_Power
+		relative_position_id = SHX_The_Model_Governor
 		x = -1
-		y = 2
+		y = 1
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_The_First_Steps_To_Modernisation"
@@ -125,7 +111,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_The_Land_Reform
-		icon = GFX_goal_OTT_Land_Reform
+		icon = GFX_UKR_Agrarian_Reform
 		available = {
 			has_political_power > 50
 		}
@@ -133,9 +119,9 @@ focus_tree = {
 			focus = SHX_A_Benevolent_Dictatorship
 			focus = SHX_The_First_Steps_To_Modernisation
 		}
-		relative_position_id = SHX_Yan_In_Power
-		x = -1
-		y = 3
+		relative_position_id = SHX_The_First_Steps_To_Modernisation
+		x = 0
+		y = 1
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_The_Land_Reform"
@@ -159,13 +145,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_New_Army_Staff
-		icon = GFX_goal_generic_army_training
+		icon = GFX_goal_generic_army_high_command
 		prerequisite = {
 			focus = SHX_The_Land_Reform
 		}
-		relative_position_id = SHX_Yan_In_Power
-		x = -2
-		y = 4
+		relative_position_id = SHX_The_Land_Reform
+		x = -1
+		y = 1
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_New_Army_Staff"
@@ -177,13 +163,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_The_Soldier_And_His_Labour
-		icon = GFX_goal_Workers_Paradise
+		icon = GFX_goal_NEE_From_Soldiers_Rebuilders
 		prerequisite = {
 			focus = SHX_The_Land_Reform
 		}
-		relative_position_id = SHX_Yan_In_Power
-		x = 0
-		y = 4
+		relative_position_id = SHX_The_Land_Reform
+		x = 1
+		y = 1
 		cost = 7
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_The_Soldier_And_His_Labour"
@@ -210,16 +196,16 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_The_Model_Province
-		icon = GFX_goal_model_cities
+		icon = GFX_goal_NYC_Shining_City
 		prerequisite = {
 			focus = SHX_With_Progressive_Customs
 		}
 		prerequisite = {
 			focus = SHX_New_Army_Staff
 		}
-		relative_position_id = SHX_Yan_In_Power
-		x = -3
-		y = 5
+		relative_position_id = SHX_New_Army_Staff
+		x = -1
+		y = 1
 		cost = 7
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_The_Model_Province"
@@ -244,16 +230,16 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_The_Model_Citizen
-		icon = GFX_goal_generic_civilian_oversight
+		icon = GFX_goal_NYC_People_Power
 		prerequisite = {
 			focus = SHX_New_Army_Staff
 		}
 		prerequisite = {
 			focus = SHX_The_Soldier_And_His_Labour
 		}
-		relative_position_id = SHX_Yan_In_Power
-		x = -1
-		y = 5
+		relative_position_id = SHX_New_Army_Staff
+		x = 1
+		y = 1
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_The_Model_Citizen"
@@ -265,16 +251,16 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Public_Education
-		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
+		icon = GFX_goal_CZE_rural_education
 		prerequisite = {
 			focus = SHX_The_Model_Province
 		}
 		prerequisite = {
 			focus = SHX_The_Model_Citizen
 		}
-		relative_position_id = SHX_Yan_In_Power
-		x = -2
-		y = 6
+		relative_position_id = SHX_New_Army_Staff
+		x = 0
+		y = 2
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_Public_Education"
@@ -283,13 +269,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Develop_Yan_Xishan_Thought
-		icon = GFX_goal_brain
+		icon = GFX_goal_FNG_Xishan_Thought
 		prerequisite = {
 			focus = SHX_The_Model_Governor
 		}
-		relative_position_id = SHX_Yan_In_Power
+		relative_position_id = SHX_The_Model_Governor
 		x = 3
-		y = 2
+		y = 1
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_Develop_Yan_Xishan_Thought"
@@ -299,7 +285,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Virtue_Knowledge_Welfare
-		icon = GFX_goal_CHI_YUN_reconcile
+		icon = GFX_goal_AUS_big_brain
 		mutually_exclusive = {
 			focus = SHX_Self_Reflection
 		}
@@ -321,7 +307,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Self_Reflection
-		icon = GFX_goal_china_deal
+		icon = GFX_goal_SQI_confucianism
 		mutually_exclusive = {
 			focus = SHX_Virtue_Knowledge_Welfare
 		}
@@ -343,7 +329,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Follow_Tradition
-		icon = GFX_goal_QIE_confucianism
+		icon = GFX_goal_FNG_Defend_Confucius
 		mutually_exclusive = {
 			focus = SHX_Move_With_The_Times
 		}
@@ -363,7 +349,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Move_With_The_Times
-		icon = GFX_goal_DOM_End_Judicial_Corruption
+		icon = GFX_goal_AUS_Industrialisms_Past_Present_Future
 		mutually_exclusive = {
 			focus = SHX_Follow_Tradition
 		}
@@ -385,7 +371,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_From_The_Bottom_Up
-		icon = GFX_goal_workers_rights
+		icon = GFX_goal_MEX_Worker_Base
 		mutually_exclusive = {
 			focus = SHX_From_The_Top_Down
 		}
@@ -425,7 +411,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_From_The_Top_Down
-		icon = GFX_goal_social_reforms
+		icon = GFX_goal_collaborate_local_elites
 		mutually_exclusive = {
 			focus = SHX_From_The_Bottom_Up
 		}
@@ -465,7 +451,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Peaceful_Existence
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_GUA_Pacifism_World_Stage
 		mutually_exclusive = {
 			focus = SHX_Maintain_The_Edge
 		}
@@ -523,7 +509,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Maintain_The_Edge
-		icon = GFX_goal_generic_army_training
+		icon = GFX_goal_AOG_Reshape_East_Our_Image
 		mutually_exclusive = {
 			focus = SHX_Peaceful_Existence
 		}
@@ -581,7 +567,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_Fluid_Like_Water
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_AUS_tauernkraftwerk_hydro_power
 		prerequisite = {
 			focus = SHX_Peaceful_Existence
 			focus = SHX_Maintain_The_Edge
@@ -600,8 +586,8 @@ focus_tree = {
 	###Economic Tree
 	focus = {
 		id = SHX_expand_the_taiyuan_railway
-		icon = GFX_goal_generic_railway_construction
-		cost = 8
+		icon = GFX_goal_POL_Warszawa_Glowna_Railway_Station
+		cost = 5
 		x = 15
 		y = 0
 		available = {
@@ -636,8 +622,8 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_prepare_datong_connections
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 8
+		icon = GFX_goal_TIB_Rails_Around_Tanggula_Pass
+		cost = 5
 		prerequisite = { focus = SHX_expand_the_taiyuan_railway }
 		relative_position_id = SHX_expand_the_taiyuan_railway
 		x = -2
@@ -661,8 +647,8 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_the_datong_yanan_railway
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 8
+		icon = GFX_goal_ROM_Railway_Investments
+		cost = 5
 		prerequisite = { focus = SHX_prepare_datong_connections }
 		relative_position_id = SHX_expand_the_taiyuan_railway
 		x = -4
@@ -706,7 +692,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_standardise_new_railway_gauges
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_thenorthernraillink
 		cost = 8
 		prerequisite = { focus = SHX_prepare_datong_connections }
 		mutually_exclusive = { focus = SHX_continue_narrow_gauges }
@@ -722,7 +708,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_get_more_imports
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_POL_International_Trade_Reform
 		cost = 8
 		prerequisite = { focus = SHX_the_datong_yanan_railway }
 		prerequisite = { focus = SHX_standardise_new_railway_gauges }
@@ -745,7 +731,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_fight_the_opium_trade
-		icon = GFX_goal_opium
+		icon = GFX_seedthepoppies
 		cost = 8
 		prerequisite = { focus = SHX_get_more_imports }
 		relative_position_id = SHX_expand_the_taiyuan_railway
@@ -758,8 +744,8 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_expand_to_xian
-		icon = GFX_goal_generic_railway_construction
-		cost = 8
+		icon = GFX_BAY_RAILWAYS
+		cost = 5
 		prerequisite = {
 			focus = SHX_standardise_new_railway_gauges
 			focus = SHX_continue_narrow_gauges
@@ -797,7 +783,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_continue_narrow_gauges
-		icon = GFX_goal_generic_isolation
+		icon = GFX_goal_NIC_Pacific_Rail_Expansion
 		cost = 8
 		prerequisite = { focus = SHX_prepare_datong_connections }
 		mutually_exclusive = { focus = SHX_standardise_new_railway_gauges }
@@ -813,7 +799,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_military_infrastructure
-		icon = GFX_goal_army_guy
+		icon = GFX_goal_generic_seize_railway
 		cost = 8
 		prerequisite = { focus = SHX_continue_narrow_gauges }
 		prerequisite = { focus = SHX_improve_roads }
@@ -839,13 +825,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_rural_industry
-		icon = GFX_goal_agrarian_reform
+		icon = GFX_BBR_industrializing_land
 		cost = 8
 		available = {
 			has_country_flag = SHX_agriculture_modernise
 		}
 		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 8
+		x = 9
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_rural_industry"
@@ -862,11 +848,11 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_agricultural_economy
-		icon = GFX_goal_agriculture2
+		icon = GFX_USA_sweep_farm_tariffs
 		cost = 8
 		prerequisite = { focus = SHX_rural_industry }
-		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 9
+		relative_position_id = SHX_rural_industry
+		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_agricultural_economy"
@@ -876,13 +862,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_self_reliance
-		icon = GFX_goal_reichsautobahn
+		icon = GFX_goal_VIN_agricultural_modernization
 		cost = 8
 		prerequisite = { focus = SHX_agricultural_economy }
 		mutually_exclusive = { focus = SHX_farm_cooperation }
-		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 8
-		y = 2
+		relative_position_id = SHX_agricultural_economy
+		x = -1
+		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_self_reliance"
 			swap_ideas = {
@@ -894,19 +880,19 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_urban_development
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_goal_NEE_Meritocracy_Focused_Growing_Urban_Heart_alt
 		cost = 8
 		prerequisite = { focus = SHX_self_reliance }
-		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 9
-		y = 3
+		relative_position_id = SHX_self_reliance
+		x = 0
+		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_urban_development"
 			1072 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -914,14 +900,31 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
+		id = SHX_Industrial_Development
+		icon = GFX_RUS_Money_For_Industrialization
+		prerequisite = { focus = SHX_urban_development }
+		relative_position_id = SHX_urban_development
+		x = 0
+		y = 2
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHX_Industrial_Development"
+			swap_ideas = {
+				remove_idea = SHX_self_reliance_idea
+				add_idea = SHX_self_reliance_idea2
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
 		id = SHX_farm_cooperation
-		icon = GFX_focus_AUS_agriculture
+		icon = GFX_NEE_needy_farmers
 		cost = 8
 		prerequisite = { focus = SHX_agricultural_economy }
 		mutually_exclusive = { focus = SHX_self_reliance }
-		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 10
-		y = 2
+		relative_position_id = SHX_agricultural_economy
+		x = 1
+		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_farm_cooperation"
 			swap_ideas = {
@@ -932,37 +935,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = SHX_expand_the_taiyuan_arsonal
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 8
-		prerequisite = {
-			focus = SHX_urban_development
-			focus = SHX_promote_things_other_than_opium_to_farm
-			focus = SHX_purchase_new_equipment_designs
-		}
-		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 8
-		y = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_expand_the_taiyuan_arsonal"
-			1072 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	focus = {
 		id = SHX_ban_opium_trade
-		icon = GFX_goal_opium
+		icon = GFX_seedthemeverywhere
 		cost = 8
 		prerequisite = { focus = SHX_rural_industry }
-		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 11
+		relative_position_id = SHX_rural_industry
+		x = 2
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_ban_opium_trade"
@@ -973,13 +951,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_promote_things_other_than_opium_to_farm
-		icon = GFX_goal_coffee_boom
+		icon = GFX_goal_SKM_Diversify_Crops
 		cost = 8
 		prerequisite = { focus = SHX_ban_opium_trade }
 		prerequisite = { focus = SHX_farm_cooperation }
-		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 11
-		y = 3
+		relative_position_id = SHX_farm_cooperation
+		x = 1
+		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_promote_things_other_than_opium_to_farm"
 			swap_ideas = {
@@ -990,8 +968,45 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
 	focus = {
+		id = SHX_Combat_Soil_Erosion
+		icon = GFX_goal_TEX_soil_conservation
+		prerequisite = { focus = SHX_promote_things_other_than_opium_to_farm }
+		relative_position_id = SHX_promote_things_other_than_opium_to_farm
+		x = 0
+		y = 1
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHX_Combat_Soil_Erosion"
+			swap_ideas = {
+				remove_idea = SHX_farm_coop_idea2
+				add_idea = SHX_farm_coop_idea3
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = SHX_Urbanisation_In_Taiyuan
+		icon = GFX_goal_KIV_urban
+		prerequisite = {
+			focus = SHX_urban_development
+			focus = SHX_promote_things_other_than_opium_to_farm
+		}
+		relative_position_id = SHX_urban_development
+		x = 1
+		y = 1
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHX_Urbanisation_In_Taiyuan"
+			1072 = {
+				add_extra_state_shared_building_slots = 2
+				set_state_category = six
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
 		id = SHX_begin_the_modernisation
-		icon = GFX_goal_generic_foreign_investments
+		icon = GFX_goal_MON_Modernized_Pastoral_Arcadianism
 		cost = 15
 		prerequisite = {
 			focus = SHX_expand_the_taiyuan_railway
@@ -1018,7 +1033,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_remove_corrupt_bosses
-		icon = GFX_focus_rom_parties_end
+		icon = GFX_goal_KIV_no_corruption
 		cost = 15
 		prerequisite = {
 			focus = SHX_expand_the_taiyuan_railway
@@ -1044,9 +1059,46 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SHX_Land_Reform_Programs
+		icon = GFX_goal_SKM_Dire_Need_Land_Reforms
+		prerequisite = {
+			focus = SHX_promote_things_other_than_opium_to_farm
+			focus = SHX_urban_development
+		}
+		prerequisite = { focus = SHX_remove_corrupt_bosses }
+		relative_position_id = SHX_remove_corrupt_bosses
+		x = 2
+		y = 3
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHX_Land_Reform_Programs"
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = SHX_ongoing_land_reform
+					days = 300
+				}
+			}
+			custom_effect_tooltip = UPC_after_reforms_tooltip
+			effect_tooltip = {
+				add_stability = 0.10
+				1015 = { set_state_category = four }
+				622 = { set_state_category = four }
+				add_ideas = SHX_land_reform_completed
+			}
+			hidden_effect = {
+				add_ideas = SHX_ongoing_land_reform
+				country_event = {
+					id = shx.302
+					days = 300
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
 		id = SHX_improve_roads
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 8
+		icon = GFX_CSA_red_roads
+		cost = 5
 		prerequisite = { focus = SHX_begin_the_modernisation }
 		prerequisite = { focus = SHX_remove_corrupt_bosses }
 		relative_position_id = SHX_expand_the_taiyuan_railway
@@ -1080,7 +1132,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_factory_funding
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_GRU_german_industrial_miracle-4038
 		cost = 8
 		prerequisite = { focus = SHX_improve_roads }
 		relative_position_id = SHX_expand_the_taiyuan_railway
@@ -1109,7 +1161,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_expand_coal_mines
-		icon = GFX_goal_factory_complex
+		icon = GFX_goal_ALB_Resource_Miner
 		cost = 8
 		prerequisite = { focus = SHX_begin_the_modernisation }
 		prerequisite = { focus = SHX_remove_corrupt_bosses }
@@ -1123,6 +1175,12 @@ focus_tree = {
 					type = steel
 					amount = 6
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 			1072 = {
 				add_resource = {
@@ -1135,7 +1193,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_invest_in_companies
-		icon = GFX_goal_bag_of_money
+		icon = GFX_goal_CSA_capital_investments
 		cost = 8
 		prerequisite = { focus = SHX_begin_the_modernisation }
 		prerequisite = { focus = SHX_remove_corrupt_bosses }
@@ -1150,11 +1208,11 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_beat_chinese_company_competition
-		icon = GFX_goal_gold_up
+		icon = GFX_goal_KIV_equal_market
 		cost = 8
 		prerequisite = { focus = SHX_invest_in_companies }
 		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 7
+		x = 6
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_beat_chinese_company_competition"
@@ -1167,7 +1225,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_modern_manifacturing_techniques
-		icon = GFX_goal_production
+		icon = GFX_goal_POL_Contemporary_Assembly_Lines
 		cost = 8
 		prerequisite = { focus = SHX_expand_coal_mines }
 		prerequisite = { focus = SHX_factory_funding }
@@ -1187,11 +1245,11 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_improve_metal_refining
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_AOG_Metal_Cog_Economy
 		cost = 8
 		prerequisite = { focus = SHX_expand_coal_mines }
 		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 5
+		x = 4
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_improve_metal_refining"
@@ -1202,12 +1260,16 @@ focus_tree = {
 				}
 			}
 			622 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 				add_resource = {
 					type = steel
 					amount = 7
 				}
-			}
-			622 = {
 				add_resource = {
 					type = tungsten
 					amount = 3
@@ -1218,12 +1280,12 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_purchase_new_equipment_designs
-		icon = GFX_goal_generic_positive_trade_relations_gold
+		icon = GFX_goal_OTT_arms_purchase
 		cost = 8
 		prerequisite = { focus = SHX_improve_metal_refining }
 		prerequisite = { focus = SHX_beat_chinese_company_competition }
 		relative_position_id = SHX_expand_the_taiyuan_railway
-		x = 6
+		x = 5
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_purchase_new_equipment_designs"
@@ -1239,7 +1301,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_further_modernisation
-		icon = GFX_goal_construction_engineering
+		icon = GFX_goal_ALB_Modernization
 		cost = 10
 		prerequisite = { focus = SHX_modern_manifacturing_techniques }
 		prerequisite = { focus = SHX_improve_metal_refining }
@@ -1291,7 +1353,7 @@ focus_tree = {
 	###Military Tree
 	focus = {
 		id = SHX_recruitment_problem
-		icon = GFX_goal_army_guy
+		icon = GFX_goal_CSA_recruitment_campaign
 		cost = 8
 		x = 33
 		y = 0
@@ -1303,7 +1365,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_small_arms_research
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_SKM_Himalayan_Arms_Race
 		cost = 8
 		relative_position_id = SHX_recruitment_problem
 		x = 4
@@ -1321,7 +1383,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_promote_our_stability
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_goal_generic_stable_government
 		cost = 8
 		prerequisite = { focus = SHX_recruitment_problem }
 		relative_position_id = SHX_recruitment_problem
@@ -1344,7 +1406,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_help_those_in_need
-		icon = GFX_focus_generic_concessions
+		icon = GFX_BBR_feed_the_poor
 		cost = 8
 		prerequisite = { focus = SHX_promote_our_stability }
 		relative_position_id = SHX_recruitment_problem
@@ -1359,7 +1421,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_arm_the_troops
-		icon = GFX_goal_national_arsenal
+		icon = GFX_BRY_Every_Hand_A_Rifle
 		cost = 8
 		prerequisite = { focus = SHX_promote_our_stability }
 		relative_position_id = SHX_recruitment_problem
@@ -1373,7 +1435,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_german_arms_imports
-		icon = GFX_goal_mittel_arms_trade
+		icon = GFX_goal_GER_Mauser_Werke_Contracts
 		cost = 8
 		prerequisite = {
 			focus = SHX_help_those_in_need
@@ -1391,7 +1453,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_rural_investments
-		icon = GFX_goal_LEP_subsidize_villages
+		icon = GFX_USA_rural_investments
 		cost = 8
 		prerequisite = { focus = SHX_help_those_in_need }
 		relative_position_id = SHX_recruitment_problem
@@ -1408,7 +1470,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_learn_from_japanese_efficiency
-		icon = GFX_goal_production
+		icon = GFX_goal_JAP_industry
 		cost = 8
 		prerequisite = { focus = SHX_arm_the_troops }
 		relative_position_id = SHX_recruitment_problem
@@ -1425,8 +1487,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_russian_arms_imports
-		icon = GFX_focus_russian_cooperation
+		icon = GFX_RUS_Arm_The_Combat_Squads
 		cost = 8
+		available = { RUS = { has_socialist_government = no } }
 		prerequisite = {
 			focus = SHX_rural_investments
 			focus = SHX_learn_from_japanese_efficiency
@@ -1443,7 +1506,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_rural_military_academies
-		icon = GFX_focus_generic_military_academy
+		icon = GFX_BBR_rural_schools
 		cost = 8
 		prerequisite = { focus = SHX_rural_investments }
 		relative_position_id = SHX_recruitment_problem
@@ -1460,7 +1523,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_yanan_military_factory
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_TRM_Vladivostok_Arsenal
 		cost = 8
 		prerequisite = { focus = SHX_learn_from_japanese_efficiency }
 		relative_position_id = SHX_recruitment_problem
@@ -1469,10 +1532,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_yanan_military_factory"
 			622 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1481,7 +1544,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_mass_rural_recruitment
-		icon = GFX_goal_conspiracy
+		icon = GFX_goal_SKM_Recruit_Village_Manpower
 		cost = 8
 		prerequisite = { focus = SHX_rural_military_academies }
 		relative_position_id = SHX_recruitment_problem
@@ -1498,7 +1561,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_military_mining
-		icon = GFX_goal_construction_engineering
+		icon = GFX_goal_UMN_mines_keep_running
 		cost = 8
 		prerequisite = { focus = SHX_yanan_military_factory }
 		relative_position_id = SHX_recruitment_problem
@@ -1523,7 +1586,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_hire_old_bandits
-		icon = GFX_focus_prc_infiltration
+		icon = GFX_focus_HKG_banditry_suppressed
 		cost = 8
 		prerequisite = {
 			focus = SHX_rural_military_academies
@@ -1544,7 +1607,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_fill_the_factories
-		icon = GFX_goal_refugee_management
+		icon = GFX_goal_NFA_Corporatism_Working_Man
 		cost = 8
 		prerequisite = {
 			focus = SHX_rural_military_academies
@@ -1567,7 +1630,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_raise_small_militias
-		icon = GFX_goal_army_guy_2
+		icon = GFX_goal_integrate_the_militia
 		cost = 8
 		prerequisite = { focus = SHX_recruitment_problem }
 		prerequisite = { focus = SHX_small_arms_research }
@@ -1588,7 +1651,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_emergency_conscription
-		icon = GFX_goal_conscription
+		icon = GFX_HUN_unified_army_recruitment
 		cost = 8
 		prerequisite = { focus = SHX_recruitment_problem }
 		prerequisite = { focus = SHX_small_arms_research }
@@ -1605,7 +1668,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_inspirational_warlord
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_COR_Encourage_Recruits
 		cost = 8
 		prerequisite = { focus = SHX_raise_small_militias }
 		prerequisite = { focus = SHX_emergency_conscription }
@@ -1624,7 +1687,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_taiyuan_general_staff
-		icon = GFX_goal_checkmate
+		icon = GFX_goal_CAL_council
 		cost = 8
 		prerequisite = { focus = SHX_small_arms_research }
 		relative_position_id = SHX_recruitment_problem
@@ -1638,7 +1701,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_artillery_developments
-		icon = GFX_goal_national_artillery
+		icon = GFX_goal_SKM_Modern_Artillery
 		cost = 8
 		prerequisite = { focus = SHX_taiyuan_general_staff }
 		relative_position_id = SHX_recruitment_problem
@@ -1657,7 +1720,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_learn_from_the_warlords
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_NEE_joint_entente_excercises
 		cost = 8
 		prerequisite = { focus = SHX_taiyuan_general_staff }
 		relative_position_id = SHX_recruitment_problem
@@ -1674,7 +1737,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_inspiration_from_dare_to_die_corps
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_goal_CHI_peoples_army
 		cost = 8
 		prerequisite = { focus = SHX_artillery_developments focus = SHX_learn_from_the_warlords }
 		relative_position_id = SHX_recruitment_problem
@@ -1688,7 +1751,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_support_companies
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_goal_ATH_logistics
 		cost = 8
 		prerequisite = { focus = SHX_artillery_developments }
 		relative_position_id = SHX_recruitment_problem
@@ -1707,7 +1770,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_reward_military_innovation
-		icon = GFX_goal_great_science
+		icon = GFX_goal_military_research_2
 		cost = 8
 		prerequisite = { focus = SHX_learn_from_the_warlords }
 		relative_position_id = SHX_recruitment_problem
@@ -1725,7 +1788,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_stronghold_taiyuan
-		icon = GFX_goal_nested_fortifications
+		icon = GFX_goal_NVN_Fortify_Fort_Defiance
 		cost = 8
 		prerequisite = {
 			focus = SHX_support_companies
@@ -1754,7 +1817,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_radio_companies
-		icon = GFX_goal_radio
+		icon = GFX_goal_generic_infantry_radio
 		cost = 8
 		prerequisite = { focus = SHX_support_companies }
 		relative_position_id = SHX_recruitment_problem
@@ -1773,7 +1836,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_central_leadership
-		icon = GFX_goal_officers
+		icon = GFX_goal_NFA_sole_leadership
 		cost = 8
 		prerequisite = { focus = SHX_reward_military_innovation }
 		relative_position_id = SHX_recruitment_problem
@@ -1790,7 +1853,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_further_artillery_research
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_goal_KSV_rail_gun
 		cost = 8
 		prerequisite = { focus = SHX_radio_companies }
 		relative_position_id = SHX_recruitment_problem
@@ -1809,7 +1872,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_open_officer_schools
-		icon = GFX_focus_generic_military_academy
+		icon = GFX_goal_KEN_officer_corps
 		cost = 8
 		prerequisite = { focus = SHX_central_leadership }
 		relative_position_id = SHX_recruitment_problem
@@ -1826,7 +1889,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SHX_fancy_guns
-		icon = GFX_goal_industry_air
+		icon = GFX_goal_POL_New_Polish_Rifle
 		cost = 8
 		prerequisite = {
 			focus = SHX_radio_companies
@@ -1847,9 +1910,31 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
+	
+	focus = {
+		id = SHX_Mountain_Warfare
+		icon = GFX_goal_GEO_Caucasian_Strength
+		prerequisite = {
+			focus = SHX_radio_companies
+			focus = SHX_central_leadership
+		}
+		relative_position_id = SHX_recruitment_problem
+		x = 6
+		y = 5
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHX_Mountain_Warfare"
+			custom_effect_tooltip = mountain_training_tech_effect
+			hidden_effect = {
+				set_technology = { mountain_training_tech = 1 popup = no }
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
 	focus = {
 		id = SHX_military_science
-		icon = GFX_focus_research
+		icon = GFX_goal_POL_Modern_Military_Thought
 		cost = 8
 		prerequisite = {
 			focus = SHX_radio_companies
@@ -1863,554 +1948,12 @@ focus_tree = {
 			SZC_add_research_slot = yes
 		}
 	}
-}
-
-
-focus_tree = {
-	id = Shanxi_Feng_Yuxiang
-	country = {
-		factor = 0
-	}
-	default = no
-	continuous_focus_position = { x = 0 y = 950 }
-
-	focus = {
-		id = SHX_Expand_The_Taiyuan_Railway
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 1
-		y = 0
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Expand_The_Taiyuan_Railway"
-			1072 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			1015 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Connect_Yanan
-		icon = GFX_goal_generic_railway_construction
-		prerequisite = {
-			focus = SHX_Expand_The_Taiyuan_Railway
-		}
-		relative_position_id = SHX_Expand_The_Taiyuan_Railway
-		x = -1
-		y = 1
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Connect_Yanan"
-			622 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Connect_The_Villages
-		icon = GFX_goal_OTT_Railroad
-		prerequisite = {
-			focus = SHX_Expand_The_Taiyuan_Railway
-		}
-		relative_position_id = SHX_Expand_The_Taiyuan_Railway
-		x = 0
-		y = 2
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Connect_The_Villages"
-			622 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			1015 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Mountain_Railways
-		icon = GFX_goal_generic_railroad
-		prerequisite = {
-			focus = SHX_Connect_Yanan
-		}
-		prerequisite = {
-			focus = SHX_Connect_The_Villages
-		}
-		relative_position_id = SHX_Expand_The_Taiyuan_Railway
-		x = -1
-		y = 3
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Mountain_Railways"
-			622 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Exploit_The_Western_Mines
-		icon = GFX_focus_generic_steel
-		prerequisite = {
-			focus = SHX_Mountain_Railways
-		}
-		relative_position_id = SHX_Mountain_Railways
-		x = 0
-		y = 1
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Exploit_The_Western_Mines"
-			622 = {
-				add_resource = {
-					type = steel
-					amount = 6
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Expand_The_Coal_Fields
-		icon = GFX_goal_generic_coal_mining
-		prerequisite = {
-			focus = SHX_Mountain_Railways
-		}
-		relative_position_id = SHX_Mountain_Railways
-		x = -1
-		y = 2
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Expand_The_Coal_Fields"
-			1015 = {
-				add_resource = {
-					type = steel
-					amount = 6
-				}
-			}
-			1072 = {
-				add_resource = {
-					type = steel
-					amount = 4
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Industrial_Development
-		icon = GFX_goal_workers_for_business
-		mutually_exclusive = {
-			focus = SHX_Rural_Investments
-		}
-		prerequisite = {
-			focus = SHX_Mountain_Railways
-		}
-		relative_position_id = SHX_Mountain_Railways
-		x = 2
-		y = 1
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Industrial_Development"
-			1072 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Fund_Factory_Construction
-		icon = GFX_goal_construction_engineering
-		prerequisite = {
-			focus = SHX_Industrial_Development
-		}
-		relative_position_id = SHX_Mountain_Railways
-		x = 1
-		y = 2
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Fund_Factory_Construction"
-			add_ideas = SHX_construction_investments
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Urbanisation_In_Taiyuan
-		icon = GFX_ITA_urban
-		prerequisite = {
-			focus = SHX_Industrial_Development
-			focus = SHX_Rural_Investments
-		}
-		relative_position_id = SHX_Mountain_Railways
-		x = 2
-		y = 3
-		cost = 6
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Urbanisation_In_Taiyuan"
-			1072 = {
-				add_extra_state_shared_building_slots = 2
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Attract_Foreign_Investment
-		icon = GFX_focus_mex_privatisation
-		prerequisite = {
-			focus = SHX_Industrial_Development
-			focus = SHX_Rural_Investments
-		}
-		relative_position_id = SHX_Mountain_Railways
-		x = 3
-		y = 2
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Attract_Foreign_Investment"
-			add_tech_bonus = {
-				name = SHX_Industrial_Innovation
-				bonus = 1
-				uses = 1
-				category = industry
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = SHX_Rural_Economy
-		icon = GFX_focus_AUS_agriculture
-		x = 3
-		y = 0
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Rural_Economy"
-			add_ideas = SHX_rural_economy_1
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
-	}
-
-	focus = {
-		id = SHX_Farm_Cooperation
-		icon = GFX_goal_PAL_Food_Import
-		prerequisite = {
-			focus = SHX_Rural_Economy
-		}
-		relative_position_id = SHX_Rural_Economy
-		x = -1
-		y = 1
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Farm_Cooperation"
-			if = { #has soil erosion
-				limit = { has_idea = SHX_rural_economy_3 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_3
-					add_idea = SHX_rural_economy_4
-				}
-			}
-			else_if = { #has opium ban
-				limit = { has_idea = SHX_rural_economy_6 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_6
-					add_idea = SHX_rural_economy_7
-				}
-			}
-			else_if = { #has soil erosion and opium ban
-				limit = { has_idea = SHX_rural_economy_8 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_8
-					add_idea = SHX_rural_economy_9
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_1
-					add_idea = SHX_rural_economy_2
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = SHX_Combat_Soil_Erosion
-		icon = GFX_goal_SZC_improvised_farming_machinery
-		prerequisite = {
-			focus = SHX_Rural_Economy
-		}
-		relative_position_id = SHX_Rural_Economy
-		x = 1
-		y = 1
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Combat_Soil_Erosion"
-			if = { #has farm cooperation
-				limit = { has_idea = SHX_rural_economy_2 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_2
-					add_idea = SHX_rural_economy_4
-				}
-			}
-			else_if = { #has opium ban
-				limit = { has_idea = SHX_rural_economy_6 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_6
-					add_idea = SHX_rural_economy_8
-				}
-			}
-			else_if = { #has farm cooperation and opium ban
-				limit = { has_idea = SHX_rural_economy_7 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_7
-					add_idea = SHX_rural_economy_9
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_1
-					add_idea = SHX_rural_economy_3
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = SHX_Irrigation_Projects
-		icon = GFX_goal_PAL_Irrigation_Program
-		prerequisite = {
-			focus = SHX_Farm_Cooperation
-		}
-		prerequisite = {
-			focus = SHX_Combat_Soil_Erosion
-		}
-		relative_position_id = SHX_Rural_Economy
-		x = 0
-		y = 2
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Irrigation_Projects"
-			add_stability = 0.1
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SHX_Promote_Grain_Production
-		icon = GFX_goal_agrarian_reform
-		prerequisite = {
-			focus = SHX_Irrigation_Projects
-		}
-		relative_position_id = SHX_Rural_Economy
-		x = 0
-		y = 3
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Promote_Grain_Production"
-			if = { #has opium ban
-				limit = { has_idea = SHX_rural_economy_9 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_9
-					add_idea = SHX_rural_economy_10
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_4
-					add_idea = SHX_rural_economy_5
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = SHX_Ban_The_Opium_Trade
-		icon = GFX_goal_SZC_opium_crackdown
-		prerequisite = {
-			focus = SHX_Rural_Economy
-		}
-		prerequisite = {
-			focus = SHX_Rural_Literacy_Programs
-		}
-		relative_position_id = SHX_Rural_Economy
-		x = 2
-		y = 2
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Ban_The_Opium_Trade"
-			if = { #has farm cooperation
-				limit = { has_idea = SHX_rural_economy_2 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_2
-					add_idea = SHX_rural_economy_7
-				}
-			}
-			else_if = { #has soil erosion
-				limit = { has_idea = SHX_rural_economy_3 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_3
-					add_idea = SHX_rural_economy_8
-				}
-			}
-			else_if = { #has farm cooperation and soil erosion
-				limit = { has_idea = SHX_rural_economy_4 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_4
-					add_idea = SHX_rural_economy_9
-				}
-			}
-			else_if = { #has grain production
-				limit = { has_idea = SHX_rural_economy_5 }
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_5
-					add_idea = SHX_rural_economy_10
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_1
-					add_idea = SHX_rural_economy_6
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = SHX_Rural_Investments
-		icon = GFX_goal_agricultural_aid
-		mutually_exclusive = {
-			focus = SHX_Industrial_Development
-		}
-		prerequisite = {
-			focus = SHX_Promote_Grain_Production
-		}
-		prerequisite = {
-			focus = SHX_Ban_The_Opium_Trade
-		}
-		relative_position_id = SHX_Rural_Economy
-		x = 1
-		y = 4
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Rural_Investments"
-			1015 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_Industrial_Innovation
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = {
-			focus = SHX_Industrial_Development
-			focus = SHX_Rural_Investments
-		}
-		relative_position_id = SHX_Rural_Economy
-		x = 1
-		y = 6
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Industrial_Innovation"
-			add_tech_bonus = {
-				name = SHX_Industrial_Innovation
-				bonus = 1
-				uses = 1
-				category = efficiency_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = SHX_Land_Reform_Programs
-		icon = GFX_goal_OTT_Land_Reform
-		prerequisite = {
-			focus = SHX_Rural_Investments
-		}
-		relative_position_id = SHX_Rural_Economy
-		x = 2
-		y = 5
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Land_Reform_Programs"
-			effect_tooltip = {
-				add_timed_idea = {
-					idea = SHX_ongoing_land_reform
-					days = 300
-				}
-			}
-			custom_effect_tooltip = UPC_after_reforms_tooltip
-			effect_tooltip = {
-				add_stability = 0.1
-				swap_ideas = {
-					remove_idea = SHX_rural_economy_10
-					add_idea = SHX_rural_economy_11
-				}
-			}
-			hidden_effect = {
-				add_ideas = SHX_ongoing_land_reform
-				country_event = {
-					id = shx.302
-					days = 300
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
-	}
 
 	focus = {
 		id = SHX_Christian_Statism
-		icon = GFX_BEL_Catholic_Construction
-		x = 7
+		icon = GFX_goal_NYC_Christian_Front
+		allow_branch = { has_country_flag = SHX_Feng_in_power }
+		x = 3
 		y = 0
 		cost = 5
 		completion_reward = {
@@ -2419,10 +1962,9 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
-
 	focus = {
 		id = SHX_Rural_Literacy_Programs
-		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
+		icon = GFX_goal_CZE_rural_god
 		prerequisite = {
 			focus = SHX_Christian_Statism
 		}
@@ -2451,13 +1993,13 @@ focus_tree = {
 
 	focus = {
 		id = SHX_A_Church_Of_Our_Own
-		icon = GFX_goal_SHX_Christian_Influence
+		icon = GFX_goal_generic_cathedral
 		prerequisite = {
 			focus = SHX_Rural_Literacy_Programs
 		}
-		relative_position_id = SHX_Christian_Statism
-		x = -1
-		y = 4
+		relative_position_id = SHX_Rural_Literacy_Programs
+		x = 0
+		y = 1
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_A_Church_Of_Our_Own"
@@ -2480,12 +2022,12 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Sunday_Schools
-		icon = GFX_BEL_Catholic_Education
+		icon = GFX_goal_TEX_rural_schools
 		prerequisite = {
 			focus = SHX_A_Church_Of_Our_Own
 		}
 		relative_position_id = SHX_A_Church_Of_Our_Own
-		x = 1
+		x = 0
 		y = 2
 		cost = 5
 		completion_reward = {
@@ -2523,12 +2065,12 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Christian_Trade_Unions
-		icon = GFX_BEL_Catholic_Construction
+		icon = GFX_goal_COR_protestant_corporatism
 		prerequisite = {
 			focus = SHX_A_Church_Of_Our_Own
 		}
 		relative_position_id = SHX_A_Church_Of_Our_Own
-		x = 3
+		x = 2
 		y = 2
 		cost = 5
 		completion_reward = {
@@ -2566,12 +2108,12 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Promote_The_Christian_Ideal
-		icon = GFX_BEL_Improve_Catholic_Relations
+		icon = GFX_goal_BEL_Catholic_Morality
 		prerequisite = {
 			focus = SHX_A_Church_Of_Our_Own
 		}
 		relative_position_id = SHX_A_Church_Of_Our_Own
-		x = 2
+		x = 1
 		y = 1
 		cost = 8
 		completion_reward = {
@@ -2583,7 +2125,7 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Social_Welfare
-		icon = GFX_goal_Winterhilfe
+		icon = GFX_DKB_Orthodox_Welfare
 		prerequisite = {
 			focus = SHX_Sunday_Schools
 		}
@@ -2591,7 +2133,7 @@ focus_tree = {
 			focus = SHX_Christian_Trade_Unions
 		}
 		relative_position_id = SHX_A_Church_Of_Our_Own
-		x = 2
+		x = 1
 		y = 3
 		cost = 5
 		completion_reward = {
@@ -2615,7 +2157,7 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Christian_Education
-		icon = GFX_goal_brain
+		icon = GFX_goal_POL_Wisdom_Of_Church
 		prerequisite = {
 			focus = SHX_Christian_Statism
 		}
@@ -2679,7 +2221,7 @@ focus_tree = {
 
 	focus = {
 		id = SHX_A_University_In_Taiyuan
-		icon = GFX_focus_research2
+		icon = GFX_goal_generic_red_university
 		prerequisite = {
 			focus = SHX_Christian_Education
 		}
@@ -2695,8 +2237,9 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Rebuild_The_Guominjun
-		icon = GFX_goal_break_rifle
-		x = 10
+		icon = GFX_goal_NYC_Cath_Legion
+		available = { has_government = radical_socialist }
+		x = 48
 		y = 0
 		cost = 5
 		completion_reward = {
@@ -2707,16 +2250,11 @@ focus_tree = {
 
 	focus = {
 		id = SHX_The_Christian_Army
-		icon = GFX_focus_mex_restore_the_army_of_christ
-		prerequisite = {
-			focus = SHX_Rebuild_The_Guominjun
-		}
-		prerequisite = {
-			focus = SHX_Christian_Education
-		}
+		icon = GFX_goal_COR_Truly_Christian_Army
+		prerequisite = { focus = SHX_Rebuild_The_Guominjun }
 		relative_position_id = SHX_Rebuild_The_Guominjun
-		x = 0
-		y = 2
+		x = -2
+		y = 1
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_The_Christian_Army"
@@ -2728,12 +2266,12 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Christian_Officers
-		icon = GFX_goal_officers
+		icon = GFX_goal_TEX_christian_commonwealth
 		prerequisite = {
 			focus = SHX_The_Christian_Army
 		}
 		relative_position_id = SHX_The_Christian_Army
-		x = -3
+		x = -2
 		y = 1
 		cost = 5
 		completion_reward = {
@@ -2771,12 +2309,12 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Army_Chaplains
-		icon = GFX_goal_army_guy_2
+		icon = GFX_goal_COR_Christian_Support
 		prerequisite = {
 			focus = SHX_The_Christian_Army
 		}
 		relative_position_id = SHX_The_Christian_Army
-		x = -1
+		x = 0
 		y = 1
 		cost = 5
 		completion_reward = {
@@ -2814,12 +2352,12 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Christian_Soldiers
-		icon = GFX_EGY_Palestine_Defence
+		icon = GFX_goal_AUS_Sepulchre_Knights
 		prerequisite = {
 			focus = SHX_The_Christian_Army
 		}
 		relative_position_id = SHX_The_Christian_Army
-		x = 1
+		x = 2
 		y = 1
 		cost = 5
 		completion_reward = {
@@ -2857,7 +2395,7 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Fengs_Crusade
-		icon = GFX_goal_QIE_purge_zhili
+		icon = GFX_goal_china_feng_yuxiang
 		mutually_exclusive = {
 			focus = SHX_Join_The_Fray
 		}
@@ -2871,7 +2409,7 @@ focus_tree = {
 			focus = SHX_Christian_Officers
 		}
 		relative_position_id = SHX_The_Christian_Army
-		x = -2
+		x = -1
 		y = 2
 		cost = 5
 		completion_reward = {
@@ -2889,7 +2427,7 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Join_The_Fray
-		icon = GFX_goal_generic_join_faction
+		icon = GFX_focus_rus_china
 		available = {
 			hidden_trigger = {
 				OR = {
@@ -2912,17 +2450,11 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SHX_Fengs_Crusade
 		}
-		prerequisite = {
-			focus = SHX_Christian_Soldiers
-		}
-		prerequisite = {
-			focus = SHX_Army_Chaplains
-		}
-		prerequisite = {
-			focus = SHX_Christian_Officers
-		}
+		prerequisite = { focus = SHX_Christian_Soldiers }
+		prerequisite = { focus = SHX_Army_Chaplains }
+		prerequisite = { focus = SHX_Christian_Officers }
 		relative_position_id = SHX_The_Christian_Army
-		x = 0
+		x = 1
 		y = 2
 		cost = 5
 		completion_reward = {
@@ -2984,102 +2516,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SHX_Increase_Armament_Production
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = {
-			focus = SHX_The_Christian_Army
-			focus = SHX_Radio_Communications
-		}
-		relative_position_id = SHX_The_Christian_Army
-		x = 2
-		y = 2
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Increase_Armament_Production"
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SHX_New_Rifles
-		icon = GFX_goal_military_academy
-		prerequisite = {
-			focus = SHX_Increase_Armament_Production
-		}
-		relative_position_id = SHX_Increase_Armament_Production
-		x = -1
-		y = 1
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_New_Rifles"
-			add_tech_bonus = {
-				name = SHX_New_Rifles
-				bonus = 1
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = SHX_Mountain_Warfare
-		icon = GFX_goal_yanshan
-		prerequisite = {
-			focus = SHX_Increase_Armament_Production
-		}
-		relative_position_id = SHX_Increase_Armament_Production
-		x = 0
-		y = 2
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Mountain_Warfare"
-			custom_effect_tooltip = mountain_training_tech_effect
-			hidden_effect = {
-				set_technology = { mountain_training_tech = 1 popup = no }
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = SHX_Artillery_Improvements
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = {
-			focus = SHX_Increase_Armament_Production
-		}
-		relative_position_id = SHX_Increase_Armament_Production
-		x = 1
-		y = 1
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHX_Artillery_Improvements"
-			add_tech_bonus = {
-				name = SHX_Artillery_Improvements
-				bonus = 1
-				uses = 1
-				category = artillery
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
 		id = SHX_A_Refined_Force
-		icon = GFX_goal_generic_army_training
+		icon = GFX_goal_generic_army_junta
 		prerequisite = {
 			focus = SHX_Rebuild_The_Guominjun
 		}
 		relative_position_id = SHX_Rebuild_The_Guominjun
-		x = 4
+		x = 2
 		y = 1
 		cost = 5
 		completion_reward = {
@@ -3096,13 +2539,13 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Radio_Communications
-		icon = GFX_goal_radio
+		icon = GFX_goal_CZE_radar_research
 		prerequisite = {
 			focus = SHX_A_Refined_Force
 		}
 		relative_position_id = SHX_A_Refined_Force
 		x = -1
-		y = 1
+		y = 2
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHX_Radio_Communications"
@@ -3118,12 +2561,12 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Expand_The_Engineer_Corps
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_IRE_generic_construction
 		prerequisite = {
 			focus = SHX_A_Refined_Force
 		}
 		relative_position_id = SHX_A_Refined_Force
-		x = 1
+		x = 0
 		y = 1
 		cost = 5
 		completion_reward = {
@@ -3138,9 +2581,9 @@ focus_tree = {
 
 	focus = {
 		id = SHX_Recon_Unit_Training
-		icon = GFX_goal_DOM_Recon
+		icon = GFX_goal_USA_modern_recon
 		prerequisite = {
-			focus = SHX_Expand_The_Engineer_Corps
+			focus = SHX_A_Refined_Force
 		}
 		relative_position_id = SHX_A_Refined_Force
 		x = 1
@@ -3158,13 +2601,10 @@ focus_tree = {
 
 	focus = {
 		id = SHX_New_Officer_Standards
-		icon = GFX_goal_planning_bonus
-		prerequisite = {
-			focus = SHX_Radio_Communications
-		}
-		prerequisite = {
-			focus = SHX_Recon_Unit_Training
-		}
+		icon = GFX_goal_KEN_officer_corps
+		prerequisite = { focus = SHX_Radio_Communications }
+		prerequisite = { focus = SHX_Expand_The_Engineer_Corps }
+		prerequisite = { focus = SHX_Recon_Unit_Training }
 		relative_position_id = SHX_A_Refined_Force
 		x = 0
 		y = 3

@@ -243,9 +243,9 @@ guiTypes = {
 		######################################### Buttons at the bottom
 		ButtonType = {
 			name = "single_player_button"
-			position = { x = 409 y = 100 }
+			position = { x = 409 y = 80 }
 			quadTextureSprite ="GFX_main_lobby_button"
-			font = "vt323_24_glow"
+			font = "hoi_24header"
 			text = "FE_SINGLE_PLAYER"
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -253,9 +253,9 @@ guiTypes = {
 
 		ButtonType = {
 			name = "multi_player_button"
-			position = { x = 409 y = 160}
+			position = { x = 409 y = 130 }
 			quadTextureSprite ="GFX_main_lobby_button"
-			font = "vt323_24_glow"
+			font = "hoi_24header"
 			text = "FE_MULTI_PLAYER"
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -270,9 +270,9 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="version_label"
-			position = { x = 426 y = 390 }
+			position = { x = 126 y = 384 }
 			textureFile = ""
-			font = "hoi_26mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "ALPHA"
 			format = centre
@@ -283,27 +283,56 @@ guiTypes = {
 		############################################## buttons on the side
 		ButtonType = {
 			name = "settings_button"
-			position = { x = 409 y = 220 }
+			position = { x = 409 y = 280 }
 			quadTextureSprite ="GFX_main_lobby_button"
-			buttonFont = "vt323_24_glow"
+			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 			text = "Settings"
+		}
+		
+		buttonType = {
+			name = "career_profile_button"
+			position = { x = 409 y = 180 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "MENU_BAR_CAREER_PROFILE"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+		
+		iconType = {
+			name = "career_profile_button_star"
+			position = { x = 356 y = 197 }
+			spriteType = "GFX_icon_best_in_career"
+			centerposition = yes
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "friends_button"
+			position = { x = 409 y = 230 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "MENU_BAR_FRIENDS"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
 		}
 
 		ButtonType = {
 			name = "credits_button"
 			position = {  x = 25 y = 34 }
 			quadTextureSprite ="GFX_blank"
-			buttonFont = "vt323_24_glow"
+			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 409 y = 280 }
+			position = { x = 409 y = 330 }
 			quadTextureSprite ="GFX_main_lobby_button"
-			buttonFont = "vt323_24_glow"
+			buttonFont = "hoi_24header"
 			text = "Nudge Tool!"
 		}
 		
@@ -313,7 +342,7 @@ guiTypes = {
 		#	position = {  x = 32 y = 320 }
 		#	quadTextureSprite ="GFX_main_lobby_button"
 		#	buttonText = "FE_CREDITS"
-		#	buttonFont = "vt323_24_glow"
+		#	buttonFont = "hoi_24header"
 		#	clicksound = click_default
 		#	oversound = ui_menu_over
 		#}
@@ -323,7 +352,7 @@ guiTypes = {
 		#	position = { x = 16 y = 420 }
 		#	quadTextureSprite ="GFX_nudge_icon"
 		#	buttonText = "Nudge!"
-		#	buttonFont = "vt323_24_glow"
+		#	buttonFont = "hoi_24header"
 		#}
 	
 		ButtonType = {
@@ -337,9 +366,9 @@ guiTypes = {
 
 		ButtonType = {
 			name = "exit_button"
-			position = { x = 409 y = 340 }
+			position = { x = 409 y = 380 }
 			quadTextureSprite ="GFX_main_lobby_button"
-			font = "vt323_24_glow"
+			font = "hoi_24header"
 			text = "FE_EXIT"
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -375,7 +404,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name ="recent_changes_text"
 				position = { x = 20 y = 0 }
-				font = "hoi_26mbs"
+				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "RECENT_CHANGES_TEXT"
 				format = center
@@ -411,7 +440,7 @@ guiTypes = {
 		#	quadTextureSprite ="homepage"
 		#	clicksound = click_default
 		#	pdx_tooltip = "MENU_HOMEPAGE"
-		#	web_link = "https://discord.gg/013cqzfpWMRLqnvHr"
+		#	web_link = "https://ia600605.us.archive.org/8/items/NeverGonnaGiveYouUp/jocofullinterview41.mp3"
 		#}
 		#ButtonType = { #Actually Forum
 		#	name = "forum_button"

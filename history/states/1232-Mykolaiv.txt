@@ -9,11 +9,11 @@ state = {
 		owner = UKR
 		add_core_of = UKR
 		victory_points = {
-			11546 2
+			11546 5
 		}
 		buildings = {
 			infrastructure = 2
-			dockyard = 2
+			dockyard = 1
 			11546 = {
 				naval_base = 1
 			}

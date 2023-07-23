@@ -2,7 +2,7 @@
 set_stability = 0.5
 set_war_support = 0.4
 set_research_slots = 3
-oob = "KLY"
+oob = "empty"
 
 if = {
 	limit = {
@@ -30,17 +30,27 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gw_artillery = 1
-	### AIR ###
-	early_fighter = 1
-	early_bomber = 1
-	fighter1 = 1
-	naval_bomber1 = 1
-	tactical_bomber1 = 1
-	CAS1 = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	cv_CAS1 = 1
+}
 
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "KLY_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+		}
+	else = {
+		set_air_oob = "KLY_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
 }
 
 set_country_flag = KX_no_naval_tech_decision_enable
@@ -55,7 +65,7 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = authoritarian_democrat
+	ruling_party = market_liberal
 	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
@@ -63,58 +73,51 @@ set_politics = {
 
 set_popularities = {
 	totalist = 0
-	radical_socialist = 1
+	radical_socialist = 3
 	syndicalist = 0
-	social_democrat = 4
-	social_liberal = 15
-	market_liberal = 0
-	social_conservative = 19
-	authoritarian_democrat = 44
-	paternal_autocrat = 0
+	social_democrat = 15
+	social_liberal = 8
+	market_liberal = 6
+	social_conservative = 3
+	authoritarian_democrat = 17
+	paternal_autocrat = 31
 	national_populist = 17
 }
 
 create_country_leader = {
 	name = "Danzan Tundutov"
 	desc = "POLITICS_DANZAN_TUNDUTOV_DESC"
-	picture = "gfx/leaders/KLY/Portrait_KLM_Danzan_Tundutov.png"
+	picture = "gfx/leaders/KLY/Portrait_KLY_Danzan_Tundutov.png"
 	expire = "1965.1.1"
 	ideology = pataut_cossack_subtype
-	traits = {}
 }
+
 create_country_leader = {
-	name = "Kalmykia-Astrakhan Council"
-	desc = "POLITICS_KAL_AST_COUNCIL_DESC"
-	picture = "gfx/leaders/KLY/Portrait_KLM_astrakhan_council.png"
+	name = "Erendzhen Khara-Davan"
+	picture = "gfx/leaders/KLY/Portrait_KLY_Khara_Davan.png"
 	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {}
+	ideology = eurasianism_subtype
+	traits = { RUS_eurasianist_ideologue }
 }
 create_country_leader = {
 	name = "Erendzhen Khara-Davan"
-	desc = "POLITICS_KAL_AST_COUNCIL_DESC"
 	picture = "gfx/leaders/KLY/Portrait_KLY_Khara_Davan.png"
 	expire = "1965.1.1"
-	ideology = social_conservative_subtype
+	ideology = moderate_authoritarianism_subtype
 	traits = { RUS_eurasianist_ideologue }
 }
-
 create_country_leader = {
-	name = "Kalmykia-Astrakhan Council"
-	desc = "POLITICS_KAL_AST_COUNCIL_DESC"
-	picture = "gfx/leaders/KLY/Portrait_KLM_astrakhan_council.png"
+	name = "Nomto Ochirov"
+	picture = "gfx/leaders/KLY/Portrait_KLY_Nomto_Ochirov.png"
 	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {}
+	ideology = marlib_national_liberalism_subtype
 }
-
 create_country_leader = {
 	name = "Lubsan Sharab Tepkin"
 	desc = "POLITICS_LUBSAN_SHARAB_TEPKIN_DESC"
-	picture = "gfx/leaders/KLY/Portrait_KLM_Lubsan_Sharab_Tepkin.png"
+	picture = "gfx/leaders/KLY/Portrait_KLY_Lubsan_Sharab_Tepkin.png"
 	expire = "1965.1.1"
 	ideology = fundementalism_subtype
-	traits = {}
 }
 
 create_country_leader = {
@@ -122,8 +125,7 @@ create_country_leader = {
 	desc = "POLITICS_BAYANOV_SANDZHI_DESC"
 	picture = "gfx/leaders/KLY/Portrait_KLY_Sndzhi_Bayanov.png"
 	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {}
+	ideology = socdem_agrarianism_subtype
 }
 
 create_country_leader = {
@@ -131,45 +133,43 @@ create_country_leader = {
 	desc = "POLITICS_BAYANOV_SANDZHI_DESC"
 	picture = "gfx/leaders/KLY/Portrait_KLY_Ulanov.png"
 	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {}
+	ideology = national_liberalism_subtype
 }
 
 create_country_leader = {
 	name = "Anton Amur-Sanan"
 	desc = "POLITICS_ANTON_AMUR-SANAN_DESC"
-	picture = "gfx/leaders/KLY/Portrait_KLM_Anton_Amur_Sanan.png"
+	picture = "gfx/leaders/KLY/Portrait_KLY_Anton_Amur_Sanan.png"
 	expire = "1965.1.1"
-	ideology = radsoc_communism_subtype
-	traits = {}
+	ideology = developing_leftism_subtype
 }
 
 create_country_leader = {
 	name = "Anton Amur-Sanan"
 	desc = "POLITICS_ANTON_AMUR-SANAN_DESC"
-	picture = "gfx/leaders/KLY/Portrait_KLM_Anton_Amur_Sanan.png"
+	picture = "gfx/leaders/KLY/Portrait_KLY_Anton_Amur_Sanan.png"
 	expire = "1965.1.1"
-	ideology = syndicalist_subtype
-	traits = {}
+	ideology = agrarian_syndicalism_subtype
 }
 
 create_country_leader = {
 	name = "Anton Amur-Sanan"
 	desc = "POLITICS_ANTON_AMUR-SANAN_DESC"
-	picture = "gfx/leaders/KLY/Portrait_KLM_Anton_Amur_Sanan.png"
+	picture = "gfx/leaders/KLY/Portrait_KLY_Anton_Amur_Sanan.png"
 	expire = "1965.1.1"
-	ideology = authcom_subtype
-	traits = {}
+	ideology = tot_developing_leftism_subtype
 }
 
 ### Field Marshal
 create_field_marshal = { 
 	name = "Khan Danzan Tundutov"
-	portrait_path = "gfx/leaders/KLY/Portrait_KLM_Danzan_Tundutov.png"
+	portrait_path = "gfx/leaders/KLY/Portrait_KLY_Danzan_Tundutov.png"
 	traits = {
 		politically_connected
 		thorough_planner
 		trait_mountaineer
+		cossack_leader
+		cavalry_leader
 	}
 	skill = 3
 	attack_skill = 1
@@ -185,7 +185,6 @@ create_corps_commander = { #Auto-Generated
 	traits = {
 		old_guard
 		cavalry_leader 
-		cavalry_expert 
 	}
 	skill = 2
 	attack_skill = 1
@@ -197,10 +196,10 @@ create_corps_commander = { #Auto-Generated
 ### Corps Commander
 create_corps_commander = { #Auto-Generated
 	name = "Nomto Ochirov"
-	portrait_path = "gfx/leaders/KLY/Portrait_KLM_Nomto_Ochirov.png"
+	portrait_path = "gfx/leaders/KLY/Portrait_KLY_Nomto_Ochirov.png"
 	traits = {
 		old_guard
-		cavalry_leader 
+		cavalry_officer
 	}
 	skill = 2
 	attack_skill = 2

@@ -41,6 +41,9 @@ create_prussia = {
 						long_name = DDR_pataut_party_long
 						name = DDR_pataut_party
 				}
+				GER = {
+				DDR = { transfer_technology = yes }
+				}
 				set_politics = {
 					ruling_party = paternal_autocrat
 					last_election = "1936.11.16"
@@ -300,6 +303,9 @@ create_bavaria = {
 					BAY_LEFT_RESISTANCE
 					BAY_MEMORIES_OF_GERMANY
 				}
+				GER = {
+				BAY = { transfer_technology = yes }
+				}
 				
 				set_popularities = {
 				totalist = 0
@@ -406,6 +412,9 @@ create_rhenish_state = {
 						long_name = WGR_soccon_party_long
 						name = WGR_soccon_party
 				}
+				GER = {
+				WGR = { transfer_technology = yes }
+				}
 				set_politics = {
 					ruling_party = social_conservative
 					last_election = "1936.11.16"
@@ -500,6 +509,9 @@ create_north_german_state = {
 					ruling_party = radical_socialist
 					last_election = "1936.11.16"
 					elections_allowed = no
+				}
+				GER = {
+				NGF = { transfer_technology = yes }
 				}
 				set_popularities = {
 				totalist = 5
@@ -599,8 +611,8 @@ north_germany_dies = {
 		#State
 		add_state_core = 60
 		add_state_core = 65
-        transfer_state = 60
-        transfer_state = 65	
+		transfer_state = 60
+		transfer_state = 65	
 				
 		#Country
 		set_cosmetic_tag = SAX
@@ -633,13 +645,13 @@ north_germany_dies = {
 
 		#State
 		add_state_core = 62
-        add_state_core = 63
-        add_state_core = 68
-        add_state_core = 776
-        transfer_state = 62
-        transfer_state = 63
-        transfer_state = 68
-        transfer_state = 776
+		add_state_core = 63
+		add_state_core = 68
+		add_state_core = 776
+		transfer_state = 62
+		transfer_state = 63
+		transfer_state = 68
+		transfer_state = 776
 				
 		#Country
 		set_cosmetic_tag = POM
@@ -672,9 +684,9 @@ north_germany_dies = {
 
 		#State
 		add_state_core = 66
-        add_state_core = 67
-        transfer_state = 66
-        transfer_state = 67
+		add_state_core = 67
+		transfer_state = 66
+		transfer_state = 67
 				
 		#Country
 		set_cosmetic_tag = SIL
@@ -738,9 +750,9 @@ north_germany_dies = {
 
 		#State
 		add_state_core = 58
-        add_state_core = 839
-        transfer_state = 58
-        transfer_state = 839
+		add_state_core = 839
+		transfer_state = 58
+		transfer_state = 839
 				
 		#Country
 		set_cosmetic_tag = SCH
@@ -841,7 +853,6 @@ setup_novosibirsk = {
 		set_capital = { state = 570 }
 	}
 }
-
 
 claim_mittelafrika = {
 	hidden_effect = {
@@ -966,7 +977,6 @@ claim_mittelafrika = {
 		add_state_claim = 892
 	}
 }
-
 
 wargoals_on_mittelafrika = {
 	hidden_effect = {
@@ -1104,3 +1114,126 @@ wargoals_on_mittelafrika = {
 	}
 }
 
+core_mittelafrika = {
+	hidden_effect = {
+		add_state_core = 807
+		add_state_core = 963
+		add_state_core = 274
+		add_state_core = 876
+		add_state_core = 877
+		add_state_core = 973
+		add_state_core = 558
+		add_state_core = 662
+		add_state_core = 878
+		add_state_core = 913 
+		add_state_core = 962
+		add_state_core = 975
+		add_state_core = 660
+		add_state_core = 971
+		add_state_core = 952
+		add_state_core = 927
+		add_state_core = 974
+		add_state_core = 953
+		add_state_core = 539
+		add_state_core = 928
+		add_state_core = 881
+		add_state_core = 538
+		add_state_core = 295
+		add_state_core = 1025 
+		add_state_core = 1180
+		add_state_core = 1185
+		add_state_core = 976
+		add_state_core = 1184
+		add_state_core = 949
+		add_state_core = 1026
+		add_state_core = 718
+		add_state_core = 1181
+		add_state_core = 977
+		add_state_core = 1182
+		add_state_core = 879
+		add_state_core = 1183
+		add_state_core = 548
+		add_state_core = 969
+		add_state_core = 547
+		add_state_core = 970
+		add_state_core = 925
+		add_state_core = 948
+		add_state_core = 869
+		add_state_core = 870
+		add_state_core = 918
+		add_state_core = 1032
+		add_state_core = 546
+		add_state_core = 899
+		add_state_core = 965
+		add_state_core = 871
+		add_state_core = 955
+		add_state_core = 956
+		add_state_core = 813
+		add_state_core = 958
+		add_state_core = 957
+		add_state_core = 964
+		add_state_core = 541
+		add_state_core = 807
+		add_state_core = 963
+		add_state_core = 274
+		add_state_core = 876
+		add_state_core = 877
+		add_state_core = 973
+		add_state_core = 558
+		add_state_core = 662
+		add_state_core = 878
+		add_state_core = 913 
+		add_state_core = 962
+		add_state_core = 975
+		add_state_core = 660
+		add_state_core = 971
+		add_state_core = 952
+		add_state_core = 927
+		add_state_core = 974
+		add_state_core = 953
+		add_state_core = 539
+		add_state_core = 928
+		add_state_core = 881
+		add_state_core = 538
+		add_state_core = 295
+		add_state_core = 1025 
+		add_state_core = 1180
+		add_state_core = 1185
+		add_state_core = 976
+		add_state_core = 1184
+		add_state_core = 949
+		add_state_core = 1026
+		add_state_core = 718
+		add_state_core = 1181
+		add_state_core = 977
+		add_state_core = 1182
+		add_state_core = 879
+		add_state_core = 1183
+		add_state_core = 548
+		add_state_core = 969
+		add_state_core = 547
+		add_state_core = 970
+		add_state_core = 925
+		add_state_core = 948
+		add_state_core = 869
+		add_state_core = 870
+		add_state_core = 918
+		add_state_core = 1032
+		add_state_core = 546
+		add_state_core = 899
+		add_state_core = 965
+		add_state_core = 871
+		add_state_core = 955
+		add_state_core = 956
+		add_state_core = 813
+		add_state_core = 958
+		add_state_core = 957
+		add_state_core = 964
+		add_state_core = 541
+		add_state_core = 1179
+		add_state_core = 1178
+		add_state_core = 1177
+		add_state_core = 543
+		add_state_core = 892
+	}
+}

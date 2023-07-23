@@ -2176,10 +2176,10 @@ focus_tree = {
 				}
 			}
 			air_experience = 25
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = battlefield_support_tree
 				uses = 1
-				bonus = 1
+				cost_reduction = 1
 			}
 			add_ideas = CZE_karel_janousek_air
 		}
@@ -2229,10 +2229,10 @@ focus_tree = {
 			focus = CZEALT_appoint_karel_janousek
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = battlefield_support_tree
 				uses = 1
-				bonus = 1
+				cost_reduction = 1
 			}
 			army_experience = 10
 			air_experience = 10
@@ -2313,10 +2313,10 @@ focus_tree = {
 				uses = 1
 				bonus = 1
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = battlefield_support_tree
 				uses = 2
-				bonus = 1
+				cost_reduction = 1
 			}
 			swap_ideas = {
 				add_idea = CZE_karel_janousek_air_2
@@ -2354,10 +2354,10 @@ focus_tree = {
 				}
 			}
 			air_experience = 25
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = operational_integrity_tree
 				uses = 1
-				bonus = 1
+				cost_reduction = 1
 			}
 			add_ideas = CZE_milan_stefanik_air
 		}
@@ -2435,10 +2435,10 @@ focus_tree = {
 			focus = CZEALT_aircraft_works
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = operational_integrity_tree
 				uses = 2
-				bonus = 1
+				cost_reduction = 1
 			}
 			add_tech_bonus = {
 				category = light_fighter
@@ -2487,10 +2487,10 @@ focus_tree = {
 				}
 			}
 			air_experience = 25
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = strategic_destruction_tree
 				uses = 1
-				bonus = 1
+				cost_reduction = 1
 			}
 			add_ideas = CZE_karel_mares_air
 		}
@@ -2568,10 +2568,10 @@ focus_tree = {
 			focus = CZEALT_aircraft_works
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				category = strategic_destruction_tree
 				uses = 2
-				bonus = 1
+				cost_reduction = 1
 			}
 			add_tech_bonus = {
 				category = cat_strategic_bomber
@@ -3930,8 +3930,7 @@ focus_tree = {
 			}
 		}
 	}
-	
-	
+
 #MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 #MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX0OkO0NMMMMX0O0XWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 #MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNOdlccccco0WWOlccclxXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -3975,7 +3974,6 @@ focus_tree = {
 #MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN:                  .:xXWMWo                                    ..              :KMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 #MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN:                     'xNMx.           .,,..                                    :XMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 
-	
 	focus = {
 		id = CZEALT_radical_changes
 		icon = GFX_goal_CZE_radical_changes
@@ -5158,7 +5156,12 @@ focus_tree = {
 			focus = CZEALT_radical_changes
 		}
 		completion_reward = {
-			#event to join here
+			FRA = {
+				country_event = {
+					days = 3
+					id = bdeczefor.7
+				}
+			}
 		}
 	}
 	
@@ -5193,7 +5196,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = HUN
 				type = annex_everything
 			}
@@ -5231,7 +5234,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = AUS
 				type = annex_everything
 			}
@@ -5270,7 +5273,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = ITA
 				type = annex_everything
 			}
@@ -5308,7 +5311,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = GAL
 				type = annex_everything
 			}
@@ -5346,7 +5349,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = POL
 				type = annex_everything
 			}
@@ -5384,7 +5387,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = ROM
 				type = annex_everything
 			}
@@ -5424,7 +5427,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = CRO
 				type = annex_everything
 			}
@@ -5464,7 +5467,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = SER
 				type = annex_everything
 			}
@@ -5502,7 +5505,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			declare_war_on = {
+			create_wargoal = {
 				target = BUL
 				type = annex_everything
 			}
@@ -5839,7 +5842,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = HUN
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = HUN
 				type = annex_everything
 			}
@@ -5883,7 +5886,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = AUS
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = AUS
 				type = annex_everything
 			}
@@ -6026,30 +6029,16 @@ focus_tree = {
 			add_war_support = 0.15
 			add_manpower = 40000
 			add_ideas = CZE_legions
-			if = {
+			every_other_country = {
 				limit = {
-					NOT = {
-						TRM = {
-							has_completed_focus = TRM_ROVS_Secures_The_Power
-						}
+					OR = {
+						tag = TRM
+						tag = RUS
 					}
 				}
-				create_corps_commander = {
-					name = "Radola Gajda"
-					portrait_path = "gfx/leaders/RUS/Portrait_RUS_Radola_Gajda.png"
-					traits = {
-						offensive_doctrine
-						trickster
-						winter_specialist
-						winter_expert 
-						fast_planner
-						politically_connected 
-					}
-					skill = 4
-					attack_skill = 4
-					defense_skill = 2
-					planning_skill = 1
-					logistics_skill = 3
+				random_unit_leader = {
+					limit = { has_id = 243913 }
+					set_nationality = CZE
 				}
 			}
 			#event here
@@ -6261,14 +6250,19 @@ focus_tree = {
 				is_in_faction_with = GER
 			}
 		}
+		bypass = {
+			NOT = {
+				country_exists = FRA
+			}
+		}
 		prerequisite = {
 			focus = CZEALT_our_mark_on_earth
 		}
 		will_lead_to_war_with = FRA
 		completion_reward = {
-			declare_war_on = {
-				target = FRA
+			create_wargoal = {
 				type = annex_everything
+				target = FRA
 			}
 		}
 	}
@@ -6312,6 +6306,7 @@ focus_tree = {
 			add_state_core = 1106
 			add_state_core = 43
 			add_state_core = 1109
+			add_state_core = 1314
 			
 			if = {
 				limit = {
@@ -6465,7 +6460,7 @@ focus_tree = {
 			focus = CZEALT_czech_corridor
 		}
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = 65.owner
 				type = annex_everything
 			}
@@ -6496,7 +6491,7 @@ focus_tree = {
 			focus = CZEALT_czech_corridor
 		}
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = 90.owner
 				type = annex_everything
 			}
@@ -6532,7 +6527,7 @@ focus_tree = {
 			focus = CZEALT_czech_corridor
 		}
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = 1123.owner
 				type = annex_everything
 			}
@@ -6567,7 +6562,7 @@ focus_tree = {
 			focus = CZEALT_slovak_territories
 		}
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = 1112.owner
 				type = annex_everything
 			}
@@ -6575,7 +6570,7 @@ focus_tree = {
 				limit = {
 					country_exists = BAN
 				}
-				declare_war_on = {
+				create_wargoal = {
 					target = BAN
 					type = annex_everything
 				}
@@ -6629,7 +6624,7 @@ focus_tree = {
 		will_lead_to_war_with = TOG
 		will_lead_to_war_with = CIV
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = 877.owner
 				type = annex_everything
 			}
@@ -11022,7 +11017,7 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			has_government = paternal_autocrat
+			has_government = social_democrat
 			has_country_flag = CZE_hussites_lol_republic
 			has_country_flag = CZE_wonrevolution_flag
 		}
@@ -11053,7 +11048,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 			random_owned_state = {
 				add_building_construction = {
@@ -11061,12 +11056,9 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.03
-			}
+			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 	
@@ -11106,10 +11098,9 @@ focus_tree = {
 				}
 			}
 			add_political_power = 50
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.03
-			}
+			add_war_support = 0.03
+			increase_ruling_party_popularity_by_5 = yes
+			add_research_slot_until_five = yes
 		}
 	}
 	

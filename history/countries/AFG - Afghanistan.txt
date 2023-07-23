@@ -11,9 +11,26 @@ set_technology = {
 	tech_support = 1
 	tech_mountaineers = 1
 	tech_recon = 1
-	### AIR ###
-	early_fighter = 1
-	early_bomber = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		#set_air_oob = "AFG_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+		}
+	else = {
+		#set_air_oob = "AFG_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
 }
 
 set_research_slots = 2
@@ -81,9 +98,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Nur Muhammad Taraki"
-	desc = "POLITICS_TARAKI_DESC"
-	picture = "gfx/leaders/AFG/Portrait_Afghan_Nur_Muhammad_Taraki.png"
+	name = "Abdul Ghaffar Khan"
+	desc = ""
+	picture = "gfx/leaders/AFG/Portrait_Afghan_Abdul_Ghaffar_Khan.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 	traits = { }
@@ -103,7 +120,7 @@ create_country_leader = {
 	desc = "POLITICS_KALAKANI_DESC"
 	picture = "gfx/leaders/AFG/Portrait_Afghan_Habibullah_Kalakani.png"
 	expire = "1965.1.1"
-	ideology = fundementalism_subtype
+	ideology = natpop_islamism_subtype
 	traits = {}
 }
 
@@ -117,36 +134,36 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Amanullah Khan "
-	desc = "POLITICS_AMANULLAH_KHAN_DESC"
-	picture = "gfx/leaders/AFG/Portrait_Afghan_Amanullah_Khan_Suit.png"
+	name = "Muhammad Iqbal"
+	desc = ""
+	picture = "gfx/leaders/AFG/Portrait_Afghan_Muhammad_Iqbal.png"
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 	traits = {}
 }
 
 create_country_leader = {
-	name = "Amanullah Khan "
-	desc = "POLITICS_AMANULLAH_KHAN_DESC"
-	picture = "gfx/leaders/AFG/Portrait_Afghan_Amanullah_Khan_Suit.png"
+	name = "Abdul Hadi Dawi"
+	desc = ""
+	picture = "gfx/leaders/AFG/Portrait_Afghan_Abdul_Hadi_Dawi.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 	traits = {}
 }
 
 create_country_leader = {
-	name = "Amanullah Khan "
-	desc = "POLITICS_AMANULLAH_KHAN_DESC"
-	picture = "gfx/leaders/AFG/Portrait_Afghan_Amanullah_Khan_Suit.png"
+	name = "Abdul Rauf Benawa"
+	desc = ""
+	picture = "gfx/leaders/AFG/Portrait_Afghan_Abdul_Rauf_Benawa.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 	traits = {}
 }
 
 create_country_leader = {
-	name = "Amanullah Khan "
-	desc = "POLITICS_AMANULLAH_KHAN_DESC"
-	picture = "gfx/leaders/AFG/Portrait_Afghan_Amanullah_Khan_Suit.png"
+	name = "Ghulam Muhammad Ghobar"
+	desc = ""
+	picture = "gfx/leaders/AFG/Portrait_Afghan_Ghulam_Muhammad_Ghobar.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 	traits = {}
@@ -293,19 +310,3 @@ create_corps_commander = {
 	planning_skill = 1
 	logistics_skill = 1
 }
-
-create_corps_commander = {
-	name = "Ali Afzal Khan"
-	portrait_path = "gfx/leaders/AFG/Portrait_Afghan_Ali_Afzal_Khan.png"
-	traits = {
-		old_guard
-		career_officer
-		cavalry_leader
-	}
-	skill = 1
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-

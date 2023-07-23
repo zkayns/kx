@@ -31,63 +31,74 @@ set_technology = {
 	tech_mountaineers = 2
 	motorised_infantry = 1
 	gw_artillery = 1
-	### AIR ###
-	early_fighter = 1
-	early_bomber = 1
-	fighter1 = 1
-	naval_bomber1 = 1
-	tactical_bomber1 = 1
-	CAS1 = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	cv_CAS1 = 1
-
 }
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		#set_air_oob = "MTR_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+		}
+	else = {
+		#set_air_oob = "MTR_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+}
+
+
 
 set_country_flag = KX_no_naval_tech_decision_enable
 
 add_ideas = {
-	MNT_Abdul_M_Chermoev_hog_sco
-	MNT_Gaidar_N_Bammatov_for_sco
-	MNT_Vassan_I_Dzhabagiev_eco_sli
-	MNT_Rashid_Z_Kaplanov_sec_ade
+	MTR_Abdul_M_Chermoev_hog_sco
+	MTR_Gaidar_N_Bammatov_for_sco
+	MTR_Vassan_I_Dzhabagiev_eco_sli
+	MTR_Rashid_Z_Kaplanov_sec_ade
 }
 
-country_event = { id = mnr.1 days = 1 }
-country_event = { id = mnr.2 days = 2 }
-country_event = { id = mnr.3 days = 16 }
-country_event = { id = mnr.4 days = 41 }
-country_event = { id = mnrel.3 days = 84 }
-country_event = { id = mnrel.7 days = 397 }
-country_event = { id = mnrel.8 days = 427 }
-country_event = { id = mnr.105 days = 149 }
+country_event = { id = mtr.1 days = 1 }
+country_event = { id = mtr.2 days = 2 }
+country_event = { id = mtr.3 days = 16 }
+country_event = { id = mtr.4 days = 41 }
+country_event = { id = mtrel.3 days = 84 }
+country_event = { id = mtrel.7 days = 397 }
+country_event = { id = mtrel.8 days = 427 }
+country_event = { id = mtr.105 days = 149 }
 
 add_ideas = {
 
-   	MNR_mountain_nation
-	MNR_legacy_of_shamil
+   	MTR_mountain_nation
+	MTR_legacy_of_shamil
 	MTR_majlis_influence_idea
 
 }
 
 set_politics = {
-	ruling_party = social_conservative
+	ruling_party = authoritarian_democrat
 	last_election = "1933.3.4"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	totalist = 0
-	radical_socialist = 17
+	totalist = 1
+	radical_socialist = 15
 	syndicalist = 0
-	social_democrat = 14
-	social_liberal = 0
-	market_liberal = 0
-	social_conservative = 46
-	authoritarian_democrat = 0
-	paternal_autocrat = 23
-	national_populist = 0
+	social_democrat = 6
+	social_liberal = 14
+	market_liberal = 9
+	social_conservative = 7
+	authoritarian_democrat = 19
+	paternal_autocrat = 20
+	national_populist = 9
 }
 set_country_flag = MTR_majlis_works
 setup_majlis = yes
@@ -105,15 +116,15 @@ add_opinion_modifier = {
 create_country_leader = {
 	name = "Jalal-ed-Din Korkmasov"
 	desc = "POLITICS_KORMASOV_DESC"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Korkmasov.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Korkmasov.png"
 	expire = "1965.1.1"
-	ideology = totalist_subtype
+	ideology = authcom_subtype
 }
 
 create_country_leader = {
 	name = "Jalal-ed-Din Korkmasov"
 	desc = "POLITICS_KORMASOV_DESC"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Korkmasov.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Korkmasov.png"
 	expire = "1965.1.1"
 	ideology = moderate_socialist_subtype
 }
@@ -121,7 +132,7 @@ create_country_leader = {
 create_country_leader = {
     name = "Jalal-ed-Din Korkmasov"
 	desc = "POLITICS_KORMASOV_DESC"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Korkmasov.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Korkmasov.png"
 	expire = "1965.1.1"
 	ideology = syndicalist_subtype
 }
@@ -129,7 +140,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Vassan-Girey Dzhabagiyev"
 	desc = "POLITICS_AHMED_MUTUSHEV_DESC"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Vassan_Girey.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Vassan_Girey.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
@@ -137,7 +148,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Tapa Chermoyev"
 	desc = "POLITICS_TAPA_CHERMOEV_DESC"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Tapa_Chermoev.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Tapa_Chermoev.png"
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
@@ -145,14 +156,14 @@ create_country_leader = {
 create_country_leader = {
 	name = "Rashidhan Kaplanov"
 	desc = "POLITICS_RASHIDHAN_KAPLANOV_DESC"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Rashidhan_Kaplanov.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Rashidhan_Kaplanov.png"
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 
 create_country_leader = {
 	name = "Tapa Chermoyev"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Tapa_Chermoev.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Tapa_Chermoev.png"
 	expire = "1965.1.1"
 	ideology = moderate_authoritarianism_subtype
 	traits = {}
@@ -160,9 +171,9 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Tapa Chermoyev"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Tapa_Chermoev.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Tapa_Chermoev.png"
 	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
+	ideology = oligarchy_subtype
 }
 
 create_country_leader = {
@@ -176,7 +187,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Najmudin Gotsynsky"
 	desc = "POLITICS_NADJMUDIN_GOTSKYNSKY_DESC"
-	picture = "gfx/leaders/MTR/Portrait_MNR_Nadjmudin_Gotskynsky.png"
+	picture = "gfx/leaders/MTR/Portrait_MTR_Nadjmudin_Gotskynsky.png"
 	expire = "1965.1.1"
 	ideology = fundementalism_subtype
 }
@@ -184,7 +195,7 @@ create_country_leader = {
 ### Field Marshal
 create_field_marshal = { 
 	name = "Haidar Bammatov"
-	portrait_path = "gfx/leaders/MTR/Portrait_MNR_Haidar_Bammatov.png"
+	portrait_path = "gfx/leaders/MTR/Portrait_MTR_Haidar_Bammatov.png"
 	traits = {
 		old_guard
 		trait_reckless
@@ -205,7 +216,7 @@ create_field_marshal = {
 		old_guard
 		politically_connected
 		offensive_doctrine
-		cavalry_expert
+		cavalry_leader
 		trait_mountaineer
 	}
 	id = 49998
@@ -219,7 +230,7 @@ create_field_marshal = {
 ### Corps Commander
 create_corps_commander = { #Auto-Generated
 	name = "Dzhalav Tonayev"
-	portrait_path = "gfx/leaders/MTR/Portrait_MNR_Tonayev.png"
+	portrait_path = "gfx/leaders/MTR/Portrait_MTR_Tonayev.png"
 	traits = {
 		old_guard
 		trait_mountaineer
@@ -234,7 +245,7 @@ create_corps_commander = { #Auto-Generated
 
 create_corps_commander = { #Auto-Generated
 	name = "Pshemakho Kotsev"
-	portrait_path = "gfx/leaders/MTR/Portrait_MNR_Kotsev.png"
+	portrait_path = "gfx/leaders/MTR/Portrait_MTR_Kotsev.png"
 	traits = {
 		winter_specialist
 		trickster
@@ -250,7 +261,7 @@ create_corps_commander = { #Auto-Generated
 	name = "Gerasim Vdovenko"
 	portrait_path = "gfx/leaders/MTR/Portrait_MTR_Gerasim_Vdovenko.png"
 	traits = {
-		cavalry_leader 
+		cossack_leader 
 		politically_connected 
 		hill_fighter 
 	}
@@ -260,12 +271,15 @@ create_corps_commander = { #Auto-Generated
 	planning_skill = 2
 	logistics_skill = 1
 }
-
-random_unit_leader = {
-	limit = { has_id = 49999 }
-	save_global_event_target_as = MTR_Dzhalav_Tonayev
+create_corps_commander = {
+	name = "Issa Pliyev"
+	portrait_path = "gfx/leaders/MTR/Portrait_MTR_Issa_Pliyev.png"
+	traits = { cavalry_officer hidden_sympathies }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 621
 }
-random_unit_leader = {
-	limit = { has_id = 49998 }
-	save_global_event_target_as = MTR_Nukh_Bek_Tarkovsky
-}
+	

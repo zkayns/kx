@@ -25,10 +25,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			country_event = {
-				id = kly.2
-				days = 2
-			}
+			country_event = kly.2
 		}
 	}
 	
@@ -40,14 +37,11 @@ focus_tree = {
 			focus = KLY_Kalmykia_Reborn
 		}
 		available = {
-			has_socialist_government = yes
+			always = no
 		}
 		mutually_exclusive = {
 			focus = KLY_Democracy_Prevails
 			focus = KLY_The_Khanate_Proclaimed
-		}
-		bypass = {
-			has_socialist_government = yes
 		}
 		ai_will_do = {
 			factor = 100
@@ -67,7 +61,7 @@ focus_tree = {
 			focus = KLY_Kalmykia_Reborn
 		}
 		available = {
-			has_country_flag = KLY_democracy
+			always = no
 		}
 		relative_position_id = KLY_Kalmykia_Reborn
 		x = 0
@@ -78,9 +72,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = KLY_Revolutionary_Republic
 			focus = KLY_The_Khanate_Proclaimed
-		}
-		bypass = {
-			has_country_flag = KLY_democracy
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
@@ -94,7 +85,7 @@ focus_tree = {
 			focus = KLY_Kalmykia_Reborn
 		}
 		available = {
-			has_government = paternal_autocrat
+			always = no
 		}
 		ai_will_do = {
 			factor = 100
@@ -102,9 +93,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = KLY_Revolutionary_Republic
 			focus = KLY_Democracy_Prevails
-		}
-		bypass = {
-			has_government = paternal_autocrat
 		}
 		relative_position_id = KLY_Kalmykia_Reborn
 		x = 3
@@ -148,6 +136,14 @@ focus_tree = {
 				remove_idea = KLY_revolutionary_republic_1
 				add_idea = KLY_revolutionary_republic_2
 			}
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -177,7 +173,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = KLY_path
 					option = KLY_PATH_KHAN
@@ -207,7 +203,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = KLY_path
 					option = KLY_PATH_BUDDHIST
@@ -293,6 +289,12 @@ focus_tree = {
 					modifier = KR_approves_of_govt
 				}
 			}
+			custom_effect_tooltip = cossack_corps_tech_effect
+			hidden_effect= {
+				set_technology = {
+					cossack_corps_tech = 1
+				}
+			}
 		}
 	}
 	focus = {
@@ -335,7 +337,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KLY_Collectivization
-		icon = GFX_BRY_Land_Socialization
+		icon = GFX_goal_generic_land_reform
 		cost = 5
 		ai_will_do = {
 			factor = 100
@@ -353,6 +355,14 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = KLY_revolutionary_republic_2
 				add_idea = KLY_revolutionary_republic_3
+			}
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -375,6 +385,14 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_ideas = KLY_democratic_republic_1
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -417,7 +435,14 @@ focus_tree = {
 		x = 4
 		y = 4
 		completion_reward = {
-			#
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -548,6 +573,14 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			remove_ideas = KLM_backwards_country
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -569,6 +602,14 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			remove_ideas = KLM_backwards_country
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -589,6 +630,14 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			remove_ideas = KLM_backwards_country
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -606,6 +655,14 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			remove_ideas = KLM_backwards_country
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -656,11 +713,9 @@ focus_tree = {
 		id = KLY_Looking_For_Protection
 		icon = GFX_goal_volunteer_alliance
 		cost = 3
-		prerequisite = {
-			focus = KLY_Foreign_Policy
-		}
+		prerequisite = { focus = KLY_Foreign_Policy }
 		relative_position_id = KLY_Foreign_Policy
-		x = 2
+		x = 1
 		y = 1
 		ai_will_do = {
 			factor = 1
@@ -673,9 +728,7 @@ focus_tree = {
 				}
 			}
 		}
-		mutually_exclusive = {
-			focus = KLY_Neutrality
-		}
+		mutually_exclusive = { focus = KLY_Neutrality }
 		available = {
 			NOT = { has_country_flag = KLY_neutral }
 			is_subject = no
@@ -756,6 +809,7 @@ focus_tree = {
 			}
 		}
 		available = {
+			NOT = { has_global_flag = GER_withdrew_from_caucasus }
 			is_in_faction = no
 			country_exists = GER
 			GER = { is_faction_leader = yes }
@@ -851,12 +905,16 @@ focus_tree = {
 		completion_reward = {
 			235 = { add_core_of = KLY }
 			238 = { add_core_of = KLY }
+			245 = { add_core_of = KLY }
+			1226 = { add_core_of = KLY }
+			1264 = { add_core_of = KLY }
 			1189 = { add_core_of = KLY }
+			217 = { add_core_of = KLY }
 			every_state = {
 				limit = {
 					OR = {
 						state = 235
-						state = 238
+						state = 1226
 						state = 1189
 					}
 				}
@@ -887,47 +945,33 @@ focus_tree = {
 		icon = GFX_KLY_even_greater_kalmykia
 		cost = 5
 		prerequisite = { focus = KLY_Greater_Kalmykia }
-		relative_position_id = KLY_Foreign_Policy
-		x = 1
-		y = 4
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 0
-				is_ai = yes
-			}
-		}
+		relative_position_id = KLY_Greater_Kalmykia
+		x = 0
+		y = 1
+		ai_will_do = { factor = 20 }
 		will_lead_to_war_with = DKB
 		will_lead_to_war_with = ALO
 		will_lead_to_war_with = RUS
 		available = {
 			OR = {
+				217 = { is_owned_and_controlled_by = KLY }
 				235 = { is_owned_and_controlled_by = KLY }
-				238 = { is_owned_and_controlled_by = KLY }
+				1226 = { is_owned_and_controlled_by = KLY }
 				1189 = { is_owned_and_controlled_by = KLY }
 			}
-			is_subject = no
 		}
 		completion_reward = {
-			245 = { add_core_of = KLY }
 			236 = { add_core_of = KLY }
 			406 = { add_core_of = KLY }
 			401 = { add_core_of = KLY }
-			265 = { add_core_of = KLY }
-			217 = { add_core_of = KLY }
-			239 = { add_core_of = KLY }
 			1207 = { add_core_of = KLY }
 			1224 = { add_core_of = KLY }
 			every_state = {
 				limit = {
 					OR = {
-						state = 245
 						state = 236
 						state = 406
 						state = 401
-						state = 265
-						state = 217
-						state = 239
 						state = 1207
 						state = 1224
 					}
@@ -993,10 +1037,10 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = KLM_Cossack_army
 			add_doctrine_cost_reduction = {
-	name = land_doc_bonus
-	cost_reduction = 0.5
-	uses = 1
-	category = cat_superior_firepower
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_superior_firepower
 			}
 		}
 	}

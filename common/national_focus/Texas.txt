@@ -72,12 +72,18 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			custom_effect_tooltip = TXS_TXCO
+			hidden_effect = {
+				country_event = {
+					id = TXS.122
+					days = 55
+				}
+			}	
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = TXS_rose_of_texas
-		icon = GFX_goal_ideology_social_democrat
+		icon = GFX_goal_MEX_Pink_Roses
 		cost = 2.00
 		available = {
 			has_socialist_government = yes
@@ -126,7 +132,11 @@ focus_tree = {
 		completion_reward = {
 			country_event = TXS.51
 			hidden_effect = {
-				set_cosmetic_tag = TXS
+				set_cosmetic_tag = TXS_LONESTAR_FLAG
+				country_event = {
+					id = TXS.124
+					days = 4
+				}
 			}
 		}
 	}
@@ -158,7 +168,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_centralism
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_CSA_democratic_centralism
 		cost = 5
 		available = {
 			has_war = no
@@ -187,7 +197,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_nationalisation
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_CAL_nationalize_oil
 		cost = 5
 		available = {
 			has_war = no
@@ -235,7 +245,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_price_controls
-		icon = GFX_goal_state_economy
+		icon = GFX_goal_CSA_price_controls
 		cost = 5
 		available = {
 			has_war = no
@@ -359,7 +369,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_cowboy_culture
-		icon = GFX_goal_ARZ_Ram_Ranch
+		icon = GFX_goal_ARZ_Cowboy_Country
 		cost = 5.00
 		available = {
 			has_government = radical_socialist
@@ -385,12 +395,23 @@ focus_tree = {
 				id = TXS.116
 				days = 2
 			}
+			hidden_effect = {
+				country_event = {
+					id = TXSKING.33
+					days = 20
+				}
+
+				country_event = {
+					id = TXS.126
+					days = 46
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = TXS_this_land_is_your_land
-		icon = GFX_goal_workers_rights
+		icon = GFX_goal_BRG_Patriotic_Worker
 		cost = 5.00
 		available = {
 			has_government = radical_socialist
@@ -541,12 +562,27 @@ focus_tree = {
 			increase_ruling_party_popularity_by_5 = yes
 			add_ideas = TXS_red_cowboys
 			custom_effect_tooltip = TXS_ranchers
+			if = {
+				limit = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+					}
+					ARZ = {
+						has_socialist_government = no
+					}
+				}
+				country_event = {
+					id = TXS.125
+					days = 6
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = TXS_collective_ranches
-		icon = GFX_goal_agrarian_reform
+		icon = GFX_goal_CSA_collective_farms
 		cost = 5.00
 		available = {
 			has_socialist_government = yes
@@ -658,7 +694,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_free_texas_from_monopolies
-		icon = GFX_goal_texaco_jail
+		icon = GFX_goal_generic_overthrow_capitalists
 		cost = 5.00
 		available = {
 			has_government = syndicalist
@@ -686,7 +722,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_end_the_poll_taxes
-		icon = GFX_goal_generic_elections
+		icon = GFX_endingthepolltax
 		cost = 5.00
 		available = {
 			has_socialist_government = yes
@@ -712,7 +748,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_public_utilites
-		icon = GFX_goal_generic_construct_public_housing
+		icon = GFX_NEE_swaying_public_opinion
 		cost = 5.00
 		available = {
 			has_socialist_government = yes
@@ -739,7 +775,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_end_child_labour
-		icon = GFX_focus_CZE_german_puppet
+		icon = GFX_MAF_labor_charter
 		cost = 5.00
 		available = {
 			has_socialist_government = yes
@@ -790,7 +826,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_the_stars_are_shining_bright
-		icon = GFX_goal_starry_night
+		icon = GFX_goal_ARZ_Use_Terrain
 		cost = 5.00
 		available = {
 			NOT = {
@@ -847,7 +883,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_power_to_1_percent
-		icon = GFX_goal_bag_of_money
+		icon = GFX_goal_CAL_money
 		cost = 5.00
 		available = {
 			OR = {
@@ -876,7 +912,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_corprate_economy
-		icon = GFX_goal_texaco_trade
+		icon = GFX_goal_MEX_corporate_economics
 		cost = 5.00
 		available = {
 		OR = {
@@ -905,7 +941,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_ensure_monopoly
-		icon = GFX_goal_texaco
+		icon = GFX_DKB_Oligarchs
 		cost = 5.00
 		available = {
 		OR = {
@@ -937,7 +973,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_crush_competition
-		icon = GFX_goal_oil_companies
+		icon = GFX_goal_TEX_National_Oil_Boom
 		cost = 5.00
 		available = {
 		OR = {
@@ -1126,7 +1162,7 @@ focus_tree = {
 			add_political_power = 100
 			increase_ruling_party_popularity_by_5 = yes
 			CSA = { add_ideas = CSA_no_texan_oil }
-			 CSA = {
+			CSA = {
 				reverse_add_opinion_modifier = {
 					target = TXS
 					modifier = embargo
@@ -1137,7 +1173,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_slaves_to_the_dollar
-		icon = GFX_goal_bag_of_money
+		icon = GFX_goal_TEX_end_civilservice
 		cost = 5.00
 		available = {
 			NOT = {
@@ -1200,7 +1236,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_favorable_laws
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		icon = GFX_goal_MEX_bribe_judges
 		cost = 5.00
 		available = {
 		NOT = {
@@ -1275,7 +1311,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_ban_protest
-		icon = GFX_goal_ban_protest
+		icon = GFX_oppose_radicals
 		cost = 5.00
 		available = {
 			NOT = {
@@ -1306,7 +1342,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_ban_unions
-		icon = GFX_HOL_crackdown_syndie
+		icon = GFX_goal_TEX_outlaw_union
 		cost = 5.00
 		available = {
 			NOT = {
@@ -1477,7 +1513,7 @@ focus_tree = {
 
 	focus = {
 		id = TXS_improve_infastructure_more
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_MNT_back_on_track
 		cost = 5
 		prerequisite = {
 			focus = TXS_improve_inf_I
@@ -1508,7 +1544,7 @@ focus_tree = {
 
 	focus = {
 		id = TXS_improve_infrastructure_in_the_east
-		icon = GFX_goal_interstate
+		icon = GFX_NEE_interstate_highway
 		cost = 5
 		prerequisite = {
 			focus = TXS_improve_infastructure_more
@@ -1544,7 +1580,7 @@ focus_tree = {
 
 	focus = {
 		id = TXS_more_universities
-		icon = GFX_focus_research
+		icon = GFX_goal_COR_University_System_of_America
 		cost = 5
 		prerequisite = {focus = TXS_improve_infrastructure_in_the_east}
 		prerequisite = {focus = TXS_new_resources_start}
@@ -1574,8 +1610,8 @@ focus_tree = {
 	}
 	focus = {
 		id = TXS_new_resources_invest
-		icon = GFX_goal_generic_construction2
-		cost = 5.00
+		icon = GFX_BBR_resources_of_black_america
+		cost = 2.00
 		prerequisite = {
 			focus = TXS_bolster_texaco
 		}
@@ -1589,6 +1625,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TXS_Expand_Mining
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1624,7 +1663,7 @@ focus_tree = {
 
 	focus = {
 		id = TXS_new_resources_start
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_UMN_mines_keep_running
 		cost = 5.00
 
 		prerequisite = {
@@ -1734,13 +1773,19 @@ focus_tree = {
 					has_completed_focus = TXS_crush_competition
 					custom_trigger_tooltip = {
 						tooltip = TXS_Texaco_Influence_25
-						check_variable = { TXS_Texaco_Influence = 25 }
+						power_balance_value = {
+							id = TXS_texaco_balance
+							value > -0.89
+						}
 					}
 				}
 				AND = {
 					custom_trigger_tooltip = {
 						tooltip = TXS_Texaco_Influence_25
-						check_variable = { TXS_Texaco_Influence = 25 }
+						power_balance_value = {
+							id = TXS_texaco_balance
+							value > -0.89
+						}
 					}
 					NOT = {
 						has_government = paternal_autocrat
@@ -1762,6 +1807,7 @@ focus_tree = {
 				remove_idea = TXS_texaco_monopoly
 				add_idea = TXS_texaco_monopoly_2
 			}
+			remove_power_balance = { id = TXS_texaco_balance }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1804,8 +1850,11 @@ focus_tree = {
 		available = {
 			has_idea = TXS_texaco_monopoly
 			custom_trigger_tooltip = {
-				tooltip = TXS_Texaco_Influence_5
-				check_variable = { TXS_Texaco_Influence = 5 }
+				tooltip = TXS_Texaco_Influence_25
+				power_balance_value = {
+					id = TXS_texaco_balance
+					value > 0.89
+				}
 			}
 			NOT = {
 				has_country_flag = TXS_texaco_takeover
@@ -1823,6 +1872,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = TXS_texaco_monopoly
 			custom_effect_tooltip =	TXS_texaco_coup
+			remove_power_balance = { id = TXS_texaco_balance }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1879,7 +1929,7 @@ focus_tree = {
 		
 	focus = {
 		id = TXS_expand_irrigation
-		icon = GFX_goal_agricultural_aid
+		icon = GFX_RUS_Agriculture_Secure_Council
 		cost = 5
 		prerequisite = {focus = TXS_farm_relief_act}
 		
@@ -1944,6 +1994,12 @@ focus_tree = {
 			hidden_effect = {
 				load_oob = TXS_national_guard
 			}
+			hidden_effect = {
+				country_event = {
+					id = TXS.127
+					days = 35
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -1971,7 +2027,7 @@ focus_tree = {
 
 	focus = {
 		id = TXS_improve_infantry_equipment_II
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_MON_improve_infantry_equipment_II
 		cost = 5
 		prerequisite = {
 			focus = TXS_improve_infantry_equipment
@@ -2048,7 +2104,7 @@ focus_tree = {
 
 	focus = {
 		id = TXS_doctrines_I
-		icon = GFX_goal_military_research
+		icon = GFX_goal_UMN_university
 		cost = 5
 		prerequisite = {
 			focus = TXS_reinforce_army
@@ -2176,7 +2232,7 @@ focus_tree = {
 
 	focus = {
 		id = TXS_armor_research
-		icon = MON_doctrine_IV
+		icon = GFX_MON_doctrine_IV
 		cost = 5
 		prerequisite = {
 			focus = TXS_motorize_army
@@ -2269,7 +2325,7 @@ focus_tree = {
 	
 	focus = {
 		id = TXS_military_res_inst
-		icon = GFX_focus_research
+		icon = GFX_goal_CZE_radar_research
 		cost = 5
 
 		prerequisite = {
@@ -2576,7 +2632,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = TXS_red_scare
-		icon = GFX_focus_ger_bulwark_against_bolshevism
+		icon = GFX_RUS_Ban_All_Socialist_Parties
 		cost = 5.00
 		available = { 
 			has_government = authoritarian_democrat
@@ -2664,6 +2720,12 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = TXS.80
+			hidden_effect = {
+				country_event = {
+					id = TXS.53
+					days = 1456
+				}
+			}
 		}
 	}	
 	focus = {
@@ -3156,7 +3218,7 @@ focus_tree = {
 	}
 	focus = {# AUS
 		id = TXS_AUS
-		icon = goal_TXS_side_with_the_AUS
+		icon = GFX_goal_TXS_side_with_the_AUS
 		cost = 5.00
 		available = {
 			has_war = no
@@ -3528,6 +3590,9 @@ focus = {
 		}
 		available = {
 			has_democratic_government = yes
+			NOT = {
+				has_completed_focus = TXS_break_the_sword
+			}
 		}
 		prerequisite = {
 			focus = TXS_second_republic
@@ -3597,7 +3662,7 @@ focus = {
 	
 	focus = {
 		id = TXS_old_age_pensions
-		icon = GFX_BBR_elderly_dignities
+		icon = GFX_goal_TEX_poor_whites
 		cost = 5
 		available = {
 			has_country_leader = {
@@ -3770,7 +3835,7 @@ focus = {
 	
 	focus = {
 		id = TXS_cut_taxes
-		icon = GFX_CAL_rich_taxation
+		icon = GFX_goal_TEX_tax_relief
 		cost = 5
 		available = {
 			OR = {
@@ -3906,7 +3971,7 @@ focus = {
 				desc = "POLITICS_CACTUS_JACK_GARNER_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_John_Nance_Garner_Authoritarian.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_national_conservative_subtype
 				traits = { dictator cactus_jack }
 			}
 			hidden_effect = {
@@ -3923,10 +3988,14 @@ focus = {
 	
 	focus = {
 		id = TXS_news
-		icon = GFX_goal_AST_freedom_of_the_press
+		icon = GFX_goal_TEX_media_propaganda
 		cost = 5.00
 		available = {
 			has_country_flag = TXS_obsession
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
 		}
 		prerequisite = {
 			focus = TXS_garner_authdemocrat
@@ -3949,10 +4018,14 @@ focus = {
 	}
 	focus = {
 		id = TXS_defend_democracy
-		icon = GFX_focus_ger_bulwark_against_bolshevism
+		icon = GFX_RUS_Destroy_Democracy
 		cost = 5.00
 		available = {
 			has_country_flag = TXS_obsession
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
 		}
 		prerequisite = {
 			focus = TXS_news
@@ -3976,10 +4049,14 @@ focus = {
 	}
 	focus = {
 		id = TXS_rewite_constitution
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		icon = GFX_goal_NFA_rewrite_constitution
 		cost = 5.00
 		available = {
 			has_country_flag = TXS_obsession
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
 		}
 		prerequisite = {
 			focus = TXS_defend_democracy
@@ -4010,6 +4087,10 @@ focus = {
 			}
 			hidden_effect = {
 				set_country_flag = TXS_garner_authdem
+				country_event = {
+					id = TXS.45
+					days = 45
+				}
 			}
 		}
 	}
@@ -4019,6 +4100,10 @@ focus = {
 		icon = GFX_TXS_Defend_Democracy
 		cost = 5.00
 		available = {
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
 			NOT = {
 			has_country_flag = TXS_obsession
 			}
@@ -4049,6 +4134,10 @@ focus = {
 		icon = GFX_USA_sweep_farm_tariffs
 		cost = 5.00
 		available = {
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
 			NOT = {
 			has_country_flag = TXS_obsession
 			}
@@ -4079,6 +4168,10 @@ focus = {
 		icon = GFX_USA_rural_investments
 		cost = 5.00
 		available = {
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
 			NOT = {
 			has_country_flag = TXS_obsession
 			}
@@ -4118,9 +4211,13 @@ focus = {
 	
 	focus = {
 		id = TXS_screw_syndies
-		icon = GFX_goal_USA_antileftist_action
+		icon = GFX_goal_GER_Boot_Socialists
 		cost = 5.00
 		available = {
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
 			NOT = {
 			has_country_flag = TXS_obsession
 			}
@@ -4153,6 +4250,10 @@ focus = {
 		icon = GFX_goal_generic_prohibition
 		cost = 5.00
 		available = {
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
 			NOT = {
 			has_country_flag = TXS_obsession
 			}
@@ -4184,7 +4285,13 @@ focus = {
 		icon = GFX_goal_texas_flag_waving
 		cost = 5.00
 		available = {
-			has_government = social_conservative
+			has_country_leader = {
+					name = "John Nance Garner"
+					ruling_only = yes
+			}
+			NOT = {
+			has_country_flag = TXS_obsession
+			}
 		}
 		prerequisite = {
 			focus = TXS_yay_booze
@@ -4217,38 +4324,12 @@ focus = {
 		icon = GFX_TXS_Independence_Victory
 		cost = 0
 		available = {
-			OR = {
-			hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-			}
-			has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-				}
-			has_country_leader = {
-				name = "Daniel James Moody"
-				ruling_only = yes
-				}
-			}
+			has_government = social_liberal
+						hidden_trigger = { has_country_flag = TXS_election_over }
 		}
 		bypass = {
-			hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-			}
-			has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-			}
-			has_country_leader = {
-				name = "Daniel James Moody"
-				ruling_only = yes
-				}
+			has_government = social_liberal
+						hidden_trigger = { has_country_flag = TXS_election_over }
 		}
 		prerequisite = {
 			focus = TXS_public_elections
@@ -4276,22 +4357,7 @@ focus = {
 		icon = GFX_NEE_education_spending
 		cost = 5
 		available = {
-			OR = {
-			hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-			}
-			has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-			}
-			has_country_leader = {
-				name = "Daniel James Moody"
-				ruling_only = yes
-				}
-			}
+			has_government = social_liberal
 		}
 		
 		prerequisite = {
@@ -4316,25 +4382,10 @@ focus = {
 	
 	focus = {
 		id = TXS_reform_the_police
-		icon = GFX_goal_TEX_texan_values
+		icon = GFX_goal_USA_Parochial_Policing
 		cost = 5
 		available = {
-			OR = {
-			hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-			}
-			has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-			}
-			has_country_leader = {
-				name = "Daniel James Moody"
-				ruling_only = yes
-				}
-			}
+			has_government = social_liberal
 		}
 		
 		prerequisite = {
@@ -4365,22 +4416,7 @@ focus = {
 		icon = GFX_GFX_goal_TXS_new_deal
 		cost = 5
 		available = {
-			OR = {
-			hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-			}
-			has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-			}
-			has_country_leader = {
-				name = "Daniel James Moody"
-				ruling_only = yes
-				}
-			}
+			has_government = social_liberal
 		}
 		
 		prerequisite = {
@@ -4409,22 +4445,7 @@ focus = {
 		icon = GFX_goal_TEX_old_age_pensions
 		cost = 5
 		available = {
-			OR = {
-			hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-			}
-			has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-			}
-			has_country_leader = {
-				name = "Daniel James Moody"
-				ruling_only = yes
-				}
-			}
+			has_government = social_liberal
 		}
 		
 		prerequisite = {
@@ -4454,22 +4475,7 @@ focus = {
 		icon = GFX_goal_TEX_National_Oil_Boom
 		cost = 5
 		available = {
-			OR = {
-			hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-			}
-			has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-			}
-			has_country_leader = {
-				name = "Daniel James Moody"
-				ruling_only = yes
-				}
-			}
+			has_government = social_liberal
 		}
 		
 		prerequisite = {
@@ -4505,24 +4511,8 @@ focus = {
 		cost = 5
 		available = {
 			OR = {
-				hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-				}
-				has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-				}
-				has_country_leader = {
-					name = "Wilbert Lee O'Daniel"
-					ruling_only = yes
-				}
-				has_country_leader = {
-					name = "Daniel James Moody"
-					ruling_only = yes
-				}
+				has_government = social_liberal
+				has_government = market_liberal
 			}
 		}
 		
@@ -4551,28 +4541,12 @@ focus = {
 
 	focus = {
 		id = TXS_texan_values
-		icon = GFX_goal_texas_flag
+		icon = GFX_goal_TEX_texan_values
 		cost = 5
 		available = {
 			OR = {
-				hidden_trigger = {
-				has_country_leader = {
-					name = "James V Allred"
-					ruling_only = yes
-					}
-				}
-				has_country_leader = {
-				name = "James V. Allred"
-				ruling_only = yes
-				}
-				has_country_leader = {
-					name = "Wilbert Lee O'Daniel"
-					ruling_only = yes
-				}
-				has_country_leader = {
-					name = "Daniel James Moody"
-					ruling_only = yes
-				}
+				has_government = social_liberal
+				has_government = market_liberal
 			}
 		}
 		
@@ -4742,7 +4716,7 @@ focus = {
 	
 	focus = {
 		id = TXS_support_unions
-		icon = GFX_GBR_fate_of_unions
+		icon = GFX_goal_GER_Moderate_Unions
 		cost = 5.00
 		available = {
 			OR = {
@@ -4782,7 +4756,7 @@ focus = {
 	
 	focus = {
 		id = TXS_abolish_poll_taxes
-		icon = GFX_goal_BAN_reopen_elections
+		icon = GFX_RUS_Tax_Reform
 		cost = 5.00
 		available = {
 			OR = {
@@ -4905,7 +4879,7 @@ focus = {
 	
 	focus = {
 		id = TXS_texas_for_the_people
-		icon = GFX_focus_texas
+		icon = GFX_goal_TEX_people_yes
 		cost = 5.00
 		available = {
 			OR = {
@@ -4978,7 +4952,7 @@ focus = {
 	
 	focus = {
 		id = TXS_socialist_ideas
-		icon = GFX_goal_ideology_syndicalist
+		icon = GFX_goal_TEX_lefty_reconcile
 		cost = 5.00
 		available = {
 			has_government = social_democrat
@@ -5006,7 +4980,7 @@ focus = {
 	}		
 	focus = {
 		id = TXS_neutrality_SACW
-		icon = GFX_goal_CUB_America
+		icon = GFX_goal_NEE_armed_free_neutrality
 		cost = 5.00
 		available = {
 			has_government = social_democrat
@@ -5580,7 +5554,7 @@ focus = {
 				name = air_bonus
 				bonus = 1
 				uses = 1
-				category = fighter_techs
+				category = light_fighter
 				category = light_air
 				category = medium_air
 				category = heavy_air
@@ -5703,7 +5677,7 @@ focus = {
 				name = fighter_techs_bonus
 				bonus = 1
 				uses = 1
-				category = fighter_techs
+				category = light_fighter
 			}
 		}
 		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
@@ -6007,7 +5981,7 @@ focus = {
 
 	focus = {
 		id = TXS_G_Men
-		icon = GFX_goal_secret_agents
+		icon = GFX_goal_generic_police_state
 		x = -3
 		y = 3
 		relative_position_id = TXS_break_the_sword
@@ -6030,7 +6004,7 @@ focus = {
 
 	focus = {
 		id = TXS_dissolve_the_senate
-		icon = GFX_goal_USA_police_state
+		icon = GFX_goal_CAL_sideline_senate
 		x = -2
 		y = 4
 		relative_position_id = TXS_break_the_sword
@@ -6057,7 +6031,7 @@ focus = {
 
 	focus = {
 		id = TXS_autocracy_without_opression
-		icon = GFX_goal_ideology_paternal_autocrat
+		icon = GFX_RUS_Downplay_State_Terror
 		x = -1
 		y = 5
 		relative_position_id = TXS_break_the_sword
@@ -6087,7 +6061,7 @@ focus = {
 
 	focus = {
 		id = TXS_freedom_without_democracy
-		icon = GFX_goal_ideology_social_liberal
+		icon = GFX_NEE_defend_freedom_from_democracy
 		x = -3
 		y = 5
 		relative_position_id = TXS_break_the_sword
@@ -6194,7 +6168,7 @@ focus = {
 
 	focus = {
 		id = TXS_civilian_government
-		icon = GFX_goal_volunteer_alliance
+		icon = GFX_goal_WCC_civilian_allies
 		x = 3
 		y = 2
 		relative_position_id = TXS_break_the_sword
@@ -6216,7 +6190,7 @@ focus = {
 
 	focus = {
 		id = TXS_promises_of_democracy
-		icon = GFX_goal_KTG_Elections
+		icon = GFX_RUS_Lessons_Of_Democracy
 		x = 3
 		y = 3
 		relative_position_id = TXS_break_the_sword
@@ -6234,7 +6208,7 @@ focus = {
 
 	focus = {
 		id = TXS_free_elections
-		icon = GFX_goal_texas_liberty
+		icon = GFX_goal_LIC_elections
 		x = 2
 		y = 4
 		relative_position_id = TXS_break_the_sword
@@ -6293,7 +6267,7 @@ focus = {
 
 	focus = {
 		id = TXS_a_nation_of_free_men
-		icon = GFX_goal_texas_seal_2
+		icon = GFX_goal_CZE_defend_freedom
 		x = 1
 		y = 5
 		relative_position_id = TXS_break_the_sword
@@ -6364,7 +6338,7 @@ focus = {
 
 	focus = {
 		id = TXS_coalition_against_leftists
-		icon = GFX_goal_HOL_ban_paramilitary_left
+		icon = GFX_RUS_Socialism_Under_Control
 		x = -1
 		y = 2
 		relative_position_id = TXS_break_the_sword
@@ -6386,7 +6360,7 @@ focus = {
 
 	focus = {
 		id = TXS_military_government
-		icon = GFX_goal_Focus_Military_Mobilisation
+		icon = GFX_goal_NFA_military_supremacy
 		x = -1
 		y = 3
 		relative_position_id = TXS_break_the_sword
@@ -6404,7 +6378,7 @@ focus = {
 	
 	focus = {
 		id = TXS_balance_of_power
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_LPD_strike_balance
 		x = 0
 		y = 4
 		relative_position_id = TXS_break_the_sword
@@ -6421,7 +6395,7 @@ focus = {
 
 	focus = {
 		id = TXS_new_Beuracracy
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		icon = GFX_DKB_Bureaucracy
 		x = 1
 		y = 2
 		relative_position_id = TXS_break_the_sword
@@ -6467,6 +6441,10 @@ focus = {
 		cost = 0
 		ai_will_do = { factor = 2 }
 		available = {
+			has_country_leader = { ruling_only = yes name = "Andrew I" }
+			has_country_flag = TXS_kingdom_founded
+		}
+		bypass = {
 			has_country_leader = { ruling_only = yes name = "Andrew I" }
 			has_country_flag = TXS_kingdom_founded
 		}
@@ -6587,7 +6565,7 @@ focus = {
 				popularity = -0.15
 			}
 			add_popularity = {
-				ideology = paternal_autocrat
+				ideology = national_populist
 				popularity = -0.15
 			}
 		}
@@ -6608,6 +6586,12 @@ focus = {
 			swap_ideas = {
 				remove_idea = TXS_illegitimate_kingdom_1
 				add_idea = TXS_illegitimate_kingdom_2
+			}
+			hidden_effect = {
+				country_event = {
+					id = cathdeath.118
+					days = 25
+				}
 			}
 		}
 	}

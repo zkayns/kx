@@ -16,27 +16,24 @@ focus_tree = {
 		cost = 20.00
 		x = 8
 		y = 0
-			select_effect = {
-					hidden_effect = {
-							country_event = {
-									id = uob.1
-									days = 45
-								}
-						}
+		select_effect = {
+			hidden_effect = {
+				country_event = {
+					id = uob.1
+					days = 45
 				}
-			ai_will_do = {
-					factor = 10
-				}
-			completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus ENG_tuc"
-					custom_effect_tooltip = ENG_start_tuc1
-				}
-
+			}
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_tuc"
+			custom_effect_tooltip = ENG_start_tuc1
+		}
 	}
 	focus = {
 		id = ENG_always_watching
 		text = ENG_always_watching
-		icon = GFX_goal_ENG_always_watching
+		icon = GFX_goal_ENG_maximist_women
 		cost = 6.00
 		prerequisite = {
 			focus = ENG_revolution
@@ -51,19 +48,9 @@ focus_tree = {
 				}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_always_watching"
-                    custom_effect_tooltip = ENG_1984
-                    add_tech_bonus = {
-                          bonus = 0.5
-                          uses = 1
-                          category = encryption_tech
-                    } 
-                    add_tech_bonus = {
-                          bonus = 0.5
-                          uses = 1
-                          category = decryption_tech
-                    } 
-					add_stability = 0.15
-					add_political_power = 50
+					add_command_power = 12
+					add_manpower = 14000
+					add_stability = 0.02
 				}
 	}
 	focus = {
@@ -138,11 +125,13 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_lives"
 					set_cosmetic_tag = ENG_Mosley_totalist
+					country_event = { id = uob.1000 days = 30 }
 					swap_ideas = {
 							remove_idea = ENG_maximist_idea
 							add_idea = ENG_maximist_idea2
-						}
+							}
 				}
+		
 	}
 	focus = {
 		id = ENG_lawrence_of_britannia
@@ -166,7 +155,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_status_quo
-		icon = GFX_Socialist_Law
+		icon = GFX_goal_CSA_coop_clubs
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc
@@ -221,7 +210,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_decentralized_command
-		icon = GFX_goal_planning_bonus
+		icon = GFX_goal_CSA_empower_red_militias
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_improve_army
@@ -320,7 +309,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_central_command
-		icon = GFX_goal_checkmate
+		icon = GFX_goal_CSA_centralist_reorganization
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_improve_army
@@ -408,11 +397,12 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
+			CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 		}
 	}
 	focus = {
 		id = ENG_dickens_plan
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_CRO_battleship_research
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_revolutionary_admiralty
@@ -452,6 +442,7 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
+			CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 		}
 	}
 	focus = {
@@ -525,12 +516,13 @@ focus_tree = {
 					uses = 1
 					category = bb_tech
 				}
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 			}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = ENG_international
-		icon = GFX_goal_FRA_Internationale_Congress
+		icon = GFX_goal_NYC_Colorblind_Proletariat
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc
@@ -564,7 +556,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_class_warfare
-		icon = GFX_focus_eng_move_to_secure_the_dominions
+		icon = GFX_goal_CSA_subdue_bourgeoisie
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_international
@@ -593,7 +585,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_blood
-		icon = GFX_goal_flames_of_rebellion
+		icon = GFX_goal_CSA_lead_the_revolution
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_class_warfare
@@ -616,7 +608,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_home_front_victory
-		icon = GFX_goal_syndicalist_workers
+		icon = GFX_goal_CSA_protect_working_class
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_blood
@@ -638,7 +630,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_fortress_britain
-		icon = GFX_focus_generic_bastion_of_democracy
+		icon = GFX_goal_CZE_fortress_autocracy
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_class_warfare
@@ -834,7 +826,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_total_mobilization
-		icon = GFX_goal_generic_industry_reallocation
+		icon = GFX_goal_CSA_revolutionary_army
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_blood
@@ -926,7 +918,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_westminster_project
-		icon = GFX_goal_nuclear
+		icon = GFX_goal_UMN_uranium_diplomacy
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_bletchley_park
@@ -956,7 +948,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_statistical_warfare
-		icon = GFX_goal_electronics
+		icon = GFX_electronicsarethefuture
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_bletchley_park
@@ -981,7 +973,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_the_common_land
-		icon = GFX_focus_AUS_agriculture
+		icon = GFX_RUS_National_Agrarian_Fund
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc
@@ -999,7 +991,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_home_rule
-		icon = GFX_socialist_constitution
+		icon = GFX_goal_CSA_townhall_democarcy
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc
@@ -1016,7 +1008,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_dissolve_tuc
-		icon = GFX_goal_DEI_focus_disband_volksraad
+		icon = GFX_goal_CSA_hit_the_superstructure
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_home_rule
@@ -1038,7 +1030,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_new_capital
-		icon = GFX_focus_prc_agrarian_socialism
+		icon = GFX_goal_NFA_mass_movement
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_home_rule
@@ -1060,7 +1052,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_devolution
-		icon = GFX_goal_ideology_radical_socialist
+		icon = GFX_goal_autonomism
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_dissolve_tuc
@@ -1082,12 +1074,18 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_devolution"
 					country_event = uob.514
+					hidden_effect = {
+						country_event = {
+							id = uobflavour.39
+							days = 15
+						}
+					}
 				}
 
 	}
 	focus = {
 		id = ENG_three_armies
-		icon = GFX_goal_generic_join_faction
+		icon = GFX_goal_GUA_People_Army
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_devolution
@@ -1123,7 +1121,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_evolution
-		icon = GFX_goal_ideology_syndicalist
+		icon = GFX_RUS_Syndical_Cooperative_Federation
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_status_quo
@@ -1180,7 +1178,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_tuc2
-		icon = GFX_goal_HOL_council_communism
+		icon = GFX_goal_KIV_congolese_tuc
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_devolution
@@ -1284,7 +1282,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_tuc2_internal
-		icon = GFX_goal_agency
+		icon = GFX_RUS_Cut_Red_Tape
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc2
@@ -1303,7 +1301,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_tuc2_demobilization
-		icon = GFX_goal_break_rifle
+		icon = GFX_goal_ALB_Purge_Purgers
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc2_economy
@@ -1414,7 +1412,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_reeducation_camps
-		icon = GFX_HOL_papua_camps
+		icon = GFX_goal_ZAM_punishment_camps
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_a_new_RED
@@ -1474,7 +1472,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_remove_opposition
-		icon = GFX_goal_purge_opposition
+		icon = GFX_goal_NFA_cdg_army_purge
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_the_ignorant_man_named_oswald_mosley
@@ -1662,7 +1660,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_restore_socialist_democracy
-		icon = GFX_goal_generic_socialist_democracy
+		icon = GFX_goal_KIV_socialist_democracy
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_the_defender_of_liberty
@@ -1738,7 +1736,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_armed_state
-		icon = GFX_goal_army_guy_2
+		icon = GFX_goal_CSA_empower_red_militias
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_expand_home_guard
@@ -1761,7 +1759,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_increase_military_funding
-		icon = GFX_goal_generic_foreign_investments
+		icon = GFX_goal_CSA_peoples_military_academy
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_armed_state
@@ -1802,7 +1800,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_revitalized_industry
-		icon = GFX_GBR_fate_of_unions
+		icon = GFX_NEE_industry_specialists
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_increase_military_funding
@@ -1908,7 +1906,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_limited_privatization
-		icon = GFX_goal_bag_of_money
+		icon = GFX_RUS_Encourage_Private_Property
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_be_better_than_them
@@ -2067,7 +2065,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_local_help
-		icon = GFX_goal_syndicalist_workers
+		icon = GFX_CAL_workers_compensation_act
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_local_talent
@@ -2091,7 +2089,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_local_initiative
-		icon = GFX_goal_workers_for_business
+		icon = GFX_goal_CZE_worker_justice
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_local_help
@@ -2112,7 +2110,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_central_industry_research
-		icon = GFX_goal_social_reforms
+		icon = GFX_goal_CSA_industrial_unionism
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_the_common_land
@@ -2151,7 +2149,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_militarized_industry
-		icon = GFX_goal_Focus_Military_Mobilisation
+		icon = GFX_BBR_industrializing_land
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_central_industry_research
@@ -2175,7 +2173,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_mobilized_industry
-		icon = GFX_goal_economic_control
+		icon = GFX_CRM_Economic_Council
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_militarized_industry
@@ -2196,7 +2194,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_expand_industry_1
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_BBR_group_economy
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_local_talent
@@ -2238,7 +2236,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_expand_industry_2
-		icon = GFX_goal_factory_complex
+		icon = GFX_goal_CSA_new_economic_planning
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_expand_industry_1
@@ -2279,7 +2277,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_military_industry
-		icon = GFX_goal_industry_air
+		icon = GFX_goal_CZE_air_industry
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_local_talent
@@ -2321,7 +2319,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_military_industry2
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_goal_CSA_tanks_of_the_revolution
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_military_industry
@@ -2362,7 +2360,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_british_rail_reform
-		icon = GFX_goal_OTT_Railroad
+		icon = GFX_BAY_RAILWAYS
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_local_initiative
@@ -2428,7 +2426,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_technical_expertise
-		icon = GFX_focus_generic_socialist_science
+		icon = GFX_goal_CSA_technocratic_subjugation
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_british_rail_reform
@@ -2505,7 +2503,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_officer_corps_academy
-		icon = GFX_goal_officers
+		icon = GFX_goal_CSA_radicalized_training
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_improve_army
@@ -2545,7 +2543,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_reform_militia
-		icon = GFX_goal_integrate_the_militia
+		icon = GFX_goal_CSA_militia_support
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_officer_corps_experience
@@ -2594,7 +2592,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_dissolve_militias
-		icon = GFX_goal_reform_socialist_army
+		icon = GFX_goal_CSA_centralist_reorganization
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_officer_corps_experience
@@ -2682,7 +2680,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_improve_army2
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_CSA_CSS_radicalization_campaign
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_reform_militia
@@ -2758,7 +2756,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_purge_militia_remains
-		icon = GFX_focus_generic_military_academy
+		icon = GFX_BBR_red_militia_justice
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_reform_militia
@@ -2842,7 +2840,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_tank_research
-		icon = GFX_goal_generic_army_tanks2
+		icon = GFX_goal_ENG_britannias_tanks
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_motorised
@@ -2881,7 +2879,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_women_soldiers
-		icon = GFX_focus_generic_female_soldiers
+		icon = GFX_goal_ALB_People_Army
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_reform_militia
@@ -2964,6 +2962,7 @@ focus_tree = {
 						uses = 1
 						category = naval_doctrine
 						}
+						CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 				}
 
 	}
@@ -3018,6 +3017,7 @@ focus_tree = {
 						category = ss_tech
 					}
 				}
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 			}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3066,6 +3066,7 @@ focus_tree = {
 						category = dd_tech
 					}
 				}
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 			}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3105,6 +3106,7 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_anstice_plan"
 					navy_experience = 10
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
 				cost_reduction = 0.5
@@ -3141,6 +3143,7 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetDateText]: [Root.GetName]: Focus ENG_carrier_efforts"
 				navy_experience = 20
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_tech_bonus = {
 						name = ENG_carrier_efforts
 						bonus = 1
@@ -3178,6 +3181,7 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_naval_aviation"
 					navy_experience = 20
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_tech_bonus = {
 							name = ENG_naval_aviation
 							bonus = 1
@@ -3215,6 +3219,7 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetDateText]: [Root.GetName]: Focus ENG_battlecruisers"
 				navy_experience = 20
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 				if = {
 					limit = { has_dlc = "Man the Guns" }
 					add_tech_bonus = {
@@ -3274,6 +3279,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_merchant_marine"
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_ideas = ENG_merchant_marine_idea
 				}
 
@@ -3310,6 +3316,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_expand_dockyards"
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					121 = {
 							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
@@ -3339,7 +3346,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_republican_marines
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_goal_ENG_republican_marines
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_submarines
@@ -3369,6 +3376,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_republican_marines"
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_ideas = ENG_republican_marines_ideas
 					add_tech_bonus = {
 							name = ENG_republican_marines
@@ -3412,6 +3420,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_brittania_rules_the_waves"
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					swap_ideas = {
 						remove_idea = ENG_revolutionary_admiralty_idea
 						add_idea = ENG_revolutionary_navy_idea
@@ -3783,7 +3792,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_show_of_force
-		icon = GFX_focus_generic_navy_battleship3
+		icon = GFX_HUN_hungary_diplomat
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_international
@@ -3814,7 +3823,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_show_of_force_dip
-		icon = GFX_goal_foreign_diplomacy
+		icon = GFX_goal_IRE_gallant_allies
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_show_of_force
@@ -3823,40 +3832,33 @@ focus_tree = {
 			focus = ENG_show_of_force_mil
 		}
 		available = {
-			has_socialist_government = yes
 		}
 		x = -8
 		y = 2
 		relative_position_id = ENG_international
-			bypass = {
-					IRE = {
-							OR = {
-									exists = no
-									has_socialist_government = yes
-									is_subject_of = ROOT
-									is_in_faction_with = ROOT
-									has_war_with = ROOT
-								}
-						}
-				}
-			available = {
-					IRE = {
-							has_socialist_government = no
-							is_in_faction = no
-							is_subject = no
-						}
-					can_declare_war_on = IRE
-					OR = {
-							has_global_flag = ENG_CANIRE_protection
-							has_global_flag = ENG_CANIRE_support
-							has_global_flag = ENG_GERIRE_protection
-							has_global_flag = ENG_GERIRE_support
-							has_global_flag = ENG_IRE_alone
-						}
-				}
-			ai_will_do = {
-					factor = 50
-				}
+		bypass = {
+			OR = {
+				NOT = { country_exists = IRE }
+				IRE = { has_socialist_government = yes }
+			}
+		}
+		available = {
+			has_socialist_government = yes
+			can_declare_war_on = IRE
+			IRE = {
+				has_socialist_government = no
+				is_in_faction = no
+				is_subject = no
+			}
+			OR = {
+				has_global_flag = ENG_CANIRE_protection
+				has_global_flag = ENG_CANIRE_support
+				has_global_flag = ENG_GERIRE_protection
+				has_global_flag = ENG_GERIRE_support
+				has_global_flag = ENG_IRE_alone
+			}
+		}
+		ai_will_do = { factor = 50 }
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_show_of_force_dip"
 					country_event = uob.60
@@ -3882,7 +3884,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_show_of_force_mil
-		icon = GFX_goal_CSA_irish_revolution
+		icon = GFX_goal_IRE_social_revolution
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_show_of_force
@@ -3890,90 +3892,144 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_show_of_force_dip
 		}
-		available = {
-			has_socialist_government = yes
-		}
 		x = -6
 		y = 2
 		relative_position_id = ENG_international
-			available = {
+		available = {
+			has_socialist_government = yes
+			can_declare_war_on = IRE
+			IRE = {
+				has_socialist_government = no
+			}
+			OR = {
+				has_global_flag = ENG_CANIRE_protection
+				has_global_flag = ENG_CANIRE_support
+				has_global_flag = ENG_GERIRE_protection
+				has_global_flag = ENG_GERIRE_support
+				has_global_flag = ENG_IRE_alone
+			}
+			hidden_trigger = {
+				NOT = {
+					is_ai = yes
 					IRE = {
-							exists = yes
-							has_socialist_government = no
+						OR = {
+							is_in_faction = yes
+							has_guarantor = yes
 						}
-					can_declare_war_on = IRE
+					}
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = { can_declare_war_on = IRE }
+				IRE = { has_socialist_government = yes }
+			}
+		}
+		will_lead_to_war_with = IRE
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				enemies_strength_ratio > 0.5
+			}
+			modifier = {
+				factor = 0
+				surrender_progress > 0
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = IRE ratio < 2 }
+			}
+			modifier = {
+				factor = 0
+				IRE = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = { tag = ROOT ratio > 0.5 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				IRE = {
+					is_in_faction = yes
+					any_allied_country = {
+						strength_ratio = { tag = ROOT ratio > 0.5 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				date < 1939.1.1
+				IRE = {
 					OR = {
-							has_global_flag = ENG_CANIRE_protection
-							has_global_flag = ENG_CANIRE_support
-							has_global_flag = ENG_GERIRE_protection
-							has_global_flag = ENG_GERIRE_support
-							has_global_flag = ENG_IRE_alone
-						}
+						is_in_faction_with = GER
+						is_in_faction_with = ENT
+						is_guaranteed_by = GER
+						is_guaranteed_by = ENT
+					}
 				}
-			bypass = {
-					IRE = {
-							OR = {
-									exists = no
-									has_socialist_government = yes
-									is_subject_of = ROOT
-									is_in_faction_with = ROOT
-									has_war_with = ROOT
-								}
-						}
+			}
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+				IRE = {
+					OR = {
+						is_in_faction_with = GER
+						is_in_faction_with = ENT
+						is_guaranteed_by = GER
+						is_guaranteed_by = ENT
+					}
 				}
-			will_lead_to_war_with = IRE
-			ai_will_do = {
-					factor = 50
-				}
-			completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus ENG_show_of_force_mil"
-					create_wargoal = {
-							type = annex_everything
-							target = IRE
-						}
-				}
-
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_show_of_force_mil"
+			declare_war_on = {
+				type = annex_everything
+				target = IRE
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
 		id = ENG_anglo_irish_friendship
-		icon = GFX_goal_irish_flag
+		icon = GFX_goal_IRE_language_equality
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_show_of_force_dip
 			focus = ENG_show_of_force_mil
 		}
-		available = {
-			has_socialist_government = yes
-		}
 		x = -7
 		y = 3
 		relative_position_id = ENG_international
-			bypass = {
-					IRE = {
-							exists = no
-						}
+		bypass = {
+			IRE = {
+				exists = no
+			}
+		}
+		available = {
+			has_socialist_government = yes
+			IRE = {
+				exists = yes
+				has_socialist_government = yes
+				is_in_faction = no
+				is_subject = no
+				NOT = {
+					has_war_with = ROOT
 				}
-			available = {
-					IRE = {
-							exists = yes
-							has_socialist_government = yes
-							is_in_faction = no
-							is_subject = no
-							NOT = {
-									has_war_with = ROOT
-								}
-						}
-				}
-			ai_will_do = {
-					factor = 15
-				}
-			completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus ENG_anglo_irish_friendship"
-					IRE = {
-							country_event = uob.364
-						}
-				}
-
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_anglo_irish_friendship"
+			IRE = {
+				country_event = uob.364
+			}
+		}
 	}
 	focus = {
 		id = ENG_support_comrades
@@ -4116,7 +4172,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_mexican_comrades
-		icon = GFX_goal_mexico
+		icon = GFX_goal_MEX_Trabajadores_y_Sindicatos
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_support_comrades
@@ -4157,7 +4213,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_indian_comrades
-		icon = GFX_goal_india_commune
+		icon = GFX_goal_SKM_Bhartiya
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_support_comrades
@@ -4278,7 +4334,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_further_cooperation
-		icon = GFX_goal_red_star_gold_wreath
+		icon = GFX_BBR_internationale_collaboration
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_american_comrades
@@ -4301,7 +4357,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_liberation_of_canada
-		icon = GFX_focus_eng_decolonization
+		icon = GFX_RUS_Raise_The_Red_Banners
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_anglo_irish_friendship
@@ -4376,8 +4432,8 @@ focus_tree = {
 			has_country_flag= BRG_new_britain
 		}
 		ai_will_do = {
-			factor = 1
-		}
+					factor = 100
+				}
 		completion_reward = {
 			country_event = basedbrit.1
 		}
@@ -4391,8 +4447,8 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
-		}
+					factor = 100
+				}
 		prerequisite = {
 			focus = BRG_death_to_revoltuion
 		}
@@ -4409,8 +4465,8 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
-		}
+					factor = 100
+				}
 		prerequisite = {
 			focus = BRG_manhunt_mosley
 		}
@@ -4428,12 +4484,18 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
-		}
+					factor = 100
+				}
 		prerequisite = {
 			focus = BRG_death_to_revoltuion
 		}
 		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = basedbrit.128
+					days = 15
+				}
+			}
 			swap_ideas = {
 				remove_idea= BRG_revolutionary_threat
 				add_idea= BRG_revolutionary_threat2
@@ -4449,7 +4511,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		prerequisite = {
 			focus = BRG_secure_goverment
@@ -4467,7 +4529,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		prerequisite = {
 			focus = BRG_death_to_revoltuion
@@ -4495,7 +4557,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		prerequisite = {
 			focus = BRG_purge_army
@@ -4513,7 +4575,7 @@ focus_tree = {
 		cost = 4
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		prerequisite = {
 			focus = BRG_home_countries
@@ -4539,7 +4601,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		prerequisite = {
 			focus = BRG_return_of_exiles
@@ -4571,7 +4633,7 @@ focus_tree = {
 			focus = BRG_christian_unity 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -4604,7 +4666,7 @@ focus_tree = {
 			focus = BRG_decentralize_guild_leadership 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -4627,7 +4689,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_the_organic_state }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -4656,7 +4718,7 @@ focus_tree = {
 			focus = BRG_catholic_corporatism 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_10 = yes
@@ -4683,7 +4745,7 @@ focus_tree = {
 		prerequisite = { focus = BRG_a_distributist_model
 		focus = BRG_local_authority }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -4706,12 +4768,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_the_ramsay_cabinet }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.12
   			add_ideas= BRG_Trad_Gov_1
-			  unlock_decision_tooltip = BRG_factionering_dummy
+			unlock_decision_tooltip = BRG_factionering_dummy
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = BRG_CATHOLIC_paternal_autocrat_party_long
@@ -4731,7 +4793,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_the_ramsay_cabinet }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -4756,7 +4818,7 @@ focus_tree = {
 			focus = BRG_christian_unity 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -4783,7 +4845,7 @@ focus_tree = {
 		}
 	
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -4814,7 +4876,7 @@ focus_tree = {
 			focus = BRG_a_distributist_model 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -4836,7 +4898,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_the_ramsay_cabinet }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.11 
@@ -4867,7 +4929,7 @@ focus_tree = {
 		}
 		relative_position_id = BRG_the_ramsay_cabinet
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.14 
@@ -4895,7 +4957,7 @@ focus_tree = {
 		prerequisite = { focus = BRG_confront_the_trojan_horse }
 		relative_position_id = BRG_the_ramsay_cabinet
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas= BRG_dist_econ
@@ -4919,7 +4981,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_the_organic_state }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.17 
@@ -4941,7 +5003,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		bypass = {
 			has_country_flag= BRG_national_populist_britain
@@ -4968,7 +5030,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_legionary_triumph }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -4976,10 +5038,10 @@ focus_tree = {
 			add_war_support= 0.05
 			add_ideas = BRG_true_nationalism
 			hidden_effect = {
-				 country_event = {
+				country_event = {
 					id = basedbrit.56
 					days = 15
-				 }
+				}
 			}
 		}
 	}
@@ -4995,12 +5057,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_legionary_triumph }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.24
   			add_ideas= BRG_leg_elite
-			  unlock_decision_tooltip = BRG_factionering_dummy
+			unlock_decision_tooltip = BRG_factionering_dummy
 		}
 	}
 
@@ -5015,7 +5077,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_legionary_triumph }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas= BRG_Patriotic_Econ
@@ -5035,7 +5097,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_expose_world_jewry }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 				swap_ideas = {
@@ -5074,7 +5136,7 @@ focus_tree = {
 			focus = BRG_the_knightly_ideal 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -5100,7 +5162,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_patriotism_for_the_working_man }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -5124,7 +5186,7 @@ focus_tree = {
 			focus = BRG_norman_identity 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 				swap_ideas = {
@@ -5150,7 +5212,7 @@ focus_tree = {
 			focus = BRG_rights_to_defend 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -5181,7 +5243,7 @@ focus_tree = {
 			focus = BRG_an_aristocracy_of_legionaires 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 				swap_ideas = {
@@ -5206,7 +5268,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_superhuman_heroism }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -5236,7 +5298,7 @@ focus_tree = {
 			focus = BRG_the_abolition_of_unemployment 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -5258,7 +5320,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_superhuman_heroism }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 				swap_ideas = {
@@ -5278,7 +5340,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		bypass = {
 			has_country_flag= BRG_HOBART_britain
@@ -5308,7 +5370,7 @@ focus_tree = {
 		prerequisite = { focus = BRG_centralised_governance }
 		mutually_exclusive = { focus = BRG_heir_to_cromwell }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 1000
 				has_game_rule = {
@@ -5338,7 +5400,7 @@ focus_tree = {
 		prerequisite = { focus = BRG_centralised_governance }
 		mutually_exclusive = { focus = BRG_elect_a_king }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 1000
 				has_game_rule = {
@@ -5370,7 +5432,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_the_hobart_regime }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas= BRG_mil_state
@@ -5380,7 +5442,7 @@ focus_tree = {
 	#Focus for Military-Industrial Complex
 	focus = {
 		id = BRG_militaryindustrial_complex
-		icon = GRU_CORPORATE_MILITARY_INDUSTRIAL_COMPLEX
+		icon = GFX_GRU_CORPORATE_MILITARY_INDUSTRIAL_COMPLEX
 		relative_position_id = BRG_the_hobart_regime
 		x = 4
 		y = 5
@@ -5388,7 +5450,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_privatisation_frenzy }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -5418,7 +5480,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_political_power= 50
@@ -5437,7 +5499,7 @@ focus_tree = {
 		prerequisite = { focus = BRG_subordinate_parliment }
 		mutually_exclusive = { focus = BRG_militarist_constitution }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.42
@@ -5461,7 +5523,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_militarist_constitution }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 				swap_ideas = {
@@ -5497,41 +5559,18 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas= BRG_mil_dom
-			hidden_effect = {
-					if = {
-						limit = {
-							has_country_flag = BRG_elected_king
-							NOT = {
-								has_country_flag = BRG_woman_moment
-							}
-						}
-						country_event = {
-							id = basedbrit.112
-							days = 15
-						}
-					}
-					if = {
-						limit = {
-							has_country_flag = BRG_elected_king
-							has_country_flag = BRG_woman_moment
-						}
-						country_event = {
-							id = basedbrit.113
-							days = 15
-						}
-					}
-				}
+		
 		}
 	}
 
 	#Focus for Extend the Military Budget
 	focus = {
 		id = BRG_extend_the_military_budget
-		icon = MON_army_money
+		icon = GFX_MON_army_money
 		relative_position_id = BRG_the_hobart_regime
 		x = 0
 		y = 1
@@ -5544,14 +5583,13 @@ focus_tree = {
 			has_completed_focus = BRG_centralised_governance
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
 					remove_idea= BRG_mil_state  
 				add_idea= BRG_mil_state_2
 				}
-			
 		}
 	}
 
@@ -5569,7 +5607,7 @@ focus_tree = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 				swap_ideas = {
@@ -5600,7 +5638,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = BRG_privatisation_frenzy }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas= BRG_reg_market
@@ -5618,7 +5656,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_keep_the_market_in_check }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -5640,7 +5678,7 @@ focus_tree = {
 		prerequisite = { focus = BRG_assess_financial_policy }
 		mutually_exclusive = { focus = BRG_keep_the_market_in_check }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas= BRG_free_market_econ
@@ -5660,7 +5698,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_rigged_elections }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_10 = yes
@@ -5682,7 +5720,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_entrench_the_military_state }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_stability= -0.05  
@@ -5708,7 +5746,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = BRG_the_hobart_regime }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_war_support= 0.05  
@@ -5738,7 +5776,7 @@ focus_tree = {
 		prerequisite = { focus = BRG_subordinate_parliment }
 		mutually_exclusive = { focus = BRG_rigged_elections }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.41
@@ -5768,7 +5806,7 @@ focus_tree = {
 			focus = BRG_tighten_conscription 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -5793,7 +5831,7 @@ focus_tree = {
 			focus = BRG_future_of_warfare 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 				swap_ideas = {
@@ -5821,7 +5859,7 @@ focus_tree = {
 			focus = BRG_tighten_conscription 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_research_slot = 1
@@ -5850,7 +5888,7 @@ focus_tree = {
 			has_country_flag = BRG_liberal_britain
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_political_power = 50
@@ -5868,7 +5906,7 @@ focus_tree = {
 			focus = BRG_atlee_cabinet  
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas = BRG_libtard1
@@ -5887,7 +5925,7 @@ focus_tree = {
 			focus = BRG_atlee_cabinet  
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas = BRG_libtard_eco1
@@ -5912,7 +5950,7 @@ focus_tree = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -5932,7 +5970,7 @@ focus_tree = {
 		}
 	
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -5956,7 +5994,7 @@ focus_tree = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -5985,7 +6023,7 @@ focus_tree = {
 			focus = BRG_moderate_socialists
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -6008,7 +6046,7 @@ focus_tree = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -6030,7 +6068,7 @@ focus_tree = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.51
@@ -6050,7 +6088,7 @@ focus_tree = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			country_event = basedbrit.52
@@ -6076,7 +6114,7 @@ focus_tree = {
 			focus = BRG_cut_back_syndies
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
@@ -6095,17 +6133,16 @@ focus_tree = {
 		y = 6
 		cost = 5
 		available_if_capitulated = yes
-		
-		prerequisite = { 
-			focus = BRG_weedout_maxiumists
-		}
-		prerequisite = { 
-			focus = BRG_election_safeguards
-		}
+		prerequisite = {  focus = BRG_weedout_maxiumists }
+		prerequisite = { focus = BRG_election_safeguards }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRG_libtard3
+				add_idea = BRG_libtard4
+			}
 			country_event = basedbrit.54
 		}
 	}
@@ -6122,13 +6159,13 @@ focus_tree = {
 			focus = BRG_new_class_clap
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			swap_ideas = {
-					remove_idea= BRG_libtard_eco3  
-				add_idea= BRG_libtard_eco4
-				}
+				remove_idea = BRG_libtard_eco3  
+				add_idea = BRG_libtard_eco4
+			}
 		}
 	}
 	focus = {
@@ -6146,11 +6183,19 @@ focus_tree = {
 			focus = BRG_welfare_state
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			increase_ruling_party_popularity_by_10 = yes
 			country_event = basedbrit.55
+			hidden_effect = {
+				ENG = {
+					country_event = {
+						id = basedbrit.129
+						days = 30
+					}
+				}
+			}
 			unlock_decision_tooltip = BRG_rebuilding_empire_dummy
 		}
 	}

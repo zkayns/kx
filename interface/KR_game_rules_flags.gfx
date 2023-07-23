@@ -71,6 +71,46 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_KR_game_rule_flag_IRE_BLUESHIRT"
+		texturefile = "gfx/flags/small/IRE_BLUESHIRT.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_IRE_national_populist"
+		texturefile = "gfx/flags/small/IRE_national_populist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_IRE_kingdom"
+		texturefile = "gfx/flags/small/IRE_kingdom.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_IRE_IRE_WAL_UNION"
+		texturefile = "gfx/flags/small/IRE_IRE_WAL_UNION.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_IRE_syndicalist"
+		texturefile = "gfx/flags/small/IRE_syndicalist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_IRE_kingdom_germs"
+		texturefile = "gfx/flags/small/IRE_kingdom_germs.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_IRE_uk_exile"
+		texturefile = "gfx/flags/small/IRE_uk_exile.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_IRE_kingdom7"
+		texturefile = "gfx/flags/small/IRE_kingdom7.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_KR_game_rule_flag_GBR"
 		texturefile = "gfx/flags/small/GBR.tga"
 		legacy_lazy_load = no
@@ -216,11 +256,6 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_KR_game_rule_flag_UKR_syndicalist"
-		texturefile = "gfx/flags/small/UKR_syndicalist.tga"
-		legacy_lazy_load = no
-	}
-	spriteType = {
 		name = "GFX_KR_game_rule_flag_LIT"
 		texturefile = "gfx/flags/small/LIT.tga"
 		legacy_lazy_load = no
@@ -251,8 +286,13 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_KR_game_rule_flag_WHR_MONBOLCOSMETIC"
-		texturefile = "gfx/flags/small/WHR_MONBOLCOSMETIC.tga"
+		name = "GFX_KR_game_rule_flag_WHR_anarchy"
+		texturefile = "gfx/flags/small/WHR_anarchy.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_WHR_illegalist"
+		texturefile = "gfx/flags/small/WHR_anarchy_radical_socialist.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -407,7 +447,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_KR_game_rule_flag_FIN_paternal_autocrat"
-		texturefile = "gfx/flags/small/FIN_paternal_autocrat.tga"
+		texturefile = "gfx/flags/small/FIN_kingdom.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -503,13 +543,28 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_KR_game_rule_flag_CSA_socialist_republic"
-		texturefile = "gfx/flags/small/CSA_socialist_republic.tga"
+		name = "GFX_KR_game_rule_flag_CSA_syndie"
+		texturefile = "gfx/flags/small/CSA_syndie.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_KR_game_rule_flag_CSA_socialist_union_of_america"
-		texturefile = "gfx/flags/small/CSA_socialist_union_of_america.tga"
+		name = "GFX_KR_game_rule_flag_CSA_browder_red"
+		texturefile = "gfx/flags/small/CSA_browder_red.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_CSA_TUUL_Flag"
+		texturefile = "gfx/flags/small/CSA_TUUL_Flag.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_CSA_socialist_republic1"
+		texturefile = "gfx/flags/small/CSA_socialist_republic1.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_CSA_burnham2_UASR"
+		texturefile = "gfx/flags/small/CSA_burnham2_UASR.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -543,13 +598,53 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_KR_game_rule_flag_CAN_UK_CAN"
+		texturefile = "gfx/flags/small/CAN_UK_CAN.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_CAN_Dominion_Green"
+		texturefile = "gfx/flags/small/CAN_Dominion_Green.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_KR_game_rule_flag_MEX"
 		texturefile = "gfx/flags/small/MEX.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_KR_game_rule_flag_MEX_synarchist"
+		texturefile = "gfx/flags/small/MEX_synarchist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_MEX_integralist"
+		texturefile = "gfx/flags/small/MEX_integralist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_KR_game_rule_flag_MEX_national_populist"
 		texturefile = "gfx/flags/small/MEX_national_populist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_MEX_MEXICAN_SOVIET"
+		texturefile = "gfx/flags/small/MEX_MEXICAN_SOVIET.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_MEX_syndicalist"
+		texturefile = "gfx/flags/small/MEX_syndicalist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_MEX_totalist"
+		texturefile = "gfx/flags/small/MEX_totalist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_MEX_REGENCY"
+		texturefile = "gfx/flags/small/MEX_REGENCY.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -591,7 +686,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_KR_game_rule_flag_BRA_national_populist"
-		texturefile = "gfx/flags/small/BRA_national_populist.tga"
+		texturefile = "gfx/flags/small/BRA_integralist_regency.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -930,7 +1025,37 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_KR_game_rule_flag_GEO_TOT"
-		texturefile = "gfx/flags/small/GEO.tga"
+		texturefile = "gfx/flags/small/GEO_stalin.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_ABK"
+		texturefile = "gfx/flags/small/ABK.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_ABK_radical_socialist"
+		texturefile = "gfx/flags/small/ABK_radical_socialist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_ABK_kingdom"
+		texturefile = "gfx/flags/small/ABK_kingdom.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_ABK_paternal_autocrat"
+		texturefile = "gfx/flags/small/ABK_paternal_autocrat.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_ARM"
+		texturefile = "gfx/flags/small/ARM.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_ARM_radical_socialist"
+		texturefile = "gfx/flags/small/ARM_radical_socialist.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -991,6 +1116,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_KR_game_rule_flag_POR_paternal_autocrat"
 		texturefile = "gfx/flags/small/POR_paternal_autocrat.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_KAR"
+		texturefile = "gfx/flags/small/KAR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "KR_game_rule_flag_KAR_FIN"
+		texturefile = "gfx/flags/small/KAR_FIN_mon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "KR_game_rule_flag_KAR_national_populist"
+		texturefile = "gfx/flags/small/KAR_national_populist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "KR_game_rule_flag_KAR_radical_socialist"
+		texturefile = "gfx/flags/small/KAR_radical_socialist.tga"
 		legacy_lazy_load = no
 	}
 }

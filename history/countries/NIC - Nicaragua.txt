@@ -12,11 +12,29 @@ set_technology = {
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
-
-	### Air ###
-	early_fighter = 1
-	early_bomber = 1
 }
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		#set_air_oob = "NIC_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+		}
+	else = {
+		#set_air_oob = "NIC_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+}
+
+
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
@@ -78,6 +96,8 @@ TEX = {
 }
 add_opinion_modifier = { target = MEX modifier = NIC_revolutionary_allies }
 add_opinion_modifier = { target = HON modifier = NIC_holding_military }
+
+save_global_event_target_as = Miskitu_Coast
 
 country_event = {
 	id = nic.1 days = 1
@@ -157,7 +177,7 @@ create_country_leader = {
 	desc = "POLITICS_FRANCISCO_SEQUEIRA_MORENO_DESC"
 	picture = "gfx/leaders/NIC/Portrait_NIC_Francisco_Sequeria_Moreno.png"
 	expire = "1965.1.1"
-	ideology = syndie_social_democrat_subtype
+	ideology = socdem_sandinismo_subtype 
 }
 
 create_country_leader = {
@@ -165,7 +185,7 @@ create_country_leader = {
 	desc = "POLITICS_AUGUSTO_CESAR_SANDINO_DESC"
 	picture = "gfx/leaders/NIC/Portrait_NIC_Augusto_Cesar_Sandino.png"
 	expire = "1965.1.1"
-	ideology = radical_socialist_subtype 
+	ideology = sandinismo_subtype
 }
 
 ### Field Marshals ###

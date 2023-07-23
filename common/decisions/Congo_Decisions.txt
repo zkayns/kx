@@ -4,24 +4,24 @@
 
 political_actions = {
 	COG_reclaim_the_birthright = {
-        icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 		allowed = { original_tag = COG }
-        available = {
-           country_exists = GBR
-		   strength_ratio = {
+		available = {
+		country_exists = GBR
+		strength_ratio = {
 				tag = BEL
 				ratio < 0.8
 			}
 			has_completed_focus = COG_exchanges_for_independence
-        }
+		}
 		visible = {
-           country_exists = GBR
-		   strength_ratio = {
+		country_exists = GBR
+		strength_ratio = {
 				tag = BEL
 				ratio < 0.8
 			}
 			has_completed_focus = COG_exchanges_for_independence
-        }
+		}
 		
 		cost = 0
 		
@@ -35,24 +35,24 @@ political_actions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	
 	MSF_reclaim_katanga = {
-        icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 		allowed = {
 			tag = MSF
 		}
-        available = {
+		available = {
 			country_exists = UMN
-		    NOT = {
+			NOT = {
 				country_exists = COG
 				country_exists = KIV
 			}
-        }
+		}
 		
 		cost = 0
 		
@@ -64,24 +64,24 @@ political_actions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	
 	MSF_reclaim_leopoldvile = {
-        icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 		allowed = {
 			tag = MSF
 		}
-        available = {
+		available = {
 			country_exists = LPD
-		    NOT = {
+			NOT = {
 				country_exists = COG
 				country_exists = KIV
 			}
-        }
+		}
 		
 		cost = 0
 		
@@ -93,27 +93,27 @@ political_actions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	
 	LPD_attack_mercs = {
-        icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 		allowed = {
 			tag = LPD
 		}
-        available = {
+		available = {
 			country_exists = MSF
-		    NOT = {
+			NOT = {
 				country_exists = COG
 				country_exists = KIV
 			}
 			has_country_leader = {
 				name = "Simon Kimbangu"
 			}
-        }
+		}
 		visible = {
 			has_country_leader = {
 				name = "Simon Kimbangu"
@@ -130,18 +130,18 @@ political_actions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	
 	LPD_negoitate_with_kivu = {
-        icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 		allowed = {
 			tag = LPD
 		}
-        available = {
+		available = {
 			country_exists = KIV
 			KIV = {
 				has_war = no
@@ -149,7 +149,7 @@ political_actions = {
 			has_country_leader = {
 				name = "Simon Kimbangu"
 			}
-        }
+		}
 		visible = {
 			has_country_leader = {
 				name = "Simon Kimbangu"
@@ -168,18 +168,18 @@ political_actions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	LPD_negoitate_with_katanga = {
-        icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 		allowed = {
 			tag = LPD
 		}
-        available = {
+		available = {
 			country_exists = UMN
 			UMN = {
 				has_war = no
@@ -187,7 +187,7 @@ political_actions = {
 			has_country_leader = {
 				name = "Simon Kimbangu"
 			}
-        }
+		}
 		visible = {
 			has_country_leader = {
 				name = "Simon Kimbangu"
@@ -206,20 +206,20 @@ political_actions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	
 	COG_reclaim_katanga = {
-        icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 		allowed = {
 			tag = COG
 		}
-        available = {
+		available = {
 			country_exists = UMN
-		    NOT = {
+			NOT = {
 				country_exists = MSF
 				country_exists = KIV
 			}
@@ -228,10 +228,10 @@ political_actions = {
 					name = "Simon Kimbangu"
 				}
 			}
-        }
+		}
 		visible = {
 			country_exists = UMN
-		    NOT = {
+			NOT = {
 				country_exists = MSF
 				country_exists = KIV
 			}
@@ -240,7 +240,7 @@ political_actions = {
 					name = "Simon Kimbangu"
 				}
 			}
-        }
+		}
 		
 		cost = 0
 		
@@ -252,37 +252,37 @@ political_actions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	
 	COG_reclaim_leopoldvile = {
-        icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 		allowed = {
 			tag = MSF
 		}
-        available = {
+		available = {
 			country_exists = LPD
-		    NOT = {
+			NOT = {
 				country_exists = MSF
 				country_exists = KIV
 			}
 			UMN = {
 				has_government = paternal_autocrat
 			}
-        }
+		}
 		visible = {
 			country_exists = LPD
-		    NOT = {
+			NOT = {
 				country_exists = MSF
 				country_exists = KIV
 			}
 			UMN = {
 				has_government = paternal_autocrat
 			}
-        }
+		}
 		
 		cost = 0
 		
@@ -294,38 +294,38 @@ political_actions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	
 	
 }
 COG_hire_mercs_decisions = {
-    COG_Hire_Thorleiv_Bugge_Rhn = {
-        icon = border_war
-        available = {
+	COG_Hire_Thorleiv_Bugge_Rhn = {
+		icon = border_war
+		available = {
 			OR = {
 				has_completed_focus = COG_bringinginmercenaries
 				tag = MSF
 			}
-		    NOT = { 
-		        has_global_flag = Thorleiv_Bugge_Rhn_Hired
-		    }
-        }
+			NOT = { 
+				has_global_flag = Thorleiv_Bugge_Rhn_Hired
+			}
+		}
 		
 		cost = 0
 		modifier = {
-		    MONTHLY_POPULATION = -0.05
-		    national_populist_drift = 0.05
+			MONTHLY_POPULATION = -0.05
+			national_populist_drift = 0.05
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
 		
 		remove_effect = {
 			set_global_flag = Thorleiv_Bugge_Rhn_Hired
-            ROOT = {
+			ROOT = {
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = COG }
 			}
 			create_corps_commander = {
@@ -347,31 +347,31 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	COG_Hire_Nils_von_Kantzow = {
-        icon = border_war
-        available = {
-            has_completed_focus = COG_bringinginmercenaries
-		    NOT = { 
-		        has_global_flag = Nils_von_Kantzow_Hired
-		    }
-        }
+		icon = border_war
+		available = {
+			has_completed_focus = COG_bringinginmercenaries
+			NOT = { 
+				has_global_flag = Nils_von_Kantzow_Hired
+			}
+		}
 		
 		cost = 0
 		modifier = {
-		    MONTHLY_POPULATION = -0.05
-		    national_populist_drift = 0.05
+			MONTHLY_POPULATION = -0.05
+			national_populist_drift = 0.05
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
 		
 		remove_effect = {
 			set_global_flag = Nils_von_Kantzow_Hired
-            ROOT = {
+			ROOT = {
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = COG }
 			}
 			create_corps_commander = {
@@ -393,34 +393,34 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	COG_Hire_Ivor_Thord_Gray = {
-        icon = border_war
-        available = {
-            OR = {
+		icon = border_war
+		available = {
+			OR = {
 				has_completed_focus = COG_bringinginmercenaries
 				tag = MSF
 			}
-		    NOT = { 
-		        has_global_flag = Ivor_Thord_Gray_Hired
-		    }
-        }
+			NOT = { 
+				has_global_flag = Ivor_Thord_Gray_Hired
+			}
+		}
 		
 		cost = 0
 		modifier = {
-		    MONTHLY_POPULATION = -0.05
-		    national_populist_drift = 0.05
+			MONTHLY_POPULATION = -0.05
+			national_populist_drift = 0.05
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
 		
 		remove_effect = {
 			set_global_flag = Ivor_Thord_Gray_Hired
-            ROOT = {
+			ROOT = {
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = COG }
 			}
 			create_corps_commander = {
@@ -443,32 +443,32 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_Hire_Arthur_Quist = {
-        icon = border_war
-        available = {
-            has_completed_focus = COG_bringinginmercenaries
-		    NOT = { 
-		        has_global_flag = Arthur_Quist_Hired
-		    }
-        }
+		icon = border_war
+		available = {
+			has_completed_focus = COG_bringinginmercenaries
+			NOT = { 
+				has_global_flag = Arthur_Quist_Hired
+			}
+		}
 		
 		cost = 0
 		modifier = {
-		    MONTHLY_POPULATION = -0.05
-		    national_populist_drift = 0.05
+			MONTHLY_POPULATION = -0.05
+			national_populist_drift = 0.05
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
 		
 		remove_effect = {
 			set_global_flag = Arthur_Quist_Hired
-            ROOT = {
+			ROOT = {
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = COG }
 			}
 			create_corps_commander = {
@@ -491,35 +491,35 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_Hire_Gunnar_Hallstrom = {
-        icon = border_war
-        available = {
-            OR = {
+		icon = border_war
+		available = {
+			OR = {
 				has_completed_focus = COG_bringinginmercenaries
 				tag = MSF
 			}
-		    NOT = { 
-		        has_global_flag = Gunnar_Hallstrom_Hired
-		    }
-        }
+			NOT = { 
+				has_global_flag = Gunnar_Hallstrom_Hired
+			}
+		}
 		
 		cost = 0
 		modifier = {
-		    MONTHLY_POPULATION = -0.05
-		    national_populist_drift = 0.05
+			MONTHLY_POPULATION = -0.05
+			national_populist_drift = 0.05
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
 		
 		remove_effect = {
 			set_global_flag = Gunnar_Hallstrom_Hired
-            ROOT = {
+			ROOT = {
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = COG }
 			}
 			create_corps_commander = {
@@ -542,32 +542,32 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_Hire_Camillo_Ricchiardi = {
-        icon = border_war
-        available = {
-            has_completed_focus = COG_bringinginmercenaries
-		    NOT = { 
-		        has_global_flag = Camillo_Ricchiardi_Hired
-		    }
-        }
+		icon = border_war
+		available = {
+			has_completed_focus = COG_bringinginmercenaries
+			NOT = { 
+				has_global_flag = Camillo_Ricchiardi_Hired
+			}
+		}
 		
 		cost = 0
 		modifier = {
-		    MONTHLY_POPULATION = -0.05
-		    national_populist_drift = 0.05
+			MONTHLY_POPULATION = -0.05
+			national_populist_drift = 0.05
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
 		
 		remove_effect = {
 			set_global_flag = Camillo_Ricchiardi_Hired
-            ROOT = {
+			ROOT = {
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = COG }
 			}
 			create_corps_commander = {
@@ -590,35 +590,35 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	COG_Take_Thorleiv_Bugge_Rhn = {
-        icon = border_war
-        available = {
-            has_completed_focus = COG_bringinginmercenaries
-		    has_global_flag = Thorleiv_Bugge_Rhn_Hired
-        }
+		icon = border_war
+		available = {
+			has_completed_focus = COG_bringinginmercenaries
+			has_global_flag = Thorleiv_Bugge_Rhn_Hired
+		}
 		
 		visible = {
-		    has_global_flag = Thorleiv_Bugge_Rhn_Hired
+			has_global_flag = Thorleiv_Bugge_Rhn_Hired
 			NOT = {
 				has_unit_leader = 6756
 			}
-        }
+		}
 		
 		cost = 300
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
-		    national_populist_drift = 0.02
+			MONTHLY_POPULATION = -0.1
+			national_populist_drift = 0.02
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
 		
 		remove_effect = {
-            event_target:Thorleiv_Bugge_Rhn = {
+			event_target:Thorleiv_Bugge_Rhn = {
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = -500 producer = COG }
 				COG_decrease_merc_reliance = yes
 			}
@@ -635,29 +635,29 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	COG_Take_Nils_von_Kantzow = {
-        icon = border_war
-        available = {
-            has_completed_focus = COG_bringinginmercenaries
-		    has_global_flag = Nils_von_Kantzow_Hired
-        }
+		icon = border_war
+		available = {
+			has_completed_focus = COG_bringinginmercenaries
+			has_global_flag = Nils_von_Kantzow_Hired
+		}
 		
 		visible = {
-		    has_global_flag = Nils_von_Kantzow_Hired
+			has_global_flag = Nils_von_Kantzow_Hired
 			NOT = {
 				has_unit_leader = 6757
 			}
-        }
+		}
 		
 		cost = 300
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
-		    national_populist_drift = 0.02
+			MONTHLY_POPULATION = -0.1
+			national_populist_drift = 0.02
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -680,29 +680,29 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	COG_Take_Ivor_Thord_Gray = {
-        icon = border_war
-        available = {
-            has_completed_focus = COG_bringinginmercenaries
+		icon = border_war
+		available = {
+			has_completed_focus = COG_bringinginmercenaries
 			has_global_flag = Ivor_Thord_Gray_Hired
-        }
+		}
 		
 		visible = {
-		    has_global_flag = Ivor_Thord_Gray_Hired
+			has_global_flag = Ivor_Thord_Gray_Hired
 			NOT = {
 				has_unit_leader = 6758
 			}
-        }
+		}
 		
 		cost = 300
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
-		    national_populist_drift = 0.02
+			MONTHLY_POPULATION = -0.1
+			national_populist_drift = 0.02
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -725,30 +725,30 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_Take_Arthur_Quist = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Arthur_Quist_Hired
-            has_completed_focus = COG_bringinginmercenaries
-        }
+			has_completed_focus = COG_bringinginmercenaries
+		}
 		
 		visible = {
-		    has_global_flag = Arthur_Quist_Hired
+			has_global_flag = Arthur_Quist_Hired
 			NOT = {
 				has_unit_leader = 6759
 			}
-        }
+		}
 		
 		cost = 300
 		modifier = {
-		   MONTHLY_POPULATION = -0.1
-		    national_populist_drift = 0.02
+		MONTHLY_POPULATION = -0.1
+			national_populist_drift = 0.02
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -771,30 +771,30 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_Take_Gunnar_Hallstrom = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Gunnar_Hallstrom_Hired
-            has_completed_focus = COG_bringinginmercenaries
-        }
+			has_completed_focus = COG_bringinginmercenaries
+		}
 		
 		visible = {
-		    has_global_flag = Gunnar_Hallstrom_Hired
+			has_global_flag = Gunnar_Hallstrom_Hired
 			NOT = {
 				has_unit_leader = 6760
 			}
-        }
+		}
 		
 		cost = 300
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
-		    national_populist_drift = 0.02
+			MONTHLY_POPULATION = -0.1
+			national_populist_drift = 0.02
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -817,36 +817,36 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_Take_Camillo_Ricchiardi = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Camillo_Ricchiardi_Hired
-            has_completed_focus = COG_bringinginmercenaries
-        }
+			has_completed_focus = COG_bringinginmercenaries
+		}
 		
 		visible = {
-		    has_global_flag = Camillo_Ricchiardi_Hired
+			has_global_flag = Camillo_Ricchiardi_Hired
 			NOT = {
 				has_unit_leader = 6761
 			}
-        }
+		}
 		
 		cost = 300
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
-		    national_populist_drift = 0.02
+			MONTHLY_POPULATION = -0.1
+			national_populist_drift = 0.02
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
 	
 		remove_effect = {
-            event_target:Camillo_Ricchiardi = {
+			event_target:Camillo_Ricchiardi = {
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = -500 producer = COG }
 				COG_decrease_merc_reliance = yes
 			}
@@ -863,28 +863,28 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_Decrease_Merc_Reliance = {
-        icon = border_war
-        available = {
-            has_completed_focus = COG_bringinginmercenaries
-        }
+		icon = border_war
+		available = {
+			has_completed_focus = COG_bringinginmercenaries
+		}
 		
 		visible = {
 			NOT = {
 				tag = MSF
 			}
-        }
+		}
 		
 		cost = 50
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
-		    national_populist_drift = 0.02
+			MONTHLY_POPULATION = -0.1
+			national_populist_drift = 0.02
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -896,16 +896,16 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_Decrease_Merc_Disunity = {
-        icon = border_war
-        available = {
-            has_completed_focus = COG_bringinginmercenaries
+		icon = border_war
+		available = {
+			has_completed_focus = COG_bringinginmercenaries
 			custom_trigger_tooltip = {
 				tooltip = MSF_high_merc_disunity
 				OR = {
@@ -913,11 +913,11 @@ COG_hire_mercs_decisions = {
 					has_idea = MSF_merc_disunity_idea4
 				}
 			}
-        }
+		}
 		
 		visible = {
 
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -927,8 +927,8 @@ COG_hire_mercs_decisions = {
 		
 		cost = 50
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
-		    national_populist_drift = 0.02
+			MONTHLY_POPULATION = -0.1
+			national_populist_drift = 0.02
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -938,19 +938,19 @@ COG_hire_mercs_decisions = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 
 }
 
 COG_expansion_decisions = {
 	COG_take_ruanada = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			RWA = {
 				is_subject = no
@@ -964,11 +964,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			is_congo_that_likes_belgium = yes
-        }
+		}
 		
 		cost = 50
 
@@ -983,15 +983,15 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_take_burundi = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			BRD = {
 				is_subject = no
@@ -1005,11 +1005,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			is_congo_that_likes_belgium = yes
-        }
+		}
 		
 		cost = 50
 
@@ -1023,16 +1023,16 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	
 	COG_strike_goeringia = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1043,13 +1043,13 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			TZN = {
 				has_government = national_populist
 			}
-        }
+		}
 		
 		cost = 50
 
@@ -1057,20 +1057,26 @@ COG_expansion_decisions = {
 			declare_war_on = { 
 				target = TZN 
 				type = annex_everything 
-			} 
+			}
+			every_state = {
+				limit = {
+					is_core_of = TZN
+				}
+				add_claim_by = ROOT
+			}
 		}
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 
 	COG_strike_north_rhodesia = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1081,11 +1087,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			has_war = no
-        }
+		}
 		
 		cost = 50
 
@@ -1097,20 +1103,34 @@ COG_expansion_decisions = {
 			declare_war_on = { 
 				target = MLW 
 				type = annex_everything 
-			} 
+			}
+			declare_war_on = { 
+				target = BRT
+				type = annex_everything 
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ZAM
+						is_core_of = MLW
+						is_core_of = BRT
+					}
+				}
+				add_claim_by = ROOT
+			}
 		}
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 
 	COG_strike_kenya_uga = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1121,11 +1141,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			has_war = no
-        }
+		}
 		
 		cost = 50
 
@@ -1141,20 +1161,30 @@ COG_expansion_decisions = {
 			declare_war_on = { 
 				target = KIK 
 				type = annex_everything 
-			} 
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = KEN
+						is_core_of = UGA
+						is_core_of = KIK
+					}
+				}
+				add_claim_by = ROOT
+			}
 		}
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 
 	COG_mop_up_kameroon = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1165,11 +1195,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			has_war = no
-        }
+		}
 		
 		cost = 50
 
@@ -1185,20 +1215,30 @@ COG_expansion_decisions = {
 			declare_war_on = { 
 				target = CMR 
 				type = annex_everything 
-			} 
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = CEA
+						is_core_of = ADA
+						is_core_of = CMR
+					}
+				}
+				add_claim_by = ROOT
+			}
 		}
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 
 	COG_eat_nigeria = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1209,11 +1249,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			has_war = no
-        }
+		}
 		
 		cost = 50
 
@@ -1229,20 +1269,30 @@ COG_expansion_decisions = {
 			declare_war_on = { 
 				target = HAU 
 				type = annex_everything 
-			} 
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = NGR
+						is_core_of = KBR
+						is_core_of = HAU
+					}
+				}
+				add_claim_by = ROOT
+			}
 		}
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 
 	COG_go_south = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1253,11 +1303,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			has_war = no
-        }
+		}
 		
 		cost = 50
 
@@ -1269,22 +1319,31 @@ COG_expansion_decisions = {
 			declare_war_on = { 
 				target = NBL 
 				type = annex_everything 
-			} 
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = NMB
+						is_core_of = NBL
+					}
+				}
+				add_claim_by = ROOT
+			}
 		}
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	
 	
 	COG_intergrate_ruanda_burundi = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1295,13 +1354,13 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			owns_state = 870
 			owns_state = 869
 			owns_state = 948
-        }
+		}
 		
 		modifier = {
 			production_factory_max_efficiency_factor = -0.030
@@ -1320,15 +1379,15 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_strike_french_congo = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1339,11 +1398,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			has_war = no
-        }
+		}
 		
 		cost = 50
 
@@ -1370,15 +1429,15 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_intergrate_french_congo = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1389,14 +1448,14 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			owns_state = 953
 			owns_state = 974
 			owns_state = 928
 			owns_state = 539
-        }
+		}
 		
 		modifier = {
 			production_factory_max_efficiency_factor = -0.030
@@ -1416,15 +1475,15 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_claim_angola = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1435,11 +1494,11 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			has_war = no
-        }
+		}
 		
 		cost = 50
 
@@ -1458,15 +1517,15 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	COG_core_angola = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1477,7 +1536,7 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			OR = {
@@ -1490,7 +1549,7 @@ COG_expansion_decisions = {
 			}
 			owns_state = 916
 			owns_state = 914
-        }
+		}
 		
 		cost = 50
 
@@ -1501,11 +1560,11 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	KIV_join_int = {
 		icon = ger_military_buildup
@@ -1547,8 +1606,8 @@ COG_expansion_decisions = {
 	}
 	
 	KIV_create_faction = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -1559,7 +1618,7 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			tag = KIV
@@ -1567,7 +1626,7 @@ COG_expansion_decisions = {
 				has_country_flag = KIV_zaire_time
 				has_country_flag = KIV_faction_time
 			}
-        }
+		}
 		
 		fire_only_once = yes
 		
@@ -1691,11 +1750,11 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	KIV_invite_to_faction_LIB = {
 		icon = ger_military_buildup
@@ -2088,8 +2147,8 @@ COG_expansion_decisions = {
 	}
 	
 	COG_form_belgian_mittelafrika = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -2100,7 +2159,7 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			is_congo_that_likes_belgium = yes
@@ -2133,8 +2192,13 @@ COG_expansion_decisions = {
 			owns_state = 539
 			NOT = {	
 				has_cosmetic_tag = COG_BELGIUM_EXILE
+				has_cosmetic_tag = MSF_outer_heaven
+				has_cosmetic_tag = MSF_outer_heaven_maf
+				has_cosmetic_tag = MSF_outer_heaven_maf2
+				has_cosmetic_tag = MSF_outer_heaven_maf3
+				has_cosmetic_tag = MSF_outer_heaven_zanzibarland
 			}
-        }
+		}
 		
 		cost = 50
 
@@ -2144,15 +2208,15 @@ COG_expansion_decisions = {
 		days_remove = 00
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	LPD_create_faction = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = CONGO_SHITSHOW_OVER
 			custom_trigger_tooltip = {
 				tooltip = COG_recovered
@@ -2163,13 +2227,13 @@ COG_expansion_decisions = {
 					has_idea = COG_post_war_devestation4
 				}
 			}
-        }
+		}
 		
 		visible = {
 			has_country_leader = {
 				name = "Simon Kimbangu"
 			}
-        }
+		}
 		
 		cost = 50
 		
@@ -2306,11 +2370,11 @@ COG_expansion_decisions = {
 		days_remove = 30
 		
 		fire_only_once = yes
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	LPD_invite_to_faction = {
 		icon = generic_prepare_civil_war
@@ -2360,28 +2424,111 @@ COG_expansion_decisions = {
 			FROM = { country_event = leopoldville.17 }
 		}
 	}
+
+	MSF_form_merc_mittelafrika = {
+			icon = border_war
+			available = {
+				has_global_flag = CONGO_SHITSHOW_OVER
+				custom_trigger_tooltip = {
+					tooltip = COG_recovered
+					NOT = {
+						has_idea = COG_post_war_devestation
+						has_idea = COG_post_war_devestation2
+						has_idea = COG_post_war_devestation3
+						has_idea = COG_post_war_devestation4
+					}
+				}
+			}
+			
+			visible = {
+				NOT = {	
+					country_exists = CEA
+					country_exists = TKE
+					country_exists = KOG
+					country_exists = ADA
+					country_exists = CMR
+					country_exists = RWA
+					country_exists = BRD
+					country_exists = TZN
+					country_exists = KEN
+					country_exists = KIK
+					country_exists = UGA
+					country_exists = NGR
+					country_exists = HAU
+					country_exists = KBR
+					country_exists = ZAM
+					country_exists = NBL
+					country_exists = NMB
+					country_exists = GAB
+				}
+				owns_state = 546
+				owns_state = 969
+				owns_state = 975
+				owns_state = 878
+				owns_state = 958
+				owns_state = 964
+				owns_state = 539
+			}
+			
+			cost = 50
+
+			remove_effect = {
+				if = {
+				limit = { has_cosmetic_tag = MSF_knight_larp }
+				 set_cosmetic_tag = MSF_knight_larp_maf1
+				}
+				if = {
+				limit = { has_cosmetic_tag = MSF_knight_larp2}
+				 set_cosmetic_tag = MSF_knight_larp_maf2
+				}
+				if = {
+				limit = { has_cosmetic_tag = MSF_soldiers_republic }
+				 set_cosmetic_tag = MSF_soldiers_republic_maf
+				}
+				if = {
+				limit = { has_cosmetic_tag = MSF_soldiers_republic2 }
+				 set_cosmetic_tag = MSF_soldiers_republic_maf2
+				}
+				if = {
+				limit = { has_cosmetic_tag = MSF_outer_heaven }
+				 set_cosmetic_tag = MSF_outer_heaven_maf
+					hidden_effect = {
+						country_event = {
+							id = outerheaven.37
+							}
+						}
+				}
+			}
+			days_remove = 00
+			
+			fire_only_once = yes
+			
+			ai_will_do = {
+				factor = 60
+			}
+		}
 }
 
 MSF_selling_mercs = {
 	MSF_unite_all_mercs = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_completed_focus = MSF_three_men_enter
-        }
+		}
 		
 		allowed = {
 			tag = MSF
 		}
 		
 		visible = {
-		    NOT = {
+			NOT = {
 				has_government = national_populist
 			}
-        }
+		}
 		
 		cost = 150
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2430,23 +2577,26 @@ MSF_selling_mercs = {
 					}
 				}
 			}
+			hidden_effect = {
+				country_event = outerheavenunit.900 #Setting tags that use Mercs
+			}
 		}
 		days_remove = 45
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	MSF_Sell_Thorleiv_Bugge_Rhn = {
-        icon = border_war
-        available = {
-            #has_completed_focus = COG_bringinginmercenaries
-		    has_global_flag = Thorleiv_Bugge_Rhn_Hired
+		icon = border_war
+		available = {
+			#has_completed_focus = COG_bringinginmercenaries
+			has_global_flag = Thorleiv_Bugge_Rhn_Hired
 			NOT = {
 				has_global_flag = Thorleiv_Bugge_Rhn_Unavailable
 			}
-        }
+		}
 		
 		allowed = {
 			
@@ -2454,15 +2604,15 @@ MSF_selling_mercs = {
 		
 		visible = {
 			tag_uses_mercanaries_not_congo = yes
-		    has_global_flag = Thorleiv_Bugge_Rhn_Hired
+			has_global_flag = Thorleiv_Bugge_Rhn_Hired
 			NOT = {
 				has_unit_leader = 6756
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2493,20 +2643,20 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	MSF_Sell_Nils_von_Kantzow = {
-        icon = border_war
-        available = {
-            #has_completed_focus = COG_bringinginmercenaries
-		    has_global_flag = Nils_von_Kantzow_Hired
+		icon = border_war
+		available = {
+			#has_completed_focus = COG_bringinginmercenaries
+			has_global_flag = Nils_von_Kantzow_Hired
 			NOT = {
 				has_global_flag = Nils_von_Kantzow_Unavailable
 			}
-        }
+		}
 		
 		allowed = {
 			
@@ -2514,15 +2664,15 @@ MSF_selling_mercs = {
 		
 		visible = {
 			tag_uses_mercanaries_not_congo = yes
-		    has_global_flag = Nils_von_Kantzow_Hired
+			has_global_flag = Nils_von_Kantzow_Hired
 			NOT = {
 				has_unit_leader = 6757
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2553,15 +2703,15 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	MSF_Sell_Ivor_Thord_Gray = {
-        icon = border_war
-        available = {
-            #has_completed_focus = COG_bringinginmercenaries
+		icon = border_war
+		available = {
+			#has_completed_focus = COG_bringinginmercenaries
 			has_global_flag = Ivor_Thord_Gray_Hired
 			NOT = {
 				has_global_flag = Ivor_Thord_Gray_Unavailable
@@ -2569,7 +2719,7 @@ MSF_selling_mercs = {
 			NOT = {
 				has_country_flag = Ivor_Thord_Gray_Promoted
 			}
-        }
+		}
 		
 		allowed = {
 
@@ -2577,15 +2727,15 @@ MSF_selling_mercs = {
 		
 		visible = {
 			tag_uses_mercanaries_not_congo = yes
-		    has_global_flag = Ivor_Thord_Gray_Hired
+			has_global_flag = Ivor_Thord_Gray_Hired
 			NOT = {
 				has_unit_leader = 6758
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2616,21 +2766,21 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Sell_Arthur_Quist = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Arthur_Quist_Hired
-            #has_completed_focus = COG_bringinginmercenaries
+			#has_completed_focus = COG_bringinginmercenaries
 			NOT = {
 				has_global_flag = Arthur_Quist_Unavailable
 			}
-        }
+		}
 		
 		allowed = {
 	
@@ -2638,15 +2788,15 @@ MSF_selling_mercs = {
 		
 		visible = {
 			tag_uses_mercanaries_not_congo = yes
-		    has_global_flag = Arthur_Quist_Hired
+			has_global_flag = Arthur_Quist_Hired
 			NOT = {
 				has_unit_leader = 6759
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2677,36 +2827,36 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Sell_Gunnar_Hallstrom = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Gunnar_Hallstrom_Hired
-            #has_completed_focus = COG_bringinginmercenaries
+			#has_completed_focus = COG_bringinginmercenaries
 			NOT = {
 				has_global_flag = Gunnar_Hallstrom_Unavailable
 			}
-        }
+		}
 		
 		allowed = {
 		}
 		
 		visible = {
 			tag_uses_mercanaries_not_congo = yes
-		    has_global_flag = Gunnar_Hallstrom_Hired
+			has_global_flag = Gunnar_Hallstrom_Hired
 			NOT = {
 				has_unit_leader = 6760
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2737,36 +2887,36 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Sell_Camillo_Ricchiardi = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Camillo_Ricchiardi_Hired
-            #has_completed_focus = COG_bringinginmercenaries
+			#has_completed_focus = COG_bringinginmercenaries
 			NOT = {
 				has_global_flag = Camillo_Ricchiardi_Unavailable
 			}
-        }
+		}
 		
 		allowed = {
 		}
 		
 		visible = {
 			tag_uses_mercanaries_not_congo = yes
-		    has_global_flag = Camillo_Ricchiardi_Hired
+			has_global_flag = Camillo_Ricchiardi_Hired
 			NOT = {
 				has_unit_leader = 6761
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2797,21 +2947,21 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Sell_Mad_Mike_Hoare = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Mad_Mike_Hoare_Hired
-            #has_completed_focus = COG_bringinginmercenaries
+			#has_completed_focus = COG_bringinginmercenaries
 			NOT = {
 				has_global_flag = Mad_Mike_Hoare_Unavailable
 			}
-        }
+		}
 		
 		allowed = {
 			
@@ -2819,15 +2969,15 @@ MSF_selling_mercs = {
 		
 		visible = {
 			tag_uses_mercanaries_not_congo = yes
-		    has_global_flag = Mad_Mike_Hoare_Hired
+			has_global_flag = Mad_Mike_Hoare_Hired
 			NOT = {
 				has_unit_leader = 6761
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2858,34 +3008,34 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Take_Back_Thorleiv_Bugge_Rhn = {
-        icon = border_war
-        available = {
-            #has_completed_focus = COG_bringinginmercenaries
-		    has_global_flag = Thorleiv_Bugge_Rhn_Hired
+		icon = border_war
+		available = {
+			#has_completed_focus = COG_bringinginmercenaries
+			has_global_flag = Thorleiv_Bugge_Rhn_Hired
 			has_global_flag = Thorleiv_Bugge_Rhn_Unavailable
-        }
+		}
 		
 		allowed = {
 			tag = MSF
 		}
 		
 		visible = {
-		    has_global_flag = Thorleiv_Bugge_Rhn_Hired
+			has_global_flag = Thorleiv_Bugge_Rhn_Hired
 			NOT = {
 				has_unit_leader = 6756
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2919,33 +3069,33 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    } 
+	} 
 	MSF_Take_Back_Nils_von_Kantzow = {
-        icon = border_war
-        available = {
-            #has_completed_focus = COG_bringinginmercenaries
-		    has_global_flag = Nils_von_Kantzow_Hired
+		icon = border_war
+		available = {
+			#has_completed_focus = COG_bringinginmercenaries
+			has_global_flag = Nils_von_Kantzow_Hired
 			has_global_flag = Nils_von_Kantzow_Unavailable
-        }
+		}
 		
 		allowed = {
 			tag = MSF
 		}
 		
 		visible = {
-		    has_global_flag = Nils_von_Kantzow_Hired
+			has_global_flag = Nils_von_Kantzow_Hired
 			NOT = {
 				has_unit_leader = 6757
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -2975,35 +3125,35 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	
 	MSF_Take_Back_Ivor_Thord_Gray = {
-        icon = border_war
-        available = {
-            #has_completed_focus = COG_bringinginmercenaries
+		icon = border_war
+		available = {
+			#has_completed_focus = COG_bringinginmercenaries
 			has_global_flag = Ivor_Thord_Gray_Hired
 			has_global_flag = Ivor_Thord_Gray_Unavailable
-        }
+		}
 		
 		allowed = {
 			tag = MSF
 		}
 		
 		visible = {
-		    has_global_flag = Ivor_Thord_Gray_Hired
+			has_global_flag = Ivor_Thord_Gray_Hired
 			NOT = {
 				has_unit_leader = 6758
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -3030,34 +3180,34 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Take_Back_Arthur_Quist = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Arthur_Quist_Hired
-            #has_completed_focus = COG_bringinginmercenaries
+			#has_completed_focus = COG_bringinginmercenaries
 			has_global_flag = Arthur_Quist_Unavailable
-        }
+		}
 		
 		allowed = {
 			tag = MSF
 		}
 		
 		visible = {
-		    has_global_flag = Arthur_Quist_Hired
+			has_global_flag = Arthur_Quist_Hired
 			NOT = {
 				has_unit_leader = 6759
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		   MONTHLY_POPULATION = -0.1
+		MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -3084,34 +3234,34 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Take_Back_Gunnar_Hallstrom = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Gunnar_Hallstrom_Hired
-            #has_completed_focus = COG_bringinginmercenaries
+			#has_completed_focus = COG_bringinginmercenaries
 			has_global_flag = Gunnar_Hallstrom_Unavailable
-        }
+		}
 		
 		allowed = {
 			tag = MSF
 		}
 		
 		visible = {
-		    has_global_flag = Gunnar_Hallstrom_Hired
+			has_global_flag = Gunnar_Hallstrom_Hired
 			NOT = {
 				has_unit_leader = 6760
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -3138,34 +3288,34 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Take_Back_Camillo_Ricchiardi = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Camillo_Ricchiardi_Hired
-            #has_completed_focus = COG_bringinginmercenaries
+			#has_completed_focus = COG_bringinginmercenaries
 			has_global_flag = Camillo_Ricchiardi_Unavailable
-        }
+		}
 		
 		allowed = {
 			tag = MSF
 		}
 		
 		visible = {
-		    has_global_flag = Camillo_Ricchiardi_Hired
+			has_global_flag = Camillo_Ricchiardi_Hired
 			NOT = {
 				has_unit_leader = 6761
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -3192,34 +3342,34 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 	MSF_Take_Back_Mad_Mike_Hoare = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			has_global_flag = Mad_Mike_Hoare_Hired
-            #has_completed_focus = COG_bringinginmercenaries
+			#has_completed_focus = COG_bringinginmercenaries
 			has_global_flag = Mad_Mike_Hoare_Unavailable
-        }
+		}
 		
 		allowed = {
 			tag = MSF
 		}
 		
 		visible = {
-		    has_global_flag = Mad_Mike_Hoare_Hired
+			has_global_flag = Mad_Mike_Hoare_Hired
 			NOT = {
 				has_unit_leader = 6762
 			}
-        }
+		}
 		
 		cost = 100
 		modifier = {
-		    MONTHLY_POPULATION = -0.1
+			MONTHLY_POPULATION = -0.1
 			stability_weekly = -0.005
 			political_power_cost = -0.1
 		}
@@ -3246,23 +3396,23 @@ MSF_selling_mercs = {
 		}
 		days_remove = 30
 		
-		  
+		
 		ai_will_do = {
-		    factor = 60
+			factor = 60
 		}
-    }
+	}
 	
 }
 
 KIV_simba_revolt_decisions = {
 	KIV_entice_enlistment = {
-        icon = GFX_decision_eng_blackshirt_march
-        available = {
+		icon = GFX_decision_eng_blackshirt_march
+		available = {
 			has_idea = KIV_simba_government_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3270,7 +3420,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 15
 		
@@ -3288,18 +3438,18 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_assymetrical_tactics = {
-        icon = GFX_decision_eng_trade_unions_demand
-        available = {
+		icon = GFX_decision_eng_trade_unions_demand
+		available = {
 			has_idea = KIV_simba_government_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3307,7 +3457,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 15
 		
@@ -3330,18 +3480,18 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_raid_armories = {
-        icon = GFX_decision_generic_prepare_civil_war
-        available = {
+		icon = GFX_decision_generic_prepare_civil_war
+		available = {
 			has_idea = KIV_simba_government_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3349,7 +3499,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 15
 		
@@ -3367,18 +3517,18 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_eyes_within_kivu = {
-        icon = GFX_decision_generic_police_action
-        available = {
+		icon = GFX_decision_generic_police_action
+		available = {
 			has_idea = KIV_simba_government_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3386,7 +3536,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 15
 		
@@ -3406,18 +3556,18 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_reach_out_to_alienated_cheifdoms = {
-        icon = GFX_decision_generic_civil_support
-        available = {
+		icon = GFX_decision_generic_civil_support
+		available = {
 			has_idea = KIV_simba_government_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3425,7 +3575,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 15
 		
@@ -3467,13 +3617,13 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_take_back_kasai = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = KIV_solid_hold
 				check_variable = { KIV_rebellion_strength > 5 }
@@ -3481,7 +3631,7 @@ KIV_simba_revolt_decisions = {
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 976 }
 		highlight_states = { state = 1185 }
@@ -3492,7 +3642,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 0
 		
@@ -3522,13 +3672,13 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_take_back_umbangi = {
-        icon = GFX_decision_generic_assassination
-        available = {
+		icon = GFX_decision_generic_assassination
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = KIV_solid_hold
 				check_variable = { KIV_rebellion_strength > 5 }
@@ -3536,7 +3686,7 @@ KIV_simba_revolt_decisions = {
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 1025 }
 		highlight_states = { state = 1180 }
@@ -3547,7 +3697,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 0
 		
@@ -3577,13 +3727,13 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_take_back_equatorial_congo = {
-        icon = GFX_decision_generic_ignite_civil_war
-        available = {
+		icon = GFX_decision_generic_ignite_civil_war
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = KIV_solid_hold
 				check_variable = { KIV_rebellion_strength > 5 }
@@ -3591,7 +3741,7 @@ KIV_simba_revolt_decisions = {
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 538 }
 		highlight_states = { state = 295 }
@@ -3602,7 +3752,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 0
 		
@@ -3633,13 +3783,13 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_take_back_leopoldville = {
-        icon = GFX_decision_generic_nationalism
-        available = {
+		icon = GFX_decision_generic_nationalism
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = KIV_solid_hold
 				check_variable = { KIV_rebellion_strength > 5 }
@@ -3648,7 +3798,7 @@ KIV_simba_revolt_decisions = {
 				has_country_flag = KIV_doing_stuff
 			}
 			has_country_flag = KIV_can_take_leopoldville
-        }
+		}
 		
 		highlight_states = { state = 881 }
 		
@@ -3658,7 +3808,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_SIMBA_REVOLT_ACTIVE
-        }
+		}
 		
 		cost = 0
 		
@@ -3688,9 +3838,9 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	#### GOVERNMENT ACTIONS ####
 	KIV_gonzague_coup = {
@@ -3722,13 +3872,13 @@ KIV_simba_revolt_decisions = {
 		}
 	}
 	KIV_emergency_conscription = {
-        icon = GFX_decision_eng_blackshirt_march
-        available = {
+		icon = GFX_decision_eng_blackshirt_march
+		available = {
 			has_idea = KIV_simba_revolt_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3736,7 +3886,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 15
 		
@@ -3754,18 +3904,18 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_recall_veterans = {
-        icon = GFX_decision_generic_army_support
-        available = {
+		icon = GFX_decision_generic_army_support
+		available = {
 			has_idea = KIV_simba_revolt_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3773,7 +3923,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 15
 		
@@ -3791,18 +3941,18 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_reach_out_to_nationalists = {
-        icon = GFX_decision_generic_civil_support
-        available = {
+		icon = GFX_decision_generic_civil_support
+		available = {
 			has_idea = KIV_simba_revolt_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3810,7 +3960,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 15
 		
@@ -3844,18 +3994,18 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_tried_and_proven_tatics = {
-        icon = GFX_decision_generic_operation
-        available = {
+		icon = GFX_decision_generic_operation
+		available = {
 			has_idea = KIV_simba_revolt_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3863,7 +4013,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 15
 		
@@ -3886,18 +4036,18 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_sway_chiefs = {
-        icon = GFX_decision_generic_speech
-        available = {
+		icon = GFX_decision_generic_speech
+		available = {
 			has_idea = KIV_simba_revolt_idea
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = KIV
@@ -3905,7 +4055,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 15
 		
@@ -3925,13 +4075,13 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_take_back_kasai2 = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = KIV_solid_hold
 				check_variable = { KIV_government_strength > 5 }
@@ -3939,7 +4089,7 @@ KIV_simba_revolt_decisions = {
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 976 }
 		highlight_states = { state = 1185 }
@@ -3950,7 +4100,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 0
 		
@@ -3981,13 +4131,13 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_take_back_haut_congo = {
-        icon = GFX_decision_generic_assassination
-        available = {
+		icon = GFX_decision_generic_assassination
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = KIV_solid_hold
 				check_variable = { KIV_government_strength > 5 }
@@ -3995,7 +4145,7 @@ KIV_simba_revolt_decisions = {
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 1026 }
 		highlight_states = { state = 718 }
@@ -4006,7 +4156,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 0
 		
@@ -4037,13 +4187,13 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_take_back_sankru = {
-        icon = GFX_decision_generic_ignite_civil_war
-        available = {
+		icon = GFX_decision_generic_ignite_civil_war
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = KIV_solid_hold
 				check_variable = { KIV_government_strength > 5 }
@@ -4051,7 +4201,7 @@ KIV_simba_revolt_decisions = {
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 1184 }
 		highlight_states = { state = 718 }
@@ -4062,7 +4212,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 0
 		
@@ -4093,13 +4243,13 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_advance_on_kivu = {
-        icon = GFX_decision_generic_nationalism
-        available = {
+		icon = GFX_decision_generic_nationalism
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = KIV_solid_hold
 				check_variable = { KIV_government_strength > 5 }
@@ -4113,7 +4263,7 @@ KIV_simba_revolt_decisions = {
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 1181 }
 		highlight_states = { state = 977 }
@@ -4124,7 +4274,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_occuring
-        }
+		}
 		
 		cost = 0
 		
@@ -4158,18 +4308,21 @@ KIV_simba_revolt_decisions = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	KIV_take_back_katanga = {
-        icon = GFX_decision_generic_military
-        available = {
-			has_country_flag = KIV_simba_revolt_over
+		icon = GFX_decision_generic_military
+		available = {
+			OR = {
+				has_country_flag = KIV_simba_revolt_over
+				has_country_flag = KIV_can_attack_katanga
+			}
 			NOT = {
 				has_country_flag = KIV_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 879 }
 		highlight_states = { state = 1183 }
@@ -4181,7 +4334,7 @@ KIV_simba_revolt_decisions = {
 		
 		visible = {
 			has_country_flag = KIV_simba_revolt_over
-        }
+		}
 		
 		cost = 0
 		
@@ -4216,23 +4369,23 @@ KIV_simba_revolt_decisions = {
 			add_state_core = 1182
 			clr_country_flag = KIV_doing_stuff
 		}
-		days_remove = 15
+		days_remove = 30
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 }
 
 UMN_recscource_development_decisions = {
 	UMN_develop_zinc = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4240,7 +4393,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 			
 		modifier = {
 			production_speed_radar_station_factor = 0.10
@@ -4253,6 +4406,7 @@ UMN_recscource_development_decisions = {
 		}
 
 		remove_effect = {
+			clr_country_flag = UMN_doing_stuff	
 			add_tech_bonus = {
 				name = UMN_develop_zinc
 				bonus = 0.20
@@ -4266,17 +4420,17 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 30
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_develop_copper = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4284,7 +4438,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4292,7 +4446,8 @@ UMN_recscource_development_decisions = {
 			set_country_flag = UMN_doing_stuff
 		}
 
-		remove_effect = {
+		remove_effect = {	
+			clr_country_flag = UMN_doing_stuff	
 			958 = { add_resource = {
 					type = steel
 					amount = 2
@@ -4318,17 +4473,17 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 30
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_develop_uranium = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4336,7 +4491,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4345,6 +4500,7 @@ UMN_recscource_development_decisions = {
 		}
 
 		remove_effect = {
+			clr_country_flag = UMN_doing_stuff	
 			add_tech_bonus = {
 				name = UMN_develop_uranium
 				bonus = 0.5
@@ -4358,17 +4514,17 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 30
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_develop_steel = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4376,7 +4532,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4385,6 +4541,7 @@ UMN_recscource_development_decisions = {
 		}
 
 		remove_effect = {
+			clr_country_flag = UMN_doing_stuff	
 			958 = { add_resource = {
 					type = steel
 					amount = 2
@@ -4407,17 +4564,17 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 30
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_develop_rubber = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4425,7 +4582,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4434,6 +4591,7 @@ UMN_recscource_development_decisions = {
 		}
 
 		remove_effect = {
+			clr_country_flag = UMN_doing_stuff	
 			958 = { add_resource = {
 					type = rubber
 					amount = 2
@@ -4456,17 +4614,17 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 30
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_develop_chromium = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4474,7 +4632,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4483,6 +4641,7 @@ UMN_recscource_development_decisions = {
 		}
 
 		remove_effect = {
+			clr_country_flag = UMN_doing_stuff	
 			958 = { add_resource = {
 					type = chromium
 					amount = 2
@@ -4505,17 +4664,17 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 30
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_develop_aluminium = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4523,7 +4682,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4532,6 +4691,7 @@ UMN_recscource_development_decisions = {
 		}
 
 		remove_effect = {
+			clr_country_flag = UMN_doing_stuff	
 			958 = { add_resource = {
 					type = aluminium
 					amount = 2
@@ -4554,14 +4714,17 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 30
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_develop_infrastructure = {
-        icon = GFX_decision_generic_military
-        available = {
-        }
+		icon = GFX_decision_generic_military
+		available = {
+			NOT = {
+				has_country_flag = UMN_doing_stuff
+			}
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4569,7 +4732,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 		
 		modifier = {
 			production_speed_buildings_factor = -0.2
@@ -4583,6 +4746,7 @@ UMN_recscource_development_decisions = {
 		}
 
 		remove_effect = {	
+			clr_country_flag = UMN_doing_stuff	
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -4610,14 +4774,17 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_develop_civ_industry = {
-        icon = GFX_decision_generic_military
-        available = {
-        }
+		icon = GFX_decision_generic_military
+		available = {
+			NOT = {
+				has_country_flag = UMN_doing_stuff
+			}
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4625,7 +4792,7 @@ UMN_recscource_development_decisions = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4638,7 +4805,8 @@ UMN_recscource_development_decisions = {
 			set_country_flag = UMN_doing_stuff
 		}
 
-		remove_effect = {	
+		remove_effect = {
+			clr_country_flag = UMN_doing_stuff	
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -4666,15 +4834,15 @@ UMN_recscource_development_decisions = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 }
 
 UMN_profits_investment = {
 	UMN_invest_in_civ_industry = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -4682,7 +4850,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4690,7 +4858,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4723,13 +4891,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_mil_industry = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -4737,7 +4905,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4745,7 +4913,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4778,13 +4946,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_infra = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -4792,7 +4960,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4800,7 +4968,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4833,13 +5001,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_stability = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -4847,7 +5015,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4855,7 +5023,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4877,13 +5045,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_war_support = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -4891,7 +5059,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4899,7 +5067,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4921,13 +5089,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_command_power = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -4935,7 +5103,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4943,7 +5111,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -4961,13 +5129,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_army_xp = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -4975,7 +5143,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -4983,7 +5151,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5001,13 +5169,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_air_xp = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -5015,7 +5183,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -5023,7 +5191,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5041,13 +5209,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_popularity = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -5055,7 +5223,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -5063,7 +5231,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5081,13 +5249,13 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_invest_in_guns = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
@@ -5095,7 +5263,7 @@ UMN_profits_investment = {
 				tooltip = UMN_high_profits
 				check_variable = { UMN_resources > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = UMN
@@ -5103,7 +5271,7 @@ UMN_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5125,15 +5293,15 @@ UMN_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 }
 
 MSF_profits_investment = {
 	MSF_invest_in_civ_industry = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5141,7 +5309,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5149,7 +5317,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5182,13 +5350,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_mil_industry = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5196,7 +5364,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5204,7 +5372,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5237,13 +5405,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_infra = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5251,7 +5419,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5259,7 +5427,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5292,13 +5460,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_stability = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5306,7 +5474,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5314,7 +5482,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5333,13 +5501,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_war_support = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5347,7 +5515,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5355,7 +5523,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5374,13 +5542,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_command_power = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5388,7 +5556,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5396,7 +5564,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5414,13 +5582,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_army_xp = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5428,7 +5596,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5436,7 +5604,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5454,13 +5622,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_air_xp = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5468,7 +5636,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5476,7 +5644,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5494,13 +5662,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_popularity = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5508,7 +5676,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5516,7 +5684,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5534,13 +5702,13 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	MSF_invest_in_guns = {
-        icon = GFX_decision_generic_military
-        available = {
+		icon = GFX_decision_generic_military
+		available = {
 			NOT = {
 				has_country_flag = MSF_doing_stuff
 			}
@@ -5548,7 +5716,7 @@ MSF_profits_investment = {
 				tooltip = MSF_high_profits
 				check_variable = { MSF_money > 5 }
 			}
-        }
+		}
 		
 		allowed = {
 			tag = MSF
@@ -5556,7 +5724,7 @@ MSF_profits_investment = {
 		
 		visible = {
 			
-        }
+		}
 		
 		cost = 50
 		
@@ -5578,20 +5746,20 @@ MSF_profits_investment = {
 		days_re_enable = 10
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 }
 
 UMN_mwami_pacifying_the_congo = {
 	
 	UMN_core_haut_congo = {
-        icon = GFX_decision_generic_assassination
-        available = {
+		icon = GFX_decision_generic_assassination
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 1026 }
 		highlight_states = { state = 718 }
@@ -5602,7 +5770,7 @@ UMN_mwami_pacifying_the_congo = {
 		
 		visible = {
 			has_country_flag = UMN_mwami_became_congo
-        }
+		}
 		
 		cost = 0
 		
@@ -5634,17 +5802,17 @@ UMN_mwami_pacifying_the_congo = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_core_sankru = {
-        icon = GFX_decision_generic_ignite_civil_war
-        available = {
+		icon = GFX_decision_generic_ignite_civil_war
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 1184 }
 		highlight_states = { state = 718 }
@@ -5655,7 +5823,7 @@ UMN_mwami_pacifying_the_congo = {
 		
 		visible = {
 			has_country_flag = UMN_mwami_became_congo
-        }
+		}
 		
 		cost = 0
 		
@@ -5682,17 +5850,17 @@ UMN_mwami_pacifying_the_congo = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_advance_on_kivu = {
-        icon = GFX_decision_generic_nationalism
-        available = {
+		icon = GFX_decision_generic_nationalism
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 1181 }
 		highlight_states = { state = 977 }
@@ -5703,7 +5871,7 @@ UMN_mwami_pacifying_the_congo = {
 		
 		visible = {
 			has_country_flag = UMN_mwami_became_congo
-        }
+		}
 		
 		cost = 0
 		
@@ -5735,17 +5903,17 @@ UMN_mwami_pacifying_the_congo = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_core_kasai = {
-        icon = border_war
-        available = {
+		icon = border_war
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 976 }
 		highlight_states = { state = 1185 }
@@ -5756,7 +5924,7 @@ UMN_mwami_pacifying_the_congo = {
 		
 		visible = {
 			has_country_flag = UMN_mwami_became_congo
-        }
+		}
 		
 		cost = 0
 		
@@ -5788,17 +5956,17 @@ UMN_mwami_pacifying_the_congo = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_core_umbangi = {
-        icon = GFX_decision_generic_assassination
-        available = {
+		icon = GFX_decision_generic_assassination
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 1025 }
 		highlight_states = { state = 1180 }
@@ -5809,7 +5977,7 @@ UMN_mwami_pacifying_the_congo = {
 		
 		visible = {
 			has_country_flag = UMN_mwami_became_congo
-        }
+		}
 		
 		cost = 0
 		
@@ -5836,17 +6004,17 @@ UMN_mwami_pacifying_the_congo = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_core_equatorial_congo = {
-        icon = GFX_decision_generic_ignite_civil_war
-        available = {
+		icon = GFX_decision_generic_ignite_civil_war
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 538 }
 		highlight_states = { state = 295 }
@@ -5857,7 +6025,7 @@ UMN_mwami_pacifying_the_congo = {
 		
 		visible = {
 			has_country_flag = UMN_mwami_became_congo
-        }
+		}
 		
 		cost = 0
 		
@@ -5885,17 +6053,17 @@ UMN_mwami_pacifying_the_congo = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 	
 	UMN_core_leopoldville = {
-        icon = GFX_decision_generic_nationalism
-        available = {
+		icon = GFX_decision_generic_nationalism
+		available = {
 			NOT = {
 				has_country_flag = UMN_doing_stuff
 			}
-        }
+		}
 		
 		highlight_states = { state = 881 }
 		
@@ -5905,7 +6073,7 @@ UMN_mwami_pacifying_the_congo = {
 		
 		visible = {
 			has_country_flag = UMN_mwami_became_congo
-        }
+		}
 		
 		cost = 0
 		
@@ -5935,7 +6103,7 @@ UMN_mwami_pacifying_the_congo = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-		    factor = 100
+			factor = 100
 		}
-    }
+	}
 }

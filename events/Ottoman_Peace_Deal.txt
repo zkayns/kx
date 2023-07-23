@@ -22,40 +22,18 @@ country_event = { #War in the Desert setup event
 	
 	option = {
 		set_global_flag = OTT_cairo_pact_war
-		news_event = {
-			id = worldnews.50
-			days = 1
-		}
-		country_event = {
-			id = ottlib.21
-			days = 55
-		}
-		country_event = {
-			id = cp.12
-			days = 10
-		}
-		country_event = {
-			id = cp.13
-			days = 30
-			random = 15
-		}
-		country_event = {
-			id = ottgui.4
-			days = 10
-			random = 72
-		}
+		news_event = { id = worldnews.50 days = 1 }
+		country_event = { id = cp.9 days = 1 random_days = 2 }
+		country_event = { id = ottlib.21 days = 55 }
+		country_event = { id = cp.12 days = 10 }
+		country_event = { id = cp.13 days = 30 random_days = 15 }
+		country_event = { id = ottgui.4 days = 10 random_days = 3 }
 		if = {
 			limit = {
-				LBA = {
-					has_war_with = OTT
-				}
-				EGY = {
-					is_faction_leader = yes
-				}
+				LBA = { has_war_with = TUR }
+				EGY = { is_faction_leader = yes }
 			}
-			EGY = {
-				add_to_faction = LBA
-			}
+			EGY = { add_to_faction = LBA }
 		}
 		### AI CHEATS
 		if = {
@@ -73,13 +51,28 @@ country_event = { #War in the Desert setup event
 							is_subject = yes
 						}
 					}
-					OTT = { is_ai = no }
+					TUR = { is_ai = no }
 				}
 			}
 			EGY = {
 				increase_conscription = yes
 				increase_mobilisation = yes
 				load_oob = EGY_war_cheat
+				if = {
+					limit = { has_dlc = "By Blood Alone" }
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						amount = 25
+						producer = ENG
+					}
+				}
+				else = {
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_0
+						amount = 25
+						producer = ENG
+					}
+				}
 			}
 			PER = {
 				increase_conscription = yes
@@ -108,40 +101,57 @@ country_event = { #War in the Desert setup event
 					#}
 				}	
 			}
-			OTT = {
+			TUR = {
 				increase_conscription = yes
 				increase_mobilisation = yes
 				load_oob = OTT_war_cheat
 			}
 		}
-		if = {
-			limit = {
-				OTT = { is_ai = yes }
-			}
-			OTT = { 
-				save_global_event_target_as = volunteer_target
-				GER = { send_volunteers_to_TARGET = yes }
-				AUS = { send_volunteers_to_TARGET = yes }
-			}
+		TUR = {
+			save_global_event_target_as = volunteer_target
+			GER = { send_volunteers_to_TARGET = yes }
+			AUS = { send_volunteers_to_TARGET = yes }
 		}
-		if = {
-			limit = {
-				EGY = { is_ai = yes }
-			}
-			EGY = { 
-				save_global_event_target_as = volunteer_target
-				ENG = { send_volunteers_to_TARGET = yes }
-				FRA = { send_volunteers_to_TARGET = yes }
-				SRI = { send_volunteers_to_TARGET = yes }
-				CNT = { send_volunteers_to_TARGET = yes }
-			}
+		EGY = { 
+			save_global_event_target_as = volunteer_target
+			ENG = { send_volunteers_to_TARGET = yes }
+			FRA = { send_volunteers_to_TARGET = yes }
+			SRI = { send_volunteers_to_TARGET = yes }
+			CNT = { send_volunteers_to_TARGET = yes }
+			BHC = { send_volunteers_to_TARGET = yes }
 		}
-
-
+		
 		#Romanian flavor event
 		country_event = { id = romania.202 days = 50 }
 		ROM = {
 			country_event = { id = romania.202 days = 50 }
+		}
+		GEO = { activate_targeted_decision = { target = TUR decision = GEO_attack_ottos_decision } }
+		GEO = { activate_targeted_decision = { target = ABK decision = GEO_retake_abkhazia } }
+
+		#add JBS decision to join up with OTT
+		JBS = {
+			if = {
+				limit = { NOT = { has_completed_focus = JBS_unite_arabs } }
+				activate_targeted_decision = { target = TUR decision = JBS_Support_the_Ottomans }
+			}
+		}
+		#add ABK decision to join up with OTT
+		ABK = {
+			activate_targeted_decision = { target = TUR decision = ABK_attack_georgia }
+		}
+		#add YEM decision to revolt if they took the focus
+		YEM = {
+			if = {
+				limit = { has_completed_focus = YEM_Every_Yemen_a_Kingdom }
+				activate_targeted_decision = { target = TUR decision = YEM_proclaim_kingdom }
+			}
+		}
+		#Cyrenaican decision in case they win
+		LBA = {
+			activate_targeted_decision = { target = THIS decision = LBA_Pacify_Tripolitania }
+			activate_targeted_decision = { target = THIS decision = LBA_Move_Capital_Benghazi }
+			activate_targeted_decision = { target = THIS decision = LBA_Move_Capital_Tripoli }
 		}
 	}
 }
@@ -155,22 +165,25 @@ country_event = {	#End of an Era
 	picture = GFX_OTT_Hagia_Sophia
 
 	trigger = {
-		tag = OTT
+		tag = TUR
 		has_idea = OTT_Ottoman_Stand
+		has_war_with = EGY
 		OR = {
 			surrender_progress > 0.6
-			NOT = {
-				controls_state = 344 #Adana
-				controls_state = 350 #Diyarbakir
-				controls_state = 352 #Van
-				controls_state = 554 #Damascus
-				controls_state = 454 #Jerusalem
-				controls_state = 553 #Beirut
-				controls_state = 679 #Mecca
-				controls_state = 754 #Medina
-				controls_state = 812 #Basra
-				controls_state = 291 #Baghdad
-				controls_state = 676 #Mosul
+			count_triggers = {
+				amount = 10
+				NOT = { controls_state = 45 } #Ankara
+				NOT = { controls_state = 344 } #Adana
+				NOT = { controls_state = 350 } #Diyarbakir
+				NOT = { controls_state = 352 } #Van
+				NOT = { controls_state = 554 } #Damascus
+				NOT = { controls_state = 454 } #Jerusalem
+				NOT = { controls_state = 553 } #Beirut
+				NOT = { controls_state = 679 } #Mecca
+				NOT = { controls_state = 754 } #Medina
+				NOT = { controls_state = 812 } #Basra
+				NOT = { controls_state = 291 } #Baghdad
+				NOT = { controls_state = 676 } #Mosul
 			}
 		}
 	}
@@ -179,16 +192,25 @@ country_event = {	#End of an Era
 
 	option = {
 		name = cp.1.a
-		if = {
-			limit = {
-				has_war_with = EGY
-			}
-			EGY = {
-				country_event = cp.2
-			}
-			set_country_flag = OTT_change_to_turkey
+		remove_ideas = OTT_Ottoman_Stand	
+		OTT_remove_ottoman_ambitions_claims = yes
+		EGY = { country_event = cp.2 }
+		hidden_effect = {
+			country_event = { id = tur.0 days = 20 }
+			country_event = { id = cp.10 days = 10 random_days = 8 }
 			set_global_flag = AXIS_VICTORY
-			remove_ideas = OTT_Ottoman_Stand
+			JBS = { #remove from JBS every decision related to OTT
+				remove_targeted_decision = { target = TUR decision = JBS_Ottoman_Training }
+				remove_targeted_decision = { target = TUR decision = JBS_Ottoman_Weapons_Assistance }
+				remove_targeted_decision = { target = TUR decision = JBS_Support_the_Ottomans }
+			}
+			YEM = { #remove from YEM revolt decision
+				remove_targeted_decision = { target = TUR decision = YEM_proclaim_kingdom }
+			}
+			GEO = { activate_targeted_decision = { target = ARM decision = GEO_attack_armenia_getting_too_strong_decision } }
+			CEA = {
+				country_event = { id = cea_flavour.69 days = 22 }
+			}
 		}
 	}
 }
@@ -207,11 +229,12 @@ country_event = { #Victory in the Mashriq
 
 	immediate = {
 		hidden_effect = {
+			log = "KR_Event_Logging;EGY WINS IN THE LEVANT;[GetDateText];[ROOT.GetName];[FROM.GetName]"
 			### EGY focus
 			complete_national_focus = EGY_Victory_Levant
 
 			### Release Persia if it was annexed
-			OTT = {
+			TUR = {
 				if = {
 					limit = {
 						owns_state = 266 #Teheran
@@ -227,9 +250,21 @@ country_event = { #Victory in the Mashriq
 					}
 					remove_from_faction = PER
 					PER = { separate_peace_all_wars = yes }
-					every_owned_state = {
-						limit = { is_core_of = PER }
-						PER = { transfer_state = PREV }
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = PER
+							region = 116 #Persia
+							state = 413 #Khuzestan
+							state = 417 #Urmia
+							state = 421 #Kermanshah
+						}
+					}
+					transfer_state_to = PER
+					if = {
+						limit = { is_claim_or_core_of_owner = no }
+						add_core_of = PER
 					}
 				}
 			}
@@ -238,13 +273,11 @@ country_event = { #Victory in the Mashriq
 			clr_global_flag = SUEZ_CANAL_BLOCKED
 
 			### Remove PAL cores
-			every_state = {
-				limit = { is_core_of = PAL }
-				remove_core_of = PAL
-			}
+			PAL = { every_core_state = { remove_core_of = PAL } }
 
 			### Set war flags
-			OTT = {
+			TUR = {
+				annex_country = { target = PAL }
 				every_enemy_country = {
 					limit = {
 						OR = {
@@ -256,38 +289,22 @@ country_event = { #Victory in the Mashriq
 							tag = GEO
 							tag = CYP
 							tag = KUR
+							tag = KDR
 							tag = LBA
 							tag = TRP
 							tag = JBS
 							tag = SAU
 							tag = YEM
+							tag = UKR
+							original_tag = IKH
 						}
 					}
 					set_country_flag = was_at_war_with_OTT
 				}
-				if = {
-					limit = {
-						GRE = {
-							has_war_with = OTT
-							OR = {
-								is_subject = no
-								overlord = { has_country_flag = was_at_war_with_OTT }
-							}
-							OR = {
-								is_in_faction = no
-								is_faction_leader = yes
-								faction_leader = { has_country_flag = was_at_war_with_OTT }
-							}
-						}
-					}
-					GRE = {
-						set_country_flag = was_at_war_with_OTT
-					}
 				}
+			YEM = {
 				if = {
-					limit = {
-						YEM = { is_in_faction_with = EGY }
-					}
+					limit = { is_in_faction_with = EGY }
 					country_event = {
 						id = cp.6
 						days = 3
@@ -317,24 +334,24 @@ country_event = { #Victory in the Mashriq
 					if = {
 						limit = {
 							OR = {
-								is_owned_by = OTT
+								is_owned_by = TUR
 								is_owned_by = SYR
 								is_owned_by = PAL
 							}
 						}
-						HEJ = { transfer_state = PREV }
+						transfer_state_to = HEJ
 					}
 				}
 				754 = { #Medina
 					if = {
 						limit = {
 							OR = {
-								is_owned_by = OTT
+								is_owned_by = TUR
 								is_owned_by = SYR
 								is_owned_by = PAL
 							}
 						}
-						HEJ = { transfer_state = PREV }
+						transfer_state_to = HEJ
 					}
 				}
 				EGY = { add_to_faction = HEJ }
@@ -372,10 +389,10 @@ country_event = { #Victory in the Mashriq
 				set_temp_variable = { arab_target = SAU }
 			}
 			else_if = {
-				limit = { 
-					country_exists = JBS 
-					NOT = {
-						has_war_with = EGY
+				limit = {
+					country_exists = JBS
+					JBS = {
+						NOT = { has_war_with = EGY }
 					}
 				}
 				set_temp_variable = { arab_target = JBS }
@@ -387,7 +404,7 @@ country_event = { #Victory in the Mashriq
 			else = {
 				set_temp_variable = { arab_target = EGY }
 			}
-			OTT = {
+			TUR = {
 				every_owned_state = {
 					limit = {
 						OR = {
@@ -395,7 +412,7 @@ country_event = { #Victory in the Mashriq
 							region = 240 #Southern Arabia
 						}
 					}
-					var:arab_target = { transfer_state = PREV }
+					transfer_state_to = var:arab_target
 				}
 			}
 
@@ -404,95 +421,97 @@ country_event = { #Victory in the Mashriq
 				if = {
 					limit = {
 						OR = {
-							is_owned_by = OTT
+							is_owned_by = TUR
 							is_owned_by = SYR
 							is_owned_by = PAL
 						}
 					}
-					EGY = { transfer_state = PREV }
+					EGY = {
+						transfer_state = PREV
+						### founding the Jaririya Sufi order
+						country_event = { id = egy.140 days = 30 random_days = 90 }
+					}
 				}
 			}
 			753 = { #Suez
 				if = {
 					limit = {
 						OR = {
-							is_owned_by = OTT
+							is_owned_by = TUR
 							is_owned_by = SYR
 							is_owned_by = PAL
 						}
 					}
-					EGY = { transfer_state = PREV }
+					EGY = {
+						transfer_state = PREV
+						### new lighthouse
+						country_event = { id = egy.103 days = 300 random_days = 900 }
+					}
 				}
 			}
-
+			
+			### Hand over Syrian Land
+			clr_global_flag = OTT_Syria_Revolt
+			TUR = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 454 #Jerusalem
+							state = 455 #Ma'an
+							state = 992 #Haifa
+							state = 554 #Damascus
+							state = 553 #Beirut
+							state = 995 #Homs
+							state = 680 #Latakia
+							state = 344 #Adana
+							state = 677 #Halep
+							state = 350 #Diyarbakir
+						}
+					}
+					SYR = {
+						add_state_core = PREV
+						transfer_state = PREV
+					}
+				}
+			}
+			SYR = {
+				delete_unit_template_and_units = { division_template = "Militia Damascus" }
+				delete_unit_template_and_units = { division_template = "Druze Cavalry" }
+			}
+			
 			### Iraqi Declaration of Independence 
-			every_state = {
-				limit = {
-					OR = {
-						is_owned_by = OTT
-						is_owned_by = IRQ
+			TUR = {
+				IRQ = { transfer_technology_without_doctrines = yes }
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 676 #Mosul
+							state = 349 #Kirkuk
+							state = 291 #Baghdad
+							state = 812 #Basra
+						}
 					}
-					OR = {
-						state = 676 #Mosul
-						state = 349 #Kirkuk
-						state = 291 #Baghdad
-						state = 812 #Basra
-					}
+					transfer_state_to = IRQ
 				}
-				IRQ = {
-					add_state_core = PREV
-					transfer_state = PREV
+				country_event = {
+					id = cp.7
+					hours = 4
 				}
-			}
-			IRQ = {
-				transfer_technology = yes
-			}
-			country_event = {
-				id = cp.7
-				hours = 4
 			}
 			
 			### Crimea
 			if = {
 				limit = {
 					country_exists = UKR
-					UKR = { is_subject = no }
+					UKR = { has_country_flag = was_at_war_with_OTT }
+					CRM = { is_subject_of = TUR }
 				}
 				every_state = {
 					limit = {
-						is_core_of = UKR
+						is_core_of = CRM
+						is_owned_by = CRM 
 					}
 					UKR = {
-						transfer_state = PREV
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					country_exists = RUS
-					RUS = { is_subject = no }
-					RUS = {
-						OR = {
-							owns_state = 234
-							owns_state = 218
-						}
-					}						
-				}
-				every_state = {
-					limit = {
-						is_core_of = CRM
-					}
-					RUS = {
-						transfer_state = PREV
-					}
-				}
-			}
-			else = {
-				every_state = {
-					limit = {
-						is_core_of = CRM
-					}
-					CRM = {
 						transfer_state = PREV
 					}
 				}
@@ -501,39 +520,65 @@ country_event = { #Victory in the Mashriq
 				limit = {
 					CRM = {
 						OR = { 
-							is_subject_of = OTT
-							is_in_faction_with = OTT
+							is_subject_of = TUR
+							is_in_faction_with = TUR
 						}
 					}
 				}
 				CRM = { clear_all_relations = yes }
 			}
+			### Abkhazia
+			if = {
+				limit = {
+					ABK = {
+						OR = { 
+							is_subject_of = TUR
+							is_in_faction_with = TUR
+						}
+					}
+				}
+				ABK = { clear_all_relations = yes }
+			}
 						
 			### Hand over Iranian Land
 			if = {
 				limit = {
+					PER = { has_country_flag = was_at_war_with_OTT }
+				}
+				if = {
+					limit = { KUR = { has_country_flag = was_at_war_with_OTT } }
 					PER = {
-						has_country_flag = was_at_war_with_OTT
+						annex_country = { target = KUR transfer_troops = no }
 					}
 				}
 				every_state = {
 					limit = {
 						OR = {
-							is_owned_by = OTT
+							is_owned_by = TUR
 							is_owned_by = KUR
+							is_owned_by = IRQ
 						}
 						OR = {
 							state = 352 #Van
 							state = 819 #Sulaymaniyah
+							AND = {
+								OR = {
+									state = 676 #Mosul
+									state = 349 #Kirkuk
+									state = 291 #Baghdad
+									state = 812 #Basra
+								}
+								is_claimed_by = PER
+							}
 						}
 					}
 					PER = {
+						add_state_claim = PREV
 						transfer_state = PREV
 					}
 				}
-				PER = {
-					country_event = cp.3
-				}
+				PER = { country_event = cp.3 }
+				EGY = { country_event = { id = cp.16 days = 4 } }
 			}
 			else = {
 				IRQ = {
@@ -542,23 +587,40 @@ country_event = { #Victory in the Mashriq
 				}
 			}
 
+			### Release Azerbaijan if annexed
+			if = {
+				limit = {
+					NOT = { country_exists = AZE }
+					229 = { is_owned_by = TUR }
+				}
+				TUR = {
+					every_owned_state = {
+						limit = { is_core_of = AZE }
+						transfer_state_to = AZE
+					}
+				}
+			}
+
 			### Hand over Armenian Land
 			if = {
 				limit = {
-					ARM = {
-						has_country_flag = was_at_war_with_OTT
-						exists = yes
-					}
+					country_exists = ARM
+					ARM = { has_country_flag = was_at_war_with_OTT }
 				}
 				every_state = {
 					limit = {
 						OR = {
-							is_owned_by = OTT
+							is_owned_by = TUR
 							is_owned_by = KUR
 						}
 						OR = {
-							state = 1001 #Lazistan
-							state = 1000 #Kars-Igdir
+							AND = {
+								state = 1213 #Batumi
+								1213 = { is_claimed_by = ARM }
+								NOT = { GEO = { has_country_flag = was_at_war_with_OTT } }
+							}
+							state = 998 #Highland Karabagh
+							state = 1000 #Kars
 						}
 					}
 					ARM = {
@@ -567,27 +629,75 @@ country_event = { #Victory in the Mashriq
 				}
 				ARM = {
 					country_event = cp.3
+					country_event = { id = arm.26 days = 10 }
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					NOT = { country_exists = ARM }
-					230 = {
+					230 = { is_owned_by = TUR }
+				}
+				ARM = { 
+					ARM_initial_spawn_effect = yes
+					country_event = { id = arm.26 days = 10 }				
+				}
+			}
+
+			### Hand over Georgian Land
+			if = {
+				limit = {
+					country_exists = GEO
+					GEO = { has_country_flag = was_at_war_with_OTT }
+				}
+				every_state = {
+					limit = {
 						OR = {
-							is_owned_by = OTT
+							is_owned_by = TUR
 							is_owned_by = KUR
 						}
+						OR = {
+							state = 1213 #Batumi
+							state = 1001 #Lazistan
+						}
+					}
+					GEO = {
+						transfer_state = PREV
 					}
 				}
-				ARM = { transfer_state = 230 }
+				GEO = {
+					country_event = cp.3
+				}
+			}
+			else_if = {
+				limit = {
+					TUR = { has_subject = GEO }
+				}
+				GEO = { transfer_state = 1213 }
+			}
+			else_if = {
+				limit = {
+					NOT = { country_exists = GEO }
+					231 = { is_owned_by = TUR }
+				}
+				GEO = {
+					transfer_state = 231
+					transfer_state = 1080
+					transfer_state = 230
+					transfer_state = 1213
+					load_oob = GEO
+				}
 			}
 
 			### Hand over Greek Land
 			if = {
 				limit = {
-					GRE = { has_country_flag = was_at_war_with_OTT }
+					GRE = {
+						has_country_flag = CYP_war_for_enosis
+						has_war_with = TUR
+						is_valid_peace_target = yes
+					}
 				}
-				OTT = {
+				TUR = {
 					every_owned_state = {
 						limit = {
 							OR = {
@@ -597,6 +707,7 @@ country_event = { #Victory in the Mashriq
 								state = 184 #Western Thrace
 								state = 1089 #Kardzhali
 								is_claimed_by = GRE
+								is_core_of = GRE
 							}
 						}
 						GRE = {
@@ -612,7 +723,7 @@ country_event = { #Victory in the Mashriq
 				limit = {
 					CYP = { has_country_flag = was_at_war_with_OTT }
 				}
-				OTT = {
+				TUR = {
 					every_owned_state = {
 						limit = {
 							OR = {
@@ -621,69 +732,59 @@ country_event = { #Victory in the Mashriq
 								state = 183 #Cyprus
 							}
 						}
-						CYP = { transfer_state = PREV }
+						transfer_state_to = CYP
 					}
-				}
-			}
-
-			### Hand over Georgian Land
-			if = {
-				limit = {
-					GEO = {
-						has_country_flag = was_at_war_with_OTT
-					}
-				}
-				every_state = {
-					limit = {
-						OR = {
-							is_owned_by = OTT
-							is_owned_by = KUR
-							AND = {
-								is_owned_by = ARM
-								ARM = {
-									has_country_flag = was_at_war_with_OTT
-								}
-							}
-						}
-						state = 1001 #Lazistan
-					}
-					GEO = {
-						transfer_state = PREV
-					}
-				}
-				GEO = {
-					country_event = cp.3
 				}
 			}
 
 			### Hand over Libyan Land
 			if = {
 				limit = {
-					OR = {
-						TRP = {
-							exists = yes
-						}
-						448 = {
-							NOT = { 
-								is_controlled_by = LBA
-							}	
-						}
+					NOT = {
+						country_exists = TRP
+						448 = { is_controlled_by = LBA }
 					}
 				}
-				TRP = {
-					transfer_state = 448
-					add_state_core = 448
-					transfer_state = 273
-					add_state_core = 273
-					load_oob = TRP
-					country_event = {
-						id = trp.10
-						days = 10
+				TUR = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 448 #Tripolitania
+								state = 273 #Fezzan
+							}
+						}
+						transfer_state_to = TRP
 					}
 				}
+				TRP = { load_oob = TRP }
 			}
-
-			OTT = {
+			else_if = {
+				limit = { NOT = { 448 = { is_controlled_by = LBA } } }
+				TUR = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 448 #Tripolitania
+								state = 273 #Fezzan
+							}
+						}
+						transfer_state_to = TRP
+					}
+				}
+				TRP = { country_event = { id = cp.15 days = 4 } } #event about leaving Cairo pact for TRP
+			}
+			TUR = {
+				if = {
+					limit = { has_subject = LBA }
+					set_autonomy = {
+						target = LBA
+						autonomy_state = autonomy_free
+					}
+				}
+				if = {
+					limit = { is_in_faction_with = LBA }
+					remove_from_faction = LBA
+				}
 				every_owned_state = {
 					limit = {
 						OR = {
@@ -695,23 +796,16 @@ country_event = { #Victory in the Mashriq
 							state = 450 #Benghazi
 						}
 					}
-					LBA = {
-						transfer_state = PREV
-						OTT = {
-							remove_from_faction = LBA
-							end_puppet = LBA
-						}
-					}
+					transfer_state_to = LBA
 				}
 			}
-			LBA = {
-				country_event = libya.25 
-			}
+			LBA = { country_event = libya.25 }
 
 			### Remove capitulated or losing countries from the OTT sphere
 			every_other_country = {
 				limit = {
-					is_ally_with = OTT
+					NOT = { tag = TUR }
+					is_ally_with = TUR
 					OR = {
 						has_capitulated = yes
 						any_enemy_country = { is_owner_neighbor_of = PREV }
@@ -726,11 +820,17 @@ country_event = { #Victory in the Mashriq
 						}
 					}
 				}
-				leave_faction = yes
+				if = {
+					limit = { is_in_faction = yes }
+					leave_faction = yes
+				}
 				save_event_target_as = white_peace_receiver
 				every_enemy_country = {
 					limit = {
-						NOT = { is_owner_neighbor_of = PREV }
+						NOT = {
+							is_owner_neighbor_of = PREV
+							any_allied_country = { is_owner_neighbor_of = PREV.PREV }
+						}
 						is_valid_peace_target = yes
 					}
 					white_peace_with_TARGET = yes
@@ -738,7 +838,7 @@ country_event = { #Victory in the Mashriq
 			}
 
 			### Peace out with the Turks
-			OTT = {
+			TUR = {
 				save_event_target_as = white_peace_receiver
 				white_peace_with_ROOT = yes
 				every_enemy_country = {
@@ -750,71 +850,58 @@ country_event = { #Victory in the Mashriq
 							tag = SYR
 							tag = IRQ
 							tag = ARM
+							tag = GEO
+							tag = CYP
+							tag = UKR
 							tag = KUR
+							tag = KDR
 							tag = LBA
 							tag = TRP
 							tag = JBS
 							tag = SAU
 							tag = YEM
+							original_tag = IKH
+							AND = {
+								tag = GRE
+								has_country_flag = CYP_war_for_enosis
+							}
 						}
 					}
 					white_peace_with_TARGET = yes
+					set_truce = { target = PREV days = 730 }
 				}
-				dismantle_faction = yes
+				if = {
+					limit = { is_faction_leader = yes }
+					every_other_country = {
+						limit = {
+							is_in_faction_with = PREV
+							is_subject = no
+					}
+						add_to_temp_array = { ROOT.former_ottoman_allies = THIS }
+				}
+					dismantle_faction = yes
 			}
-
-			### Clear Ottoman state effects
-			every_state = {
-				limit = { NOT = { is_owned_by = OTT } }
-				if = {
-					limit = {
-						has_dynamic_modifier = { modifier = autonomous_region }
+				every_subject_country = {
+					overlord = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_free
 					}
-					remove_dynamic_modifier = { modifier = autonomous_region }
 				}
-				if = {
-					limit = {
-						has_dynamic_modifier = { modifier = vilayet }
+					add_to_temp_array = { ROOT.former_ottoman_allies = THIS }
 					}
-					remove_dynamic_modifier = { modifier = vilayet }
 				}
-				if = {
+			for_each_scope_loop = {
+				array = ROOT.former_ottoman_allies
+				every_enemy_country = {
 					limit = {
-						has_dynamic_modifier = { modifier = high_revolt_risk }
-					}
-					remove_dynamic_modifier = { modifier = high_revolt_risk }
-				}
-				if = {
-					limit = {
-						has_dynamic_modifier = { modifier = very_high_revolt_risk }
-					}
-					remove_dynamic_modifier = { modifier = very_high_revolt_risk }
-				}
-				if = {
-					limit = {
-						check_variable = { corruption = 2 }
-						has_state_flag = OTT_corruption_applied
-					}
-					clr_state_flag = OTT_corruption_applied
-					add_state_modifier = {
-						modifier = {
-							local_building_slots_factor = 0.20
-							local_manpower = 0.50
+						is_valid_peace_target = yes
+						NOT = {
+							is_owner_neighbor_of = PREV
+							any_allied_country = { is_owner_neighbor_of = PREV.PREV }
 						}
 					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { corruption = 1 }
-						has_state_flag = OTT_corruption_applied
-					}
-					clr_state_flag = OTT_corruption_applied
-					add_state_modifier = {
-						modifier = {
-							local_building_slots_factor = 0.10
-							local_manpower = 0.25
-						}
-					}
+					white_peace_with_ROOT = yes
 				}
 			}
 		}
@@ -832,15 +919,21 @@ country_event = { #Victory in the Mashriq
 				}
 			}
 		}
-
-		### Hand over Syrian Land
-		every_state = {
+		every_owned_state = {
 			limit = {
 				OR = {
-					is_owned_by = OTT
-					is_owned_by = SYR
-					is_owned_by = PAL
+					is_core_of = SYR
+					is_claimed_by = SYR
 				}
+			}
+			remove_claim_by = EGY
+		}
+		if = {
+			limit = { NOT = { country_exists = SYR } }
+			save_event_target_as = syria_did_not_exist
+		}
+		every_owned_state = {
+			limit = {
 				OR = {
 					state = 454 #Jerusalem
 					state = 455 #Ma'an
@@ -859,41 +952,62 @@ country_event = { #Victory in the Mashriq
 				transfer_state = PREV
 			}
 		}
-		SYR = {
-			remove_state_core = 344
-			add_state_claim = 344
-			344 = {
-				force_enable_resistance = SYR
-				start_resistance = yes
-			}
-			remove_state_core = 553
-			add_state_claim = 553
-			553 = {
-				force_enable_resistance = SYR
-				start_resistance = yes
-			}
-			remove_state_core = 350
-			add_state_claim = 350
-			350 = {
-				force_enable_resistance = SYR
-				start_resistance = yes
-			}
-			remove_state_core = 680
-			add_state_claim = 680
-			680 = {
-				force_enable_resistance = SYR
-				start_resistance = yes
-			}
+		hidden_effect = {
+			SYR = {
+				344 = {
+					force_enable_resistance = SYR
+					if = {
+						limit = {
+							is_owned_by = SYR
+							has_resistance = no
+						}
+						start_resistance = yes
+					}
+				}
+				553 = {
+					force_enable_resistance = SYR
+					if = {
+						limit = {
+							is_owned_by = SYR
+							has_resistance = no
+						}
+						start_resistance = yes
+					}
+				}
+				350 = {
+					force_enable_resistance = SYR
+					if = {
+						limit = {
+							is_owned_by = SYR
+							has_resistance = no
+						}
+						start_resistance = yes
+					}
+				}
+				680 = {
+					force_enable_resistance = SYR
+					if = {
+						limit = {
+							is_owned_by = SYR
+							has_resistance = no
+						}
+						start_resistance = yes
+					}
+				}
 
-			delete_unit_template_and_units = {
-				division_template = "Militia Damascus"
+				delete_unit_template_and_units = {
+					division_template = "Militia Damascus"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Druze Cavalry"
+				}
+				load_oob = SYR_army
+				transfer_technology = yes
+				every_owned_state = { #added this to prevent the situation where EGY claimed Syria in the confrence, released them as indpendent, but EGY still kept claims (which can lead to odd EGY-SYR war)
+					limit = { is_claimed_by = EGY }
+					remove_claim_by = EGY
+				}
 			}
-			delete_unit_template_and_units = {
-				division_template = "Druze Cavalry"
-			}
-
-			load_oob = SYR_army
-			transfer_technology = yes
 		}
 		country_event = cp.4
 	}
@@ -910,42 +1024,42 @@ country_event = { #Victory in the Mashriq
 				}
 			}
 		}
-
-		### Hand over Syrian Land
-		every_state = {
-			limit = {
-				OR = {
-					is_owned_by = OTT
-					is_owned_by = SYR
-					is_owned_by = PAL
-				}
-				OR = {
-					state = 454 #Jerusalem
-					state = 455 #Ma'an
-					state = 992 #Haifa
-					state = 554 #Damascus
-					state = 553 #Beirut
-					state = 995 #Homs
-					state = 680 #Latakia
-				}
-			}
-			EGY = {
-				add_state_claim = PREV
-				transfer_state = PREV
+		add_state_claim = 454 #Jerusalem
+		add_state_claim = 455 #Ma'an
+		add_state_claim = 553 #Beirut
+		add_state_claim = 554 #Damascus
+		add_state_claim = 680 #Latakia
+		add_state_claim = 992 #Haifa
+		add_state_claim = 995 #Homs
+		if = {
+			limit = { country_exists = SYR }
+			annex_country = {
+				target = SYR
+				transfer_troops = no
 			}
 		}
 		if = {
 			limit = {
-				677 = { #Aleppo
-					OR = {
-						check_variable = { OTT_revolt_risk > 3 } #high or very high
-						is_owned_by = SYR
-					}
-				}
+				owns_state = 677 #Aleppo
+				country_exists = IRQ
 			}
 			IRQ = {
 				add_state_core = 677 #Aleppo
 				transfer_state = 677 #Aleppo
+			}
+		}
+		if = {
+			limit = { owns_state = 344 } #Adana
+			TUR = { transfer_state = 344 }
+		}
+		if = {
+			limit = { owns_state = 350 } #Diyarbakir
+			if = {
+				limit = { country_exists = KUR }
+				KUR = { transfer_state = 350 }
+			}
+			else = {
+				TUR = { transfer_state = 350 }
 			}
 		}
 
@@ -959,7 +1073,7 @@ country_event = { #Victory in the Mashriq
 			every_state = {
 				limit = {
 					OR = {
-						is_owned_by = OTT
+						is_owned_by = TUR
 					}
 					OR = {
 						state = 754 #Medina
@@ -980,7 +1094,7 @@ country_event = { #Victory in the Mashriq
 			every_state = {
 				limit = {
 					OR = {
-						is_owned_by = OTT
+						is_owned_by = TUR
 					}
 					OR = {
 						state = 754 #Medina
@@ -996,7 +1110,7 @@ country_event = { #Victory in the Mashriq
 			every_state = {
 				limit = {
 					OR = {
-						is_owned_by = OTT
+						is_owned_by = TUR
 						is_owned_by = HEJ
 					}
 					OR = {
@@ -1023,23 +1137,8 @@ country_event = { #Egypt signs peace in our name
 
 	option = {
 		name = cp.3.a
-		ai_chance = {
-			factor = 100
-		}
 		add_political_power = 50
 	}
-
-	# option = {
-	# 	name = cp.3.b
-	# 	ai_chance = {
-	# 		factor = 0
-	# 	}
-	# 	add_stability = -0.2
-	# 	declare_war_on = {
-	# 		target = OTT
-	# 		type = annex_everything
-	# 	}
-	# }
 }
 
 country_event = { #Future of Syria
@@ -1053,16 +1152,8 @@ country_event = { #Future of Syria
 	immediate = {
 		hidden_effect = {
 			if = {
-				limit = {
-					SYR = {
-						NOT = {
-							is_in_faction_with = EGY
-						}
-					}
-				}
-				EGY = {
-					add_to_faction = SYR
-				}
+				limit = { NOT = { is_in_faction_with = SYR } }
+				add_to_faction = SYR
 			}
 		}
 	}
@@ -1139,6 +1230,11 @@ country_event = { #Future of Syria
 				election_frequency = 48
 				elections_allowed = yes
 			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = SYR_authoritarian_democrat_party_long_sultanate
+				name = SYR_authoritarian_democrat_party_sultanate
+			}
 			hidden_effect = {
 				set_popularities = {
 					totalist = 0
@@ -1189,11 +1285,8 @@ country_event = { #Future of Syria
 					national_populist = 8
 				}
 			}
-			country_event = {
-				id = syrrep.1
-				days = 1
-			}	
-			change_tag_from = EGY
+			country_event = { id = syrrep.1 days = 1 }
+			change_tag_from = ROOT
 		}
 	}
 }
@@ -1208,18 +1301,18 @@ country_event = { #We are left Emptyhanded (Arab response to Egypts deal)
 
 	option = {
 		name = cp.5.a
-		ai_chance = {
-			factor = 100
-		}
-		EGY = {
-			remove_from_faction = ROOT
-		}
+		trigger = { is_subject = no }
+		leave_faction = yes
 	}
 
 	option = {
 		name = cp.5.b
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 1
+				is_subject = yes
+			}
 		}
 		add_war_support = -0.10
 	}
@@ -1235,18 +1328,18 @@ country_event = { #Leaving the Cairo Pact? (YEM)
 
 	option = {
 		name = cp.6.a
-		ai_chance = {
-			factor = 100
-		}
-		EGY = {
-			remove_from_faction = YEM
-		}
+		trigger = { is_subject = no }
+		leave_faction = yes
 	}
 
 	option = {
 		name = cp.6.b
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 1
+				is_subject = yes
+			}
 		}
 		add_war_support = -0.10
 	}
@@ -1258,29 +1351,38 @@ country_event = { #Iraqi Declaration of Independence
 	title = cp.7.t
 	desc = cp.7.d
 
+	trigger = {
+		country_exists = IRQ
+		IRQ = {
+			has_capitulated = no
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = ROOT
+			}
+			NOT = { has_war_with = PER }
+			NOT = { has_war_with = TUR }
+		}
+	}
+
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = cp.7.a
-		ai_chance = {
-			factor = 100
-		}
 		IRQ = {
+				leave_faction = yes
 			country_event = irq.1
 		}
 	}
 
 	option = {
 		name = cp.7.b
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { base = 0 }
 		IRQ = {
-			country_event = {
-				id = irq.1
-				days = 2
-			}
-			change_tag_from = EGY
+				leave_faction = yes
+			country_event = { id = irq.1 hours = 2 }
+			change_tag_from = ROOT
 		}
 	}
 }
@@ -1307,16 +1409,18 @@ country_event = { #Ottoman Victory in Egypt
 				}
 				complete_national_focus = OTT_Ottoman_Renaissance
 			}
-			dismantle_faction = yes
+			log = "KR_Event_Logging;OTT WINS IN THE LEVANT;[GetDateText];[ROOT.GetName];[FROM.GetName]"
+			country_event = { id = cp.14 days = 30 }
 		}
 	}
 
 	option = {
 		name = cp.8.a
 		ai_chance = {
-			factor = 20
+			base = 20
 		}
 		set_country_flag = EGY_CONQ
+		set_country_flag = SUD_CONQ
 		if = {
 			limit = {
 				OR = {
@@ -1335,6 +1439,11 @@ country_event = { #Ottoman Victory in Egypt
 			factor = 80
 		}
 		set_temp_variable = { tag_to_release = EGY }
+		hidden_effect = {
+			CEA = {
+				country_event = { id = cea_flavour.70 days = 22 }
+			}
+		}
 		every_owned_state = {
 			limit = {
 				is_core_of = EGY
@@ -1343,7 +1452,7 @@ country_event = { #Ottoman Victory in Egypt
 					state = 753 #Suez Canal
 				}
 			}
-			var:tag_to_release = { transfer_state = PREV }
+			transfer_state_to = var:tag_to_release
 		}
 		puppet_released_tag = yes
 		var:tag_to_release = {
@@ -1438,17 +1547,10 @@ country_event = {
 	title = cp.9.t
 	desc = cp.9.d
 
-	fire_only_once = yes
+	is_triggered_only = yes
 
 	trigger = {
-		tag = OTT
-		AND = {
-			has_war_with = EGY
-			has_war_with = PER
-		}
-		NOT = {
-			has_completed_focus = OTT_Union_Party_State
-		}
+		NOT = { has_completed_focus = OTT_Union_Party_State }
 	}
 
 	option = {
@@ -1472,15 +1574,7 @@ country_event = { #Change to Turkey
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = OTT
-		has_country_flag = OTT_change_to_turkey
-		has_war = no
-	}
-
-	mean_time_to_happen = {
-		days = 14
-	}
+	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
@@ -1496,68 +1590,11 @@ country_event = { #Change to Turkey
 	option = {
 		name = cp.10.a
 		clr_country_flag = OTT_change_to_turkey
+		OTT_post_defeat_setup = yes
+		OTT_remove_ottoman_ambitions_claims = yes
+		OTT_changes_into_turkey = yes
 		hidden_effect = {
-			TUR = {
-				add_state_core = 341 #Edirne
-				add_state_core = 773 #Kostantiniyye
-				add_state_core = 340 #Bursa
-				add_state_core = 339 #Izmir
-				add_state_core = 342 #Mugla
-				add_state_core = 343 #Afyon
-				add_state_core = 345 #Sivas
-				add_state_core = 346 #Konya
-				add_state_core = 49 #Ankara
-				add_state_core = 356 #Sinop
-				add_state_core = 344 #Adana
-				add_state_core = 355 #Samsun
-				add_state_core = 354 #Gümüshane
-				add_state_core = 350 #Diyarbakır
-				add_state_core = 352 #Van
-				add_state_core = 1000 #Kars-Igdir
-				add_state_core = 1001 #Lazistan
-			}
-			every_owned_state = {
-				limit = {
-					is_core_of = OTT
-					NOT = { is_core_of = TUR }
-				}
-				add_core_of = TUR
-			}
-			every_state = {
-				limit = { is_claim_or_core_of_ROOT = yes }
-				remove_core_of = OTT
-				remove_claim_by = OTT
-			}
-
-			random_owned_controlled_state = {
-				TUR = { transfer_state = PREV }
-			}
-		}
-		transfer_units_fraction = {
-			target = TUR
-			size = 1
-			stockpile_ratio = 1
-			army_ratio = 1
-			navy_ratio = 1
-			air_ratio = 1
-			keep_unit_leaders_trigger = { always = no }
-		}
-		if = {
-			limit = {
-				OTT = { has_country_flag = has_overlord }
-			}
-			hidden_effect = {
-				OTT = { clr_country_flag = has_overlord }
-				event_target:old_overlord = { puppet = TUR }
-			}
-		}
-		TUR = {
-			transfer_technology = yes
-			annex_country = {
-				target = OTT
-				transfer_troops = yes
-			}
-			change_tag_from = ROOT
+			country_event = { id = ottkem.51 days = 20 random_days = 120 }
 		}
 	}
 }
@@ -1633,7 +1670,7 @@ country_event = { #Death of Abbas II Hilmi
 				ideology = market_liberal_subtype
 			}
 		}
-		OTT = {
+		TUR = {
 			country_event = cp.11
 		}
 	}
@@ -1768,19 +1805,541 @@ country_event = { #The Cypriot Issue
 		add_ideas = OTT_Long_live_the_turkish_republic_of_northern_cyprus
 		if = {
 			limit = {
-				NOT = { has_tech = transport }
+				NOT = {
+					has_tech = transport
+					has_tech = mtg_transport
 			}
+			}
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				set_technology = { mtg_transport = 1 }
+			}
+			else = {
 			set_technology = { transport = 1 }
 		}
 	}
 }
+}
 
+country_event = { #Leaving the Cairo Pact? (TRP)
+	id = cp.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.15 FROM = [From.GetName]" }
+	title = cp.15.t
+	desc = cp.15.d
+
+	picture = GFX_report_event_EGY_egyptian_troops
+
+	trigger = {
+		is_in_faction_with = EGY
+		is_subject = no
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.15.a
+		ai_chance = {
+			base = 100
+		}
+		leave_faction = yes
+	}
+
+	option = {
+		name = cp.15.b
+		ai_chance = {
+			base = 0
+		}
+		add_war_support = -0.10
+	}
+}
+
+country_event = { #Persia Annexes Iraq (EGY)
+	id = cp.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.16 FROM = [From.GetName]" }
+	title = cp.16.t
+	desc = cp.16.d
+	picture = GFX_OTT_Civil_War_Jabal
+
+	trigger = {
+		PER = { owns_state = 291 } #Baghdad
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.16.a #They must evacuate Mesopotamia immediately!
+		ai_chance = {
+			base = 100
+		}
+		PER = { country_event = cp.17 }
+	}
+
+	option = {
+		name = cp.16.b #We'd rather not fight the Persians...
+		ai_chance = { base = 0 }
+		add_war_support = -0.10
+	}
+}
+
+country_event = { #Egypt Demands the Liberation of Iraq (PER)
+	id = cp.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.17 FROM = [From.GetName]" }
+	title = cp.17.t
+	desc = cp.17.d
+	picture = GFX_report_event_EGY_egyptian_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.17.a #If they want Iraq, they can fight for it.
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 0
+				enemies_strength_ratio > 1
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = EGY ratio < 1 }
+			}
+		}
+		FROM = { country_event = cp.18 }
+	}
+
+	option = {
+		name = cp.17.b #We cannot fight them
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				enemies_strength_ratio < 1
+				strength_ratio = { tag = EGY ratio > 1 }
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = IRQ
+				is_claimed_by = ROOT
+			}
+			remove_claim_by = ROOT
+		}
+		release = IRQ
+		FROM = { country_event = cp.19 }
+	}
+}
+
+country_event = { #Persia Refuses Our Demands (EGY)
+	id = cp.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.18 FROM = [From.GetName]" }
+	title = cp.18.t
+	desc = cp.18.d
+	picture = GFX_OTT_Civil_War_Jabal
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.18.a #Then war it shall be
+		ai_chance = {
+			base = 99
+			modifier = {
+				factor = 0
+				PER = {
+					is_in_faction = yes
+					faction_leader = { is_actual_major = yes }
+				}
+			}
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = PER
+		}
+	}
+
+	option = {
+		name = cp.18.b #Drop the matter
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -25
+	}
+}
+
+country_event = { #Persia Withdraws from Iraq (EGY)
+	id = cp.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.19 FROM = [From.GetName]" }
+	title = cp.19.t
+	desc = cp.19.d
+	picture = GFX_report_event_EGY_egyptian_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.19.a
+		ai_chance = {
+			base = 100
+		}
+		IRQ = { country_event = irq.1 }
+	}
+
+	option = {
+		name = cp.19.b
+		ai_chance = {
+			base = 0
+		}
+		IRQ = {
+			country_event = { id = irq.1 days = 2 }
+			change_tag_from = ROOT
+		}
+	}
+}
+
+country_event = { #Treaty of Aleppo (PER)
+	id = cp.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.20 FROM = [From.GetName]" }
+
+	title = {
+		text = cp.20.t.victory
+		trigger = {
+			NOT = { has_global_flag = PER_defeated_by_EGY }
+		}
+	}
+	title = {
+		text = cp.20.t.defeat
+		trigger = { has_global_flag = PER_defeated_by_EGY }
+	}
+
+	desc = {
+		text = cp.20.d.victory
+		trigger = {
+			NOT = { has_global_flag = PER_defeated_by_EGY }
+		}
+	}
+	desc = {
+		text = cp.20.d.defeat
+		trigger = { has_global_flag = PER_defeated_by_EGY }
+	}
+
+	picture = GFX_report_event_EGY_egyptian_troops
+
+	trigger = {
+		tag = PER
+		has_war_with = EGY
+		owns_state = 291 #Baghdad
+		is_valid_peace_target = yes
+		EGY = { is_faction_leader = yes }
+		OR = {
+			#Persia loses
+			surrender_progress > 0.2
+			NOT = {
+				controls_state = 291 #Baghdad
+				controls_state = 349 #Kirkuk
+				controls_state = 676 #Mosul
+				controls_state = 812 #Basra
+			}
+			#Persia wins
+			EGY = { surrender_progress > 0.2 }
+			SYR = {
+				is_ally_with = EGY
+				has_capitulated = yes
+			}
+			AND = {
+				454 = { #Jerusalem
+					is_owned_by = EGY
+					is_controlled_by = ROOT
+				}
+				554 = { #Damascus
+					is_owned_by = EGY
+					is_controlled_by = ROOT
+				}
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					surrender_progress > 0.2
+					NOT = {
+						controls_state = 291 #Baghdad
+						controls_state = 349 #Kirkuk
+						controls_state = 676 #Mosul
+						controls_state = 812 #Basra
+					}
+				}
+			}
+			set_global_flag = { flag = PER_defeated_by_EGY days = 60 value = 1 }
+		}
+	}
+
+	option = {
+		name = cp.20.a #Demand Egypt recognise our gains
+		trigger = {
+			NOT = { has_global_flag = PER_defeated_by_EGY }
+		}
+		EGY = { country_event = { id = cp.21 days = 2 } }
+	}
+
+	option = {
+		name = cp.20.b #No, we shall crush them!
+		trigger = {
+			NOT = { has_global_flag = PER_defeated_by_EGY }
+		}
+		ai_chance = { base = 0 }
+		add_war_support = -0.1
+	}
+
+	option = {
+		name = cp.20.c #We must end this war.
+		trigger = { has_global_flag = PER_defeated_by_EGY }
+		EGY = { country_event = { id = cp.21 days = 2 } }
+	}
+
+	option = {
+		name = cp.20.d #We can still win this!
+		trigger = { has_global_flag = PER_defeated_by_EGY }
+		ai_chance = { base = 0 }
+		add_war_support = -0.2
+	}
+}
+
+country_event = { #Peace with Persia? (EGY)
+	id = cp.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.21 FROM = [From.GetName]" }
+	title = cp.21.t
+	picture = GFX_report_event_generic_diplomacy4
+
+	desc = {
+		text = cp.21.d.victory
+		trigger = {
+			has_global_flag = PER_defeated_by_EGY
+		}
+	}
+	desc = {
+		text = cp.21.d.defeat
+		trigger = {
+			NOT = { has_global_flag = PER_defeated_by_EGY }
+		}
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_war_with = FROM
+		is_valid_peace_target = yes
+		FROM = { is_valid_peace_target = yes }
+	}
+
+	option = {
+		name = cp.21.a #We accept their terms
+		ai_chance = {
+			base = 100
+		}
+		FROM = { country_event = cp.22 }
+	}
+
+	option = {
+		name = rusfor.1233.b #No, they shall be crushed!
+		ai_chance = {
+			base = 0
+		}
+		if = {
+			limit = { has_global_flag = PER_defeated_by_EGY }
+			add_war_support = -0.1
+		}
+		else = {
+			add_war_support = -0.2
+		}
+		FROM = { country_event = cp.23 }
+	}
+}
+
+country_event = { #Egypt Accepts Peace (PER)
+	id = cp.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.22 FROM = [From.GetName]" }
+	title = cp.22.t
+	picture = GFX_report_event_generic_diplomacy1
+
+	desc = {
+		text = cp.22.d.victory
+		trigger = {
+			NOT = { has_global_flag = PER_defeated_by_EGY }
+		}
+	}
+	desc = {
+		text = cp.22.d.defeat
+		trigger = {
+			has_global_flag = PER_defeated_by_EGY
+		}
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_war_with = FROM
+		is_valid_peace_target = yes
+		FROM = { is_valid_peace_target = yes }
+	}
+
+	option = {
+		name = cp.22.a
+		trigger = {
+			NOT = { has_global_flag = PER_defeated_by_EGY }
+		}
+		FROM = {
+			white_peace_with_ROOT = yes
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+			}
+			set_truce = { target = ROOT days = 730 }
+		}
+	}
+
+	option = {
+		name = cp.22.b
+		trigger = { has_global_flag = PER_defeated_by_EGY }
+		every_state = {
+			limit = {
+				is_core_of = IRQ
+				is_claimed_by = ROOT
+			}
+			remove_claim_by = ROOT
+		}
+		FROM = {
+			white_peace_with_ROOT = yes
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+			}
+			set_truce = { target = ROOT days = 730 }
+		}
+		release = IRQ
+		IRQ = {
+			diplomatic_relation = {
+				country = ROOT
+				relation = non_aggression_pact
+			}
+			set_truce = { target = ROOT days = 730 }
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				country_event = { id = cp.7 days = 2 }
+			}
+			else = {
+				FROM = { country_event = { id = cp.7 days = 2 } }
+			}
+		}
+	}
+}
+
+country_event = { #Egypt Refuses Peace (PER)
+	id = cp.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.23 FROM = [From.GetName]" }
+	title = cp.23.t
+	desc = cp.23.d
+	picture = GFX_OTT_Civil_War_Jabal
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.23.a
+		add_war_support = 0.1
+	}
+}
+
+country_event = { #Georgia Occupies Batum
+	id = cp.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.24 FROM = [From.GetName]" }
+	title = cp.24.t
+	desc = cp.24.d
+	picture = GFX_OTT_Rize1
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.24.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_war = yes
+				FROM = { is_in_faction = yes }
+		}
+		}
+		FROM = {
+			effect_tooltip = {
+			add_state_claim = 1001
+				create_wargoal = {
+					target = ROOT
+					type = take_core_state
+					generator = { 1213 }
+				}
+			}
+			country_event = cp.26
+		}
+	}
+	option = {
+		name = cp.24.b
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				FROM = {
+					is_ai = no
+					is_in_faction = no
+				}
+			}
+		}
+		1000 = { ott_increase_revolt_risk = yes }
+		1001 = { ott_increase_revolt_risk = yes }
+		FROM = { country_event = cp.25 }
+	}
+}
+
+country_event = { #Ottoman forces withdraw from Batum
+	id = cp.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.25 FROM = [From.GetName]" }
+	title = cp.25.t
+	desc = cp.25.d
+	picture = GFX_OTT_Rize1
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.25.a
+		add_political_power = 50
+		transfer_state = 1213
+	}
+}
+country_event = { #Ottoman forces withdraw from Batum
+	id = cp.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.26 FROM = [From.GetName]" }
+	title = cp.26.t
+	desc = cp.26.d
+	picture = GFX_OTT_Rize1
+
+	is_triggered_only = yes
+
+	option = {
+		name = cp.26.a
+		add_state_claim = 1001
+		create_wargoal = {
+			target = FROM
+			type = take_core_state
+			generator = { 1213 }
+		}
+	}
+}
 country_event = { #hidden event to peace out AZE and AFG after Persia surrenders
 	id = cp.1000
 	immediate = { log = "[GetDateText]: [Root.GetName]: event cp.1000" }
 
 	trigger = {
-		is_in_faction_with = OTT
+		is_in_faction_with = TUR
 		has_war = yes
 	}
 
@@ -1791,20 +2350,22 @@ country_event = { #hidden event to peace out AZE and AFG after Persia surrenders
 		if = {
 			limit = { tag = AZE }
 			if = {
-				limit = { is_ally_with = var:417.owner }
-				transfer_state = 417 #Western Azerbaijan
-			}
-			if = {
 				limit = { is_ally_with = var:419.owner }
-				transfer_state = 419 #Eastern Azerbaijan
+				transfer_state = 419 #Tabriz
 			}
 		}
 		leave_faction = yes
 		every_enemy_country = {
 			limit = {
 				is_valid_peace_target = yes
-				has_war_with = OTT
-				NOT = { tag = PER }
+				has_war_with = TUR
+				NOT = {
+					is_neighbor_of = ROOT
+					AND = {
+						is_in_faction = yes
+						faction_leader = { is_actual_major = yes }
+					}
+				}
 			}
 			white_peace_with_ROOT = yes
 		}

@@ -131,7 +131,6 @@ nsnp_in_power = {
 	has_idea = RUS_Viktor_M_Baydalakov_hog_npo
 }
 vns_in_power = {
-	has_government = social_conservative
 	OR = {
 		has_idea = RUS_Felix_F_Yusupov_hog_ade
 		has_idea = RUS_Georgiy_P_Ignatiev_hog_sco
@@ -470,3 +469,132 @@ is_core_rrf_state = {
 		state = 260
 	}
 }
+RUS_siberian_insurgency_can_control_state = {
+	if = {
+		limit = {
+			FROM = { state = 403 }
+		}
+		OR = {
+			653 = { 
+				is_demilitarized_zone = no
+			}
+			572 = { 
+				is_demilitarized_zone = no
+			}
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 577 }
+		}
+		580 = { 
+			is_demilitarized_zone = no
+		}
+		403 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 571 }
+		}
+		403 = { 
+			is_demilitarized_zone = no
+		}
+		590 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { 
+				OR = {
+					state = 570 
+					state = 578 
+				}
+			}
+		}
+		571 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 40 }
+		}
+		588 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 569 }
+		}
+		OR = {
+			570 = { 
+				is_demilitarized_zone = no
+			}
+			40 = { 
+				is_demilitarized_zone = no
+			}
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 654 }
+		}
+		40 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 40 }
+		}
+		570 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 568 }
+		}
+		578 = { 
+			is_demilitarized_zone = no
+		}
+		569 = { 
+			is_demilitarized_zone = no
+		}
+		40 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 576 }
+		}
+		578 = { 
+			is_demilitarized_zone = no
+		}
+		569 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 567 }
+		}
+		568 = { 
+			is_demilitarized_zone = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = { state = 575 }
+		}
+		567 = { 
+			is_demilitarized_zone = no
+		}
+	}
+}
+	

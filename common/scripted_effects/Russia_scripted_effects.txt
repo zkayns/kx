@@ -1,69 +1,37 @@
 setup_backward_industry = {
 	set_variable = { RUS_prev_month_num_of_factories = ROOT.num_of_factories }
 	add_dynamic_modifier = { modifier = RUS_backward_industry_modifier }
-	add_ideas = rus_industry_lack
 	recalculate_backward_industry_debuff = yes
 }
 remove_backward_industry = {
-	hidden_effect = {
 		remove_dynamic_modifier = { modifier = RUS_backward_industry_modifier }
 		add_dynamic_modifier = { modifier = RUS_industrialized_nation_modifier }		
 	}
-	swap_ideas = {
-		remove_idea = rus_industry_lack
-		add_idea = rus_industrialised_nation
-	}
-}
 setup_unfinished_land_reform = {
-	217 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	250 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	251 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	249 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	252 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	219 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	195 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	652 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	651 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	572 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	653 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	571 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	570 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	40 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	568 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	566 = { 
-		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-	}
-	399 = { 
+	every_state = {
+		limit = {
+			OR = {
+				state = 217
+				state = 250
+				state = 251
+				state = 249
+				state = 252
+				state = 219
+				state = 195
+				state = 652
+				state = 651
+				state = 572
+				state = 572
+				state = 653
+				state = 571
+				state = 570
+				state = 40
+				state = 568
+				state = 566
+				state = 399
+				state = 399
+			}
+		}
 		add_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
 	}
 	add_ideas = rus_unfinished_land_reform
@@ -72,57 +40,12 @@ destroy_unfinished_land_reform = {
 	remove_ideas = rus_unfinished_land_reform
 	set_global_flag = RUS_land_reform_finished
 	hidden_effect = {
-		217 = { 
+		every_state = {
+			limit = {
+				has_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier }
+			}
 			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		250 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		251 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		249 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		252 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		219 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		195 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		652 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		651 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		572 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		653 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		571 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		570 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		40 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		568 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		566 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
-		399 = { 
-			remove_dynamic_modifier = { modifier = RUS_unfinished_land_reform_modifier	} 
-		}
+		}		
 	}
 }
 recalculate_monthly_industrialisation_rate = {
@@ -135,7 +58,7 @@ recalculate_monthly_industrialisation_rate = {
 	
 	if = {
 		limit = {
-			NOT = { has_idea = rus_industry_lack }
+			NOT = { has_dynamic_modifier = { modifier = RUS_backward_industry_modifier } }
 		}
 		set_variable = { ROOT.RUS_backward_industry_efficiency_gain = 0.05 }
 		set_variable = { ROOT.RUS_backward_industry_max_efficiency = 0.05 }
@@ -157,15 +80,15 @@ recalculate_monthly_industrialisation_rate = {
 recalculate_backward_industry_debuff = {
 	if = {
 		limit = {
-			num_of_factories < 220
+			num_of_factories < 250
 		}
 		set_variable = { RUS_industrialisation_var = ROOT.num_of_factories }
 		clamp_variable = {
 			var = RUS_industrialisation_var
 			min = 50
-			max = 220
+			max = 250
 		}
-		divide_variable = { RUS_industrialisation_var = 220 }
+		divide_variable = { RUS_industrialisation_var = 250 }
 		clamp_variable = {
 			var = RUS_industrialisation_var
 			min = 0
@@ -222,9 +145,9 @@ RUS_recheck_president_subideology = {
 		}
 		if = {
 			limit = {
-				NOT = { has_country_leader_ideology = market_socialist_subtype }
+				NOT = { has_country_leader_ideology = bukharinist_subtype }
 			}
-			set_country_leader_ideology = market_socialist_subtype
+			set_country_leader_ideology = bukharinist_subtype
 		}
 	}
 	if = {
@@ -311,6 +234,34 @@ RUS_recheck_president_subideology = {
 		}
 		if = {
 			limit = {
+				has_country_leader = {
+					name = "Felix Yusupov"
+					ruling_only = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_leader_ideology = clientelism_subtype }
+				}
+				set_country_leader_ideology = clientelism_subtype
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_leader = {
+					name = "Pyotr Wrangel"
+					ruling_only = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_leader_ideology = soccon_bonapartism_subtype }
+				}
+				set_country_leader_ideology = soccon_bonapartism_subtype
+			}
+		}
+		else_if = {
+			limit = {
 				NOT = { has_country_leader_ideology = moderate_authoritarianism_subtype }
 			}
 			set_country_leader_ideology = moderate_authoritarianism_subtype 
@@ -323,14 +274,31 @@ RUS_recheck_president_subideology = {
 				has_idea = RUS_Vladimir_M_Zenzinov_hog_sde
 				has_idea = RUS_Vladimir_K_Volsky_hog_rso
 			}
+			NOT = { has_country_flag = RUS_socdems_rpr }
 		}
 		if = {
 			limit = {
-				NOT = { has_country_leader_ideology = socdem_democratic_socialism_subtype }
+				NOT = { has_country_leader_ideology = socdem_narodism_subtype }
 			}
-			set_country_leader_ideology = socdem_democratic_socialism_subtype 
+			set_country_leader_ideology = socdem_narodism_subtype 
 		}
 	}
+	if = {
+		limit = {
+			has_government = social_democrat
+			OR = {
+				has_idea = RUS_Vladimir_M_Zenzinov_hog_sde
+				has_idea = RUS_Vladimir_K_Volsky_hog_rso
+			}
+			has_country_flag = RUS_socdems_rpr
+		}
+		if = {
+			limit = {
+				NOT = { has_country_leader_ideology = socdem_left_nationalism_subtype }
+			}
+			set_country_leader_ideology = socdem_left_nationalism_subtype 
+		}
+	}	
 }
 	
 	
@@ -339,7 +307,7 @@ RUS_setup_president_kamkov = {
 		name = "Boris Kamkov"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Kamkov.png"
 		expire = "1965.1.1"
-		ideology = market_socialist_subtype 
+		ideology = bukharinist_subtype 
 	}
 	create_country_leader = {
 		name = "Boris Kamkov"
@@ -390,7 +358,7 @@ RUS_setup_president_shteinberg = {
 		name = "Isaak Shteinberg"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Isaak_Steinberg.png"
 		expire = "1965.1.1"
-		ideology = market_socialist_subtype 
+		ideology = bukharinist_subtype 
 	}
 	create_country_leader = {
 		name = "Isaak Shteinberg"
@@ -445,7 +413,7 @@ RUS_setup_president_lozovskiy = {
 			name = "Solomon Lozovskiy"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Solomon_Lozovsky.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { trade_union_boss }
 		}
 		create_country_leader = {
@@ -510,7 +478,7 @@ RUS_setup_president_odinets = {
 			desc = "POLITICS_ODINETS_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Dmitriy_Odinets.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_trudovik_intelligent }
 		}
 		create_country_leader = {
@@ -582,7 +550,7 @@ RUS_setup_president_arkhangelsky = {
 			desc = "POLITICS_ARKHANGELSKY_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Aleksey_Arkhangelsky.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Aleksey Arkhangelsky"
@@ -646,7 +614,7 @@ RUS_setup_president_baydalakov = {
 			desc = "POLITICS_BAYDALAKOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Viktor_Baydalakov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Viktor Baydalakov"
@@ -710,7 +678,7 @@ RUS_setup_president_vergun = {
 			desc = "POLITICS_VERGUN_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Kirill_Vergun.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Kirill Vergun"
@@ -774,7 +742,7 @@ RUS_setup_president_trushnovich = {
 			desc = "POLITICS_TRUSHNOVICH_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Trushnovich.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Aleksandr Trushnovich"
@@ -838,7 +806,7 @@ RUS_setup_president_georgievsky = {
 			desc = "POLITICS_GEORGIEVSKY_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Georgievskiy.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Mikhail Georgievskiy"
@@ -902,7 +870,7 @@ RUS_setup_president_gershtein = {
 			desc = "POLITICS_GERSHTEIN_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Lev_Gershtein.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { }
 		}
 		create_country_leader = {
@@ -974,7 +942,7 @@ RUS_setup_president_teslenko = {
 			desc = "POLITICS_TESLENKO_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Teslenko.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { }
 		}
 		create_country_leader = {
@@ -1042,7 +1010,7 @@ RUS_setup_president_shlyapnikov = {
 			name = "Aleksandr Shliapnikov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Shliapnikov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { trade_union_boss }
 		}
 	create_country_leader = {
@@ -1102,7 +1070,7 @@ RUS_setup_president_rykov = {
 			name = "Aleksey Rykov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Aleksey_Rykov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { trade_union_boss }
 		}
 	create_country_leader = {
@@ -1161,7 +1129,7 @@ create_country_leader = {
 			name = "Nikolay Bukharin"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Bukharin.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_ex_bolshevik  }
 		}
 	create_country_leader = {
@@ -1224,7 +1192,7 @@ RUS_setup_president_gvozdev = {
 			name = "Kuzma Gvozdev"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Kuzma_Gvozdev.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 	create_country_leader = {
 			name = "Kuzma Gvozdev"
@@ -1282,7 +1250,7 @@ RUS_setup_president_tsereteli = {
 			desc = "POLITICS_IRAKLIY_TSERETELI_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Irakliy_Tsereteli.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_bleeding_heart_socialist }
 		}
 	create_country_leader = {
@@ -1356,7 +1324,7 @@ RUS_setup_president_potresov = {
 			desc = "POLITICS_ALEKSANDR_POTRESOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Potresov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Aleksandr Potresov"
@@ -1422,7 +1390,7 @@ RUS_setup_president_chernov = {
 			desc = "POLITICS_VIKTOR_CHERNOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Viktor_Chernov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_savvy_politician  }
 		}
 	create_country_leader = {
@@ -1494,7 +1462,7 @@ RUS_setup_president_vasiliy_arkhangelsky = {
 			desc = "POLITICS_VASILIY_ARKHANGELSKY_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Vasily_Arkhangelsky.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 	create_country_leader = {
 			name = "Vasiliy Arkhangelskiy"
@@ -1558,7 +1526,7 @@ RUS_setup_president_gendelman = {
 			desc = "POLITICS_MIKHAIL_GENDELMAN_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Gendelman.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 	create_country_leader = {
 			name = "Mikhail Gendelman"
@@ -1622,7 +1590,7 @@ RUS_setup_president_likhach = {
 			desc = "POLITICS_MIKHAIL_LIKHACH_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Likhach.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 	create_country_leader = {
 			name = "Mikhail Likhach"
@@ -1686,7 +1654,7 @@ RUS_setup_president_ivanov = {
 			desc = "POLITICS_NIKOLAY_IVANOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Ivanov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 	create_country_leader = {
 			name = "Nikolay Ivanov"
@@ -1749,7 +1717,7 @@ RUS_setup_president_avksentiev = {
 			name = "Nikolay Avksentiev"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Avksentiev.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			}
 	create_country_leader = {
 			name = "Nikolay Avksentiev"
@@ -1796,6 +1764,62 @@ RUS_setup_president_avksentiev = {
 		}
 	RUS_recheck_president_subideology = yes
 }
+RUS_setup_president_sorokin = {
+	if = {
+		limit = {
+			has_country_flag = bolsheviks_allowed
+		}
+		create_country_leader = {
+			name = "Pitirim Sorokim"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Pitirim_Sorokin.png"
+			expire = "1965.1.1"
+			ideology = bukharinist_subtype 
+		}
+		create_country_leader = {
+			name = "Pitirim Sorokim"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Pitirim_Sorokin.png"
+			expire = "1965.1.1"
+			ideology = anarcho_syndicalist_subtype
+		}
+	}
+	create_country_leader = {
+		name = "Pitirim Sorokim"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pitirim_Sorokin.png"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+	}
+	create_country_leader = {
+		name = "Pitirim Sorokim"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pitirim_Sorokin.png"
+		expire = "1965.1.1"
+		ideology = centrist_subtype
+	}
+	create_country_leader = {
+		name = "Pitirim Sorokim"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pitirim_Sorokin.png"
+		expire = "1965.1.1"
+		ideology = liberal_conservative_subtype
+	}
+	create_country_leader = {
+		name = "Pitirim Sorokim"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pitirim_Sorokin.png"
+		expire = "1965.1.1"
+		ideology = social_conservative_subtype
+	}
+	create_country_leader = {
+		name = "Pitirim Sorokim"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pitirim_Sorokin.png"
+		expire = "1965.1.1"
+		ideology = eurasianism_subtype
+	}
+	create_country_leader = {
+		name = "Pitirim Sorokim"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pitirim_Sorokin.png"
+		expire = "1965.1.1"
+		ideology = savinkovism_subtype
+	}
+	RUS_recheck_president_subideology = yes
+}
 RUS_setup_president_milyukov = {
 	if = {
 		limit = {
@@ -1806,7 +1830,7 @@ RUS_setup_president_milyukov = {
 			desc = "POLITICS_PAVEL_MILYUKOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pavel_Milyukov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_milyukov_of_the_dardanelles  }
 		}
 	create_country_leader = {
@@ -1887,7 +1911,7 @@ RUS_setup_president_tereschenko = {
 			desc = "POLITICS_MIKHAIL_TERESCHENKO_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Tereschenko.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { captain_of_industry  }
 		}
 	}
@@ -1951,7 +1975,7 @@ RUS_setup_president_maklakov = {
 			desc = "POLITICS_VASILY_MAKLAKOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Vasily_Maklakov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_silent_lawyer }
 		}
 	create_country_leader = {
@@ -2023,7 +2047,7 @@ RUS_setup_president_nerkasov = {
 			desc = "POLITICS_NIKOLAY_NEKRASOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Nekrasov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Nikolay Nekrasov"
@@ -2087,7 +2111,7 @@ RUS_setup_president_nabokov = {
 			desc = "POLITICS_VLADIMIR_NABOKOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Nabokov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Vladimir Nabokov"
@@ -2151,7 +2175,7 @@ RUS_setup_president_pletnyov = {
 			desc = "POLITICS_DMITRIY_PLETNYOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Dmitriy_Pletnyov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Dmitriy Pletnyov"
@@ -2215,7 +2239,7 @@ RUS_setup_president_konovalov = {
 			desc = "POLITICS_ALEKSANDR_KONOVALOV_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Konovalov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		create_country_leader = {
 			name = "Aleksandr Konovalov"
@@ -2285,7 +2309,7 @@ RUS_setup_president_yusupov = {
 			name = "Felix Yusupov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Felix_Yusupov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_autocratic_charmer }
 		}
 	}
@@ -2314,7 +2338,7 @@ RUS_setup_president_yusupov = {
 			name = "Felix Yusupov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Felix_Yusupov.png"
 			expire = "1965.1.1"
-			ideology = social_conservative_subtype
+			ideology = clientelism_subtype
 			traits = { RUS_autocratic_charmer }
 		}
 	create_country_leader = {
@@ -2348,7 +2372,7 @@ RUS_setup_president_savenko = {
 			name = "Anatoly Savenko"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Anatoly_Savenko.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 	}
 	create_country_leader = {
@@ -2398,7 +2422,7 @@ RUS_setup_president_romanov = {
 			name = "Dmitriy Romanov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Dmitri_Romanov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_autocratic_charmer }
 		}
 	create_country_leader = {
@@ -2462,7 +2486,7 @@ RUS_setup_president_shulgin = {
 			name = "Vasily Shulgin"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Vasily_Shulgin.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			
 		}
 	create_country_leader = {
@@ -2527,7 +2551,7 @@ RUS_setup_president_vrangel = {
 			name = "Pyotr Wrangel"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pyetr_Vrangel_President.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_black_baron  }
 		}
 	create_country_leader = {
@@ -2563,7 +2587,7 @@ RUS_setup_president_vrangel = {
 			name = "Pyotr Wrangel"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pyetr_Vrangel_President.png"
 			expire = "1965.1.1"
-			ideology = social_conservative_subtype
+			ideology = soccon_bonapartism_subtype
 			traits = { RUS_black_baron  }
 		}
 	create_country_leader = {
@@ -2592,7 +2616,7 @@ RUS_setup_president_tyrkova = {
 			name = "Ariadna Tyrkova-Williams"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Ariadna_Tyrkova_Williams.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			female = yes
 			traits = { RUS_eurasianist_ideologue }
 		}
@@ -2665,7 +2689,7 @@ RUS_setup_president_trubetzkoy = {
 			name = "Nikolai Trubetzkoy"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Trubetskoy.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_eurasianist_ideologue }
 		}
 	create_country_leader = {
@@ -2730,7 +2754,7 @@ RUS_setup_president_savitskiy = {
 			name = "Pyotr Savitskiy"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pyetr_Savitskiy.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_eurasianist_ideologue }
 		}
 	create_country_leader = {
@@ -2795,7 +2819,7 @@ RUS_setup_president_vernadskiy = {
 			name = "Georgiy Vernadskiy"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Georgiy_Vernadskiy.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_eurasianist_ideologue }
 		}
 	create_country_leader = {
@@ -2867,7 +2891,7 @@ RUS_setup_acting_president_senate = {
 			desc = "POLITICS_SENATE_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_The_Senate.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 	}
 	create_country_leader = {
@@ -2982,7 +3006,7 @@ RUS_setup_acting_president = {
 			name = "Solomon Lozovskiy"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Solomon_Lozovsky.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { acting_president }
 		}
 		}
@@ -3044,7 +3068,7 @@ RUS_setup_acting_president = {
 			name = "Mikhail Tereschenko"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Tereschenko.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { acting_president }
 		}
 		}
@@ -3106,7 +3130,7 @@ RUS_setup_acting_president = {
 			name = "Felix Yusupov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Felix_Yusupov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { acting_president }
 		}
 		}
@@ -3135,7 +3159,7 @@ RUS_setup_acting_president = {
 			name = "Felix Yusupov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Felix_Yusupov.png"
 			expire = "1965.1.1"
-			ideology = social_conservative_subtype
+			ideology = clientelism_subtype
 			traits = { acting_president }
 		}
 	create_country_leader = {
@@ -3150,6 +3174,91 @@ RUS_setup_acting_president = {
 RUS_reduce_poor_inf = {
 	remove_ideas = rus_poor_inf
 	clr_country_flag = rus_poor_inf
+}
+RUS_remove_divided_staff_ideas = {
+	clr_country_flag = rus_divided_army
+	remove_ideas = {
+		rus_divided_staff
+		rus_divided_staff1
+		rus_divided_staff2
+		rus_divided_staff3
+		rus_divided_staff4
+		rus_divided_staff6
+		rus_experienced_military
+	}
+}
+RUS_remove_riga_accords = {
+	if = {
+		limit = { has_idea = rus_riga_accords }
+		remove_ideas = rus_riga_accords
+	}
+	if = {
+		limit = { has_idea = rus_riga_accords_1 }
+		remove_ideas = rus_riga_accords_1
+	}
+	if = {
+		limit = { has_idea = rus_riga_accords_2 }
+		remove_ideas = rus_riga_accords_2
+	}
+	if = {
+		limit = { has_idea = rus_riga_accords_3 }
+		remove_ideas = rus_riga_accords_3
+	}
+	if = {
+		limit = { has_idea = rus_riga_accords_4 }
+		remove_ideas = rus_riga_accords_4
+	}
+	if = {
+		limit = { has_idea = rus_riga_accords_5 }
+		remove_ideas = rus_riga_accords_5
+	}
+}
+RUS_reduce_german_influence = {
+	if = {
+		limit = { has_idea = rus_riga_accords_5 }
+		custom_effect_tooltip = RUS_german_influence_is_shrinking
+		remove_ideas = rus_riga_accords_5
+	}
+	else_if = {
+		limit = { has_idea = rus_riga_accords_4 }
+		custom_effect_tooltip = RUS_german_influence_is_shrinking
+		swap_ideas = {
+			remove_idea = rus_riga_accords_4
+			add_idea = rus_riga_accords_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = rus_riga_accords_3 }
+		custom_effect_tooltip = RUS_german_influence_is_shrinking
+		swap_ideas = {
+			remove_idea = rus_riga_accords_3
+			add_idea = rus_riga_accords_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = rus_riga_accords_2 }
+		custom_effect_tooltip = RUS_german_influence_is_shrinking
+		swap_ideas = {
+			remove_idea = rus_riga_accords_2
+			add_idea = rus_riga_accords_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = rus_riga_accords_1 }
+		custom_effect_tooltip = RUS_german_influence_is_shrinking
+		swap_ideas = {
+			remove_idea = rus_riga_accords_1
+			add_idea = rus_riga_accords_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = rus_riga_accords }
+		custom_effect_tooltip = RUS_german_influence_is_shrinking
+		swap_ideas = {
+			remove_idea = rus_riga_accords
+			add_idea = rus_riga_accords_1
+		}
+	}
 }
 RUS_reduce_army_debuff = {
 	if = {
@@ -3463,7 +3572,7 @@ RUS_setup_tsar_kirill = {
 			desc = "POLITICS_KYRIL_ROMANOV_CON_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Kyril_Romanov.png"
 			expire = "1965.1.1"
-			ideology = integralism_subtype
+			ideology = legionarism_subtype
 			traits = { RUS_self_proclaimed_emperor }
 		}
 	}
@@ -3520,7 +3629,7 @@ RUS_setup_tsar_vladimir = {
 		desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Romanov.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 	}
 }
 RUS_setup_tsar_vsevolod = {
@@ -3577,7 +3686,7 @@ RUS_setup_tsar_vsevolod = {
 		desc = "POLITICS_VSEVOLOD_ROMANOV_CON_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Vsevolod_I.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 		traits = { RUS_young_aristocrat }
 	}
 }
@@ -3635,7 +3744,7 @@ RUS_setup_tsar_roman = {
 		desc = "POLITICS_ROMAN_ROMANOV_CON_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Roman_I.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 		traits = { RUS_poor_health }
 	}
 }
@@ -3687,7 +3796,7 @@ RUS_setup_tsar_andrei = {
 		desc = "POLITICS_ANDREI_ROMANOV_CON_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Andrei_Romanov.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 	}
 }
 RUS_setup_tsar_mikhail = {
@@ -3744,7 +3853,7 @@ RUS_setup_tsar_mikhail = {
 		desc = "POLITICS_MIKHAIL_ROMANOV_CON_DESC"
 		picture = "gfx/leaders/MON/Portrait_MON_Mikhail_II.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 		traits = { RUS_illegitimate_bastard }
 	}
 }
@@ -3802,7 +3911,7 @@ RUS_setup_tsar_boris = {
 		desc = "POLITICS_BORIS_ROMANOV_CON_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Boris_I.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 		traits = { RUS_shade_of_brother }
 	}
 }
@@ -3861,7 +3970,7 @@ RUS_setup_tsar_dmitriy = {
 		desc = "POLITICS_DMITRI_ROMANOV_TSAR_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Dmitri_Romanov_Tsar.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 		traits = { RUS_autocratic_charmer }
 	}
 }
@@ -3921,7 +4030,7 @@ RUS_setup_tsar_pavel = {
 		desc = "POLITICS_PAVEL_II_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Pavel_Romanov.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 	}
 }
 
@@ -3973,7 +4082,7 @@ RUS_setup_tsar_nicholas = {
 		desc = "POLITICS_NICHOLAS_II_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Nicholas_II.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 	}
 	hidden_effect = {
 		country_event = {
@@ -4031,7 +4140,7 @@ RUS_setup_tsar_alexi = {
 		desc = "POLITICS_TSAR_ALEXI_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Alexi_Romanov.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 	}
 }
 
@@ -4111,7 +4220,7 @@ RUS_setup_tsar_anastasia = {
 			desc = "POLITICS_ANASTASIA_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Anastasia.png"
 			expire = "1965.1.1"
-			ideology = integralism_subtype
+			ideology = legionarism_subtype
 			traits = {
 				RUS_questionable_legitimacy
 			}
@@ -4131,7 +4240,7 @@ RUS_setup_tsar_wrangel_son = {
 		desc = "POLITICS_PYOTR_WRANGEL_TSAR_SON_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_P_Wrangel.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 	}
 }
 RUS_setup_tsar_wrangel_son_const = {
@@ -4182,7 +4291,7 @@ RUS_setup_tsar_wrangel_son_const = {
 		desc = "POLITICS_PYOTR_WRANGEL_TSAR_SON_DESC"
 		picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_P_Wrangel.png"
 		expire = "1965.1.1"
-		ideology = integralism_subtype
+		ideology = legionarism_subtype
 	}
 	
 }
@@ -4221,7 +4330,7 @@ RUS_setup_tsar_wrangel_const = {
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.png"
 			expire = "1965.1.1"
 			traits = { RUS_black_baron }
-			ideology = social_conservative_subtype
+			ideology = soccon_bonapartism_subtype
 		}
 		create_country_leader = {
 			name = "Pyotr IV"
@@ -4237,7 +4346,7 @@ RUS_setup_tsar_wrangel_const = {
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.png"
 			expire = "1965.1.1"
 			traits = { RUS_black_baron }
-			ideology = absolute_monarchy_subtype 
+			ideology = pataut_bonapartism_subtype 
 		}
 		create_country_leader = {
 			name = "Pyotr IV"
@@ -4245,8 +4354,9 @@ RUS_setup_tsar_wrangel_const = {
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.png"
 			expire = "1965.1.1"
 			traits = { RUS_black_baron }
-			ideology = integralism_subtype
-		}		
+			ideology = legionarism_subtype
+		}
+		set_cosmetic_tag = RUS_WRANGEL_TSAR_CONS
 	}
 	else = {
 		RUS_setup_tsar_wrangel_son_const = yes
@@ -4262,15 +4372,16 @@ RUS_setup_tsar_wrangel = {
 			desc = "POLITICS_PYOTR_WRANGEL_TSAR_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.png"
 			expire = "1965.1.1"
-			ideology = absolute_monarchy_subtype 
+			ideology = pataut_bonapartism_subtype 
 		}
 		create_country_leader = {
 			name = "Pyotr IV"
 			desc = "POLITICS_PYOTR_WRANGEL_TSAR_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.png"
 			expire = "1965.1.1"
-			ideology = integralism_subtype
+			ideology = legionarism_subtype
 		}
+		set_cosmetic_tag = RUS_WRANGEL_TSAR
 	}
 	else = {
 		RUS_setup_tsar_wrangel_son = yes
@@ -4301,91 +4412,24 @@ RUS_setup_shatilov = {
 }
 
 RUS_install_puppet_monarchy = {
-	if = {
-		limit = {
-			has_government = social_democrat
+	meta_effect = {
+		text = {
+			create_country_leader = {
+				name = "Tsar of All-Russia"
+				desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Imperial_Administration.png"
+				expire = "1965.1.1"
+				ideology = [OVERLORD_IDEOLOGY]
+			}
 		}
-		create_country_leader = {
-			name = "Tsar of All-Russia"
-			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Tsar_Of_All_Russias.png"
-			expire = "1965.1.1"
-			ideology = social_democrat_subtype
-		}
+		OVERLORD_IDEOLOGY = "[ROOT.GetRulingIdeologySubtype]"
 	}
-	else_if = {
-		limit = {
-			has_government = social_liberal
-		}
-		create_country_leader = {
-			name = "Tsar of All-Russia"
-			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Tsar_Of_All_Russias.png"
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
-		}
-	}
-	else_if = {
-		limit = {
-			has_government = market_liberal
-		}
-		create_country_leader = {
-			name = "Tsar of All-Russia"
-			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Tsar_Of_All_Russias.png"
-			expire = "1965.1.1"
-			ideology = market_liberal_subtype
-		}
-	}
-	else_if = {
-		limit = {
-			has_government = social_conservative
-		}
-		create_country_leader = {
-			name = "Tsar of All-Russia"
-			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Tsar_Of_All_Russias.png"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-		}
-	}
-	else_if = {
-		limit = {
-			has_government = authoritarian_democrat
-		}
-		create_country_leader = {
-			name = "Tsar of All-Russia"
-			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Tsar_Of_All_Russias.png"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-		}
-	}
-	else_if = {
-		limit = {
-			has_government = paternal_autocrat
-		}
-		create_country_leader = {
-			name = "Tsar of All-Russia"
-			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Tsar_Of_All_Russias.png"
-			expire = "1965.1.1"
-			ideology = absolute_monarchy_subtype
-		}
-	}
-	else_if = {
-		limit = {
-			has_government = national_populist
-		}
-		create_country_leader = {
-			name = "Tsar of All-Russia"
-			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Tsar_Of_All_Russias.png"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-		}
-	}
+	set_politics = {
+		ruling_party = var:current_party_ideology_group
+		elections_allowed = no
+	}	
 }
+
 RUS_setup_tsar_ivan_ger = {
 	create_country_leader = {
 		name = "Ivan VII"
@@ -4456,8 +4500,8 @@ reset_russian_leaders = {
 			desc = "POLITICS_NIKOLAI_BUKHARIN_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Bukharin.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
-			traits = {}
+			ideology = bukharinist_subtype 
+			traits = { RUS_ex_bolshevik  }
 		}
 
 		create_country_leader = {
@@ -4600,72 +4644,7 @@ set_popularities = {
 		}
 		}
 		}
-		if = {
-			limit = {
-				216 = { is_owned_and_controlled_by = ROOT } 
-			}
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 216
-					state = 215
-					state = 146
-				}
-			}
-			KAR = {
-				add_state_core = PREV
-				transfer_state = PREV
-			}
-		}
-		216 = {
-			add_claim_by = SOV
-		}
-		215 = {
-			add_claim_by = SOV
-		}
-		146 = {
-			add_claim_by = SOV
-			add_claim_by = KAR
-		}
-		SOV = {
-			set_autonomy = {
-				target = KAR
-				autonomous_state = kr_autonomous_puppet
-				freedom_level = 0.75
-			}
-		}
-		KAR = {
-			transfer_technology_without_doctrines = yes
-			set_cosmetic_tag = KAR_SOV
-			hidden_effect = {
-			set_politics = {
-				ruling_party = totalist
-				last_election = "1930.11.9"
-				election_frequency = 48
-				elections_allowed = no
-			}
 
-			set_popularities = {
-				totalist = 89
-				radical_socialist = 0
-				syndicalist = 0
-				social_democrat = 0
-				social_liberal = 0
-				market_liberal = 0
-				social_conservative = 0
-				authoritarian_democrat = 6
-				paternal_autocrat = 5
-				national_populist = 0
-			}
-			add_ideas = {
-				FIN_Arvo_Tuominen_hog_tot
-				FIN_Arvo_Tuominen_for_tot
-				FIN_Edvard_Gylling_eco_syn
-				FIN_Akseli_Anttila_sec_tot
-			}
-		}
-	}
-	}
 	if = {
 		limit = {
 			787 = { is_owned_and_controlled_by = ROOT } 
@@ -5211,2806 +5190,6 @@ set_popularities = {
 	}
 }
 
-SOV_setup_zhukov = {
-	hidden_effect = {
-		set_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-		set_country_flag = Nikolay_F_Vatutin_dead
-		set_country_flag = Nikolay_N_Dukhonin_dead
-		set_country_flag = Vasiliy_A_Kharlamov_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Anton_I_Denikin_dead
-		set_country_flag = Pyetr_N_Vrangel_dead
-		set_country_flag = Sergey_L_Markov_dead
-		set_country_flag = Ivan_P_Romanovskiy_dead
-		set_country_flag = Lavr_G_Kornilov_dead
-		set_country_flag = Mikhail_Drozdovskiy_dead
-		set_country_flag = Bronislav_V_Kaminski_dead
-		set_country_flag = Pavel_N_Shatilov_dead
-		set_country_flag = Vasiliy_V_Biskupskiy_dead
-		set_country_flag = Andrei_A_Vlasov_dead
-		set_country_flag = Nikolay_A_Lokhvitski_dead
-		set_country_flag = Dmitri_Pavlovich_Romanov_dead
-		set_country_flag = Aleksandr_Rodzyanko_dead
-		set_country_flag = Aleksey_P_Arkhangelskiy_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Lavrentiy_Kornilov_dead
-		set_country_flag = Konstantin_P_Voskoboinik_dead
-		set_country_flag = Aleksandr_S_Antonov_dead
-		set_country_flag = Aleksandr_P_Kutepov_dead
-		set_country_flag = Igor_I_Sikorskiy_dead
-		set_country_flag = Vyacheslav_Tkachov_dead
-		set_country_flag = Anton_V_Turkul_dead
-		set_country_flag = Aleksandr_I_Verkhovskiy_dead
-		set_country_flag = Vasiliy_Kanin_dead
-		set_country_flag = Dmitri_N_Verderevsky_dead
-		set_country_flag = Aleksandr_A_Kazakov_dead
-		random_unit_leader = {
-			limit = { has_id = 402 }	
-			remove_unit_leader = yes
-		}
-		random_unit_leader = {
-			limit = { has_id = 449 }	
-			promote_leader = yes
-			set_leader_portrait = GFX_Portrait_RUS_Gregory_Zhukov_General
-			remove_unit_leader_trait = hidden_sympathies
-			add_unit_leader_trait = inspirational_leader
-			add_unit_leader_trait = offensive_doctrine
-			add_unit_leader_trait = war_hero
-			add_unit_leader_trait = politically_connected
-			add_skill_level = 2
-		}		
-		setup_soviet_russia = yes
-		load_focus_tree = Russia_Socialist
-		every_unit_leader = {
-			limit = {
-				NOT = {
-					OR = {
-						has_trait = hidden_sympathies
-						has_id = 401 #Denikin
-						has_id = 400 #Vrangel
-					}
-				}
-			}
-			set_nationality = TRM
-		}
-		if = {
-			limit = {
-				DKB = { has_socialist_government = no }
-			}
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 401 #Denikin
-						has_id = 400 #Vrangel
-					}
-				}
-				set_nationality = DKB
-			}
-		}
-		else = {
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 401 #Denikin
-						has_id = 400 #Vrangel
-					}
-				}
-				set_nationality = TRM
-			}
-		}
-				
-		transfer_units_fraction = {
-				target = TRM
-				size = 0.42
-				navy_ratio = 0.2
-				keep_unit_leaders_trigger = { always = yes }
-		}
-		
-		country_event = {
-			id = russia.1923
-			days = 15
-		}
-			
-		add_ideas = SOV_chaotic_revolution
-		country_lock_all_division_template = yes
-		set_country_flag = RUS_panic_in_siberia
-		set_party_name = {
-			ideology = totalist
-			long_name = RUS_zhukov_party_long
-			name = RUS_zhukov_party
-		}
-		195 = {
-			set_demilitarized_zone = no
-		}
-		208 = {
-			set_demilitarized_zone = no
-		}
-		209 = {
-			set_demilitarized_zone = no
-		}
-		210 = {
-			set_demilitarized_zone = no
-		}
-		219 = {
-			set_demilitarized_zone = no
-		}
-		222 = {
-			set_demilitarized_zone = no
-		}
-		223 = {
-			set_demilitarized_zone = no
-		}
-		253 = {
-			set_demilitarized_zone = no
-		}
-		248 = {
-			set_demilitarized_zone = no
-		}
-		263 = {
-			set_demilitarized_zone = no
-		}
-		252 = {
-			set_demilitarized_zone = no
-		}
-		208 = {
-			set_demilitarized_zone = no
-		}
-		244 = {
-			set_demilitarized_zone = no
-		}
-		216 = {
-			set_demilitarized_zone = no
-		}
-		264 = {
-			set_demilitarized_zone = no
-		}
-		254 = {
-			set_demilitarized_zone = no
-		}
-		205 = {
-			set_demilitarized_zone = no
-		}
-		247 = {
-			set_demilitarized_zone = no
-		}
-		258 = {
-			set_demilitarized_zone = no
-		}
-		257 = {
-			set_demilitarized_zone = no
-		}
-		255 = {
-			set_demilitarized_zone = no
-		}
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 579
-					state = 580
-					state = 653
-					state = 572
-					state = 583
-					state = 590
-					state = 403
-					state = 577
-					state = 516
-					state = 576
-					state = 578
-					state = 571
-					state = 403
-					state = 570
-					state = 578
-					state = 569
-					state = 40
-					state = 588
-					state = 654
-					state = 569
-					state = 568
-					state = 811
-					state = 567
-					state = 575
-					state = 566
-					state = 564
-					state = 565
-					state = 563
-					state = 1200
-					state = 1201
-					state = 1202
-				}
-			}
-			set_demilitarized_zone = yes
-			remove_core_of = SOV
-			add_claim_by = SOV
-			add_core_of = TRM
-		}
-		add_political_power = 100
-		add_ideas = {
-			SOV_nationalist_resistance
-			SOV_monarchist_resistance
-			SOV_democrat_resistance
-		}
-		set_country_flag = SOV_must_deal_with_opposition
-		country_event = {
-			id = bolsheviks.1
-			days = 7
-		}
-		country_event = {
-			id = russoc.1
-			days = 30
-		}
-	}
-}
-setup_savinkov_civil_war = {
-	hidden_effect = {
-		set_country_flag = Lavr_G_Kornilov_dead
-		if = {
-			limit = {
-				has_idea = RUS_Lavr_G_Kornilov_cos_pau
-			}
-			remove_ideas = RUS_Lavr_G_Kornilov_cos_pau
-		}
-		if = {
-			limit = {
-				has_idea = RUS_Lavr_G_Kornilov_carm_pau
-			}
-			remove_ideas = RUS_Lavr_G_Kornilov_carm_pau
-		}
-		if = {
-			limit = {
-				TRM = { has_socialist_government = no }
-			}
-			every_unit_leader = {
-				limit = {
-					has_trait = hidden_sympathies
-				}
-				set_nationality = SOV
-			}
-		}
-		if = {
-			limit = {
-				TRM = { has_socialist_government = yes }
-			}
-			every_unit_leader = {
-				limit = {
-					has_trait = hidden_sympathies
-				}
-				set_nationality = TRM
-			}
-		}
-		set_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-		set_country_flag = Nikolay_F_Vatutin_dead
-		set_country_flag = Nikolay_N_Dukhonin_dead
-		set_country_flag = Vasiliy_A_Kharlamov_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Anton_I_Denikin_dead
-		set_country_flag = Pyetr_N_Vrangel_dead
-		set_country_flag = Ivan_P_Romanovskiy_dead
-		set_country_flag = Lavr_G_Kornilov_dead
-		set_country_flag = Mikhail_Drozdovskiy_dead
-		set_country_flag = Nikolay_A_Lokhvitski_dead
-		set_country_flag = Dmitri_Pavlovich_Romanov_dead
-		set_country_flag = Aleksandr_Rodzyanko_dead
-		set_country_flag = Aleksey_P_Arkhangelskiy_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Konstantin_P_Voskoboinik_dead
-		set_country_flag = Aleksandr_P_Kutepov_dead
-		set_country_flag = Evgeniy_K_Miller_dead
-		set_country_flag = Igor_I_Sikorskiy_dead
-		set_country_flag = Vyacheslav_Tkachov_dead
-		set_country_flag = Anton_V_Turkul_dead
-		set_country_flag = Aleksandr_I_Verkhovskiy_dead
-		set_country_flag = Vasiliy_Kanin_dead
-		set_country_flag = Dmitri_N_Verderevsky_dead
-		set_country_flag = Aleksandr_A_Kazakov_dead
-		hidden_effect = {
-			remove_kornilov_idea = yes
-			create_country_leader = {
-				name = "Pavel Shatilov"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Pavel_Shatilov.png"
-				expire = "1965.1.1"
-				ideology = junta_subtype
-			}
-		}
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 652
-					state = 251
-					state = 239
-					state = 401
-					state = 265
-					state = 217
-					state = 236
-					state = 1207
-					state = 406
-					state = 260
-					capital_scope = {
-						OR = {
-							region = 137 #Western Steppe
-							region = 135 #Kuban
-						}
-					}
-				}
-			}
-			set_demilitarized_zone = no
-			RVA = {
-				add_state_core = PREV
-				transfer_state = PREV
-			}
-		}
-		RVA = {
-			transfer_technology_without_doctrines = yes
-			country_lock_all_division_template = yes
-			RUS_transfer_russian_ideas = yes
-			add_political_power = 100
-			country_event = {
-				id = rcw.19
-				days = 5
-			}
-		}
-		transfer_units_fraction = {
-			target = RVA
-			size = 0.3
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_trait = RUS_kornilov_officer
-					has_trait = RUS_drozdovsky_officer
-					has_trait = RUS_wrangel_officer
-					has_trait = RUS_denikin_officer
-					has_id = 78823
-					has_id = 78824
-				}
-			}
-			set_nationality = RVA
-		}
-		set_political_party = {
-			ideology = market_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = social_conservative
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = authoritarian_democrat
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = paternal_autocrat
-			popularity = 0
-		}			
-	}
-}
-setup_soviets_dem_civil_war = {
-	hidden_effect = {
-		set_country_flag = Lavr_G_Kornilov_dead
-		if = {
-			limit = {
-				has_idea = RUS_Lavr_G_Kornilov_cos_pau
-			}
-			remove_ideas = RUS_Lavr_G_Kornilov_cos_pau
-		}
-		if = {
-			limit = {
-				has_idea = RUS_Lavr_G_Kornilov_carm_pau
-			}
-			remove_ideas = RUS_Lavr_G_Kornilov_carm_pau
-		}
-		set_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-		set_country_flag = Nikolay_N_Dukhonin_dead
-		set_country_flag = Vasiliy_A_Kharlamov_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Anton_I_Denikin_dead
-		set_country_flag = Pyetr_N_Vrangel_dead
-		set_country_flag = Ivan_P_Romanovskiy_dead
-		set_country_flag = Lavr_G_Kornilov_dead
-		set_country_flag = Mikhail_Drozdovskiy_dead
-		set_country_flag = Nikolay_A_Lokhvitski_dead
-		set_country_flag = Dmitri_Pavlovich_Romanov_dead
-		set_country_flag = Aleksandr_Rodzyanko_dead
-		set_country_flag = Aleksey_P_Arkhangelskiy_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Konstantin_P_Voskoboinik_dead
-		set_country_flag = Aleksandr_P_Kutepov_dead
-		set_country_flag = Evgeniy_K_Miller_dead
-		set_country_flag = Igor_I_Sikorskiy_dead
-		set_country_flag = Vyacheslav_Tkachov_dead
-		set_country_flag = Anton_V_Turkul_dead
-		set_country_flag = Pavel_N_Shatilov_dead
-		set_country_flag = Aleksandr_I_Verkhovskiy_dead
-		set_country_flag = Vasiliy_Kanin_dead
-		set_country_flag = Dmitri_N_Verderevsky_dead
-		set_country_flag = Aleksandr_A_Kazakov_dead
-		hidden_effect = {
-			remove_kornilov_idea = yes
-		}
-		remove_ideas = RUS_army_mutiny
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 652
-					state = 251
-					state = 239
-					state = 401
-					state = 265
-					state = 217
-					state = 236
-					state = 406
-					state = 260
-					state = 1208
-					state = 1207
-					capital_scope = {
-						OR = {
-							region = 137 #Western Steppe
-							region = 135 #Kuban
-						}
-					}
-				}
-			}
-			set_demilitarized_zone = no
-			RVA = {
-				add_state_core = PREV
-				transfer_state = PREV
-			}
-		}
-		RVA = {
-			transfer_technology_without_doctrines = yes
-			country_lock_all_division_template = yes
-			RUS_transfer_russian_ideas = yes
-			add_political_power = 100
-			country_event = {
-				id = rcw.19
-				days = 5
-			}
-		}
-		transfer_units_fraction = {
-			target = RVA
-			size = 0.3
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_trait = RUS_kornilov_officer
-					has_trait = RUS_drozdovsky_officer
-					has_trait = RUS_wrangel_officer
-					has_trait = RUS_denikin_officer
-					has_id = 78823
-					has_id = 78824
-				}
-			}
-			set_nationality = RVA
-		}
-		set_political_party = {
-			ideology = market_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = social_conservative
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = paternal_autocrat
-			popularity = 0
-		}
-		setup_soviet_russia = yes
-	}
-}
-setup_soviets_wrangel_civil_war = {
-	hidden_effect = {
-		set_country_flag = Lavr_G_Kornilov_dead
-		if = {
-			limit = {
-				has_idea = RUS_Lavr_G_Kornilov_cos_pau
-			}
-			remove_ideas = RUS_Lavr_G_Kornilov_cos_pau
-		}
-		if = {
-			limit = {
-				has_idea = RUS_Lavr_G_Kornilov_carm_pau
-			}
-			remove_ideas = RUS_Lavr_G_Kornilov_carm_pau
-		}
-		set_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-		set_country_flag = Nikolay_N_Dukhonin_dead
-		set_country_flag = Vasiliy_A_Kharlamov_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Anton_I_Denikin_dead
-		set_country_flag = Pyetr_N_Vrangel_dead
-		set_country_flag = Ivan_P_Romanovskiy_dead
-		set_country_flag = Lavr_G_Kornilov_dead
-		set_country_flag = Mikhail_Drozdovskiy_dead
-		set_country_flag = Nikolay_A_Lokhvitski_dead
-		set_country_flag = Dmitri_Pavlovich_Romanov_dead
-		set_country_flag = Aleksandr_Rodzyanko_dead
-		set_country_flag = Aleksey_P_Arkhangelskiy_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Konstantin_P_Voskoboinik_dead
-		set_country_flag = Aleksandr_P_Kutepov_dead
-		set_country_flag = Evgeniy_K_Miller_dead
-		set_country_flag = Igor_I_Sikorskiy_dead
-		set_country_flag = Vyacheslav_Tkachov_dead
-		set_country_flag = Anton_V_Turkul_dead
-		set_country_flag = Pavel_N_Shatilov_dead
-		set_country_flag = Aleksandr_I_Verkhovskiy_dead
-		set_country_flag = Vasiliy_Kanin_dead
-		set_country_flag = Dmitri_N_Verderevsky_dead
-		set_country_flag = Aleksandr_A_Kazakov_dead
-		hidden_effect = {
-			remove_kornilov_idea = yes
-		}
-		remove_ideas = RUS_army_mutiny
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 652
-					state = 251
-					state = 239
-					state = 401
-					state = 265
-					state = 217
-					state = 236
-					state = 406
-					state = 260
-					state = 1207
-					state = 1208
-					state = 1207
-					capital_scope = {
-						OR = {
-							region = 137 #Caucasus
-							region = 135 #Kuban
-						}
-					}
-				}				
-			}
-			set_demilitarized_zone = no
-			RVA = {
-				add_state_core = PREV
-				transfer_state = PREV
-			}
-		}
-		RVA = {
-			transfer_technology_without_doctrines = yes
-			country_lock_all_division_template = yes
-			RUS_transfer_russian_ideas = yes
-			add_political_power = 100
-			create_country_leader = {
-				name = "Pyotr Wrangel"
-				desc = "POLITICS_PYOTR_VRANGEL_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel.png"
-				expire = "1965.1.1"
-				ideology = junta_subtype
-				traits = { RUS_black_baron }
-			}
-			set_cosmetic_tag = RVA_wrangel
-			load_focus_tree = russia_focus 
-			country_event = {
-				id = rcw.19
-				days = 5
-			}
-		}
-		transfer_units_fraction = {
-			target = RVA
-			size = 0.3
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_trait = RUS_kornilov_officer
-					has_trait = RUS_drozdovsky_officer
-					has_trait = RUS_wrangel_officer
-					has_trait = RUS_denikin_officer
-					has_id = 78823
-					has_id = 78824
-				}
-			}
-			set_nationality = RVA
-		}
-		set_political_party = {
-			ideology = market_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = social_conservative
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = paternal_autocrat
-			popularity = 0
-		}
-		setup_soviet_russia = yes
-	}
-}
-setup_soviets_denikin_civil_war = {
-	hidden_effect = {
-		set_country_flag = Lavr_G_Kornilov_dead
-		if = {
-			limit = {
-				has_idea = RUS_Lavr_G_Kornilov_cos_pau
-			}
-			remove_ideas = RUS_Lavr_G_Kornilov_cos_pau
-		}
-		if = {
-			limit = {
-				has_idea = RUS_Lavr_G_Kornilov_carm_pau
-			}
-			remove_ideas = RUS_Lavr_G_Kornilov_carm_pau
-		}
-		set_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-		set_country_flag = Nikolay_N_Dukhonin_dead
-		set_country_flag = Vasiliy_A_Kharlamov_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Anton_I_Denikin_dead
-		set_country_flag = Pyetr_N_Vrangel_dead
-		set_country_flag = Ivan_P_Romanovskiy_dead
-		set_country_flag = Lavr_G_Kornilov_dead
-		set_country_flag = Mikhail_Drozdovskiy_dead
-		set_country_flag = Nikolay_A_Lokhvitski_dead
-		set_country_flag = Dmitri_Pavlovich_Romanov_dead
-		set_country_flag = Aleksandr_Rodzyanko_dead
-		set_country_flag = Aleksey_P_Arkhangelskiy_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Konstantin_P_Voskoboinik_dead
-		set_country_flag = Aleksandr_P_Kutepov_dead
-		set_country_flag = Evgeniy_K_Miller_dead
-		set_country_flag = Igor_I_Sikorskiy_dead
-		set_country_flag = Vyacheslav_Tkachov_dead
-		set_country_flag = Anton_V_Turkul_dead
-		set_country_flag = Pavel_N_Shatilov_dead
-		set_country_flag = Bronislav_V_Kaminski_dead
-		set_country_flag = Vasiliy_V_Biskupskiy_dead
-		set_country_flag = Sergey_L_Markov_dead
-		set_country_flag = Aleksandr_I_Verkhovskiy_dead
-		set_country_flag = Vasiliy_Kanin_dead
-		set_country_flag = Dmitri_N_Verderevsky_dead
-		set_country_flag = Aleksandr_A_Kazakov_dead
-		hidden_effect = {
-			remove_kornilov_idea = yes
-		}
-		remove_ideas = RUS_army_mutiny
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 652
-					state = 251
-					state = 239
-					state = 401
-					state = 265
-					state = 217
-					state = 236
-					state = 406
-					state = 260
-					state = 1207
-					state = 1208
-					state = 1207
-					capital_scope = {
-						OR = {
-							region = 137 #Caucasus
-							region = 135 #Kuban
-						}
-					}
-				}
-			}
-			set_demilitarized_zone = no
-			RVA = {
-				add_state_core = PREV
-				transfer_state = PREV
-			}
-		}
-		RVA = {
-			transfer_technology_without_doctrines = yes
-			country_lock_all_division_template = yes
-			RUS_transfer_russian_ideas = yes
-			add_political_power = 100
-			add_ideas = RUS_rovs_denikin
-			create_country_leader = {
-				name = "Anton Denikin"
-				desc = "POLITICS_ANTON_DENIKIN_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Dic_Anton_Denikin.png"
-				expire = "1965.1.1"
-				ideology = junta_subtype
-			}
-			set_cosmetic_tag = RVA_denikin
-			country_event = {
-				id = rcw.19
-				days = 5
-			}
-		}
-		transfer_units_fraction = {
-			target = RVA
-			size = 0.3
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_trait = RUS_kornilov_officer
-					has_trait = RUS_drozdovsky_officer
-					has_trait = RUS_wrangel_officer
-					has_trait = RUS_denikin_officer
-					has_id = 78823
-					has_id = 78824
-				}
-			}
-			set_nationality = RVA
-		}
-		set_political_party = {
-			ideology = market_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = social_conservative
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = authoritarian_democrat
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = paternal_autocrat
-			popularity = 0
-		}
-		setup_soviet_russia = yes
-	}
-}
-setup_soviets_civil_war = {
-	hidden_effect = {
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 195 #Petrograd
-					state = 208 #Luga
-					state = 209 #Pskov
-					state = 210 #Velikiye Luki
-					state = 219 #Moscow
-					state = 220 #Kursk
-					state = 224 #Bryansk
-					state = 236 #Astrakhan
-					state = 239 #Saratov
-					state = 240 #Belgorod
-					state = 242 #Smolensk
-					state = 243 #Roslavl
-					state = 244 #Volkhov
-					state = 246 #Rzhev
-					state = 247 #Tver
-					state = 250 #Simbisrk
-					state = 252 #Nizhny Novgorod
-					state = 253 #Vladimir
-					state = 254 #Ryazan
-					state = 255 #Penza
-					state = 256 #Cheboksary
-					state = 263 #Novgorod
-					state = 755 #Vitebsk
-					state = 880 #Dvinsk
-				}
-			}
-			SOV = { add_state_core = PREV }
-		}
-		release = SOV
-		delete_unit_template_and_units = { division_template = "Motostrelkovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Tankovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Gornostrelkovaya Diviziya" }
-		transfer_units_fraction = {
-			target = SOV
-			size = army_support
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		SOV = {
-			set_major = yes
-			transfer_technology_without_doctrines = yes
-			transfer_navy = { target = RUS }
-			add_ideas = SOV_chaotic_revolution
-			country_lock_all_division_template = yes
-			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
-			add_ideas = {
-				SOV_nationalist_resistance
-				SOV_monarchist_resistance
-				SOV_democrat_resistance
-			}
-			set_country_flag = SOV_must_deal_with_opposition
-			country_event = {
-				id = bolsheviks.1
-				days = 7
-			}
-		}
-		219 = { #Moscow
-			create_unit = {
-				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.3"
-				owner = SOV
-				prioritize_location = 6380
-				count = 3
-			}
-			create_unit = {
-				division = "division_template = \"Motostrelkovaya Diviziya\" start_experience_factor = 0.3"
-				owner = SOV
-				prioritize_location = 6380
-			}
-		}
-		217 = { #Tsarityn
-			create_unit = {
-				division = "division_template = \"Gornostrelkovaya Diviziya\" start_experience_factor = 0.3"
-				owner = SOV
-				prioritize_location = 6380
-				count = 4
-			}
-		}
-		for_each_scope_loop = {
-			array = SOV.owned_states
-			remove_core_of = RUS
-			add_claim_by = RUS
-			teleport_armies = {
-				limit = { tag = RUS }
-				to_state_array = owned_controlled_states
-			}
-		}
-		for_each_scope_loop = {
-			array = RUS.core_states
-			add_core_of = SOV
-		}
-		every_state = {
-			limit = { is_claimed_by = RUS }
-			add_claim_by = SOV
-		}
-		set_major = yes
-		remove_ideas = RUS_army_mutiny
-		random_unit_leader = {
-			limit = { has_id = 402 }	
-			remove_unit_leader = yes
-		}
-		every_unit_leader = {
-			limit = {
-				has_trait = hidden_sympathies
-			}
-			remove_unit_leader_trait = hidden_sympathies
-			set_nationality = SOV
-		}
-		RUS = {
-			set_political_party = {
-				ideology = syndicalist
-				popularity = 0
-			}
-			set_political_party = {
-				ideology = radical_socialist
-				popularity = 0
-			}
-			remove_all_ministers = yes
-			set_country_flag = RUS_kornilov_coup
-			add_ideas = RUS_Lavr_G_Kornilov_hog_pau
-			add_ideas = RUS_Aleksey_A_Ignatiev_for_pau
-			add_ideas = RUS_Ivan_P_Romanovskiy_eco_pau
-			add_ideas = RUS_Aleksandr_P_Balk_sec_pau 
-			create_country_leader = {
-				name = "Lavr Kornilov"
-				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
-				expire = "1965.1.1"
-				ideology = junta_subtype
-				traits = {}
-			}			
-			add_stability = 0.4
-			add_popularity = {
-				ideology = paternal_autocrat
-				popularity = 0.3
-			}			
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no
-			}
-			clr_country_flag = RUS_REVOL
-			clr_country_flag = RUS_SEN
-			clr_country_flag = RUS_democarcy
-			clr_country_flag = RUS_demonstrations
-			clr_country_flag = RUS_Okhrannoye_Otdeleniye_locked
-			set_country_flag = RUS_JUNTA
-			remove_ideas = rus_memories_of_rev
-			if = {
-				limit = { has_idea = rus_political_instability1}
-				remove_ideas = rus_political_instability1
-			}
-			if = {
-				limit = { has_idea = rus_political_instability}
-				remove_ideas = rus_political_instability
-			}
-			hidden_effect = {
-				set_cosmetic_tag = RUS
-				reset_russian_leaders = yes
-				add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.1
-				}
-				add_popularity = {
-				ideology = national_populist
-				popularity = 0.1
-				}
-				add_popularity = {
-				ideology = social_conservative
-				popularity = 0.1
-				}
-				country_event = {
-					id = rusd.50
-					days = 2
-				}
-			}
-		}
-	}
-}
-setup_soviets_petrograd_civil_war = {
-	hidden_effect = {
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 195 #Petrograd
-					state = 208 #Luga
-					state = 209 #Pskov
-					state = 210 #Velikiye Luki
-					state = 210 #Velikiye Luki
-					state = 244 #Volkhov
-					state = 246 #Rzhev
-					state = 247 #Tver
-					state = 263 #Novgorod
-					state = 264 #Tikhvin
-					state = 242 #Smolensk
-					state = 243 #Roslavl
-					state = 880 #Dvinsk
-					state = 755 #Vitebsk
-				}
-			}
-			SOV = { add_state_core = PREV }
-		}
-		release = SOV
-		delete_unit_template_and_units = { division_template = "Motostrelkovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Tankovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Gornostrelkovaya Diviziya" }
-		transfer_units_fraction = {
-			target = SOV
-			size = 0.2
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		SOV = {
-			set_major = yes
-			transfer_technology_without_doctrines = yes
-			transfer_navy = { target = RUS }
-			add_ideas = SOV_chaotic_revolution
-			country_lock_all_division_template = yes
-			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
-			add_ideas = {
-				SOV_nationalist_resistance
-				SOV_monarchist_resistance_1
-				SOV_democrat_resistance_1
-			}
-			set_country_flag = SOV_must_deal_with_opposition
-			set_politics = {
-				ruling_party = syndicalist
-				elections_allowed = no
-			}
-		}
-		195 = { #Petrograd
-			create_unit = {
-				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.3"
-				owner = SOV
-				prioritize_location = 6380
-				count = 3
-			}
-			create_unit = {
-				division = "division_template = \"Motostrelkovaya Diviziya\" start_experience_factor = 0.3"
-				owner = SOV
-				prioritize_location = 6380
-			}
-		}
-		for_each_scope_loop = {
-			array = SOV.owned_states
-			remove_core_of = RUS
-			add_claim_by = RUS
-			teleport_armies = {
-				limit = { tag = RUS }
-				to_state_array = owned_controlled_states
-			}
-		}
-		for_each_scope_loop = {
-			array = RUS.core_states
-			add_core_of = SOV
-		}
-		every_state = {
-			limit = { is_claimed_by = RUS }
-			add_claim_by = SOV
-		}
-		set_major = yes
-		random_unit_leader = {
-			limit = { has_id = 402 }	
-			remove_unit_leader = yes
-		}
-		every_unit_leader = {
-			limit = {
-				has_trait = hidden_sympathies
-			}
-			remove_unit_leader_trait = hidden_sympathies
-			set_nationality = SOV
-		}
-		RUS = {
-			set_political_party = {
-				ideology = syndicalist
-				popularity = 0
-			}
-			set_political_party = {
-				ideology = radical_socialist
-				popularity = 0
-			}
-		}
-	}
-}
-setup_soviets_moscow_civil_war = {
-	hidden_effect = {
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 219 #Moscow
-					state = 242 #Smolensk
-					state = 243 #Roslavl
-					state = 246 #Rzhev
-					state = 247 #Tver
-					state = 252 #Nizhny Novgorod
-					state = 253 #Vladimir
-					state = 255 #Penza
-					state = 755 #Vitebsk
-				}
-			}
-			SOV = { add_state_core = PREV }
-		}
-		release = SOV
-		delete_unit_template_and_units = { division_template = "Motostrelkovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Tankovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Gornostrelkovaya Diviziya" }
-		transfer_units_fraction = {
-			target = SOV
-			size = 0.2
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		SOV = {
-			set_major = yes
-			transfer_technology_without_doctrines = yes
-			transfer_navy = { target = RUS }
-			add_ideas = SOV_chaotic_revolution
-			country_lock_all_division_template = yes
-			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
-			add_ideas = {
-				SOV_nationalist_resistance
-				SOV_monarchist_resistance_1
-				SOV_democrat_resistance_1
-			}
-			set_country_flag = SOV_must_deal_with_opposition
-			set_politics = {
-				ruling_party = syndicalist
-				elections_allowed = no
-			}
-		}
-		195 = { #Petrograd
-			create_unit = {
-				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.3"
-				owner = SOV
-				prioritize_location = 6380
-				count = 3
-			}
-			create_unit = {
-				division = "division_template = \"Motostrelkovaya Diviziya\" start_experience_factor = 0.3"
-				owner = SOV
-				prioritize_location = 6380
-			}
-		}
-		for_each_scope_loop = {
-			array = SOV.owned_states
-			remove_core_of = RUS
-			add_claim_by = RUS
-			teleport_armies = {
-				limit = { tag = RUS }
-				to_state_array = owned_controlled_states
-			}
-		}
-		for_each_scope_loop = {
-			array = RUS.core_states
-			add_core_of = SOV
-		}
-		every_state = {
-			limit = { is_claimed_by = RUS }
-			add_claim_by = SOV
-		}
-		set_major = yes
-		random_unit_leader = {
-			limit = { has_id = 402 }	
-			remove_unit_leader = yes
-		}
-		every_unit_leader = {
-			limit = {
-				has_trait = hidden_sympathies
-			}
-			remove_unit_leader_trait = hidden_sympathies
-			set_nationality = SOV
-		}
-		RUS = {
-			set_political_party = {
-				ideology = syndicalist
-				popularity = 0
-			}
-			set_political_party = {
-				ideology = radical_socialist
-				popularity = 0
-			}
-		}
-	}
-}
-setup_savinkov_rrf = {
-	hidden_effect = {
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 257
-					state = 255 #Penza
-					state = 258
-					state = 254 #Ryazan
-					state = 223
-					state = 208
-					state = 205
-					state = 222
-					state = 1205
-					state = 1204
-					state = 1203
-					state = 264
-					state = 248
-					state = 351
-					state = 195 #Petrograd
-					state = 208 #Luga
-					state = 209 #Pskov
-					state = 210 #Velikiye Luki
-					state = 219 #Moscow
-					state = 220 #Kursk
-					state = 224 #Bryansk
-					state = 236 #Astrakhan
-					state = 239 #Saratov
-					state = 240 #Belgorod
-					state = 242 #Smolensk
-					state = 243 #Roslavl
-					state = 244 #Volkhov
-					state = 246 #Rzhev
-					state = 247 #Tver
-					state = 250 #Simbisrk
-					state = 252 #Nizhny Novgorod
-					state = 253 #Vladimir
-					state = 256 #Cheboksary
-					state = 263 #Novgorod
-					state = 755 #Vitebsk
-					state = 880 #Vitebsk
-				}
-				NOT = { is_owned_by = SOV }
-				NOT = { is_owned_by = RVA }
-			}
-			RRF = { add_state_core = PREV }
-		}
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_trait = RUS_markov_officer
-					has_id = 412
-				}
-			}
-			set_nationality = RRF
-		}
-					
-		release = RRF
-		delete_unit_template_and_units = { division_template = "Motostrelkovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Tankovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Gornostrelkovaya Diviziya" }
-		transfer_units_fraction = {
-			target = RRF
-			size = 0.4
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		RRF = {
-			set_major = yes
-			transfer_technology = yes
-			transfer_navy = { target = RUS }
-			country_lock_all_division_template = yes
-			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
-			load_focus_tree = russia_focus
-		}
-		if = {
-			limit = {
-				has_idea = RUS_RRF
-			}
-			remove_ideas = RUS_RRF
-			RRF = { add_ideas = RUS_RRF }
-			every_unit_leader = {
-				limit = {
-					has_trait = hidden_sympathies
-				}
-				set_nationality = RRF
-			}
-		}
-		if = {
-			limit = {
-				has_idea = RUS_RRF_1
-			}
-			remove_ideas = RUS_RRF_1
-		}
-		reset_russian_leaders = yes
-		RUS_setup_acting_president_senate = yes
-		195 = { #Petrograd
-			create_unit = {
-				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.3"
-				owner = RRF
-				prioritize_location = 6380
-				count = 3
-			}
-			create_unit = {
-				division = "division_template = \"Motostrelkovaya Diviziya\" start_experience_factor = 0.3"
-				owner = RRF
-				prioritize_location = 6380
-			}
-		}
-		for_each_scope_loop = {
-			array = RRF.owned_states
-			remove_core_of = RUS
-			add_claim_by = RUS
-			teleport_armies = {
-				limit = { tag = RUS }
-				to_state_array = owned_controlled_states
-			}
-		}
-		for_each_scope_loop = {
-			array = RUS.core_states
-			add_core_of = RRF
-		}
-		every_state = {
-			limit = { is_claimed_by = RUS }
-			add_claim_by = RRF
-		}
-		set_major = yes
-		RUS = {
-			set_political_party = {
-				ideology = national_populist
-				popularity = 0
-			}
-			remove_all_ministers = yes
-			drop_cosmetic_tag = yes
-			clr_country_flag = RUS_SAVI
-			clr_country_flag = RUS_SAVI_HOG
-			set_country_flag = disable_duma
-			set_country_flag = bolsheviks_banned
-			clr_country_flag = bolsheviks_allowed
-			set_country_flag = nrpr_banned
-			remove_ideas = RUS_National_Revolution
-			remove_ideas = RUS_RRF
-			remove_ideas = RUS_RRF_1
-			clr_country_flag = PORTRAIT_PICKER_ACTIVE
-			set_politics = {
-				ruling_party = social_liberal
-			}				
-		}
-	}
-}
-setup_savinkov_not_rrf = {
-	hidden_effect = {
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 257
-					state = 255 #Penza
-					state = 258
-					state = 254 #Ryazan
-					state = 223
-					state = 205
-					state = 260
-					state = 222
-					state = 1205
-					state = 1204
-					state = 1203
-					state = 220 #Kursk
-					state = 224 #Bryansk
-					state = 240 #Belgorod
-					state = 242 #Smolensk
-					state = 243 #Roslavl
-					state = 250 #Simbisrk
-					state = 256 #Cheboksary
-					state = 755 #Vitebsk
-					state = 880 #Vitebsk
-				}
-				NOT = { is_owned_by = RVA }
-			}
-			RRF = { add_state_core = PREV }
-			RRF = { transfer_state = PREV }
-		}
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_trait = RUS_markov_officer
-					has_id = 412
-				}
-			}
-			set_nationality = RRF
-		}
-		delete_unit_template_and_units = { division_template = "Motostrelkovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Tankovaya Diviziya" }
-		delete_unit_template_and_units = { division_template = "Gornostrelkovaya Diviziya" }
-		transfer_units_fraction = {
-			target = RRF
-			size = 0.4
-			navy_ratio = 0
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		RRF = {
-			every_owned_state = { set_demilitarized_zone = no }
-			set_major = yes
-			transfer_technology = yes
-			transfer_navy = { target = RUS }
-			country_lock_all_division_template = yes
-			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
-			set_political_party = {
-				ideology = national_populist
-				popularity = 100
-			}
-		}
-		for_each_scope_loop = {
-			array = RRF.owned_states
-			remove_core_of = RUS
-			add_claim_by = RUS
-			teleport_armies = {
-				limit = { tag = RUS }
-				to_state_array = owned_controlled_states
-			}
-		}
-		for_each_scope_loop = {
-			array = RUS.core_states
-			add_core_of = RRF
-		}
-		every_state = {
-			limit = { is_claimed_by = RUS }
-			add_claim_by = RRF
-		}
-		set_major = yes
-		RUS = {
-			set_political_party = {
-				ideology = national_populist
-				popularity = 0
-			}
-			set_country_flag = nrpr_banned
-			remove_ideas = RUS_National_Revolution
-			remove_ideas = RUS_RRF
-			remove_ideas = RUS_RRF_1
-			clr_country_flag = PORTRAIT_PICKER_ACTIVE
-		}
-	}
-}
-setup_western_russian_army = {
-	every_state = {
-		limit = {
-			OR = {
-				state = 880
-				state = 209
-				state = 210
-			}
-			NOT = { is_owned_by = WHR }
-		}
-		WRA = { add_state_core = PREV }
-		WRA = { transfer_state = PREV }
-	}
-	for_each_scope_loop = {
-		array = RUS.RUS_starting_states_array
-		add_claim_by = WRA
-	}
-	hidden_effect = { 
-		WRA = { 
-			load_oob = "WRA" 
-		}
-	}
-	RVA = {
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_id = 78823
-					has_id = 78824
-				}
-			}
-			set_nationality = WRA
-		}
-	}
-}
-setup_rva_cw_victory = {
-	hidden_effect = {
-		RUS = {
-			every_unit_leader = {
-				set_nationality = RRF
-			}
-		}
-		RVA = {
-			every_unit_leader = {
-				set_nationality = RUS
-			}
-		}
-		RUS = {
-			clr_country_flag = soviet_russia_restored
-			clr_country_flag = SOV_must_deal_with_opposition
-			remove_ideas = {
-				SOV_nationalist_resistance
-				SOV_nationalist_resistance_1
-				SOV_nationalist_resistance_2
-				SOV_democrat_resistance
-				SOV_democrat_resistance_1
-				SOV_democrat_resistance_2
-				SOV_monarchist_resistance
-				SOV_monarchist_resistance_1
-			}
-			clear_global_event_target = soviet_russia
-			transfer_technology = yes
-			unlock_national_focus = RUS_Balance_The_Budget
-			set_country_flag = unlock_military
-			if = {
-				limit = {
-					NOT = { has_global_flag = RUS_land_reform_finished }
-				}
-				setup_unfinished_land_reform = yes
-			}
-			if = {
-				limit = {
-					RVA = {
-						has_country_leader = {
-							name = "Lavr Kornilov"
-							ruling_only = yes
-						}
-					}
-				}
-				remove_all_ministers = yes
-				set_country_flag = RUS_kornilov_coup
-				remove_ideas_with_trait = head_of_government
-				add_ideas = RUS_Lavr_G_Kornilov_hog_pau
-				remove_ideas_with_trait = foreign_minister
-				add_ideas = RUS_Aleksey_A_Ignatiev_for_pau
-				remove_ideas_with_trait = economy_minister
-				add_ideas = RUS_Ivan_P_Romanovskiy_eco_pau
-				remove_ideas_with_trait = security_minister
-				add_ideas = RUS_Aleksandr_P_Balk_sec_pau 
-				add_timed_idea = {
-					idea = RUS_civil_war_aftermath_idea
-					days = 680
-				}
-				add_ideas = civilian_economy
-				add_ideas = volunteer_only
-				hidden_effect = {
-					set_stability = 0.6
-					set_war_support = 0.5
-				}
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				clr_country_flag = RUS_REVOL
-				clr_country_flag = RUS_SEN
-				clr_country_flag = RUS_demonstrations
-				clr_country_flag = RUS_Okhrannoye_Otdeleniye_locked
-				set_country_flag = RUS_JUNTA
-				hidden_effect = {
-					set_cosmetic_tag = RUS
-					reset_russian_leaders = yes
-					create_country_leader = {
-						name = "Lavr Kornilov"
-						desc = "POLITICS_LAVR_KORNILOV_DESC"
-						picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
-						expire = "1965.1.1"
-						ideology = junta_subtype
-						traits = { supreme_ruler }
-					}
-					set_popularities = {
-						totalist = 0
-						radical_socialist = 0
-						syndicalist = 0
-						social_democrat = 0
-						social_liberal = 0
-						market_liberal = 13
-						social_conservative = 20
-						authoritarian_democrat = 16
-						paternal_autocrat = 51
-						national_populist = 0
-					}
-					load_focus_tree = { tree = RUS_JUNTA_FOCUS }
-				}
-				clr_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-				clr_country_flag = Nikolay_F_Vatutin_dead
-				clr_country_flag = Nikolay_N_Dukhonin_dead
-				clr_country_flag = Vasiliy_A_Kharlamov_dead
-				clr_country_flag = Evgeniy_von_Rommel_dead
-				clr_country_flag = Anton_I_Denikin_dead
-				clr_country_flag = Pyetr_N_Vrangel_dead
-				clr_country_flag = Ivan_P_Romanovskiy_dead
-				clr_country_flag = Lavr_G_Kornilov_dead
-				clr_country_flag = Bronislav_V_Kaminski_dead
-				clr_country_flag = Pavel_N_Shatilov_dead
-				clr_country_flag = Vasiliy_V_Biskupskiy_dead
-				clr_country_flag = Andrei_A_Vlasov_dead
-				clr_country_flag = Nikolay_A_Lokhvitski_dead
-				clr_country_flag = Dmitri_Pavlovich_Romanov_dead
-				clr_country_flag = Aleksandr_Rodzyanko_dead
-				clr_country_flag = Aleksey_P_Arkhangelskiy_dead
-				clr_country_flag = Evgeniy_von_Rommel_dead
-				clr_country_flag = Konstantin_P_Voskoboinik_dead
-				clr_country_flag = Aleksandr_P_Kutepov_dead
-				clr_country_flag = Evgeniy_K_Miller_dead
-				clr_country_flag = Igor_I_Sikorskiy_dead
-				clr_country_flag = Vyacheslav_Tkachov_dead
-				clr_country_flag = Anton_V_Turkul_dead
-				clr_country_flag = Aleksandr_I_Verkhovskiy_dead
-				clr_country_flag = Dmitri_N_Verderevsky_dead
-				clr_country_flag = Aleksandr_A_Kazakov_dead
-			}
-			if = {
-				limit = {
-					RVA = {
-						has_country_leader = {
-							name = "Anton Denikin"
-							ruling_only = yes
-						}
-					}
-				}
-				remove_all_ministers = yes
-				set_country_flag = RUS_kornilov_coup
-				remove_ideas_with_trait = head_of_government
-				add_ideas = RUS_Anton_I_Denikin_hog_ade
-				remove_ideas_with_trait = foreign_minister
-				add_ideas = RUS_Aleksey_A_Ignatiev_for_pau
-				remove_ideas_with_trait = economy_minister
-				add_ideas = RUS_Ivan_P_Romanovskiy_eco_pau
-				remove_ideas_with_trait = security_minister
-				add_ideas = RUS_Aleksandr_P_Balk_sec_pau 
-				add_timed_idea = {
-					idea = RUS_civil_war_aftermath_idea
-					days = 680
-				}
-				add_ideas = civilian_economy
-				add_ideas = volunteer_only
-				hidden_effect = {
-					add_stability = -0.5
-					add_war_support = -0.5
-				}
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				clr_country_flag = RUS_REVOL
-				clr_country_flag = RUS_SEN
-				clr_country_flag = RUS_demonstrations
-				clr_country_flag = RUS_Okhrannoye_Otdeleniye_locked
-				clr_country_flag = RUS_JUNTA
-				clr_country_flag = RUS_DEN_TEMP
-				set_country_flag = RUS_DEN
-				hidden_effect = {
-					set_cosmetic_tag = RUS
-					reset_russian_leaders = yes
-					create_country_leader = {
-						name = "Anton Denikin"
-						desc = "POLITICS_ANTON_DENIKIN_DESC"
-						picture = "gfx/leaders/RUS/Portrait_RUS_Dic_Anton_Denikin.png"
-						expire = "1965.1.1"
-						ideology = junta_subtype
-					}
-					country_event = {
-						id = rusd.66
-						days = 2
-					}
-					set_popularities = {
-						totalist = 0
-						radical_socialist = 0
-						syndicalist = 0
-						social_democrat = 5
-						social_liberal = 0
-						market_liberal = 13
-						social_conservative = 20
-						authoritarian_democrat = 11
-						paternal_autocrat = 51
-						national_populist = 0
-					}
-					load_focus_tree = { tree = RUS_JUNTA_FOCUS }
-				}
-				clr_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-				clr_country_flag = Nikolay_F_Vatutin_dead
-				clr_country_flag = Nikolay_N_Dukhonin_dead
-				clr_country_flag = Vasiliy_A_Kharlamov_dead
-				clr_country_flag = Evgeniy_von_Rommel_dead
-				clr_country_flag = Anton_I_Denikin_dead
-				clr_country_flag = Pyetr_N_Vrangel_dead
-				clr_country_flag = Ivan_P_Romanovskiy_dead
-				clr_country_flag = Bronislav_V_Kaminski_dead
-				clr_country_flag = Pavel_N_Shatilov_dead
-				clr_country_flag = Vasiliy_V_Biskupskiy_dead
-				clr_country_flag = Andrei_A_Vlasov_dead
-				clr_country_flag = Nikolay_A_Lokhvitski_dead
-				clr_country_flag = Dmitri_Pavlovich_Romanov_dead
-				clr_country_flag = Aleksandr_Rodzyanko_dead
-				clr_country_flag = Aleksey_P_Arkhangelskiy_dead
-				clr_country_flag = Evgeniy_von_Rommel_dead
-				clr_country_flag = Konstantin_P_Voskoboinik_dead
-				clr_country_flag = Aleksandr_P_Kutepov_dead
-				clr_country_flag = Evgeniy_K_Miller_dead
-				clr_country_flag = Igor_I_Sikorskiy_dead
-				clr_country_flag = Vyacheslav_Tkachov_dead
-				clr_country_flag = Anton_V_Turkul_dead
-				clr_country_flag = Aleksandr_I_Verkhovskiy_dead
-				clr_country_flag = Dmitri_N_Verderevsky_dead
-				clr_country_flag = Aleksandr_A_Kazakov_dead
-			}
-			if = {
-				limit = {
-					RVA = {
-						has_country_leader = {
-							name = "Pyotr Wrangel"
-							ruling_only = yes
-						}
-					}
-				}
-				remove_all_ministers = yes
-				set_country_flag = RUS_kornilov_coup
-				remove_ideas_with_trait = head_of_government
-				add_ideas = RUS_Pyetr_N_Vrangel_hog_ade
-				remove_ideas_with_trait = foreign_minister
-				add_ideas = RUS_Aleksey_A_Ignatiev_for_pau
-				remove_ideas_with_trait = economy_minister
-				add_ideas = RUS_Ivan_P_Romanovskiy_eco_pau
-				remove_ideas_with_trait = security_minister
-				add_ideas = RUS_Aleksandr_P_Balk_sec_pau 
-				add_timed_idea = {
-					idea = RUS_civil_war_aftermath_idea
-					days = 680
-				}
-				add_ideas = civilian_economy
-				add_ideas = volunteer_only
-				hidden_effect = {
-					set_stability = 0.6
-					set_war_support = 0.5
-				}
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				clr_country_flag = RUS_REVOL
-				clr_country_flag = RUS_SEN
-				clr_country_flag = RUS_demonstrations
-				clr_country_flag = RUS_Okhrannoye_Otdeleniye_locked
-				clr_country_flag = RUS_JUNTA
-				clr_country_flag = RUS_DEN_TEMP
-				set_country_flag = RUS_VRA
-				hidden_effect = {
-					set_cosmetic_tag = RUS
-					reset_russian_leaders = yes
-					create_country_leader = {
-						name = "Pyotr Wrangel"
-						desc = "POLITICS_PYOTR_VRANGEL_DESC"
-						picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel.png"
-						expire = "1965.1.1"
-						ideology = junta_subtype
-						traits = { RUS_black_baron }
-					}
-					country_event = {
-						id = rusd.66
-						days = 2
-					}
-					set_popularities = {
-						totalist = 0
-						radical_socialist = 0
-						syndicalist = 0
-						social_democrat = 5
-						social_liberal = 0
-						market_liberal = 13
-						social_conservative = 20
-						authoritarian_democrat = 11
-						paternal_autocrat = 51
-						national_populist = 0
-					}
-					load_focus_tree = { tree = RUS_JUNTA_FOCUS }
-				}
-				clr_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-				clr_country_flag = Nikolay_F_Vatutin_dead
-				clr_country_flag = Nikolay_N_Dukhonin_dead
-				clr_country_flag = Vasiliy_A_Kharlamov_dead
-				clr_country_flag = Evgeniy_von_Rommel_dead
-				clr_country_flag = Pyetr_N_Vrangel_dead
-				clr_country_flag = Ivan_P_Romanovskiy_dead
-				clr_country_flag = Bronislav_V_Kaminski_dead
-				clr_country_flag = Pavel_N_Shatilov_dead
-				clr_country_flag = Vasiliy_V_Biskupskiy_dead
-				clr_country_flag = Andrei_A_Vlasov_dead
-				clr_country_flag = Nikolay_A_Lokhvitski_dead
-				clr_country_flag = Dmitri_Pavlovich_Romanov_dead
-				clr_country_flag = Aleksandr_Rodzyanko_dead
-				clr_country_flag = Aleksey_P_Arkhangelskiy_dead
-				clr_country_flag = Evgeniy_von_Rommel_dead
-				clr_country_flag = Konstantin_P_Voskoboinik_dead
-				clr_country_flag = Aleksandr_P_Kutepov_dead
-				clr_country_flag = Evgeniy_K_Miller_dead
-				clr_country_flag = Igor_I_Sikorskiy_dead
-				clr_country_flag = Vyacheslav_Tkachov_dead
-				clr_country_flag = Anton_V_Turkul_dead
-				clr_country_flag = Aleksandr_I_Verkhovskiy_dead
-				clr_country_flag = Dmitri_N_Verderevsky_dead
-				clr_country_flag = Aleksandr_A_Kazakov_dead
-			}
-			annex_country = {
-				target = RVA
-				transfer_troops = yes
-			}
-			change_tag_from = ROOT
-		}
-	}
-}	
-setup_rrf_cw_victory = {
-	hidden_effect = {
-		if = {
-			limit = {
-				RRF = { has_socialist_government = no }
-			}
-			RUS = {
-				every_unit_leader = {
-					retire = yes
-				}
-			}
-			RRF = {
-				every_unit_leader = {
-					set_nationality = RUS
-				}
-			}
-			RUS = {
-				clr_country_flag = soviet_russia_restored
-				clr_country_flag = SOV_must_deal_with_opposition
-				remove_ideas = {
-					SOV_nationalist_resistance
-					SOV_nationalist_resistance_1
-					SOV_nationalist_resistance_2
-					SOV_democrat_resistance
-					SOV_democrat_resistance_1
-					SOV_democrat_resistance_2
-					SOV_monarchist_resistance
-					SOV_monarchist_resistance_1
-				}
-				clear_global_event_target = soviet_russia
-				transfer_technology = yes
-				unlock_national_focus = RUS_Balance_The_Budget
-				set_country_flag = unlock_military
-				if = {
-					limit = {
-						NOT = { has_global_flag = RUS_land_reform_finished }
-					}
-					setup_unfinished_land_reform = yes
-				}
-				transfer_technology = yes
-				if = {
-					limit = {
-						NOT = { has_global_flag = RUS_land_reform_finished }
-					}
-					setup_unfinished_land_reform = yes
-				}
-				reset_russian_leaders = yes
-				remove_all_ministers = yes
-				add_ideas = RUS_Boris_V_Savinkov_hog_npo
-				add_ideas = {
-					RUS_Aleksandr_Dikgof_Derental_for_npo
-					RUS_Aleksandr_Antonov_eco_npo
-					RUS_Emma_Dikgof_Derental_sec_npo
-				}
-				set_country_flag = RUS_SAVI
-				set_country_flag = RUS_dictatorship
-				clr_country_flag = RUS_democracy
-				create_country_leader = {
-					name = "Boris Savinkov"
-					desc = "POLITICS_BORIS_SAVINKOV_DESC"
-					picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Savinkov_President.png"
-					expire = "1965.1.1"
-					ideology = savinkovism_subtype
-					traits = { vozhd }
-				}
-				set_country_flag = PORTRAIT_PICKER_ACTIVE
-				set_politics = {
-					ruling_party = national_populist
-					elections_allowed = no
-				}
-				add_timed_idea = {
-					idea = RUS_civil_war_aftermath_idea
-					days = 680
-				}
-				hidden_effect = {
-					set_stability = 0.6
-					set_war_support = 0.5
-				}
-				add_ideas = civilian_economy
-				add_ideas = volunteer_only
-				hidden_effect = {
-					add_stability = -0.5
-					add_war_support = -0.5
-				}				
-				clr_country_flag = RUS_SEN
-				clr_country_flag = RUS_Okhrannoye_Otdeleniye_locked
-				clr_country_flag = RUS_JUNTA
-				set_cosmetic_tag = RUS_vozhdct
-				set_country_flag = RUS_SAVI
-				load_focus_tree = RUS_SAVINKOV_FOCUS
-				country_event = {
-					id = rusd.60
-					days = 5
-				}
-				country_event = {
-					id = rusd.61
-					days = 2
-				}
-				clr_country_flag = Sergey_L_Markov_dead
-				clr_country_flag = Bronislav_V_Kaminski_dead
-				clr_country_flag = Vasiliy_V_Biskupskiy_dead
-				clr_country_flag = Andrei_A_Vlasov_dead
-				clr_country_flag = Nikolay_A_Lokhvitski_dead
-				clr_country_flag = Aleksandr_S_Antonov_dead
-				clr_country_flag = Vyacheslav_Tkachov_dead
-				clr_country_flag = Anton_V_Turkul_dead
-				clr_country_flag = Aleksandr_I_Verkhovskiy_dead
-				clr_country_flag = Dmitri_N_Verderevsky_dead
-				clr_country_flag = Aleksandr_A_Kazakov_dead
-				random_other_country = {
-					news_event = {
-						id = russianews.1
-						days = 1
-					}
-				}
-				set_political_party = {
-					ideology = national_populist
-					popularity = 51
-				}
-				annex_country = {
-					target = RRF
-					transfer_troops = yes
-				}
-				change_tag_from = ROOT
-			}
-		}
-		else = {
-			RUS = {
-				every_unit_leader = {
-					retire = yes
-				}
-			}
-			RRF = {
-				every_unit_leader = {
-					set_nationality = RUS
-				}
-			}
-			RUS = {
-				transfer_technology = yes
-				annex_country = {
-					target = RRF
-					transfer_troops = yes
-				}
-				setup_soviet_russia = yes
-				add_timed_idea = {
-					idea = SOV_aftermath_of_the_civil_war_1
-					days = 680
-				}
-				hidden_effect = {
-					set_stability = 0.25
-					set_war_support = 0.1
-				}
-				add_ideas = civilian_economy
-				add_ideas = volunteer_only
-				hidden_effect = {
-					add_stability = -0.5
-					add_war_support = -0.5
-				}
-				if = {
-					limit = {
-						NOT = { has_global_flag = RUS_land_reform_finished }
-					}
-					setup_unfinished_land_reform = yes
-				}
-				remove_all_ministers = yes
-				set_politics = {
-					ruling_party = syndicalist
-					elections_allowed = no
-				}
-				add_ideas = {
-					RUS_Maria_A_Spiridonova_hog_rso
-					RUS_Aleksey_M_Ustinov_for_syn
-					RUS_Sergey_P_Medvedev_eco_syn
-					RUS_Yuri_Lutovinov_sec_syn
-				}
-				
-				change_tag_from = ROOT
-			}
-		}
-	}
-}	
-setup_wra_cw_victory = {
-	hidden_effect = {
-		RUS = {
-			every_unit_leader = {
-				set_nationality = RVA
-			}
-		}
-		WRA = {
-			every_unit_leader = {
-				set_nationality = RUS
-			}
-		}
-		RUS = {
-			clr_country_flag = soviet_russia_restored
-			clr_country_flag = SOV_must_deal_with_opposition
-			remove_ideas = {
-				SOV_nationalist_resistance
-				SOV_nationalist_resistance_1
-				SOV_nationalist_resistance_2
-				SOV_democrat_resistance
-				SOV_democrat_resistance_1
-				SOV_democrat_resistance_2
-				SOV_monarchist_resistance
-				SOV_monarchist_resistance_1
-			}
-			clear_global_event_target = soviet_russia
-			transfer_technology = yes
-			unlock_national_focus = RUS_Balance_The_Budget
-			set_country_flag = unlock_military
-			if = {
-				limit = {
-					NOT = { has_global_flag = RUS_land_reform_finished }
-				}
-				setup_unfinished_land_reform = yes
-			}
-			reset_russian_leaders = yes
-			remove_all_ministers = yes
-			clr_country_flag = RUS_democracy
-			create_country_leader = {
-				name = "Pavel Bermondt-Avalov"
-				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Pavel_Bermondt_Avalov.png"
-				expire = "1965.1.1"
-				ideology = junta_subtype
-			}
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no
-			}
-			hidden_effect = {
-				set_stability = 0.6
-				set_war_support = 0.5
-			}
-			set_political_party = {
-				ideology = paternal_autocrat
-				popularity = 35
-			}
-			clr_country_flag = RUS_SEN
-			clr_country_flag = RUS_Okhrannoye_Otdeleniye_locked
-			clr_country_flag = RUS_JUNTA
-			set_cosmetic_tag = RUS_WRA
-			set_party_name = {
-				ideology = paternal_autocrat
-				name = WRA_paternal_autocrat_party
-				long_name = WRA_paternal_autocrat_party_long
-			}
-			load_focus_tree = { tree = russia_focus } #later to change
-			annex_country = {
-				target = WRA
-				transfer_troops = yes
-			}
-			GER = { add_to_faction = RUS }
-			change_tag_from = ROOT
-		}
-	}
-}	
-setup_sov_cw_victory = {
-	hidden_effect = {
-		every_state = {
-			limit = {
-				is_owned_by = SOV
-			}
-			SOV = { add_state_core = PREV }
-			RUS = { remove_state_claim = PREV }
-			SOV = { remove_state_claim = PREV }
-			RVA = { remove_state_core = PREV }
-			RVA = { remove_state_claim = PREV }
-			RRF = { remove_state_core = PREV }
-			RRF = { remove_state_claim = PREV }
-			WRA = { remove_state_core = PREV }
-			WRA = { remove_state_claim = PREV }
-		}
-		SOV = {
-			add_stability = 0.15
-			load_focus_tree = { tree = Russia_Socialist keep_completed = yes }
-		}
-	}
-}	
-setup_rus_cw_victory = {
-	hidden_effect = {
-		every_state = {
-			limit = {
-				is_owned_by = RUS
-			}
-			RUS = { add_state_core = PREV }
-			RUS = { remove_state_claim = PREV }
-			SOV = { remove_state_core = PREV }
-			SOV = { remove_state_claim = PREV }
-			RVA = { remove_state_core = PREV }
-			RVA = { remove_state_claim = PREV }
-			RRF = { remove_state_core = PREV }
-			RRF = { remove_state_claim = PREV }
-			WRA = { remove_state_core = PREV }
-			WRA = { remove_state_claim = PREV }
-		}
-		RUS = {
-			add_stability = 0.15
-			country_event = {
-				id = rcw.106
-				days = 2
-			}
-			load_focus_tree = RUS_SENATE_FOCUS
-		}
-	}
-}	
-setup_trm_cw_victory = {
-	hidden_effect = {
-		every_state = {
-			limit = {
-				is_owned_by = TRM
-			}
-			RUS = { add_state_core = PREV }
-			RUS = { remove_state_claim = PREV }
-			SOV = { remove_state_core = PREV }
-			SOV = { remove_state_claim = PREV }
-			RVA = { remove_state_core = PREV }
-			RVA = { remove_state_claim = PREV }
-			RRF = { remove_state_core = PREV }
-			RRF = { remove_state_claim = PREV }
-			WRA = { remove_state_core = PREV }
-			WRA = { remove_state_claim = PREV }
-		}
-	}
-}
-remove_RCW_claims = {
-	hidden_effect = {
-		every_state = {
-			limit = {
-				OR = {
-					is_claimed_by = RUS
-					is_claimed_by = RRF
-					is_claimed_by = RVA
-					is_claimed_by = WRA
-				}
-			}
-			if = {
-				limit = {
-					NOT = { country_exists = RRF }
-				}
-				remove_claim_by = RRF
-			}
-			if = {
-				limit = {
-					NOT = { country_exists = RVA }
-				}
-				remove_claim_by = RVA
-			}
-			if = {
-				limit = {
-					NOT = { country_exists = WRA }
-				}
-				remove_claim_by = WRA
-			}
-		}
-	}
-}
-RCW_demobilize_forces = {
-	RUS = {
-		if = {
-			limit = { has_template = "Respublikanskoye Opolcheniye" }
-			delete_unit_template_and_units = { division_template = "Respublikanskoye Opolcheniye" disband = yes }
-		}
-		if = {
-			limit = { has_template = "Krasnogvardeitsy" }
-			delete_unit_template_and_units = { division_template = "Krasnogvardeitsy" disband = yes }
-		}
-	}
-	RRF = {
-		if = {
-			limit = { has_template = "Zelenoarmeitsy" }
-			delete_unit_template_and_units = { division_template = "Zelenoarmeitsy" disband = yes }
-		}
-		if = {
-			limit = { has_template = "Krasnogvardeitsy" }
-			delete_unit_template_and_units = { division_template = "Krasnogvardeitsy" disband = yes }
-		}
-	}
-	RVA = {
-		if = {
-			limit = { has_template = "Dobrovoltsy" }
-			delete_unit_template_and_units = { division_template = "Dobrovoltsy" disband = yes }
-		}
-	}
-	WRA = {
-		if = {
-			limit = { has_template = "Avalovtsy" }
-			delete_unit_template_and_units = { division_template = "Avalovtsy" disband = yes }
-		}
-	}
-	TRM = {
-		if = {
-			limit = { has_template = "Sibirskiye Dobrovoltsy" }
-			delete_unit_template_and_units = { division_template = "Sibirskiye Dobrovoltsy" disband = yes }
-		}
-	}
-	LAT = {
-		if = {
-			limit = { has_template = "Krasnogvardeitsy" }
-			delete_unit_template_and_units = { division_template = "Krasnogvardeitsy" disband = yes }
-		}
-	}
-}
-	
-	
-create_RCW_militia_template = {
-	if = {
-		limit = {
-			tag = RUS
-			RUS = { has_socialist_government = no }
-		}
-		create_RUS_militia_template = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				AND = {
-					tag = RUS
-					RUS = { has_socialist_government = yes }
-				}
-				AND = {
-					tag = RRF
-					RRF = { has_socialist_government = yes }
-				}
-				AND = {
-					tag = LAT
-					LAT = { has_country_flag = LAT_bolsheviks_intervene_in_RCW }
-				}
-				tag = SOV
-			}
-		}
-		create_SOV_militia_template = yes
-	}
-	if = {
-		limit = {
-			tag = RRF
-			RRF = { has_socialist_government = no }
-		}
-		create_RRF_militia_template = yes
-	}
-	if = {
-		limit = {
-			tag = TRM
-		}
-		create_TRM_militia_template = yes
-	}
-	if = {
-		limit = {
-			tag = WRA
-		}
-		create_WRA_militia_template = yes
-	}
-	if = {
-		limit = {
-			tag = RVA
-		}
-		create_RVA_militia_template = yes
-	}
-}
-create_RUS_militia_template = {
-	if = {
-		limit = {
-			NOT = { has_template = "Respublikanskoye Opolcheniye" }
-		}
-		division_template = {
-			name = "Respublikanskoye Opolcheniye"
-			division_names_group = RUS_MIL_01
-			regiments = {
-				militia = { x = 0 y = 0 }
-				militia = { x = 0 y = 1 }
-				militia = { x = 0 y = 2 }
-				militia = { x = 1 y = 0 }
-				militia = { x = 1 y = 1 }
-				militia = { x = 1 y = 2 }
-				militia = { x = 2 y = 0 }
-				militia = { x = 2 y = 1 }
-				militia = { x = 2 y = 2 }
-			}
-			priority = 0
-		}
-	}
-}
-create_RRF_militia_template = {
-	if = {
-		limit = {
-			NOT = { has_template = "Zelenoarmeitsy" }
-		}
-		division_template = {
-			name = "Zelenoarmeitsy"
-			division_names_group = RUS_MIL_03
-			regiments = {
-				militia = { x = 0 y = 0 }
-				militia = { x = 0 y = 1 }
-				militia = { x = 0 y = 2 }
-				militia = { x = 1 y = 0 }
-				militia = { x = 1 y = 1 }
-				militia = { x = 1 y = 2 }
-				militia = { x = 2 y = 0 }
-				militia = { x = 2 y = 1 }
-				militia = { x = 2 y = 2 }
-			}
-			priority = 0
-		}
-	}
-}
-create_RVA_militia_template = {
-	if = {
-		limit = {
-			NOT = { has_template = "Dobrovoltsy" }
-		}
-		division_template = {
-			name = "Dobrovoltsy"
-			division_names_group = RUS_MIL_02
-			regiments = {
-				militia = { x = 0 y = 0 }
-				militia = { x = 0 y = 1 }
-				militia = { x = 0 y = 2 }
-				militia = { x = 1 y = 0 }
-				militia = { x = 1 y = 1 }
-				militia = { x = 1 y = 2 }
-				militia = { x = 2 y = 0 }
-				militia = { x = 2 y = 1 }
-				militia = { x = 2 y = 2 }
-			}
-			priority = 0
-		}
-	}
-}
-create_WRA_militia_template = {
-	if = {
-		limit = {
-			NOT = { has_template = "Avalovtsy" }
-		}
-		division_template = {
-			name = "Avalovtsy"
-			division_names_group = RUS_MIL_04 
-			regiments = {
-				militia = { x = 0 y = 0 }
-				militia = { x = 0 y = 1 }
-				militia = { x = 0 y = 2 }
-				militia = { x = 1 y = 0 }
-				militia = { x = 1 y = 1 }
-				militia = { x = 1 y = 2 }
-				militia = { x = 2 y = 0 }
-				militia = { x = 2 y = 1 }
-				militia = { x = 2 y = 2 }
-			}
-			priority = 0
-		}
-	}
-}
-create_TRM_militia_template = {
-	if = {
-		limit = {
-			NOT = { has_template = "Sibirskiye Dobrovoltsy" }
-		}
-		division_template = {
-			name = "Sibirskiye Dobrovoltsy"
-			division_names_group = TRM_MIL_01 
-			regiments = {
-				militia = { x = 0 y = 0 }
-				militia = { x = 0 y = 1 }
-				militia = { x = 0 y = 2 }
-				militia = { x = 1 y = 0 }
-				militia = { x = 1 y = 1 }
-				militia = { x = 1 y = 2 }
-				militia = { x = 2 y = 0 }
-				militia = { x = 2 y = 1 }
-				militia = { x = 2 y = 2 }
-			}
-			priority = 0
-		}
-	}
-}
-create_SOV_militia_template = {
-	if = {
-		limit = {
-			NOT = { has_template = "Krasnogvardeitsy" }
-		}
-		division_template = {
-			name = "Krasnogvardeitsy"
-			division_names_group = SOV_MIL_01 
-			regiments = {
-				militia = { x = 0 y = 0 }
-				militia = { x = 0 y = 1 }
-				militia = { x = 0 y = 2 }
-				militia = { x = 1 y = 0 }
-				militia = { x = 1 y = 1 }
-				militia = { x = 1 y = 2 }
-				militia = { x = 2 y = 0 }
-				militia = { x = 2 y = 1 }
-				militia = { x = 2 y = 2 }
-			}
-			priority = 0
-		}
-	}
-}
-RCW_spawn_militia_divisions = {
-	### calculate number of units to spawn
-	set_temp_variable = { units_to_spawn = state_population_k }
-	divide_temp_variable = { units_to_spawn = 500 }
-
-	### failsafe so at least one unit is always spawned
-	clamp_temp_variable = { var = units_to_spawn min = 1 max = 12 }
-
-	### tooltip
-	set_temp_variable = { total_units_to_spawn = units_to_spawn }
-	custom_effect_tooltip = RCW_recruit_units
-
-	### spawn normal militias
-	set_temp_variable = { counter = 1 }
-	if = {
-		limit = {
-			check_variable = { var = units_to_spawn value = 1 compare = greater_than_or_equals }
-		}
-		ROOT = { create_RCW_militia_template = yes }
-		for_loop_effect = {
-			start = 1
-			end = units_to_spawn
-			compare = less_than_or_equals
-
-			meta_effect = {
-				text = {
-					create_unit = {
-						division = "name = [DIVISION] division_template = [TEMPLATE] start_experience_factor = 0.0"
-						allow_spawning_on_enemy_provs = yes
-						owner = ROOT
-						id = 1776
-					}
-				}
-				DIVISION = "\\\"[?counter]aya [THIS.GetName] [GetRCWMilitiaName]\\\""
-				TEMPLATE = "\\\"[GetRCWMilitiaTemplate]\\\""
-			}
-			add_to_temp_variable = { counter = 1 }
-		}
-	}
-}	
-RUS_setup_soviets = {
-	hidden_effect = {
-		set_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-		set_country_flag = Nikolay_F_Vatutin_dead
-		set_country_flag = Nikolay_N_Dukhonin_dead
-		set_country_flag = Vasiliy_A_Kharlamov_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Anton_I_Denikin_dead
-		set_country_flag = Pyetr_N_Vrangel_dead
-		set_country_flag = Sergey_L_Markov_dead
-		set_country_flag = Ivan_P_Romanovskiy_dead
-		set_country_flag = Lavr_G_Kornilov_dead
-		set_country_flag = Mikhail_Drozdovskiy_dead
-		set_country_flag = Bronislav_V_Kaminski_dead
-		set_country_flag = Pavel_N_Shatilov_dead
-		set_country_flag = Vasiliy_V_Biskupskiy_dead
-		set_country_flag = Andrei_A_Vlasov_dead
-		set_country_flag = Nikolay_A_Lokhvitski_dead
-		set_country_flag = Dmitri_Pavlovich_Romanov_dead
-		set_country_flag = Aleksandr_Rodzyanko_dead
-		set_country_flag = Aleksey_P_Arkhangelskiy_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Lavrentiy_Kornilov_dead
-		set_country_flag = Konstantin_P_Voskoboinik_dead
-		set_country_flag = Aleksandr_S_Antonov_dead
-		set_country_flag = Aleksandr_P_Kutepov_dead
-		set_country_flag = Evgeniy_K_Miller_dead
-		set_country_flag = Igor_I_Sikorskiy_dead
-		set_country_flag = Vyacheslav_Tkachov_dead
-		set_country_flag = Anton_V_Turkul_dead
-		set_country_flag = Aleksandr_I_Verkhovskiy_dead
-		set_country_flag = Vasiliy_Kanin_dead
-		set_country_flag = Dmitri_N_Verderevsky_dead
-		set_country_flag = Aleksandr_A_Kazakov_dead
-		random_unit_leader = {
-			limit = { has_id = 402 }	
-			remove_unit_leader = yes
-		}
-		every_unit_leader = {
-			limit = {
-				NOT = {
-					OR = {
-						has_trait = hidden_sympathies
-						has_id = 401 #Denikin
-						has_id = 400 #Vrangel
-						has_id = 50003 #Boldyrev
-					}
-				}
-			}
-			set_nationality = TRM
-		}
-		if = {
-			limit = {
-				rsdrp_in_power = yes
-			}
-			every_unit_leader = {
-				limit = {
-					has_id = 50003 #Boldyrev
-				}
-				set_nationality = ROOT
-			}
-		}		
-		if = {
-			limit = {
-				DKB = { has_socialist_government = no }
-				don_is_pro_german = no
-			}
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 401 #Denikin
-						has_id = 400 #Vrangel
-					}
-				}
-				set_nationality = DKB
-			}
-		}
-		else = {
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 401 #Denikin
-						has_id = 400 #Vrangel
-					}
-				}
-				set_nationality = TRM
-			}
-		}
-		set_political_party = {
-			ideology = social_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = market_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = social_conservative
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = authoritarian_democrat
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = paternal_autocrat
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = national_populist
-			popularity = 0
-		}
-		add_ideas = {
-			SOV_nationalist_resistance_1
-			SOV_monarchist_resistance_1
-			SOV_democrat_resistance_1
-		}
-		set_country_flag = SOV_must_deal_with_opposition
-		country_event = {
-			id = russoc.1
-			days = 3
-		}
-		country_event = {
-			id = russia.1923
-			days = 80
-		}
-	}
-}
-setup_soviet_psr = {
-	setup_soviet_russia = yes
-	hidden_effect = {
-		set_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-		set_country_flag = Nikolay_F_Vatutin_dead
-		set_country_flag = Nikolay_N_Dukhonin_dead
-		set_country_flag = Vasiliy_A_Kharlamov_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Anton_I_Denikin_dead
-		set_country_flag = Pyetr_N_Vrangel_dead
-		set_country_flag = Sergey_L_Markov_dead
-		set_country_flag = Ivan_P_Romanovskiy_dead
-		set_country_flag = Lavr_G_Kornilov_dead
-		set_country_flag = Mikhail_Drozdovskiy_dead
-		set_country_flag = Bronislav_V_Kaminski_dead
-		set_country_flag = Pavel_N_Shatilov_dead
-		set_country_flag = Vasiliy_V_Biskupskiy_dead
-		set_country_flag = Andrei_A_Vlasov_dead
-		set_country_flag = Nikolay_A_Lokhvitski_dead
-		set_country_flag = Dmitri_Pavlovich_Romanov_dead
-		set_country_flag = Aleksandr_Rodzyanko_dead
-		set_country_flag = Aleksey_P_Arkhangelskiy_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Lavrentiy_Kornilov_dead
-		set_country_flag = Konstantin_P_Voskoboinik_dead
-		set_country_flag = Aleksandr_S_Antonov_dead
-		set_country_flag = Aleksandr_P_Kutepov_dead
-		set_country_flag = Evgeniy_K_Miller_dead
-		set_country_flag = Igor_I_Sikorskiy_dead
-		set_country_flag = Vyacheslav_Tkachov_dead
-		set_country_flag = Anton_V_Turkul_dead
-		set_country_flag = Dmitri_N_Verderevsky_dead
-		set_country_flag = Aleksandr_A_Kazakov_dead
-		
-		set_country_flag = soviet_russia_restored
-		set_country_flag = SOV_must_deal_with_opposition
-		load_focus_tree = Russia_Socialist
-		set_stability = 0.1
-		set_war_support = 0.4
-		set_country_flag = soc_dems_are_socialists
-		set_politics = {
-			ruling_party = radical_socialist
-			last_election = "1930.11.9"
-			election_frequency = 48
-			elections_allowed = no
-		}
-		remove_ideas = RUS_psr_political_crisis
-		random_unit_leader = {
-			limit = {
-				OR = {
-					has_id = 402
-				}
-			}
-			retire = yes
-		}
-		if = {
-			limit = {
-				DKB = { has_socialist_government = no }
-			}
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 401 #Denikin
-						has_id = 400 #Vrangel
-					}
-				}
-				set_nationality = DKB
-			}
-		}
-		else = {
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 401 #Denikin
-						has_id = 400 #Vrangel
-					}
-				}
-				set_nationality = TRM
-			}
-		}
-		
-		transfer_units_fraction = {
-			target = TRM
-			size = opposite_army_support
-			navy_ratio = 0.1
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		set_political_party = {
-			ideology = social_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = market_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = social_conservative
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = authoritarian_democrat
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = paternal_autocrat
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = national_populist
-			popularity = 0
-		}
-		
-		add_ideas = {
-			SOV_nationalist_resistance_1
-			SOV_monarchist_resistance_1
-			SOV_democrat_resistance_1
-		}
-		set_country_flag = SOV_must_deal_with_opposition
-		country_event = {
-			id = russoc.1
-			days = 3
-		}
-		set_politics = {
-			ruling_party = radical_socialist
-			elections_allowed = no
-		}
-		set_party_name = {
-			ideology = radical_socialist
-			long_name = RUS_social_rev_party_long
-			name = RUS_social_rev_party
-		}
-		add_ideas = RUS_Vladimir_K_Volsky_hog_rso
-		add_ideas = {
-			RUS_Ivan_N_Smirnov_for_rso
-			RUS_Nikolay_I_Ivanov_eco_rso
-			RUS_Kost_S_Burevoy_sec_rso
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_country_leader = {
-						ruling_only = yes
-						name = "Lev Gershtein"
-					}
-				}
-			}
-			create_country_leader = {
-				name = "Lev Gershtein"
-				desc = "POLITICS_GERSHTEIN_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Lev_Gershtein.png"
-				expire = "1965.1.1"
-				ideology = agrarian_socialism_subtype 
-				traits = { }
-			}
-		}
-		else = {
-			create_country_leader = {
-				name = "Vladimir Volsky"
-				desc = "POLITICS_VOLSKY_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Volsky.png"
-				expire = "1965.1.1"
-				ideology = agrarian_socialism_subtype 
-				traits = { }
-			}
-		}
-		set_party_name = {
-			ideology = social_democrat
-			name = RUS_social_democrat_party
-			long_name = RUS_social_democrat_party_long
-		}
-		country_event = {
-			id = russoc.112
-			months = 5
-		}		
-	}
-}
-RUS_transfer_russian_ideas = {
-	hidden_effect = {
-		if = {
-			limit = {
-				RUS = {
-					has_idea = rus_unfinished_land_reform
-				}
-			}
-			SOV = { setup_unfinished_land_reform = yes }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = rus_industry_lack
-				}
-			}
-			SOV = { setup_backward_industry = yes }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = rus_poor_inf
-				}
-			}
-			SOV = { add_ideas = rus_poor_inf }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = rus_poor_inf1
-				}
-			}
-			SOV = { add_ideas = rus_poor_inf1 }
-		}
-		#if = {
-		#	limit = {
-		#		RUS = {
-		#			has_idea = rus_poor_inf2
-		#		}
-		#	}
-		#	SOV = { add_ideas = rus_poor_inf2 }
-		#}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = rus_nep_14
-				}
-			}
-			SOV = { add_ideas = rus_nep_14 }
-		}
-		
-		if = {
-			limit = {
-				RUS = {
-					has_idea = peasant_councils
-				}
-			}
-			SOV = { add_ideas = peasant_councils }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = social_security
-				}
-			}
-			SOV = { add_ideas = social_security }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = popular_socialism
-				}
-			}
-			SOV = { add_ideas = popular_socialism }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = municipal_councils
-				}
-			}
-			SOV = { add_ideas = municipal_councils }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = cooperative_unions
-				}
-			}
-			SOV = { add_ideas = cooperative_unions }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = labour_collectives_focus
-				}
-			}
-			SOV = { add_ideas = labour_collectives_focus }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = agr_sec_agency
-				}
-			}
-			SOV = { add_ideas = agr_sec_agency }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_idea = village_communes
-				}
-			}
-			SOV = { add_ideas = village_communes }
-		}
-	}
-}
 		
 		
 		
@@ -8435,135 +5614,18 @@ RUS_zemstvo_add_infrastructure = {
 }
 
 RUS_increase_denikin = {
-	set_temp_variable = { RUS_denikin_influence_temp = RUS.denikin_influence }
-	set_temp_variable = { RUS_wrangel_influence_temp = RUS.wrangel_influence }
-	add_to_temp_variable = { var = RUS_denikin_influence_temp value = 1 }
-	if = {
-		limit = {
-			check_variable = { RUS_denikin_influence_temp = RUS_wrangel_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_wrangel }
-			swap_ideas = {
-				remove_idea = RUS_rovs_wrangel
-				add_idea = RUS_rovs_balance
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_denikin }
-			swap_ideas = {
-				remove_idea = RUS_rovs_denikin
-				add_idea = RUS_rovs_balance
-			}
+	add_power_balance_value = {
+		id = RUS_denikin_wrangel_conflict
+		value = -0.20
 		}
 	}
-	else_if = {
-		limit = {
-			check_variable = { RUS_denikin_influence_temp > RUS_wrangel_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_wrangel }
-			swap_ideas = {
-				remove_idea = RUS_rovs_wrangel
-				add_idea = RUS_rovs_denikin
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_balance }
-			swap_ideas = {
-				remove_idea = RUS_rovs_balance
-				add_idea = RUS_rovs_denikin
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { RUS_denikin_influence_temp < RUS_wrangel_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_balance }
-			swap_ideas = {
-				remove_idea = RUS_rovs_balance
-				add_idea = RUS_rovs_wrangel
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_denikin }
-			swap_ideas = {
-				remove_idea = RUS_rovs_denikin
-				add_idea = RUS_rovs_wrangel
-			}
-		}
-	}
-	add_to_variable = { var = RUS.wrangel_influence value = -1 }
-	add_to_variable = { var = RUS.denikin_influence value = 1 }
-}
 
 RUS_increase_wrangel = {
-	set_temp_variable = { RUS_denikin_influence_temp = RUS.denikin_influence }
-	set_temp_variable = { RUS_wrangel_influence_temp = RUS.wrangel_influence }
-	add_to_temp_variable = { var = RUS_wrangel_influence_temp value = 1 }
-	add_to_temp_variable = { var = RUS_denikin_influence_temp value = -1 }
-	if = {
-		limit = {
-			check_variable = { RUS_denikin_influence_temp = RUS_wrangel_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_wrangel }
-			swap_ideas = {
-				remove_idea = RUS_rovs_wrangel
-				add_idea = RUS_rovs_balance
+	add_power_balance_value = {
+		id = RUS_denikin_wrangel_conflict
+		value = 0.20
 			}
 		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_denikin }
-			swap_ideas = {
-				remove_idea = RUS_rovs_denikin
-				add_idea = RUS_rovs_balance
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { RUS_wrangel_influence_temp > RUS_denikin_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_denikin }
-			swap_ideas = {
-				remove_idea = RUS_rovs_denikin
-				add_idea = RUS_rovs_wrangel
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_balance }
-			swap_ideas = {
-				remove_idea = RUS_rovs_balance
-				add_idea = RUS_rovs_wrangel
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { RUS_wrangel_influence_temp < RUS_denikin_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_balance }
-			swap_ideas = {
-				remove_idea = RUS_rovs_balance
-				add_idea = RUS_rovs_denikin
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_wrangel }
-			swap_ideas = {
-				remove_idea = RUS_rovs_wrangel
-				add_idea = RUS_rovs_denikin
-			}
-		}
-	}
-	add_to_variable = { var = RUS.wrangel_influence value = 1 }
-	add_to_variable = { var = RUS.denikin_influence value = -1 }
-}
 RUS_calculate_expected_monarchy_referendum = {
 	set_temp_variable = { temp1 = RUS_monarchy_popular_support }
 	set_temp_variable = { temp2 = RUS_monarchy_candidate_legitimacy }
@@ -8580,578 +5642,7 @@ RUS_calculate_expected_monarchy_referendum = {
 		max = 1
 	}
 }
-bolsheviks_gome_home = {
-	custom_effect_tooltip = SOV_russian_generals_will_return
-	ENG = {
-		every_unit_leader = {
-			limit = {
-				has_trait = SOV_bolshevik_officer 
-				NOT = { has_id = 1955 }
-			}
-			remove_unit_leader_trait = SOV_bolshevik_officer
-			set_nationality = RUS
-		}
-	}
-	FRA = {
-		every_unit_leader = {
-			limit = {
-				has_trait = SOV_bolshevik_officer 
-				NOT = { has_id = 1954 }
-			}
-			remove_unit_leader_trait = SOV_bolshevik_officer
-			set_nationality = RUS
-		}
-	}
-	FOP = {
-		every_unit_leader = {
-			limit = {
-				has_trait = SOV_bolshevik_officer 
-			}
-			remove_unit_leader_trait = SOV_bolshevik_officer
-			set_nationality = RUS
-		}
-	}
-	every_unit_leader = {
-		limit = { has_id = 455 }
-		set_leader_portrait = GFX_Portrait_Soviet_Vasily_Chuikov
-	}
-	every_unit_leader = {
-		limit = { has_id = 17897 }
-		set_leader_portrait = GFX_Portrait_SOV_Semyon_Hitler
-	}
-}
-setup_soviet_russia = {
-	ROOT = { save_global_event_target_as = soviet_russia }
-	hidden_effect = {
-		set_cosmetic_tag = SOV
-		set_country_flag = soviet_russia_restored
-		set_country_flag = SOV_must_deal_with_opposition
-		load_focus_tree = Russia_Socialist
-		set_stability = 0.1
-		set_war_support = 0.4
-		set_country_flag = soc_dems_are_socialists
-		set_politics = {
-			ruling_party = radical_socialist
-			last_election = "1930.11.9"
-			election_frequency = 48
-			elections_allowed = no
-		}
-		remove_ideas = {
-			rus_divided_staff
-			rus_divided_staff1
-			rus_divided_staff2
-			rus_divided_staff3
-			rus_experienced_military
-			rus_divided_marine
-			rus_brest_litovsk
-			rus_memories_of_rev
-			rus_black_monday_duma_1
-			rus_black_monday_duma_2
-			rus_black_monday_duma_3
-			rus_black_monday_duma_4
-			rus_black_monday_duma_5
-			rus_black_monday_senate_1
-			rus_black_monday_senate_2
-			rus_black_monday_senate_3
-			rus_black_monday_senate_4
-			rus_black_monday_senate_5
-		}
-		set_popularities = {
-			totalist = 12
-			radical_socialist = 44
-			syndicalist = 24
-			social_democrat = 20
-			social_liberal = 0
-			market_liberal = 0
-			social_conservative = 0
-			authoritarian_democrat = 0
-			paternal_autocrat = 0
-			national_populist = 0
-		}
-		add_ideas = {
-			RUS_Aleksey_I_Rykov_hog_rso
-			RUS_Georgiy_M_Malenkov_for_rso
-			RUS_Nikolay_I_Bukharin_eco_syn
-			RUS_Mikhail_I_Kalinin_sec_rso
-		}
-		create_country_leader = {
-			name = "Grigory Zinoviev"
-			desc = "POLITICS_GRIGORY_ZINOVIEV_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Grigoriy_Zinoviev.png"
-			expire = "1965.1.1"
-			ideology = authcom_subtype
-			traits = {}
-		}
 
-		create_country_leader = {
-			name = "Maria Spiridonova"
-			desc = "POLITICS_MARIA_SPIRIDONOVA_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Maria_Spiridonova.png"
-			expire = "1965.1.1"
-			ideology = anarcho_syndicalist_subtype
-			female = yes
-			traits = {}
-		}
-
-		create_country_leader = {
-			name = "Nikolay Bukharin"
-			desc = "POLITICS_NIKOLAI_BUKHARIN_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Bukharin.png"
-			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
-			traits = {}
-		}
-
-		create_country_leader = {
-			name = "Rafail Abramovich"
-			desc = "POLITICS_RAFAIL_ABRAMOVICH_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Rafail_Abramovich.png"
-			expire = "1965.1.1"
-			ideology = social_democrat_subtype
-		}
-
-		every_country = {
-			limit = {
-				OR = {
-					tag = AST
-					tag = CAF
-					tag = CAN
-					tag = CAR
-					tag = COR
-					tag = FIN
-					tag = GER
-					tag = NFA
-					tag = SAF
-					tag = SPR
-					tag = TEX
-				}
-			}
-			add_opinion_modifier = {
-				modifier = embargo
-				target = SOV
-			}
-			reverse_add_opinion_modifier = {
-				modifier = embargo
-				target = SOV
-			}
-		}
-	}
-}
-setup_rcw_workers_initial = {
-	hidden_effect = {
-		set_country_flag = Mikhail_D_Bonch_Bruyevich_dead
-		set_country_flag = Nikolay_F_Vatutin_dead
-		set_country_flag = Nikolay_N_Dukhonin_dead
-		set_country_flag = Vasiliy_A_Kharlamov_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Anton_I_Denikin_dead
-		set_country_flag = Pyetr_N_Vrangel_dead
-		set_country_flag = Sergey_L_Markov_dead
-		set_country_flag = Ivan_P_Romanovskiy_dead
-		set_country_flag = Lavr_G_Kornilov_dead
-		set_country_flag = Mikhail_Drozdovskiy_dead
-		set_country_flag = Bronislav_V_Kaminski_dead
-		set_country_flag = Pavel_N_Shatilov_dead
-		set_country_flag = Vasiliy_V_Biskupskiy_dead
-		set_country_flag = Andrei_A_Vlasov_dead
-		set_country_flag = Nikolay_A_Lokhvitski_dead
-		set_country_flag = Dmitri_Pavlovich_Romanov_dead
-		set_country_flag = Aleksandr_Rodzyanko_dead
-		set_country_flag = Aleksey_P_Arkhangelskiy_dead
-		set_country_flag = Evgeniy_von_Rommel_dead
-		set_country_flag = Lavrentiy_Kornilov_dead
-		set_country_flag = Konstantin_P_Voskoboinik_dead
-		set_country_flag = Aleksandr_S_Antonov_dead
-		set_country_flag = Aleksandr_P_Kutepov_dead
-		set_country_flag = Evgeniy_K_Miller_dead
-		set_country_flag = Igor_I_Sikorskiy_dead
-		set_country_flag = Vyacheslav_Tkachov_dead
-		set_country_flag = Anton_V_Turkul_dead
-		set_country_flag = Aleksandr_I_Verkhovskiy_dead
-		set_country_flag = Vasiliy_Kanin_dead
-		set_country_flag = Dmitri_N_Verderevsky_dead
-		set_country_flag = Aleksandr_A_Kazakov_dead
-		ROOT = { save_global_event_target_as = soviet_russia }
-		set_stability = 0.1
-		set_war_support = 0.4
-		set_country_flag = soc_dems_are_socialists
-		remove_all_ministers = yes
-		set_politics = {
-			ruling_party = radical_socialist
-			elections_allowed = no
-		}
-		create_country_leader = {
-			name = "Revolutionary Workers"
-			desc = "POLITICS_REV_WORKERS_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Workers.png"
-			expire = "1965.1.1"
-			ideology = radical_socialist_subtype
-			traits = {}
-		}
-		set_party_name = {
-			ideology = radical_socialist
-			name = SOV_workers_rev
-			long_name = SOV_workers_rev_long
-		}
-		
-		set_political_party = {
-			ideology = national_populist
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = paternal_autocrat
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = authoritarian_democrat
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = market_liberal
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = social_conservative
-			popularity = 0
-		}
-		set_political_party = {
-			ideology = social_liberal
-			popularity = 0
-		}
-		every_unit_leader = {
-			limit = {
-				NOT = {
-					has_trait = hidden_sympathies
-				}
-			}
-			set_nationality = RVA
-		}
-		add_ideas = SOV_chaotic_revolution
-		country_lock_all_division_template = yes
-	}
-}
-initialize_rcw = {
-	hidden_effect = {
-		GER = {
-			country_event = {
-				id = rcw.24
-				days = 15
-			}
-		}
-		WHR = {
-			country_event = {
-				id = rcw.27
-				days = 10
-			}
-		}
-		ALO = {
-			country_event = {
-				id = rcw.32
-				days = 15
-			}
-		}
-	}
-	every_state = {
-		limit = {
-			is_siberia = yes
-			is_demilitarized_zone = yes
-			is_core_of = SIB
-		}
-		SIB = { transfer_state = PREV }
-		SIB = {
-			every_owned_state = {
-				limit = { is_demilitarized_zone = yes }
-				set_demilitarized_zone = no
-			}
-			country_event = {
-				id = rcw.212
-				days = 7
-			}
-		}
-	}
-	every_state = {
-		limit = {
-			is_demilitarized_zone = yes
-			is_core_of = RRF
-		}
-		RRF = { transfer_state = PREV }
-	}
-	hidden_effect = {
-		if = {
-			limit = {
-				event_target:soviet_russia = { exists = yes }
-			}
-			event_target:soviet_russia = { 
-				add_ideas = {
-					RCW_major
-					extensive_conscription
-					war_economy
-				}
-				if = {
-					limit = {
-						country_exists = RVA
-					}
-					declare_war_on = {
-						target = RVA
-						type = civil_war
-					}
-				}
-				if = {
-					limit = {
-						country_exists = RRF
-					}
-					declare_war_on = {
-						target = RRF
-						type = civil_war
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				country_exists = RUS
-			}
-			if = {
-				limit = {
-					country_exists = RVA
-				}
-				declare_war_on = {
-					target = RVA
-					type = civil_war
-				}
-			}
-			if = {
-				limit = {
-					country_exists = RRF
-				}
-				declare_war_on = {
-					target = RRF
-					type = civil_war
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = RCW_will_declare_war_on_TRM
-				}
-				declare_war_on = {
-					target = TRM
-					type = civil_war
-				}
-			}
-			set_country_flag = disable_duma
-			RUS = { 
-				add_ideas = {
-					RCW_major
-					extensive_conscription
-					war_economy
-				} 
-			}
-			if = {
-				limit = { RUS = { has_socialist_government = no } }
-				add_ideas = RCW_discredited_regime
-			}
-		}
-		if = {
-			limit = {
-				country_exists = RVA
-			}
-			RVA = { 
-				add_ideas = {
-					RCW_major
-					extensive_conscription
-					war_economy
-				} 
-				if = {
-					limit = {
-						event_target:soviet_russia = { exists = yes }
-					}
-					declare_war_on = {
-						target = event_target:soviet_russia
-						type = civil_war
-					}
-				}
-				if = {
-					limit = {
-						country_exists = RUS
-					}
-					declare_war_on = {
-						target = RUS
-						type = civil_war
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_global_flag = RRF_RVA_ceasefire }
-						country_exists = RRF
-					}
-					declare_war_on = {
-						target = RRF
-						type = civil_war
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = RCW_will_declare_war_on_TRM
-					}
-					declare_war_on = {
-						target = TRM
-						type = civil_war
-					}
-				}
-			}
-			for_each_scope_loop = {
-				array = RUS.RUS_starting_states_array
-				add_claim_by = RVA
-			}
-		}
-		if = {
-			limit = {
-				country_exists = RRF
-			}
-			RRF = {  
-				add_ideas = {
-					RCW_major
-					extensive_conscription
-					war_economy
-				} 
-				if = {
-					limit = {
-						event_target:soviet_russia = { exists = yes }
-					}
-					declare_war_on = {
-						target = event_target:soviet_russia
-						type = civil_war
-					}
-				}
-				if = {
-					limit = {
-						country_exists = RUS
-					}
-					declare_war_on = {
-						target = RUS
-						type = civil_war
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_global_flag = RRF_RVA_ceasefire }
-						country_exists = RVA
-					}
-					declare_war_on = {
-						target = RVA
-						type = civil_war
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = RCW_will_declare_war_on_TRM
-					}
-					declare_war_on = {
-						target = TRM
-						type = civil_war
-					}
-				}
-			}
-			for_each_scope_loop = {
-				array = RUS.RUS_starting_states_array
-				add_claim_by = RRF
-			}
-		}
-		if = {
-			limit = {
-				country_exists = DKB
-				DKB = { 
-					OR = {
-						has_country_flag = RCW_will_intervene
-						is_in_faction_with = RVA
-						is_in_faction_with = RUS
-					}
-				}
-			}
-			DKB = {
-				if = {
-					limit = {
-						NOT = { is_in_faction_with = RUS }
-					}
-					declare_war_on = {
-						target = RUS
-						type = civil_war
-					}
-				}
-				if = {
-					limit = {
-						NOT = { is_in_faction_with = RVA }
-					}
-					declare_war_on = {
-						target = RVA
-						type = civil_war
-					}
-				}				
-				declare_war_on = {
-					target = event_target:soviet_russia
-					type = civil_war
-				}
-				declare_war_on = {
-					target = RRF
-					type = civil_war
-				}
-				add_ideas = RCW_minor
-			}
-		}
-		if = {
-			limit = {
-				country_exists = KUB
-				KUB = { 
-					OR = {
-						has_country_flag = RCW_will_intervene
-						is_in_faction_with = RVA
-					}
-				}
-			}
-			KUB = {
-				declare_war_on = {
-					target = RUS
-					type = civil_war
-				}
-				declare_war_on = {
-					target = event_target:soviet_russia
-					type = civil_war
-				}
-				declare_war_on = {
-					target = RRF
-					type = civil_war
-				}
-				add_ideas = RCW_minor
-			}
-		}
-		if = {
-			limit = {
-				country_exists = ALO
-				ALO = { 
-					OR = {
-						has_country_flag = RCW_will_intervene
-						is_in_faction_with = RVA
-					}
-				}
-			}
-			ALO = {
-				declare_war_on = {
-					target = RUS
-					type = civil_war
-				}
-				declare_war_on = {
-					target = event_target:soviet_russia
-					type = civil_war
-				}
-				declare_war_on = {
-					target = RRF
-					type = civil_war
-				}
-				add_ideas = RCW_minor
-			}
-		}
-	}
-}
 setup_kerensky_variables = {
 	set_variable = { kerensky_endurance_regime = 26 } #min is 0, max is 100
 	set_variable = { kerensky_endurance_coalition = 60 } #min is 0, max is 100
@@ -9233,14 +5724,32 @@ setup_bjorko_pact = {
 					}
 				}
 			}
+			activate_targeted_decision = { target = DKB decision = RUS_Attack_Cossacks }
+			activate_targeted_decision = { target = KUB decision = RUS_Attack_Cossacks }
+			activate_targeted_decision = { target = KLY decision = RUS_Attack_Cossacks }			
+			activate_targeted_decision = { target = MTR decision = RUS_Attack_Caucasus }
+			activate_targeted_decision = { target = AZE decision = RUS_Attack_Caucasus }
+			activate_targeted_decision = { target = GEO decision = RUS_Attack_Caucasus }
+			activate_targeted_decision = { target = MTR decision = RUS_Attack_Caucasus }			
+			if = {
+				limit = { country_exists = ABK }
+				activate_targeted_decision = { target = ABK decision = RUS_Attack_Caucasus }			
+			}
+			if = {
+				limit = { has_completed_focus = RUS_Expansionism }
+				unlock_decision_tooltip = RUS_Claim_Greater_Armenia
+			}
+			hidden_effect = {
+				activate_targeted_decision = { target = DAG decision = RUS_Attack_Caucasus }			
+			}
 		}
 		hidden_effect = {
 			if = {
 				limit = {
-					country_exists = OTT
-					OTT = { is_subject = no }
+					country_exists = TUR
+					TUR = { is_subject = no }
 				}
-				OTT = { 
+				TUR = { 
 					country_event = {
 						id = ottfor.51 
 						days = 1
@@ -9318,14 +5827,17 @@ setup_bjorko_pact = {
 					}
 				}
 			}
+			activate_targeted_decision = { target = DKB decision = RUS_Attack_Cossacks }
+			activate_targeted_decision = { target = KUB decision = RUS_Attack_Cossacks }
+			activate_targeted_decision = { target = KLY decision = RUS_Attack_Cossacks }			
 		}
 		hidden_effect = {
 			if = {
 				limit = {
-					country_exists = OTT
-					OTT = { is_subject = no }
+					country_exists = TUR
+					TUR = { is_subject = no }
 				}
-				OTT = { 
+				TUR = { 
 					country_event = {
 						id = ottfor.51 
 						days = 1
@@ -9405,20 +5917,9 @@ setup_bjorko_pact = {
 		hidden_effect = {
 			every_state = {
 				limit = {
-					OR = {
-						state = 196
-						state = 227
-						state = 200
-						state = 221
-						state = 1237
-						state = 1243
-						state = 1242
-						state = 1230
-						state = 228
-						state = 137
-						state = 1220
-						state = 1221
-					}
+					is_russian_majority_in_ukraine = yes
+					is_east_ukrainian_state = yes
+					is_owned_by = UKR
 				}
 				ROOT = { transfer_state = PREV }
 			}		
@@ -9432,20 +5933,9 @@ setup_bjorko_pact = {
 		hidden_effect = {
 			every_state = {
 				limit = {
-					OR = {
-						state = 196
-						state = 227
-						state = 200
-						state = 221
-						state = 1237
-						state = 1243
-						state = 1242
-						state = 1230
-						state = 228
-						state = 137
-						state = 1220
-						state = 1221
-					}
+					is_russian_majority_in_ukraine = yes
+					is_east_ukrainian_state = yes
+					is_owned_by = UKR
 				}
 				ROOT = { add_state_claim = PREV }
 			}
@@ -9464,6 +5954,194 @@ setup_bjorko_pact = {
 		}		
 	}	
 }
+setup_vilnius_accords = {
+	set_global_flag = vilnius_accords_active
+	# free all puppets 
+	every_country = {
+		limit = {
+			is_subject_of = RUS
+		}
+		RUS = {
+			set_autonomy = { target = PREV autonomy_state = autonomy_free }
+		}
+	}	
+	
+	# dissolve the Reichspakt
+	every_other_country = {
+		limit = {
+			OR = {
+				is_in_faction_with = RUS
+				is_subject_of = RUS
+			}
+		}
+		set_country_flag = former_moscow_accord_member
+	}
+	dismantle_faction = yes
+
+	# give Moscow Accord members military access to each other
+	every_country = {
+		limit = {
+			has_country_flag = former_moscow_accord_member
+			has_capitulated = no
+		}
+		every_country = {
+			limit = {
+				has_country_flag = former_moscow_accord_member
+				has_capitulated = no
+				NOT = { tag = PREV }
+			}
+			give_military_access = PREV
+		}
+	}
+	every_other_country = {
+		limit = {
+			OR = {
+				tag = WHR
+				tag = LIT
+				tag = UKR
+				tag = DKB
+				tag = KUB
+				tag = GEO
+				tag = AZE
+			}
+			exists = no
+		}
+		release = PREV
+		GER = {
+			annex_country = {
+				target = PREV
+			}
+		}
+	}
+	every_other_country = {
+		limit = {
+			OR = {
+				tag = ARM
+				tag = MTR
+			}
+			exists = no
+		}
+		release = PREV
+		if = {
+			limit = {
+				TUR = { has_war_with = ROOT }
+			}
+			TUR = {
+				annex_country = {
+					target = PREV
+				}
+			}
+		}
+		else = {
+			GER = {
+				annex_country = {
+					target = PREV
+				}
+			}
+		}
+	}
+	set_temp_variable = { tag_to_release = 12.owner }
+	880 = { transfer_state_and_add_core = yes }
+	if = {
+		limit = {
+			FIN = { has_war_with = ROOT }
+			FIN = { NOT = { has_completed_focus = FIN_diplomacy } }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = FIN
+					is_claimed_by = FIN
+					state = 146 #Viipuri
+					state = 147 #Kuolajarvi
+					state = 213 #Murmansk
+					state = 215 #Kem
+					state = 216 #Petrozavodsk
+					state = 722 #Petsamo
+				}
+			}
+			FIN = { transfer_state = PREV }
+		}
+	}
+	every_owned_state = {
+		limit = {
+			OR = {
+				is_core_of = UKR
+				is_claimed_by = UKR
+				state = 240
+				state = 821
+			}
+		}
+		UKR = { 
+			add_state_claim = PREV
+			transfer_state = PREV
+		}
+	}
+	every_owned_state = {
+		limit = {
+			OR = {
+				is_core_of = WHR
+				is_claimed_by = WHR
+				state = 755
+				state = 242
+				state = 243
+				state = 210
+				state = 1292
+				state = 1287
+			}
+		}
+		WHR = { 
+			add_state_claim = PREV
+			transfer_state = PREV
+		}
+	}
+	217 = { add_claim_by = DKB }
+		
+	save_event_target_as = peace_country
+	every_enemy_country = {
+		limit = {
+			OR = {
+				tag = GER
+				tag = AUS
+				tag = TUR
+			}
+		}
+		event_target:peace_country = { white_peace = PREV }
+	}
+	every_enemy_country = {
+		limit = {
+			OR = {
+				is_in_faction_with = GER
+				is_in_faction_with = AUS
+				is_in_faction_with = TUR
+			}
+		}
+		event_target:peace_country = { white_peace = PREV }
+	}
+	every_enemy_country = {
+		limit = {
+			OR = {
+				is_subject_of = GER
+				is_subject_of = AUS
+				is_subject_of = TUR
+			}
+		}
+		event_target:peace_country = { white_peace = PREV }
+	}
+	every_enemy_country = {
+		limit = {
+			is_in_asia = no
+		}
+		event_target:peace_country = { white_peace = PREV }
+	}
+	#RUS = {
+	#	country_event = {
+	#		id = rcw.250
+	#		days = 120
+	#	}
+	#}
+}
+
 setup_danzig_treaty = {
 	set_global_flag = danzig_treaty_active
 	every_other_country = {
@@ -9565,12 +6243,15 @@ setup_danzig_treaty = {
 		GER = {
 			5 = {
 				set_demilitarized_zone = yes
+				add_dynamic_modifier = { modifier = RUS_demanded_demil_modifier }
 			}
 			188 = {
 				set_demilitarized_zone = yes
+				add_dynamic_modifier = { modifier = RUS_demanded_demil_modifier }
 			}
 			777 = {
 				set_demilitarized_zone = yes
+				add_dynamic_modifier = { modifier = RUS_demanded_demil_modifier }
 			}
 		}
 	}
@@ -9582,6 +6263,10 @@ setup_danzig_treaty = {
 			transfer_state = 5
 			transfer_state = 188
 			transfer_state = 777
+			country_event = {
+				id = part.138
+				days = 5
+			}
 		}
 	}
 }
@@ -9598,8 +6283,8 @@ setup_yerevan_treaty = {
 				tag = CRM
 			}
 			OR = {
-				is_in_faction_with = OTT
-				is_subject_of = OTT
+				is_in_faction_with = TUR
+				is_subject_of = TUR
 			}
 			OR = {
 				exists = no
@@ -9623,8 +6308,8 @@ setup_yerevan_treaty = {
 			limit = {
 				tag = ARM
 				OR = {
-					is_in_faction_with = OTT
-					is_subject_of = OTT
+					is_in_faction_with = TUR
+					is_subject_of = TUR
 				}
 				OR = {
 					exists = no
@@ -9645,7 +6330,7 @@ setup_yerevan_treaty = {
 			}
 			BUL = { transfer_state = 341 }
 		}
-		OTT = {
+		TUR = {
 			diplomatic_relation = {
 				country = ROOT
 				relation = non_aggression_pact
@@ -9694,8 +6379,8 @@ setup_yerevan_treaty = {
 			limit = {
 				PER = {
 					OR = {
-						is_in_faction_with = OTT
-						is_subject_of = OTT
+						is_in_faction_with = TUR
+						is_subject_of = TUR
 					}
 				}
 			}
@@ -9716,20 +6401,20 @@ setup_yerevan_treaty = {
 	#recheck if OTT is in RSP and kick it
 	if = {
 		limit = {
-			OTT = { is_in_faction_with = GER }
+			TUR = { is_in_faction_with = GER }
 		}
 		leave_faction = yes
 	}
 	save_event_target_as = peace_country
 	every_enemy_country = {
 		limit = {
-			tag = OTT
+			tag = TUR
 		}
 		event_target:peace_country = { white_peace = PREV }
 	}
 	every_enemy_country = {
 		limit = {
-			is_subject_of = OTT
+			is_subject_of = TUR
 		}
 		event_target:peace_country = { white_peace = PREV }
 	}	
@@ -9885,4 +6570,969 @@ setup_budapest_treaty = {
 		AUS = { release = ROM }
 	}	
 }
-	
+load_base_russian_tree = {
+	load_focus_tree = russia_focus
+	clr_country_flag = make_absolute_monarchy_tree_visible
+	clr_country_flag = make_kerensky_tree_visible	
+	clr_country_flag = make_russia_plsr_nsp_democratic_tree_visible
+	clr_country_flag = make_russia_rsdrp_democratic_tree_visible
+	clr_country_flag = make_russia_psr_democratic_tree_visible
+	clr_country_flag = make_russia_liberal_conservative_democratic_tree_visible
+	clr_country_flag = make_russia_nrpr_democratic_tree_visible
+	clr_country_flag = make_russia_nsnp_democratic_tree_visible
+	clr_country_flag = make_russian_junta_tree_visible	
+	clr_country_flag = make_savinkov_tree_visible	
+	clr_country_flag = make_savinkov_successors_tree_visible	
+	mark_focus_tree_layout_dirty = yes
+}
+remove_all_russian_cores = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = RUS
+				is_claimed_by = RUS
+				is_core_of = TRM
+				is_claimed_by = TRM
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = RUS } }
+			remove_core_of = RUS
+			remove_claim_by = RUS
+		}
+		if = {
+			limit = { NOT = { country_exists = TRM } }
+			remove_core_of = TRM
+			remove_claim_by = TRM
+		}
+		if = {
+			limit = { NOT = { country_exists = SIB } }
+			remove_core_of = SIB
+			remove_claim_by = SIB
+		}
+		for_each_scope_loop = {
+			array = RUS.RUS_starting_states_array
+			add_core_of = var:tag_to_release
+		}
+	}
+}
+RUS_puppet_setup = {
+	var:tag_to_release = {
+		if = {
+			limit = { tag = RUS }
+			drop_cosmetic_tag = yes
+			reset_russian_leaders = yes
+			load_base_russian_tree = yes
+			set_country_flag = nrpr_banned
+			clr_country_flag = nsnp_banned
+			set_country_flag = RUS_NRPR_is_bankrupt
+			clr_country_flag = RUS_SAVI
+			clr_country_flag = RUS_JUNTA		
+			clr_country_flag = RUS_democracy
+			clr_country_flag = RUS_dictatorship
+			clr_country_flag = RUS_VRA_TSAR
+			clr_country_flag = RUS_DEN_MIL
+			clr_country_flag = RUS_monarchy
+			clr_country_flag = RUS_monarchy_restored
+			clr_country_flag = rnsma_evolves
+			clr_country_flag = DM_Senate_Success1
+			clr_country_flag = DM_Senate_Success2
+			clr_country_flag = DM_Senate_Success3
+			clr_country_flag = DM_Senate_failed1
+			clr_country_flag = DM_Senate_failed2
+			clr_country_flag = DM_Senate_failed3
+			clr_country_flag = RUS_PUR
+			clr_country_flag = RUS_CLE
+			clr_country_flag = RUS_VRA
+			clr_country_flag = RUS_DEN
+			clr_country_flag = RUS_yakov_fishman_added
+			clr_country_flag = SOV_Troika_power_struggle
+			clr_country_flag = RUS_DROZ
+			clr_country_flag = Droz_Monarchist_Path
+			clr_country_flag = Droz_Regiment_Path
+			clr_country_flag = RUS_KER
+			clr_country_flag = RUS_KER_DICT
+			clr_country_flag = RUS_KRSKY_LIVES
+			clr_country_flag = PORTRAIT_PICKER_ACTIVE
+			clr_country_flag = RUS_SEN
+			clr_country_flag = RUS_GOR_ALIVE
+			clr_country_flag = RUS_TERROR
+			clr_country_flag = RUS_GORGULOV
+			clr_country_flag = RUS_GORGULOV
+			clr_country_flag = RUS_ABAKUMOV
+			clr_country_flag = snap_elections
+			clr_country_flag = bolsheviks_allowed
+			clr_country_flag = unlock_foreign
+			clr_country_flag = RUS_DPROM
+			clr_country_flag = rus_socialists
+			set_country_flag = psr_banned
+			set_country_flag = psr_dissolved
+			set_country_flag = rus_president_elections_1936_over
+			set_country_flag = ep_banned
+			set_country_flag = bolsheviks_banned
+			set_country_flag = savinkov_dead
+			set_country_flag = Lavr_G_Kornilov_dead
+			set_country_flag = Kirill_Romanov_dead
+			set_country_flag = RUS_Purishkevich_dead
+			set_country_flag = Dmitri_Pavlovich_Romanov_dead
+			remove_kornilov_idea = yes
+			RUS_clear_all_coalitions = yes
+			if = {
+				limit = { NOT = { has_country_flag = disable_duma } }
+				set_country_flag = disable_duma
+			}
+			if = {
+				limit = {
+					ROOT = { 
+						is_germany_or_splinter_tag = yes 
+						has_authoritarian_government = yes
+					}
+				}
+				create_country_leader = {
+					name = "Pavel Bermondt-Avalov"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Pavel_Bermondt_Avalov.png"
+					expire = "1965.1.1"
+					ideology = junta_subtype
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+					elections_allowed = no
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = MON
+						has_completed_focus = MON_bow_to_none
+					}
+				}
+				create_country_leader = {
+					name = "Vladimir Kappel"
+					desc = "POLITICS_VLADIMIR_KAPPEL_DESC"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Kappel.png"
+					expire = "1965.1.1"
+					ideology = junta_subtype
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+					elections_allowed = no
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { has_socialist_government = yes }
+				}
+				setup_soviet_russia = yes
+				set_country_flag = SOV_was_puppeted
+				set_country_flag = unlock_congress_sov
+				set_country_flag = Nikolay_I_Bukharin_dead
+				create_country_leader = {
+					name = "Congress of Soviets"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Sovnarkom.png"
+					expire = "1965.1.1"
+					ideology = radsoc_communism_subtype
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { has_government = authoritarian_democrat }
+				}
+				set_country_flag = DM_Can_Empower_Senate
+				create_country_leader = {
+					name = "Felix Yusupov"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Felix_Yusupov.png"
+					expire = "1965.1.1"
+					ideology = oligarchy_subtype
+					traits = { RUS_autocratic_charmer }
+				}
+				set_country_flag = RUS_conservative_block_exists
+				set_party_name = {
+					ideology = authoritarian_democrat
+					long_name = RUS_dmitry_party_long
+					name = RUS_dmitry_party
+				}
+				set_party_name = {
+					ideology = social_conservative
+					long_name = RUS_dmitry_party_long
+					name = RUS_dmitry_party
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					long_name = RUS_dmitry_party_long
+					name = RUS_dmitry_party
+				}
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { has_government = paternal_autocrat }
+				}
+				set_country_flag = RUS_DEN_MIL
+				create_country_leader = {
+					name = "Anton Denikin"
+					desc = "POLITICS_ANTON_DENIKIN_DESC"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Anton_Denikin.png"
+					expire = "1965.1.1"
+					ideology = junta_subtype
+				}
+				add_country_leader_trait = supreme_ruler
+				set_politics = {
+					ruling_party = paternal_autocrat
+					elections_allowed = no
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = RUS_denikin_party
+					long_name = RUS_denikin_party
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { has_government = national_populist }
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = RUS_solidarist_party_long
+					name = RUS_solidarist_party
+				}
+				create_country_leader = {
+					name = "Viktor Baydalakov"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Viktor_Baydalakov.png"
+					expire = "1965.1.1"
+					ideology = solidarism_subtype
+				}
+				remove_all_ministers = yes
+				add_ideas = {
+					RUS_Viktor_M_Baydalakov_hog_npo
+					RUS_Aleksey_N_Tolstoy_for_npo
+					RUS_Arkadiy_P_Stolypin_eco_npo
+					RUS_Anatoliy_MacReady_Stenroos_sec_npo
+				}
+				set_politics = {
+					ruling_party = national_populist
+					elections_allowed = yes
+				}
+			}			
+			else_if = {
+				limit = {
+					ROOT = { has_elected_government = yes }
+				}
+				clr_country_flag = rsdrp_banned
+				clr_country_flag = rsdrp_dissolved
+				set_party_name = {
+					ideology = social_democrat
+					name = RUS_social_democrat_party
+					long_name = RUS_social_democrat_party_long
+				}
+				set_country_flag = RUS_marlibs_progressives
+				set_party_name = {
+					ideology = market_liberal
+					name = RUS_progressive_party
+					long_name = RUS_progressive_party_long
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = RUS_solidarist_party_long
+					name = RUS_solidarist_party
+				}
+				meta_effect = {
+					text = {
+						create_country_leader = {
+							name = "The Senate"
+							desc = "POLITICS_SENATE_DESC"
+							picture = "gfx/leaders/RUS/Portrait_RUS_The_Senate.png"
+							expire = "1965.1.1"
+							ideology = [OVERLORD_IDEOLOGY]
+						}
+					}
+					OVERLORD_IDEOLOGY = "[ROOT.GetRulingIdeologySubtype]"
+				}
+				set_politics = {
+					ruling_party = var:current_party_ideology_group
+					elections_allowed = no
+				}
+			}			
+			if = {
+				limit = {
+					219 = { #Moscow
+						is_owned_and_controlled_by = PREV
+						is_capital = no
+					}
+				}
+				set_capital = { state = 219 remember_old_capital = no }
+			}
+		}
+		else_if = {
+			limit = { tag = TRM }
+			if = {
+				limit = { ROOT = { tag = JAP } }
+				remove_ideas = TRM_anti_kolchak
+				remove_ideas = TRM_kolchak
+				clr_country_flag = TRM_Kolchak_alive
+				clr_country_flag = TRM_Dem_coup
+				clr_country_flag = TRM_Mil_coup
+				clr_country_flag = TRM_Moryaki_Coup
+				set_country_flag = TRM_Semyonov_Coup
+				remove_ideas = TRM_dream
+				create_country_leader = {
+					name = "Grigoriy Semyenov"
+					desc = "POLITICS_SEMYONOV_DESC"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Grigory_Semyonov.png"
+					expire = "1965.1.1"
+					ideology = pataut_cossack_subtype
+				}
+				hidden_effect = {
+					set_politics = {
+						ruling_party = paternal_autocrat
+					}
+					remove_all_ministers = yes
+					add_ideas = TRM_Grigoriy_M_Semyenov_hog_pau
+					add_ideas = TRM_Boris_Bakhmetev_for_ade
+					add_ideas = SIB_Ivan_Adrianovich_Mikhailov_hog_sco
+					add_ideas = TRM_Arkady_Udintsev_sec_pau
+					set_popularities = {
+						totalist = 2
+						radical_socialist = 0
+						syndicalist = 0
+						social_democrat = 2
+						social_liberal = 11
+						market_liberal = 4
+						social_conservative = 7
+						authoritarian_democrat = 30
+						paternal_autocrat = 41
+						national_populist = 3
+					}
+					set_party_name = {
+						ideology = paternal_autocrat
+						long_name = TRM_semyonov_party_long
+						name = TRM_semyonov_party
+					}
+				}
+			}
+		}
+	}
+}
+launch_russian_flavour = {
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 450
+		max = 800
+	}
+	country_event = {
+		id = rusdem.111
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 500
+		max = 850
+	}
+	country_event = {
+		id = rusdem.112
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 550
+		max = 900
+	}
+	country_event = {
+		id = rusdem.113
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 300
+		max = 500
+	}
+	country_event = {
+		id = rusdem.114
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 350
+		max = 600
+	}
+	country_event = {
+		id = rusdem.115
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 650
+		max = 1050
+	}
+	country_event = {
+		id = rusdem.116
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 650
+		max = 1500
+	}
+	country_event = {
+		id = rusdem.118
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 365
+		max = 485
+	}
+	country_event = {
+		id = rusdem.119
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 800
+		max = 1200
+	}
+	country_event = {
+		id = rusdem.120
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 800
+		max = 1200
+	}
+	country_event = {
+		id = rusdem.121
+		days = RUS_flavour_event_days
+	}
+	set_temp_variable_to_random = {
+		var = RUS_flavour_event_days
+		min = 700
+		max = 1700
+	}
+	country_event = {
+		id = rusdem.122
+		days = RUS_flavour_event_days
+	}
+}
+RUSSIAN_UNIFICATION_play_superevent = {
+	custom_effect_tooltip = RUS_superevent_trigger_tt
+	if = {
+		limit = {
+			has_idea = RUS_Nikolay_I_Bukharin_hog_syn
+			NOT = {
+				has_country_leader = {
+					name = "Lev Kamenev"
+					ruling_only = yes
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_nsp
+		hidden_effect = { country_event = super.55 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_country_leader = {
+					name = "Maria Spiridonova"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Boris Kamkov"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Isaak Shteinberg"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Vladimir Trutovsky"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Vladimir Karelin"
+					ruling_only = yes
+				}
+			}
+			NOT = {
+				has_country_leader = {
+					name = "Lev Kamenev"
+					ruling_only = yes
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_plsr
+		hidden_effect = { country_event = super.56 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_idea = RUS_Yakov_Fishman_hog_tot
+				has_country_leader = {
+					name = "Yakov Fishman"
+					ruling_only = yes
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_fishman
+		hidden_effect = { country_event = super.100 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_country_leader = {
+					name = "Mikhail Tomsky"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Aleksandr Shliapnikov"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Aleksandra Kollontai"
+					ruling_only = yes
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_tomsky
+		hidden_effect = { country_event = super.96 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Sergey Kirov"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_kirov
+		hidden_effect = { country_event = super.97 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Aleksey Rykov"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_rykov
+		hidden_effect = { country_event = super.98 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Andrei Zhdanov"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_zhdanov
+		hidden_effect = { country_event = super.99 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Grigory Zinoviev"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_zinoviev
+		hidden_effect = { country_event = super.57 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Lev Kamenev"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_kamenev
+		hidden_effect = { country_event = super.58 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Nikolay Yezhov"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_yezhov
+		hidden_effect = { country_event = super.59 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_idea = SOV_Georgy_Blagonravov_hog_tot
+				has_idea = SOV_Genrikh_Yagoda_hog_tot
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_yagoda
+		hidden_effect = { country_event = super.60 }
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = SOV_Chairman_Krestinsky
+			has_idea = SOV_Nikolay_Krestinsky_hog_tot
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_kaganovich
+		hidden_effect = { country_event = super.61 }
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = SOV_Chairman_Molotov
+			has_idea = SOV_Vyacheslav_Molotov_hog_tot
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_molotov
+		hidden_effect = { country_event = super.62 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_completed_focus = SOV_Chairman_Mayakovsky
+				has_completed_focus = SOV_Chairman_Gastev
+				has_completed_focus = SOV_Chairman_Lunacharsky
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_proletkultists
+		hidden_effect = { country_event = super.63 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_completed_focus = SOV_Chairman_Sokolnikov
+				has_completed_focus = SOV_Chairman_Chicherin
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_sokolnikov
+		hidden_effect = { country_event = super.64 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Georgy Zhukov"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_zhukov
+		hidden_effect = { country_event = super.65 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Mikhail Frunze"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_frunze
+		hidden_effect = { country_event = super.66 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Mikhail Tukhachevsky"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_tukhachevsky
+		hidden_effect = { country_event = super.67 }
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_Rafail_Abramovich_hog_sde
+			NOT = {
+				has_country_leader = {
+					name = "Lev Kamenev"
+					ruling_only = yes
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_rsrpi
+		hidden_effect = { country_event = super.92 }
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_Vladimir_K_Volsky_hog_rso
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_centroleft_psr
+		hidden_effect = { country_event = super.94 }
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = SOV_Tsentrobalt_In_Control
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_ancom
+		hidden_effect = { country_event = super.84 }
+	}	
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Grigoriy Semyenov"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_semyonov
+		hidden_effect = { country_event = super.93 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = TRM_NRA_coup
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_nra
+		hidden_effect = { country_event = super.68 }
+	}
+	else_if = {
+		limit = {
+			tag = TRM
+			has_democratic_government = yes
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_transamur_democrats
+		hidden_effect = { country_event = super.69 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "Aleksandr Kolchak"
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_kolchak
+		hidden_effect = { country_event = super.70 }
+	}
+	else_if = {
+		limit = {
+			tag = TRM
+			RUS_russian_monarch = yes
+			has_socialist_government = no
+			NOT = { has_government = national_populist }
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_trm_monarchy
+		hidden_effect = { country_event = super.86 }
+	}
+	else_if = {
+		limit = {
+			tag = TRM
+			RUS_russian_monarch = yes
+			has_government = totalist
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_mlad
+		hidden_effect = { country_event = super.89 }
+	}
+	else_if = {
+		limit = {
+			tag = TRM
+			RUS_russian_monarch = yes
+			has_government = national_populist
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_natsi
+		hidden_effect = { country_event = super.91 }
+	}
+	else_if = {
+		limit = {
+			nsnp_in_power = yes
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_solidarists
+		hidden_effect = { country_event = super.72 }
+	}
+	else_if = {
+		limit = {
+			RUS_savinkov_in_power = yes
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_savinkov
+		hidden_effect = { country_event = super.73 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_cosmetic_tag = RUS_EUR
+				has_cosmetic_tag = RUS_EUR_bolshevist
+				has_cosmetic_tag = RUS_EUR_national_maximalist
+				has_cosmetic_tag = RUS_EUR_empire
+			}	
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_eurasianists
+		hidden_effect = { country_event = super.74 }
+	}
+	else_if = {
+		limit = {
+			RUS_russian_monarch = yes
+			RUS_wrangel_tsar_in_power = no
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_monarchy
+		hidden_effect = { country_event = super.75 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				RUS_wrangel_in_power = yes
+				RUS_wrangel_tsar_in_power = yes
+			}
+		}			
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_vrangel
+		hidden_effect = { country_event = super.76 }
+	}
+	else_if = {
+		limit = {
+			RUS_kornilov_in_power = yes
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_kornilov
+		hidden_effect = { country_event = super.77 }
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_Vladimir_M_Zenzinov_hog_sde
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Alexandr Kerensky"
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_psr
+		hidden_effect = { country_event = super.78 }
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_Irakliy_G_Tsereteli_hog_sde
+			NOT = {
+				has_country_leader = {
+					name = "Lev Kamenev"
+					ruling_only = yes
+				}
+			}
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Alexandr Kerensky"
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_mensheviks
+		hidden_effect = { country_event = super.79 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_government = market_liberal
+				has_idea = RUS_Vladimir_D_Nabokov_hog_mli
+				has_idea = RUS_Aleksandr_I_Konovalov_hog_mli
+			}
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Alexandr Kerensky"
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_kadets
+		hidden_effect = { country_event = super.80 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_government = social_liberal
+				has_idea = RUS_Pavel_N_Milyukov_hog_mli
+				has_idea = RUS_Nikolay_V_Nekrasov_hog_sli
+			}
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Alexandr Kerensky"
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_left_kadets
+		hidden_effect = { country_event = super.95 }
+	}
+	else_if = {
+		limit = {
+			vns_in_power = yes
+			RUS_russian_monarch = no
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_senate
+		hidden_effect = { country_event = super.81 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Alexandr Kerensky"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_kerensky
+		hidden_effect = { country_event = super.82 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_country_leader = {
+					name = "Pavel Gorgulov"
+					ruling_only = yes
+				}
+				has_country_flag = RUS_GORGULOV
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_gorgulov
+		hidden_effect = { country_event = super.85 }
+	}
+	else_if = {
+		limit = {
+			RUS_denikin_in_power = yes
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_denikin
+		hidden_effect = { country_event = super.88 }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Mikhail Drozdovsky"
+				ruling_only = yes
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_drozd
+		hidden_effect = { country_event = super.102 }
+	}
+	else_if = {
+		limit = {
+			tag = MON
+			MON_sternberg_in_power = yes
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_shteinberg
+		hidden_effect = { country_event = super.83 }
+	}
+	else_if = {
+		limit = {
+			tag = DKB
+			has_socialist_government = no
+			NOT = {
+				OR = {
+					has_completed_focus = DKB_the_foreigners_coup
+					has_completed_focus = DKB_KONR_in_Power
+				}
+			}
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_cossacks
+		hidden_effect = { country_event = super.71 }
+	} 
+	else_if = {
+		limit = {
+			has_completed_focus = DKB_the_foreigners_coup
+		}
+		custom_effect_tooltip = GFX_SPEVNT_German_Russia
+		hidden_effect = { country_event =  super.105 }
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = DKB_KONR_in_Power
+		}
+		custom_effect_tooltip = GFX_SPEVNT_Vlasov_Russia
+		hidden_effect = { country_event =  super.106 }
+	}
+	else_if = {
+		limit = {
+			tag = DKB
+			has_socialist_government = yes
+		}
+		custom_effect_tooltip = GFX_SPEVNT_RUSSIAN_UNIFICATION_red_cossacks
+		hidden_effect = { country_event = super.87 }
+	}
+	custom_effect_tooltip = RUS_superevent_trigger_colour_ends
+}

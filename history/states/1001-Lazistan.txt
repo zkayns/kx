@@ -1,15 +1,12 @@
 state = {
 	id = 1001
 	name = "STATE_1001"
-	manpower = 200000
+	manpower = 278048
 
 	state_category = one
 
 	history = {
-		owner = OTT
-		victory_points = {
-			10403 2
-		}
+		owner = TUR
 
 		victory_points = {
 			11753 1
@@ -18,30 +15,17 @@ state = {
 		buildings = {
 			infrastructure = 3
 
-			7454 = {
-				bunker = 2
-			}
-
 			11753 = {
 				bunker = 1
 			}
 
-			10403 = {
-				bunker = 2
-			}
-
-			13671 = {
-				bunker = 1
-			}
-
-			789 = {
-				bunker = 1
-			}
+			
+			
 		}
-		add_core_of = OTT
+		add_core_of = TUR
 	}
 
 	provinces = {
-		3714 7454 11753 10403 13671 789 6976
+		3714 11753
 	}
 }

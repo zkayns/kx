@@ -44,7 +44,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_kurt_von_schleichers_chancellorship"
-		  country_event = { id = ger_schleicher.1 days = 0 }
+		country_event = { id = ger_schleicher.1 days = 0 }
 			custom_effect_tooltip = GER_kurt_the_kanzler
 			hidden_effect = {
 										add_ideas = GER_Reichsreformplan_1
@@ -151,7 +151,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_influence_the_reichstag"
 			add_political_power = -50
-		  country_event = { id = ger_schleicher.2 days = 0 }
+		country_event = { id = ger_schleicher.2 days = 0 }
 			custom_effect_tooltip = GER_Reichsreformplan_Progress
 			hidden_effect = {
 				swap_ideas = {
@@ -228,7 +228,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_drinks_with_the_crown_prince"
-		  country_event = { id = ger_schleicher.3 days = 0 }
+		country_event = { id = ger_schleicher.3 days = 0 }
 			add_political_power = 100
 			add_popularity = {
 				ideology = paternal_autocrat
@@ -359,6 +359,13 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_the_kanzler_and_his_loyal_friends }
 		ai_will_do = {
 			factor = 160
+			modifier = {
+				factor = 0
+				has_game_rule = { 
+					rule = MAF_politic 
+					option = MAF_POLITIC_COLLAPSE
+				}
+			}
 		}
 		available = {
 			has_government = paternal_autocrat
@@ -374,7 +381,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_the_kanzler_and_the_statthalter"
-		  country_event = { id = ger_schleicher.6 days = 0 }
+		country_event = { id = ger_schleicher.6 days = 0 }
 		}
 		}
 
@@ -574,7 +581,7 @@ focus_tree = {
 			factor = 160
 		}
 		available = {
-		  has_completed_focus = GER_drinks_with_the_crown_prince
+		has_completed_focus = GER_drinks_with_the_crown_prince
 			has_government = paternal_autocrat
 			has_country_leader = {
 				name = "Wilhelm II"
@@ -778,7 +785,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_organize_the_youth
-		icon = GFX_goal_generic_drafted_army
+		icon = GFX_goal_CZE_youth_service
 		prerequisite = {
 			focus = GER_political_1
 		}
@@ -825,7 +832,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_security
-		icon = GFX_goal_secret_agents
+		icon = GFX_goal_AUS_Police_Paramilitarism
 		prerequisite = {
 			focus = GER_political_1
 		}
@@ -860,7 +867,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_embrace_faud
-		icon = GFX_GBR_fate_of_unions
+		icon = GFX_GRU_faud_victory-3944
 		prerequisite = {
 			focus = GER_easter_promises
 		}
@@ -900,7 +907,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_a_christian_trade_union
-		icon = GFX_BEL_Catholic_Construction
+		icon = GFX_goal_NFA_cargolic_unions
 		prerequisite = {
 			focus = GER_organize_the_youth
 		}
@@ -1093,7 +1100,7 @@ focus_tree = {
 		available = {
 			NOT = {
 			has_government = paternal_autocrat
-							 has_government = national_populist
+							has_government = national_populist
 						}
 		}
 		x = 2
@@ -1125,7 +1132,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_finalise_centralisation
-		icon = GFX_goal_COS_Ferrer_Coup
+		icon = GFX_goal_UMN_german_civil_engineering
 		prerequisite = {
 			focus = GER_babelsberg
 		}
@@ -1136,7 +1143,7 @@ focus_tree = {
 		available = {
 			NOT = {
 			has_government = paternal_autocrat
-							 has_government = national_populist
+							has_government = national_populist
 						}
 		}
 		x = 0
@@ -1359,7 +1366,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_groener2
-		icon = GFX_goal_workers_for_business
+		icon = GFX_goal_FSA_works_progress
 		available = {
 			OR = {
 				has_completed_focus = GER_finalise_centralisation
@@ -1501,7 +1508,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_schacht3
-		icon = GFX_focus_hol_abandon_the_gold_standard
+		icon = GFX_focus_HOL_abandon_gold_standard
 		available = {
 			OR = {
 				has_completed_focus = GER_civ_industry_3
@@ -1685,6 +1692,18 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+			hidden_effect = {
+				country_event = {
+					id = gerfla.17
+					days = 150
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = gerfla.19
+					days = 20
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -1744,7 +1763,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_research_expansion
-		icon = GFX_focus_research2
+		icon = GFX_GRU_higher_education_grants-4039
 		prerequisite = {
 			focus = GER_experimental_research
 		}
@@ -1766,7 +1785,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_zuse
-		icon = GFX_focus_generic_radio_equipment
+		icon = GFX_goal_computer_focus
 		prerequisite = {
 			focus = GER_research_expansion
 		}
@@ -1814,7 +1833,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_hahn_meitner
-		icon = GFX_goal_nuclear
+		icon = GFX_goal_OTT_school_science
 		prerequisite = {
 			focus = GER_zuse
 		}
@@ -1851,7 +1870,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rocket
-		icon = GFX_focus_rocketry
+		icon = GFX_goal_generic_rocket_weapon
 		prerequisite = {
 			focus = GER_zuse
 		}
@@ -1878,7 +1897,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_siemens
-		icon = GFX_goal_MAF_allign_industrialists
+		icon = GFX_goal_GER_Siemens
 		prerequisite = {
 			focus = GER_economy
 		}
@@ -2007,7 +2026,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_infra_2
-		icon = GFX_goal_generic_road_construction
+		icon = GFX_CSA_red_roads
 		prerequisite = {
 			focus = GER_infra_1
 		}
@@ -2557,7 +2576,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_mil_industry_3
-		icon = GFX_goal_munitions_factories
+		icon = GFX_goal_Focus_Military_Mobilisation
 		prerequisite = { focus = GER_mil_industry_2 }
 		prerequisite = {
 			focus = GER_artillery_research
@@ -2599,7 +2618,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_arms_industry
-		icon = GFX_goal_Focus_Military_Mobilisation
+		icon = GFX_GRU_CORPORATE_MILITARY_INDUSTRIAL_COMPLEX
 		prerequisite = {
 			focus = GER_mil_industry_2
 		}
@@ -2643,7 +2662,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Mauser_werke
-		icon = GFX_goal_mittel_arms_trade
+		icon = GFX_goal_GER_Mauser_Werke_Contracts
 		prerequisite = {
 			focus = GER_economy
 		}
@@ -2740,12 +2759,8 @@ focus_tree = {
 		available = {
 			has_completed_focus = GER_black_monday_finish
 		}
-		prerequisite = {
-			focus = GER_mil_industry_3
-		}
-		prerequisite = {
-			focus = GER_arms_industry
-		}
+		prerequisite = { focus = GER_mil_industry_3 }
+		prerequisite = { focus = GER_arms_industry }
 		x = 6
 		y = 4
 		relative_position_id = GER_siemens
@@ -2761,7 +2776,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_mobile_3"
-			custom_effect_tooltip = GER_doctrine_mobile_3_tooltip
 			add_political_power = -40
 			swap_ideas = {
 				add_idea = GER_tank_idea
@@ -3192,7 +3206,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_doctrine_great_war
-		icon = GFX_goal_MAF_RFG_Army
+		icon = GFX_goal_CZE_squad_tactics
 		prerequisite = {
 			focus = GER_doctrine_great_war_2
 		}
@@ -3245,7 +3259,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_doctrine_mobile
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_focus_rus_motorised
 		prerequisite = {
 			focus = GER_doctrine_great_war_2
 			focus = GER_doctrine_mobile_2
@@ -3491,102 +3505,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_security_4
-		icon = GFX_goal_kill_syndies
-		prerequisite = {
-			focus = GER_security_3
-		}
-		prerequisite = {
-			focus = GER_mil_expansion_land_1
-		}
-		available = {
-			can_declare_war_on = INT
-		}
-		x = -1
-		y = 5
-		relative_position_id = GER_mil_expansion
-		cost = 5
-		bypass = {
-			NOT = { can_declare_war_on = INT }
-		}
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = RUS
-					surrender_progress > 0
-				}
-			}
-			modifier = {
-				factor = 10
-				date > 1939.10.5
-				controls_state = 779
-				controls_state = 28
-			}
-		}
-		will_lead_to_war_with = FRA
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_security_4"
-			create_wargoal = {
-				type = annex_everything
-				target = FRA
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-
-	focus = {
-		id = GER_subjugate_russia
-		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		available = {
-			is_faction_leader = yes
-			can_declare_war_on = RUS
-		}
-		bypass_if_unavailable = yes
-		prerequisite = {
-			focus = GER_security_3
-		}
-		prerequisite = {
-			focus = GER_mil_expansion_land_1
-		}
-		x = 1
-		y = 5
-		relative_position_id = GER_mil_expansion
-		cost = 6
-
-		ai_will_do = {
-			factor = 1000
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = INT
-					has_war_with = ENT
-					surrender_progress > 0
-				}
-			}
-			modifier = {
-				factor = 10
-				date > 1939.10.5
-			}
-		}
-
-		will_lead_to_war_with = RUS
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_subjugate_russia"
-			create_wargoal = {
-				type = annex_everything
-				target = RUS
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
 		id = GER_heerflieger
 		icon = GFX_goal_Deutsche_Luftstreitkrafte
 		prerequisite = {
@@ -3622,7 +3540,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_sturzflieger
-		icon = GFX_goal_generic_air_fighter_new
+		icon = GFX_HUN_fighters
 		prerequisite = {
 			focus = GER_heerflieger
 		}
@@ -3810,7 +3728,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Henschel_Albatros
-		icon = GFX_goal_generic_air_naval_bomber_new
+		icon = GFX_goal_CZE_air_is_sea
 		prerequisite = {
 			focus = GER_luftwaffe
 		}
@@ -4039,7 +3957,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_global2
-		icon = GFX_goal_generic_shipyard
+		icon = GFX_USA_ports_atlantic
 		prerequisite = {
 			focus = GER_global1
 		}
@@ -4132,7 +4050,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_north_sea2
-		icon = GFX_goal_generic_naval_base
+		icon = GFX_goal_BEL_navy
 		prerequisite = {
 			focus = GER_north_sea1
 		}
@@ -4173,7 +4091,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_north_sea3
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_DEN_focus_sovaernet
 		prerequisite = {
 			focus = GER_north_sea2
 		}
@@ -4260,7 +4178,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_generic_navy1
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_coastalfortifications
 		prerequisite = {
 			focus = GER_north_sea1
 		}
@@ -4365,7 +4283,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_generic_navy2
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_generic_naval_base
 		prerequisite = {
 			focus = GER_generic_navy1
 		}
@@ -4496,7 +4414,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_doctrine_fleet2
-		icon = GFX_goal_generic_navy_anti_submarine
+		icon = GFX_goal_generic_naval_destroyer2
 		prerequisite = {
 			focus = GER_doctrine_fleet1
 		}
@@ -4609,7 +4527,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_doctrine_fleet_in_beeing2
-		icon = GFX_goal_generic_navy_submarine
+		icon = GFX_goal_AUS_unrestricted_submarine_warfare
 		prerequisite = {
 			focus = GER_doctrine_fleet2
 		}
@@ -4639,7 +4557,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_doctrine_fleet_in_beeing3
-		icon = GFX_focus_generic_navy_battleship3alt
+		icon = GFX_goal_generic_naval_battleship2
 		prerequisite = {
 			focus = GER_doctrine_fleet_in_beeing2
 		}
@@ -4728,7 +4646,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_doctrine_base_strike3
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_goal_generic_naval_carrier2
 		prerequisite = {
 			focus = GER_doctrine_base_strike2
 		}
@@ -4810,7 +4728,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_europakammer
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_goal_GER_Mitteleuropa_European
 		prerequisite = {
 			focus = GER_poli_temp
 		}
@@ -4851,7 +4769,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_europakommission
-		icon = GFX_goal_state_economy
+		icon = GFX_goal_GER_Mitteleuropa_German
 		prerequisite = {
 			focus = GER_poli_temp
 		}
@@ -4991,7 +4909,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_grain_and_steel
-		icon = GFX_focus_generic_agriculture
+		icon = GFX_all_resource
 		prerequisite = {
 			focus = GER_europakammer
 			focus = GER_europakommission
@@ -5130,7 +5048,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_border_regions
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_ITA_urban
 		prerequisite = {
 			focus = GER_erasmus
 		}
@@ -5206,7 +5124,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_ostwall
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_goal_GER_Ostwall
 		prerequisite = {
 			focus = GER_grain_and_steel
 		}
@@ -5240,7 +5158,7 @@ focus_tree = {
 					RUS = {
 						exists = yes
 						is_subject = no
-						NOT = { is_ally_with = ROOT }
+						NOT = { is_ally_of_ROOT = yes }
 					}
 				}
 			}
@@ -5251,7 +5169,7 @@ focus_tree = {
 			if = {
 				limit = {
 					13 = {
-						controller = { is_ally_with = ROOT }
+						controller = { is_ally_of_ROOT = yes }
 					}
 				}
 				13 = {
@@ -5266,7 +5184,7 @@ focus_tree = {
 			if = {
 				limit = {
 					191 = {
-						controller = { is_ally_with = ROOT }
+						controller = { is_ally_of_ROOT = yes }
 					}
 				}
 				191 = {
@@ -5281,7 +5199,7 @@ focus_tree = {
 			if = {
 				limit = {
 					12 = {
-						controller = { is_ally_with = ROOT }
+						controller = { is_ally_of_ROOT = yes }
 					}
 				}
 				12 = {
@@ -5302,7 +5220,7 @@ focus_tree = {
 			if = {
 				limit = {
 					190 = {
-						controller = { is_ally_with = ROOT }
+						controller = { is_ally_of_ROOT = yes }
 					}
 				}
 				190 = {
@@ -5323,7 +5241,7 @@ focus_tree = {
 			if = {
 				limit = {
 					207 = {
-						controller = { is_ally_with = ROOT }
+						controller = { is_ally_of_ROOT = yes }
 					}
 				}
 				207 = {
@@ -5344,7 +5262,7 @@ focus_tree = {
 			if = {
 				limit = {
 					1087 = {
-						controller = { is_ally_with = ROOT }
+						controller = { is_ally_of_ROOT = yes }
 					}
 				}
 				1087 = {
@@ -5395,7 +5313,128 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+	focus = {
+		id = GER_destroy_internationale
+		icon = GFX_goal_CSA_internationale_treachery
+		available = {
+			date > 1940.8.1
+			can_declare_war_on = INT
+			is_faction_leader = yes
+		}
+		continue_if_invalid = yes
+		cancel = {
+			is_faction_leader = no
+		}
+		bypass = {
+			NOT = { can_declare_war_on = INT }
+		}
+		prerequisite = {
+			focus = GER_border_regions
+			focus = GER_ostwall
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_border_regions
+		cost = 8
 
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = GER_second_weltkrieg option = GER_SECOND_WELTKRIEG_NOT_HAPPENS }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = RUS
+					surrender_progress > 0
+				}
+			}
+			modifier = {
+				factor = 10
+				date > 1939.10.5
+				controls_state = 779
+				controls_state = 28
+			}
+		}
+
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = ENG
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_destroy_internationale"
+			declare_war_on = {
+				type = topple_government
+				target = INT
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = GER_subjugate_russia
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		available = {
+			date > 1940.8.1
+			if = {
+				limit = { 219 = { owner = { is_russian_tag = yes } } }
+				can_declare_war_on = 219.owner
+				var:219.owner = { is_subject = no }
+			}
+			else = {
+				can_declare_war_on = RUS
+				RUS = { is_subject = no }
+			}
+			is_faction_leader = yes
+		}
+		continue_if_invalid = yes
+		cancel = {
+			is_faction_leader = no
+		}
+		bypass = {
+			NOT = { can_declare_war_on = 219.owner }
+		}
+		prerequisite = {
+			focus = GER_border_regions
+			focus = GER_ostwall
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_border_regions
+		cost = 8
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = GER_second_weltkrieg option = GER_SECOND_WELTKRIEG_NOT_HAPPENS }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = INT
+					has_war_with = ENT
+					surrender_progress > 0
+				}
+			}
+			modifier = {
+				factor = 10
+				date > 1939.10.5
+			}
+		}
+
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = TRM
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_subjugate_russia"
+			declare_war_on = {
+				type = topple_government
+				target = 219.owner
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
 	focus = {
 		id = GER_poland_alliance
 		icon = GFX_goal_POL_flag
@@ -5462,7 +5501,6 @@ focus_tree = {
 				OR = {
 					has_war_with = FRA
 					has_war_with = RUS
-					has_war_with = SOV
 					surrender_progress > 0
 				}
 			}
@@ -5474,8 +5512,99 @@ focus_tree = {
 				type = annex_everything
 				target = POL
 			}
+			add_ideas = GER_russia_strategy
+			every_other_country = {
+				limit = {
+					is_in_faction_with = GER
+					is_possible_intermarium_country = yes
+				}
+				add_ideas = GER_russia_strategy
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = GER_kaisergipfel
+		icon = GFX_goal_GER_kaisergipfel
+		prerequisite = {
+			focus = GER_europakammer
+			focus = GER_europakommission
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_enemies_dealt_with
+				FRP = {
+					is_subject_of = GER 
+				}
+				GBP = {
+					is_subject_of = GER
+				}
+				OR = {
+					RUS = {
+						is_subject_of = GER
+					}
+					RUS = {
+						has_global_flag = vilnius_accords_active
+					}	
+				}
+			}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		x = -4
+		y = 1
+		relative_position_id = GER_europakammer
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_kaisergipfel"
+			country_event = {
+				id = gerfor.200
+				days = 2
+			}
+		}
+	}
+
+	focus = {
+		id = GER_paneuropa
+		icon = GFX_goal_GER_paneuropa
+		prerequisite = {
+			focus = GER_kaisergipfel
+		}
+		available = {
+			AUS = {
+				OR = {
+					exists = no
+					is_in_faction_with = GER
+				}
+			}
+			has_country_flag = GER_WON_2WK
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		x = -4
+		y = 2
+		relative_position_id = GER_europakammer
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_paneuropa"
+			country_event = {
+				id = gerfor.204
+				days = 3
+			}
+		}
 	}
 
 	#########################
@@ -5484,7 +5613,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_oil
-		icon = GFX_goal_further_oil
+		icon = GFX_goal_AUS_galicia_oil
 		x = 30
 		y = 6
 		cost = 6
@@ -5510,7 +5639,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_oil_caucasus
-		icon = GFX_focus_ger_strike_at_the_source
+		icon = GFX_goal_RUS_caucasus
 		prerequisite = {
 			focus = GER_oil
 		}
@@ -5598,7 +5727,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_DKB_deal
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_ALO_DKB
 		prerequisite = {
 			focus = GER_oil_caucasus_land
 		}
@@ -5700,7 +5829,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_oil_caucasus_treaty
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_goal_flag_azerbaijan
 		prerequisite = {
 			focus = GER_oil_georgia
 			focus = GER_DKB_deal
@@ -5743,12 +5872,12 @@ focus_tree = {
 
 	focus = {
 		id = GER_Settling_Old_Disputes
-		icon = GFX_goal_ottoman
+		icon = GFX_goal_OTT_affirm_loyalty
 		available = {
 			is_faction_leader = yes
 			NOT = { has_country_flag = cancel_ott }
-			country_exists = OTT
-			OTT = {
+			country_exists = TUR
+			TUR = {
 				is_subject = no
 				is_in_faction = no
 				NOT = {
@@ -5766,7 +5895,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			is_in_faction_with = OTT
+			is_in_faction_with = TUR
 		}
 		prerequisite = {
 			focus = GER_oil
@@ -5780,7 +5909,7 @@ focus_tree = {
 		}
 		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Select Focus GER_Settling_Old_Disputes"
-			OTT = { country_event = { id = gerfor.80 days = 10 } }
+			TUR = { country_event = { id = gerfor.80 days = 10 } }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Settling_Old_Disputes"
@@ -5801,15 +5930,15 @@ focus_tree = {
 				}
 			}
 			effect_tooltip = {
-				OTT = {
+				TUR = {
 					set_autonomy = {
 						target = AZE
 						autonomy_state = kr_autonomous_puppet
 					}
 				}
-				add_to_faction = OTT
+				add_to_faction = TUR
 			}
-			OTT = { country_event = gerfor.83 }
+			TUR = { country_event = gerfor.83 }
 		}
 	}
 
@@ -5817,10 +5946,10 @@ focus_tree = {
 		id = GER_Research_Cooperation
 		icon = GFX_goal_OTT_Sublime_Porte
 		available = {
-			is_in_faction_with = OTT
+			is_in_faction_with = TUR
 		}
 		bypass = {
-			OTT = { has_completed_focus = OTT_Research_Cooperation }
+			TUR = { has_completed_focus = OTT_Research_Cooperation }
 		}
 		prerequisite = {
 			focus = GER_Settling_Old_Disputes
@@ -5834,7 +5963,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Research_Cooperation"
-			OTT = { add_to_tech_sharing_group = german_research }
+			TUR = { add_to_tech_sharing_group = german_research }
 		}
 	}
 
@@ -5842,12 +5971,12 @@ focus_tree = {
 		id = GER_Vanguard_In_The_South
 		icon = GFX_goal_OTT_Military_Mission
 		available = {
-			is_in_faction_with = OTT
-			340 = { is_owned_and_controlled_by = OTT }
-			339 = { is_owned_and_controlled_by = OTT }
+			is_in_faction_with = TUR
+			340 = { is_owned_and_controlled_by = TUR }
+			339 = { is_owned_and_controlled_by = TUR }
 		}
 		bypass = {
-			OTT = { has_completed_focus = OTT_Vanguard_in_the_South }
+			TUR = { has_completed_focus = OTT_Vanguard_in_the_South }
 		}
 		prerequisite = {
 			focus = GER_Settling_Old_Disputes
@@ -5918,7 +6047,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_oil_venezuela_start
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_GRU_CORPORATE_TAKE_OIL
 		prerequisite = {
 			focus = GER_oil_venezuela
 		}
@@ -5965,17 +6094,11 @@ focus_tree = {
 		x = 8
 		y = 6
 		cost = 5
-		available = {
-			has_global_flag = GEX_GER_is_back
-		}
-
-		ai_will_do = {
-			factor = 900
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
-		}
+		allow_branch = { has_global_flag = GEX_GER_is_back }
+		available = { has_global_flag = GEX_GER_is_back }
+		bypass = { has_global_flag = GEX_GER_is_back }
+		ai_will_do = { factor = 900 }
+		completion_reward = { log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home" }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	
@@ -5987,13 +6110,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_intensify_propaganda"
 			GEXGER_lessen_trauma = yes
 			add_stability = 0.10
 		}
@@ -6001,21 +6120,17 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_give_collaborators_peace
-		icon = GFX_goal_BAN_army_of_peace
+		id = GER_recruit_stray_soldiers
+		icon = GFX_RUS_Get_Military
 		prerequisite = { focus = GER_retvrned_home }
-		mutually_exclusive = { focus = GER_give_collaborators_'peace' }
+		mutually_exclusive = { focus = GER_give_collaborators_peace }
 		x = -6
 		y = 1
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_recruit_stray_soldiers"
 			add_stability = 0.10
 			add_manpower = 20000
 			add_equipment_to_stockpile = {
@@ -6033,21 +6148,17 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_give_collaborators_'peace'
-		icon = GFX_goal_secret_agents
+		id = GER_give_collaborators_peace
+		icon = GFX_crackdownonthem
 		prerequisite = { focus = GER_retvrned_home }
-		mutually_exclusive = { focus = GER_give_collaborators_peace }
+		mutually_exclusive = { focus = GER_recruit_stray_soldiers }
 		x = -8
 		y = 1
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_give_collaborators_peace"
 			add_stability = 0.10
 			add_war_support = 0.10
 			add_manpower = -10000
@@ -6058,23 +6169,19 @@ focus_tree = {
 	
 	focus = {
 		id = GER_distribute_aid
-		icon = GFX_HUN_noblesse_oblige
+		icon = GFX_RUS_Reassure_The_Workers
 		prerequisite = {
 			focus = GER_give_collaborators_peace
-			focus = GER_give_collaborators_'peace'
+			focus = GER_recruit_stray_soldiers
 		}
 		prerequisite = { focus = GER_intensify_propaganda }
 		x = -4
 		y = 2
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_distribute_aid"
 			GEXGER_lessen_trauma = yes
 			add_political_power = 70
 		}
@@ -6083,23 +6190,19 @@ focus_tree = {
 	
 	focus = {
 		id = GER_paramilitary_crack_down
-		icon = GFX_HUN_volunteers
+		icon = GFX_goal_HOL_ban_paramilitary_left
 		prerequisite = {
 			focus = GER_give_collaborators_peace
-			focus = GER_give_collaborators_'peace'
+			focus = GER_recruit_stray_soldiers
 		}
 		prerequisite = { focus = GER_intensify_propaganda }
 		x = -6
 		y = 2
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_paramilitary_crack_down"
 			add_popularity = {
 				ideology = totalist
 				popularity = -0.20
@@ -6129,23 +6232,19 @@ focus_tree = {
 	
 	focus = {
 		id = GER_reinstate_old_families
-		icon = GFX_GRE_empower_monarchy
+		icon = GFX_goal_NEE_Formalize_the_Noble_Structure
 		prerequisite = {
 			focus = GER_give_collaborators_peace
-			focus = GER_give_collaborators_'peace'
+			focus = GER_recruit_stray_soldiers
 		}
 		prerequisite = { focus = GER_intensify_propaganda }
 		x = -8
 		y = 2
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_reinstate_old_families"
 			add_stability = 0.10
 			GEXGER_lessen_trauma = yes
 		}
@@ -6154,7 +6253,7 @@ focus_tree = {
 	
 	focus = {#that protest is problematic sweaty
 		id = GER_union_ban
-		icon = GFX_goals_FRA_syndies_gone
+		icon = GFX_goal_TEX_outlaw_union
 		prerequisite = { focus = GER_distribute_aid }
 		prerequisite = { focus = GER_paramilitary_crack_down }
 		prerequisite = { focus = GER_reinstate_old_families }
@@ -6163,13 +6262,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_union_ban"
 			add_stability = 0.10
 			add_war_support = 0.10
 			remove_ideas = GEXGER_trade_unions
@@ -6183,7 +6278,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_compromise_with_unions
-		icon = GFX_BBR_full_employement
+		icon = GFX_goal_generic_union_agreement
 		prerequisite = { focus = GER_distribute_aid }
 		prerequisite = { focus = GER_paramilitary_crack_down }
 		prerequisite = { focus = GER_reinstate_old_families }
@@ -6192,13 +6287,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_compromise_with_unions"
 			add_stability = 0.20
 			remove_ideas = GEXGER_trade_unions
 			add_timed_idea = {
@@ -6220,13 +6311,9 @@ focus_tree = {
 		y = 4
 		relative_position_id = GER_retvrned_home
 		cost = 3
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_a_triumphant_rebirth"
 			GEXGER_lessen_trauma = yes
 			add_stability = 0.30
 			add_war_support = 0.30
@@ -6242,32 +6329,25 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_retvrned_home
 		cost = 5
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_revive_the_Deutsches_Heer"
 			add_ideas = GEXGER_heer
 			custom_effect_tooltip = GEX_reviveheer
-			hidden_effect = {
-				load_oob = GEXGER_revive_heer
-			}
+			hidden_effect = { load_oob = GEXGER_revive_heer }
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	
 	focus = {
 		id = GER_exile_militarism
-		icon = GFX_BAT_germanisation
+		icon = GFX_goal_GEA_Prussian_Supremacy
 		prerequisite = { focus = GER_revive_the_Deutsches_Heer }
 		mutually_exclusive = { focus = GER_swords_into_plowshares }
 		x = -1
 		y = 2
 		relative_position_id = GER_retvrned_home
 		cost = 5
-
 		ai_will_do = {
 			factor = 900
 			modifier = {
@@ -6278,9 +6358,8 @@ focus_tree = {
 				}
 			}
 		}
-
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_exile_militarism"
 			swap_ideas = {
 				remove_idea = GEXGER_heer
 				add_idea = GEXGER_newer_militarism
@@ -6322,11 +6401,9 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_new_mic"
 			if = {
-				limit = {
-					has_idea = GER_Mauser_werke
-				}
+				limit = { has_idea = GER_Mauser_werke }
 				swap_ideas = {
 					remove_idea = GER_tank_idea
 					add_idea = GER_invest_arms_industry_reconstruction
@@ -6396,13 +6473,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_retvrned_home
 		cost = 5
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_rebuilding"
 			add_ideas = GEXGER_recovery
 			random_owned_controlled_state = {
 				limit = {
@@ -6434,7 +6507,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_retvrned_home
 		cost = 5
-
 		ai_will_do = {
 			factor = 900
 			modifier = {
@@ -6445,9 +6517,8 @@ focus_tree = {
 				}
 			}
 		}
-
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_swords_into_plowshares"
 			swap_ideas = {
 				remove_idea = GEXGER_recovery
 				add_idea = GEXGER_recovery_2
@@ -6481,13 +6552,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_retvrned_home
 		cost = 5
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_miraculous_recovery"
 			swap_ideas = {
 				remove_idea = GEXGER_recovery_2
 				add_idea = GEXGER_recovery_3
@@ -6501,7 +6568,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_rebuild_fleet
-		icon = GFX_goal_AST_upgrade_reserves
+		icon = GFX_GEA_Kaiserliche_Marine
 		prerequisite = {
 			focus = GER_exile_militarism
 			focus = GER_swords_into_plowshares
@@ -6510,23 +6577,17 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_retvrned_home
 		cost = 5
-
-		ai_will_do = {
-			factor = 900
-		}
-
+		ai_will_do = { factor = 900 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_retvrned_home"
-			country_event = {
-				id = GEX.102
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus GER_rebuild_fleet"
+			country_event = GEX.102
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	
 	focus = {
 		id = GEX_business
-		icon = GFX_goal_kill_syndies
+		icon = GFX_ALA_canada_war
 		prerequisite = {
 			focus = GER_new_mic
 		}
@@ -6543,7 +6604,6 @@ focus_tree = {
 			country_exists = ENT
 			has_completed_focus = GER_a_triumphant_rebirth
 		}
-
 		ai_will_do = {
 			factor = 900
 			modifier = {
@@ -6590,7 +6650,7 @@ focus_tree = {
 	
 	focus = {
 		id = GEX_affirm_entente_ties
-		icon = GFX_goal_canada
+		icon = GFX_NEE_canada_reconciliation
 		prerequisite = {
 			focus = GER_miraculous_recovery
 			focus = GER_new_mic
@@ -6609,7 +6669,6 @@ focus_tree = {
 			country_exists = ENT
 			has_completed_focus = GER_a_triumphant_rebirth
 		}
-
 		ai_will_do = {
 			factor = 900
 			modifier = {
@@ -6626,7 +6685,6 @@ focus_tree = {
 				}
 			}
 		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEX_affirm_entente_ties"
 			every_country = {
@@ -6665,7 +6723,6 @@ focus_tree = {
 			is_subject = no
 			has_completed_focus = GER_a_triumphant_rebirth
 		}
-
 		ai_will_do = {
 			factor = 900
 			modifier = {
@@ -6682,7 +6739,6 @@ focus_tree = {
 				}
 			}
 		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEX_business"
 			if = {
@@ -6693,15 +6749,13 @@ focus_tree = {
 				transfer_state = 779
 			}
 			if = {
-				limit = {
-					is_in_faction_with = ENT
-				}
+				limit = { is_in_faction_with = ENT }
 				leave_faction = yes
-				create_faction = Mittelmacht
+				create_faction = "Mittelmacht"
 				every_country = {
 					limit = {
 						has_country_flag = former_reichspakt_member
-						is_in_faction_with = GER
+						is_in_faction_with = ENT
 					}
 					leave_faction = yes
 					GER = { add_to_faction = PREV }
@@ -6746,7 +6800,7 @@ focus_tree = {
 			}
 		}
 		x = 3
-		y = 2
+		y = 3
 		relative_position_id = GER_grain_and_steel
 		cost = 5
 
@@ -6774,9 +6828,7 @@ focus_tree = {
 		relative_position_id = GER_unity_justice_freedom
 		cost = 6
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_popular_germany"
@@ -7223,12 +7275,8 @@ focus_tree = {
 	focus = {
 		id = GER_prop_up_GEA
 		icon = GFX_GEA_Ostasiatische_Station
-		prerequisite = {
-			focus = GER_proportional_representation
-		}
-		prerequisite = {
-			focus = GER_fight_reactionaries
-		}
+		prerequisite = { focus = GER_proportional_representation }
+		prerequisite = { focus = GER_fight_reactionaries }
 		prerequisite = {
 			focus = GER_protect_unions
 			focus = GER_small_business
@@ -7239,11 +7287,7 @@ focus_tree = {
 				has_government = social_liberal
 			}
 		}
-		bypass = {
-			GEA = {
-				exists = no
-			}
-		}
+		bypass = { GEA = { exists = no } }
 		x = -6
 		y = 6
 		relative_position_id = GER_unity_justice_freedom
@@ -7255,40 +7299,26 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_prop_up_GEA"
-			GEA = {
-				add_ideas = GER_preferred_colony_idea
-			}
+			GEA = { add_ideas = GER_preferred_colony_idea }
 			add_offsite_building = {
 				type = industrial_complex
-				level = 2
+				level = 1
 			}
 			add_offsite_building = {
 				type = arms_factory
 				level = 1
 			}
-			if = {
-				limit = {
-					MAF = {
-						has_idea = GER_preferred_colony_idea
-					}
-				}
-				hidden_effect = {
-					MAF = {
-						remove_ideas = GER_preferred_colony_idea
-					}
-				}
+			add_offsite_building = {
+				type = dockyard
+				level = 1
 			}
 			if = {
-				limit = {
-					AOG = {
-						has_idea = GER_preferred_colony_idea
-					}
-				}
-				hidden_effect = {
-					AOG = {
-						remove_ideas = GER_preferred_colony_idea
-					}
-				}
+				limit = { MAF = { has_idea = GER_preferred_colony_idea } }
+				hidden_effect = { MAF = { remove_ideas = GER_preferred_colony_idea } }
+			}
+			if = {
+				limit = { LEP = { has_idea = GER_preferred_colony_idea } }
+				hidden_effect = { LEP = { remove_ideas = GER_preferred_colony_idea } }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7568,12 +7598,8 @@ focus_tree = {
 	focus = {
 		id = GER_maintain_constitutionalism
 		icon = GFX_goal_GER_Constitutionalism
-		prerequisite = {
-			focus = GER_enshrine_economic_freedoms
-		}
-		available = {
-			has_government = market_liberal
-		}
+		prerequisite = { focus = GER_enshrine_economic_freedoms }
+		available = { has_government = market_liberal }
 		x = -1
 		y = 5
 		relative_position_id = GER_unity_justice_freedom
@@ -7605,12 +7631,8 @@ focus_tree = {
 	focus = {
 		id = GER_fight_radicals
 		icon = GFX_goal_GER_Denounce_Radicals
-		prerequisite = {
-			focus = GER_enshrine_economic_freedoms
-		}
-		available = {
-			has_government = market_liberal
-		}
+		prerequisite = { focus = GER_enshrine_economic_freedoms }
+		available = { has_government = market_liberal }
 		x = 1
 		y = 5
 		relative_position_id = GER_unity_justice_freedom
@@ -7654,24 +7676,14 @@ focus_tree = {
 	focus = {
 		id = GER_prop_up_MAF
 		icon = GFX_goal_MAF_african_kaiserreich
-		prerequisite = {
-			focus = GER_maintain_constitutionalism
-		}
-		prerequisite = {
-			focus = GER_fight_radicals
-		}
+		prerequisite = { focus = GER_maintain_constitutionalism }
+		prerequisite = { focus = GER_fight_radicals }
 		prerequisite = {
 			focus = GER_small_business
 			focus = GER_fund_breweries
 		}
-		available = {
-			has_government = market_liberal
-		}
-		bypass = {
-			MAF = {
-				exists = no
-			}
-		}
+		available = { has_government = market_liberal }
+		bypass = { MAF = { exists = no } }
 		x = 0
 		y = 6
 		relative_position_id = GER_unity_justice_freedom
@@ -7683,9 +7695,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: GER_prop_up_MAF"
-			MAF = {
-				add_ideas = GER_preferred_colony_idea
-			}
+			MAF = { add_ideas = GER_preferred_colony_idea }
 			add_offsite_building = {
 				type = industrial_complex
 				level = 1
@@ -7695,28 +7705,12 @@ focus_tree = {
 				level = 2
 			}
 			if = {
-				limit = {
-					GEA = {
-						has_idea = GER_preferred_colony_idea
-					}
-				}
-				hidden_effect = {
-					GEA = {
-						remove_ideas = GER_preferred_colony_idea
-					}
-				}
+				limit = { GEA = { has_idea = GER_preferred_colony_idea } }
+				hidden_effect = { GEA = { remove_ideas = GER_preferred_colony_idea } }
 			}
 			if = {
-				limit = {
-					AOG = {
-						has_idea = GER_preferred_colony_idea
-					}
-				}
-				hidden_effect = {
-					AOG = {
-						remove_ideas = GER_preferred_colony_idea
-					}
-				}
+				limit = { LEP = { has_idea = GER_preferred_colony_idea } }
+				hidden_effect = { LEP = { remove_ideas = GER_preferred_colony_idea } }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7725,9 +7719,7 @@ focus_tree = {
 	focus = {
 		id = GER_stable_germany
 		icon = GFX_goal_GER_Stable_Germany
-		prerequisite = {
-			focus = GER_unity_justice_freedom
-		}
+		prerequisite = { focus = GER_unity_justice_freedom }
 		available = {
 			OR = {
 				has_government = social_conservative
@@ -8304,9 +8296,7 @@ focus_tree = {
 	focus = {
 		id = GER_fight_socialism
 		icon = GFX_goal_GER_Boot_Socialists
-		prerequisite = {
-			focus = GER_freiwilliger_arbeitsdienst
-		}
+		prerequisite = { focus = GER_freiwilliger_arbeitsdienst }
 		prerequisite = {
 			focus = GER_embrace_federalism
 			focus = GER_cultural_centralization
@@ -8356,23 +8346,15 @@ focus_tree = {
 			focus = GER_fund_breweries
 			focus = GER_restrict_press
 		}
-		prerequisite = {
-			focus = GER_disenfranchise_traitors
-		}
-		prerequisite = {
-			focus = GER_fight_socialism
-		}
+		prerequisite = { focus = GER_disenfranchise_traitors }
+		prerequisite = { focus = GER_fight_socialism }
 		available = {
 			OR = {
 				has_government = social_conservative
 				has_government = authoritarian_democrat
 			}
 		}
-		bypass = {
-			AOG = {
-				exists = no
-			}
-		}
+		bypass = { LEP = { exists = no } }
 		x = 6
 		y = 6
 		relative_position_id = GER_unity_justice_freedom
@@ -8384,44 +8366,22 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_prop_up_AOG"
-			AOG = {
-				add_ideas = GER_preferred_colony_idea
-			}
+			LEP = { add_ideas = GER_preferred_colony_idea }
 			add_offsite_building = {
 				type = industrial_complex
-				level = 1
+				level = 2
 			}
 			add_offsite_building = {
 				type = arms_factory
 				level = 1
 			}
-			add_offsite_building = {
-				type = dockyard
-				level = 1
+			if = {
+				limit = { GEA = { has_idea = GER_preferred_colony_idea } }
+				hidden_effect = { GEA = { remove_ideas = GER_preferred_colony_idea } }
 			}
 			if = {
-				limit = {
-					MAF = {
-						has_idea = GER_preferred_colony_idea
-					}
-				}
-				hidden_effect = {
-					MAF = {
-						remove_ideas = GER_preferred_colony_idea
-					}
-				}
-			}
-			if = {
-				limit = {
-					GEA = {
-						has_idea = GER_preferred_colony_idea
-					}
-				}
-				hidden_effect = {
-					GEA = {
-						remove_ideas = GER_preferred_colony_idea
-					}
-				}
+				limit = { MAF = { has_idea = GER_preferred_colony_idea } }
+				hidden_effect = { MAF = { remove_ideas = GER_preferred_colony_idea } }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }

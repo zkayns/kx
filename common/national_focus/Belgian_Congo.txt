@@ -91,6 +91,12 @@ focus_tree = {
 			NOT = {
 				has_global_flag = CONGO_SHITSHOW
 			}
+			NOT = {
+				has_country_leader = {
+					name = "Léo Pétillon"
+					ruling_only = yes
+				}
+			}
 		}
 
 		cost = 8
@@ -1055,7 +1061,7 @@ focus_tree = {
 
 	focus = {
 		id = COG_Embrace_Congolese_Belgian_Culture
-		icon = GFX_goal_POR_burden_empire
+		icon = GFX_goal_BEL_Working_Towards_Lowland_Unity
 		x = 7
 		y = 4
 		relative_position_id = COG_Colonial_Rule
@@ -3455,46 +3461,14 @@ focus_tree = {
 				
 				if = {
 					limit = {
-						has_country_flag = COG_ricky_stays
+						has_country_leader = {
+							name = "Pierre Ryckmans"
+							ruling_only = yes
+						}
+						has_country_flag = COG_ricky_collapse
 					}
-					create_country_leader = {
-						name = "Pierre Ryckmans"
-						desc = "POLITICS_PIERRE_RYCKMANS_DESC"
-						picture = "gfx/leaders/COG/Portrait_COG_Pierre_Ryckmans.png"
-						expire = "1965.1.1"
-						ideology = social_conservative_subtype
-					}
-
-					create_country_leader = {
-						name = "Pierre Ryckmans"
-						desc = "POLITICS_PIERRE_RYCKMANS_DESC"
-						picture = "gfx/leaders/COG/Portrait_COG_Pierre_Ryckmans.png"
-						expire = "1965.1.1"
-						ideology = social_liberal_subtype
-					}
-
-					create_country_leader = {
-						name = "Pierre Ryckmans"
-						desc = "POLITICS_PIERRE_RYCKMANS_DESC"
-						picture = "gfx/leaders/COG/Portrait_COG_Pierre_Ryckmans.png"
-						expire = "1965.1.1"
-						ideology = social_democrat_subtype
-					}
-
-					create_country_leader = {
-						name = "Pierre Ryckmans"
-						desc = "POLITICS_PIERRE_RYCKMANS_DESC"
-						picture = "gfx/leaders/COG/Portrait_COG_Pierre_Ryckmans.png"
-						expire = "1965.1.1"
-						ideology = market_liberal_subtype
-					}
-
-					create_country_leader = {
-						name = "Pierre Ryckmans"
-						desc = "POLITICS_PIERRE_RYCKMANS_DESC"
-						picture = "gfx/leaders/COG/Portrait_COG_Pierre_Ryckmans.png"
-						expire = "1965.1.1"
-						ideology = authoritarian_democrat_subtype
+					set_country_leader_portrait = {
+						portrait = "gfx/leaders/COG/Portrait_COG_Pierre_Ryckmans.png"
 					}
 				}
 			}
@@ -3726,7 +3700,6 @@ focus_tree = {
 					
 				}
 			}
-			COG_increase_recovery = yes
 			hidden_effect = {
 				country_event = {
 					id = congofla.29
@@ -3874,6 +3847,7 @@ focus_tree = {
 					days = 10
 				}
 			}
+			COG_increase_recovery = yes
 		}
 	}
 	
@@ -3928,6 +3902,7 @@ focus_tree = {
 					days = 10
 				}
 			}
+			COG_increase_recovery = yes
 		}
 	}
 	
@@ -4373,7 +4348,7 @@ focus_tree = {
 	
 	focus = {
 		id = COG_native_pragmatism
-		icon = GFX_goal_goal_NGR_native_rights
+		icon = GFX_goal_NGR_native_rights
 		x = -1
 		y = 2
 		relative_position_id = COG_petillon
@@ -4650,6 +4625,11 @@ focus_tree = {
 					id = congofla.23
 					days = 10
 				}
+			}
+			set_province_name = { id = 13950 name = "Neue-Wilhelmsburg"}
+			hidden_effect = {
+				881 = { set_state_flag = renamed_state_wilhelmsburg }
+				every_controlled_state = { rename_state_effect = yes }
 			}
 		}
 	}
@@ -5712,6 +5692,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COG_continue_kaisers_mission"
 			add_ideas = COG_continue_kaisers_mission_idea
 			COG_increase_recovery = yes
+			hidden_effect = {
+				country_event = {
+					id = conbel.29
+					days = 67
+				}
+			}
 		}
 	}
 	
@@ -5920,8 +5906,14 @@ focus_tree = {
 					country_exists = NGR
 					country_exists = KBR
 					country_exists = CEA
-					country_exists = NMB
 				}
+				OR = {
+                   NOT = { country_exists = NMB }
+				   AND = {
+					  COG = { is_in_faction_with = GER }
+					  NMB = { is_in_faction_with = GER }
+				   }
+				}	
 				tooltip = COG_united_maf
 			}
 		}

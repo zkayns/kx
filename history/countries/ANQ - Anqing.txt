@@ -1,7 +1,7 @@
 ﻿capital = 606
 OOB = "empty"
 
-set_research_slots = 2
+set_research_slots = 3
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
@@ -19,12 +19,18 @@ if = {
 	}
 }
 set_technology = {
-	infantry_weapons = 1
 	basic_train = 1
+	### Infantry ###
+	infantry_weapons = 1
 	tech_support = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	motorised_infantry = 1
+	tech_recon = 1
 	gw_artillery = 1
 	### Air ###
 	early_fighter = 1
+	early_bomber = 1
 }
 
 set_country_flag = KX_no_naval_tech_decision_enable
@@ -133,6 +139,20 @@ create_country_leader = {
 }
 
 ### Corps Commanders
+create_corps_commander = {
+	name = "Ma Dengying"
+	desc = "POLITICS_ANQ_MA_DENGYING_ARMY_DESC"
+	portrait_path = "gfx/leaders/ANQ/Portrait_ANQ_Ma_Dengyin.png"
+	traits = {
+		media_personality
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
 create_corps_commander = {
 	name = "Zhang Zhongli"
 	desc = "POLITICS_ANQ_ZHANG_ZHONGLI_ARMY_DESC"

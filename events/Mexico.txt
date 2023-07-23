@@ -58,21 +58,29 @@ country_event = { # assassination attempt
 			modifier = {
 				factor = 0
 				OR = {
-				  has_game_rule = {
-						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_TOTALIST_CALLES
-					}
-				  has_game_rule = {
+					has_game_rule = {
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
 					}
-				  has_game_rule = {
+					has_game_rule = {
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
 					}
 					has_game_rule = {
 						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_GOLDSHIRT
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
 					}
 				}
 			}
@@ -105,6 +113,10 @@ country_event = { # assassination attempt
 					has_game_rule = {
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
 					}
 					has_game_rule = {
 						rule = MEX_post_assassination
@@ -162,24 +174,7 @@ country_event = { # What does Eufemio do?
 			}
 		}
 		ai_chance = {
-			factor = 33
-			modifier = {
-		    factor = 0
-		    OR = {
-				  has_game_rule = {
-						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
-					}
-				  has_game_rule = {
-						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
-					}
-					has_game_rule = {
-						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
-					}
-				}
-		  }
+			factor = 50
 		}
 		set_country_flag = MEX_calles_has_power
 		hidden_effect = {
@@ -196,7 +191,7 @@ country_event = { # What does Eufemio do?
 				desc = "POLITICS_EUFEMIO_ZAPATA_DESC"
 				picture = "gfx/leaders/MEX/Portrait_Mexico_Eufemio_Zapata.png"
 				expire = "1965.1.1"
-				ideology = totalist_subtype
+				ideology = maximato_subtype
 				traits = {}
 			}
 			country_event = {
@@ -215,28 +210,7 @@ country_event = { # What does Eufemio do?
 	option = { # Coalition Government saves democracy
 		name = mexico.3.b
 		ai_chance = {
-			factor = 33
-			modifier = {
-				factor = 0
-				OR = {
-				  has_game_rule = {
-						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_TOTALIST_CALLES
-					}
-				  has_game_rule = {
-						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
-					}
-				  has_game_rule = {
-						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
-					}
-					has_game_rule = {
-						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
-					}
-				}
-			}
+			factor = 50
 		}
 		hidden_effect = {
 			country_event = {
@@ -244,19 +218,25 @@ country_event = { # What does Eufemio do?
 				days = 20
 			}
 		}
-		set_temp_variable = { coalition_partner_var = token:syndicalist }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:radical_socialist }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes
-		hidden_effect = {
-			random_other_country = {
-				news_event = {
-			id =  worldnews.455
-			days = 1
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:syndicalist }
+				add_to_coalition = yes 
 		}
-
+		custom_effect_tooltip = syn_will_join_coalition_tt
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = radsoc_will_join_coalition_tt
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = socdem_will_join_coalition_tt
+		hidden_effect = {
+			news_event = {
+				id = worldnews.455
+				days = 1
 			}
 		}
 	}
@@ -273,10 +253,70 @@ country_event = { # Coalition
 
 	option = { # Survives
 		name = mexico.300.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_GOLDSHIRT
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+				}
+			}
+		}
 		set_country_flag = MEX_Coalition_Survives
 	}
 	option = { # Cant do shit
 		name = mexico.300.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SYNDICALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_RADICAL_SOCIALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SOCIAL_DEMOCRAT
+					}
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = {
 				id = mexico.301
@@ -298,6 +338,10 @@ country_event = { # Military Coup
 	option = { # Oopsy daisy
 		name = mexico.301.a
 		MEX_military_coup_occurs = yes
+		news_event = { 
+			id = worldnews.454 
+			days = 1
+		}
 	}
 }
 
@@ -311,21 +355,55 @@ country_event = { # Calles gets Eufemio to resign
 
 	option = { # Beans that are Cold
 		name = mexico.302.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_GOLDSHIRT
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+				}
+			}
+		}
 		load_focus_tree = mexican_focus
 		create_country_leader = {# Plutarco Calles
 			name = "Plutarco Calles"
 			desc = "POLITICS_PLUTARCO_CALLES_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Plutarco_Calles.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = maximato_subtype
 			traits = {}
 		}
 		hidden_effect = {
-			random_other_country = {
-				news_event = {
-			id =  worldnews.453
-			days = 1
-		}
+			news_event = {
+				id =  worldnews.453
+				days = 1
 
 			}
 		}
@@ -340,6 +418,34 @@ country_event = { # Calles gets Eufemio to resign
 	
 	option = { # fack off
 		name = mexico.302.b
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SYNDICALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_RADICAL_SOCIALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SOCIAL_DEMOCRAT
+					}
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = {
 				id = mexico.303
@@ -369,7 +475,7 @@ country_event = { # Calles marches, Eufemio Killed
 			desc = "POLITICS_PLUTARCO_CALLES_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Plutarco_Calles.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = maximato_subtype
 			traits = {}
 		}
 		create_country_leader = { # Pancho Villa
@@ -403,14 +509,50 @@ country_event = { # Villa Attempts Counter Coup
 	is_triggered_only = yes
 
 	option = { # Villa Wins
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_GOLDSHIRT
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+				}
+			}
+		}
 		name = mexico.304.a
 		hidden_effect = {
+			remove_all_ministers = yes
 			add_ideas = MEX_Pancho_Villa_hog_rso
 			add_ideas = MEX_Francisco_Mendoza_Palma_for_rso
 			add_ideas = MEX_Antonio_Diaz_Soto_y_Gama_eco_rso
 			add_ideas = MEX_Genovevo_de_la_O_sec_rso
 		}
-		remove_all_ministers = yes
 		set_politics = {
 			ruling_party = radical_socialist
 			elections_allowed = yes
@@ -423,15 +565,52 @@ country_event = { # Villa Attempts Counter Coup
 			}
 		}
 		clr_country_flag = MEX_calles_has_power
-		set_temp_variable = { coalition_partner_var = token:syndicalist }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:radical_socialist }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:syndicalist }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = syn_will_join_coalition_tt
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = radsoc_will_join_coalition_tt
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+				add_to_coalition = yes 
+		}
+		custom_effect_tooltip = socdem_will_join_coalition_tt
 	}
 	
 	option = { # Calles Wins
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SYNDICALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_RADICAL_SOCIALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SOCIAL_DEMOCRAT
+					}
+				}
+			}
+		}
 		name = mexico.304.b
 		hidden_effect = {
 			country_event = {
@@ -458,20 +637,86 @@ country_event = { # Garza Attempts Counter Coup
 	is_triggered_only = yes
 
 	option = { # Garza Wins
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SYNDICALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_RADICAL_SOCIALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SOCIAL_DEMOCRAT
+					}
+				}
+			}
+		}
 		name = mexico.305.a
 		MEX_military_coup_occurs = yes
+		news_event = { 
+			id = worldnews.454 
+			days = 1
+		}
 	}
 	
 	option = { # Calles Wins
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_GOLDSHIRT
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+				}
+			}
+		}
 		name = mexico.305.b
 		load_focus_tree = mexican_focus
 		hidden_effect = {
-			random_other_country = {
 			news_event = {
 				id =  worldnews.453
 				days = 1
 			}
-		}
 		}
 	}
 }
@@ -487,6 +732,9 @@ country_event = { # Villa's Candidacy
 
 	option = { # He Runs
 		name = mexico.306.a
+		ai_chance = {
+			factor = 70
+		}
 		set_country_flag = MEX_Villa_Runs
 		set_country_flag = MEX_Villa_Runs_Zapata_Lives
 		hidden_effect = {
@@ -499,6 +747,9 @@ country_event = { # Villa's Candidacy
 	
 	option = { # He No Run
 		name = mexico.306.b
+		ai_chance = {
+			factor = 30
+		}
 		set_country_flag = MEX_Villa_Dosent_Run
 	}
 }
@@ -557,8 +808,8 @@ country_event = { # Elections of 1937
 		ai_chance = {
 			factor = 25
 			modifier = {
-		    factor = 0
-		    OR = {
+				factor = 0
+				OR = {
 					has_game_rule = {
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_ELECTION_SYNDICALIST
@@ -571,8 +822,12 @@ country_event = { # Elections of 1937
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_ELECTION_SOCIAL_DEMOCRAT
 					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+					}
 				}
-		  }
+			}
 		}
 		trigger = {
 			NOT = {
@@ -592,7 +847,7 @@ country_event = { # Elections of 1937
 			desc = "POLITICS_PLUTARCO_CALLES_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Plutarco_Calles.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = maximato_subtype
 			traits = {}
 		}
 		hidden_effect = {
@@ -606,12 +861,9 @@ country_event = { # Elections of 1937
 			elections_allowed = yes
 		}
 		hidden_effect = {
-			random_other_country = {
-				news_event = {
-			id =  worldnews.453
-			days = 1
-		}
-
+			news_event = {
+				id =  worldnews.453
+				days = 1
 			}
 		}
 	}
@@ -620,8 +872,8 @@ country_event = { # Elections of 1937
 		ai_chance = {
 			factor = 25
 			modifier = {
-		    factor = 0
-		    OR = {
+			factor = 0
+				OR = {
 					has_game_rule = {
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
@@ -635,7 +887,7 @@ country_event = { # Elections of 1937
 						option = MEX_POST_ASSASSINATION_ELECTION_SOCIAL_DEMOCRAT
 					}
 				}
-		  }
+			}
 		}
 		trigger = {
 			NOT = {
@@ -671,8 +923,8 @@ country_event = { # Elections of 1937
 		ai_chance = {
 			factor = 25
 			modifier = {
-		    factor = 0
-		    OR = {
+			factor = 0
+				OR = {
 					has_game_rule = {
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
@@ -686,7 +938,11 @@ country_event = { # Elections of 1937
 						option = MEX_POST_ASSASSINATION_ELECTION_SOCIAL_DEMOCRAT
 					}
 				}
-		  }
+				has_game_rule = {
+					rule = MEX_post_assassination
+					option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+				}
+			}
 		}
 		trigger = {
 			NOT = {
@@ -771,8 +1027,8 @@ country_event = { # Elections of 1937
 		ai_chance = {
 			factor = 25
 			modifier = {
-		    factor = 0
-		    OR = {
+				factor = 0
+				OR = {
 					has_game_rule = {
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
@@ -785,8 +1041,12 @@ country_event = { # Elections of 1937
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_ELECTION_RADICAL_SOCIALIST
 					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+					}
 				}
-		  }
+			}
 		}
 		trigger = {
 			NOT = {
@@ -882,7 +1142,13 @@ country_event = { # Trying to Find the Assasin
 		name = mexico.7001.a
 		trigger = {
 			NOT = {
-				has_government = totalist
+				OR = {
+					has_government = totalist
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
+					}
+				}
 			}
 		}
 		country_event = {
@@ -1849,6 +2115,12 @@ country_event = { # Cristero War - victory for the Criesteros
 		hidden_effect = {
 			set_country_flag = elections_every_6_years
 			set_country_flag = MEX_cristero_victory_very_cool
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
 		}
 	}
 
@@ -1901,7 +2173,7 @@ country_event = { # Cristero War - victory for the Criesteros
 			desc = "POLITICS_VASCONCELOS_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Jose_Vasconcelos.png"
 			expire = "1965.1.1"
-			ideology = integralism_subtype
+			ideology = vasconcelosismo_subtype
 			traits = {}
 		}
 		set_country_flag = MEX_integralists_in_charge
@@ -2031,10 +2303,10 @@ country_event = { # Calles is dead!
 		}
 		create_country_leader = { # Lazaro Cardenas
 			name = "Lázaro Cárdenas del Rio"
-			desc = "POLITICS_LAZARO_CARDENAS_DESC"
+			desc = "POLITICS_LAZARO_CARDENAS_TOT_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Lazaro_Cardenas_General.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = maximato_subtype
 			traits = {}
 		}
 	}
@@ -2054,7 +2326,7 @@ country_event = { # Calles is dead!
 			desc = "POLITICS_EMILIO_GIL_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Emilio_Gil.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = maximato_subtype
 			traits = {}
 		}
 	}
@@ -2074,7 +2346,7 @@ country_event = { # Calles is dead!
 			desc = "POLITICS_ABELARDO_RODRIGUEZ"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Manuel_Trevibno.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = maximato_subtype
 			traits = {}
 		}
 	}
@@ -2137,7 +2409,14 @@ country_event = { # Elections of 1942
 	immediate = {
 		remove_all_ministers = yes
 		hidden_effect = {
-			MEX_set_1942_leaders_socialist = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MEX_Kahlo_Leads
+					}
+				}
+				MEX_set_1942_leaders_socialist = yes
+			}
 		}
 	}
 
@@ -2297,7 +2576,14 @@ country_event = { # Elections of 1947
 	immediate = {
 		remove_all_ministers = yes
 		hidden_effect = {
-			MEX_set_1947_leaders_socialist = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MEX_Kahlo_Leads
+					}
+				}
+				MEX_set_1947_leaders_socialist = yes
+			}
 		}
 	}
 
@@ -2458,7 +2744,14 @@ country_event = { # Elections of 1952
 	immediate = {
 		remove_all_ministers = yes
 		hidden_effect = {
-			MEX_set_1952_leaders_socialist = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MEX_Kahlo_Leads
+					}
+				}
+				MEX_set_1952_leaders_socialist = yes
+			}
 		}
 	}
 
@@ -2856,7 +3149,7 @@ country_event = { # tolenado does authoritarianism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.410" }
 	title = mexico.410.t
 	desc = mexico.410.d
-	picture = GFX_report_event_MEX_tolenado
+	picture = GFX_report_event_MEX_syndie_party_congress
 	
 	fire_only_once = yes
 
@@ -2867,7 +3160,7 @@ country_event = { # tolenado does authoritarianism
 			set_variable = { MEX_toledano_auth = 1 }
 			country_event = {
 				id = mexico.411
-				days = 23
+				days = 15
 			}
 		}
 	}
@@ -2889,7 +3182,7 @@ country_event = { # tolenado does authoritarianism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.411" }
 	title = mexico.411.t
 	desc = mexico.411.d
-	picture = GFX_report_event_MEX_tolenado
+	picture = GFX_fate_of_the_church
 	
 	fire_only_once = yes
 
@@ -2899,19 +3192,32 @@ country_event = { # tolenado does authoritarianism
 		hidden_effect = {
 			country_event = {
 				id = mexico.414
-				days = 23
+				days = 15
 			}
 		}
 	}
 
 	option = { # allow it
 		name = mexico.411.a
+		ai_chance = {
+			factor = 50
+		}
 		add_political_power = 5
 		add_to_variable = { MEX_toledano_auth = 1 }
 	}
 	
 	option = { # do nothing
 		name = mexico.411.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_post_assassination
+					option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+				}
+			}
+		}
 		add_political_power = 5
 	}
 }
@@ -2921,7 +3227,7 @@ country_event = { # tolenado does authoritarianism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.414" }
 	title = mexico.414.t
 	desc = mexico.414.d
-	picture = GFX_report_event_MEX_tolenado
+	picture = GFX_report_event_MEX_mexican_army
 	
 	fire_only_once = yes
 
@@ -2929,6 +3235,9 @@ country_event = { # tolenado does authoritarianism
 
 	option = { # allow it
 		name = mexico.414.a
+		ai_chance = {
+			factor = 50
+		}
 		add_political_power = 5
 		add_to_variable = { MEX_toledano_auth = 1 }
 		hidden_effect = {
@@ -2955,6 +3264,16 @@ country_event = { # tolenado does authoritarianism
 	
 	option = { # do nothing
 		name = mexico.414.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_post_assassination
+					option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+				}
+			}
+		}
 		add_political_power = 5
 		hidden_effect = {
 			if = {
@@ -2984,7 +3303,7 @@ country_event = { # tolenado removed
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.415" }
 	title = mexico.415.t
 	desc = mexico.415.d
-	picture = GFX_report_event_MEX_tolenado
+	picture = GFX_report_event_MEX_velazquez
 	
 	fire_only_once = yes
 
@@ -3011,7 +3330,7 @@ country_event = { # tolenado totalism time
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.416" }
 	title = mexico.416.t
 	desc = mexico.416.d
-	picture = GFX_report_event_MEX_tolenado
+	picture = GFX_report_event_MEX_toledano_secures_power
 	
 	fire_only_once = yes
 
@@ -3026,6 +3345,14 @@ country_event = { # tolenado totalism time
 			expire = "1965.1.1"
 			ideology = authcom_subtype
 			traits = {}
+		}
+		if = {
+			limit = {
+				has_country_leader = { name = "Vicente Toledano" ruling_only = yes }
+			}
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/MEX/Portrait_Mexico_Vincente_Toledano_Authcom.png"
+			}
 		}
 		create_country_leader = { # Rosendo Salazar
 			name = "Rosendo Salazar"
@@ -3112,18 +3439,30 @@ country_event = { # what do
 		ai_chance = {
 			factor = 50
 			modifier = {
-		    factor = 0
-		    OR = {
-				  has_game_rule = {
+				factor = 0
+				OR = {
+					has_game_rule = {
 						rule = MEX_post_assassination
 						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
 					}
-				  has_game_rule = {
+					has_game_rule = {
 						rule = MEX_post_assassination
-						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_GOLDSHIRT
 					}
 				}
-		  }
+			}
 		}
 		add_ideas = MEX_asa_resistance_idea
 		hidden_effect = {
@@ -3188,7 +3527,6 @@ country_event = { # what do
 		}
 		create_country_leader = {# Emergency Council
 			name = "Constitutional Committee"
-			desc = "POLITICS_EMERGENCY_COUNCIL_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Emergency_Council.png"
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
@@ -3216,12 +3554,22 @@ country_event = { # what do
 		ai_chance = {
 			factor = 50
 			modifier = {
-		    factor = 0
-				has_game_rule = {
-					rule = MEX_post_assassination
-					option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
+					}
 				}
-		  }
+			}
 		}
 		add_popularity = {
 			ideology = national_populist
@@ -3261,12 +3609,26 @@ country_event = { # what do
 		ai_chance = {
 			factor = 50
 			modifier = {
-		    factor = 0
-				has_game_rule = {
-					rule = MEX_post_assassination
-					option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_DEMOCRACY
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_GOLDSHIRT
+					}
 				}
-		  }
+			}
 		}
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -3349,6 +3711,22 @@ country_event = { # Golshirt Coup
 
 	option = {
 		name = mexico.45.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+				}
+			}
+		}
 		create_country_leader = {# Golshirt Council
 			name = "Goldshirt Council"
 			desc = "POLITICS_GOLDSHIRTS_DESC"
@@ -3388,6 +3766,18 @@ country_event = { # Golshirt Coup
 	}
 	option = {
 		name = mexico.45.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_GOLDSHIRT
+					}
+				}
+			}
+		}
 		set_country_flag = MEX_coup_stopped
 		hidden_effect = {
 			country_event = {
@@ -3413,6 +3803,18 @@ country_event = { # Sinarquista Coup
 
 	option = {
 		name = mexico.450.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_INTEGRALIST
+					}
+				}
+			}
+		}
 		create_country_leader = {# Jose Antonio Urquiza
 			name = "Jose Antonio Urquiza"
 			desc = "POLITICS_JOSE_URQUIZA_DESC"
@@ -3434,17 +3836,29 @@ country_event = { # Sinarquista Coup
 			MEX_Jose_Antonio_Urquiza_hog_npo
 			MEX_Juan_Ignacio_Padilla_for_npo
 			MEX_Manuel_Torres_Bueno_eco_npo
-			MEX_Manuel_Zermemo_sec_npo
+			MEX_Manuel_Zermeno_sec_npo
 		}
 	}
 	option = {
 		name = mexico.450.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_NATIONAL_POPULIST_SINARQUISTA
+					}
+				}
+			}
+		}
 		create_country_leader = {# José Vasconcelos
 			name = "José Vasconcelos"
 			desc = "POLITICS_VASCONCELOS_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Jose_Vasconcelos.png"
 			expire = "1965.1.1"
-			ideology = integralism_subtype
+			ideology = vasconcelosismo_subtype
 			traits = {}
 		}
 		set_cosmetic_tag = MEX_integralist
@@ -3575,6 +3989,15 @@ country_event = { # goldshirt leadership
 			ideology = national_populist_subtype
 			traits = {}
 		}
+		if = {
+			limit = {
+				has_country_flag = MEX_Presidential_System
+				has_country_leader = { name = "Nicolás Rodríguez Carrasco" ruling_only = yes }
+			}
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/MEX/Portrait_Mexico_Nicolas_Rodriguez_Carrazco.png"
+			}
+		}
 		set_cosmetic_tag = MEX_goldshirt_new_guard
 		if = {
 			limit = {
@@ -3619,7 +4042,18 @@ country_event = { # garza speech
 
 	option = { # he ded
 		name = mexico.46.a
-		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
+					}
+				}
+			}
+		}
 		create_country_leader = {# Emergency Council
 			name = "Emergency Council"
 			desc = "POLITICS_EMERGENCY_COUNCIL_DESC"
@@ -3632,11 +4066,24 @@ country_event = { # garza speech
 			limit = { has_id = 93731 }			
 			remove_unit_leader = yes
 		}
+		set_global_flag = MEX_GARZA_DEAD
 		load_focus_tree = MEX_Junta_Non_Garza
 		remove_all_ministers = yes
 	}
 	option = { # he lives
 		name = mexico.46.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+				}
+			}
+		}
 		set_country_flag = MEX_garza_lives
 		load_focus_tree = MEX_Generic_Junta
 		hidden_effect = {
@@ -3666,19 +4113,19 @@ country_event = { # garza dead what now
 		name = mexico.460.a
 		set_cosmetic_tag = MEX_PORFIRIO
 		create_country_leader = {# Emergency Council
-			name = "Felix Diaz Prieto"
+			name = "Félix Díaz Prieto"
 			desc = "POLITICS_FELIX_DIAZ_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Felix_Diaz_Prieto.png"
 			expire = "1965.1.1"
-			ideology = junta_subtype
+			ideology = neo_porfiriatoismo_subtype
 			traits = {}
 		}
 		load_focus_tree = MEX_Junta_Non_Garza
 		add_ideas = {
-			MEX_Juan_Barragan_Rodriguez_hog_pau
-			MEX_Jeronimo_Siller_Gomez_for_pau
-			MEX_Jacinto_B_Trevino_eco_pau
-			MEX_Jesus_Maria_Guajardo_Martinez_sec_pau
+			MEX_Felix_Diaz_hog_pau
+			MEX_Jose_Gonzalo_Escobar_for_pau
+			MEX_Porfirio_Diaz_Jr_eco_pau
+			MEX_Vito_Alessio_Robles_sec_pau
 		}
 	}
 	option = { # authdem time
@@ -3692,10 +4139,10 @@ country_event = { # garza dead what now
 			traits = {}
 		}
 		add_ideas = {
-			MEX_Felix_Diaz_hog_pau
-			MEX_Jose_Gonzalo_Escobar_for_pau
-			MEX_Porfirio_Diaz_Jr_eco_pau
-			MEX_Vito_Alessio_Robles_sec_pau
+			MEX_Juan_Barragan_Rodriguez_hog_pau
+			MEX_Jeronimo_Siller_Gomez_for_pau
+			MEX_Jacinto_B_Trevino_eco_pau
+			MEX_Jesus_Maria_Guajardo_Martinez_sec_pau
 		}
 		load_focus_tree = MEX_Junta_Non_Garza
 	}
@@ -3713,11 +4160,35 @@ country_event = { # garza dead what now
 
 	option = { # monarchy time
 		name = mexico.461.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
+					}
+				}
+			}
+		}
 		set_country_flag = MEX_monarchy_time
 		set_cosmetic_tag = MEX_REGENCY
 	}
 	option = { # no
 		name = mexico.461.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_MONARCHY
+					}
+				}
+			}
+		}
 		set_country_flag = MEX_Porfiriato_2_electric_boogaloo
 	}
 }
@@ -3744,6 +4215,7 @@ country_event = { # porfirio 2.0 or junta
 		complete_national_focus = MEX_a_new_diaz
 		set_country_flag = MEX_a_new_diaz
 		set_cosmetic_tag = MEX_PORFIRIO
+		set_country_leader_ideology = neo_porfiriatoismo_subtype
 		hidden_effect = {
 			country_event = {
 				id  = mexico.247
@@ -3765,7 +4237,7 @@ country_event = {
 	option = {
 		name = mexico.360.a
 		ai_chance = {
-			factor = 50
+			factor = 33
 		}
 		add_political_power = -200
 		if = {
@@ -3773,7 +4245,7 @@ country_event = {
 				has_government = paternal_autocrat
 			}
 			create_country_leader = {
-				name = "María Josephia Sophia I"
+				name = "María I"
 				desc = "POLITICS_DONA_ITURBIDE_DESC"
 				picture = "gfx/leaders/MEX/Portrait_Mexico_Maria.png"
 				expire = "1965.1.1"
@@ -3791,7 +4263,7 @@ country_event = {
 				has_government = national_populist
 			}
 			create_country_leader = {
-				name = "María Josephia Sophia I"
+				name = "María I"
 				desc = "POLITICS_DONA_ITURBIDE_DESC"
 				picture = "gfx/leaders/MEX/Portrait_Mexico_Maria.png"
 				expire = "1965.1.1"
@@ -3799,13 +4271,23 @@ country_event = {
 				traits = {}
 			}
 			set_cosmetic_tag = MEE
-			set_country_flag = LEADER_GUI_VISIBLE
+			
 		}
 	}
 	option = {
 		name = mexico.360.b
 		ai_chance = {
-			factor = 50
+			factor = 33
+			modifier = {
+				factor = 20
+				OR = {
+					has_country_leader = {
+						name = "Juan Barragán Rodríguez"
+						ruling_only = yes
+					}
+					has_government = national_populist
+				}
+			}
 		}
 		add_political_power = -200
 		if = {
@@ -3839,13 +4321,20 @@ country_event = {
 				traits = {}
 			}
 			set_cosmetic_tag = MEE_moctemzuma
-			set_country_flag = LEADER_GUI_VISIBLE
+			
 		}
 	}
 	option = {
 		name = mexico.360.c
 		ai_chance = {
-			factor = 50
+			factor = 33
+			modifier = {
+				factor = 30
+				has_country_leader = {
+					name = "Félix Díaz Prieto"
+					ruling_only = yes
+				}
+			}
 		}
 		add_political_power = -200
 		if = {
@@ -3854,8 +4343,8 @@ country_event = {
 			}
 			create_country_leader = {
 				name = "Porfirio I"
-				desc = "POLITICS_PORFIRIO_JR"
-				picture = "gfx/leaders/MEX/Portrait_Mexico_Porfirio_Diaz_Jr.png"
+				desc = "POLITICS_PORFIRIO_DIAZ_ORTEGA"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Porfirio_Diaz_Ortega.png"
 				expire = "1965.1.1"
 				ideology = absolute_monarchy_subtype
 				traits = {}
@@ -3872,14 +4361,14 @@ country_event = {
 			}
 			create_country_leader = {
 				name = "Porfirio I"
-				desc = "POLITICS_PORFIRIO_JR"
-				picture = "gfx/leaders/MEX/Portrait_Mexico_Porfirio_Diaz_Jr.png"
+				desc = "POLITICS_PORFIRIO_DIAZ_ORTEGA"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Porfirio_Diaz_Ortega.png"
 				expire = "1965.1.1"
 				ideology = integralism_subtype
 				traits = {}
 			}
 			set_cosmetic_tag = MEE_porfirio
-			set_country_flag = LEADER_GUI_VISIBLE
+			
 		}
 	}
 }
@@ -3908,9 +4397,18 @@ country_event = {
 		set_country_flag = MEX_Junta_Stays
 	}
 	option = { #appoint the PRUN
-		name = mexico.360.b
+		name = mexico.361.b
 		ai_chance = {
 			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_MILITARY_JUNTA
+					}
+				}
+			}
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -4278,6 +4776,12 @@ country_event = { # Campesinos War - victory for the campesinos
 	
 	immediate = {
 		hidden_effect = {
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
 			NSW = {
 				every_army_leader = {
 					limit = {
@@ -4379,6 +4883,9 @@ country_event = { # Elections of 1937
 
 	option = { # Authoritarian Democrat
 		name = mexico.53.a
+		ai_chance = {
+			factor = 20
+		}
 		set_party_name = {
 			name = MEX_DL_unity_party
 			long_name = MEX_DL_unity_party_long
@@ -4394,7 +4901,6 @@ country_event = { # Elections of 1937
 		}
 		create_country_leader = {# Emergency Council
 			name = "Constitutional Committee"
-			desc = "POLITICS_EMERGENCY_COUNCIL_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Emergency_Council.png"
 			expire = "1965.1.1"
 			ideology = authoritarian_democrat_subtype
@@ -4409,6 +4915,9 @@ country_event = { # Elections of 1937
 	}
 	option = { # Social Conservative
 		name = mexico.53.b
+		ai_chance = {
+			factor = 20
+		}
 		set_party_name = {
 			name = MEX_DL_unity_party
 			long_name = MEX_DL_unity_party_long
@@ -4432,7 +4941,6 @@ country_event = { # Elections of 1937
 		}
 		create_country_leader = {# Emergency Council
 			name = "Constitutional Committee"
-			desc = "POLITICS_EMERGENCY_COUNCIL_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Emergency_Council.png"
 			expire = "1965.1.1"
 			ideology = christian_democracy_subtype
@@ -4447,6 +4955,9 @@ country_event = { # Elections of 1937
 	}
 	option = { # Market Liberal
 		name = mexico.53.c
+		ai_chance = {
+			factor = 20
+		}
 		set_party_name = {
 			name = MEX_DL_unity_party
 			long_name = MEX_DL_unity_party_long
@@ -4470,10 +4981,9 @@ country_event = { # Elections of 1937
 		}
 		create_country_leader = {# Emergency Council
 			name = "Constitutional Committee"
-			desc = "POLITICS_EMERGENCY_COUNCIL_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Emergency_Council.png"
 			expire = "1965.1.1"
-			ideology = market_liberal_subtype
+			ideology = marlib_classical_liberalism_subtype
 			traits = {}
 		}
 		
@@ -4485,6 +4995,9 @@ country_event = { # Elections of 1937
 	}
 	option = { # Social Liberal
 		name = mexico.53.e
+		ai_chance = {
+			factor = 20
+		}
 		set_party_name = {
 			name = MEX_DL_unity_party
 			long_name = MEX_DL_unity_party_long
@@ -4508,7 +5021,6 @@ country_event = { # Elections of 1937
 		}
 		create_country_leader = {# Emergency Council
 			name = "Constitutional Committee"
-			desc = "POLITICS_EMERGENCY_COUNCIL_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Emergency_Council.png"
 			expire = "1965.1.1"
 			ideology = social_liberal_subtype
@@ -4524,6 +5036,9 @@ country_event = { # Elections of 1937
 
 	option = { # Social Democrat
 		name = mexico.53.f
+		ai_chance = {
+			factor = 20
+		}
 		set_party_name = {
 			name = MEX_DL_unity_party
 			long_name = MEX_DL_unity_party_long
@@ -4545,7 +5060,6 @@ country_event = { # Elections of 1937
 		add_ideas = MEX_Jose_Aguilar_y_Maya_sec_sde
 		create_country_leader = {# Emergency Council
 			name = "Constitutional Committee"
-			desc = "POLITICS_EMERGENCY_COUNCIL_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Emergency_Council.png"
 			expire = "1965.1.1"
 			ideology = social_democrat_subtype
@@ -4644,13 +5158,13 @@ country_event = { # Calles Killed
 			desc = "POLITICS_EMILIO_GIL_DESC"
 			picture = "gfx/leaders/MEX/Portrait_Mexico_Emilio_Gil.png"
 			expire = "1965.1.1"
-			ideology = totalist_subtype
+			ideology = maximato_subtype
 			traits = {}
 		}
 		hidden_effect = {
 			country_event = {
 				id = mexico.6302
-				days = 11 #Canabal Resists Reactionary Forces
+				days = 5 #Canabal Resists Reactionary Forces
 			}
 		}
 	}
@@ -4673,7 +5187,7 @@ country_event = { # Canabal Resists
 		hidden_effect = {
 			country_event = {
 				id = mexico.6303
-				days = 11 #Goldshirts Clash with the Mayans Resists Socialist Forces
+				days = 5 #Goldshirts Clash with the Mayans Resists Socialist Forces
 			}
 		}
 	}
@@ -4699,7 +5213,7 @@ country_event = { # Pech Resists
 		hidden_effect = {
 			country_event = {
 				id = mexico.6304
-				days = 11 #Goldshirts Clash with the Mayans Resists Socialist Forces
+				days = 5 #Goldshirts Clash with the Mayans Resists Socialist Forces
 			}
 		}
 	}
@@ -4719,10 +5233,12 @@ country_event = { # Alvarado Resists
 	option = {
 		name = mexico.6304.a
 		remove_state_core = 474
+		remove_state_core = 1254
+		remove_state_core = 1255
 		hidden_effect = {
 			country_event = {
 				id = mexico.64
-				days = 11 #Yucatan Revolt
+				days = 10 #Yucatan Revolt
 			}
 		}
 	}
@@ -4814,8 +5330,9 @@ country_event = { # Yucatan manages to survive
 		name = mexico.66.a
 		increase_ruling_party_popularity_by_5 = yes
 		add_political_power = 50
-		set_country_flag = YUC_indepedence_war_over
 		YUC = {
+			set_country_flag = YUC_indepedence_war_over
+			set_global_flag = MEX_declared_war_on_YUC
 			if = {
 				limit = {
 					has_country_flag = YUC_redshirt_alliance_flag
@@ -4882,7 +5399,7 @@ country_event = { # Rejoin Mexico?
 	option = { # Rejoin mexico(Game over)
 		name = mexico.68.a
 		ai_chance = {
-			factor = 50
+			factor = 75
 		}
 		if = {
 			limit = {
@@ -4890,6 +5407,7 @@ country_event = { # Rejoin Mexico?
 			}
 			white_peace = MEX
 		}
+		
 		MEX = {
 			change_tag_from = YUC
 		}
@@ -4903,7 +5421,7 @@ country_event = { # Rejoin Mexico?
 	option = { # We shall fight on anyways
 		name = mexico.68.b
 		ai_chance = {
-			factor = 50
+			factor = 25
 		}
 		add_political_power = 50
 		increase_ruling_party_popularity_by_5 = yes
@@ -4949,6 +5467,9 @@ country_event = { # the Yucatan continues to fight
 
 	option = { #Invade them
 		name = mexico.70.a
+		ai_chance = {
+			factor = 60
+		}
 		activate_mission = MEX_retake_yucatan_mission
 		set_global_flag = MEX_declared_war_on_YUC
 		declare_war_on = {
@@ -4959,6 +5480,9 @@ country_event = { # the Yucatan continues to fight
 	
 	option = { #Two State Solution
 		name = mexico.70.b
+		ai_chance = {
+			factor = 40
+		}
 		add_war_support = 0.02
 		YUC = {
 			if = {
@@ -4968,7 +5492,21 @@ country_event = { # the Yucatan continues to fight
 				white_peace = MEX
 			}
 		}
-		set_country_flag = YUC_indepedence_war_over 
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = YUC
+				}
+			}
+			white_peace = YUC
+		}
+		YUC = {
+			country_event = {
+				id = mexico.66
+				days = 22
+			}
+		}
 	}
 }
 
@@ -4992,6 +5530,12 @@ country_event = { # Yucatan Wins war with Mexico
 
 	option = { #Restore Socialist Mexico
 		name = mexico.700.a
+		trigger = {
+			has_country_leader = {
+				name = "Salvador Alvarado"
+				ruling_only = yes
+			}
+		}
 		hidden_effect = {
 			NSW = {
 				every_army_leader = {
@@ -5019,6 +5563,7 @@ country_event = { # Yucatan Wins war with Mexico
 				change_tag_from = YUC
 			}
 			MEX = {
+				drop_cosmetic_tag = yes
 				create_country_leader = {# Salvador Alvarado
 					name = "Salvador Alvarado"
 					desc = "POLITICS_ALVORADO_DESC"
@@ -5046,12 +5591,24 @@ country_event = { # Yucatan Wins war with Mexico
 					}
 				}
 				set_country_flag = MEX_the_1937_elections_happened
+				set_country_flag = MEX_democracy_survives
 				set_politics = {
 						ruling_party = radical_socialist
 						elections_allowed = yes
 						election_frequency = 60
 					}
+					remove_all_ministers = yes
+					add_ideas = MEX_Pancho_Villa_hog_rso
+			add_ideas = MEX_Francisco_Mendoza_Palma_for_rso
+			add_ideas = MEX_Antonio_Diaz_Soto_y_Gama_eco_rso
+			add_ideas = MEX_Genovevo_de_la_O_sec_rso
 			}	
+			MEX = {
+				annex_country = {
+			target = YUC
+			transfer_troops = yes
+		}
+			}
 		}
 	}
 	
@@ -5065,6 +5622,15 @@ country_event = { # Yucatan Wins war with Mexico
 				}
 				white_peace = MEX
 			}
+		}
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = YUC
+				}
+			}
+			white_peace = YUC
 		}
 		MEX = {
 			country_event = {
@@ -5150,13 +5716,18 @@ country_event = { # Mexico dies
 		name = mexico.702.a
 		MEX_fuck_the_shit_out_of_mexico = yes 
 		set_global_flag = MEXICO_DED
-		hidden_effect = {
-			random_other_country = {
-				news_event = {
-			id =  mexico.72
-			days = 1
+		if = {
+			limit = {
+				has_global_flag = yuc_hes_back_bros
+			}
+			YUC = {
+				transfer_state = 1252
+			}
 		}
-
+		hidden_effect = {
+			news_event = {
+				id =  mexico.72
+				days = 1
 			}
 		}
 	}
@@ -6118,12 +6689,7 @@ country_event = { # Renaming Texas
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = MEX
-		has_government = national_populist
-		controls_state = 375
-		controls_state = 833
-	}
+	is_triggered_only = yes
 	
 	option = { # Tejas it is!
 		name = mexico.102.a
@@ -6146,16 +6712,16 @@ country_event = { # Renaming New Mexico
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = MEX
-		has_government = national_populist
-		controls_state = 376
-	}
+	is_triggered_only = yes
 
 	option = { # Nuevo Mexico
 		name = mexico.103.a
 		376 = {
 			set_state_name = "Nuevo México"
+			set_state_flag = renamed_state_MEX
+		}
+		1161 = {
+			set_state_name = "Este Nuevo México"
 			set_state_flag = renamed_state_MEX
 		}
 	}
@@ -6169,16 +6735,8 @@ country_event = { # Renaming California
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = MEX
-		has_government = national_populist
-		controls_state = 829
-		controls_state = 378
-	}
+	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		months = 12
-	}
 
 	option = { # Alta and Medio Californias
 		name = mexico.104.a
@@ -6279,6 +6837,7 @@ country_event = { # republic or monarchy
 	
 	option = { # restore the monarchy
 		name = mexico.108.b
+		set_cosmetic_tag = MEX_REGENCY
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.03
@@ -6336,6 +6895,500 @@ country_event = { # Garza Given Noble Title
 	}
 }
 
+country_event = { # Bishop Guy Dies
+	id = mexico.1102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mexico.1102" }
+	title = mexico.1102.t
+	desc = mexico.1102.d
+	picture = GFX_report_event_MEX_barreto
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { # press F
+		name = mexico.1102.a
+		clr_country_flag = MEX_Pascual_Diaz_Barreto_Archbishop
+	}
+}
+
+country_event = { # Stephen/John Choose Luís Maria as Arcbishop
+	id = mexico.110
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.110"}
+	title = mexico.110.t
+	desc = mexico.110.d
+	picture = GFX_report_event_MEX_martinez
+	
+	trigger = {
+		NOT = {
+			OR = {
+				has_government = totalist
+				has_country_leader = {
+					name = "Goldshirt Council"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Nicolás Rodríguez Carrasco"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Roque Garza"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Itzcoatl II"
+					ruling_only = yes
+				}
+			}
+		}
+		tag = MEX
+		NOT = {
+			has_country_flag = MEX_Pascual_Diaz_Barreto_Archbishop
+		}
+		OR = {
+			has_global_flag = Pope_John_XXIII
+			has_global_flag = Pope_Stephen_X
+		}
+	}
+
+	fire_only_once = yes
+
+	option = { # yay
+		name = mexico.110.a
+		set_country_flag = MEX_Luis_Maria_Archbishop
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = { # Pius Choose Miguel Dario as Arcbishop
+	id = mexico.111
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.111"}
+	title = mexico.111.t
+	desc = mexico.111.d
+	picture = GFX_report_event_MEX_dario
+	
+	trigger = {
+		NOT = {
+			OR = {
+				has_government = totalist
+				has_country_leader = {
+					name = "Goldshirt Council"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Nicolás Rodríguez Carrasco"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Roque Garza"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Itzcoatl II"
+					ruling_only = yes
+				}
+			}
+		}
+		tag = MEX
+		NOT = {
+			has_country_flag = MEX_Pascual_Diaz_Barreto_Archbishop
+		}
+		has_global_flag = Pope_Pius_XII
+	}
+
+	fire_only_once = yes
+
+	option = { # yay
+		name = mexico.111.a
+		set_country_flag = MEX_Miguel_Dario_Archbishop
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = { # Julis Choose José de Jesús as Arcbishop
+	id = mexico.112
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.112"}
+	title = mexico.112.t
+	desc = mexico.112.d
+	picture = GFX_report_event_MEX_jose_jesus
+	
+	trigger = {
+		NOT = {
+			OR = {
+				has_government = totalist
+				has_country_leader = {
+					name = "Goldshirt Council"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Nicolás Rodríguez Carrasco"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Roque Garza"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Itzcoatl II"
+					ruling_only = yes
+				}
+			}
+		}
+		tag = MEX
+		NOT = {
+			has_country_flag = MEX_Pascual_Diaz_Barreto_Archbishop
+		}
+		has_global_flag = Pope_Julius_IV
+	}
+
+	fire_only_once = yes
+
+	option = { # yay
+		name = mexico.112.a
+		set_country_flag = MEX_Jose_de_Jesus_Archbishop
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = { # Archbishop appointed as head of state for Synarchists
+	id = mexico.114
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.114"}
+	title = mexico.114.t
+	desc = mexico.114.d
+	picture = GFX_report_event_MEX_cathedral
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.114.a
+		
+		if = {
+			limit = {
+				has_country_flag = MEX_Luis_Maria_Archbishop
+			}
+			create_country_leader = {
+				name = "Luis María Martínez"
+				desc = "POLITICS_LUIS_ARCHBISHOP_DESC"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Luis_Maria_Martinez_KX.png"
+				expire = "1965.1.1"
+				ideology = fundementalism_subtype
+				traits = { 
+					MEX_Aloof_Pontificate 
+					MEX_archbishop 
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = mexico.115
+					days = 20
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = MEX_Miguel_Dario_Archbishop
+			}
+			create_country_leader = {
+				name = "Miguel Dario"
+				desc = "POLITICS_DARIO_ARCHBISHOP_DESC"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Miguel_Dario.png"
+				expire = "1965.1.1"
+				ideology = fundementalism_subtype
+				traits = { MEX_archbishop }
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = MEX_Jose_de_Jesus_Archbishop
+			}
+			create_country_leader = {
+				name = "José de Jesús"
+				desc = "POLITICS_JESUS_ARCHBISHOP_DESC"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Jose_de_Jesus.png"
+				expire = "1965.1.1"
+				ideology = fundementalism_subtype
+				traits = { MEX_archbishop }
+			}
+		}
+	}
+	
+	option = { # nay
+		name = mexico.114.b
+
+	}
+}
+
+country_event = { # Martinez does Pro-Democracy Stuff
+	id = mexico.115
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.115"}
+	title = mexico.115.t
+	desc = mexico.115.d
+	picture = GFX_report_event_MEX_martinez_2
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.115.a
+		hidden_effect = {
+			country_event = {
+				id = mexico.116
+				days = 12
+			}
+		}
+	}
+	
+	option = { # nay
+		name = mexico.115.b
+
+	}
+}
+
+country_event = { # Martinez does Pro-Democracy Stuff
+	id = mexico.116
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.116"}
+	title = mexico.116.t
+	desc = mexico.116.d
+	picture = GFX_report_event_MEX_martinez
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.116.a
+		hidden_effect = {
+			country_event = {
+				id = mexico.117
+				days = 12
+			}
+		}
+	}
+	
+	option = { # nay
+		name = mexico.116.b
+
+	}
+}
+
+country_event = { # Martinez restores democracy
+	id = mexico.117
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event mexico.117"
+		hidden_effect = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			set_party_name = {
+				name = MEX_DL_unity_party
+				long_name = MEX_DL_unity_party_long
+				ideology = authoritarian_democrat
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "Luis María Martínez"
+				desc = "POLITICS_LUIS_ARCHBISHOP_DESC"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Luis_Maria_Martinez_KX.png"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {  
+					MEX_archbishop 
+				}
+			}
+			remove_all_ministers = yes
+			add_ideas = {
+				MEX_Manuel_Gomez_Morin_hog_sco
+				MEX_Juan_Lascurian_for_sco
+				MEX_Luis_Montes_de_Oca_eco_sco
+				MEX_Efrain_Gonzalez_Luna_sec_sco
+			}
+			drop_cosmetic_tag = yes
+			set_country_flag = MEX_restored_democracy
+			set_country_flag = elections_every_4_years
+			clr_country_flag = MEX_integralists_in_charge
+			clr_country_flag = MEX_synarchists_in_charge
+			MEX_create_democratic_generals = yes
+			NSW = {
+				random_unit_leader = {
+					limit = { has_id = 9374 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 9373 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94746 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94747 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94736 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94743 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94744 }			
+					remove_unit_leader = yes
+				}
+				every_army_leader = {
+					limit = {
+						has_unit_leader_flag = MEX_rev_leader
+					}
+					set_nationality = MEX
+				}
+			}
+		}
+	}
+	title = mexico.117.t
+	desc = mexico.117.d
+	picture = GFX_report_event_MEX_martinez_3
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # 'Monarchy' Time
+		name = mexico.117.a
+		hidden_effect = {
+			country_event = {
+				id = mexicodemocratic.19
+				days = 11
+			}
+			country_event = {
+				id = mexicodemocratic.140
+				days = 22
+			}
+			country_event = {
+				id = mexicodemocratic.16
+				days = 33
+			}
+		}
+	}
+	
+	option = { # Republic Time
+		name = mexico.117.b
+		hidden_effect = {
+			add_ideas = MEX_asa_resistance_idea
+			set_country_flag = MEX_DL_alliance
+			country_event = {
+				id = mexico.44 
+				days = 5
+			}
+			MEX_create_democratic_generals = yes
+			NSW = {
+				random_unit_leader = {
+					limit = { has_id = 9374 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 9373 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94746 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94747 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94736 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94743 }			
+					remove_unit_leader = yes
+				}
+				random_unit_leader = {
+					limit = { has_id = 94744 }			
+					remove_unit_leader = yes
+				}
+				every_army_leader = {
+					limit = {
+						has_unit_leader_flag = MEX_rev_leader
+					}
+					set_nationality = MEX
+				}
+			}
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.05
+		}
+		create_country_leader = {# Emergency Council
+			name = "Constitutional Committee"
+			picture = "gfx/leaders/MEX/Portrait_Mexico_Emergency_Council.png"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {}
+		}
+		set_party_name = {
+			name = MEX_DL_unity_party
+			long_name = MEX_DL_unity_party_long
+			ideology = authoritarian_democrat
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = mexico.53
+				days = 22
+			}
+		}
+		load_focus_tree = MEX_Democratc_Initial
+	}
+}
+
 
 ### Flavor Events 125 - 199 ###
 country_event = { # Here's the Point is released
@@ -6343,6 +7396,7 @@ country_event = { # Here's the Point is released
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.125"}
 	title = mexico.125.t
 	desc = mexico.125.d
+	picture = GFX_report_event_MEX_heres_the_point
 
 	fire_only_once = yes
 
@@ -6358,6 +7412,7 @@ country_event = { # María Candelaria is released
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.126"}
 	title = mexico.126.t
 	desc = mexico.126.d
+	picture = GFX_report_event_MEX_maria_candelaria
 
 	fire_only_once = yes
 
@@ -6373,6 +7428,7 @@ country_event = { # Wild Flower is released
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.127"}
 	title = mexico.127.t
 	desc = mexico.127.d
+	picture = GFX_report_event_MEX_wild_flower
 
 	fire_only_once = yes
 
@@ -6387,6 +7443,7 @@ country_event = { # Mexican cup 1939
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.128"}
 	title = mexico.128.t
 	desc = mexico.128.d
+	picture = GFX_report_event_MEX_mexican_cup
 
 	fire_only_once = yes
 
@@ -6421,6 +7478,7 @@ country_event = { # Asturias win
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.129"}
 	title = mexico.129.t
 	desc = mexico.129.d
+	picture = GFX_report_event_MEX_mexican_cup
 
 	is_triggered_only = yes
 
@@ -6434,6 +7492,7 @@ country_event = { # Necaxa win
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.130"}
 	title = mexico.130.t
 	desc = mexico.130.d
+	picture = GFX_report_event_MEX_mexican_cup
 
 	is_triggered_only = yes
 
@@ -6447,6 +7506,7 @@ country_event = { # El Santo enters the Ring
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.131"}
 	title = mexico.131.t
 	desc = mexico.131.d
+	picture = GFX_report_event_MEX_el_santo
 
 	fire_only_once = yes
 
@@ -6462,6 +7522,7 @@ country_event = { # 1937 Orizaba earthquake
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.132"}
 	title = mexico.132.t
 	desc = mexico.132.d
+	picture = GFX_report_event_MEX_earthquake
 
 	fire_only_once = yes
 
@@ -6503,6 +7564,7 @@ country_event = { # 1940 El Centro earthquake
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.133"}
 	title = mexico.133.t
 	desc = mexico.133.d
+	picture = GFX_report_event_MEX_earthquake
 
 	fire_only_once = yes
 
@@ -6544,6 +7606,7 @@ country_event = { # 1941 Colima earthquake
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.134"}
 	title = mexico.134.t
 	desc = mexico.134.d
+	picture = GFX_report_event_MEX_earthquake
 
 	fire_only_once = yes
 
@@ -6585,6 +7648,7 @@ country_event = { # Children of Morelia
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.135"}
 	title = mexico.135.t
 	desc = mexico.135.d
+	picture = GFX_report_event_CSA_child_soldiers
 
 	fire_only_once = yes
 
@@ -6615,6 +7679,38 @@ country_event = { # Bohemia Poblana
 		add_political_power = 5
 	}
 }
+country_event = { # Kingo Nonaka
+	id = mexico.137
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.137"}
+	title = mexico.137.t
+	desc = mexico.137.d
+	picture = GFX_kingo
+
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = {
+			has_government = national_populist
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = { #
+		name = mexico.137.a
+		create_corps_commander = {# Kingo Nonaka
+			name = "Kingo Nonaka"
+			#desc = "ARMY_MEX_KINGO_NONAKA_DESC"
+			portrait_path = "gfx/leaders/MEX/Portrait_Mexico_Kingo_Nonaka.png"
+			traits = { commando }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}
 
 ### Golshirts ###
 
@@ -6631,13 +7727,11 @@ country_event = { # goldshirt coup
 
 	option = { #
 		name = mexico.141.a
+		set_global_flag = MEX_maria_ded
 		hidden_effect = {
-			random_other_country = {
-				news_event = {
-			id =  mexico.142
-			days = 1
-		}
-
+			news_event = {
+				id =  mexico.142
+				days = 1
 			}
 			
 			country_event = {
@@ -6764,11 +7858,7 @@ country_event = { # cedillo purge
 		hidden_effect = {
 			country_event = {
 				id = mexico.148
-				days = 11
-			}
-			country_event = {
-				id = mexico.146
-				days = 21
+				days = 5
 			}
 		}
 	}
@@ -6787,6 +7877,12 @@ country_event = { # Señora de las Sombras
 
 	option = { #
 		name = mexico.148.a
+			hidden_effect = {
+			country_event = {
+				id = mexico.158
+				days = 10
+			}
+		}
 		
 	}
 }
@@ -6868,7 +7964,7 @@ country_event = { # santa murete
 		name = mexico.152.a
 		hidden_effect = {
 			country_event = {
-				id = mexico.147
+				id = mexico.146
 				days = 11
 			}
 		}
@@ -6926,10 +8022,11 @@ country_event = { # living dead (rocque)
 			limit = { has_id = 120107 }			
 			remove_unit_leader = yes
 		}
-		
-		country_event = {
-			id = mexico.158
-			days = 20
+		hidden_effect = {
+			country_event = {
+				id = mexico.147
+				days = 5
+			}
 		}
 	}
 }
@@ -6954,8 +8051,8 @@ country_event = { # living dead (carrasco)
 		set_country_flag = MEX_carrasco_dead
 		hidden_effect = {
 			country_event = {
-				id = mexico.158
-				days = 20
+				id = mexico.147
+				days = 5
 			}
 		}
 	}
@@ -7016,7 +8113,7 @@ country_event = { # fire
 		hidden_effect = {
 			country_event = {
 				id = mexico.159
-				days = 10
+				days = 5
 			}
 		}
 	}
@@ -7038,7 +8135,7 @@ country_event = { # radio
 		hidden_effect = {
 			country_event = {
 				id = mexico.160
-				days = 10
+				days = 1
 			}
 		}
 	}
@@ -7060,7 +8157,7 @@ country_event = { # maria iii speaks
 		hidden_effect = {
 			country_event = {
 				id = mexico.161
-				days = 10
+				days = 1
 			}
 		}
 	}
@@ -7077,6 +8174,16 @@ country_event = { # battle of veracruz
 
 	is_triggered_only = yes
 
+	option = { #Maria Wins
+		name = mexico.161.a
+		hidden_effect = {
+			country_event = {
+				id = mexico.163
+				days = 2
+			}
+		}
+	}
+
 	option = { #cedillo wins
 		name = mexico.161.b
 		hidden_effect = {
@@ -7087,15 +8194,7 @@ country_event = { # battle of veracruz
 		}
 	}
 	
-	option = { #
-		name = mexico.161.a
-		hidden_effect = {
-			country_event = {
-				id = mexico.163
-				days = 2
-			}
-		}
-	}
+
 }
 
 country_event = { # battle of veracruz, cedillo wins
@@ -7404,7 +8503,7 @@ country_event = { # battle for mexico city, maria wins
 			logistics_skill = 2
 		}
 		create_field_marshal = {
-			name = "Felix Diaz Prieto"
+			name = "Félix Díaz Prieto"
 			#id = 100002
 			portrait_path = "gfx/leaders/MEX/Portrait_Mexico_Felix_Diaz_Prieto.png"
 			traits = { trait_cautious media_personality politically_connected infantry_leader trickster } 
@@ -7417,7 +8516,7 @@ country_event = { # battle for mexico city, maria wins
 		create_field_marshal = {
 			name = "Porfirio Diaz Jr."
 			#id = 100002
-			portrait_path = "gfx/leaders/MEX/Portrait_Mexico_Porfirio_Diaz_Jr.png"
+			portrait_path = "gfx/leaders/MEX/Portrait_Mexico_Porfirio_Diaz_Ortega.png"
 			traits = { infantry_leader trickster } 
 			skill = 2
 			attack_skill = 2
@@ -7444,14 +8543,9 @@ country_event = { # battle for mexico city, maria wins
 			set_nationality = NSW
 		}
 		load_focus_tree = mexican_focus
-		hidden_effect = {
-			random_other_country = {
-				news_event = {
-			id =  mexico.1731
+		news_event = {
+			id = mexico.1731
 			days = 1
-		}
-
-			}
 		}
 	}
 }
@@ -7542,6 +8636,10 @@ country_event = { #aztec empire restored
 		hidden_effect = {
 			set_country_flag = MEX_mega_super_aztec_larp
 			country_event = {
+					id = nvn.49
+					days = 50
+				}
+			country_event = {
 				id = mexico.176
 				days = 12
 			}
@@ -7557,9 +8655,13 @@ country_event = { #aztec empire restored
 				id = mexico.1771
 				days = 100
 			}
-				country_event = {
+			country_event = {
 				id = mexico.1772
 				days = 125
+			}
+			country_event = {
+				id = mexico.181
+				days = 150
 			}
 			country_event = {
 				id = mexico.284
@@ -7628,15 +8730,33 @@ country_event = { #ally with towner?
 
 	fire_only_once = yes
 	
+	trigger = {
+		has_government = national_populist
+	}
+
+	
 	is_triggered_only = yes
 
 	option = { # a
 		name = mexico.1766.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_foreign_policy
+					option = MEX_FOREIGN_POLICY_JAPAN
+				}
+			}
+		}
 		create_faction = "International Council for the Protection of the Red Race"
 		add_to_faction = ALA
 	}
 	option = { # a
 		name = mexico.1766.b
+		ai_chance = {
+			factor = 1
+		}
 		add_opinion_modifier = { target = ALA modifier = small_increase }
 		ALA = {
 			add_opinion_modifier = { target = MEX modifier = small_increase }
@@ -7644,6 +8764,9 @@ country_event = { #ally with towner?
 	}
 	option = { # a
 		name = mexico.1766.c
+		ai_chance = {
+			factor = 1
+		}
 		create_wargoal = {
 			type = annex_everything
 			target = ALA
@@ -7687,6 +8810,10 @@ country_event = { #Boriga Group
 	picture = GFX_report_event_MEX_codex
 
 	fire_only_once = yes
+	
+	trigger = {
+		has_government = national_populist
+	}
 
 	is_triggered_only = yes
 
@@ -7702,6 +8829,10 @@ country_event = { #New Language
 	picture = GFX_report_event_MEX_nahutl
 
 	fire_only_once = yes
+	
+	trigger = {
+		has_government = national_populist
+	}
 
 	is_triggered_only = yes
 
@@ -7717,6 +8848,10 @@ country_event = { # New Nobility
 	picture = GFX_report_event_MEX_aztec_nobility
 
 	fire_only_once = yes
+	
+	trigger = {
+		has_government = national_populist
+	}
 
 	is_triggered_only = yes
 
@@ -7732,6 +8867,10 @@ country_event = { # Triple Alliance
 	picture = GFX_report_event_MEX_tenochtitlan
 
 	fire_only_once = yes
+	
+	trigger = {
+		has_government = national_populist
+	}
 
 	is_triggered_only = yes
 
@@ -7858,7 +8997,27 @@ country_event = { #fleg
 	option = { # d
 		name = mexico.177.e
 	}
+
+	option = { # d
+		name = mexico.177.j
+		country_event = {
+			id = mexico.17777
+			days = 1
+		}
+	}
 	
+}
+country_event = { #fleg
+	id = mexico.17777
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.177"}
+	title = mexico.177.t
+	desc = mexico.177.d
+	picture = GFX_report_event_MEX_tenochtitlan
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
 	option = { # e
 		name = mexico.177.f
 		set_cosmetic_tag = MEX_AZTEC_EMPIRE2
@@ -7874,6 +9033,13 @@ country_event = { #fleg
 	option = { # h
 		name = mexico.177.i
 		set_cosmetic_tag = MEX_AZTEC_EMPIRE8
+	}
+	option = { # d
+		name = mexico.177.j
+		country_event = {
+			id = mexico.177
+			days = 1
+		}
 	}
 }
 country_event = { # goldshirt woman
@@ -7923,6 +9089,649 @@ country_event = { # texaco allies
 	option = { # a
 		name = mexico.180.a
 		add_stability = 0.1
+	}
+}
+
+country_event = { # mexicali movement
+	id = mexico.181
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.181"}
+	title = mexico.181.t
+	desc = mexico.181.d
+	picture = GFX_report_event_MEX_mexicayotl_movement
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # do nothing
+		name = mexico.181.a
+		add_stability = -0.01
+	}
+	
+	option = { # do nothing
+		name = mexico.181.b
+		add_manpower = -40
+		add_political_power = 50
+		hidden_effect = {
+			country_event = {
+				id = mexico.182
+				days = 22
+			}
+		}
+	}
+}
+
+country_event = { # mexicali movement takes power
+	id = mexico.182
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.182"}
+	title = mexico.182.t
+	desc = mexico.182.d
+	picture = GFX_report_event_MEX_mexicayotl_eagle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # do nothing
+		name = mexico.182.a
+		add_stability = 0.01
+		add_popularity = {
+			popularity = 0.02
+			ideology = national_populist
+		}	
+		hidden_effect = {
+			country_event = {
+				id = mexico.183
+				days = 2
+			}
+		}
+	}
+	
+	option = { # do nothing
+		name = mexico.182.b
+		add_manpower = -40
+		add_political_power = 50
+		hidden_effect = {
+			country_event = {
+				id = mexico.184
+				days = 2
+			}
+		}
+		set_country_flag = MEX_Kahlo_Leads
+	}
+}
+
+country_event = { # mexicali movement defeated
+	id = mexico.183
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.183"}
+	title = mexico.183.t
+	desc = mexico.183.d
+	picture = GFX_report_event_MEX_kahlo_rivera_dead
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.183.a
+		add_stability = 0.01
+
+	}
+}
+
+country_event = { # mexicali movement takes power
+	id = mexico.184
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.184"}
+	title = mexico.184.t
+	desc = mexico.184.d
+	picture = GFX_report_event_MEX_aztec_icon
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.184.a
+		add_stability = 0.01
+		create_country_leader = {
+			name = "Frida Kahlo"
+			desc = "POLITICS_KAHLO_DESC"
+			picture = "gfx/leaders/MEX/Portrait_Mexico_Frida_Kahlo.png"
+			expire = "1965.1.1"
+			ideology = mexicayotlism_subtype
+			traits = {  }
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.06
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = yes
+		}
+		set_party_name = {
+			name = MEX_kahlo_party
+			long_name = MEX_kahlo_party_long
+			ideology = radical_socialist
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			MEX_Pancho_Villa_hog_rso
+			MEX_Juana_Belen_Gutierrez_de_Mendoza_for_rso
+			MEX_Lazaro_Cardenas_eco_rso
+			MEX_Ricardo_Flores_Magon_sec_syn
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+		every_army_leader = {
+			limit = {
+				has_trait = mex_gold_shirt
+			}
+			set_nationality = NSW
+		}
+		NSW = {
+			every_army_leader = {
+				limit = {
+					has_unit_leader_flag = MEX_rev_leader
+				}
+				set_nationality = MEX
+			}
+		}
+		set_cosmetic_tag = MEX_AZTEC_EMPIRE #im too lazy to adjust for the other 8 flags
+	}
+	
+	option = { # yay
+		name = mexico.184.b
+		add_stability = 0.01
+		create_country_leader = {
+			name = "Frida Kahlo"
+			desc = "POLITICS_KAHLO_DESC"
+			picture = "gfx/leaders/MEX/Portrait_Mexico_Frida_Kahlo.png"
+			expire = "1965.1.1"
+			ideology = mexicayotlism_subtype
+			traits = {  }
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.06
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = yes
+		}
+		set_party_name = {
+			name = MEX_kahlo_party
+			long_name = MEX_kahlo_party_long
+			ideology = radical_socialist
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			MEX_Pancho_Villa_hog_rso
+			MEX_Juana_Belen_Gutierrez_de_Mendoza_for_rso
+			MEX_Lazaro_Cardenas_eco_rso
+			MEX_Ricardo_Flores_Magon_sec_syn
+		}
+		every_army_leader = {
+			limit = {
+				has_trait = mex_gold_shirt
+			}
+			set_nationality = NSW
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+		every_army_leader = {
+			limit = {
+				has_trait = mex_gold_shirt
+			}
+			set_nationality = NSW
+		}
+		NSW = {
+			every_army_leader = {
+				limit = {
+					has_unit_leader_flag = MEX_rev_leader
+				}
+				set_nationality = MEX
+			}
+		}
+		set_cosmetic_tag = MEX_AZTEC_EMPIRE2 #im too lazy to adjust for the other 8 flags
+	}
+}
+
+country_event = { # kahlo monarchy
+	id = mexico.185
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.185"}
+	title = mexico.185.t
+	desc = mexico.185.d
+	picture = GFX_report_event_MEX_frida_matriarch
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.185.a
+		increase_ruling_party_popularity_by_3 = yes
+		add_stability = 0.02
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.186
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.186"}
+	title = mexico.186.t
+	desc = mexico.186.d
+	picture = GFX_report_event_MEX_great_toltecatl
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.186.a
+		add_political_power = 50
+		
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.187
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.187"}
+	title = mexico.187.t
+	desc = mexico.187.d
+	picture = GFX_report_event_MEX_mictlan
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.187.a
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.06
+		}
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.188
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.188"}
+	title = mexico.188.t
+	desc = mexico.188.d
+	picture = GFX_report_event_MEX_mural
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.188.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.03
+		}	
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.189
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.189"}
+	title = mexico.189.t
+	desc = mexico.189.d
+	picture = GFX_report_event_YUC_maya_mask
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.189.a
+		add_command_power = 10
+		add_stability = 0.03
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.190
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.190"}
+	title = mexico.190.t
+	desc = mexico.190.d
+	picture = GFX_report_event_MEX_purepecha
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.190.a
+		add_war_support = -0.01
+		add_political_power = 50
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.191
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.191"}
+	title = mexico.191.t
+	desc = mexico.191.d
+	picture = GFX_report_event_MEX_juana_belen_gutierrez
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.191.a
+		increase_ruling_party_popularity_by_3 = yes
+		add_political_power = 125
+		add_stability = -0.03
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.192
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.192"}
+	title = mexico.192.t
+	desc = mexico.192.d
+	picture = GFX_report_event_MEX_tecuichpoch
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.192.a
+		add_manpower = 2000
+		add_political_power = 10
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.193
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.193"}
+	title = mexico.193.t
+	desc = mexico.193.d
+	picture = GFX_report_event_MEX_montazum
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.193.a
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.01
+		}
+		add_stability = 0.02
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.194
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.194"}
+	title = mexico.194.t
+	desc = mexico.194.d
+	picture = GFX_report_event_MEX_mexican_anarchist
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.194.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.04
+		}	
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.04
+		}
+		add_stability = 0.04
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.195
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.194"}
+	title = mexico.195.t
+	desc = mexico.195.d
+	picture = GFX_report_event_MEX_chicano_nationalism
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.195.a
+		add_political_power = 50
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.196
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.196"}
+	title = mexico.196.t
+	desc = mexico.196.d
+	picture = GFX_fate_of_the_church
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.196.a
+		add_stability = -0.02
+		add_political_power = 10
+	}
+	
+	option = { # yay
+		name = mexico.196.b
+		add_stability = 0.02
+		add_political_power = -10
+	}
+}
+
+country_event = { # Elections of 1937
+	id = mexico.197
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.197"}
+	title = mexico.197.t
+	desc = mexico.197.d
+
+	picture = GFX_report_event_MEX_mexico_election
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		has_socialist_government = yes
+		NOT = {
+			has_country_flag = MEX_the_1937_elections_happened
+		}
+	} 
+
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Frida Kahlo"
+				desc = "POLITICS_KAHLO_DESC"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Frida_Kahlo.png"
+				expire = "1965.1.1"
+				ideology = socdem_mexicayotlism_subtype
+				traits = {  }
+			}
+			set_country_flag = soc_dems_are_socialists
+			create_country_leader = {
+				name = "Frida Kahlo"
+				desc = "POLITICS_KAHLO_DESC"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Frida_Kahlo.png"
+				expire = "1965.1.1"
+				ideology = syn_mexicayotlism_subtype
+				traits = {  }
+			}
+			create_country_leader = {
+				name = "Frida Kahlo"
+				desc = "POLITICS_KAHLO_DESC"
+				picture = "gfx/leaders/MEX/Portrait_Mexico_Frida_Kahlo.png"
+				expire = "1965.1.1"
+				ideology = tot_mexicayotlism_subtype
+				traits = {  }
+			}
+		}
+	}
+
+	option = { # Tot
+		name = mexico.197.e
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			set_country_flag = MEX_the_1937_elections_happened
+		}
+		set_country_flag = MEX_democracy_survives
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = yes
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = MEX_Vicente_Lombardo_Toledano_hog_tot
+	}
+	
+	option = { # Synd
+		name = mexico.197.c
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			set_country_flag = MEX_the_1937_elections_happened
+		}
+		set_country_flag = MEX_democracy_survives
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.20
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = yes
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = MEX_Gerardo_Murillo_Cornado_hog_syn
+	}
+	option = { # Villa
+		name = mexico.197.b
+		ai_chance = {
+			factor = 25
+
+		}
+
+		hidden_effect = {
+			set_country_flag = MEX_the_1937_elections_happened
+		}
+
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+		
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = yes
+		}
+	}
+	option = { # Rubio	
+		name = mexico.197.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_TOTALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_SYNDICALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_RADICAL_SOCIALIST
+					}
+					has_game_rule = {
+						rule = MEX_post_assassination
+						option = MEX_POST_ASSASSINATION_ELECTION_COMMUNIST
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = MEX_the_1937_elections_happened
+		}
+		set_country_flag = MEX_democracy_survives
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.20
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = MEX_Pascual_Ortiz_Rubio_hog_sde
+	}
+}
+
+country_event = { # kahlo flavour
+	id = mexico.198
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.198"}
+	title = mexico.198.t
+	desc = mexico.198.d
+	picture = GFX_report_event_MEX_artist_hoe
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # yay
+		name = mexico.198.a
+		add_political_power = -50
+		add_stability = -0.01
+		increase_ruling_party_popularity_by_3 = yes
 	}
 }
 
@@ -8579,7 +10388,7 @@ country_event = {
 	option = {
 		name = mexicodemocratic.5.b
 		ai_chance = { factor = 1}
-		add_stability = 0.5
+		add_stability = 0.05
 		army_experience = 10 
 		country_event = { days = 7 id = mexicodemocratic.6 }
 	}
@@ -8670,7 +10479,14 @@ country_event = {
 	option = {
 		name = mexicodemocratic.9.a
 		ai_chance = { factor = 1}
-		set_cosmetic_tag = MEX_unitary_cosmetic
+		if = {
+			limit = {
+				NOT = {
+					has_cosmetic_tag = MEX_REGENCY
+				}
+			}
+			set_cosmetic_tag = MEX_unitary_cosmetic
+		}
 		add_stability = -0.05
 		add_political_power = 200
 		country_event = { days = 7 id = mexicodemocratic.10 }
@@ -8735,7 +10551,7 @@ country_event = {
 		ai_chance = { factor = 1}
 		set_country_flag = mexican_monarchy
 		set_country_flag = new_constitution
-			hidden_effect = {
+		hidden_effect = {
 			if = {
 				limit = {
 					has_country_flag = weak_executive
@@ -8754,7 +10570,11 @@ country_event = {
 					days = 2
 				}
 			}
+			country_event = {
+				id = mexico.2424
+				days = 122
 			}	
+		}
 	}
 }
 
@@ -8820,7 +10640,41 @@ country_event = {
 		name = mexicodemocratic.14.b
 		load_focus_tree = mexican_focus
 		MEX_create_constitutional_monarchy = yes
-		set_cosmetic_tag = MEE
+		if = {
+			limit = {
+				has_country_flag = MEX_cristero_victory_very_cool
+			}
+			set_cosmetic_tag = MEE_moctemzuma	
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = MEX_cristero_victory_very_cool
+				}
+			}
+			set_cosmetic_tag = MEE	
+		}
+	}
+}
+
+##Event: Constitutional Monarchy
+country_event = {
+	id = mexicodemocratic.140
+	title = mexicodemocratic.140.title
+	desc = mexicodemocratic.140.desc
+	picture = GFX_report_event_MEX_martinez_coat_of_arms
+
+	is_triggered_only = yes
+
+	
+	option = {
+		name = mexicodemocratic.140.a
+		load_focus_tree = mexican_focus
+		ai_chance = { factor = 1}
+		MEX_create_democratic_archbishop = yes
+		set_cosmetic_tag = MEX_bishop_tag
+		set_country_flag = mexican_monarchy
+		add_ideas = MEX_DL_the_prince_archbishopric_of_mexico
 	}
 }
 
@@ -8863,11 +10717,11 @@ country_event = {
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "María Josephia Sophia I"
+						name = "María I"
 						ruling_only = yes
 					}
 				}
-				set_country_flag = LEADER_GUI_VISIBLE
+				
 			}
 		}
 	}
@@ -9005,12 +10859,12 @@ country_event = {
 	}
 }
 
-##Event: PRI
+##Event: PCP
 country_event = {
 	id = mexicodemocratic.22
 	title = mexicodemocratic.22.title
 	desc = mexicodemocratic.22.desc
-	picture = GFX_MCwRbpqF
+	picture = GFX_PCP
 	is_triggered_only = yes
 	fire_only_once = yes
 	major = yes
@@ -9054,10 +10908,11 @@ country_event = {
 	title = mexicodemocratic.27.title
 	desc = mexicodemocratic.27.desc
 	picture = GFX_a_clandestine_meeting
-	is_triggered_only = yes
+
 	fire_only_once = yes
-	major = yes
+
 	trigger = {
+		tag = MEX
 		date > 1937.3.3
 		OR = {
 			has_government = authoritarian_democrat
@@ -9081,7 +10936,7 @@ country_event = {
 	picture = GFX_a_promising_proposal
 	is_triggered_only = yes
 	fire_only_once = yes
-	major = yes
+
 	option = {
 		name = mexicodemocratic.28.a
 		ai_chance = { factor = 1}
@@ -9097,7 +10952,7 @@ country_event = {
 	picture = GFX_a_great_betrayal
 	is_triggered_only = yes
 	fire_only_once = yes
-	major = yes
+
 	option = {
 		name = mexicodemocratic.29.a
 		ai_chance = { factor = 1}
@@ -9113,9 +10968,19 @@ country_event = {
 	picture = GFX_a_deal_born_in_blood
 	is_triggered_only = yes
 	fire_only_once = yes
-	major = yes
+
 	option = {
 		name = mexicodemocratic.30.a
+		hidden_effect = {
+			create_country_leader = { # Manuel Perez Treviño
+			name = "Manuel Perez Treviño"
+			desc = "POLITICS_ABELARDO_RODRIGUEZ"
+			picture = "gfx/leaders/MEX/Portrait_Mexico_Manuel_Trevibno.png"
+			expire = "1965.1.1"
+			ideology = maximato_subtype
+			traits = {}
+		}
+		}
 		ai_chance = { factor = 1}
 		add_popularity = {ideology = totalist popularity = -1.0}
 		add_popularity = {ideology = social_democrat popularity = 0.05}
@@ -9128,10 +10993,11 @@ country_event = {
 	title = mexicodemocratic.31.title
 	desc = mexicodemocratic.31.desc
 	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
+
 	fire_only_once = yes
-	major = yes
+
 	trigger = {
+		tag = MEX
 		date > 1937.5.6
 		OR = {
 			has_government = authoritarian_democrat
@@ -9191,7 +11057,7 @@ country_event = {
 	option = {
 		name = mexicodemocratic.34.a
 		ai_chance = { factor = 1}
-		add_war_support = 10
+		add_war_support = 0.03
 	}
 }
 
@@ -9201,10 +11067,11 @@ country_event = {
 	title = mexicodemocratic.35.title
 	desc = mexicodemocratic.35.desc
 	picture = GFX_business_scandal_
-	is_triggered_only = yes
+
 	fire_only_once = yes
 	major = yes
 	trigger = {
+		tag = MEX
 		date > 1937.6.9
 		OR = {
 			has_government = social_liberal
@@ -9283,10 +11150,11 @@ country_event = {
 	title = mexicodemocratic.39.title
 	desc = mexicodemocratic.39.desc
 	picture = GFX_unams_dilema
-	is_triggered_only = yes
+
 	fire_only_once = yes
-	major = yes
+
 	trigger = {
+		tag = MEX
 		date > 1937.9.17
 		OR = {
 			has_government = social_liberal
@@ -9347,6 +11215,7 @@ country_event = {
 		name = mexicodemocratic.42.a
 		ai_chance = { factor = 1}
 		add_stability = 0.05
+		add_research_slot = 1
 	}
 }
 
@@ -9370,6 +11239,13 @@ country_event = {
 		name = mexico_req.9.b
 		ai_chance = {
 			factor = 30
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_PEACE
+				}
+			}
 		}
 		add_state_claim = 375 #Northern Texas
 					add_state_claim = 376 #New Mexico
@@ -9393,7 +11269,24 @@ country_event = {
 	option = { ###Let's not claim anything and be nice
 		name = mexico_req.9.c
 		ai_chance = {
-			factor = 10
+			factor = 70
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_CEDE
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_WAR
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_FEDS
+					}
+				}
+			}
 		}
 		add_political_power = -40
 		set_country_flag = MEX_Peace
@@ -9412,7 +11305,33 @@ country_event = { ####American Reaction
 	option = { ### Cede Territories
 		name = mexico_req.10.a
 		ai_chance = {
-			factor = 10
+			factor = 25
+			modifier = {
+				factor = 0
+				AND =  {
+					NOT = { 
+						has_game_rule = {
+							rule = MEX_reconquista_path
+							option = MEX_RECONQUISTA_PATH_CEDE
+						}
+					}
+					MEX = { is_ai = yes }
+					USA = { is_ai = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_WAR
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_FEDS
+					}
+				}
+			}
 		}
 		add_political_power = -400
 		MEX = {
@@ -9499,7 +11418,20 @@ country_event = { ####American Reaction
 	option = { ### NEVER!!!!
 		name = mexico_req.10.b
 		ai_chance = {
-			factor = 60
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_CEDE
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_FEDS
+					}
+				}
+			}
 		}
 		MEX = {
 			country_event = {
@@ -9512,6 +11444,32 @@ country_event = { ####American Reaction
 		name = mexico_req.10.c
 		ai_chance = {
 			factor = 30
+			modifier = {
+				factor = 0
+				AND =  {
+					NOT = {
+						has_game_rule = {
+							rule = MEX_reconquista_path
+							option = MEX_RECONQUISTA_PATH_FEDS
+						}
+					}
+					MEX = { is_ai = yes }
+					USA = { is_ai = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_CEDE
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_WAR
+					}
+				}
+			}
 		}
 		MEX = {
 			country_event = {
@@ -9537,13 +11495,13 @@ country_event = { #####American Offer
 		ai_chance = {
 			factor = 55
 		}
-		declare_war_on = {
+		create_wargoal = {
+			type = annex_everything
 			target = TEX
-			type = annex_everything
 		}
-		declare_war_on = {
-			target = CAL
+		create_wargoal = {
 			type = annex_everything
+			target = CAL
 		}
 		diplomatic_relation = {
 			country = WCC
@@ -9560,6 +11518,13 @@ country_event = { #####American Offer
 		name = mexico_req.110.b
 		ai_chance = {
 			factor = 45
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_FEDS
+				}
+			}
 		}
 		MEX = {
 			country_event = {
@@ -9672,10 +11637,17 @@ country_event = { #####Hold Up Our End?
 		name = mexico_req.111.b
 		ai_chance = {
 			factor = 15
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_FEDS
+				}
+			}
 		}
-		declare_war_on = {
-			target = MEX
+		create_wargoal = {
 			type = annex_everything
+			target = MEX
 		}
 		add_political_power = -100
 	}
@@ -9696,9 +11668,9 @@ country_event = { #####Americans refuse
 		ai_chance = {
 			factor = 55
 		}
-		declare_war_on = {
-			target = WCC
+		create_wargoal = {
 			type = annex_everything
+			target = WCC
 		}
 		set_country_flag = MEX_Reconquista
 		add_political_power = 100
@@ -9712,6 +11684,13 @@ country_event = { #####Americans refuse
 		name = mexico_req.11.b
 		ai_chance = {
 			factor = 45
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_WAR
+				}
+			}
 		}
 		add_political_power = -20
 	}
@@ -9772,6 +11751,13 @@ country_event = { #####mexicans demand texas
 		name = mexico_req.120.a
 		ai_chance = {
 			factor = 90
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_CEDE
+				}
+			}
 		}
 		add_political_power = 40
 		MEX = {
@@ -9784,80 +11770,100 @@ country_event = { #####mexicans demand texas
 	option = { ###we have no choice
 		ai_chance = {
 			factor = 10
+			modifier = {
+				factor = 0
+				AND =  {
+					NOT = {
+						has_game_rule = {
+							rule = MEX_reconquista_path
+							option = MEX_RECONQUISTA_PATH_CEDE
+						}
+					}
+					MEX = { is_ai = yes }
+					USA = { is_ai = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_WAR
+				}
+			}
 		}
 		name = mexico_req.120.a
 		add_political_power = -100
 		MEX = {
 			if = { 
-				limit = { 375 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 375 = { is_controlled_by = TEX } } 
 				MEX = {	transfer_state = 375 }
 			}
 			if = { 
-				limit = { 376 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 376 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 376 }
 			}
 			if = { 
-				limit = { 1161 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 1161 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 1161 }
 			}
 			if = { 
-				limit = { 377 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 377 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 377 }
 			}
 			if = { 
-				limit = { 378 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 378 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 378 }
 			}
 			if = { 
-				limit = { 379 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 379 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 379 }
 			}
 			if = { 
-				limit = { 1165 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 1165 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 1165 }
 			}
 			if = { 
-				limit = { 797 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 797 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 797 }
 			}	
 			if = { 
-				limit = { 798 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 798 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 798 }
 			}
 			if = { 
-				limit = { 829 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 829 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 829 }
 			}
 			if = { 
-				limit = { 1096 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 1096 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 1096 }
 			}
 			if = { 
-				limit = { 833 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 833 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 833 }
 			}
 			if = { 
-				limit = { 1174 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 1174 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 1174 }
 			}
 			if = { 
-				limit = { 380 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 380 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 380 }
 			}
 			if = { 
-				limit = { 1096 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 1096 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 1096 }
 			}
 			if = { 
-				limit = { 1165 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 1165 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 1165 }
 			}
 			if = { 
-				limit = { 1175 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 1175 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 1175 }
 			}
 			if = { 
-				limit = { 1166 = { OR = { is_controlled_by = USA is_controlled_by = WCC } } } 
+				limit = { 1166 = { is_controlled_by = TEX  } } 
 				MEX = {	transfer_state = 1166 }
 			}
 		}
@@ -9880,9 +11886,9 @@ country_event = { #####Americans refuse
 		ai_chance = {
 			factor = 55
 		}
-		declare_war_on = {
-			target = TEX
+		create_wargoal = {
 			type = annex_everything
+			target = TEX
 		}
 		set_country_flag = MEX_Reconquista
 		add_political_power = 100
@@ -9896,6 +11902,19 @@ country_event = { #####Americans refuse
 		name = mexico_req.121.b
 		ai_chance = {
 			factor = 45
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_FEDS
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_WAR
+					}
+				}
+			}
 		}
 		add_political_power = -20
 	}
@@ -9914,16 +11933,16 @@ country_event = { ##### Send Peace offer?
 		tag = MEX
 		has_war_with = USA
 		has_completed_focus = MEX_Reconquista
+		has_global_flag = USA_civil_war_begun_flag
 		NOT = { has_country_flag = MEX_asked_USA_for_peace }
 		controls_all_owned_states = yes
-		USA = { surrender_progress > 0.50 }
 		# control at least three of the bordering USA states
 		count_triggers = {
 			amount = 3
 			798 = { is_owned_by = USA is_controlled_by = MEX } #Los Angeles
 			829 = { is_owned_by = USA is_controlled_by = MEX } #Southern California
-			1096 = { is_owned_by = USA is_controlled_by = MEX } #Tucson
-			1096 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
+			1096 = { is_owned_by = USA is_controlled_by = MEX } #Rio Grande
+			1166 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
 			833 = { is_owned_by = USA is_controlled_by = MEX } #Southern Texas
 		}
 	}
@@ -9936,15 +11955,16 @@ country_event = { ##### Send Peace offer?
 				amount = 5
 				798 = { is_owned_by = USA is_controlled_by = MEX } #Los Angeles
 				829 = { is_owned_by = USA is_controlled_by = MEX } #Southern California
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Tucson
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
+				1096 = { is_owned_by = USA is_controlled_by = MEX } #Rio Grande
+				1166 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
 				833 = { is_owned_by = USA is_controlled_by = MEX } #Southern Texas
 				375 = { is_owned_by = USA is_controlled_by = MEX } #Northern Texas
 				376 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
+				1161 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
 				377 = { is_owned_by = USA is_controlled_by = MEX } #Arizona
 				378 = { is_owned_by = USA is_controlled_by = MEX } #Northern California
 				379 = { is_owned_by = USA is_controlled_by = MEX } #Nevada
-				1165 = { is_owned_by = USA is_controlled_by = MEX } #reno
+				1165 = { is_owned_by = USA is_controlled_by = MEX } #Reno
 				797 = { is_owned_by = USA is_controlled_by = MEX } #San Francisco
 			}
 		}
@@ -9954,15 +11974,16 @@ country_event = { ##### Send Peace offer?
 				amount = 7
 				798 = { is_owned_by = USA is_controlled_by = MEX } #Los Angeles
 				829 = { is_owned_by = USA is_controlled_by = MEX } #Southern California
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Tucson
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
+				1096 = { is_owned_by = USA is_controlled_by = MEX } #Rio Grande
+				1166 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
 				833 = { is_owned_by = USA is_controlled_by = MEX } #Southern Texas
 				375 = { is_owned_by = USA is_controlled_by = MEX } #Northern Texas
 				376 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
+				1161 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
 				377 = { is_owned_by = USA is_controlled_by = MEX } #Arizona
 				378 = { is_owned_by = USA is_controlled_by = MEX } #Northern California
 				379 = { is_owned_by = USA is_controlled_by = MEX } #Nevada
-				1165 = { is_owned_by = USA is_controlled_by = MEX }
+				1165 = { is_owned_by = USA is_controlled_by = MEX } #Reno
 				797 = { is_owned_by = USA is_controlled_by = MEX } #San Francisco
 			}
 		}
@@ -9972,15 +11993,16 @@ country_event = { ##### Send Peace offer?
 				amount = 9
 				798 = { is_owned_by = USA is_controlled_by = MEX } #Los Angeles
 				829 = { is_owned_by = USA is_controlled_by = MEX } #Southern California
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Tucson
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
+				1096 = { is_owned_by = USA is_controlled_by = MEX } #Rio Grande
+				1166 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
 				833 = { is_owned_by = USA is_controlled_by = MEX } #Southern Texas
 				375 = { is_owned_by = USA is_controlled_by = MEX } #Northern Texas
 				376 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
+				1161 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
 				377 = { is_owned_by = USA is_controlled_by = MEX } #Arizona
 				378 = { is_owned_by = USA is_controlled_by = MEX } #Northern California
 				379 = { is_owned_by = USA is_controlled_by = MEX } #Nevada
-				1165 =  { is_owned_by = USA is_controlled_by = MEX }
+				1165 =  { is_owned_by = USA is_controlled_by = MEX } #Reno
 				797 = { is_owned_by = USA is_controlled_by = MEX } #San Francisco
 			}
 		}
@@ -10018,10 +12040,6 @@ country_event = { ##### mexico_req Sent Peace Offer
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		has_war_with = MEX
-	}
-
 	option = { ###Accept Peace Offer
 		name = mexico_req.14.a
 		ai_chance = {
@@ -10035,8 +12053,8 @@ country_event = { ##### mexico_req Sent Peace Offer
 					OR = {
 						state = 798 #Los Angeles
 						state = 829 #Southern California
-						state = 1096 #Tucson
-						state = 1096 #Trans-Pecos
+						state = 1096 #Rio Grande
+						state = 1166 #Trans-Pecos
 						state = 833 #Southern Texas
 						AND = {
 							state = 797 #San Francisco
@@ -10052,6 +12070,7 @@ country_event = { ##### mexico_req Sent Peace Offer
 						}
 						AND = {
 							state = 376 #New Mexico
+							state = 1161 #New Mexico
 							OR = {
 								1096 = { is_owned_by = USA is_controlled_by = MEX }
 								1096 = { is_owned_by = USA is_controlled_by = MEX }
@@ -10103,10 +12122,6 @@ country_event = { ##### Americans Accept
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		has_war_with = USA
-	}
-
 	option = { ###Hooray
 		name = mexico_req.15.a
 		ai_chance = {
@@ -10114,6 +12129,15 @@ country_event = { ##### Americans Accept
 		}
 		clr_country_flag = MEX_Reconquista
 		add_political_power = 100
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = USA
+				}
+			}
+				white_peace = USA
+		}
 		USA = {
 			white_peace_with_ROOT = yes
 			every_owned_state = {
@@ -10122,8 +12146,8 @@ country_event = { ##### Americans Accept
 					OR = {
 						state = 798 #Los Angeles
 						state = 829 #Southern California
-						state = 1096 #Tucson
-						state = 1096 #Trans-Pecos
+						state = 1096 #Rio Grande
+						state = 1166 #Trans-Pecos
 						state = 833 #Southern Texas
 						AND = {
 							state = 797 #San Francisco
@@ -10139,6 +12163,7 @@ country_event = { ##### Americans Accept
 						}
 						AND = {
 							state = 376 #New Mexico
+							state = 1161 #New Mexico
 							OR = {
 								1096 = { is_owned_by = USA is_controlled_by = MEX }
 								1096 = { is_owned_by = USA is_controlled_by = MEX }
@@ -10177,14 +12202,13 @@ country_event = { ##### Send Peace offer?
 		has_completed_focus = MEX_Reconquista
 		NOT = { has_country_flag = MEX_asked_USA_for_peace }
 		controls_all_owned_states = yes
-		USA = { surrender_progress > 0.50 }
 		# control at least three of the bordering USA states
 		count_triggers = {
 			amount = 3
 			798 = { is_owned_by = USA is_controlled_by = MEX } #Los Angeles
 			829 = { is_owned_by = USA is_controlled_by = MEX } #Southern California
-			1096 = { is_owned_by = USA is_controlled_by = MEX } #Tucson
-			1096 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
+			1096 = { is_owned_by = USA is_controlled_by = MEX } #Rio Grande
+			1166 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
 			833 = { is_owned_by = USA is_controlled_by = MEX } #Southern Texas
 		}
 		# and at least six overall
@@ -10192,11 +12216,12 @@ country_event = { ##### Send Peace offer?
 			amount = 6
 			798 = { is_owned_by = USA is_controlled_by = MEX } #Los Angeles
 			829 = { is_owned_by = USA is_controlled_by = MEX } #Southern California
-			1096 = { is_owned_by = USA is_controlled_by = MEX } #Tucson
-			1096 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
+			1096 = { is_owned_by = USA is_controlled_by = MEX } #Rio Grande
+			1166 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
 			833 = { is_owned_by = USA is_controlled_by = MEX } #Southern Texas
 			375 = { is_owned_by = USA is_controlled_by = MEX } #Northern Texas
 			376 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
+			1161 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
 			377 = { is_owned_by = USA is_controlled_by = MEX } #Arizona
 			378 = { is_owned_by = USA is_controlled_by = MEX } #Northern California
 			379 = { is_owned_by = USA is_controlled_by = MEX } #Nevada
@@ -10213,11 +12238,12 @@ country_event = { ##### Send Peace offer?
 				amount = 8
 				798 = { is_owned_by = USA is_controlled_by = MEX } #Los Angeles
 				829 = { is_owned_by = USA is_controlled_by = MEX } #Southern California
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Tucson
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
+				1096 = { is_owned_by = USA is_controlled_by = MEX } #Rio Grande
+				1166 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
 				833 = { is_owned_by = USA is_controlled_by = MEX } #Southern Texas
 				375 = { is_owned_by = USA is_controlled_by = MEX } #Northern Texas
 				376 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
+				1161 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
 				377 = { is_owned_by = USA is_controlled_by = MEX } #Arizona
 				378 = { is_owned_by = USA is_controlled_by = MEX } #Northern California
 				379 = { is_owned_by = USA is_controlled_by = MEX } #Nevada
@@ -10231,11 +12257,12 @@ country_event = { ##### Send Peace offer?
 				amount = 10
 				798 = { is_owned_by = USA is_controlled_by = MEX } #Los Angeles
 				829 = { is_owned_by = USA is_controlled_by = MEX } #Southern California
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Tucson
-				1096 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
+				1096 = { is_owned_by = USA is_controlled_by = MEX } #Rio Grande
+				1166 = { is_owned_by = USA is_controlled_by = MEX } #Trans-Pecos
 				833 = { is_owned_by = USA is_controlled_by = MEX } #Southern Texas
 				375 = { is_owned_by = USA is_controlled_by = MEX } #Northern Texas
 				376 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
+				1161 = { is_owned_by = USA is_controlled_by = MEX } #New Mexico
 				377 = { is_owned_by = USA is_controlled_by = MEX } #Arizona
 				378 = { is_owned_by = USA is_controlled_by = MEX } #Northern California
 				379 = { is_owned_by = USA is_controlled_by = MEX } #Nevada
@@ -10275,9 +12302,6 @@ country_event = { ##### mexico_req Sent Peace Offer
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		has_war_with = MEX
-	}
 
 	option = { ###Accept Peace Offer
 		name = mexico_req.17.a
@@ -10295,8 +12319,8 @@ country_event = { ##### mexico_req Sent Peace Offer
 					OR = {
 						state = 798 #Los Angeles
 						state = 829 #Southern California
-						state = 1096 #Tucson
-						state = 1096 #Trans-Pecos
+						state = 1096 #Rio Grande
+						state = 1166 #Trans-Pecos
 						state = 833 #Southern Texas
 						AND = {
 							state = 797 #San Francisco
@@ -10315,17 +12339,18 @@ country_event = { ##### mexico_req Sent Peace Offer
 						AND = {
 							state = 377 #Arizona
 							OR = {
-								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Tucson
+								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Rio Grande
 								1096 = { is_owned_by = USA is_controlled_by = MEX }
 							}
 						}
 						AND = {
 							state = 376 #New Mexico
+							state = 1161 #New Mexico
 							OR = {
-								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Tucson
-								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Trans-Pecos
+								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Rio Grande
+								1166 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Trans-Pecos
 								1096 = { is_owned_by = USA is_controlled_by = MEX }
-								1096 = { is_owned_by = USA is_controlled_by = MEX }
+								1166 = { is_owned_by = USA is_controlled_by = MEX }
 							}
 						}
 						AND = {
@@ -10383,9 +12408,7 @@ country_event = { ##### Americans Accept
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		has_war_with = USA
-	}
+
 
 	option = { ###Hooray
 		name = mexico_req.15.a
@@ -10394,6 +12417,15 @@ country_event = { ##### Americans Accept
 		}
 		clr_country_flag = MEX_Reconquista
 		add_political_power = 100
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = USA
+				}
+			}
+				white_peace = USA
+		}
 		USA = {
 			white_peace_with_ROOT = yes
 			every_owned_state = {
@@ -10405,8 +12437,8 @@ country_event = { ##### Americans Accept
 					OR = {
 						state = 798 #Los Angeles
 						state = 829 #Southern California
-						state = 1096 #Tucson
-						state = 1096 #Trans-Pecos
+						state = 1096 #Rio Grande
+						state = 1166 #Trans-Pecos
 						state = 833 #Southern Texas
 						AND = {
 							state = 797 #San Francisco
@@ -10425,17 +12457,18 @@ country_event = { ##### Americans Accept
 						AND = {
 							state = 377 #Arizona
 							OR = {
-								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Tucson
+								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Rio Grande
 								1096 = { is_owned_by = USA is_controlled_by = MEX }
 							}
 						}
 						AND = {
 							state = 376 #New Mexico
+							state = 1161 #New Mexico
 							OR = {
-								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Tucson
-								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Trans-Pecos
+								1096 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Rio Grande
+								1166 = { OR = { is_owned_and_controlled_by = USA  is_owned_and_controlled_by = WCC } } #Trans-Pecos
 								1096 = { is_owned_by = USA is_controlled_by = MEX }
-								1096 = { is_owned_by = USA is_controlled_by = MEX }
+								1166 = { is_owned_by = USA is_controlled_by = MEX }
 							}
 						}
 						AND = {
@@ -10516,9 +12549,9 @@ country_event = {
 		ai_chance = {
 			factor = 80
 		}
-		declare_war_on = {
-			target = CAL
+		create_wargoal = {
 			type = annex_everything
+			target = CAL
 		}
 		add_political_power = -100
 	}
@@ -10526,6 +12559,13 @@ country_event = {
 		name = mexico_req.28.b
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_WAR
+				}
+			}
 		}
 		add_political_power = 20
 	}
@@ -10543,8 +12583,6 @@ country_event = {
 	trigger = {
 		tag = MEX
 		has_war_with = CAL
-		surrender_progress < 0.20
-		CAL = { surrender_progress > 0.50 }
 		OR = {
 			controls_state = 797 #San Francisco
 			controls_state = 829 #Southern California
@@ -10570,6 +12608,13 @@ country_event = {
 		name = mexico_req.29.b
 		ai_chance = {
 			factor = 65
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_CEDE
+				}
+			}
 		}
 		CAL = {
 			country_event = {
@@ -10581,6 +12626,13 @@ country_event = {
 		name = mexico_req.29.c
 		ai_chance = {
 			factor = 5
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_CEDE
+				}
+			}
 		}
 		add_political_power = -200
 	}
@@ -10596,9 +12648,6 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		has_war_with = MEX
-	}
 
 	option = {
 		name = mexico_req.30.a
@@ -10607,6 +12656,15 @@ country_event = {
 		}
 		add_political_power = -200
 		MEX = { white_peace_with_ROOT = yes }
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = ROOT
+				}
+			}
+				white_peace = ROOT
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -10615,6 +12673,8 @@ country_event = {
 					state = 798 #Los Angeles
 					state = 829 #Southern California
 					state = 377 #Arizona
+					state = 1165 #Reno
+					state = 379 #Nevada
 				}
 			}
 			MEX = { transfer_state = PREV }
@@ -10627,6 +12687,13 @@ country_event = {
 		name = mexico_req.30.b
 		ai_chance = {
 			factor = 60
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_CEDE
+				}
+			}
 		}
 		add_political_power = 20
 		MEX = {
@@ -10647,9 +12714,6 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		has_war_with = MEX
-	}
 
 	option = {
 		name = mexico_req.31.a
@@ -10658,6 +12722,15 @@ country_event = {
 		}
 		add_political_power = -100
 		MEX = { white_peace_with_ROOT = yes }
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = ROOT
+				}
+			}
+				white_peace = ROOT
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -10728,8 +12801,6 @@ country_event = {
 	trigger = {
 		tag = CAL
 		has_war_with = MEX
-		surrender_progress < 0.20
-		MEX = { surrender_progress > 0.40 }
 		OR = {
 			controls_state = 484 #Baja California
 			controls_state = 483 #Sonora
@@ -10778,6 +12849,15 @@ country_event = {
 		}
 		add_political_power = -300
 		CAL = { white_peace_with_ROOT = yes }
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = CAL
+				}
+			}
+				white_peace = CAL
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -10842,6 +12922,12 @@ country_event = {
 		add_stability = -0.05
 		add_political_power = -40
 		set_country_flag = Anglo_Rebel
+		hidden_effect = {
+			country_event = {
+				id = mexico_req.66
+				days = 10
+			}
+		}
 		
 	}
 }
@@ -11173,7 +13259,7 @@ country_event = {
 				controls_state = 833
 			}
 			MEX = {
-				controls_state = 1096
+				controls_state = 1166
 			}
 		}
 	}
@@ -11229,65 +13315,18 @@ country_event = {
 		}	
 		if = {
 			limit = {
-				482 = {
+				1166 = {
 					resistance > 60
 				}
 			}
 			TXS = {
-				add_state_core = 482
-				transfer_state = 482
+				add_state_core = 1166
+				transfer_state = 1166
 			}
 		}
-		if = {
-			limit = {
-				1096 = {
-					resistance > 60
-				}
-			}
-			TXS = {
-				add_state_core = 482
-				transfer_state = 482
-			}
-		}
-		if = {
-			limit = {
-				1161 = {
-					resistance > 60
-				}
-			}
-			TXS = {
-				add_state_core = 482
-				transfer_state = 482
-			}
-		}
-		if = {
-			limit = {
-				1174 = {
-					resistance > 60
-				}
-			}
-			TXS = {
-				add_state_core = 482
-				transfer_state = 482
-			}
-		}
-		if = {
-			limit = {
-				1175 = {
-					resistance > 60
-				}
-			}
-			TXS = {
-				add_state_core = 482
-				transfer_state = 482
-			}
-		}
+		
 		TXS = {
 			load_oob = TXS_rebellion
-			}
-		declare_war_on = {
-			target = TXS
-			type = annex_everything
 			}
 		}
 		TXS = {
@@ -11302,6 +13341,10 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = {  }
+			}
+			declare_war_on = {	
+				target = MEX
+				type = annex_everything
 			}
 		}
 	}
@@ -11384,6 +13427,20 @@ country_event = { ######States or no
 		}
 		add_political_power = -60
 		add_stability = 0.05
+		hidden_effect = {
+			country_event = {
+				id = mexico.102
+				days = 10
+			}
+			country_event = {
+				id = mexico.103
+				days = 15
+			}
+			country_event = {
+				id = mexico.104
+				days = 20
+			}
+		}
 	}
 	option = { ####Stay with States
 		name = mexico_req.53.b
@@ -11838,7 +13895,548 @@ country_event = { ######California Revolt
 		}
 	}
 }
+country_event = { ######asking for the cession
+	id = mexico_req.60
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico_req.592"}
+	title = mexico_req.60.t
+	desc = mexico_req.60.d
+	picture = GFX_report_event_MEX_alamo
 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { ####YAY
+		name = mexico_req.60.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_PEACE
+				}
+			}
+		}
+		USA = {
+			country_event = {
+				id = mexico_req.61
+				days = 4
+			}
+		}
+		add_state_claim = 375 #Northern Texas
+					add_state_claim = 376 #New Mexico
+					add_state_claim = 1161 #New Mexico
+					add_state_claim = 377 #Arizona
+					add_state_claim = 378 #Northern California
+					add_state_claim = 379 #Nevada
+					add_state_claim = 1165 #reno
+					add_state_claim = 797 #San Francisco
+					add_state_claim = 798 #Los Angeles
+					add_state_claim = 829 #Southern California
+					add_state_claim = 1096 #Trans-Pecos
+					add_state_claim = 833 #Southern Texas
+					add_state_claim = 1174 #Tucson
+					add_state_claim = 380 #Tucson
+					add_state_claim = 1096 #Tucson
+					add_state_claim = 1175 #Tucson
+					add_state_claim = 1166
+	}
+	option = { ####YAY
+		name = mexico_req.60.b
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_CEDE
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_FEDS
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_WAR
+					}
+				}
+			}
+		}
+		add_political_power = 50
+	}
+}
+country_event = { ######mexico asked for the cession for some reaons
+	id = mexico_req.61
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico_req.592"}
+	title = mexico_req.61.t
+	desc = mexico_req.61.d
+	picture = GFX_report_event_MEX_alamo
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { ####sure
+		name = mexico_req.61.a
+		trigger = {
+			OR = {
+				is_ai = no
+				MEX = {
+					is_ai = no
+				}
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_CEDE
+				}
+			}
+			NOT = {
+				OR = {
+					MEX = {
+						has_socialist_government = yes
+						has_completed_focus = MEX_dia_de_muertos
+						has_country_flag = MEX_mega_super_aztec_larp
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_FEDS
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_WAR
+					}
+				}
+			}
+		}
+		MEX = {
+			country_event = {
+				id = mexico_req.62
+				days = 4
+			}
+		}
+	}
+	option = { ####sure but alleince
+		name = mexico_req.61.b
+		trigger = {
+			OR = {
+				is_ai = no
+				MEX = {
+					is_ai = no
+				}
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_CEDE
+				}
+			}
+			NOT = {
+				OR = {
+					MEX = {
+						has_socialist_government = yes
+						has_completed_focus = MEX_dia_de_muertos
+						has_country_flag = MEX_mega_super_aztec_larp
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_CEDE
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_WAR
+					}
+				}
+			}
+		}
+		MEX = {
+			country_event = {
+				id = mexico_req.63
+				days = 4
+			}
+		}
+	}
+	option = { ####no
+		name = mexico_req.61.c
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_CEDE
+					}
+					has_game_rule = {
+						rule = MEX_reconquista_path
+						option = MEX_RECONQUISTA_PATH_FEDS
+					}
+				}
+			}
+		}
+		MEX = {
+			country_event = {
+				id = mexico_req.64
+				days = 4
+			}
+		}
+	}
+}
+country_event = { ######america said yes lmao
+	id = mexico_req.62
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico_req.592"}
+	title = mexico_req.62.t
+	desc = mexico_req.62.d
+	picture = GFX_report_event_MEX_alamo
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { ####sure
+		name = mexico_req.62.a
+		add_timed_idea = {
+			idea = MEX_money_for_cession
+			days = 365
+		}
+		USA = {
+				add_timed_idea = {
+			idea = MEX_got_money_for_cession
+			days = 365
+		}
+		}
+		transfer_state = 375 #Northern Texas
+					transfer_state = 376 #New Mexico
+					transfer_state = 1161 #New Mexico
+					transfer_state = 377 #Arizona
+					transfer_state = 378 #Northern California
+					transfer_state = 379 #Nevada
+					transfer_state = 1165 #reno
+					transfer_state = 797 #San Francisco
+					transfer_state = 798 #Los Angeles
+					transfer_state = 829 #Southern California
+					transfer_state = 1096 #Trans-Pecos
+					transfer_state = 833 #Southern Texas
+					transfer_state = 1174 #Tucson
+					transfer_state = 380 #Tucson
+					transfer_state = 1096 #Tucson
+					transfer_state = 1175 #Tucson
+					transfer_state = 1166
+					give_resource_rights = {
+		state = 375
+		receiver = USA
+	}
+	give_resource_rights = {
+		state = 833
+		receiver = USA
+	}
+	hidden_effect = {
+			random_other_country = {
+				news_event = { id =worldnews.1255 days = 1 }
+			}
+		}
+	}
+}
+country_event = { ######america said yes lmao but alleince
+	id = mexico_req.63
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico_req.592"}
+	title = mexico_req.63.t
+	desc = mexico_req.63.d
+	picture = GFX_report_event_MEX_alamo
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { ####sure
+		name = mexico_req.63.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_REICHSPAKT
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_INTERNATIONALE
+					}
+				}
+			}
+		}
+		USA = {
+			create_faction = "North American Self-Defence Pact"
+			add_to_faction = MEX
+		}
+		add_timed_idea = {
+			idea = MEX_money_for_cession
+			days = 365
+		}
+		USA = {
+				add_timed_idea = {
+			idea = MEX_got_money_for_cession
+			days = 365
+		}
+		}
+		transfer_state = 375 #Northern Texas
+					transfer_state = 376 #New Mexico
+					transfer_state = 1161 #New Mexico
+					transfer_state = 377 #Arizona
+					transfer_state = 378 #Northern California
+					transfer_state = 379 #Nevada
+					transfer_state = 1165 #reno
+					transfer_state = 797 #San Francisco
+					transfer_state = 798 #Los Angeles
+					transfer_state = 829 #Southern California
+					transfer_state = 1096 #Trans-Pecos
+					transfer_state = 833 #Southern Texas
+					transfer_state = 1174 #Tucson
+					transfer_state = 380 #Tucson
+					transfer_state = 1096 #Tucson
+					transfer_state = 1175 #Tucson
+					transfer_state = 1166
+					give_resource_rights = {
+		state = 375
+		receiver = USA
+	}
+	give_resource_rights = {
+		state = 833
+		receiver = USA
+	}
+	hidden_effect = {
+			random_other_country = {
+				news_event = { id =worldnews.1255 days = 1 }
+			}
+		}
+	}
+	option = { ####sure
+		name = mexico_req.63.b
+		ai_chance = {
+			factor = 50
+		}
+		USA = {
+			give_guarantee = MEX
+		}
+		give_guarantee = USA
+		add_timed_idea = {
+			idea = MEX_money_for_cession
+			days = 365
+		}
+		USA = {
+				add_timed_idea = {
+			idea = MEX_got_money_for_cession
+			days = 365
+		}
+		}
+		transfer_state = 375 #Northern Texas
+					transfer_state = 376 #New Mexico
+					transfer_state = 1161 #New Mexico
+					transfer_state = 377 #Arizona
+					transfer_state = 378 #Northern California
+					transfer_state = 379 #Nevada
+					transfer_state = 1165 #reno
+					transfer_state = 797 #San Francisco
+					transfer_state = 798 #Los Angeles
+					transfer_state = 829 #Southern California
+					transfer_state = 1096 #Trans-Pecos
+					transfer_state = 833 #Southern Texas
+					transfer_state = 1174 #Tucson
+					transfer_state = 380 #Tucson
+					transfer_state = 1096 #Tucson
+					transfer_state = 1175 #Tucson
+					transfer_state = 1166
+		give_resource_rights = {
+		state = 375
+		receiver = USA
+	}
+	give_resource_rights = {
+		state = 833
+		receiver = USA
+	}
+	hidden_effect = {
+			random_other_country = {
+				news_event = { id =worldnews.1255 days = 1 }
+			}
+		}
+	}
+}
+country_event = { ######america said no
+	id = mexico_req.64
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico_req.592"}
+	title = mexico_req.64.t
+	desc = mexico_req.64.d
+	picture = GFX_report_event_MEX_alamo
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { ####sure
+		name = mexico_req.64.a
+			ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MEX_reconquista_path
+					option = MEX_RECONQUISTA_PATH_WAR
+				}
+			}
+		}
+		add_political_power = 20
+	}
+	option = { ####sure
+		name = mexico_req.64.b
+				ai_chance = {
+			factor = 20
+		}
+		set_country_flag = MEX_fighting_for_cession_no_acw
+		create_wargoal = {
+			type = annex_everything
+			target = USA
+		}
+		
+	}
+}
+country_event = { ######we ate our shit do we stop now
+	id = mexico_req.65
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico_req.592"}
+	title = mexico_req.65.t
+	desc = mexico_req.65.d
+	picture = GFX_report_event_MEX_alamo
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		has_war_with = USA
+		has_country_flag = MEX_fighting_for_cession_no_acw
+		controls_state = 375 #Northern Texas
+					controls_state = 376 #New Mexico
+					controls_state = 1161 #New Mexico
+					controls_state = 377 #Arizona
+					controls_state = 378 #Northern California
+					controls_state = 379 #Nevada
+					controls_state = 1165 #reno
+					controls_state = 797 #San Francisco
+					controls_state = 798 #Los Angeles
+					controls_state = 829 #Southern California
+					controls_state = 1096 #Trans-Pecos
+					controls_state = 833 #Southern Texas
+					controls_state = 1174 #Tucson
+					controls_state = 380 #Tucson
+					controls_state = 1096 #Tucson
+					controls_state = 1175 #Tucson
+					controls_state = 1166
+
+	}
+
+	option = { ####peace
+		name = mexico_req.65.a
+		white_peace = USA
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = USA
+				}
+			}
+				white_peace = USA
+		}
+		transfer_state = 375 #Northern Texas
+					transfer_state = 376 #New Mexico
+					transfer_state = 1161 #New Mexico
+					transfer_state = 377 #Arizona
+					transfer_state = 378 #Northern California
+					transfer_state = 379 #Nevada
+					transfer_state = 1165 #reno
+					transfer_state = 797 #San Francisco
+					transfer_state = 798 #Los Angeles
+					transfer_state = 829 #Southern California
+					transfer_state = 1096 #Trans-Pecos
+					transfer_state = 833 #Southern Texas
+					transfer_state = 1174 #Tucson
+					transfer_state = 380 #Tucson
+					transfer_state = 1096 #Tucson
+					transfer_state = 1175 #Tucson
+					transfer_state = 1166
+	}
+	option = { ####sure
+		name = mexico_req.65.b
+		add_war_support = -0.1
+		
+	}
+}
+country_event = { ######do we want to crank the anglo revolt NOW?
+	id = mexico_req.66
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico_req.592"}
+	title = mexico_req.66.t
+	desc = mexico_req.66.d
+	picture = GFX_report_event_MEX_alamo
+
+	fire_only_once = yes
+        is_triggered_only = yes
+
+	option = { ####nah
+		name = mexico_req.66.a
+		ai_chance = {
+			factor = 90
+		}
+		add_political_power = 20
+	}
+	option = { ####sure
+		name = mexico_req.66.b
+		ai_chance = {
+			factor = 10
+		}
+		custom_effect_tooltip = MEX_bad_idea_TT
+		829 = {
+			add_resistance = 70
+		}
+		798 = {
+			add_resistance = 70
+		}
+		378 = {
+			add_resistance = 70
+		}
+		797 = {
+			add_resistance = 70
+		}
+		380 = {
+			add_resistance = 70
+		}
+		377 = {
+			add_resistance = 70
+		}
+		1166 = {
+		add_resistance = 70
+		}
+		375 = {
+		add_resistance = 70
+		}
+		833 = {
+		add_resistance = 70
+		}
+
+	}
+}
 ###Flavor###
 country_event = { # Lucha Libre
 	id = mexico.213
@@ -12349,13 +14947,36 @@ country_event = { # joining austria
 
 	option = { # a
 		name = mexico.238.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_REICHSPAKT
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_NEUTRALITY
+					}
+				}
+			}
+		}
 		AUS = {
 			add_to_faction = MEX
 		}
 	}
 	option = { # a
 		name = mexico.238.b
-	add_political_power = -20
+		ai_chance = {
+			factor = 25
+		}
+		add_political_power = -20
 	}
 }
 
@@ -12409,23 +15030,138 @@ country_event = { # moar emp diaz flavor for evenness
 
 country_event = { # Almazán’s American Friend
 	id = mexico.242
-	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.242"}
 	title = mexico.242.t
 	desc = mexico.242.d
 	picture = GFX_report_event_MEX_amazon
+	
 	fire_only_once = yes
 
-	trigger = {
-		tag = MEX
-			has_country_leader = { 
-						name = "Juan Andreu Almazán" 
-						ruling_only = yes 
-					} 
-	}
+	is_triggered_only = yes
 
 	option = { # a
 		name = mexico.242.a
 		add_political_power = 15
+	}
+}
+
+country_event = { # National Action Politics
+	id = mexico.2420
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.2420"}
+	title = mexico.2420.t
+	desc = mexico.2420.d
+	picture = GFX_manuel_gomez_morin_intervens
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # a
+		name = mexico.2420.a
+		add_political_power = 15
+	}
+}
+
+country_event = { # Liberal Mexico
+	id = mexico.2421
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.2421"}
+	title = mexico.2421.t
+	desc = mexico.2421.d
+	picture = GFX_report_event_MEX_huerta
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # a
+		name = mexico.2421.a
+		add_political_power = 15
+	}
+}
+
+country_event = { # Camacho's brother makes an ass of himself
+	id = mexico.2422
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.2422"}
+	title = mexico.2422.t
+	desc = mexico.2422.d
+	picture = GFX_maximinos_speech
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # a
+		name = mexico.2422.a
+		add_political_power = -15
+	}
+}
+
+country_event = { # Cardenas being a chad
+	id = mexico.2423
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.2423"}
+	title = mexico.2423.t
+	desc = mexico.2423.d
+	picture = GFX_report_event_MEX_cardenas
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # a
+		name = mexico.2423.a
+		add_stability = 0.02
+	}
+}
+
+country_event = { # Left-Wing Parties embrace the Monarchy
+	id = mexico.2424
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.2424"}
+	title = mexico.2424.t
+	desc = mexico.2424.d
+	picture = GFX_report_event_MEX_mexican_crown
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # a
+		name = mexico.2424.a
+		add_stability = 0.02
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = { # Herculano de la Rocha event
+	id = mexico.2425
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.2425"}
+	title = mexico.2425.t
+	desc = mexico.2425.d
+	picture = GFX_report_event_MEX_rocha
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_socialist_government = yes
+			has_country_leader = {
+				name = "María III"
+				ruling_only = yes
+			}
+		}
+	}
+
+	option = { # a
+		name = mexico.2424.a
+		
 	}
 }
 
@@ -12552,16 +15288,16 @@ country_event = { # Ejido speeding up
 		name = mexico.249.a
 		increase_ruling_party_popularity_by_2 = yes
 		random_owned_controlled_state = {
-                	add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 3
 		}
 		random_owned_controlled_state = {
-                	add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 1
 		}
 		random_owned_controlled_state = {
-                	add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 1
 		}
 		random_owned_controlled_state = {
-                	add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 1
 		}
 	}
 }
@@ -12619,7 +15355,7 @@ country_event = { # zapta's bro gets shitfaced, funny enuses
 
 	option = { # a
 		name = mexico.252.a
-		add_political_power -25
+		add_political_power = -25
 		random_unit_leader = {
 			limit = {
 				has_id = 94731
@@ -12777,6 +15513,9 @@ country_event = { # rando bolshie shows up what do
 
 	option = { # a
 		name = mexico.258.a
+		ai_chance = {
+			factor = 1
+		}
 		create_corps_commander = {
 			name = "Viktor Nogin"
 			portrait_path = "gfx/leaders/SOV/Portrait_SOV_Viktor_Nogin.png"
@@ -12795,6 +15534,22 @@ country_event = { # rando bolshie shows up what do
 	}
 	option = { # a
 		name = mexico.258.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_INTERNATIONALE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_NEUTRALITY
+					}
+				}
+			}
+		}
 		add_political_power = 50
 		hidden_effect = {
 			if = {
@@ -12814,7 +15569,9 @@ country_event = { # rando bolshie shows up what do
 	option = { # a
 		name = mexico.258.c
 		add_stability = 0.05
-	
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -12851,6 +15608,7 @@ country_event = { # trotsky but someother bolshie
 				}
 				leave_faction = yes
 				create_faction = "3½ Internationale"
+				add_to_faction = MEX
 			}
 		}
 	}
@@ -13059,13 +15817,47 @@ country_event = { # new mexican nationalism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
 	title = mexico.270.t
 	desc = mexico.270.d
-	picture = GFX_report_event_MEX_roque
+	picture = GFX_report_event_MEX_roque_president
 	fire_only_once = yes
 	
 	is_triggered_only = yes
 
 	option = { # a
 		name = mexico.270.a
+		increase_ruling_party_popularity_by_2 = yes
+	}
+}
+
+country_event = { # anti-socialist raids
+	id = mexico.2701
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.2701"}
+	title = mexico.2701.t
+	desc = mexico.2701.d
+	picture = GFX_report_event_MEX_roque_general
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { # a
+		name = mexico.2701.a
+		add_manpower = -20
+		add_stability = 0.02
+	}
+}
+
+country_event = { # Roque will never have dri-
+	id = mexico.2702
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.2702"}
+	title = mexico.2702.t
+	desc = mexico.2702.d
+	picture = GFX_report_event_MEX_roque_drip
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { # a
+		name = mexico.2702.a
+		add_political_power = 10
 		increase_ruling_party_popularity_by_2 = yes
 	}
 }
@@ -13216,7 +16008,24 @@ country_event = { # a meeting with the Archbishop
 	id = mexico.280
 	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
 	title = mexico.280.t
-	desc = mexico.280.d
+	desc = {
+		trigger = {
+			has_country_flag = MEX_Luis_Maria_Archbishop
+		}
+		text = mexico.280.d.martinez
+	}
+	desc = {
+		trigger = {
+			has_country_flag = MEX_Jose_de_Jesus_Archbishop
+		}
+		text = mexico.280.d.jesus
+	}
+	desc = {
+		trigger = {
+			has_country_flag = MEX_Miguel_Dario_Archbishop
+		}
+		text = mexico.280.d.dario
+	}
 	picture = GFX_report_event_MEX_cathedral
 	fire_only_once = yes
 	
@@ -13225,6 +16034,12 @@ country_event = { # a meeting with the Archbishop
 	option = { # a
 		name = mexico.280.a
 		add_political_power = 75
+		hidden_effect = {
+			country_event = {
+				id =  mexico.114
+				days = 77
+			}
+		}
 	}
 }
 
@@ -13422,6 +16237,34 @@ country_event = { # do we give MEX the canal?
 
 	option = { # yes
 		name = mexico.285.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_REICHSPAKT
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_INTERNATIONALE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_JAPAN
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_NEUTRALITY
+					}
+				}
+			}
+		}
 		MEX = {
 			country_event = {
 				id = mexico.288
@@ -13429,8 +16272,11 @@ country_event = { # do we give MEX the canal?
 		}
 	}
 
-	option = { # yes
+	option = { # no
 		name = mexico.285.a
+		ai_chance = {
+			factor = 50
+		}
 		MEX = {
 			country_event = {
 				id = mexico.286
@@ -13456,16 +16302,11 @@ country_event = { # they refused to gib canal what do
 
 	option = { # war
 		name = mexico.286.b
+		set_country_flag = MEX_war_for_canal
 		declare_war_on = {
 				target = 685.owner
 				type = annex_everything
 			}
-		hidden_effect = {
-			country_event = {
-				id = mexico.287
-				days = 180
-			}
-		}
 	}
 }
 
@@ -13477,9 +16318,11 @@ country_event = { # we won
 	picture = GFX_report_event_MEX_cactus
 	fire_only_once = yes
 	
-	is_triggered_only = yes
+
 	trigger = {
+		tag = MEX
 		controls_state = 685
+		has_country_flag = MEX_war_for_canal
 	}
 
 	option = { # a
@@ -13487,7 +16330,17 @@ country_event = { # we won
 		685 = {
 			owner = {
 				white_peace = MEX
+				set_country_flag = MEX_PANAMA_TARGET
 			}
+		}
+		every_country = {
+			limit = {
+				AND = {
+					is_in_faction_with = MEX
+					has_war_with = 685.owner
+				}
+			}
+				white_peace = 685.owner
 		}
 		MEX = {
 			transfer_state = 685
@@ -13526,14 +16379,674 @@ country_event = { # oil for canal
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
+country_event = { # integeralist american and mexico interaction, mexico
+	id = mexico.289
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
+	title = mexico.289.t
+	desc = mexico.289.d
+	picture = GFX_report_event_MEX_cathedral
+	fire_only_once = yes
 	
+	trigger = {
+		tag = MEX
+		is_ai = no
+		is_subject = no
+		OR = {
+			MEX_has_synarchointegralist_leader = yes
+			has_country_flag = MEX_SynarchoIntegralist_Monarchy
+		}
+		TEX = {
+			exists = yes
+			is_subject = no
+			has_completed_focus = TEX_new_gunpowder_plot
+		}
+	}
+
+	option = { # faction
+		name = mexico.289.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_REICHSPAKT
+					}
+				}
+			}
+		}
+		create_faction = "Novum Sanctum Foedus"
+		add_to_faction = TEX
+	}
+	option = { # superstate
+		name = mexico.289.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_REICHSPAKT
+					}
+				}
+			}
+		}
+		TEX = {
+			country_event = {
+				id = mexico.291
+				days = 2
+			}
+		}
+	}
+	option = { # cession
+		name = mexico.289.c
+			ai_chance = {
+				factor = 25
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = MEX_foreign_policy
+							option = MEX_FOREIGN_POLICY_ENTENTE
+						}
+						has_game_rule = {
+							rule = MEX_foreign_policy
+							option = MEX_FOREIGN_POLICY_REICHSPAKT
+						}
+					}
+				}
+			}
+			add_state_claim = 375 #Northern Texas
+					add_state_claim = 376 #New Mexico
+					add_state_claim = 1161 #New Mexico
+					add_state_claim = 377 #Arizona
+					add_state_claim = 378 #Northern California
+					add_state_claim = 379 #Nevada
+					add_state_claim = 1165 #reno
+					add_state_claim = 797 #San Francisco
+					add_state_claim = 798 #Los Angeles
+					add_state_claim = 829 #Southern California
+					add_state_claim = 1096 #Trans-Pecos
+					add_state_claim = 833 #Southern Texas
+					add_state_claim = 1174 #Tucson
+					add_state_claim = 380 #Tucson
+					add_state_claim = 1096 #Tucson
+					add_state_claim = 1175 #Tucson
+					add_state_claim = 1166
+		TEX = {
+			country_event = {
+				id = mexico.293
+				days = 2
+			}
+		}
+	}
+	option = { # nothing
+		name = mexico.289.e
+		ai_chance = {
+			factor = 25
+		}
+		add_political_power = 50
+	}
+}
+country_event = { # integeralist american and mexico interaction, america
+	id = mexico.290
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
+	title = mexico.290.t
+	desc = mexico.290.d
+	picture = GFX_report_event_MEX_cathedral
+	fire_only_once = yes
 	
+	trigger = {
+		tag = TEX
+		has_completed_focus = TEX_new_gunpowder_plot
+		NOT = {
+			MEX = {
+				is_ai = yes
+			}
+		}
+		is_subject = no
+		MEX = {
+			OR = {
+			MEX_has_synarchointegralist_leader = yes
+			has_country_flag = MEX_SynarchoIntegralist_Monarchy
+		}
+		}
+	}
+
+	option = { # faction
+		name = mexico.290.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_REICHSPAKT
+					}
+				}
+			}
+		}
+		create_faction = "Novum Sanctum Foedus"
+		add_to_faction = MEX
+	}
+	option = { # superstate
+		name = mexico.290.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_REICHSPAKT
+					}
+				}
+			}
+		}
+		MEX = {
+			country_event = {
+				id = mexico.291
+				days = 2
+			}
+		}
+	}
+	option = { # cession
+		name = mexico.290.c
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = MEX_foreign_policy
+						option = MEX_FOREIGN_POLICY_REICHSPAKT
+					}
+				}
+			}
+		}
+		MEX = {
+			country_event = {
+				id = mexico.294
+				days = 2
+			}
+		}
+	}
+	option = { # nothing
+		name = mexico.290.e
+		ai_chance = {
+			factor = 25
+		}
+		add_political_power = 50
+	}
+}
+country_event = { # integeralist american and mexico interaction, super state
+	id = mexico.291
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
+	title = mexico.291.t
+	desc = mexico.291.d
+	picture = GFX_report_event_MEX_cathedral
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { # no
+		name = mexico.291.a
+		trigger = {
+			FROM = {
+				is_ai = yes
+			}
+		}
+		add_political_power = 150
+	}
+	option = { # superstate
+		name = mexico.291.b
+		FROM = {
+			country_event = {
+				id = mexico.292
+				days = 2
+			}
+		}
+	}
+}
+country_event = { # integeralist american and mexico interaction, super state creation
+	id = mexico.292
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
+	title = mexico.292.t
+	desc = mexico.292.d
+	picture = GFX_report_event_MEX_cathedral
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { # no
+		name = mexico.292.a
+		set_cosmetic_tag = TEX_MEX
+		if = {
+			limit = {
+				tag = TEX
+			}
+			TEX = {
+				annex_country = {
+			target = MEX
+			transfer_troops = yes
+		}
+			}
+			every_state = {
+				limit = {
+					is_core_of = MEX
+				}
+				add_core_of = TEX
+			}
+		}
+		if = {
+			limit = {
+				tag = MEX
+			}
+			MEX = {
+				annex_country = {
+			target = TEX
+			transfer_troops = yes
+		}
+			}
+			every_state = {
+				limit = {
+					is_core_of = TEX
+				}
+				add_core_of = MEX
+			}
+		}
+	}
+}
+country_event = { # integeralist american and mexico interaction, mexico asks for cession
+	id = mexico.293
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
+	title = mexico.293.t
+	desc = mexico.293.d
+	picture = GFX_report_event_MEX_cathedral
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { # no
+		name = mexico.293.a
+		trigger = {
+			is_ai = no
+		}
+		MEX = {
+			country_event = {
+				id = mexico_req.64
+				days = 15
+			}
+		}
+	}
+	option = { # yes
+		name = mexico.293.b
+		create_faction = "Novum Sanctum Foedus"
+		add_to_faction = MEX
+			add_timed_idea = {
+			idea = MEX_got_money_for_cession
+			days = 365
+		}
+		MEX = {
+				add_timed_idea = {
+			idea = MEX_money_for_cession
+			days = 365
+		}
+		transfer_state = 375 #Northern Texas
+					transfer_state = 376 #New Mexico
+					transfer_state = 1161 #New Mexico
+					transfer_state = 377 #Arizona
+					transfer_state = 378 #Northern California
+					transfer_state = 379 #Nevada
+					transfer_state = 1165 #reno
+					transfer_state = 797 #San Francisco
+					transfer_state = 798 #Los Angeles
+					transfer_state = 829 #Southern California
+					transfer_state = 1096 #Trans-Pecos
+					transfer_state = 833 #Southern Texas
+					transfer_state = 1174 #Tucson
+					transfer_state = 380 #Tucson
+					transfer_state = 1096 #Tucson
+					transfer_state = 1175 #Tucson
+					transfer_state = 1166
+		}
+	hidden_effect = {
+			random_other_country = {
+				news_event = { id =worldnews.1255 days = 1 }
+			}
+		}
+	}
+}
+country_event = { # integeralist american and mexico interaction, america offers cession
+	id = mexico.294
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
+	title = mexico.294.t
+	desc = mexico.294.d
+	picture = GFX_report_event_MEX_cathedral
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { # yes
+		name = mexico.294.a
+			add_state_claim = 375 #Northern Texas
+					add_state_claim = 376 #New Mexico
+					add_state_claim = 1161 #New Mexico
+					add_state_claim = 377 #Arizona
+					add_state_claim = 378 #Northern California
+					add_state_claim = 379 #Nevada
+					add_state_claim = 1165 #reno
+					add_state_claim = 797 #San Francisco
+					add_state_claim = 798 #Los Angeles
+					add_state_claim = 829 #Southern California
+					add_state_claim = 1096 #Trans-Pecos
+					add_state_claim = 833 #Southern Texas
+					add_state_claim = 1174 #Tucson
+					add_state_claim = 380 #Tucson
+					add_state_claim = 1096 #Tucson
+					add_state_claim = 1175 #Tucson
+					add_state_claim = 1166
+		TEX = {
+			create_faction = "Novum Sanctum Foedus"
+			add_to_faction = MEX
+		}
+		add_timed_idea = {
+			idea = MEX_money_for_cession
+			days = 365
+		}
+		TEX = {
+				add_timed_idea = {
+			idea = MEX_got_money_for_cession
+			days = 365
+		}
+		}
+		transfer_state = 375 #Northern Texas
+					transfer_state = 376 #New Mexico
+					transfer_state = 1161 #New Mexico
+					transfer_state = 377 #Arizona
+					transfer_state = 378 #Northern California
+					transfer_state = 379 #Nevada
+					transfer_state = 1165 #reno
+					transfer_state = 797 #San Francisco
+					transfer_state = 798 #Los Angeles
+					transfer_state = 829 #Southern California
+					transfer_state = 1096 #Trans-Pecos
+					transfer_state = 833 #Southern Texas
+					transfer_state = 1174 #Tucson
+					transfer_state = 380 #Tucson
+					transfer_state = 1096 #Tucson
+					transfer_state = 1175 #Tucson
+					transfer_state = 1166
+					give_resource_rights = {
+		state = 375
+		receiver = TEX
+	}
+	give_resource_rights = {
+		state = 833
+		receiver = TEX
+	}
+	hidden_effect = {
+			random_other_country = {
+				news_event = { id =worldnews.1255 days = 1 }
+			}
+		}
+	}
+}
+country_event = { # restore the monarchy-for republican integeralists
+	id = mexico.295
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.176"}
+	title = mexico.295.t
+	desc = mexico.295.d
+	picture = GFX_report_event_MEX_mexican_crown
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		date > 1948.01.01
+		has_completed_focus = MEX_REP_the_regency
+	}
+	option = { # sure
+		name = mexico.295.a
+		set_country_flag = MEX_SynarchoIntegralist_Monarchy
+		country_event = {
+					id = mexico.360
+				}
+	}
+	option = { # no
+		name = mexico.295.b
+		add_political_power = 150
+	}
+}
+country_event = { # Forgotten Revolutionaries
+	id = mexico.296
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.296"}
+	title = mexico.296.t
+	desc = mexico.296.d
+	picture = GFX_report_event_MEX_avila
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = MEX
+		OR = {
+			has_socialist_government = yes
+			MEX_has_democratic_government = yes
+		}
+	}
+	option = { # sure
+		name = mexico.296.a
+		increase_ruling_party_popularity_by_2 = yes
+		add_war_support = 0.02
+		create_corps_commander = {
+			name = "Amelio Robles Ávila"
+			portrait_path = "gfx/leaders/MEX/Portrait_Mexico_Amelio_Robles_Avila.png"
+			traits = {
+				cavalry_leader
+				war_hero
+				harsh_leader
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+}
+
+country_event = { # Mexican Maurras Mexican Maurras
+	id = mexico.297
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.297"}
+	title = mexico.297.t
+	desc = mexico.297.d
+	picture = GFX_report_event_NFA_event_AFFlavorMaurras
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government = national_populist
+	}
+	
+	option = { # give funds
+		name = mexico.297.a
+		increase_ruling_party_popularity_by_2 = yes
+		add_political_power = 10
+		add_command_power = 5
+	}
+	
+	option = { # ministers
+		name = mexico.297.b
+		increase_ruling_party_popularity_by_2 = yes
+		add_political_power = 25
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = MEX_Acevedo_Jesus_for_npo
+	}
+	
+	option = { # maurassian mexico real son
+		name = mexico.297.c
+		decrease_ruling_party_popularity_by_3 = yes
+		add_stability = -0.03
+		add_political_power = 125
+		set_country_leader_ideology = maurrassism_subtype
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = MEX_Acevedo_Jesus_for_npo
+	}
+}
+
+country_event = { # Boming of Our Lady of Gualope baslica
+	id = mexico.298
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.297"}
+	title = mexico.298.t
+	desc = mexico.298.d
+	picture = GFX_report_event_MEX_bent_cross
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+
+	option = { # oh shit
+		name = mexico.298.a
+		add_stability = -0.05
+	}
+	
+}
+
+
+
+
+
+country_event = { # Cowboy Vilia
+	id = mexico.299
+	immediate = {log = "[GetDateText]: [Root.GetName]: event mexico.297"}
+	title = mexico.299.t
+	desc = mexico.299.d
+	picture = GFX_report_event_MEX_viiia_folk_saint
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+
+	option = { # oh shit
+		name = mexico.299.a
+		increase_ruling_party_popularity_by_3 = yes
+		
+	}
+	
+	option = { # oh shit
+		name = mexico.299.b
+		set_country_leader_ideology = cowboy_communalism_subtype
+		
+	}
+}
+
+country_event = { # Death of the Empiress
+	id = mexico.3001
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event mexico.297"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = mexican_monarchy
+				}
+				create_country_leader = {
+					name = "María II"
+					desc = "POLITICS_MARIA_III_NORMAL_DESC"
+					picture = "gfx/leaders/MEX/Portrait_Mexico_Maria_III_Civilian.png"
+					expire = "1965.1.1"
+					ideology = authoritarian_democrat_subtype
+					traits = {}
+				}
+				create_country_leader = {
+					name = "María II"
+					desc = "POLITICS_MARIA_III_NORMAL_DESC"
+					picture = "gfx/leaders/MEX/Portrait_Mexico_Maria_III_Civilian.png"
+					expire = "1965.1.1"
+					ideology = christian_democracy_subtype
+					traits = {}
+				}
+				create_country_leader = {
+					name = "María II"
+					desc = "POLITICS_MARIA_III_NORMAL_DESC"
+					picture = "gfx/leaders/MEX/Portrait_Mexico_Maria_III_Civilian.png"
+					expire = "1965.1.1"
+					ideology = marlib_classical_liberalism_subtype
+					traits = {}
+				}
+				create_country_leader = {
+					name = "María II"
+					desc = "POLITICS_MARIA_III_NORMAL_DESC"
+					picture = "gfx/leaders/MEX/Portrait_Mexico_Maria_III_Civilian.png"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {}
+				}
+				create_country_leader = {
+					name = "María II"
+					desc = "POLITICS_MARIA_III_NORMAL_DESC"
+					picture = "gfx/leaders/MEX/Portrait_Mexico_Maria_III_Civilian.png"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = {}
+				}
+			}
+			else = {
+				create_country_leader = {
+					name = "María II"
+					desc = "POLITICS_MARIA_III_NORMAL_DESC"
+					picture = "gfx/leaders/MEX/Portrait_Mexico_Maria_III_Civilian.png"
+					expire = "1965.1.1"
+					ideology = absolute_monarchy_subtype
+					traits = {}
+				}
+				create_country_leader = {
+					name = "María II"
+					desc = "POLITICS_MARIA_III_NORMAL_DESC"
+					picture = "gfx/leaders/MEX/Portrait_Mexico_Maria_III_Civilian.png"
+					expire = "1965.1.1"
+					ideology = integralism_subtype
+					traits = {}
+				}
+			}
+		}	
+	}
+	title = mexico.3001.t
+	desc = mexico.3001.d
+	picture = GFX_report_event_MEX_maria
+	fire_only_once = yes
+	trigger = {
+		has_country_leader = {
+			name = "María I"
+			ruling_only = yes
+		}
+	}
+	is_triggered_only = yes
+	
+
+	option = { # oh shit
+		name = mexico.3001.a
+		add_political_power = 25
+		
+	}
+	
+}

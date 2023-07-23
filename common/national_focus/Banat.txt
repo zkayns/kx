@@ -261,9 +261,9 @@ focus_tree = {
 	
 	##############################
 	##############################
-	#####                    #####
+	#####					#####
 	##### THE EXILED KINGDOM #####
-	#####                    #####
+	#####					#####
 	##############################
 	##############################
 	
@@ -687,15 +687,20 @@ focus_tree = {
 		x = 22
 		y = 7
 		cost = 6.5
+
+		available = {
+			is_subject = no
+			has_war = no
+		}
 		
 		prerequisite = { focus = BAN_maneuvers_banatian_carpathians focus = BAN_they_dont_matter }
 		
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = ROM
 				type = annex_everything
 			}
-			set_war_support = 1
+			hidden_effect = { set_war_support = 1 }
 		}
 	}
 	
@@ -1003,8 +1008,8 @@ focus_tree = {
 		
 		completion_reward = {
 			create_wargoal = {
-				type = take_state_focus
 				target = BUL
+				type = annex_everything
 			}
 			add_state_core = 772
 			add_state_core = 77
@@ -1298,9 +1303,6 @@ focus_tree = {
 				BUL = {
 					is_in_faction = no
 				}
-				OTT = {
-					is_in_faction = no
-				}
 				TUR = {
 					is_in_faction = no
 				}
@@ -1326,12 +1328,12 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					OTT = {
+					TUR = {
 						is_in_faction = no
 						exists = yes
 					}
 				}
-				OTT = {
+				TUR = {
 					country_event = ban.69
 				}
 			}
@@ -1393,7 +1395,7 @@ focus_tree = {
 		prerequisite = { focus = BAN_belgrade_pact focus = BAN_join_reichspakt focus = BAN_join_entente focus = BAN_romanian_sphere }
 		
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = HUN
 				type = annex_everything
 			}
@@ -1426,7 +1428,7 @@ focus_tree = {
 					}
 				}
 				BAN = {
-					declare_war_on = {
+					create_wargoal = {
 						target = PREV
 						type = annex_everything
 					}
@@ -1470,7 +1472,7 @@ focus_tree = {
 					}
 				}
 				BAN = {
-					declare_war_on = {
+					create_wargoal = {
 						target = PREV
 						type = annex_everything
 					}
@@ -1531,7 +1533,7 @@ focus_tree = {
 		prerequisite = { focus = BAN_belgrade_pact focus = BAN_join_reichspakt focus = BAN_join_entente focus = BAN_romanian_sphere }
 		
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = FRA
 				type = annex_everything
 			}
@@ -1601,9 +1603,9 @@ focus_tree = {
 	
 	##############################
 	##############################
-	#####                    #####
+	#####					#####
 	#####  IRON GUARD BANAT  #####
-	#####                    #####
+	#####					#####
 	##############################
 	##############################
 	
@@ -1788,6 +1790,8 @@ focus_tree = {
 		
 		available = {
 			has_government = national_populist
+			is_subject = no
+			has_war = no
 		}
 		
 		prerequisite = { focus = BAN_turn_southwards focus = BAN_turn_northwards }
@@ -1795,7 +1799,7 @@ focus_tree = {
 		
 		
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = CRO
 				type = annex_everything
 			}
@@ -1862,15 +1866,15 @@ focus_tree = {
 		prerequisite = { focus = BAN_only_one_path }
 		
 		completion_reward = {
-			add_state_claim = 83
-			add_state_claim = 76
-			add_state_claim = 84
-			add_state_claim = 1113
-			add_state_claim = 1118
-			add_state_claim = 1117
-			add_state_claim = 1116
-			add_state_claim = 1115
-			add_state_claim = 789
+			every_state = {
+				limit = {
+					OR = {
+						is_claimed_by = TRS
+						is_core_of = TRS
+					}
+				}
+				add_claim_by = BAN
+			}
 			add_war_support = 0.05
 		}
 	}
@@ -2091,6 +2095,12 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.15
 			add_war_support = -0.1
+			if = {
+				limit = {
+					has_idea = BAN_vying_influencers
+				}
+				remove_ideas = BAN_vying_influencers
+			}
 		}
 	}
 	
@@ -2140,8 +2150,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = BAN_line_spacer
 			swap_ideas = {
-				add_idea = BAN_dead_economy_3
 				remove_idea = BAN_dead_economy_2
+				add_idea = BAN_dead_economy_3
 			}
 			add_research_slot = 1
 		}
@@ -2157,7 +2167,7 @@ focus_tree = {
 		available = {
 			has_country_flag = BAN_takeover_avoided
 			has_government = national_populist
-			has_idea = BAN_dead_economy_2
+			has_idea = BAN_dead_economy_3
 		}
 		
 		prerequisite = { focus = BAN_autarky_necessary }
@@ -2166,6 +2176,10 @@ focus_tree = {
 		completion_reward = {
 			country_event = ban.87 #Soup Kitchens
 			add_political_power = 50
+			swap_ideas = {
+				remove_idea = BAN_dead_economy_3
+				add_idea = BAN_dead_economy_4
+			}
 			custom_effect_tooltip = BAN_line_spacer
 			custom_effect_tooltip = BAN_bleed_land_dry
 			custom_effect_tooltip = BAN_line_spacer
@@ -2210,7 +2224,7 @@ focus_tree = {
 		available = {
 			has_country_flag = BAN_takeover_avoided
 			has_government = national_populist
-			has_idea = BAN_dead_economy_2
+			has_idea = BAN_dead_economy_4
 		}
 		
 		prerequisite = { focus = BAN_popular_dictatorship }
@@ -2230,9 +2244,9 @@ focus_tree = {
 	
 	####################################
 	####################################
-	#####                    	   #####
+	#####						#####
 	#####  THE SOCIALIST REPUBLIC  #####
-	#####                  	       #####
+	#####						#####
 	####################################
 	####################################
 	
@@ -2364,17 +2378,12 @@ focus_tree = {
 		available = {
 			has_country_flag = BAN_syndicalist_takeover
 			has_government = syndicalist
-			has_idea = BAN_dead_economy_2
 		}
 		
 		prerequisite = { focus = BAN_give_them_what_they_deserve }
 		
 		completion_reward = {
 			add_ideas = BAN_communes
-			swap_ideas = {
-				remove_idea = BAN_dead_economy_3
-				add_idea = BAN_dead_economy_4
-			}
 			random_owned_state = {
 				add_building_construction = {
 					type = industrial_complex
@@ -2442,6 +2451,12 @@ focus_tree = {
 		
 		completion_reward = {
 			country_event = ban.109 #The Transition to Socialism
+			if = {
+				limit = {
+					has_idea = BAN_vying_influencers
+				}
+				remove_ideas = BAN_vying_influencers
+			}
 			add_research_slot = 1
 		}
 	}
@@ -2496,13 +2511,15 @@ focus_tree = {
 		available = {
 			has_country_flag = BAN_syndicalist_takeover
 			has_government = syndicalist
+			is_subject = no
+			has_war = no
 		}
 		
 		prerequisite = { focus = BAN_healthcare_worth_act }
 		
 		completion_reward = {
 			add_war_support = 0.1
-			declare_war_on = {
+			create_wargoal = {
 				target = SER
 				type = annex_everything
 			}
@@ -2519,6 +2536,8 @@ focus_tree = {
 		available = {
 			has_country_flag = BAN_syndicalist_takeover
 			has_government = syndicalist
+			is_subject = no
+			has_war = no
 		}
 		
 		prerequisite = { focus = BAN_the_transition }
@@ -2529,7 +2548,7 @@ focus_tree = {
 				limit = {
 						country_exists = ROM
 				}
-				declare_war_on = {
+				create_wargoal = {
 					target = ROM
 					type = annex_everything
 				}
@@ -2538,7 +2557,7 @@ focus_tree = {
 				limit = {
 						country_exists = RRM
 				}
-				declare_war_on = {
+				create_wargoal = {
 					target = RRM
 					type = annex_everything
 				}
@@ -2779,6 +2798,7 @@ focus_tree = {
 					}
 				}
 			}
+			remove_ideas = BAN_royalist_influx
 			add_research_slot = 1
 		}
 	}
@@ -2794,6 +2814,8 @@ focus_tree = {
 			has_country_flag = BAN_syndicalist_takeover
 			has_government = totalist
 			num_divisions > 12
+			is_subject = no
+			has_war = no
 		}
 		
 		bypass = { owns_state = 43 }
@@ -2810,7 +2832,7 @@ focus_tree = {
 					country_exists = HUN
 					
 				}
-				declare_war_on = {
+				create_wargoal = {
 					target = HUN
 					type = annex_everything
 				}
@@ -2824,7 +2846,7 @@ focus_tree = {
 						owns_state = 43
 					}
 				}
-				declare_war_on = {
+				create_wargoal = {
 					target = AUS
 					type = annex_everything
 				}
@@ -2988,23 +3010,21 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.25
 			add_stability = 0.25
-			custom_effect_tooltip = BAN_line_spacer
+			hidden_effect = {
 			set_popularities = {
 				totalist = 79
 				syndicalist = 13
 				radical_socialist = 8
 			}
+		    }
 			remove_ideas = BAN_hungarian_resistance
 			if = {
 				limit = {
 					country_exists = SVK
-					
 				}
-				BAN = {
-					create_wargoal = {
+				create_wargoal = {
 						type = annex_everything
 						target = SVK
-					}
 				}
 			}
 		}
@@ -3024,13 +3044,15 @@ focus_tree = {
 				exists = no
 			}
 			owns_state = 43
+			is_subject = no
+			has_war = no
 		}
 		
 		prerequisite = { focus = BAN_hungarys_horizons focus = BAN_red_balkan_prussia }
 		
 		completion_reward = {
 			add_war_support = 0.1
-			declare_war_on = {
+			create_wargoal = {
 				target = CRO
 				type = annex_everything
 			}
@@ -3056,13 +3078,15 @@ focus_tree = {
 				}
 			}
 			owns_state = 43
+			is_subject = no
+			has_war = no
 		}
 		
 		prerequisite = { focus = BAN_hungarys_horizons }
 		
 		completion_reward = {
 			add_war_support = 0.1
-			declare_war_on = {
+			create_wargoal = {
 				target = AUS
 				type = annex_everything
 			}
@@ -3217,9 +3241,9 @@ focus_tree = {
 	
 	####################################
 	####################################
-	#####                    	   #####
-	#####    ROTH GOVT SURVIVES    #####
-	#####                  	       #####
+	#####						#####
+	#####	ROTH GOVT SURVIVES	#####
+	#####						#####
 	####################################
 	####################################
 	
@@ -3341,6 +3365,9 @@ focus_tree = {
 		completion_reward = {
 			add_state_core = 84
 			add_state_core = 83
+			add_state_core = 1113
+			add_state_core = 1115
+			add_state_core = 1116
 			country_event = ban.112
 		}
 	}
@@ -3739,9 +3766,9 @@ focus_tree = {
 	
 	####################################
 	####################################
-	#####                    	   #####
+	#####						#####
 	#####  BARTHA'S MILITARY GOVT  #####
-	#####                  	       #####
+	#####						#####
 	####################################
 	####################################
 	
@@ -4131,6 +4158,7 @@ focus_tree = {
 		prerequisite = { focus = BAN_order_in_the_streets }
 		
 		completion_reward = {
+			remove_ideas = BAN_vying_influencers_romania_1
 			country_event = ban.145 #Bartha Makes a Speech
 		}
 	}
@@ -4228,6 +4256,8 @@ focus_tree = {
 		
 		available = {
 			has_country_flag = BAN_bartha_government
+			is_subject = no
+			has_war = no
 		}
 		
 		prerequisite = { focus = BAN_protect_normality }
@@ -4250,7 +4280,7 @@ focus_tree = {
 					modifier = KR_outraged
 				}
 			}
-			declare_war_on = {
+			create_wargoal = {
 				target = HUN
 				type = annex_everything
 			}
@@ -4327,12 +4357,14 @@ focus_tree = {
 			CRO = {
 				exists = yes
 			}
+			is_subject = no
+			has_war = no
 		}
 		
 		prerequisite = { focus = BAN_conquer_hungarian_people }
 		
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = CRO
 				type = annex_everything
 			}
@@ -4349,9 +4381,9 @@ focus_tree = {
 	
 	####################################
 	####################################
-	#####                    	   #####
+	#####						#####
 	#####  REVIVE BANAT'S ECONOMY  #####
-	#####                  	       #####
+	#####						#####
 	####################################
 	####################################
 	
@@ -4404,7 +4436,7 @@ focus_tree = {
 	
 	focus = {
 		id = BAN_lower_taxes
-		icon = GRU_CONS_TAX_CUT
+		icon = GFX_GRU_CONS_TAX_CUT
 		x = 42
 		y = 2
 		cost = 5.8
@@ -5069,7 +5101,6 @@ focus_tree = {
 		prerequisite = { focus = BAN_quality_army }
 		
 		completion_reward = {
-			custom_effect_tooltip = BAN_dev_didnt_do
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
@@ -5178,7 +5209,6 @@ focus_tree = {
 		prerequisite = { focus = BAN_means_to_produce_production }
 		
 		completion_reward = {
-			custom_effect_tooltip = BAN_dev_drill_on_less_trees
 			custom_effect_tooltip = BAN_line_spacer
 			custom_effect_tooltip = BAN_red_army
 			custom_effect_tooltip = BAN_line_spacer

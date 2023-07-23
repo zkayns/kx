@@ -22,6 +22,9 @@ country_event = {
 		AUS = {
 			country_event = { id = black.200 days = 2 }
 		}
+		AZE = {
+			country_event = { id = aze.2 days = 2 }
+		}
 		BAT = {
 			country_event = { id = KRBAT.5 days = 12 }
 		}
@@ -79,7 +82,7 @@ country_event = {
 		GUA = {
 			country_event = { id = guatemala.2 days = 1 }
 		}
-                GAL = {
+		GAL = {
 			country_event = { id = gal.12 days = 6 }
 		}
 		HOL = {
@@ -107,7 +110,7 @@ country_event = {
 			country_event = { id = libya.10 days = 5 }
 		}
 		LEP = {
-			country_event = { id = lepcollapse.12 } #LEP Collapse; Black Monday Reaches the East days = 3
+			country_event = { id = lepcollapse.12 days = 3 } #LEP Collapse; Black Monday Reaches the East 
 		}
 		LIB = {
 			country_event = { id = LIB.5 days = 12 }
@@ -124,7 +127,7 @@ country_event = {
 		OMA = {
 			country_event = { id = oma.12 days = 1 }
 		}
-		OTT = {
+		TUR = {
 			country_event = { id = otteco.3 days = 15 }
 		}
 		PAL = {
@@ -185,7 +188,7 @@ country_event = {
 			country_event = { id = swiss.45 days = 5 }
 		}
 		UKR = {
-			country_event = { id = ukraine.3 days = 2 }
+			country_event = { id = ukreco.1 days = 2 }
 		}
 		URG = {
 			country_event = { id = urg.2 days = 12 }
@@ -212,8 +215,9 @@ country_event = {
 ### Black Monday Event for Germany
 news_event = {
 	id = black.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event black.2" 
-	add_ideas = GER_black_monday
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event black.2" 
+		hidden_effect = { add_ideas = GER_black_monday }
 	}
 	title = black.2.t
 	desc = black.2.d
@@ -293,7 +297,7 @@ news_event = {
 			tag = MAF
 			tag = NOR
 			tag = OMA
-			tag = OTT
+			tag = TUR
 			tag = PAP
 			tag = PAR
 			tag = PER
@@ -465,7 +469,10 @@ country_event = {
 		custom_effect_tooltip = GER_colonial_resources_distribution_full_tt
 		add_political_power = -20
 		set_country_flag = GER_helped_colonies_full
-		activate_decision = GER_factories_for_colonies_full
+		add_timed_idea = {
+			idea = GER_colonial_subsidies
+			days = 365
+		}
 		if = {
 			limit = {
 				MAF = {
@@ -504,7 +511,10 @@ country_event = {
 		custom_effect_tooltip = GER_colonial_resources_distribution_partly_tt
 		add_political_power = -50
 		set_country_flag = GER_helped_colonies_partly
-		activate_decision = GER_factories_for_colonies_partly
+		add_timed_idea = {
+			idea = GER_partial_colonial_subsidies
+			days = 260
+		}
 		if = {
 			limit = {
 				MAF = {

@@ -75,6 +75,7 @@ balkanize_america = {
 			release = PRI }
 
 			remove_state_core = 686
+			remove_state_core = 1312
 
 		HAW = { add_state_core = 629
 			add_state_core = 630
@@ -367,7 +368,7 @@ balkanize_america = {
 		FSA = {
 
 			add_state_core = 375
-			add_state_core = 1131
+			add_state_core = 1160
 			add_state_core = 833
 			add_state_core = 374
 			add_state_core = 372
@@ -394,7 +395,7 @@ balkanize_america = {
 		}
 
 		remove_state_core = 375
-		remove_state_core = 1131
+		remove_state_core = 1160
 		remove_state_core = 833
 		remove_state_core = 374
 		remove_state_core = 372

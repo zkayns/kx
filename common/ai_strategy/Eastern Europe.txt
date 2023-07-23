@@ -3,6 +3,9 @@ LIT_may_rebel = {
 	allowed = {
 		tag = LIT
 	}
+	enable = {
+		always = yes
+	}
 	enable_reverse = {
 		LIT = {
 			has_active_mission = LIT_LAF_guerilla_activity
@@ -19,13 +22,12 @@ LIT_may_rebel = {
 		value = 1000
 	}
 }
-
-WHR_will_defect = {
+UKR_defend_only_ourselves = {
 	allowed = {
-		tag = WHR
+		tag = UKR
 	}
 	enable = {
-		has_global_flag = SOV_will_puppet_belarus
+		always = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -56,23 +58,113 @@ WHR_will_defect = {
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
-		id = "UKR"
+		id = "WHR"
 		value = 1000
 	}
+}
+UKR_civil_war = {
+	allowed = { tag = UKR }
+	enable = {
+		country_exists = UPR
+	}
+	abort_when_not_enabled = yes
+	
 	ai_strategy = {
-		type = front_unit_request
-		tag = UKR
+		type = contain
+		id = "UPR"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "UPR"
+		value = 500
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "UPR"
+		value = 200
+	}	
+}
+WHR_will_defect = {
+	allowed = {
+		original_tag = WHR
+	}
+	enable = {
+		has_global_flag = RUS_will_puppet_belarus
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = spare_unit_factor
+		value = -100
+	}
+	ai_strategy = {
+		type = garrison
+		value = 100
+	}
+}
+
+WHR_will_defect_russia = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_global_flag = RUS_will_puppet_belarus
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = WHR
+		value = -50
+	}
+	ai_strategy = {
+		type = conquer
+		id = WHR
+		value = -200
+	}
+}
+KAR_invade_petrozavodsk = {
+	allowed = {
+		tag = KAR
+	}
+	enable = {
+		has_socialist_government = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "RUS"
 		value = 100
 	}
 	ai_strategy = {
-		type = front_unit_request
-		tag = LIT
-		value = 75
+		type = invade
+		id = "RUS"
+		value = 10 #just enough to overcome the AI's reluctance to invade when directly bordering an enemy
 	}
 	ai_strategy = {
-		type = front_unit_request
-		tag = POL
-		value = 75
+		type = front_control
+		tag = RUS
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
 	}
+}
+UKR_ensure_neutrality = {
+	allowed = { 
+		tag = UKR
+	}
+	enable = {
+		has_completed_focus = UKR_Ensure_Neutrality_In_Weltkrieg
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = alliance value = -400 }
+	ai_strategy = { type = send_volunteers_desire value = -400 }
+	ai_strategy = { type = send_lend_lease_desire value = -400 }
+	
 }
 

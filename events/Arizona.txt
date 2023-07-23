@@ -10,7 +10,7 @@ country_event = { #Revolt Intro
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
 	title = arizona.1.t
 	desc = arizona.1.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_youngwater
 
 	fire_only_once = yes
 
@@ -30,7 +30,7 @@ country_event = { # Mexico failed lmao
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.2" }
 	title = arizona.2.t
 	desc = arizona.2.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_color
 
 	fire_only_once = yes
 
@@ -51,7 +51,7 @@ country_event = { # State of the Govt
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.3" }
 	title = arizona.3.t
 	desc = arizona.3.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_color
 
 	fire_only_once = yes
 
@@ -62,10 +62,9 @@ country_event = { # State of the Govt
 		ai_chance = {
 			factor = 50
 		}
-		set_country_flag = ARZ_elections_called
 		hidden_effect = {
 			country_event = {
-				id = arizona.5
+				id = arizona.16
 				days = 5
 			}
 		}
@@ -78,7 +77,7 @@ country_event = { # State of the Govt
 		}
 		hidden_effect = {
 			country_event = {
-				id = arizona.4
+				id = arizona.26
 				days = 5
 			}
 		}
@@ -90,7 +89,7 @@ country_event = { # Goldwater Secured Power
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
 	title = arizona.4.t
 	desc = arizona.4.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_youngwater
 
 	fire_only_once = yes
 
@@ -115,7 +114,7 @@ country_event = { # Preparing for Elections
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.5" }
 	title = arizona.5.t
 	desc = arizona.5.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_democratwater
 
 	fire_only_once = yes
 
@@ -123,6 +122,7 @@ country_event = { # Preparing for Elections
 
 	option = { #Interesting
 		name = arizona.5.a
+		set_country_flag = ARZ_elections_called
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = -0.3
@@ -139,7 +139,7 @@ country_event = { # Preparing for Elections
 		create_country_leader = {
 			name = "Robert Taylor Jones"
 			desc = "POLITICS_ROBERT_TAYLOR_DESC"
-			picture = "gfx/leaders/CAL/Portrait_CAL_Robert_Taylor_Jones.png"
+			picture = "gfx/leaders/ARZ/Portrait_ARZ_Robert_Taylor_Jones.png"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
 			traits = { }
@@ -159,7 +159,7 @@ country_event = { # Elections
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.6" }
 	title = arizona.6.t
 	desc = arizona.6.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_election
 
 	fire_only_once = yes
 
@@ -194,7 +194,7 @@ country_event = { # rangers
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.7" }
 	title = arizona.7.t
 	desc = arizona.7.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_rangers
 
 	fire_only_once = yes
 
@@ -218,7 +218,7 @@ country_event = { # rangers
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.7" }
 	title = arizona.8.t
 	desc = arizona.8.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_rynning
 
 	fire_only_once = yes
 
@@ -228,7 +228,7 @@ country_event = { # rangers
 		name = arizona.8.a
 		 create_corps_commander = { #Auto-Generated
 				name = "Thomas H. Rynning"
-				portrait_path = "gfx/leaders/Generic/TXS_generic_general_7.png"
+				portrait_path = "gfx/leaders/ARZ/Portrait_ARZ_A_Thomas_Rynning.png"
 				traits = {
 					commando cavalry_leader 
 				}
@@ -246,7 +246,7 @@ country_event = { #Auth Goldwater flavor
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
 	title = arizona.9.t
 	desc = arizona.9.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_wisperwater
 
 	fire_only_once = yes
 
@@ -265,7 +265,7 @@ country_event = { #Najvo flavor
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
 	title = arizona.10.t
 	desc = arizona.10.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_najavo
 
 	fire_only_once = yes
 
@@ -285,7 +285,7 @@ country_event = { #Old Gun
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
 	title = arizona.11.t
 	desc = arizona.11.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_old_gun
 
 	fire_only_once = yes
 
@@ -311,7 +311,7 @@ country_event = { #Naval battle but landlocked
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
 	title = arizona.12.t
 	desc = arizona.12.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_navy
 
 	fire_only_once = yes
 
@@ -329,7 +329,7 @@ country_event = { #same guy writing the Constitution
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
 	title = arizona.13.t
 	desc = arizona.13.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_sentor_man
 
 	fire_only_once = yes
 
@@ -346,7 +346,7 @@ country_event = { #Arizona tea
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
 	title = arizona.14.t
 	desc = arizona.14.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_tea_holy_shit
 
 	fire_only_once = yes
 
@@ -369,7 +369,7 @@ country_event = { #Arizona tea
 	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
 	title = arizona.14.t
 	desc = arizona.14.d
-	picture = GFX_report_event_soldiers_marching
+	picture = GFX_arz_tea_holy_shit
 
 	fire_only_once = yes
 
@@ -387,7 +387,1080 @@ country_event = { #Arizona tea
 		
 	}
 }
+country_event = { #rangers protest lack of democracy secuirty
+	id = arizona.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
+	title = arizona.16.t
+	desc = arizona.16.d
+	picture = GFX_arz_rangers
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #listen to them
+		name = arizona.16.a
+		add_political_power = -25
+		hidden_effect = {
+			country_event = {
+				id = arizona.5
+				days = 10
+			}
+		}	
+	}
+	option = { #boohoo 
+		name = arizona.16.b
+		add_political_power = 25
+		hidden_effect = {
+			country_event = {
+				id = arizona.17
+				days = 5
+			}
+		}	
+	}
+}
+country_event = { #rangers attempt coup
+	id = arizona.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
+	title = arizona.17.t
+	desc = arizona.17.d
+	picture = GFX_arz_rangers
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #fails
+		name = arizona.17.a
+		add_political_power = -25
+		hidden_effect = {
+			country_event = {
+				id = arizona.5
+				days = 10
+			}
+		}	
+	}
+	option = { #wins
+		name = arizona.17.b
+		add_political_power = 15
+		remove_all_ministers = yes
+		add_ideas = {
+			ARZ_Harry_C_Wheeler_hog_ade
+			ARZ_Harry_C_Wheeler_for_ade
+			ARZ_Harry_C_Wheeler_eco_ade
+			ARZ_Harry_C_Wheeler_sec_ade
+		}
+		set_country_flag = ARZ_rangers_power
+		set_cosmetic_tag = ARZ_ranger_cosmetic
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			name = "AR"
+			long_name = "Arizona Rangers"
+		}
+		create_country_leader = {
+			name = "Harry C. Wheeler"
+			desc = "POLITICS_HARRY_WHEELER_DESC"
+			picture = "gfx/leaders/ARZ/Portrait_ARZ_Harry_C_Wheeler.png"
+			expire = "1965.1.1"
+			ideology = police_state_subtype
+			traits = { }
+		}
+
+	}
+}
+country_event = { #navajo water rights
+	id = arizona.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
+	title = arizona.18.t
+	desc = arizona.18.d
+	picture = GFX_arz_najavo
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #listen to them
+		name = arizona.18.a
+		add_political_power = -75
+		add_resource = {
+				type = tungsten
+				amount = 2
+				state = 376
+			}
+			add_resource = {
+				type = chromium
+				amount = 3
+				state = 377
+			}
+			add_resource = {
+				type = oil
+				amount = 2
+				state = 377
+			}
+		hidden_effect = {
+			country_event = {
+				id = arizona.10
+				days = 10
+			}
+		}	
+	}
+	option = { #boohoo 
+		name = arizona.18.b
+		add_political_power = 25
+		hidden_effect = {
+			country_event = {
+				id = arizona.19
+				days = 5
+			}
+		}	
+	}
+}
+country_event = { #navajo revolt
+	id = arizona.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1"
+	hidden_effect = {
+		ARZ = {
+			NVN = { transfer_technology = yes }
+		}
+		set_country_flag = ARZ_navajo_revolt
+		NVN = {
+			transfer_state = 376
+		}
+		NVN = {
+			add_state_core = 376
+			add_state_core = 377
+		}
+		NVN = {
+			load_oob = NVNMIL
+		}
+	} }
+	title = arizona.19.t
+	desc = arizona.19.d
+	picture = GFX_arz_najavo
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #play nvn
+		name = arizona.19.a
+		declare_war_on = {	
+			target = NVN
+			type = annex_everything
+		}
+		NVN = {
+			change_tag_from = ARZ
+		}
+
+	}
+	option = { #wins
+		name = arizona.19.b
+		declare_war_on = {	
+			target = NVN
+			type = annex_everything
+		}
+
+	}
+}
+country_event = { #navajo lost
+	id = arizona.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
+	title = arizona.20.t
+	desc = arizona.20.d
+	picture = GFX_arz_najavo
+
+	fire_only_once = yes
+	trigger = {
+		tag = ARZ
+		has_country_flag = ARZ_navajo_revolt
+		NVN = {
+			exists = no
+		}
+	}
+
+	option = { #listen to them
+		name = arizona.20.a
+		add_stability = 0.15
+		add_political_power = 75
+	}
+	option = { #listen to them
+		name = arizona.20.b
+		add_stability = -0.15
+		add_political_power = -75
+		add_resource = {
+				type = aluminium
+				amount = 2
+				state = 376
+			}
+			add_resource = {
+				type = tungsten
+				amount = 2
+				state = 376
+			}
+			add_resource = {
+				type = chromium
+				amount = 2
+				state = 377
+			}
+			add_resource = {
+				type = steel
+				amount = 2
+				state = 377
+			}
+	}
+}
+country_event = { # old man fights mexicans, yells at sky, dies
+	id = arizona.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.21.t
+	desc = arizona.21.d
+	picture = GFX_arz_lilly
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.21.a
+		add_political_power = -15
+	}
+}
+country_event = { # JEESIE, WE NEED TO COOK
+	id = arizona.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.22.t
+	desc = arizona.22.d
+	picture = GFX_arz_jessie
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.22.a
+		add_stability = 0.05
+	}
+}
+country_event = { #BIG IRON
+	id = arizona.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.23.t
+	desc = arizona.23.d
+	picture = GFX_arz_rangers
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.23.a
+		increase_ruling_party_popularity_by_3 = yes
+	}
+}
+country_event = { #bisbree deportation
+	id = arizona.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.24.t
+	desc = arizona.24.d
+	picture = GFX_arz_bisbree
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.24.a
+		add_stability = -0.05
+	}
+}
+country_event = { #tomestone
+	id = arizona.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.25.t
+	desc = arizona.25.d
+	picture = GFX_arz_tombstone
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.25.a
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+country_event = { #commies mad
+	id = arizona.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.26.t
+	desc = arizona.26.d
+	picture = GFX_arz_goldwater_line
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.26.a
+		add_political_power = -15
+		hidden_effect = {
+			country_event = {
+				id = arizona.4
+				days = 5
+			}
+		}
+	}
+	option = { #oh no
+		name = arizona.26.b
+		add_political_power = 15
+		hidden_effect = {
+			country_event = {
+				id = arizona.27
+				days = 7
+			}
+		}
+		}
+}
+country_event = { #commies mad but with guns
+	id = arizona.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.27.t
+	desc = arizona.27.d
+	picture = GFX_arz_commie_gun
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.27.a
+		add_political_power = -15
+		hidden_effect = {
+			country_event = {
+				id = arizona.28
+				days = 7
+			}
+		}
+	}
+	option = { #oh no
+		name = arizona.27.b
+		add_political_power = 15
+		hidden_effect = {
+			country_event = {
+				id = arizona.4
+				days = 5
+			}
+		}
+		}
+}
+country_event = { # commie coup
+	id = arizona.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.28.t
+	desc = arizona.28.d
+	picture = GFX_arz_sunrise
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.28.a
+		add_ideas = ARZ_ranger_resit
+		random_unit_leader = {
+				limit = { has_id = 8465 }			
+				remove_unit_leader = yes
+			}
+			random_unit_leader = {
+				limit = { has_id = 6420 }			
+				remove_unit_leader = yes
+			}
+
+			create_field_marshal = {
+	name = "Subcommitee for Warfare of the Commitee for Self-Defence of the PLM-IWW Popular Assembly"
+	portrait_path = "gfx/leaders/ARZ/Portrait_ARZ_PLM_IWW_Congress.png"
+	traits = {
+		incorporeal
+		organizer
+		logistics_wizard
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 4
+
+}
+		create_corps_commander = {#
+	name = "Fernando Palomares "
+	portrait_path = "gfx/leaders/ARZ/Portrait_ARZ_Fernando_Palomares.png"
+	traits = {
+		commando
+		war_hero
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+
+}
+create_corps_commander = {#
+	name = "Rosendo Dorame "
+	portrait_path = "gfx/leaders/ARZ/Portrait_ARZ_Rosendo_Dorame.png"
+	traits = {
+		skirmisher
+		politically_connected
+		war_hero
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+
+}	
+		set_cosmetic_tag = ARZ_COMMIE
+		remove_all_ministers = yes
+		add_ideas = ARZ_Unity_Council_hog_sde
+		add_ideas = TXS_Rosendo_Dorame_for_rso
+		add_ideas = TXS_Fernando_Palomares_eco_rso
+		add_ideas = ARZ_Unity_Council_sec_syn
+
+		set_country_flag = ARZ_dog_reference
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+			add_to_coalition = yes 
+		}
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:syndicalist }
+			add_to_coalition = yes 
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.15
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = arizona.29
+				days = 14
+			}
+		}
+	}
+}
+country_event = { # commie leader
+	id = arizona.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.29.t
+	desc = arizona.29.d
+	picture = GFX_arz_leaderpicker
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.29.a #Dorame
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes 
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.10
+		}
+	}
+	option = { #oh no
+		name = arizona.29.b #Dorame
+		hidden_effect = { 
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes 
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+	}
+	option = { #oh no
+		name = arizona.29.c #Dorame
+		increase_ruling_party_popularity_by_10 = yes
+		hidden_effect = {
+			country_event = {
+				id =  arizona.41
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #mexico guy
+	id = arizona.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.30.t
+	desc = arizona.30.d
+	picture = GFX_arz_magon
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARZ
+		has_government = radical_socialist
+		owns_state = 484
+	}
+
+	option = { #oh no
+		name = arizona.30.a
+		create_country_leader = { # Enrique Magon
+			name = "Enrique Magon"
+			picture = "gfx/leaders/MEX/Portrait_Mexico_Enrique_Magon.png"
+			expire = "1965.1.1"
+			ideology = anarcho_communism_subtype
+			traits = {}
+		}
+	}
+
+	option = { #oh no
+		name = arizona.30.b
+		remove_ideas_with_trait = security_minister
+		add_ideas = MEX_Ricardo_Flores_Magon_sec_syn
+		increase_ruling_party_popularity_by_10 = yes
+	}
+}
+
+country_event = { #native grilboss
+	id = arizona.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.31.t
+	desc = arizona.31.d
+	picture = GFX_arz_girlboss
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARZ
+		has_government = syndicalist
+		owns_state = 833
+		owns_state = 375
+	}
+
+	option = { #oh no
+		name = arizona.31.a
+		create_country_leader = {
+					name = "Emma B. Tenayuca"
+					desc = "POLITICS_TENAYUCA_DESC"
+					female = yes
+					picture = "gfx/leaders/TXS/Portrait_TXS_Emma_Tenayuca.png"
+					expire = "1965.1.1"
+					ideology = syn_cowboy_communalism_subtype
+					traits = {}
+				}
+	}
+
+	option = { #oh no
+		name = arizona.31.b
+		remove_ideas_with_trait = security_minister
+		add_ideas = TXS_Emma_Tenayuca_sec_syn
+		increase_ruling_party_popularity_by_10 = yes
+	}
+}
+
+country_event = { #radsoc ideology pick
+	id = arizona.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.32.t
+	desc = arizona.32.d
+	picture = GFX_arz_mexico_color
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARZ
+		has_government = radical_socialist
+		has_completed_focus = ARZ_trail_o_powder
+	}
+
+	option = { #oh no
+		name = arizona.32.a
+		increase_ruling_party_popularity_by_3 = yes
+		add_political_power = 25
+		add_stability = 0.1
+	}
+
+	option = { #oh no
+		name = arizona.32.b
+		set_country_leader_ideology = anarcho_communism_subtype
+		decrease_ruling_party_popularity_by_10 = yes
+		decrease_ruling_party_popularity_by_10 = yes
+		add_stability = -0.15
+	}
+}
+country_event = { #syn ideology pick
+	id = arizona.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.33.t
+	desc = arizona.33.d
+	picture = arz_mexico_color
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARZ
+		has_government = syndicalist
+		has_completed_focus = ARZ_humble_striker
+	}
+
+	option = { #oh no
+		name = arizona.33.a
+		increase_ruling_party_popularity_by_3 = yes
+		add_political_power = 25
+		add_stability = 0.1
+	}
+
+	option = { #oh no
+		name = arizona.33.b
+		set_country_leader_ideology = anarcho_syndicalist_subtype
+		decrease_ruling_party_popularity_by_10 = yes
+		decrease_ruling_party_popularity_by_10 = yes
+		add_stability = -0.15
+	}
+}
+country_event = { #funny guy
+	id = arizona.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.34.t
+	desc = arizona.34.d
+	picture = GFX_arz_chaves
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARZ
+		has_completed_focus = ARZ_plmiww_rideout
+		date > 1950.1.1
+	}
+
+	option = { #oh no
+		name = arizona.34.a
+		set_country_flag = ARZ_Barry_Morris_Goldwater_dead
+		create_country_leader = {
+		name = "Cesar Chavez"
+		picture = "gfx/leaders/ARZ/Portrait_ARZ_Cesar_Chavez.png"
+		expire = "1965.1.1"
+		ideology = syn_cowboy_communalism_subtype
+		traits = { }
+	}
+	create_country_leader = {
+		name = "Cesar Chavez"
+		picture = "gfx/leaders/ARZ/Portrait_ARZ_Cesar_Chavez.png"
+		expire = "1965.1.1"
+		ideology = cowboy_communalism_subtype
+		traits = { }
+	}
+	create_country_leader = {
+		name = "Cesar Chavez"
+		picture = "gfx/leaders/ARZ/Portrait_ARZ_Cesar_Chavez.png"
+		expire = "1965.1.1"
+		ideology = socdem_cowboy_communalism_subtype
+		traits = { }
+	}
+		create_navy_leader = {#
+		name = "Cesar Chavez "
+		portrait_path = "gfx/leaders/ARZ/Portrait_ARZ_Cesar_Chavez.png"
+		traits = {
+		politically_connected
+		}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	}
+
+	option = { #oh no
+		name = arizona.34.b
+		create_navy_leader = {#
+		name = "Cesar Chavez "
+		portrait_path = "gfx/leaders/ARZ/Portrait_ARZ_Cesar_Chavez.png"
+		traits = {
+		politically_connected
+		}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	}
+}
+
+country_event = { #red road runner (lol)
+	id = arizona.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.35.t
+	desc = arizona.35.d
+	picture = GFX_arz_roadrunner
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.35.a
+		increase_ruling_party_popularity_by_3 = yes
+	}
+
+}
+
+country_event = { #civil rights conference
+	id = arizona.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.36.t
+	desc = arizona.36.d
+	picture = GFX_arz_civilrights
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.36.a
+		add_political_power = 15
+	}
+
+}
+
+country_event = { #what do with gringo leaders
+	id = arizona.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.37.t
+	desc = arizona.37.d
+	picture = GFX_arz_justice
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.37.a
+		add_political_power = -75
+		add_stability = -0.15
+		add_offsite_building = { type = industrial_complex level = 3 }
+	}
+
+	option = { #oh no
+		name = arizona.37.b
+		increase_ruling_party_popularity_by_5 = yes
+		add_stability = 0.1
+	}
+
+}
+
+country_event = { #paradise or smth
+	id = arizona.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.38.t
+	desc = arizona.38.d
+	picture = GFX_arz_paradise
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #oh no
+		name = arizona.38.a
+		increase_ruling_party_popularity_by_10 = yes
+	}
 
 
+}
+
+country_event = { #westerns
+	id = arizona.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.39.t
+	desc = arizona.39.d
+	picture = GFX_arz_western
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_government = social_conservative
+		}
+	}
+
+	option = { #oh no
+		name = arizona.39.a
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
 
 
+}
+
+country_event = { #red cowboy
+	id = arizona.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.40.t
+	desc = arizona.40.d
+	picture = GFX_arz_redboy
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+
+	option = { #oh no
+		name = arizona.40.a
+		increase_ruling_party_popularity_by_3 = yes
+	}
+
+
+}
+
+country_event = { #trve cvoncil
+	id = arizona.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.41.t
+	desc = arizona.41.d
+	picture = GFX_arz_democracy_but_cowboy
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+
+	option = { #oh no
+		name = arizona.41.a
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		add_political_power = 15
+		remove_all_ministers = yes
+		add_ideas = ARZ_Unity_Council_hog_sde
+		add_ideas = ARZ_Unity_Council_for_sde
+		add_ideas = ARZ_Unity_Council_eco_rso
+		add_ideas = ARZ_Unity_Council_sec_syn
+	}
+
+	option = { #oh no
+		name = arizona.41.b
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		add_political_power = 15
+		remove_all_ministers = yes
+		add_ideas = ARZ_Unity_Council_hog_sde
+		add_ideas = ARZ_Unity_Council_for_sde
+		add_ideas = ARZ_Unity_Council_eco_rso
+		add_ideas = ARZ_Unity_Council_sec_syn
+	}
+
+	option = { #oh no
+		name = arizona.41.c
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+		add_political_power = 15
+		remove_all_ministers = yes
+		add_ideas = ARZ_Unity_Council_hog_sde
+		add_ideas = ARZ_Unity_Council_for_sde
+		add_ideas = ARZ_Unity_Council_eco_rso
+		add_ideas = ARZ_Unity_Council_sec_syn
+	}
+
+
+}
+
+country_event = { #fate of americans
+	id = arizona.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.42.t
+	desc = arizona.42.d
+	picture = GFX_arz_democracy_but_cowboy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARZ
+		has_completed_focus = ARZ_big_socialist_arz
+		owns_state = 361
+	}
+	
+
+	option = { #oh no
+		name = arizona.42.a
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		WCC = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}
+		USA = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}	
+		COR = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}
+		TEX = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}
+		CAL = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}	
+		CSA = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}	
+		NEE = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}						
+	}
+
+	option = { #oh no
+		name = arizona.42.b
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		add_offsite_building = { type = industrial_complex level = 20 }
+	}
+
+	option = { #oh no
+		name = arizona.42.c
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		add_political_power = 15
+		remove_all_ministers = yes
+		add_manpower = -2000
+	}
+
+
+}
+
+country_event = { #fate of mexiCAN'TS
+	id = arizona.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.43.t
+	desc = arizona.43.d
+	picture = GFX_arz_mexico_color
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARZ
+		has_completed_focus = ARZ_big_socialist_arz
+		owns_state = 277
+	}
+	
+
+	option = { #oh no
+		name = arizona.43.a
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		MEX = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}
+		YUC = {
+				every_unit_leader = {
+					set_nationality = ARZ
+				}
+			}				
+	}
+
+	option = { #oh no
+		name = arizona.43.b
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		add_offsite_building = { type = industrial_complex level = 20 }
+	}
+
+	option = { #oh no
+		name = arizona.43.c
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		add_political_power = 15
+		remove_all_ministers = yes
+		add_manpower = -2000
+	}
+
+
+}
+
+country_event = { #red cowboy flims
+	id = arizona.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.4" }
+	title = arizona.44.t
+	desc = arizona.44.d
+	picture = GFX_arz_redboy_movie
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+
+	option = { #oh no
+		name = arizona.44.a
+		increase_ruling_party_popularity_by_3 = yes
+	}
+
+
+}

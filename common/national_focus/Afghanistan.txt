@@ -44,7 +44,7 @@ focus_tree = {
 
 		x = 6
 		y = 1
-		cost = 2
+		cost = 1
 		available_if_capitulated = yes
 		prerequisite = { focus = AFG_anglo_afghan_war }
 		ai_will_do = {
@@ -72,7 +72,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AFG_rally_allies"
 			GER = { country_event = afghanredux.4 }
-			OTT = { country_event = afghanredux.5 }
+			TUR = { country_event = afghanredux.5 }
 		}
 	}
 
@@ -82,7 +82,7 @@ focus_tree = {
 
 		x = 10
 		y = 1
-		cost = 2
+		cost = 1
 		available_if_capitulated = yes
 		prerequisite = { focus = AFG_anglo_afghan_war }
 		ai_will_do = {
@@ -167,7 +167,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AFG_political_support"
-			OTT = { country_event = afghanredux.3 }
+			TUR = { country_event = afghanredux.3 }
 		}
 	}
 

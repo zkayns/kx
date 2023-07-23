@@ -244,10 +244,13 @@ on_actions = {
 					static_modifiers = { terrain_tirana }
 					province = { id = 9914 }
 				}
-
-				add_province_modifier = {
-					static_modifiers = { terrain_scutari }
-					province = { id = 9780 }
+                                add_province_modifier = {
+					static_modifiers = { terrain_elbasan }
+					province = { id = 9875 }
+				}
+                                add_province_modifier = {
+					static_modifiers = { terrain_vlore }
+					province = { id = 11767 }
 				}
 			}
 
@@ -483,6 +486,13 @@ on_actions = {
 				}
 			}
 
+			87 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_kalisz }
+					province = { id = 9546 }
+				}
+			}
+
 			89 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_stanislau }
@@ -499,6 +509,10 @@ on_actions = {
 					static_modifiers = { terrain_czestochowa }
 					province = { id = 3586 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_kielce }
+					province = { id = 3497 }
+				}
 			}
 
 			91 = {
@@ -512,6 +526,10 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_lublin }
 					province = { id = 3559 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_siedlce }
+					province = { id = 402 }
 				}
 			}
 
@@ -544,6 +562,14 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_wloclawek }
 					province = { id = 3230 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_plock }
+					province = { id = 6259 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_mlawa }
+					province = { id = 9290 }
 				}
 			}
 
@@ -765,6 +791,10 @@ on_actions = {
 					static_modifiers = { terrain_galway }
 					province = { id = 9303 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_sligo }
+					province = { id = 11371 }
+				}
 			}
 
 			135 = {
@@ -839,6 +869,10 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_linz }
 					province = { id = 9665 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_fucking }
+					province = { id = 6708 }
 				}
 			}
 
@@ -1017,6 +1051,13 @@ on_actions = {
 					province = { id = 11405 }
 				}
 			}
+			
+			201 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_zhytomyr }
+					province = { id = 11514 }
+				}
+			}
 
 			202 = {
 				add_province_modifier = {
@@ -1050,13 +1091,6 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_volgograd }
 					province = { id = 3529 }
-				}
-			}
-
-			218 = {
-				add_province_modifier = {
-					static_modifiers = { terrain_rostov }
-					province = { id = 9417 }
 				}
 			}
 
@@ -1100,8 +1134,26 @@ on_actions = {
 					static_modifiers = { terrain_kryvyi_rih }
 					province = { id = 11561 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_katerinoslav }
+					province = { id = 11437 }
+				}
 			}
-
+			
+			227 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_yuzivka }
+					province = { id = 6474 }
+				}
+			}
+			
+			228 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_mariupol }
+					province = { id = 6420 }
+				}
+			}
+			
 			230 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_erivan }
@@ -1120,6 +1172,13 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_ekaterinodar }
 					province = { id = 3734 }
+				}
+			}
+
+			236 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_astrakhan }
+					province = { id = 9753 }
 				}
 			}
 
@@ -1185,7 +1244,14 @@ on_actions = {
 					province = { id = 11375 }
 				}
 			}
-
+			
+			259 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_poltava }
+					province = { id = 511 }
+				}
+			}
+			
 			260 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_voronezh }
@@ -1218,6 +1284,13 @@ on_actions = {
 				}
 			}
 
+			268 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_djibouti }
+					province = { id = 8124 }
+				}
+			}
+
 			271 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_addis_ababa }
@@ -1237,6 +1310,10 @@ on_actions = {
 					static_modifiers = { terrain_accra }
 					province = { id = 13867 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_tamale }
+					province = { id = 14440 }
+				}
 			}
 
 			275 = {
@@ -1254,6 +1331,18 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_toronto }
 					province = { id = 3775 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_hamilton }
+					province = { id = 3763 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_london_ontario }
+					province = { id = 722 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_windsor }
+					province = { id = 9667 }
 				}
 			}
 
@@ -1377,6 +1466,10 @@ on_actions = {
 					static_modifiers = { terrain_monrovia }
 					province = { id = 13828 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_harper }
+					province = { id = 13831 }
+				}
 			}
 
 			300 = {
@@ -1410,7 +1503,7 @@ on_actions = {
 			304 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_panama_city }
-					province = { id = 13681 }
+					province = { id = 14619 }
 				}
 			}
 
@@ -1537,6 +1630,13 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_st_johns_labrador }
 					province = { id = 12505 }
+				}
+			}
+
+			332 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_battle_harbour }
+					province = { id = 4720 }
 				}
 			}
 
@@ -1673,6 +1773,10 @@ on_actions = {
 					static_modifiers = { terrain_trenton }
 					province = { id = 11782 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_princeton }
+					province = { id = 3863 }
+				}
 			}
 
 			360 = {
@@ -1688,6 +1792,14 @@ on_actions = {
 					static_modifiers = { terrain_pittsburgh }
 					province = { id = 11800 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_york_pennsylvania }
+					province = { id = 822 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_lancaster }
+					province = { id = 3824 }
+				}
 			}
 
 			361 = {
@@ -1698,6 +1810,10 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_baltimore }
 					province = { id = 6984 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_annapolis }
+					province = { id = 11892 }
 				}
 			}
 
@@ -1723,6 +1839,13 @@ on_actions = {
 				}
 			}
 
+			364 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_greenville }
+					province = { id = 4653 }
+				}
+			}
+
 			365 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_atlanta }
@@ -1734,6 +1857,17 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_miami }
 					province = { id = 1843 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_tampa }
+					province = { id = 7388 }
+				}
+			}
+
+			367 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_huntsville }
+					province = { id = 5059 }
 				}
 			}
 
@@ -1808,6 +1942,10 @@ on_actions = {
 					static_modifiers = { terrain_oklahoma_city }
 					province = { id = 10798 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_ponca_city }
+					province = { id = 7904 }
+				}
 			}
 
 			375 = {
@@ -1841,6 +1979,10 @@ on_actions = {
 					static_modifiers = { terrain_tuscon }
 					province = { id = 3834 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_window_rock }
+					province = { id = 6897 }
+				}
 			}
 
 			378 = {
@@ -1848,12 +1990,31 @@ on_actions = {
 					static_modifiers = { terrain_sacramento }
 					province = { id = 9713 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_eureka }
+					province = { id = 610 }
+				}
+			}
+
+			379 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_las_vegas }
+					province = { id = 4799 }
+				}
 			}
 
 			380 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_salt_lake_city }
 					province = { id = 4865 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_grand_junction }
+					province = { id = 6887 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_durango }
+					province = { id = 9792 }
 				}
 			}
 
@@ -1876,6 +2037,14 @@ on_actions = {
 					static_modifiers = { terrain_topeka }
 					province = { id = 1352 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_dodge_city }
+					province = { id = 12024 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_kansas_city_kansas }
+					province = { id = 7834 }
+				}
 			}
 
 			384 = {
@@ -1897,6 +2066,14 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_salem_oregon }
 					province = { id = 4328 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_klamath_falls }
+					province = { id = 4347 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_burns }
+					province = { id = 4826 }
 				}
 			}
 
@@ -1922,10 +2099,25 @@ on_actions = {
 				}
 			}
 
+			388 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_billings }
+					province = { id = 7760 }
+				}
+			}
+
 			389 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_bismarck_nd }
 					province = { id = 1836 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_williston }
+					province = { id = 4759 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_fargo }
+					province = { id = 10685 }
 				}
 			}
 
@@ -1933,6 +2125,14 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_pierre_sodak }
 					province = { id = 12620 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_rosebud }
+					province = { id = 1875 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_sioux_falls }
+					province = { id = 10595 }
 				}
 			}
 
@@ -1965,6 +2165,13 @@ on_actions = {
 				}
 			}
 
+			394 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_eau_claire }
+					province = { id = 1760 }
+				}
+			}
+
 			395 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_chicago }
@@ -1976,6 +2183,10 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_gary }
 					province = { id = 6713 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_fort_wayne }
+					province = { id = 870 }
 				}
 			}
 
@@ -2180,12 +2391,36 @@ on_actions = {
 					static_modifiers = { terrain_juneau }
 					province = { id = 13203 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_fairbanks }
+					province = { id = 13069 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_ketchikan }
+					province = { id = 13202 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_kodiak }
+					province = { id = 7884 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_nome }
+					province = { id = 7855 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_sand_point }
+					province = { id = 10694 }
+				}
 			}
 
 			464 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_halifax }
 					province = { id = 7361 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_charlottetown }
+					province = { id = 4360 }
 				}
 			}
 
@@ -2216,12 +2451,16 @@ on_actions = {
 					static_modifiers = { terrain_sherbrooke }
 					province = { id = 10230 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_rock_island }
+					province = { id = 7289 }
+				}
 			}
 
 			469 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_saskatoon }
-					province = { id = 3481 }
+					province = { id = 4739 }
 				}
 				add_province_modifier = {
 					static_modifiers = { terrain_regina }
@@ -2245,6 +2484,10 @@ on_actions = {
 					static_modifiers = { terrain_vancouver }
 					province = { id = 1408 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_prince_george }
+					province = { id = 1323 }
+				}
 			}
 
 			474 = {
@@ -2252,17 +2495,9 @@ on_actions = {
 					static_modifiers = { terrain_merida }
 					province = { id = 13462 }
 				}
-				add_province_modifier = {
-					static_modifiers = { terrain_campeche }
-					province = { id = 13457 }
-				}
 			}
 			
 			475 = {
-				add_province_modifier = {
-					static_modifiers = { terrain_villahermosa }
-					province = { id = 12867 }
-				}
 				add_province_modifier = {
 					static_modifiers = { terrain_tuxtla }
 					province = { id = 12753 }
@@ -2571,6 +2806,13 @@ on_actions = {
 				}
 			}
 
+			539 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_libreville }
+					province = { id = 5139 }
+				}
+			}
+
 			540 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_luanda }
@@ -2592,7 +2834,15 @@ on_actions = {
 			543 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_antananarivo }
+					province = { id = 14365 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_toamasina }
 					province = { id = 5128 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_maroantsetra }
+					province = { id = 5222 }
 				}
 			}
 
@@ -2600,6 +2850,20 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_salisbury }
 					province = { id = 10929 }
+				}
+			}
+
+			547 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_nairobi }
+					province = { id = 1939 }
+				}
+			}
+
+			548 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_kampala }
+					province = { id = 12989 }
 				}
 			}
 
@@ -2631,6 +2895,13 @@ on_actions = {
 				}
 			}
 
+			558 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_benin }
+					province = { id = 4952 }
+				}
+			}
+
 			559 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_mogadishu }
@@ -2644,11 +2915,25 @@ on_actions = {
 					province = { id = 1727 }
 				}
 			}
-
+			
+			570 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_novosib }
+					province = { id = 7274 }
+				}
+			}
+			
 			572 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_chelyabinsk }
 					province = { id = 9292 }
+				}
+			}
+
+			582 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_orsk }
+					province = { id = 4261 }
 				}
 			}
 
@@ -2757,6 +3042,27 @@ on_actions = {
 				}
 			}
 
+			631 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_midway }
+					province = { id = 13052 }
+				}
+			}
+
+			632 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_wake }
+					province = { id = 13047 }
+				}
+			}
+
+			638 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_agana }
+					province = { id = 12140 }
+				}
+			}
+
 			640 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_mandalay }
@@ -2799,12 +3105,20 @@ on_actions = {
 				}
 			}
 
+			660 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_bangui }
+					province = { id = 11108 }
+				}
+			}
+
 			663 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_jaghbub }
 					province = { id = 1060 }
 				}
 			}
+
 			670 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_vientiane }
@@ -2849,6 +3163,10 @@ on_actions = {
 					static_modifiers = { terrain_sudbury }
 					province = { id = 9480 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_thunder_bay }
+					province = { id = 7899 }
+				}
 			}
 
 			685 = {
@@ -2876,6 +3194,13 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_kingston }
 					province = { id = 12304 }
+				}
+			}
+
+			690 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_nassau }
+					province = { id = 13607 }
 				}
 			}
 
@@ -2907,6 +3232,13 @@ on_actions = {
 				}
 			}
 
+			718 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_niangara }
+					province = { id = 6027 }
+				}
+			}
+
 			719 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_durban }
@@ -2925,6 +3257,13 @@ on_actions = {
 				}
 			}
 
+			730 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_saint_pierre }
+					province = { id = 373 }
+				}
+			}
+
 			737 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_rabaul }
@@ -2936,6 +3275,10 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_ottawa }
 					province = { id = 3778 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_kingston_ontario }
+					province = { id = 3605 }
 				}
 			}
 
@@ -3002,6 +3345,13 @@ on_actions = {
 				}
 			}
 
+            758 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_corfu }
+					province = { id = 10203 }
+				}
+			}
+
 			760 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_geneva }
@@ -3017,6 +3367,32 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_nizza }
 					province = { id = 9909 }
+				}
+			}
+
+            765 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_prizren }
+					province = { id = 9849 }
+				}
+                                add_province_modifier = {
+					static_modifiers = { terrain_pristina }
+					province = { id = 9874 }
+				}
+			}
+
+            766 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_sarande }
+					province = { id = 914 }
+				}
+                                add_province_modifier = {
+					static_modifiers = { terrain_gjirokaster }
+					province = { id = 3448 }
+				}
+                                add_province_modifier = {
+					static_modifiers = { terrain_korce }
+					province = { id = 6900 }
 				}
 			}
 
@@ -3052,6 +3428,10 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_danzig }
 					province = { id = 362 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_bydgoszcz }
+					province = { id = 279 }
 				}
 			}
 
@@ -3170,6 +3550,20 @@ on_actions = {
 				}
 			}
 
+			813 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_lusaka }
+					province = { id = 5199 }
+				}
+			}
+
+			818 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_guantanamo }
+					province = { id = 13205 }
+				}
+			}
+
 			820 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_santiago_de_cuba }
@@ -3202,6 +3596,14 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_san_antonio }
 					province = { id = 12782 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_laredo }
+					province = { id = 5061 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_corpus_christi }
+					province = { id = 6785 }
 				}
 			}
 
@@ -3236,7 +3638,7 @@ on_actions = {
 			842 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_tegucigalpa }
-					province = { id = 13207 }
+					province = { id = 14623 }
 				}
 			}
 
@@ -3262,10 +3664,60 @@ on_actions = {
 				}
 			}
 
+			869 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_kigali }
+					province = { id = 14249 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_nyanza }
+					province = { id = 9962 }
+				}
+			}
+
+			870 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_kitega }
+					province = { id = 2220 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_usumbura }
+					province = { id = 14229 }
+				}
+			}
+
+			871 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_lilongwe }
+					province = { id = 12986 }
+				}
+			}
+
+			876 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_porto_novo }
+					province = { id = 13877 }
+				}
+			}
+
 			877 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_lome }
 					province = { id = 13868 }
+				}
+			}
+
+			878 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_kano }
+					province = { id = 1969 }
+				}
+			}
+
+			879 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_elisabethville }
+					province = { id = 191 }
 				}
 			}
 
@@ -3276,19 +3728,48 @@ on_actions = {
 				}
 			}
 
+			881 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_leopoldville }
+					province = { id = 13950 }
+				}
+			}
+
 			885 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_harbin }
 					province = { id = 12412 }
 				}
 			}
+			
+			887 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_darjeeling }
+					province = { id = 12338 }
+				}
+			}
 
+			888 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_gangtok }
+					province = { id = 4435 }
+				}
+			}
+
+			892 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_kismayo }
+					province = { id = 12941 }
+				}
+			}
+			
 			894 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_florianopolis }
 					province = { id = 10405 }
 				}
 			}
+			
 
 			895 = {
 				add_province_modifier = {
@@ -3322,10 +3803,52 @@ on_actions = {
 				}
 			}
 
+			913 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_maiduguri }
+					province = { id = 4997 }
+				}
+			}
+
+			914 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_cabinda }
+					province = { id = 2115 }
+				}
+			}
+
 			915 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_hail }
 					province = { id = 7934 }
+				}
+			}
+
+			917 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_huambo }
+					province = { id = 10966 }
+				}
+			}
+
+			925 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_wajir }
+					province = { id = 5079 }
+				}
+			}
+
+			927 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_douala }
+					province = { id = 13887 }
+				}
+			}
+
+			928 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_brazzaville }
+					province = { id = 14323 }
 				}
 			}
 
@@ -3361,6 +3884,10 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_montpelier }
 					province = { id = 4445 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_derby_line }
+					province = { id = 7629 }
 				}
 			}
 
@@ -3410,6 +3937,41 @@ on_actions = {
 				}
 			}
 
+			952 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_yaounde }
+					province = { id = 2080 }
+				}
+			}
+
+			953 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_ouesso }
+					province = { id = 3109 }
+				}
+			}
+
+			957 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_mongu }
+					province = { id = 13648 }
+				}
+			}
+
+			962 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_maroua }
+					province = { id = 13943 }
+				}
+			}
+
+			964 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_olukonda }
+					province = { id = 8136 }
+				}
+			}
+
 			965 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_dar_es_salaam }
@@ -3417,10 +3979,39 @@ on_actions = {
 				}
 			}
 
+			966 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_fish_town }
+					province = { id = 14443 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_ganta }
+					province = { id = 14445 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_gbarnga }
+					province = { id = 14444 }
+				}
+			}
+
+			970 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_mombasa }
+					province = { id = 5210 }
+				}
+			}
+
 			973 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_lagos }
 					province = { id = 2050 }
+				}
+			}
+
+			977 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_nya_lukemba }
+					province = { id = 4941 }
 				}
 			}
 
@@ -3522,6 +4113,20 @@ on_actions = {
 				}
 			}
 
+			1025 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_coquilhatville }
+					province = { id = 14149 }
+				}
+			}
+
+			1026 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_stanleyville }
+					province = { id = 1950 }
+				}
+			}
+
 			1048 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_hankou }
@@ -3550,10 +4155,24 @@ on_actions = {
 				}
 			}
 
+			1088 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_chelm }
+					province = { id = 9452 }
+				}
+			}
+
 			1091 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_riga }
 					province = { id = 9340 }
+				}
+			}
+
+			1096 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_albuquerque }
+					province = { id = 4975 }
 				}
 			}
 			
@@ -3578,10 +4197,10 @@ on_actions = {
 				}
 			}
 
-			1105 = {
+			1206 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_fiume }
-					province = { id = 11564 }
+					province = { id = 13826 }
 				}
 			}
 
@@ -3676,10 +4295,24 @@ on_actions = {
 				}
 			}
 
+			1148 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_lomza }
+					province = { id = 11274 }
+				}
+			}
+
 			1149 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_anzio }
 					province = { id = 11846 }
+				}
+			}
+
+			1150 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_pueblo }
+					province = { id = 1809 }
 				}
 			}
 			
@@ -3699,6 +4332,10 @@ on_actions = {
 					static_modifiers = { terrain_madison }
 					province = { id = 12456 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_green_bay }
+					province = { id = 4166 }
+				}
 			}
 
 			1153 = {
@@ -3711,7 +4348,25 @@ on_actions = {
 			1154 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_springfield }
-					province = { id = 12497 }
+					province = { id = 12697 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_peoria }
+					province = { id = 1527 }
+				}
+			}
+
+			1155 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_roanoke }
+					province = { id = 1506 }
+				}
+			}
+
+			1156 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_jonesboro }
+					province = { id = 4625 }
 				}
 			}
 			
@@ -3719,6 +4374,41 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_helena }
 					province = { id = 7779 }
+				}
+			}
+
+			1158 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_elizabeth_city }
+					province = { id = 9876 }
+				}
+			}
+
+			1159 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_martinsburg }
+					province = { id = 11888 }
+				}
+			}
+
+			1160 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_huntington }
+					province = { id = 6971 }
+				}
+			}
+
+			1161 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_clovis }
+					province = { id = 10867 }
+				}
+			}
+
+			1162 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_atlantic_city }
+					province = { id = 9864 }
 				}
 			}
 			
@@ -3733,10 +4423,21 @@ on_actions = {
 				}
 			}
 
+			1164 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_rock_springs }
+					province = { id = 7688 }
+				}
+			}
+
 			1165 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_reno_nv }
 					province = { id = 10422 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_carson_city }
+					province = { id = 4607 }
 				}
 			}
 			
@@ -3788,12 +4489,49 @@ on_actions = {
 					static_modifiers = { terrain_tallahassee }
 					province = { id = 10407 }
 				}
+				add_province_modifier = {
+					static_modifiers = { terrain_jacksonville }
+					province = { id = 12381 }
+				}
 			}
 
 			1172 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_mobile }
 					province = { id = 7480 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_pensacola }
+					province = { id = 10352 }
+				}
+			}
+
+			1173 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_duluth }
+					province = { id = 1734 }
+				}
+			}
+
+			1174 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_alamosa }
+					province = { id = 12627 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_aspen }
+					province = { id = 1658 }
+				}
+			}
+
+			1175 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_guymon }
+					province = { id = 12624 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_liberal }
+					province = { id = 4586 }
 				}
 			}
 
@@ -3803,14 +4541,28 @@ on_actions = {
 					province = { id = 12589 }
 				}
 			}
-			
-			1191 = {
+
+			1177 = {
 				add_province_modifier = {
-					static_modifiers = { terrain_astrakhan }
-					province = { id = 9753 }
+					static_modifiers = { terrain_mahajanga }
+					province = { id = 5185 }
 				}
 			}
-			
+
+			1178 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_taolagnaro }
+					province = { id = 14412 }
+				}
+			}
+
+			1179 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_toliara }
+					province = { id = 2200 }
+				}
+			}
+	
 			1209 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_samarkand }
@@ -3829,6 +4581,140 @@ on_actions = {
 				add_province_modifier = {
 					static_modifiers = { terrain_sevastopol }
 					province = { id = 3686 }
+				}
+			}
+			
+			1235 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_vaduz }
+					province = { id = 14609 }
+				}
+			}
+			
+			1239 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_slovyansk }
+					province = { id = 502 }
+				}
+			}
+			
+			1228 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_rivne }
+					province = { id = 11543 }
+				}
+			}
+			
+			1232 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_mykolaiv }
+					province = { id = 11546 }
+				}
+			}
+			
+			1238 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_kremenchuk }
+					province = { id = 6495 }
+				}
+			}
+
+			1248 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_el_porvenir }
+					province = { id = 14618 }
+				}
+			}
+
+			1252 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_villahermosa }
+					province = { id = 12867 }
+				}
+			}
+
+			1254 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_campeche }
+					province = { id = 13457 }
+				}
+			}
+			
+			1263 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_rostov }
+					province = { id = 9417 }
+				}
+			}
+			
+			1268 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_scutari }
+					province = { id = 3896 }
+				}
+                add_province_modifier = {
+					static_modifiers = { terrain_lezhe }
+					province = { id = 9780 }
+				}
+			}
+
+            1271 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_debar }
+					province = { id = 833 }
+				}
+			}
+
+			1283 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_niu_york }
+					province = { id = 3466 }
+				}
+			}
+
+			1297 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_berbera }
+					province = { id = 13496 }
+				}
+			}
+
+			1304 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_lankaran }
+					province = { id = 4473 }
+				}
+			}
+
+			1312 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_charlotte_amalie }
+					province = { id = 4155 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_christiansted }
+					province = { id = 14801 }
+				}
+			}
+
+			1313 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_andorra_la_vella }
+					province = { id = 14793 }
+				}
+			}
+
+			1316 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_olivenza }
+					province = { id = 13632 }
+				}
+			}
+
+			1317 = {
+				add_province_modifier = {
+					static_modifiers = { terrain_douglas }
+					province = { id = 3311 }
 				}
 			}
 		}

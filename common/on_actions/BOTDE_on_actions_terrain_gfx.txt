@@ -2,13 +2,11 @@ on_actions = {
 
 	on_startup = {
 		effect = {
-			91 = {
+			1140 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_brody }
 					province = { id = 9454 }
 				}
-			}
-			1140 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_tarnopol }
 					province = { id = 11427 }
@@ -22,6 +20,10 @@ on_actions = {
 			}
 			1127 = {
 				add_province_modifier = {
+					static_modifiers = { terrain_premissel }
+					province = { id = 3434 }
+				}
+				add_province_modifier = {
 					static_modifiers = { terrain_jaworow }
 					province = { id = 9468 }
 				}
@@ -31,10 +33,6 @@ on_actions = {
 				}
 			}
 			1126 = {
-				add_province_modifier = {
-					static_modifiers = { terrain_premissel }
-					province = { id = 3434 }
-				}
 				add_province_modifier = {
 					static_modifiers = { terrain_drohobych }
 					province = { id = 6431 }
@@ -65,6 +63,8 @@ on_actions = {
 					static_modifiers = { terrain_bielitz_biala }
 					province = { id = 9412 }
 				}
+			}
+			1314 = {
 				add_province_modifier = {
 					static_modifiers = { terrain_neusandez }
 					province = { id = 417 }

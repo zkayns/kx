@@ -42,7 +42,7 @@ DEH_create_monarchy = {
 			desc = "POLITICS_GEORGE_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_George.png"
 			expire = "1965.1.1"
-			ideology = social_conservative_subtype
+			ideology = toryism_subtype
 		}
 	}
 	else_if = {
@@ -69,7 +69,7 @@ DEH_create_monarchy = {
 			name = "Edward VIII"
 			picture = "gfx/leaders/DEH/DEH_Edward.png"
 			expire = "1965.1.1"
-			ideology = social_conservative_subtype
+			ideology = toryism_subtype
 		}
 	}
 	else_if = {
@@ -96,7 +96,52 @@ DEH_create_monarchy = {
 			name = "Albert I"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
 			expire = "1965.1.1"
-			ideology = social_conservative_subtype
+			ideology = toryism_subtype
+		}
+	}
+	else_if = {
+		limit = { has_global_flag = CAN_queen_elizabeth_II }
+		create_country_leader = {
+			name = "Elizabeth II"
+			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			female = yes
+		}
+		create_country_leader = {
+			name = "Elizabeth II"
+			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
+			expire = "1965.1.1"
+			ideology = social_liberal_subtype
+			female = yes
+		}
+		create_country_leader = {
+			name = "Elizabeth II"
+			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			female = yes
+		}
+		create_country_leader = {
+			name = "Elizabeth II"
+			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
+			expire = "1965.1.1"
+			ideology = toryism_subtype
+			female = yes
+		}
+		create_country_leader = {
+			name = "Elizabeth II"
+			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
+			expire = "1965.1.1"
+			ideology = authdem_toryism_subtype
+			female = yes
+		}
+		create_country_leader = {
+			name = "Elizabeth II"
+			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
+			expire = "1965.1.1"
+			ideology = absolute_monarchy_subtype
+			female = yes
 		}
 	}
 	else_if = {
@@ -123,7 +168,7 @@ DEH_create_monarchy = {
 			name = "Henry IX"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Henry.png"
 			expire = "1965.1.1"
-			ideology = social_conservative_subtype
+			ideology = toryism_subtype
 		}
 	}
 	else_if = {
@@ -150,7 +195,7 @@ DEH_create_monarchy = {
 			name = "George VI"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_GeorgeVI.png"
 			expire = "1965.1.1"
-			ideology = social_conservative_subtype
+			ideology = toryism_subtype
 		}
 	}
 }
