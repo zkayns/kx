@@ -505,6 +505,38 @@ POLITICS_WESTERLING_DESC:0 "Out of all the nations for Westerling to land in, In
  ins.117.a:0 "We wish them good luck!"
 
  #Focus Tree
+INS_PPKI:0 "Convene the PPKI"
+
+INS_bersiap:0 "Bersiap!"
+
+INS_takeover_dutch_assets:0 "Take Over Dutch Assets"
+
+INS_key_infrastructure:0 "Utilize Key Infrastructure"
+
+INS_apprise_masses:0 "Apprise the Masses"
+
+INS_salvage_arsenals:0 "Salvage Arsenals"
+
+INS_contact_nationalist_cells:0 "Contact Nationalist Cells"
+
+INS_guerilla_warfare:0 "Guerilla Warfare"
+
+INS_sudirman_plan:0 "Sudirman's Army Reform Plan"
+
+INS_government_consensus:0 "Provisional Government of Consensus"
+
+INS_broad_coalition:0 "Form a Broad Coalition"
+
+INS_assert_pancasila:0 "Asserting the Values of Pancasila"
+
+INS_united_struggle:0 "United in Struggle"
+
+INS_solidifying_administration:0 "Solidifying the Administration"
+
+INS_japanese_military_advisors:0 "Japanese Military Advisors"
+
+INS_aid_from_internationale:0 "Appeal for Internationale Aid"
+
  INS_merdeka:0 "Merdeka!"
  INS_merdeka_desc:0 "We have secured our freedom at last. The wretched Belanda have been pushed out and Insulindia's independence has been secured! This day will not soon be forgotten!"
  INS_political_crossroad:0 "Political Crossroad"

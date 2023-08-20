@@ -1,0 +1,350 @@
+################################
+# 		Indonesia Tree		   #
+################################
+# By qubic		               #
+################################
+focus_tree = {
+	id = ins_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = INS
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 1400 y = 1200 }
+
+	#Revolution Tree
+
+	focus = {
+		id = INS_PPKI
+		icon = GFX_goal_INS_focus_merdeka
+		x = 0
+		y = 0
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = INS_bersiap
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_PPKI}
+		relative_position_id = INS_PPKI
+		x = 0
+		y = 1
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = INS_takeover_dutch_assets
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_bersiap } 
+		x = -2
+		y = 2
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_key_infrastructure
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_apprise_masses } 
+		x = -3
+		y = 3
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_apprise_masses
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_key_infrastructure } 
+		x = -2
+		y = 4
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_contact_nationalist_cells
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_PPKI } 
+		x = 0
+		y = 2
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_salvage_arsenals
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_contact_nationalist_cells } 
+		x = -1
+		y = 3
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_guerilla_warfare
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_contact_nationalist_cells } 
+		x = 1
+		y = 3
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_sudirman_plan
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_guerilla_warfare } 
+		prerequisite = { focus = INS_salvage_arsenals } 
+		x = 0
+		y = 4
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_government_consensus
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_bersiap } 
+		x = 2
+		y = 2
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_broad_coalition
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_government_consensus } 
+		x = 3
+		y = 3
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_assert_pancasila
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_broad_coalition } 
+		x = 2
+		y = 4
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_united_struggle
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_apprise_masses } 
+		prerequisite = { focus = INS_sudirman_plan } 
+		x = -1
+		y = 5
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_solidifying_administration
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_assert_pancasila } 
+		prerequisite = { focus = INS_sudirman_plan } 
+		x = 1
+		y = 5
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_red_white_banner
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_united_struggle } 
+		prerequisite = { focus = INS_solidifying_administration } 
+		x = 0
+		y = 6
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_aid_from_internationale
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_bersiap } 
+		x = 4
+		y = 2
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_japanese_military_advisors
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_bersiap } 
+		x = -4
+		y = 2
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+}
