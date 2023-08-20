@@ -80,7 +80,7 @@ focus_tree = {
 	focus = {
 		id = INS_key_infrastructure
 		icon = GFX_goal_INS_focus_merdeka
-		prerequisite = { focus = INS_apprise_masses } 
+		prerequisite = { focus = INS_takeover_dutch_assets } 
 		x = -3
 		y = 3
 		relative_position_id = INS_PPKI
