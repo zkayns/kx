@@ -1,6 +1,6 @@
 ﻿l_english:
 
-ins_focus:0 "Insulindia Focus Tree"
+ins_focus:0 "Indonesia Focus Tree"
 
 ### Leaders ###
 POLITICS_SUKARNO_DESC:0 "The son of Javanese aristocrats, the young Sukarno came into the world in 1901. Sukarno first become interested in politics when he was introduced to unique philosophy of a farmer named Marhaen. Marhaen's personal political philosophy inspired Sukarno to found the PNI in 1926. Sukarno's other great influence being the Algemeene Studieclub, which studied Dutch translations of the German constitution to form their basis of elected rule. Now that independence is here, Sukarno is beholden to the many faiths and desperate ideologies of Insulindia to unify all people in the peninsula."
@@ -509,8 +509,6 @@ INS_PPKI:0 "Convene the PPKI"
 
 INS_bersiap:0 "Bersiap!"
 
-INS_takeover_dutch_assets:0 "Take Over Dutch Assets"
-
 INS_key_infrastructure:0 "Utilize Key Infrastructure"
 
 INS_apprise_masses:0 "Apprise the Masses"
@@ -523,8 +521,6 @@ INS_guerilla_warfare:0 "Guerilla Warfare"
 
 INS_sudirman_plan:0 "Sudirman's Army Reform Plan"
 
-INS_government_consensus:0 "Provisional Government of Consensus"
-
 INS_broad_coalition:0 "Form a Broad Coalition"
 
 INS_assert_pancasila:0 "Asserting the Values of Pancasila"
@@ -533,9 +529,21 @@ INS_united_struggle:0 "United in Struggle"
 
 INS_solidifying_administration:0 "Solidifying the Administration"
 
-INS_japanese_military_advisors:0 "Japanese Military Advisors"
+INS_red_white_banner:0 "The Red and White Banner Waves"
 
-INS_aid_from_internationale:0 "Appeal for Internationale Aid"
+INS_merdeka:0 "Merdeka!"
+
+INS_reform_parliament:0 "Reforming the National Committee"
+
+INS_national_legitimacy:0 "Instating National Legitimacy"
+
+INS_securing_sovereignty:0 "Securing Our Sovereignty"
+
+INS_recovering_archipelago:0 "Recovering the Archipelago"
+
+INS_economic_independence:0 "Towards Economic Independence"
+
+INS_next_step:0 "The Direction of Our Infant Republic"
 
  INS_merdeka:0 "Merdeka!"
  INS_merdeka_desc:0 "We have secured our freedom at last. The wretched Belanda have been pushed out and Insulindia's independence has been secured! This day will not soon be forgotten!"

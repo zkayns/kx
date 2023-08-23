@@ -59,30 +59,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = INS_takeover_dutch_assets
+		id = INS_key_infrastructure
 		icon = GFX_goal_INS_focus_merdeka
 		prerequisite = { focus = INS_bersiap } 
 		x = -2
 		y = 2
-		relative_position_id = INS_PPKI
-		cost = 1
-		available = {
-			has_idea = INS_idea_insulindian_national_revolution
-		}
-		ai_will_do = {
-			factor = 200
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
-		}
-	}
-	focus = {
-		id = INS_key_infrastructure
-		icon = GFX_goal_INS_focus_merdeka
-		prerequisite = { focus = INS_takeover_dutch_assets } 
-		x = -3
-		y = 3
 		relative_position_id = INS_PPKI
 		cost = 1
 		available = {
@@ -118,7 +99,7 @@ focus_tree = {
 	focus = {
 		id = INS_contact_nationalist_cells
 		icon = GFX_goal_INS_focus_merdeka
-		prerequisite = { focus = INS_PPKI } 
+		prerequisite = { focus = INS_bersiap } 
 		x = 0
 		y = 2
 		relative_position_id = INS_PPKI
@@ -193,30 +174,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = INS_government_consensus
+		id = INS_broad_coalition
 		icon = GFX_goal_INS_focus_merdeka
 		prerequisite = { focus = INS_bersiap } 
 		x = 2
 		y = 2
-		relative_position_id = INS_PPKI
-		cost = 1
-		available = {
-			has_idea = INS_idea_insulindian_national_revolution
-		}
-		ai_will_do = {
-			factor = 200
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
-		}
-	}
-	focus = {
-		id = INS_broad_coalition
-		icon = GFX_goal_INS_focus_merdeka
-		prerequisite = { focus = INS_government_consensus } 
-		x = 3
-		y = 3
 		relative_position_id = INS_PPKI
 		cost = 1
 		available = {
@@ -310,39 +272,128 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = INS_aid_from_internationale
+		id = INS_merdeka
 		icon = GFX_goal_INS_focus_merdeka
-		prerequisite = { focus = INS_bersiap } 
-		x = 4
-		y = 2
+		prerequisite = { focus = INS_red_white_banner }
+		x = 0
+		y = 8
 		relative_position_id = INS_PPKI
 		cost = 1
 		available = {
-			has_idea = INS_idea_insulindian_national_revolution
+			has_war = no
 		}
 		ai_will_do = {
 			factor = 200
 		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
 		}
 	}
 	focus = {
-		id = INS_japanese_military_advisors
+		id = INS_national_legitimacy
 		icon = GFX_goal_INS_focus_merdeka
-		prerequisite = { focus = INS_bersiap } 
-		x = -4
-		y = 2
+		prerequisite = { focus = INS_merdeka }
+		x = -2
+		y = 9
 		relative_position_id = INS_PPKI
 		cost = 1
 		available = {
-			has_idea = INS_idea_insulindian_national_revolution
+			has_war = no
 		}
 		ai_will_do = {
 			factor = 200
 		}
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_recovering_archipelago
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_merdeka }
+		x = 2
+		y = 9
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_securing_sovereignty
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_national_legitimacy }
+		x = -1
+		y = 10
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_economic_independence
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_recovering_archipelago }
+		x = 1
+		y = 10
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_reform_parliament
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_merdeka }
+		x = 0
+		y = 9
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_next_step
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_reform_parliament }
+		prerequisite = { focus = INS_securing_sovereignty }
+		x = 0
+		y = 11
+		relative_position_id = INS_PPKI
+		cost = 1
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 200
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
 		}
