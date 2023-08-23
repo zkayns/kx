@@ -517,8 +517,8 @@ INR = {
 	color_ui = rgb { 216 100 50 }
 }
 INS = {
-	color = rgb { 237 58 45 }
-	color_ui = rgb { 237 58 45 }
+	color = rgb { 255 46 56 }
+	color_ui = rgb { 255 46 56 }
 }
 IRE = {
 	color = rgb { 88 166 31 }

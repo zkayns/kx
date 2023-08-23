@@ -383,7 +383,7 @@ focus_tree = {
 		id = INS_next_step
 		icon = GFX_goal_INS_focus_merdeka
 		prerequisite = { focus = INS_reform_parliament }
-		prerequisite = { focus = INS_securing_sovereignty }
+		prerequisite = { focus = INS_economic_independence }
 		x = 0
 		y = 11
 		relative_position_id = INS_PPKI
