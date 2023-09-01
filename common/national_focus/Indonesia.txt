@@ -1,8 +1,6 @@
 ################################
 # 		Indonesia Tree		   #
 ################################
-# By qubic		               #
-################################
 focus_tree = {
 	id = ins_focus
 
@@ -274,10 +272,10 @@ focus_tree = {
 	focus = {
 		id = INS_merdeka
 		icon = GFX_goal_INS_focus_merdeka
-		prerequisite = { focus = INS_red_white_banner }
 		x = 0
-		y = 8
+		y = 7
 		relative_position_id = INS_PPKI
+		prerequisite = { focus = INS_red_white_banner }
 		cost = 1
 		available = {
 			has_war = no
@@ -294,8 +292,8 @@ focus_tree = {
 		icon = GFX_goal_INS_focus_merdeka
 		prerequisite = { focus = INS_merdeka }
 		x = -2
-		y = 9
-		relative_position_id = INS_PPKI
+		y = 1
+		relative_position_id = INS_merdeka
 		cost = 1
 		available = {
 			has_war = no
@@ -312,8 +310,8 @@ focus_tree = {
 		icon = GFX_goal_INS_focus_merdeka
 		prerequisite = { focus = INS_merdeka }
 		x = 2
-		y = 9
-		relative_position_id = INS_PPKI
+		y = 1
+		relative_position_id = INS_merdeka
 		cost = 1
 		available = {
 			has_war = no
@@ -330,8 +328,8 @@ focus_tree = {
 		icon = GFX_goal_INS_focus_merdeka
 		prerequisite = { focus = INS_national_legitimacy }
 		x = -1
-		y = 10
-		relative_position_id = INS_PPKI
+		y = 2
+		relative_position_id = INS_merdeka
 		cost = 1
 		available = {
 			has_war = no
@@ -348,8 +346,8 @@ focus_tree = {
 		icon = GFX_goal_INS_focus_merdeka
 		prerequisite = { focus = INS_recovering_archipelago }
 		x = 1
-		y = 10
-		relative_position_id = INS_PPKI
+		y = 2
+		relative_position_id = INS_merdeka
 		cost = 1
 		available = {
 			has_war = no
@@ -366,8 +364,8 @@ focus_tree = {
 		icon = GFX_goal_INS_focus_merdeka
 		prerequisite = { focus = INS_merdeka }
 		x = 0
-		y = 9
-		relative_position_id = INS_PPKI
+		y = 1
+		relative_position_id = INS_merdeka
 		cost = 1
 		available = {
 			has_war = no
@@ -386,8 +384,8 @@ focus_tree = {
 		prerequisite = { focus = INS_economic_independence }
 		prerequisite = { focus = INS_securing_sovereignty }
 		x = 0
-		y = 11
-		relative_position_id = INS_PPKI
+		y = 3
+		relative_position_id = INS_merdeka
 		cost = 1
 		available = {
 			has_war = no
@@ -395,6 +393,394 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_staying_pancasila
+		icon = GFX_goal_INS_focus_merdeka
+		x = 20
+		y = 0
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_provisional_constitution
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_staying_pancasila }
+		relative_position_id = INS_staying_pancasila
+		x = 0
+		y = 1
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_regional_autonomy
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_provisional_constitution }
+		relative_position_id = INS_provisional_constitution
+		x = -2
+		y = 1
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_empower_parliament
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_provisional_constitution }
+		relative_position_id = INS_provisional_constitution
+		x = 0
+		y = 1
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_deliberative_consensus
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_provisional_constitution }
+		relative_position_id = INS_provisional_constitution
+		x = 2
+		y = 1
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_general_election
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_regional_autonomy }
+		prerequisite = { focus = INS_deliberative_consensus }
+		prerequisite = { focus = INS_empower_parliament }
+		relative_position_id = INS_provisional_constitution
+		x = 0
+		y = 2
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_pni_continuity
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_general_election }
+		relative_position_id = INS_provisional_constitution
+		x = 0
+		y = 3
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_connect_archipelago
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_pni_continuity }
+		relative_position_id = INS_provisional_constitution
+		x = -1
+		y = 4
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_nationwide_cooperation
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_pni_continuity }
+		relative_position_id = INS_provisional_constitution
+		x = 1
+		y = 4
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_marhaenism
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_nationwide_cooperation }
+		prerequisite = { focus = INS_connect_archipelago }
+		relative_position_id = INS_provisional_constitution
+		x = -2
+		y = 5
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_land_reform
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_marhaenism }
+		relative_position_id = INS_provisional_constitution
+		x = -3
+		y = 6
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_planning_board
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_land_reform }
+		relative_position_id = INS_provisional_constitution
+		x = -2
+		y = 7
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_center_remains
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_nationwide_cooperation }
+		prerequisite = { focus = INS_connect_archipelago }
+		relative_position_id = INS_provisional_constitution
+		x = 0
+		y = 5
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_national_unity
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_center_remains }
+		relative_position_id = INS_provisional_constitution
+		x = -1
+		y = 6
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_national_identity
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_center_remains }
+		relative_position_id = INS_provisional_constitution
+		x = 1
+		y = 6
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_islam_faction
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_nationwide_cooperation }
+		prerequisite = { focus = INS_connect_archipelago }
+		relative_position_id = INS_provisional_constitution
+		x = 2
+		y = 5
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_muslim_values
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_islam_faction }
+		relative_position_id = INS_provisional_constitution
+		x = 3
+		y = 6
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_collaborate_other_muslims
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_muslim_values }
+		relative_position_id = INS_provisional_constitution
+		x = 2
+		y = 7
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_self_sufficiency
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = {
+			focus = INS_planning_board
+			focus = INS_collaborate_other_muslims
+			focus = INS_national_unity
+			focus = INS_national_identity
+		}
+		relative_position_id = INS_provisional_constitution
+		x = 0
+		y = 8
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
+		}
+	}
+	focus = {
+		id = INS_prosperous_just
+		icon = GFX_goal_INS_focus_merdeka
+		prerequisite = { focus = INS_self_sufficiency }
+		relative_position_id = INS_provisional_constitution
+		x = 0
+		y = 9
+		cost = 1
+		available = {
+			has_idea = INS_idea_insulindian_national_revolution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
 		}
