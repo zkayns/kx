@@ -2385,11 +2385,8 @@ country_event = { # 1940 Commonwealth Primary
 	option = { # Upton Sinclair
 		name = pacificstates.1000.b
 		trigger = {
-		NOT = {
-		has_country_leader = {
-				name = "Upton Sinclair"
-				ruling_only = yes
-				}
+			NOT = {
+				has_government = radical_socialist
 			}
 		}
 		hidden_effect = {
@@ -2400,10 +2397,7 @@ country_event = { # 1940 Commonwealth Primary
 		name = pacificstates.1000.c
 		trigger = {
 			NOT = {
-			has_country_leader = {
-				name = "Culbert Olson"
-				ruling_only = yes
-				}
+				has_government = radical_socialist
 			}
 		}
 		hidden_effect = {
@@ -2632,6 +2626,20 @@ country_event = { # 1940 election
 					expire = "1965.1.1"
 					ideology = liberal_conservative_subtype
 					traits = { divided_interests }
+				}
+			}
+            if = { # Robert Taft
+				limit = {
+					has_country_flag = PSA_1940_republican_primary_taft
+					NOT = { has_country_flag = CAL_Norton_PSA_flag }
+				}
+				create_country_leader = {
+					name = "Robert Taft"
+					desc = "POLITICS_Robert_Taft_DESC"
+					picture = "gfx/leaders/CAL/CAL_R_A_Taft.png"
+					expire = "1965.1.1"
+					ideology = liberal_conservative_subtype
+					traits = { staunch_constitutionalist }
 				}
 			}
 			if = { # William Wadsworth Hodkinson
@@ -2918,6 +2926,7 @@ country_event = { # 1940 election
 				limit = {
 					has_country_flag = PSA_1940_republican_primary_taft
 				}
+				remove_all_ministers = yes
 				add_ideas = CAL_Robert_Taft_hog_mli
 				add_ideas = CAL_David_Prescott_Barrows_for_mli
 				add_ideas = CAL_Donald_Wills_Douglas_Sr_eco_mli
@@ -3036,7 +3045,7 @@ country_event = { # 1940 election
 			set_country_flag = PSA_1940_election_radicals
 			if = {
 			limit = { has_government = radical_socialist }
-			set_country_flag = CAL_radicals_won_twice
+			set_country_flag = CAL_radicals_won_twice_flag
 			}
 		}
 		add_popularity = {
@@ -3429,6 +3438,9 @@ country_event = { # 1944 Commonwealth Primary
 		name = pacificstates.15001.a
 		trigger = {
 			has_government = radical_socialist
+			NOT = {
+				has_country_flag = PSA_1940_election_radicals
+			}
 		}
 		add_political_power = 25
 		add_popularity = { ideology = radical_socialist popularity = 0.02 }
@@ -3436,10 +3448,13 @@ country_event = { # 1944 Commonwealth Primary
 	option = { # Upton Sinclair
 		name = pacificstates.15001.b
 		trigger = {
-		NOT = {
-				has_country_leader = {
-					name = "Upton Sinclair"
-					ruling_only = yes
+			OR = {
+				NOT = {
+					has_government = radical_socialist
+				}
+				AND = {
+					has_country_flag = PSA_1940_election_radicals
+					has_country_flag = PSA_1937_election_commonwealth
 				}
 			}
 		}
@@ -3450,10 +3465,13 @@ country_event = { # 1944 Commonwealth Primary
 	option = { # Culbert Olson
 		name = pacificstates.15001.c
 		trigger = {
-			NOT = {
-				has_country_leader = {
-					name = "Culbert Olson"
-					ruling_only = yes
+			OR = {
+				NOT = {
+					has_government = radical_socialist
+				}
+				AND = {
+					has_country_flag = PSA_1940_election_radicals
+					has_country_flag = PSA_1937_election_commonwealth
 				}
 			}
 		}
@@ -3464,8 +3482,14 @@ country_event = { # 1944 Commonwealth Primary
 	option = { # Charlie Chaplin
 		name = pacificstates.15001.e
 		trigger = {
-			NOT = {
-				has_government = radical_socialist
+			OR = {
+				NOT = {
+					has_government = radical_socialist
+				}
+				AND = {
+					has_country_flag = PSA_1940_election_radicals
+					has_country_flag = PSA_1937_election_commonwealth
+				}
 			}
 			has_country_flag = CAL_immigrant_presidents
 		}
@@ -3477,8 +3501,14 @@ country_event = { # 1944 Commonwealth Primary
 	option = { # Robert Heinlein
 		name = pacificstates.15001.e
 		trigger = {
-			NOT = {
-				has_government = radical_socialist
+			OR = {
+				NOT = {
+					has_government = radical_socialist
+				}
+				AND = {
+					has_country_flag = PSA_1940_election_radicals
+					has_country_flag = PSA_1937_election_commonwealth
+				}
 			}
 		}
 		hidden_effect = {
@@ -4170,7 +4200,13 @@ country_event = { # 1948 Commonwealth Primary
 	option = { # Keep the Presidency
 		name = pacificstates.17005.a
 		trigger = {
-			has_government = radical_socialist
+			AND = {
+				has_government = radical_socialist
+				has_country_flag = PSA_1944_election_radicals
+				NOT = {
+					has_country_flag = PSA_1940_election_radicals
+				}
+			}
 		}
 		add_political_power = 25
 		add_popularity = { ideology = radical_socialist popularity = 0.02 }
@@ -4178,10 +4214,14 @@ country_event = { # 1948 Commonwealth Primary
 	option = { # Upton Sinclair
 		name = pacificstates.17005.b
 		trigger = {
-		NOT = {
-				has_country_leader = {
-					name = "Upton Sinclair"
-					ruling_only = yes
+			OR = {
+				NOT = {
+					has_government = radical_socialist
+				}
+				AND = {
+					has_government = radical_socialist
+					has_country_flag = PSA_1944_election_radicals
+					has_country_flag = PSA_1940_election_radicals
 				}
 			}
 		}
@@ -4192,10 +4232,14 @@ country_event = { # 1948 Commonwealth Primary
 	option = { # Culbert Olson
 		name = pacificstates.17005.c
 		trigger = {
-			NOT = {
-				has_country_leader = {
-					name = "Culbert Olson"
-					ruling_only = yes
+			OR = {
+				NOT = {
+					has_government = radical_socialist
+				}
+				AND = {
+					has_government = radical_socialist
+					has_country_flag = PSA_1944_election_radicals
+					has_country_flag = PSA_1940_election_radicals
 				}
 			}
 		}
@@ -4206,8 +4250,15 @@ country_event = { # 1948 Commonwealth Primary
 	option = { # Charlie Chaplin
 		name = pacificstates.17005.e
 		trigger = {
-			NOT = {
-				has_government = radical_socialist
+			OR = {
+				NOT = {
+					has_government = radical_socialist
+				}
+				AND = {
+					has_government = radical_socialist
+					has_country_flag = PSA_1944_election_radicals
+					has_country_flag = PSA_1940_election_radicals
+				}
 			}
 			has_country_flag = CAL_immigrant_presidents
 		}
@@ -4219,8 +4270,15 @@ country_event = { # 1948 Commonwealth Primary
 	option = { # Robert Heinlein
 		name = pacificstates.17005.e
 		trigger = {
-			NOT = {
-				has_government = radical_socialist
+			OR = {
+				NOT = {
+					has_government = radical_socialist
+				}
+				AND = {
+					has_government = radical_socialist
+					has_country_flag = PSA_1944_election_radicals
+					has_country_flag = PSA_1940_election_radicals
+				}
 			}
 		}
 		hidden_effect = {
@@ -13901,6 +13959,26 @@ country_event = { # The Provisional Government
 				long_name = CAL_market_liberal_party_long
 				ideology = market_liberal
 			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.15
+			}
 		}
 	}
 
@@ -13930,11 +14008,7 @@ country_event = {
 			last_election = "1936.11.16"
 			elections_allowed = no
 		}
-		set_party_name = {
-			ideology = paternal_autocrat
-			long_name = "House of Norton"
-			name = "House of Norton"
-		}
+		remove_all_ministers = yes
 		add_ideas = {
 			CAL_Norton_II_hog_pau
 			CAL_Max_Fleischer_for_pau
@@ -16219,19 +16293,38 @@ country_event = { #event to shoot out USA
 			every_state = {
 			limit = {
 				is_owned_and_controlled_by = CAL
-				NOT = {
-					is_core_of =  CAL
-				}
+				OR = {
 				is_claimed_by = USA
 				is_core_of = USA
+				is_claimed_by = WCC
+				is_core_of = WCC
+				is_claimed_by = CSA
+				is_core_of = CSA
+				is_claimed_by = NEE
+				is_core_of = NEE
+				is_claimed_by = TEX
+				is_core_of = TEX
+				is_claimed_by = ALA
+				is_core_of = ALA
+				is_claimed_by = COR
+				is_core_of = COR
+				is_claimed_by = BBR
+				is_core_of = BBR
+				is_claimed_by = TXS
+				is_core_of = TXS
+				}
 			}
 			add_core_of = USA
 			}
-			release = USA
-			CAL = {
-			puppet = USA
+			every_state = {
+				limit = {
+					is_core_of = CAL
+				}
+				remove_claim_by = USA
+				remove_core_of = USA
 			}
-
+			release = USA
+			CAL = { puppet = USA }
 		}
 	}
 }
@@ -16687,6 +16780,7 @@ country_event = { #Japan peaceout
 			has_capitulated = yes
 		}
 		JAP = { is_ai = YES }
+		controls_state = 378
 	}
 
 	fire_only_once = yes

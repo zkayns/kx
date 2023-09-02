@@ -83,7 +83,7 @@ VIN_CAO_DAI_WORLD_DEF:0 "the Great Earthly Union of the Sixty-Eighth Realm for t
 
 VIN_CAO_DAI_WORLD_FUN:0 "Great Earthly Union"
 VIN_CAO_DAI_WORLD_FUN_ADJ:0 "Earthly"
-VIN_CAO_DAI_WORLD_FUN_DEF:0 "the Great Earthly Union of the Sixty-Eighth Realm for the Third Universal Redemption"
+VIN_CAO_DAI_WORLD_FUN_DEF:0 "the Great Earthly Union of the Sixty-Eighth Realm for the Third Impact"
 
 VIN_COCONUT:0 "Heavenly Coconut Republic"
 VIN_COCONUT_ADJ:0 "Coconut"
@@ -322,6 +322,7 @@ binhxuyenfp.tt:0 "We will be able to expand our criminal fiefdom into the §GSou
 
 ### Decisions ###
 
+VIN_nationalize_tonkin_mines:0 "Nationalize the Tonkin Mines"
 VIN_coring_decisions:0 "Securing Our Domain"
 VIN_core_cambodia:0 "Integrate Cambodia"
 VIN_core_laos:0 "Integrate Laos"

@@ -4716,7 +4716,6 @@ focus_tree = {
 					add_state_core = 759
 					add_state_core = 116
 					add_state_core = 1236
-					add_state_core = 2
 					hidden_effect = {
 							modify_country_flag = {
 									flag = SIC_Occult
@@ -4764,6 +4763,14 @@ focus_tree = {
 						}
 					create_wargoal = {
 							type = annex_everything
+							target = CAR
+						}
+					create_wargoal = {
+							type = annex_everything
+							target = CNT
+						}
+					create_wargoal = {
+							type = annex_everything
 							target = POR
 						}
 					create_wargoal = {
@@ -4784,6 +4791,14 @@ focus_tree = {
 					}
 					every_state = {
 					limit = { is_core_of = SPR }
+					add_claim_by = SRI
+					}
+					every_state = {
+					limit = { is_core_of = CAR }
+					add_claim_by = SRI
+					}
+					every_state = {
+					limit = { is_core_of = CNT }
 					add_claim_by = SRI
 					}
 					every_state = {
@@ -4846,6 +4861,10 @@ focus_tree = {
 						}
 					create_wargoal = {
 							type = annex_everything
+							target = SLO
+						}
+					create_wargoal = {
+							type = annex_everything
 							target = ROM
 						}
 					create_wargoal = {
@@ -4886,6 +4905,10 @@ focus_tree = {
 					}
 					every_state = {
 					limit = { is_core_of = CRO }
+					add_claim_by = SRI
+					}
+					every_state = {
+					limit = { is_core_of = SLO }
 					add_claim_by = SRI
 					}
 					every_state = {
@@ -4980,6 +5003,10 @@ focus_tree = {
 					}
 					every_state = {
 					limit = { is_core_of = ALG }
+					add_claim_by = SRI
+					}
+					every_state = {
+					limit = { is_core_of = TUN }
 					add_claim_by = SRI
 					}
 					every_state = {
@@ -5285,6 +5312,14 @@ focus_tree = {
 					add_core_of = SRI
 					}
 					every_state = {
+					limit = { is_core_of = CAR }
+					add_core_of = SRI
+					}
+					every_state = {
+					limit = { is_core_of = CNT }
+					add_core_of = SRI
+					}
+					every_state = {
 					limit = { is_core_of = POR }
 					add_core_of = SRI
 					}
@@ -5302,6 +5337,10 @@ focus_tree = {
 					}
 					every_state = {
 					limit = { is_core_of = CRO }
+					add_core_of = SRI
+					}
+					every_state = {
+					limit = { is_core_of = SLO }
 					add_core_of = SRI
 					}
 					every_state = {
@@ -5358,6 +5397,10 @@ focus_tree = {
 					}
 					every_state = {
 					limit = { is_core_of = NFA }
+					add_core_of = SRI
+					}
+					every_state = {
+					limit = { is_core_of = TUN }
 					add_core_of = SRI
 					}
 					every_state = {

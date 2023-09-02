@@ -607,7 +607,7 @@
 	ARG_Domingo_Mercante_hog_rso:0 "Domingo Mercante"
 	ARG_Lisandro_de_la_Torre_hog_sde:0 "Lisandro de la Torre"
 	ARG_Marcelo_T_de_Alvear_hog_sli:0 "Marcelo T. de Alvear"
-	ARG_Robustiniano_Patron_Costas_hog_mli:0 "Robustiniano Patrón Costas"
+	ARG_Robustiniano_Patron_Costas_hog_mli:0 "Robustiano Patrón Costas"
 	ARG_Torcuato_di_Tella_hog_mli:0 "Torcuato di Tella"
 	ARG_Elpidio_Gonzalez_hog_sco:0 "Elpidio González"
 	ARG_Pedro_Pablo_Ramirez_hog_ade:0 "Pedro Pablo Ramirez"
@@ -631,8 +631,8 @@
 	ARG_Carlos_Sanchez_Viamonte_eco_sde:0 "Carlos Sanchez Viamonte"
 	ARG_Guillermo_Rothe_eco_sli:0 "Guillermo Rothe"
 	ARG_Alvaro_Alsogaray_eco_mli:0 "Alvaro Alsogaray"
-	ARG_Robustiniano_Patron_Costas_eco_mli:0 "Robustiniano Patrón Costas"
-	ARG_Carlos_Silvestre_Begnis_eco_sco:0 "Carlos Silvestre Begnis"
+	ARG_Robustiniano_Patron_Costas_eco_mli:0 "Robustiano Patrón Costas"
+	ARG_Carlos_Silvestre_Begnis_eco_sco:0 "Carlos Sylvestre Begnis"
 	ARG_Vicente_Solano_Lima_eco_sco:0 "Vicente Solano Lima"
 	ARG_Enrique_Mosconi_eco_ade:0 "Enrique Mosconi"
 	ARG_Jorge_Alejandro_Santamaria_eco_pau:0 "Jorge Alejandro Santamaria"
@@ -3418,6 +3418,53 @@
 	### Chief of Navy ###
 
 	### Chief of Air Force ###
+    
+  ################################################################################################################################################################################################
+  ### CRE
+  ################################################################################################################################################################################################
+
+	### Head of Government ###
+	 CRE_Emmanouil_Tsouderos_hog_sli:0 "Emmanouil Tsouderos"
+	 CRE_George_Tzikas_hog_mli:0 "George Tzikas"
+	 CRE_Alexandros_Zaimis_hog_sco:0 "Alexandros Zaimis"
+	 CRE_W_Stanley_Moss_hog_ade:0 "W. Stanley Moss"
+	 CRE_Mustafa_Ertugrul_hog_ade:0 "Mustafa Ertuğrul Pasha"
+	 CRE_Alexander_Andrae_hog_pau:0 "Alexander Andrae"
+	 CRE_Georg_Alexander_von_Muller_hog_pau:0 "Georg Alexander von Müller"
+	 CRE_Kurt_Student_hog_pau:0 "Kurt Student"
+	 CRE_Richard_Heidrich_hog_pau:0 "Richard Heidrich"
+
+	### Foreign Minister ###
+	 CRE_Konstantinos_Foumis_for_sli:0 "Konstantinos Foumis"
+	 CRE_Heinrich_Kreipe_for_ade:0 "Heinrich Kreipe"
+	 CRE_Ali_Nayip_Zade_for_ade:0 "Ali Nayip Zade"
+	 CRE_Thomas_Dunbabin_for_ade:0 "Thomas Dunbabin"
+
+	### Economy Minister ###
+	 CRE_George_Tzikas_eco_mli:0 "George Tzikas"
+	 CRE_Willibald_Utz_eco_ade:0 "Willibald Utz"
+	 CRE_Basil_Zaharoff_eco_ade:0 "Basil Zaharoff"
+	 CRE_Bahaettin_Rahmi_Bediz_eco_ade:0 "Rahmizâde Bahaeddin Bey"
+	 CRE_Xan_Fielding_eco_ade:0 "Xan Fielding"
+
+	### Security Minister ###
+	 CRE_Georgios_Tsontos_sec_sco:0 "Georgios Tsontos"
+	 CRE_Ali_Fuat_Cebesoy_sec_ade:0 "Ali Fuat"
+	 CRE_Helias_Doundoulakis_sec_ade:0 "Helias Doundoulakis"
+	 CRE_Friedrich_Wilhelm_Muller_sec_pau:0 "Friedrich-Wilhelm Müller"
+
+	### Chief of Staff ###
+	 CRE_Ali_Fuat_Cebesoy_cos_ade:0 "Ali Fuat"
+
+	### Chief of Army ###
+	 CRE_Mustafa_Fehmi_Kubilay_carm_ade:0 "Mustafa Fehmi"
+
+	### Chief of Navy ###
+	 CRE_Petros_Voulgaris_cnav_sco:0 "Petros Voulgaris"
+
+	### Chief of Air Force ###
+	 CRE_Ali_Fuat_Cebesoy_cair_ade:0 "Ali Fuat"
+	 CRE_Erwin_Boehme_cair_ade:0 "Erwin Böhme"
 
   ################################################################################################################################################################################################
   ### CRO
@@ -7054,7 +7101,7 @@
 	### Person of Influence ###
 	## Foreign Minister
 	HOL_Paul_de_Groot_for_tot:0 "Paul de Groot"
-	HOL_Benjamin_Lopes_Cardazo_for_syn:0 "Benjamin Lopes Cardazo"
+	HOL_Benjamin_Lopes_Cardazo_for_syn:0 "Benjamin Lopes Cardozo"
 	HOL_Nicolaas_Beuzemaker_for_syn:0 "Nicolaas Beuzemaker"
 	HOL_Benjamin_Boers_for_rso:0 "Benjamin Boers"
 	HOL_Sipke_Visser_for_rso:0 "Sipke Visser"
@@ -7104,7 +7151,7 @@
 	HOL_Daniel_Goulooze_sec_syn:0 "Daniel Goulooze"
 	HOL_Evert_Kupers_sec_syn:0 "Evert Kupers"
 	HOL_Henriette_Roland_Holst_sec_syn:0 "Henriette Roland Holst"
-	HOL_Johannes_Adriaan_Jan_Berger_sec_syn:0 "Johannes Adriaan (Jan) Berger"
+	HOL_Johannes_Adriaan_Jan_Berger_sec_syn:0 "Jan Johannis Adriaan Berger"
 	HOL_Abraham_Menist_sec_rso:0 "Abraham Menist"
 	HOL_Fokke_Bosman_sec_rso:0 "Fokke Bosman"
 	HOL_Kristiaan_Heuts_sec_rso:0 "Kristiaan Heuts"
@@ -7120,7 +7167,7 @@
 	HOL_Cornelis_van_den_Bussche_sec_mli:0 "Cornelis van den Bussche"
 	HOL_Jan_Andriessen_sec_mli:0 "Jan Andriessen"
 	HOL_Carel_Goseling_sec_sco:0 "Carel Goseling"
-	HOL_Josephus_HH_van_Schaik_sec_sco:0 "Josephus H.H. van Schaik"
+	HOL_Josephus_HH_van_Schaik_sec_sco:0 "Josephus R.H. van Schaik"
 	HOL_Louis_Beel_sec_sco:0 "Louis Beel"
 	HOL_Pieter_Gerbrandy_sec_sco:0 "Pieter Gerbrandy"
 	HOL_Louis_Einthoven_sec_ade:0 "Louis Einthoven"
@@ -7169,7 +7216,7 @@
 
 	### Head of Government ###
 	HON_Armando_Amaya_hog_tot:0 "Armando Amaya"
-	HON_Juan_Pablo_Wainwrigth_Nuila_hog_tot:0 "Juan Pablo Wainwrigth Nuila"
+	HON_Juan_Pablo_Wainwrigth_Nuila_hog_tot:0 "Juan Pablo Wainwright"
 	HON_Manuel_Calix_Herrera_hog_tot:0 "Manuel Calix Herrera"
 	HON_Ramon_Amaya_Amador_hog_tot:0 "Ramón Amaya Amador"
 	HON_Vicente_Mejia_Colindres_hog_sde:0 "Vicente Mejía Colindres"
@@ -7185,7 +7232,7 @@
 	HON_Jose_Pineda_Gomez_for_rso:0 "José Pineda Gómez"
 	HON_Jose_Ramon_Adolfo_Villeda_Morales_for_sde:0 "José Ramón Adolfo Villeda Morales"
 	HON_Miguel_Paz_Barahona_for_sde:0 "Miguel Paz Barahona"
-	HON_Jose_Policarpo_Bonilla_Vasque_for_sco:0 "José Policarpo Bonilla Vásque"
+	HON_Jose_Policarpo_Bonilla_Vasque_for_sco:0 "José Policarpo Bonilla Vasquez"
 	HON_Abraham_Williams_Calderon_for_pau:0 "Abraham Williams Calderón"
 	HON_Carlos_Zuniga_Figueroa_for_pau:0 "Carlos Zúñiga Figueroa"
 	HON_Hiller_V_Rolston_for_pau:0 "Hiller V. Rolston"
@@ -8618,7 +8665,7 @@
 	LBA_Ali_al_Jerbi_for_mli:0 "Ali al-Jerbi"
 	LBA_Abdul_Qadir_al_Allam_for_sco:0 "Abdul Qadir al-Allam"
 	LBA_Ali_Noureddin_el_Anezi_for_sco:0 "Ali Noureddin el-Anezi"
-	LBA_Mahmoud_al_Montaser_for_ade:0 "Mahmoud al-Montaser"
+	LBA_Mahmoud_al_Montaser_for_ade:0 "Mahmud al-Muntasir"
 	LBA_As_Siddig_al_Mutassir_for_pau:0 "As-Siddig al-Mutassir"
 	## Economy Minister
 	LBA_Nuri_al_Kikhia_eco_rso:0 "Nuri al-Kikhia"
@@ -9223,6 +9270,7 @@
 	MAF_Hans_Albert_von_Lettow_Vorbeck_sec_pau:0 "Hans Albert von Lettow-Vorbeck"
 	MAF_Hermann_von_Goering_sec_pau:0 "Hermann von Göring"
 	MAF_Hermann_von_Goering_sec_npo:0 "Hermann von Göring"
+  MAF_Mucki_sec_npo:0 "Mucki"
 
 	### Chief of Staff ###
 	MAF_Heinrich_Kirchheim_cos_ade:0 "Heinrich Kirchheim"
@@ -9420,7 +9468,7 @@
 	MEX_Isidro_Fabela_for_sde:0 "Isidro Fabela"
 	MEX_Primo_Villa_Michel_for_sde:0 "Primo Villa Michel"
 	MEX_Francisco_Castillo_Najera_for_sli:0 "Francisco Castillo Najera"	
-	MEX_Jamie_Bodet_for_mli:0 "Jamie Torres Bodet"
+	MEX_Jamie_Bodet_for_mli:0 "Jaime Torres Bodet"
 	MEX_Juan_Lascurian_for_sco:0 "Juan Gutiérrez Lascuráin"	
 	MEX_Fernando_Rodarte_Fernandez_for_ade:0 "Fernando Rodarte Fernández"
 	MEX_Melchor_Ortega_Camarena_for_ade:0 "Melchor Ortega Camarena"
@@ -10912,11 +10960,11 @@
 	OTT_Mehmed_Cavid_Bey_eco_ade:0 "Mehmed Cavid Bey"
 	OTT_Mehmed_Sakir_Pasa_eco_ade:0 "Mehmed Şakir Paşa"
 	OTT_Mustafa_Seref_Pasa_eco_ade:0 "Mustafa Şeref Paşa"
-	OTT_Resad_Muhlis_Bey_eco_ade:0 "Reşad Muhlis Bey"
-	OTT_Sevket_Rasid_Bey_eco_ade:0 "Şevket Raşid Bey"
+	OTT_Resad_Muhlis_Bey_eco_ade:0 "Reşat Muhlis Bey"
+	OTT_Sevket_Rasid_Bey_eco_ade:0 "Şevket Raşit Bey"
 	OTT_Sirri_Bey_eco_ade:0 "Sırrı Bey"
-	OTT_Mehmed_Nuri_Bey_eco_pau:0 "Mehmed Nuri Bey"
-	OTT_Mehmed_Sefik_Pasa_eco_pau:0 "Mehmed Şefik Paşa"
+	OTT_Mehmed_Nuri_Bey_eco_pau:0 "Mehmet Nuri Bey"
+	OTT_Mehmed_Sefik_Pasa_eco_pau:0 "Mehmet Şefik Paşa"
 	## Security Minister
 	OTT_Agaoglu_Ahmed_Pasa_sec_sli:0 "Ağaoglu Ahmed Paşa"
 	OTT_Feridun_Fikri_Pasa_sec_sli:0 "Feridun Fikri Paşa"
@@ -10928,10 +10976,10 @@
 	OTT_Ahmed_Naci_Pasa_sec_ade:0 "Ahmed Naci Paşa"
 	OTT_Ali_Riza_Pasa_sec_ade:0 "Ali Rıza Paşa"
 	OTT_Kazim_Fikri_Pasa_sec_ade:0 "Kazım Fikri Paşa"
-	OTT_Mehmed_Semsettin_Pasa_sec_ade:0 "Mehmed Şemsettin Paşa"
+	OTT_Mehmed_Semsettin_Pasa_sec_ade:0 "Mehmet Şemsettin Paşa"
 	OTT_Mustafa_Necati_Pasa_sec_ade:0 "Mustafa Necati Paşa"
 	OTT_Yunus_Nadi_Bey_sec_ade:0 "Yunus Nadi Bey"
-	OTT_Mehmed_Recep_Pasa_sec_pau:0 "Mehmed Recep Paşa"
+	OTT_Mehmed_Recep_Pasa_sec_pau:0 "Mehmet Recep Paşa"
 	OTT_Mustafa_Fevzi_Pasa_sec_pau:0 "Mustafa Fevzi Paşa"
 	OTT_Sadri_Maksudi_Bey_sec_npo:0 "Sadri Maksudi Bey"
 	OTT_Yusuf_Kemal_Pasa_sec_npo:0 "Yusuf Kemal Paşa"
@@ -15441,9 +15489,9 @@
 	USA_William_H_Murray_hog_pau:0 "William H. Murray"
 
 	### Vice-President ###
-		USA_Gus_Hall_veep_tot:0 "Gus Hall"
-		USA_James_W_Ford_veep_tot:0 "James W. Ford"
-		USA_Jack_Reed_veep_syn:0 "Jack Reed"
+	USA_Gus_Hall_veep_tot:0 "Gus Hall"
+	USA_James_W_Ford_veep_tot:0 "James W. Ford"
+	USA_Jack_Reed_veep_syn:0 "Jack Reed"
 	USA_Elizabeth_Gurly_Flynn_veep_syn:0 "Elizabeth Gurly Flynn"
 	USA_Norman_Thomas_veep_rso:0 "Norman Thomas"
 	USA_Daniel_Hoan_veep_rso:0 "Daniel Hoan"
@@ -15466,6 +15514,7 @@
 	USA_Adlai_Stevenson_veep_sli:0 "Adlai Stevenson"
 	USA_Alben_W_Barkley_veep_sli:0 "Alben W. Barkley"
 	USA_Alfred_Emanuel_Smith_veep_sli:0 "Al Smith"
+  USA_Thomas_Banyacya_veep_sli:0 "Thomas Banyacya"
 	USA_Charles_Curtis_veep_mli:0 "Charles Curtis" 
 	USA_Frank_Knox_veep_mli:0 "Frank Knox" 
 	USA_Dwight_D_Eisenhower_veep_mli:0 "Dwight D. Eisenhower"

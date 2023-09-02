@@ -226,7 +226,7 @@ country_event = { #Annexation of Bulgaria
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		BUL = { enable_coring_at_sixty_compliance = yes }
+		BUL = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -969,7 +969,7 @@ country_event = { #Romanian liberation
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		ROM = { enable_coring_at_sixty_compliance = yes }
+		ROM = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -1293,6 +1293,33 @@ country_event = { #Serbian liberation
 			767 = { retain_state = yes } #Nis
 			765 = { retain_state = yes } #Nis
 			1269 = { retain_state = yes } #Nis
+			SER = {
+				create_country_leader = {
+					name = "Živko Topalović"
+					picture = "gfx/leaders/SER/Portrait_SER_Zivko_Topalovic.png"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+				}
+				create_country_leader = {
+					name = "Slobodan Jovanović"
+					desc = "POLITICS_SLOBODAN_JOVANOVIC_DESC"
+					picture = "gfx/leaders/SER/Portrait_SER_Slobodan_Jovanovic.png"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+				}	
+				create_country_leader = {
+					name = "Ljubomir Davidović"
+					picture = "gfx/leaders/SER/Portrait_SER_Ljubomir_Davidovic.png"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+				}
+				create_country_leader = {
+					name = "Nikola Uzunović"
+					picture = "gfx/leaders/SER/Portrait_SER_Nikola_Uzunovic.png"
+					expire = "1965.1.1"
+					ideology = social_conservative_subtype
+				}
+			}
 		}
 	}
 
@@ -1421,7 +1448,7 @@ country_event = { #Serbian liberation
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		SER = { enable_coring_at_sixty_compliance = yes }
+		SER = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -2245,7 +2272,7 @@ country_event = { #HUN liberation
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		HUN = { enable_coring_at_sixty_compliance = yes }
+		HUN = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -2439,13 +2466,36 @@ country_event = { #Liberation of Austria
 	immediate = {
 		hidden_effect = {
 			AUS = {
-				if = {
-					limit = { AUS_has_habsburgs = yes }
+				create_country_leader = {
+					name = "Karl Renner"
+					picture = "gfx/leaders/AUS/Portrait_AUS_Karl_Renner.png"
+					expire = "1965.1.1"
+					ideology = austromarxism_subtype
 				}
-				set_party_name = {
-					ideology = paternal_autocrat
-					long_name = AUS_paternal_autocrat_party_long
-					name = AUS_paternal_autocrat_party
+				create_country_leader = {
+					name = "Richard von Coudenhove-Kalergi"
+					desc = "POLITICS_KARL_DESC"
+					picture = "gfx/leaders/AUS/Portrait_AUS_Richard_von_Coudenhove_Kalergi.png"
+					expire = "1965.1.1"
+					ideology = paneuropeanism_subtype
+				}
+				create_country_leader = {
+					name = "Wilhelm Miklas"
+					picture = "gfx/leaders/AUS/Portrait_AUS_Wilhelm_Miklas.png"
+					expire = "1965.1.1"
+					ideology = social_conservative_subtype
+				}
+				create_country_leader = {
+					name = "Wilhelm Miklas"
+					picture = "gfx/leaders/AUS/Portrait_AUS_Wilhelm_Miklas.png"
+					expire = "1965.1.1"
+					ideology = authoritarian_democrat_subtype
+				}
+				create_country_leader = {
+					name = "Engelbert Dollfuss"
+					picture = "gfx/leaders/AUS/Portrait_AUS_dolfuss.png"
+					expire = "1965.1.1"
+					ideology = austropopulism_subtype
 				}
 			}
 			add_to_temp_array = { core_removal_array = AUS }
@@ -3602,7 +3652,7 @@ country_event = { #Liberation of Croatia
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		CRO = { enable_coring_at_sixty_compliance = yes }
+		CRO = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #Give to Austria
@@ -4235,7 +4285,7 @@ country_event = { #Fate of Poland
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		POL = { enable_coring_at_sixty_compliance = yes }
+		POL = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -4950,7 +5000,7 @@ country_event = { #Fate of Finland
 			add_claim_by = ROOT
 		}
 		occupy_medium_country = yes
-		FIN = { enable_coring_at_sixty_compliance = yes }
+		FIN = { enable_coring_at_eighty_compliance = yes }
 		set_country_flag = FIN_CONQ
 		recheck_annexations = yes
 	}
@@ -9863,6 +9913,47 @@ country_event = { #Fate of America
 		}
 	}
 
+	option = { #Liberate Gringos
+		trigger = {
+			tag = MEX
+		}
+		name = annex.52.h
+		ai_chance = {
+			factor = 60
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_mainland_america = yes
+					is_core_of = HAW
+				}
+				is_not_claim_or_core_of_ROOT = yes
+			}
+			hidden_effect = {
+				remove_claim_by = USA
+				add_core_of = USA
+				remove_core_of = CSA
+				remove_claim_by = CSA
+				remove_core_of = TEX
+				remove_claim_by = TEX
+				remove_core_of = CAL
+				remove_claim_by = CAL
+			}
+			USA = {
+				transfer_state = PREV
+			}
+		}
+		set_temp_variable = { tag_to_release = USA }
+		puppet_released_tag = yes
+		hidden_effect = { 
+			USA = { 
+			   usa_setup_mexican_puppet = yes 
+			   set_cosmetic_tag = USA_Estados
+			   load_focus_tree = generic_focus
+		    }
+	    }
+	}
+
 	option = { #Occupy USA
 		name = annex.occupation
 		ai_chance = {
@@ -12480,7 +12571,7 @@ country_event = { #Pick spanish HOS
 			}
 			create_country_leader = {
 				name = "Frederick I"
-				picture = "gfx/leaders/SPR/Friedrich_Christian_von_Wettin.png"
+				picture = "gfx/leaders/SPR/Friedrich_Viktor_von_Hohenzollern.png"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
@@ -13196,6 +13287,7 @@ country_event = { #The fate of Bukhara
 		trigger = {
 			has_global_flag = global_turkestan_united
 			has_event_target = turkestan_unifier
+			event_target:turkestan_unifier = { ROOT_can_grant_land = yes }
 		}
 		ai_chance = { base = 80 }
 		add_to_temp_array = { target_cores_to_release = TRK }
@@ -13245,6 +13337,7 @@ country_event = { #The fate of Uzbekistan
 					has_completed_focus = PER_agha_khan_legacy
 				}
 				add_state_claim = 584
+				add_state_claim = 1275
 			}
 		}
 	}
@@ -13277,6 +13370,7 @@ country_event = { #The fate of Uzbekistan
 		trigger = { is_russian_tag_that_can_integrate = yes }
 		ai_chance = { base = 0 }
 		584 = { add_claim_of_ROOT = yes }
+		1275 = { add_claim_of_ROOT = yes }
 		set_temp_variable = { tag_to_release = UZB }
 		release_targeted_tag = yes
 		if = {
@@ -13324,6 +13418,7 @@ country_event = { #The fate of Uzbekistan
 		trigger = {
 			has_global_flag = global_turkestan_united
 			has_event_target = turkestan_unifier
+			event_target:turkestan_unifier = { ROOT_can_grant_land = yes }
 		}
 		ai_chance = { base = 80 }
 		add_to_temp_array = { target_cores_to_release = UZB }
@@ -13432,6 +13527,7 @@ country_event = { #The fate of Kokand
 		trigger = {
 			has_global_flag = global_turkestan_united
 			has_event_target = turkestan_unifier
+			event_target:turkestan_unifier = { ROOT_can_grant_land = yes }
 		}
 		ai_chance = { base = 80 }
 		add_to_temp_array = { target_cores_to_release = KYR }
@@ -13637,8 +13733,8 @@ country_event = { #The fate of Kazakhstan
 			NOT = { country_exists = SIB }
 		}
 		ai_chance = { base = 80 }
-		set_temp_variable = { tag_to_release = ALO }
-		var:571.owner = { set_transfer_target_cores = yes }
+		ALO = { set_transfer_target_cores = yes }
+		set_temp_variable = { tag_to_release = var:571.owner }
 		transfer_targeted_territory = yes
 	}
 
@@ -14493,7 +14589,7 @@ country_event = { #The Annexation of Persia
 			add_claim_by = ROOT
 		}
 		occupy_medium_country = yes
-		PER = { enable_coring_at_sixty_compliance = yes }
+		PER = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -15133,7 +15229,7 @@ country_event = { #The Annexation of Afghanistan
 			}
 			add_claim_by = ROOT
 		}
-		AFG = { enable_coring_at_sixty_compliance = yes }
+		AFG = { enable_coring_at_eighty_compliance = yes }
 		occupy_small_country = yes
 		recheck_annexations = yes
 	}
@@ -15958,7 +16054,7 @@ country_event = { #The Conquest of Bohemia
 			}
 			add_claim_by = ROOT
 		}
-		CZE = { enable_coring_at_sixty_compliance = yes }
+		CZE = { enable_coring_at_eighty_compliance = yes }
 		occupy_small_country = yes		
 		recheck_annexations = yes
 	}
@@ -16043,7 +16139,7 @@ country_event = { #Fate of Ukraine
 		}
 		set_temp_variable = { tag_to_release = UKR }
 		release_targeted_tag = yes
-		UKR = { UKR_setup_puppet = yes }		
+		UKR_setup_puppet = yes	
 	}
 	option = { #Puppet
 		name = annex.123.b
@@ -16075,11 +16171,11 @@ country_event = { #Fate of Ukraine
 				is_claim_or_core_of_ROOT = no
 			}
 			add_claim_of_ROOT = yes
-			enable_state_integration_60_compliance = yes
+			enable_state_integration_80_compliance = yes
 		}
 		set_temp_variable = { tag_to_release = UKR }
 		release_targeted_tag = yes
-		UKR = { UKR_setup_puppet = yes }	
+		UKR_setup_puppet = yes	
 	}
 	option = { #Puppet
 		name = annex.123.e
@@ -16103,11 +16199,11 @@ country_event = { #Fate of Ukraine
 				is_claim_or_core_of_ROOT = no
 			}
 			add_claim_of_ROOT = yes
-			enable_state_integration_60_compliance = yes
+			enable_state_integration_80_compliance = yes
 		}	
 		set_temp_variable = { tag_to_release = UKR }
 		release_targeted_tag = yes
-		UKR = { UKR_setup_puppet = yes }	
+		UKR_setup_puppet = yes	
 	}
 	
 	option = { #Integrate
@@ -18400,7 +18496,14 @@ country_event = { #Fate of Mexico
 			factor = 100
 		}
 		trigger = {
+			OR = {
 			has_socialist_government = no
+            AND = {
+				tag = CAL
+				has_completed_focus = CAL_Crown_Norton_II
+				has_government = radical_socialist
+			}
+			}
 			OR = {
 				tag = CAN
 				tag = AUS
@@ -18434,6 +18537,23 @@ country_event = { #Fate of Mexico
 				set_cosmetic_tag = MEE
 				set_country_flag = MEX_COUNTER_Monarchy_Restored
 				hidden_effect = {
+					if = {
+						limit = {
+							AND = {
+								tag = CAL
+								has_completed_focus = CAL_Crown_Norton_II
+								has_government = radical_socialist
+							}
+						}
+						create_country_leader = {
+							name = "María I"
+							desc = "POLITICS_DONA_ITURBIDE_DESC"
+							picture = "gfx/leaders/MEX/Portrait_Mexico_Maria.png"
+							expire = "1965.1.1"
+							ideology = radical_socialist_subtype
+							female = yes
+						}
+					}
 					create_country_leader = {
 						name = "María I"
 						desc = "POLITICS_DONA_ITURBIDE_DESC"
@@ -19015,7 +19135,7 @@ country_event = { #Fate of Galicia
 		}
 		if = {
 			limit = { has_completed_focus = RUS_Panslavist_Internationalism }
-			GAL = { enable_coring_at_sixty_compliance = yes }
+			GAL = { enable_coring_at_eighty_compliance = yes }
 		}
 		occupy_medium_country = yes
 		recheck_annexations = yes
@@ -19398,11 +19518,11 @@ country_event = { #Fate of Belarus
 		}
 		1294 = { 
 			add_claim_by = ROOT 
-			enable_state_integration_60_compliance = yes
+			enable_state_integration_80_compliance = yes
 		}
 		1087 = { 
 			add_claim_by = ROOT 
-			enable_state_integration_60_compliance = yes
+			enable_state_integration_80_compliance = yes
 		}
 		set_temp_variable = { tag_to_release = WHR }
 		release_targeted_tag = yes
@@ -19604,7 +19724,7 @@ country_event = { #Fate of Slovakia
 			}
 			add_claim_by = ROOT
 		}
-		SVK = { enable_coring_at_sixty_compliance = yes }
+		SVK = { enable_coring_at_eighty_compliance = yes }
 		occupy_small_country = yes		
 		recheck_annexations = yes
 	}
@@ -20016,7 +20136,7 @@ country_event = { #Fate of Transylvania
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		TRS = { enable_coring_at_sixty_compliance = yes }
+		TRS = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #Occupy Transylvania
@@ -20186,7 +20306,7 @@ country_event = { #Liberation of Bosnia
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		BOS = { enable_coring_at_sixty_compliance = yes }
+		BOS = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #annex
@@ -20445,7 +20565,7 @@ country_event = { #Liberation of Montenegro
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		MNT = { enable_coring_at_sixty_compliance = yes }
+		MNT = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -20575,7 +20695,7 @@ country_event = { #Albania Liberation
 			}
 		}
 		occupy_small_country = yes
-		ALB = { enable_coring_at_sixty_compliance = yes }
+		ALB = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -24489,7 +24609,7 @@ country_event = { #Fate of Mongolia
 			add_claim_by = ROOT
 		}
 		occupy_small_country = yes
-		MON = { enable_coring_at_sixty_compliance = yes }
+		MON = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #Integrate
@@ -25135,7 +25255,7 @@ country_event = { #Fate of Manchuria
 				is_claim_or_core_of_ROOT = no
 			}
 			add_claim_by = ROOT
-			enable_state_integration_60_compliance = yes
+			enable_state_integration_80_compliance = yes
 		}
 		custom_effect_tooltip = tooltip_white_line
 		set_temp_variable = { tag_to_release = MAN }
@@ -25191,7 +25311,7 @@ country_event = { #Fate of Manchuria
 				is_claim_or_core_of_ROOT = no
 			}
 			add_claim_by = ROOT
-			enable_state_integration_60_compliance = yes
+			enable_state_integration_80_compliance = yes
 		}
 		custom_effect_tooltip = tooltip_white_line
 		set_temp_variable = { tag_to_release = event_target:china_release_target }
@@ -25228,7 +25348,7 @@ country_event = { #Fate of Manchuria
 				is_claim_or_core_of_ROOT = no
 			}
 			add_claim_by = ROOT
-			enable_state_integration_60_compliance = yes
+			enable_state_integration_80_compliance = yes
 		}
 		custom_effect_tooltip = tooltip_white_line
 		set_temp_variable = { tag_to_release = event_target:china_release_target }
@@ -25356,7 +25476,7 @@ country_event = { #Fate of Manchuria
 				is_claim_or_core_of_ROOT = no
 			}
 			add_claim_by = ROOT
-			enable_state_integration_60_compliance = yes
+			enable_state_integration_80_compliance = yes
 		}
 		custom_effect_tooltip = tooltip_white_line
 		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_approves_of_govt }
@@ -25388,7 +25508,7 @@ country_event = { #Fate of Manchuria
 			add_claim_by = ROOT
 		}
 		occupy_medium_country = yes
-		MAN = { enable_coring_at_sixty_compliance = yes }
+		MAN = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #occupy
@@ -25451,6 +25571,7 @@ country_event = { #Fate of Xinjiang
 		trigger = {
 			has_global_flag = global_turkestan_united
 			has_event_target = turkestan_unifier
+			event_target:turkestan_unifier = { ROOT_can_grant_land = yes }
 		}
 		ai_chance = { base = 80 }
 		add_to_temp_array = { target_cores_to_release = ETS }
@@ -25498,7 +25619,7 @@ country_event = { #Fate of Xinjiang
 			add_claim_by = ROOT
 		}
 		occupy_medium_country = yes
-		ETS = { enable_coring_at_sixty_compliance = yes }
+		ETS = { enable_coring_at_eighty_compliance = yes }
 		recheck_annexations = yes
 	}
 	option = { #Annex
@@ -25557,6 +25678,31 @@ country_event = { #Fate of the Legation Cities
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event annex.180"
 		determine_chinese_ally = yes
+		hidden_effect = {
+		LEC = {
+			create_country_leader = {
+				name = "Nelson T. Johnson"
+				desc = "POLITICS_Nelson_T_Johnson_DESC"
+				picture = "gfx/leaders/LEC/Portrait_Nelson_Trusler_Johnson.png"
+				expire = "1965.1.1"
+				ideology = free_market_capitalist_subtype
+				traits = {
+					smooth_talking_charmer
+				}
+			}
+			create_country_leader = {
+				name = "Siegmund Bodenheimer"
+				desc = "POLITICS_SIEGMUND_BODENHEIMER_DESC"
+				picture = "gfx/leaders/LEC/Portrait_Siegmund_Bodenheimer.png"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = {
+					financial_expert
+				}
+			}
+			drop_cosmetic_tag = yes
+		}
+	    }
 	}
 
 	option = { #Release the Legation Cities
@@ -26772,7 +26918,10 @@ country_event = { #Fate of Canada
 			factor = 20
 			modifier = {
 				factor = 3
+				OR = {
 				tag = TEX
+				tag = COR
+				}
 			}
 			modifier = {
 				factor = 0
@@ -26784,6 +26933,12 @@ country_event = { #Fate of Canada
 				tag = USA
 				tag = CSA
 				tag = TEX
+				tag = NEE
+				tag = COR
+				tag = WCC
+				tag = NYC
+	            tag = TXS
+				tag = CAL
 			}
 		}
 
@@ -26804,6 +26959,9 @@ country_event = { #Fate of Canada
 		set_temp_variable = { tag_to_release = QUE }
 		puppet_released_tag = yes
 
+		set_country_flag = USA_manifested_destiny_canada_annexation
+		custom_effect_tooltip = USA_manifested_destiny_canada_annexation_tooltip
+
 		set_country_flag = CAN_CONQ
 		occupy_small_country = yes
 	}
@@ -26814,7 +26972,10 @@ country_event = { #Fate of Canada
 			factor = 30
 			modifier = {
 				factor = 3
+				OR = {
 				tag = TEX
+				tag = COR
+				}
 			}
 			modifier = {
 				factor = 0
@@ -26826,8 +26987,16 @@ country_event = { #Fate of Canada
 				tag = USA
 				tag = CSA
 				tag = TEX
+				tag = NEE
+				tag = COR
+				tag = WCC
+				tag = NYC
+	            tag = TXS
+				tag = CAL
 			}
 		}
+		set_country_flag = USA_manifested_destiny_canada_annexation
+		custom_effect_tooltip = USA_manifested_destiny_canada_annexation_tooltip
 
 		set_country_flag = CAN_CONQ
 		occupy_small_country = yes
@@ -26843,6 +27012,11 @@ country_event = { #Fate of Canada
 				tag = USA
 				tag = CSA
 				tag = TEX
+				tag = NEE
+				tag = COR
+				tag = WCC
+				tag = NYC
+	            tag = TXS
 			}
 		}
 
@@ -29946,7 +30120,7 @@ country_event = { #Fate of Kurdistan
 			KUR = { ROOT_can_grant_land = yes }
 			if = {
 				limit = { original_tag = TUR }
-				NOT = { tag = TUR }
+				NOT = { tag = OTT }
 				OR = {
 					417 = { is_valid_annexation_state = yes } #Urmia
 					421 = { is_valid_annexation_state = yes } #Kermanshah
@@ -29954,7 +30128,7 @@ country_event = { #Fate of Kurdistan
 			}
 		}
 		ai_chance = {
-			factor = 80
+			base = 80
 			modifier = {
 				factor = 0
 				NOT = { is_ally_with = KUR }
@@ -29963,23 +30137,23 @@ country_event = { #Fate of Kurdistan
 					TUR = { is_ally_of_ROOT = yes }
 					PER = { is_ally_of_ROOT = yes }
 				}
-				}
 			}
+		}
 		set_temp_variable = { tag_to_release = KUR }
 		every_owned_state = {
 			limit = {
 				if = {
 					limit = { ROOT = { original_tag = TUR } }
-				OR = {
+					OR = {
 						state = 417 #Urmia
 						state = 421 #Kermanshah
 					}
 				}
 				else = {
-					region = 252 #Kurdistan
-			}
+					is_kurdistan = yes
+				}
 				is_claim_or_core_of_ROOT = no
-		}
+			}
 			transfer_state_and_add_core = yes
 		}
 	}
@@ -29988,26 +30162,49 @@ country_event = { #Fate of Kurdistan
 		name = annex.248.c
 		trigger = {
 			NOT = {
-				tag = IRQ
-				tag = TUR
-				tag = PER
+				original_tag = TUR
+				original_tag = IRQ
+				original_tag = PER
 			}
-			IRQ = { ROOT_can_grant_land = yes }
+			OR = {
+				350 = { is_valid_annexation_state = yes } #Diyarbakir
+				352 = { is_valid_annexation_state = yes } #Van
+				TUR = { owns_state = 350 } #Diyarbakir
+				TUR = { owns_state = 352 } #Van
+			}
+			TUR = {
+				ROOT_can_grant_land = yes
+				if = {
+					limit = { NOT = { tag = OTT } }
+					OR = {
+						PER = { ROOT_can_grant_land = no }
+						AND = {
+							417 = { is_valid_annexation_state = no } #Urmia
+							421 = { is_valid_annexation_state = no } #Kermanshah
+						}
+					}
+				}
+			}
 		}
 		ai_chance = {
-			factor = 20
+			base = 20
 			modifier = {
 				factor = 0
 				OR = {
-					is_ally_with = TUR
-					is_ally_with = PER
+					IRQ = { is_ally_of_ROOT = yes }
+					PER = { is_ally_of_ROOT = yes }
 				}
-				NOT = { is_ally_with = IRQ }
+				NOT = { is_ally_with = TUR }
 			}
 		}
-		set_temp_variable = { tag_to_release = IRQ }
-		add_to_temp_array = { target_cores_to_release = KUR }
-		transfer_territory_from_core_regions_and_add_claims = yes
+		set_temp_variable = { tag_to_release = TUR }
+		every_owned_state = {
+			limit = {
+				is_kurdistan = yes
+				is_claim_or_core_of_ROOT = no
+			}
+			transfer_state_and_add_claim = yes
+		}
 	}
 
 	option = { #give to TUR ally
@@ -30052,7 +30249,7 @@ country_event = { #Fate of Kurdistan
 		set_temp_variable = { tag_to_release = TUR }
 		every_owned_state = {
 			limit = {
-				region = 252 #Kurdistan
+				is_kurdistan = yes
 				is_claim_or_core_of_ROOT = no
 			}
 			transfer_state_and_add_claim = yes
@@ -30089,7 +30286,7 @@ country_event = { #Fate of Kurdistan
 		set_temp_variable = { tag_to_release = PER }
 		every_owned_state = {
 			limit = {
-				region = 252 #Kurdistan
+				is_kurdistan = yes
 				is_claim_or_core_of_ROOT = no
 			}
 			transfer_state_and_add_claim = yes
@@ -30168,7 +30365,7 @@ country_event = { #Fate of Kurdistan
 		}
 		every_owned_state = {
 			limit = {
-				region = 252 #Kurdistan
+				is_kurdistan = yes
 				is_claim_or_core_of_ROOT = no
 			}
 			add_claim_of_ROOT = yes
@@ -30193,7 +30390,7 @@ country_event = { #Fate of Kurdistan
 			limit = { tag = TUR }
 		every_owned_state = {
 			limit = {
-					region = 252 #Kurdistan
+					is_kurdistan = yes
 					is_claim_or_core_of_ROOT = no
 				}
 				add_claim_of_ROOT = yes
@@ -39351,6 +39548,26 @@ country_event = { #Fate of Alaska
 					add_popularity = {
 						ideology = radical_socialist
 						popularity = 0.15
+					}
+				}
+			}
+			if = {
+				limit = { 
+					tag = CAN
+				}
+				ALA = {
+					country_event = {
+						id = Alaska.35
+					}
+				}
+			}
+			if = {
+				limit = { 
+					tag = JAP
+				}
+				ALA = {
+					country_event = {
+						id = Alaska.34
 					}
 				}
 			}
