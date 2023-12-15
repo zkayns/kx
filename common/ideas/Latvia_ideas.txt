@@ -61,6 +61,15 @@ ideas = {
 				army_defence_factor = 0.1
 			}
 		}
+		LAT_latvian_people_constitution_truly_liberal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LAT_latvian_people_constitution_truly_liberal"}
+			picture = generic_liberalism
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.15
+			}
+		}
 		LAT_scouts = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LAT_scouts"}
 			picture = LAT_scout

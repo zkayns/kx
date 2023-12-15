@@ -623,7 +623,7 @@ country_event = {
 			desc = "POLITICS_KRISTAPS_UPELNIEKS_DESC"
 			picture = "gfx/leaders/LAT/Portrait_LAT_Kristaps_Upelnieks.png"
 			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
+			ideology = junta_subtype
 		}
 		hidden_effect = {
 			remove_all_ministers = yes
@@ -632,13 +632,6 @@ country_event = {
 				LAT_Karlis_Ulmanis_for_sco
 				LAT_Janis_Kaminskis_eco_ade
 				LAT_Hermanis_Apsitis_sec_ade
-			}
-			if = {
-				limit = { check_variable = { cons_autho = 0 } }
-				country_event = {
-					id = KRLAT.40
-					days = 30
-				}
 			}
 		}
 	}
@@ -714,7 +707,14 @@ country_event = {
 
 	option = { #political situation stabilized
 		name = KRLAT.20.a
-		remove_ideas = LAT_desesperate_situation
+		remove_ideas = LAT_desesperate_situation		
+		if = {
+			limit = { check_variable = { cons_autho = 0 } }
+			country_event = {
+				id = KRLAT.40
+				days = 10
+			}
+		}
 	}
 }
 
@@ -856,7 +856,7 @@ country_event = { # Paul Schliemann
 	is_triggered_only = yes
 	trigger = {
 		tag = LAT
-		owns_state = 842
+		owns_state = 1091
 		date < 1944.1.1
 	}
 	title = KRLAT.26.t
@@ -1270,7 +1270,7 @@ country_event = { # Elections
 			desc = "POLITICS_JANIS_KURELIS_AUTHDEM_DESC"
 			picture = "gfx/leaders/LAT/Portrait_LAT_Janis_Kurelis.png"
 			expire = "1965.1.1"
-			ideology = authdem_junta_subtype
+			ideology = soccon_agrarianism_subtype
 		}
 	}
 	option = {
@@ -1530,24 +1530,22 @@ country_event = { # Elections
 		if = {
 			limit = { has_country_flag = LAT_kurelis_party }
 			add_authdem_to_coalition = yes
-			add_ideas = LAT_Alberts_Kviesis_hog_sco					
 		}
-		else = {
-			add_ideas = LAT_Karlis_Ulmanis_hog_sco					
-		}		
+		add_ideas = LAT_Alberts_Kviesis_hog_sco					
+		add_ideas = LAT_Alfreds_Bilmanis_for_sco									
 		if = {
 			limit = { has_country_flag = LAT_will_take_blodnieks }
-			add_ideas = {
-				LAT_Alfreds_Bilmanis_for_sco
-				LAT_Adolfs_Blodnieks_eco_sco
-				LAT_Alfreds_Berzins_sec_sco
-			}
+			add_ideas = LAT_Adolfs_Blodnieks_eco_sco				
+			set_country_leader_ideology = soccon_generic_national_democracy_subtype
 		}
 		else = {
-			add_ideas = {
-				LAT_Alfreds_Bilmanis_for_sco
-				LAT_Vilis_Gulbis_eco_sco
-				LAT_Alfreds_Berzins_sec_sco
+			add_ideas = LAT_Vilis_Gulbis_eco_sco
+		}
+		if = {
+			limit = { owns_state = 880 }
+			add_ideas = LAT_Jazeps_Rancans_sec_sco
+			else = {
+				add_ideas = LAT_Alfreds_Berzins_sec_sco
 			}
 		}
 	}
@@ -1587,6 +1585,12 @@ country_event = { # Elections
 			LAT_Aurelijs_Zebergs_for_ade
 			LAT_Janis_Kaminskis_eco_ade
 			LAT_Hermanis_Apsitis_sec_ade
+		}
+		if = {
+			limit = {
+				NOT = { has_country_leader_ideology = authdem_agrarianism_subtype }
+			}
+			set_country_leader_ideology = authdem_agrarianism_subtype
 		}
 	}
 }
@@ -1811,21 +1815,23 @@ country_event = { # Elections
 			add_ideas = LAT_Karlis_Ulmanis_hog_sco				
 		}
 		else = {
-			add_ideas = LAT_Alberts_Kviesis_hog_sco					
-			add_ideas = LAT_Alfreds_Bilmanis_for_sco									
-			if = {
-				limit = { has_country_flag = LAT_will_take_blodnieks }
-				add_ideas = LAT_Adolfs_Blodnieks_eco_sco
-			}
+			add_ideas = LAT_Alberts_Kviesis_hog_sco	
+		}
+		add_ideas = LAT_Alfreds_Bilmanis_for_sco									
+		if = {
+			limit = { has_country_flag = LAT_will_take_blodnieks }
+			add_ideas = LAT_Adolfs_Blodnieks_eco_sco				
+			set_country_leader_ideology = soccon_generic_national_democracy_subtype
+		}
+		else = {
+			add_ideas = LAT_Vilis_Gulbis_eco_sco
+			set_country_leader_ideology = soccon_agrarianism_subtype
+		}
+		if = {
+			limit = { owns_state = 880 }
+			add_ideas = LAT_Jazeps_Rancans_sec_sco
 			else = {
-				add_ideas = LAT_Vilis_Gulbis_eco_sco
-			}
-			if = {
-				limit = { owns_state = 880 }
-				add_ideas = LAT_Jazeps_Rancans_sec_sco
-				else = {
-					add_ideas = LAT_Alfreds_Berzins_sec_sco
-				}
+				add_ideas = LAT_Alfreds_Berzins_sec_sco
 			}
 		}
 	}
@@ -1864,6 +1870,12 @@ country_event = { # Elections
 			LAT_Aurelijs_Zebergs_for_ade
 			LAT_Janis_Kaminskis_eco_ade
 			LAT_Hermanis_Apsitis_sec_ade
+		}
+		if = {
+			limit = {
+				NOT = { has_country_leader_ideology = authdem_agrarianism_subtype }
+			}
+			set_country_leader_ideology = authdem_agrarianism_subtype
 		}
 	}
 }

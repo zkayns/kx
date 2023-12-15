@@ -29140,7 +29140,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LAT/LAT_Andrejs_Veckalns.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Mikelis_Rozentals_sec_sde
+		name = "GFX_idea_LAT_Mikelis_Rozentals_sec_sde"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Mikelis_Rozentals.png"
 	}
 	spriteType = {

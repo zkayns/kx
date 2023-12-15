@@ -149,7 +149,7 @@ create_country_leader = {
 	desc = "POLITICS_KRISTAPS_UPELNIEKS_DESC"
 	picture = "gfx/leaders/LAT/Portrait_LAT_Kristaps_Upelnieks.png"
 	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
+	ideology = junta_subtype
 }
 
 create_country_leader = {
@@ -165,7 +165,7 @@ create_country_leader = {
 	desc = "POLITICS_KARLIS_ULMANIS_AUTHDEM_DESC"
 	picture = "gfx/leaders/LAT/Portrait_LAT_Karlis_Ulmanis_KR.png"
 	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
+	ideology = authdem_agrarianism_subtype
 }
 
 create_country_leader = {
@@ -181,7 +181,7 @@ create_country_leader = {
 	desc = "POLITICS_KARLIS_ULMANIS_SOCCON_DESC"
 	picture = "gfx/leaders/LAT/Portrait_LAT_Karlis_Ulmanis_KR.png"
 	expire = "1965.1.1"
-	ideology = social_conservative_subtype
+	ideology = soccon_agrarianism_subtype
 }
 
 create_country_leader = {
@@ -189,7 +189,7 @@ create_country_leader = {
 	desc = "POLITICS_PETERIS_JURASEVSKIS_DESC"
 	picture = "gfx/leaders/LAT/Portrait_LAT_Peteris_Jurasevskis.png"
 	expire = "1965.1.1"
-	ideology = social_liberal_subtype
+	ideology = soclib_agrarianism_subtype
 }
 
 create_country_leader = {
@@ -197,20 +197,13 @@ create_country_leader = {
 	desc = "POLITICS_MARGERS_SKUJENIEKS_DESC"
 	picture = "gfx/leaders/LAT/Portrait_LAT_Margers_Skujenieks.png"
 	expire = "1965.1.1"
-	ideology = market_liberal_subtype
+	ideology = liberal_conservative_subtype
 }
 
 create_country_leader = {
 	name = "Pauls Kalniņš"
 	desc = "POLITICS_PAULS_KALNINS_DESC"
 	picture = "gfx/leaders/LAT/Portrait_LAT_Pauls_Kalnins.png"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-}
-
-create_country_leader = {
-	name = "Constitutional Assembly"
-	picture = "gfx/leaders/LAT/Portrait_LAT_Constitutional_Assembly.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }

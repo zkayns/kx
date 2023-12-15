@@ -147,6 +147,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = LAT_organize_the_forest_brothers
+		}		
+		allow_branch = {
+			has_country_leader = { 
+				name = "Jānis Kurelis"
+				ruling_only = yes
+			}
 		}
 		bypass = { is_puppet = yes }
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -158,6 +164,42 @@ focus_tree = {
 			add_political_power = 25
 		}
 	}
+	focus = {
+		id = LAT_empower_seimas
+		icon = GFX_goal_NFA_empower_parliament
+		cost = 6
+
+		relative_position_id = LAT_convene_the_constituent_assembly
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = LAT_latvia_for_latvians
+		}
+		prerequisite = {
+			focus = LAT_organize_the_forest_brothers
+		}
+		allow_branch = {
+			NOT = {
+				has_country_leader = { 
+					name = "Jānis Kurelis"
+					ruling_only = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LAT_empower_seimas"
+			remove_ideas = LAT_dualism
+			swap_ideas = {
+				remove_idea = LAT_latvian_people_constitution_liberal
+				add_idea = LAT_latvian_people_constitution_truly_liberal
+			}
+			add_political_power = 100
+			increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+
 	
 	focus = {
 		id = LAT_revise_the_national_territory
@@ -359,6 +401,7 @@ focus_tree = {
 		prerequisite = {
 			focus = LAT_the_generalis
 			focus = LAT_the_generalis_goppers
+			focus = LAT_empower_seimas
 		}
 		prerequisite = {
 			focus = LAT_a_state_economy
@@ -794,29 +837,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = LAT_empower_seimas
-		icon = GFX_goal_NFA_empower_parliament
-		cost = 6
-
-		relative_position_id = LAT_develop_the_economy
-		x = -1
-		y = 2
-		allow_branch = {
-			has_liberal_government = yes
-		}
-
-		prerequisite = {
-			focus = LAT_develop_the_economy
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LAT_empower_seimas"
-			add_political_power = 100
-			increase_ruling_party_popularity_by_10 = yes
-		}
-	}
-
+	
 	focus = {
 		id = LAT_an_industrial_need
 		icon = GFX_goal_factory_complex
@@ -1319,7 +1340,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LAT_firepower_enhancement_program
-		icon = GFX_goal_generic_military_equipment
+		icon = GFX_focus_generic_military_equipment
 		cost = 6
 
 		relative_position_id = LAT_rebuild_the_Latvian_armed_forces

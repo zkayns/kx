@@ -765,7 +765,7 @@ focus_tree = {
 				factor = 0
 				RUS = {
 					OR = {
-						RUS_is_expansionist = yes
+						has_completed_focus = RUS_Expansionism
 						has_socialist_government = yes
 					}
 				}

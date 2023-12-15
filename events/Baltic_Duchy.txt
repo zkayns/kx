@@ -992,7 +992,6 @@ country_event = {
 					days = 2
 				}
 				country_event = { id = KRLAT.24 days = 77 }
-				country_event = { id = KRBAT.39 days = 10 random_days = 20 }
 			}
 			EST = {
 				transfer_state = 191
@@ -1015,7 +1014,6 @@ country_event = {
 					limit = { has_template = "Panzer-Kampfbataillon" }
 					delete_unit_template_and_units = { division_template = "Panzer-Kampfbataillon" }
 				}
-				country_event = { id = KRBAT.39 days = 10 random_days = 20 }
 			}
 			BAT_becomes_Riga = yes
 			country_event = {
