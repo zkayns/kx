@@ -28949,20 +28949,36 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LAT/LAT_Augusts_Kirchensteins.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Pauls_Kalnins_hog_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Pauls_Kalnins.png"
+		name = "GFX_idea_LAT_Ansis_Rudevics_hog_rso"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Ansis_Rudevics.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Reinhold_K_Zarins_hog_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Reinhold_K_Zarins.png"
+		name = "GFX_idea_LAT_Eduards_Radzins_hog_sde"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Eduards_Radzins.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Gustavs_Zemgals_hog_sli"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Gustavs_Zemgals.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Karlis_Skalbe_hog_mli"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Karlis_Skalbe.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Rudolfs_Bangerskis_hog_ade"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Rudolfs_Bangerskis.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Krrlis_Ulmanis_hog_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Krrlis_Ulmanis.png"
+		name = "GFX_idea_LAT_Karlis_Ulmanis_hog_sco"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Karlis_Ulmanis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Alberts_Kviesis_hog_sco"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Alberts_Kviesis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Kristaps_Upelnieks_hog_pau"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Kristaps_Upelnieks.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Alfreds_Valdmanis_hog_npo"
@@ -29000,20 +29016,28 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LAT/LAT_Julijcs_Lacis.png"
 	}
 	spriteType = {
+		name = "GFX_idea_LAT_Fricis_Menders_for_sde"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Fricis_Menders.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Karlis_Zarins_for_sli"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Karlis_Zarins.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Kristaps_Bahmanis_for_mli"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Kristaps_Bahmanis.png"
+	}
+	spriteType = {
 		name = "GFX_idea_LAT_Alfreds_Bilmanis_for_sco"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Alfreds_Bilmanis.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Reinhold_K_Zarins_for_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Reinhold_K_Zarins.png"
+		name = "GFX_idea_LAT_Karlis_Ulmanis_for_sco"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Karlis_Ulmanis.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Jrnis_Kaminskis_for_ade"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Jrnis_Kaminskis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Krrlis_Ulmanis_for_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Krrlis_Ulmanis.png"
+		name = "GFX_idea_LAT_Aurelijs_Zebergs_for_ade"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Aurelijs_Zebergs.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Vilhelms_Munters_for_pau"
@@ -29050,28 +29074,36 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LAT/LAT_Roberts_Dambitis.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Edgars_Andersons_eco_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Edgars_Andersons.png"
+		name = "GFX_idea_LAT_Ansis_Busevics_eco_rso"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Ansis_Busevics.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Petrus_Apskalns_eco_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Petrus_Apskalns.png"
+		name = "GFX_idea_LAT_Peteris_Zeibolts_eco_sde"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Peteris_Zeibolts.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Ludvigs_Ctis_eco_ade"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Ludvigs_Ctis.png"
+		name = "GFX_idea_LAT_Alfred_Andersons_eco_sli"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Alfred_Andersons.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Janis_Sterns_eco_mli"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Janis_Sterns.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Vilis_Gulbis_eco_sco"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Vilis_Gulbis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Adolfs_Blodnieks_eco_sco"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Adolfs_Blodnieks.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Janis_Kaminskis_eco_ade"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Janis_Kaminskis.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Alfreds_Valdmanis_eco_pau"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Alfreds_Valdmanis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Kornelijs_Veidnieks_eco_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Kornelijs_Veidnieks.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Vilis_Gulbis_eco_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Vilis_Gulbis.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Evalds_Andersons_eco_npo"
@@ -29104,24 +29136,36 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LAT/LAT_Vilis_Lrcis.png"
 	}
 	spriteType = {
+		name = "GFX_idea_LAT_Andrejs_Veckalns_sec_rso"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Andrejs_Veckalns.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Mikelis_Rozentals_sec_sde
+		texturefile = "gfx/interface/ministers/LAT/LAT_Mikelis_Rozentals.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Martins_Antons_sec_sli"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Martins_Antons.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Vilis_Holcmanis_sec_mli"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Vilis_Holcmanis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Alfreds_Berzins_sec_sco"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Alfreds_Berzins.png"
+	}
+	spriteType = {
 		name = "GFX_idea_LAT_Jazeps_Rancans_sec_sco"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Jazeps_Rancans.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Pauls_Kalnins_sec_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Pauls_Kalnins.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Janis_Andersons_sec_ade"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Janis_Andersons.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Hermanis_Apsitis_sec_pau"
+		name = "GFX_idea_LAT_Hermanis_Apsitis_sec_ade"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Hermanis_Apsitis.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Jrnis_Balodis_sec_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Jrnis_Balodis.png"
+		name = "GFX_idea_LAT_Janis_Balodis_sec_pau"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Janis_Balodis.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Vilis_Gulbis_sec_pau"
