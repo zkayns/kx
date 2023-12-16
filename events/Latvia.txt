@@ -278,6 +278,10 @@ country_event = { ####constituent assembly####
 				var = cons_autho
 				value = 0
 			}
+			random_list = {
+				70 = { set_country_flag = lat_democratic }
+				30 = { }
+			}
 			country_event = { id = KRLAT.11 days = 3 }
 		}
 	}
@@ -326,6 +330,7 @@ country_event = {
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_MARLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCCON }
+					has_country_flag = lat_democratic
 				}
 			}
 		}
@@ -359,6 +364,7 @@ country_event = {
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_MARLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCCON }
+					has_country_flag = lat_democratic
 				}
 			}
 		}
@@ -385,7 +391,6 @@ country_event = {
 				}
 			}
 		}
-		set_capital = { state = 190 }
 		hidden_effect = {
 			add_to_variable = {
 				var = cons_liberal
@@ -416,6 +421,7 @@ country_event = {
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_MARLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCCON }
+					has_country_flag = lat_democratic
 				}
 			}
 		}
@@ -489,6 +495,7 @@ country_event = {
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_MARLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCCON }
+					has_country_flag = lat_democratic
 				}
 			}
 		}
@@ -553,6 +560,7 @@ country_event = {
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_MARLIB }
 					has_game_rule = { rule = LAT_PATH option = LAT_PATH_SOCCON }
+					has_country_flag = lat_democratic
 				}
 			}
 		}
