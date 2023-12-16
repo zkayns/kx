@@ -3,8 +3,8 @@
  LAT_focus: "Latvia Focus Tree"
 
 ### Parties ###
- LAT_totalist_party: "LSD"
- LAT_totalist_party_long: "Latvijas sociāldemokrātija (Social Democracy of Latvia)"
+ LAT_totalist_party: "LKP"
+ LAT_totalist_party_long: "Latvijas Komunistiskā partija (Latvian Communist Party)"
  LAT_syndicalist_party: "LACB"
  LAT_syndicalist_party_long: "Latvijas Arodbiedrību centrālbirojs (Central Bureau of Latvian Trade Unions)"
  LAT_radical_socialist_party: "LSSZP"
@@ -61,6 +61,7 @@
  LAT_Alberts_Kviesis_hog_sco: "Alberts Kviesis"
  LAT_Karlis_Ulmanis_hog_sco: "Kārlis Ulmanis"
  LAT_Kristaps_Upelnieks_hog_pau: "Kristaps Krišs Upelnieks"
+ LAT_Karlis_Goppers_hog_npo: "Kārlis Goppers"
  
  LAT_Fricis_Menders_for_sde: "Fricis Menders"
  LAT_Karlis_Zarins_for_sli: "Kārlis Zariņš"
@@ -882,11 +883,11 @@
  LAT_french_advisors: "Communard Political Advisors"
  LAT_french_advisors_desc: "The Commune of France has sent political advisors to the Latvian Socialist Republic."
  LAT_economic_ministry: "Industrial Affairs Department"
- LAT_economic_ministry_desc: "The Industrial Affairs Department within the LSD party oversees the party's relationship with the various local labour unions which, de jure, are the basis of municipal administration in Latvia."
+ LAT_economic_ministry_desc: "The Industrial Affairs Department within the LKP party oversees the party's relationship with the various local labour unions which, de jure, are the basis of municipal administration in Latvia."
  LAT_economic_ministry_1: "Industrial Affairs Department"
- LAT_economic_ministry_1_desc: "The Industrial Affairs Department within the LSD party oversees the party's relationship with the various local labour unions which, de jure, are the basis of municipal administration in Latvia."
+ LAT_economic_ministry_1_desc: "The Industrial Affairs Department within the LKP party oversees the party's relationship with the various local labour unions which, de jure, are the basis of municipal administration in Latvia."
  LAT_economic_ministry_2: "Industrial Affairs Department"
- LAT_economic_ministry_2_desc: "The Industrial Affairs Department within the LSD party oversees the party's relationship with the various local labour unions which, de jure, are the basis of municipal administration in Latvia."
+ LAT_economic_ministry_2_desc: "The Industrial Affairs Department within the LKP party oversees the party's relationship with the various local labour unions which, de jure, are the basis of municipal administration in Latvia."
  LAT_syndicalist_assemblies: "Union Self-Districting"
  LAT_syndicalist_assemblies_desc: "Unions have been organised into provincial councils presided over by the party's governors. Through these councils, the party carefully manages the concerns of local leaders, ensuring a place for a small degree of dissent within the confines of the party line and delegitimising extra-legal opposition."
  LAT_communist_high_command: "Red High Command"
@@ -1006,9 +1007,7 @@
  LAT_SOV_radical_socialist_DEF: "the Union of Soviet Socialist Republics"
 
  
-### Ministers ###
- LAT_Karlis_Goppers_hog_npo: "Kārlis Goppers"
- 
+
 ### Easter egg stuff ###
 
  LAT_SOV_Create_Soviet_Union: "Repudiate the Failure of October"

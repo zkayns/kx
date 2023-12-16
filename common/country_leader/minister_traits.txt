@@ -1613,10 +1613,9 @@ leader_traits = {
 		random = no
 	}
 	
-	eco_civil_engineer = {
-		production_speed_industrial_complex_factor = 0.07
-		production_speed_infrastructure_factor = 0.05
-		research_speed_factor = 0.02
+	eco_ambitious_engineer = {
+		production_factory_max_efficiency_factor = 0.1
+		local_resources_factor = 0.05
 
 		random = no
 	}

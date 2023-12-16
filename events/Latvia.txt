@@ -168,6 +168,7 @@ country_event = { # RadSoc path unlocked
 			ideology = totalist
 			popularity = 0.05
 		}
+		add_synd_to_coalition = yes
 		hidden_effect = {
 			random_unit_leader = {
 				limit = { has_id = 15015 }			
@@ -179,8 +180,8 @@ country_event = { # RadSoc path unlocked
 			}
 			remove_all_ministers = yes
 			add_ideas = {
-				LAT_Roberts_Osis_hog_tot
-				LAT_Peteris_Valeskalns_for_tot
+				LAT_Jekabs_Peterss_hog_tot
+				LAT_Ivars_Smilga_for_tot
 				LAT_Arnolds_Tabaks_eco_tot
 				LAT_Andrejs_Jablonskis_sec_tot
 			}
@@ -1203,6 +1204,7 @@ country_event = { # Elections
 	desc = KRLAT.41.d
 
 	is_triggered_only = yes
+	picture = GFX_report_event_LAT_lsdsp
 
 	option = {
 		name = KRLAT.41.a	
@@ -2043,12 +2045,13 @@ country_event = {
 			ideology = syndicalist
 			popularity = 0.30
 		}
+		add_tot_to_coalition = yes
 		remove_all_ministers = yes
 		add_ideas = {
-			LAT_Augusts_Kirchensteins_hog_syn
+			LAT_Andrejs_Veckalns_hog_syn
 			LAT_Julijcs_Lacis_for_syn
 			LAT_Krrlis_Karlsons_eco_syn
-			LAT_Jurijs_Rabersz_sec_syn
+			LAT_Vilis_Lrcis_sec_syn
 		}			
 		add_stability = 0.05
 		add_war_support = 0.1

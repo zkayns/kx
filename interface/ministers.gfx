@@ -28937,16 +28937,16 @@ spriteTypes = {
 
 	### Head of Government
 	spriteType = {
-		name = "GFX_idea_LAT_Roberts_Osis_hog_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Roberts_Osis.png"
+		name = "GFX_idea_LAT_Jekabs_Peterss_hog_tot"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Jekabs_Peterss.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Vilis_Lrcis_hog_tot"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Vilis_Lrcis.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Augusts_Kirchensteins_hog_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Augusts_Kirchensteins.png"
+		name = "GFX_idea_LAT_Andrejs_Veckalns_hog_syn"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Andrejs_Veckalns.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Ansis_Rudevics_hog_rso"
@@ -28996,20 +28996,8 @@ spriteTypes = {
 	### Person of Influence
 	# Foreign Minister
 	spriteType = {
-		name = "GFX_idea_LAT_Arnolds_Skrebers_for_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Arnolds_Skrebers.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Ernests_Kreismanis_for_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Ernests_Kreismanis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Peteris_Valeskalns_for_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Peteris_Valeskalns.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Augusts_Kirchensteins_for_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Augusts_Kirchensteins.png"
+		name = "GFX_idea_LAT_Ivars_Smilga_for_tot"
+		texturefile = "gfx/interface/ministers/LAT/LAT_Ivars_Smilga.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Julijcs_Lacis_for_syn"
@@ -29058,20 +29046,12 @@ spriteTypes = {
 
 	# Economy Minister
 	spriteType = {
-		name = "GFX_idea_LAT_Aleksandrs_Bulle_eco_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Aleksandrs_Bulle.png"
-	}
-	spriteType = {
 		name = "GFX_idea_LAT_Arnolds_Tabaks_eco_tot"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Arnolds_Tabaks.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Krrlis_Karlsons_eco_syn"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Krrlis_Karlsons.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Roberts_Dambitis_eco_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Roberts_Dambitis.png"
 	}
 	spriteType = {
 		name = "GFX_idea_LAT_Ansis_Busevics_eco_rso"
@@ -29124,14 +29104,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LAT/LAT_Andrejs_Jablonskis.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Rodolfs_Rocin_sec_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Rodolfs_Rocin.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Jurijs_Rabersz_sec_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Jurijs_Rabersz.png"
-	}
-	spriteType = {
 		name = "GFX_idea_LAT_Vilis_Lrcis_sec_syn"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Vilis_Lrcis.png"
 	}
@@ -29172,10 +29144,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LAT/LAT_Vilis_Gulbis.png"
 	}
 	spriteType = {
-		name = "GFX_idea_LAT_Alberts_Kviesis_sec_npo"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Alberts_Kviesis.png"
-	}
-	spriteType = {
 		name = "GFX_idea_LAT_Alfreds_Valdmanis_sec_npo"
 		texturefile = "gfx/interface/ministers/LAT/LAT_Alfreds_Valdmanis.png"
 	}
@@ -29185,135 +29153,7 @@ spriteTypes = {
 	}
 
 
-	### Chief of Staff
-	spriteType = {
-		name = "GFX_idea_LAT_Arturs_Sprogis_cos_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Arturs_Sprogis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Izglitibas_Tautas_cos_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Izglitibas_Tautas.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Janis_Berzins_cos_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Janis_Berzins.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Roberts_Dambitis_cos_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Roberts_Dambitis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Verners_Tefpers_cos_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Verners_Tefpers.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Rudolfs_Kocins_cos_ade"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Rudolfs_Kocins.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Jrnis_Balodis_cos_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Jrnis_Balodis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Krisjrnis_Berkis_cos_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Krisjrnis_Berkis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Arturs_M_Silgailis_cos_npo"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Arturs_M_Silgailis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Konstantins_Cakste_cos_npo"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Konstantins_Cakste.png"
-	}
-
-	### Chief of Army
-	spriteType = {
-		name = "GFX_idea_LAT_Arturs_Sprogis_carm_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Arturs_Sprogis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Roberts_Osis_carm_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Roberts_Osis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Janis_Berzins_carm_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Janis_Berzins.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Roberts_Dambitis_carm_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Roberts_Dambitis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Rudolfs_Kocins_carm_ade"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Rudolfs_Kocins.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Fricis_Celmins_carm_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Fricis_Celmins.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Rudolfs_Bangerskis_carm_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Rudolfs_Bangerskis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Otto_Hellmich_carm_npo"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Otto_Hellmich.png"
-	}
-
-	### Chief of Navy
-	spriteType = {
-		name = "GFX_idea_LAT_Teodors_Zvejnieks_cnav_tot"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Teodors_Zvejnieks.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Augusts_Kirchensteins_cnav_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Augusts_Kirchensteins.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Julijcs_Lacis_cnav_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Julijcs_Lacis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Janis_Andersons_cnav_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Janis_Andersons.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Tomas_Spade_cnav_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Tomas_Spade.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Konstantins_Cakste_cnav_npo"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Konstantins_Cakste.png"
-	}
-
-	### Chief of Air Force
-	spriteType = {
-		name = "GFX_idea_LAT_Izglitibas_Tautas_cair_syn"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Izglitibas_Tautas.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Edgars_Andersons_cair_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Edgars_Andersons.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Jucums_Vacietis_cair_sco"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Jucums_Vacietis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Rudolfs_Bangerskis_cair_ade"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Rudolfs_Bangerskis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Janis_Indans_cair_pau"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Janis_Indans.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LAT_Konstantins_Cakste_cair_npo"
-		texturefile = "gfx/interface/ministers/LAT/LAT_Konstantins_Cakste.png"
-	}
-
-    ################################################################################################################################################################################################
+  ###############################################################################################################################################################################################
   ### LBA
   ################################################################################################################################################################################################
 
