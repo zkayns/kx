@@ -279,8 +279,8 @@ country_event = { ####constituent assembly####
 				value = 0
 			}
 			random_list = {
-				70 = { set_country_flag = lat_democratic }
-				30 = { }
+				30 = { set_country_flag = lat_democratic }
+				70 = { }
 			}
 			country_event = { id = KRLAT.11 days = 3 }
 		}
