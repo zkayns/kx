@@ -806,6 +806,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			FROM = { tag = DAG }
+		}
+		localization_key = RUS_Attack_Caucasus_MNT 
+	}
+	text = {
+		trigger = {
 			FROM = { tag = CRM }
 		}
 		localization_key = RUS_Attack_Caucasus_CRM 
@@ -1383,6 +1389,12 @@ defined_text = {
 			RUS = { has_idea = RUS_Vladimir_M_Zenzinov_hog_sde }
 		}
 		localization_key = "GFX_Zenzinov_portrait"
+	}
+	text = {
+		trigger = {
+			RUS = { has_idea = RUS_Anton_I_Denikin_hog_ade }
+		}
+		localization_key = "GFX_Denikin_portrait"
 	}
 	text = {
 		trigger = {

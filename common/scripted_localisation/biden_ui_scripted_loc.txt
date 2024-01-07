@@ -439,6 +439,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			tag = LOM
+		}
+		localization_key = DUK_OR_PM
+	}
+	text = {
+		trigger = {
 			tag = SRI
 		}
 		localization_key = KN_OR_LEADER
@@ -764,6 +770,20 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = GEO
+		}
+		localization_key = PM_OR_LEADER
+	}
+	
+	text = {
+		trigger = {
+			tag = HAW
+		}
+		localization_key = MON_OR_PM
+	}
+	
+	text = {
+		trigger = {
 			tag = FIN
 		}
 		localization_key = PM_OR_LEADER
@@ -970,6 +990,7 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = AFG
+			NOT = { has_country_flag = GANDHI_VISIBLE }
 		}
 		localization_key = EMR_OR_PM
 	}
@@ -1057,6 +1078,13 @@ defined_text = {
 			has_country_flag = EDNA_BALLARD_VISIBLE
 		}
 		localization_key = AM_OR_AM
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GANDHI_VISIBLE
+		}
+		localization_key = BK_OR_MH
 	}
 
 }
@@ -1158,6 +1186,12 @@ defined_text = {
 			tag = PAP
 		}
 		localization_key = POP_OR_LEADER2
+	}
+	text = {
+		trigger = {
+			tag = LOM
+		}
+		localization_key = GG_OR_LEADER2
 	}
 	text = {
 		trigger = {
@@ -1585,6 +1619,20 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = GEO
+		}
+		localization_key = PM_OR_LEADER2
+	}
+	
+	text = {
+		trigger = {
+			tag = HAW
+		}
+		localization_key = MON_OR_PM2
+	}
+	
+	text = {
+		trigger = {
 			tag = FIN
 		}
 		localization_key = PM_OR_LEADER2
@@ -1684,6 +1732,7 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = AFG
+			NOT = { has_country_flag = GANDHI_VISIBLE }
 		}
 		localization_key = EMR_OR_PM2
 	}
@@ -1771,6 +1820,13 @@ defined_text = {
 			has_country_flag = EDNA_BALLARD_VISIBLE
 		}
 		localization_key = AM_OR_AM2
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GANDHI_VISIBLE
+		}
+		localization_key = BK_OR_MH2
 	}
 }
 
@@ -6017,6 +6073,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_idea = RUS_Anton_I_Denikin_hog_ade
+		}
+		localization_key = RUS_Anton_I_Denikin_hog_ade
+	}
+	text = {
+		trigger = {
 			has_idea = RUS_Viktor_M_Baydalakov_hog_npo
 		}
 		localization_key = RUS_Viktor_M_Baydalakov_hog_npo
@@ -7208,6 +7270,43 @@ defined_text = {
 		localization_key = PAP_Reginaldo_Giuliani_hog_npo
 	}
 	
+	### Lombardy ###
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Giuseppe_Saragat_hog_sde
+		}
+		localization_key = LOM_Giuseppe_Saragat_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Carlo_Sforza_hog_sli
+		}
+		localization_key = LOM_Carlo_Sforza_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Nicolo_Carandini_hog_mli
+		}
+		localization_key = LOM_Nicolo_Carandini_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Achille_Grandi_hog_sco
+		}
+		localization_key = LOM_Achille_Grandi_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Fulvio_Balisti_hog_npo
+		}
+		localization_key = LOM_Fulvio_Balisti_hog_npo
+	}
+	
 	### Princely Fed People ###
 	
 	text = { 
@@ -7593,6 +7692,87 @@ defined_text = {
 		localization_key = NEP_Mohan_Shumsher_Rana_hog_pau
 	}
 	
+	### Georgia ###
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Evgeni_Gegechkori_hog_sde
+		}
+		localization_key = GEO_Evgeni_Gegechkori_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Iosif_Baratov_hog_sli
+		}
+		localization_key = GEO_Iosif_Baratov_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Grigory_Veshapeli_hog_mli
+		}
+		localization_key = GEO_Grigory_Veshapeli_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Ekvtime_Takaishvili_hog_sco
+		}
+		localization_key = GEO_Ekvtime_Takaishvili_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Shalva_Maglakelidze_hog_ade
+		}
+		localization_key = GEO_Shalva_Maglakelidze_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Mikheil_Tsereteli_hog_npo
+		}
+		localization_key = GEO_Mikheil_Tsereteli_hog_npo
+	}
+	
+	### Hawaii ###
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_John_Henry_Wilson_hog_sde
+		}
+		localization_key = HAW_John_Henry_Wilson_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_Samuel_Wilder_King_hog_sli
+		}
+		localization_key = HAW_Samuel_Wilder_King_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_Lawrence_McCully_Judd_hog_mli
+		}
+		localization_key = HAW_Lawrence_McCully_Judd_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_Henry_Alexander_Baldwin_hog_sco
+		}
+		localization_key = HAW_Henry_Alexander_Baldwin_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_James_Dole_hog_sco
+		}
+		localization_key = HAW_James_Dole_hog_sco
+	}
+	
 	###Others###
 	
 	text = {
@@ -7741,6 +7921,13 @@ defined_text = {
 			has_country_flag = EDNA_BALLARD_VISIBLE
 		}
 		localization_key = "Edna Anne Ballard"
+	}
+
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_country_flag = GANDHI_VISIBLE
+		}
+		localization_key = "Mohandas Karamchand Gandhi"
 	}
 
 	#so on and so forth
@@ -11935,6 +12122,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_idea = RUS_Anton_I_Denikin_hog_ade
+		}
+		localization_key = GFX_Denikin_portrait
+	}
+	text = {
+		trigger = {
 			has_idea = RUS_Viktor_M_Baydalakov_hog_npo
 		}
 		localization_key = GFX_Viktor_Baydalakov_portrait
@@ -13119,6 +13312,43 @@ defined_text = {
 		localization_key = GFX_Portrait_Papal_State_Reginaldo_Giuliani
 	}
 	
+	### Lombardy ###
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Giuseppe_Saragat_hog_sde
+		}
+		localization_key = GFX_Portrait_LOM_Giuseppe_Saragat
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Carlo_Sforza_hog_sli
+		}
+		localization_key = GFX_Portrait_LOM_Carlo_Sforza
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Nicolo_Carandini_hog_mli
+		}
+		localization_key = GFX_Portrait_LOM_Nicolo_Carandini
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Achille_Grandi_hog_sco
+		}
+		localization_key = GFX_Portrait_LOM_Achille_Grandi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = LOM_Fulvio_Balisti_hog_npo
+		}
+		localization_key = GFX_Portrait_LOM_Fulvio_Balisti
+	}
+	
 	### Princely Fed People ###
 	
 	text = { 
@@ -13504,6 +13734,87 @@ defined_text = {
 		localization_key = GFX_Portrait_NEP_Mohan_Shumsher_Rana
 	}
 	
+	### Georgia ###
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Evgeni_Gegechkori_hog_sde
+		}
+		localization_key = GFX_Portrait_GEO_Evgeni_Gegechkori
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Iosif_Baratov_hog_sli
+		}
+		localization_key = GFX_Portrait_GEO_Iosif_Baratov
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Grigory_Veshapeli_hog_mli
+		}
+		localization_key = GFX_Portrait_GEO_Grigory_Veshapeli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Ekvtime_Takaishvili_hog_sco
+		}
+		localization_key = GFX_Portrait_GEO_Ekvtime_Takaishvili
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Shalva_Maglakelidze_hog_ade
+		}
+		localization_key = GFX_Portrait_GEO_Shalva_Maglakelidze
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = GEO_Mikheil_Tsereteli_hog_npo
+		}
+		localization_key = GFX_Portrait_GEO_Mikheil_Tsereteli
+	}
+	
+	### Hawaii ###
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_John_Henry_Wilson_hog_sde
+		}
+		localization_key = GFX_Portrait_HAW_John_Henry_Wilson
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_Samuel_Wilder_King_hog_sli
+		}
+		localization_key = GFX_Portrait_HAW_samuel_king
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_Lawrence_McCully_Judd_hog_mli
+		}
+		localization_key = GFX_Portrait_HAW_lawrence_judd
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_Henry_Alexander_Baldwin_hog_sco
+		}
+		localization_key = GFX_Portrait_HAW_Alexander_Baldwin
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = HAW_James_Dole_hog_sco
+		}
+		localization_key = GFX_Portrait_HAW_james_dole
+	}
+	
 	###Others###
 	
 	text = {
@@ -13771,6 +14082,13 @@ defined_text = {
 			has_country_flag = EDNA_BALLARD_VISIBLE
 		}
 		localization_key = GFX_Portrait_TEX_Edna_Ballard
+	}
+
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_country_flag = GANDHI_VISIBLE
+		}
+		localization_key = GFX_Portrait_BHC_Mohandas_Karamchand_Gandhi
 	}
 	
 	#so on and so forth

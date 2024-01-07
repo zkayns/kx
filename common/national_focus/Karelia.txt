@@ -1281,6 +1281,8 @@ focus_tree = {
 						state = 399
 						state = 1193
 						state = 247
+						state = 1328
+						state = 195
 					}
 				}
 				add_claim_by = ROOT
@@ -2100,7 +2102,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KAR_Karelian_Cooperation_Movement
-		icon = GFX_focus_FIN_socialist_wellfare
+		icon = GFX_focus_FIN_socialist_welfare
 		cost = 5
 		relative_position_id = KAR_Karelian_Labour_Commune
 		x = 1

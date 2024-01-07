@@ -871,7 +871,7 @@ SAF_S7_B7_desc:0 "Though the British revolution removed much of the old imperial
 SAF_S8_B8:0 "Comradeship"
 SAF_S8_B8_desc:0 "What is lacking in the South African army is the sense of unity. The spectre of the apartheid still lingers within the rank and files, with men of different colour still not seeing eye to eye. Though this spectre will take years if not decades to remove, efforts have been made to promote Syndicalist ideals and that of "Comradeship"."
 SAF_S9_B9:0 "Dismember the Militia"
-SAF_S9_B9_desc:0 "With Red Guard units becoming the norm within the army, the need of an undiscipline rabble is no longer required. Though this may cause "issues" amongst those who have created themselves a power base within these units. These indivduals must bend the knee to Root.GetLeader] and reform or be removed by force..."
+SAF_S9_B9_desc:0 "With Red Guard units becoming the norm within the army, the need of an undiscipline rabble is no longer required. Though this may cause "issues" amongst those who have created themselves a power base within these units. These indivduals must bend the knee to [Root.GetLeader] and reform or be removed by force..."
 SAF_S10_B10:0 "South African Syndicalist Identity"
 SAF_S10_B10_desc:0 "Through much hardship, the South African Army has reformed itself from a model of European Imperialism to that promoting Syndicalist ideals. South Africa once eagerly promoted these notions, now has become the red vanguard of Africa. BREAK THE CHAINS!!"
 SAF_S1_F1:0 "Expand Belmont Barracks"
@@ -2434,7 +2434,7 @@ saf.221.a:0 "Still an odd decision"
 
 
 saf.2211.t:0 "Fact Finding Mission"
-saf.2211.d:0 "Oswalds plans to fly to Germany for a fact finding mission has turn into a national joke. With the Kaiserreich now fallen, the [SAF.GetPartyName] have now had to look at those 'loser' of the first Weltkrieg, being the Canadians (who are sympathetic to our cause of course), for assistance in modernising the South African armed forces. Many have criticised the South African governemnt for taken too long to invest into the military, and that once the war broke out that this shouldn't been looked at."
+saf.2211.d:0 "Oswalds plans to fly to Germany for a fact finding mission has turn into a national joke. With the Kaiserreich now fallen, the [SAF.GetPartyName] have now had to look at those 'loser' of the Weltkrieg, being the Canadians (who are sympathetic to our cause of course), for assistance in modernising the South African armed forces. Many have criticised the South African governemnt for taken too long to invest into the military, and that once the war broke out that this shouldn't been looked at."
 saf.2211.a:0 "How were we meant to know!"
 
 saf.222:0 "Funding Local Automotive Industries"

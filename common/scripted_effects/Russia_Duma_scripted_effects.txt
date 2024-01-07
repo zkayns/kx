@@ -395,100 +395,64 @@ RUS_setup_duma_arrays = {
 }
 
 	
-RUS_calculate_government_variables = {
-	set_temp_variable = { RUS_seats_var = 550 }
-	set_temp_variable = { RUS_seats_pp_var = 550 }
-	subtract_from_temp_variable = { RUS_seats_var = mp_support }
-	subtract_from_temp_variable = { RUS_seats_pp_var = mp_support }
-	if = {
-		limit = {
-			check_variable = { RUS_seats_var > 275 }
-		}
-		divide_temp_variable = { RUS_seats_var = -5500 }	
-	}
-	else = {
-		divide_temp_variable = { RUS_seats_var = 5500 }	
-	}
-	set_variable = { RUS_duma_maj_min_gov_stability_factor = RUS_seats_var }
-	if = {
-		limit = {
-			check_variable = { RUS_seats_pp_var > 275 }
-		}
-		divide_temp_variable = { RUS_seats_pp_var = -2750 }	
-	}
-	else = {
-		divide_temp_variable = { RUS_seats_pp_var = 2750 }	
-	}
-	set_variable = { RUS_duma_maj_min_gov_political_power_gain = RUS_seats_pp_var }
+RUS_calculate_government_variables = {	
 }
 RUS_add_to_coalition = {
 	if = {
 		limit = { has_country_flag = syndicalist_coalition }
-		set_variable = { coalition_partner_var = token:syndicalist } 
-		add_to_coalition = yes
+		add_synd_to_coalition = yes
 		set_variable = { Duma_Party_Status^1 = 1 } # PLSR  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = radical_socialist_coalition }
-		set_variable = { coalition_partner_var = token:radical_socialist } 
-		add_to_coalition = yes
+		add_radsoc_to_coalition = yes
 		set_variable = { Duma_Party_Status^2 = 1 } # NSP  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = psr_coalition }
-		set_variable = { coalition_partner_var = token:social_democrat } 
-		add_to_coalition = yes
+		add_socdem_to_coalition = yes
 		set_variable = { Duma_Party_Status^3 = 1 } # PSR  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = rsdrp_coalition }
-		set_variable = { coalition_partner_var = token:social_democrat } 
-		add_to_coalition = yes
+		add_socdem_to_coalition = yes
 		set_variable = { Duma_Party_Status^4 = 1 } # RSDRP  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = social_liberal_coalition }
-		set_variable = { coalition_partner_var = token:social_liberal } 
-		add_to_coalition = yes
+		add_soclib_to_coalition = yes
 		set_variable = { Duma_Party_Status^5 = 1 } # LKDP  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = progressive_coalition }
-		set_variable = { coalition_partner_var = token:market_liberal } 
-		add_to_coalition = yes
+		add_marlib_to_coalition = yes
 		set_variable = { Duma_Party_Status^6 = 1 } # PP  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = market_liberal_coalition }
-		set_variable = { coalition_partner_var = token:market_liberal } 
-		add_to_coalition = yes
+		add_marlib_to_coalition = yes
 		set_variable = { Duma_Party_Status^7 = 1 } # RKDP  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = social_conservative_coalition }
-		set_variable = { coalition_partner_var = token:social_conservative } 
-		add_to_coalition = yes
-		set_variable = { coalition_partner_var = token:authoritarian_democrat } 
-		add_to_coalition = yes		
+		add_soccon_to_coalition = yes
+		add_authdem_to_coalition = yes		
 		set_variable = { Duma_Party_Status^8 = 1 } # VNS  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = authoritarian_democrat_coalition }
-		set_variable = { coalition_partner_var = token:authoritarian_democrat } 
-		add_to_coalition = yes
+		add_authdem_to_coalition = yes
 		set_variable = { Duma_Party_Status^9 = 1 } # EP  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = national_populist_coalition }
-		set_variable = { coalition_partner_var = token:national_populist } 
-		add_to_coalition = yes
+		add_natpop_to_coalition = yes
 		set_variable = { Duma_Party_Status^12 = 1 } # NRPR  (Governing)		
 	}
 	if = {
 		limit = { has_country_flag = solidarist_coalition }
-		set_variable = { coalition_partner_var = token:national_populist } 
+		add_natpop_to_coalition = yes
 		set_variable = { Duma_Party_Status^11 = 1 } # NSNP  (Governing)		
-		add_to_coalition = yes
 	}	
 }
 RUS_remove_from_coalition = {
@@ -496,16 +460,14 @@ RUS_remove_from_coalition = {
 		limit = { has_country_flag = syndicalist_coalition_to_remove }
 		clr_country_flag = syndicalist_coalition
 		clr_country_flag = syndicalist_coalition_to_remove
-		set_variable = { coalition_partner_var = token:syndicalist } 
-		remove_from_coalition = yes
+		remove_synd_from_coalition = yes
 		set_variable = { Duma_Party_Status^1 = 3 } # PLSR  (Opposition)		
 	}
 	if = {
 		limit = { has_country_flag = radical_socialist_coalition_to_remove }
 		clr_country_flag = radical_socialist_coalition
 		clr_country_flag = radical_socialist_coalition_to_remove
-		set_variable = { coalition_partner_var = token:radical_socialist } 
-		remove_from_coalition = yes
+		remove_radsoc_from_coalition = yes
 		set_variable = { Duma_Party_Status^2 = 3 }
 	}
 	if = {
@@ -513,68 +475,60 @@ RUS_remove_from_coalition = {
 		clr_country_flag = psr_coalition
 		clr_country_flag = psr_coalition_to_remove
 		set_variable = { Duma_Party_Status^3 = 3 }
-		set_variable = { coalition_partner_var = token:social_democrat } 	
-		remove_from_coalition = yes
+		remove_socdem_from_coalition = yes
 	}
 	if = {
 		limit = { has_country_flag = rsdrp_coalition_to_remove }
 		set_variable = { coalition_partner_var = token:social_democrat } 
 		remove_from_coalition = yes
 		set_variable = { Duma_Party_Status^4 = 3 }
-		clr_country_flag = rsdrp_coalition
-		clr_country_flag = rsdrp_coalition_to_remove		
+		remove_socdem_from_coalition = yes
 	}
 	if = {
 		limit = { has_country_flag = social_liberal_coalition_to_remove }
 		clr_country_flag = social_liberal_coalition
 		clr_country_flag = social_liberal_coalition_to_remove
 		set_variable = { Duma_Party_Status^5 = 3 }
-		set_variable = { coalition_partner_var = token:social_liberal } 
-		remove_from_coalition = yes
+		remove_soclib_from_coalition = yes
 	}	
 	if = {
 		limit = { has_country_flag = progressive_coalition_to_remove }
 		clr_country_flag = progressive_coalition
 		clr_country_flag = progressive_coalition_to_remove
-		set_variable = { coalition_partner_var = token:market_liberal } 
 		set_variable = { Duma_Party_Status^6 = 3 } #
-		remove_from_coalition = yes
+		remove_marlib_from_coalition = yes
 	}
 	if = {
 		limit = { has_country_flag = market_liberal_coalition_to_remove }
 		clr_country_flag = market_liberal_coalition
 		clr_country_flag = market_liberal_coalition_to_remove
 		set_variable = { Duma_Party_Status^7 = 3 }
-		set_variable = { coalition_partner_var = token:market_liberal } 
-		remove_from_coalition = yes
+		remove_marlib_from_coalition = yes
 	}
 	if = {
 		limit = { has_country_flag = social_conservative_coalition_to_remove }
 		clr_country_flag = social_conservative_coalition
 		clr_country_flag = social_conservative_coalition_to_remove
-		set_variable = { coalition_partner_var = token:social_conservative } 
 		set_variable = { Duma_Party_Status^8 = 3 }
-		remove_from_coalition = yes
+		remove_soccon_from_coalition = yes
+		remove_authdem_from_coalition = yes
 	}
 	if = {
 		limit = { has_country_flag = authoritarian_democrat_coalition_to_remove }
 		clr_country_flag = authoritarian_democrat_coalition
 		clr_country_flag = authoritarian_democrat_coalition_to_remove
-		set_variable = { coalition_partner_var = token:authoritarian_democrat } 
 		set_variable = { Duma_Party_Status^9 = 3 }
-		remove_from_coalition = yes
+		remove_authdem_from_coalition = yes
 	}
 	if = {
 		limit = { has_country_flag = national_populist_coalition_to_remove }
-		set_variable = { coalition_partner_var = token:national_populist } 
-		remove_from_coalition = yes
 		set_variable = { Duma_Party_Status^12 = 3 }
+		remove_natpop_from_coalition = yes
 	}
 	if = {
 		limit = { has_country_flag = solidarist_coalition_to_remove }
-		set_variable = { coalition_partner_var = token:national_populist } 
-		remove_from_coalition = yes
 		set_variable = { Duma_Party_Status^11 = 3 }
+		remove_natpop_from_coalition = yes
 	}	
 }
 RUS_plsr_support_gov = {
@@ -884,11 +838,12 @@ RUS_clear_all_coalitions = {
 
 		if = {
 			limit = { check_variable = { status = 1 } } # Coalition
-			set_variable = { Duma_Party_Status^i = 4 }
+			set_variable = { Duma_Party_Status^i = 3 }
 		}
 	}
-	mp_support_calc = yes
 	end_coalition = yes
+	mp_support_calc = yes
+	senators_support_calc = yes
 }
 RUS_setup_initial_rus_duma_senate = {
 	set_variable = { RUS_political_campaigns_days = 15 }
@@ -928,7 +883,6 @@ RUS_setup_initial_rus_duma_senate = {
 	calculate_two_thirds_duma = yes
 	RUS_calculate_government_variables = yes
 	RUS_setup_duma_arrays = yes
-	add_dynamic_modifier = { modifier = RUS_duma_maj_min_gov }
 }
 calculate_half_senate = {
 	set_variable = { half_senate_plus_one = senate_total }
@@ -2098,6 +2052,12 @@ RUS_calculate_polling_averages = {
 		}
 		set_variable = { RUS_nsnp_poll_votes = 0 }
 	}
+	if = {
+		limit = {
+			RUS = { has_country_flag = nrpr_banned }
+		}
+		set_variable = { RUS_nrpr_poll_votes = 0 }
+	}
 	
 	RUS_count_total_poll_votes = yes
 	
@@ -2317,6 +2277,24 @@ RUS_set_state_senate_votes_to_final_pop = {
 	set_variable = { RUS_autonomists_state_senate_votes = RUS_state_autonomists_final_pop }
 	set_variable = { RUS_federalists_state_senate_votes = RUS_state_federalists_final_pop }
 	set_variable = { RUS_monarchists_state_senate_votes = RUS_state_monarchists_final_pop }	
+	
+	set_variable = { RUS_plsr_state_senate_regional_votes = RUS_state_plsr_final_pop }
+	set_variable = { RUS_nsp_state_senate_regional_votes = RUS_state_nsp_final_pop }
+	set_variable = { RUS_psr_state_senate_regional_votes = RUS_state_psr_final_pop }
+	set_variable = { RUS_rsdrp_state_senate_regional_votes = RUS_state_rsdrp_final_pop }
+	set_variable = { RUS_lkdp_state_senate_regional_votes = RUS_state_lkdp_final_pop }
+	set_variable = { RUS_pp_state_senate_regional_votes = RUS_state_pp_final_pop }
+	set_variable = { RUS_rkdp_state_senate_regional_votes = RUS_state_rkdp_final_pop }
+	set_variable = { RUS_vns_state_senate_regional_votes = RUS_state_vns_final_pop }
+	set_variable = { RUS_ep_state_senate_regional_votes = RUS_state_ep_final_pop }
+	set_variable = { RUS_rovs_state_senate_regional_votes = RUS_state_rovs_final_pop }
+	set_variable = { RUS_nrpr_state_senate_regional_votes = RUS_state_nrpr_final_pop }
+	set_variable = { RUS_nsnp_state_senate_regional_votes = RUS_state_nsnp_final_pop }
+	set_variable = { RUS_independent_state_senate_regional_votes = RUS_state_independent_final_pop }
+	
+	set_variable = { RUS_autonomists_state_senate_regional_votes = RUS_state_autonomists_final_pop }
+	set_variable = { RUS_federalists_state_senate_regional_votes = RUS_state_federalists_final_pop }
+	set_variable = { RUS_monarchists_state_senate_regional_votes = RUS_state_monarchists_final_pop }	
 }
 RUS_multiply_state_senate_votes_to_vote_count = {
 	multiply_variable = { RUS_plsr_state_senate_votes = RUS_vote_count_state }
@@ -2354,6 +2332,42 @@ RUS_multiply_state_senate_votes_to_vote_count = {
 	multiply_variable = { RUS_autonomists_state_senate_votes = 5 } # always get more because because
 	multiply_variable = { RUS_federalists_state_senate_votes = 5 } # always  get more because because 
 	multiply_variable = { RUS_monarchists_state_senate_votes = RUS_conservative_senate_state_turnout }
+	
+	multiply_variable = { RUS_plsr_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_nsp_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_psr_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_rsdrp_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_lkdp_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_pp_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_rkdp_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_vns_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_ep_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_rovs_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_nrpr_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_nsnp_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_independent_state_senate_regional_votes = RUS_vote_count_state }
+	
+	multiply_variable = { RUS_autonomists_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_federalists_state_senate_regional_votes = RUS_vote_count_state }
+	multiply_variable = { RUS_monarchists_state_senate_regional_votes = RUS_vote_count_state }
+	
+	multiply_variable = { RUS_plsr_state_senate_regional_votes = RUS_nonconservative_senate_state_turnout }
+	multiply_variable = { RUS_nsp_state_senate_regional_votes = RUS_nonconservative_senate_state_turnout }
+	multiply_variable = { RUS_psr_state_senate_regional_votes = RUS_nonconservative_senate_state_turnout }
+	multiply_variable = { RUS_rsdrp_state_senate_regional_votes = RUS_nonconservative_senate_state_turnout }
+	multiply_variable = { RUS_lkdp_state_senate_regional_votes = RUS_nonconservative_senate_state_turnout }
+	multiply_variable = { RUS_pp_state_senate_regional_votes = RUS_conservative_senate_state_turnout }
+	multiply_variable = { RUS_rkdp_state_senate_regional_votes = RUS_conservative_senate_state_turnout }
+	multiply_variable = { RUS_vns_state_senate_regional_votes = RUS_conservative_senate_state_turnout }
+	multiply_variable = { RUS_ep_state_senate_regional_votes = RUS_conservative_senate_state_turnout }
+	multiply_variable = { RUS_rovs_state_senate_regional_votes = RUS_conservative_senate_state_turnout }
+	multiply_variable = { RUS_nrpr_state_senate_regional_votes = RUS_nonconservative_senate_state_turnout }
+	multiply_variable = { RUS_nsnp_state_senate_regional_votes = RUS_nonconservative_senate_state_turnout }
+	multiply_variable = { RUS_independent_state_senate_regional_votes = RUS_nonconservative_senate_state_turnout }
+	
+	multiply_variable = { RUS_autonomists_state_senate_regional_votes = 5 } # always get more because because
+	multiply_variable = { RUS_federalists_state_senate_regional_votes = 5 } # always  get more because because 
+	multiply_variable = { RUS_monarchists_state_senate_regional_votes = RUS_conservative_senate_state_turnout }
 	
 }
 RUS_round_state_senate_votes = {
@@ -2442,6 +2456,93 @@ RUS_round_state_senate_votes = {
 	if = {
 		limit = { check_variable = { RUS_monarchists_state_senate_votes < 0 } }
 		set_variable = { RUS_monarchists_state_senate_votes = 0 }
+	}	
+	
+	round_variable = RUS_plsr_state_senate_regional_votes
+	round_variable = RUS_nsp_state_senate_regional_votes
+	round_variable = RUS_psr_state_senate_regional_votes
+	round_variable = RUS_rsdrp_state_senate_regional_votes
+	round_variable = RUS_lkdp_state_senate_regional_votes
+	round_variable = RUS_pp_state_senate_regional_votes
+	round_variable = RUS_rkdp_state_senate_regional_votes
+	round_variable = RUS_vns_state_senate_regional_votes
+	round_variable = RUS_ep_state_senate_regional_votes
+	round_variable = RUS_rovs_state_senate_regional_votes
+	round_variable = RUS_nrpr_state_senate_regional_votes
+	round_variable = RUS_nsnp_state_senate_regional_votes
+	round_variable = RUS_independent_state_senate_regional_votes
+
+	round_variable = RUS_autonomists_state_senate_regional_votes
+	round_variable = RUS_federalists_state_senate_regional_votes
+	round_variable = RUS_monarchists_state_senate_regional_votes
+	
+	if = {
+		limit = { check_variable = { RUS_plsr_state_senate_regional_votes < 0 }	}
+		set_variable = { RUS_plsr_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_nsp_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_nsp_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_psr_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_psr_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_rsdrp_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_rsdrp_state_senate_regional_votes = 0 }
+	}			
+	if = {
+		limit = { check_variable = { RUS_lkdp_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_lkdp_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_pp_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_pp_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_rkdp_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_rkdp_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_vns_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_vns_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_ep_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_ep_state_senate_regional_votes = 0 }
+	}			
+	if = {
+		limit = { check_variable = { RUS_rovs_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_rovs_state_senate_regional_votes = 0 }
+	}			
+	if = {
+		limit = { check_variable = { RUS_nrpr_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_nrpr_state_senate_regional_votes = 0 }
+	}	
+	if = {
+		limit = { check_variable = { RUS_nsnp_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_nsnp_state_senate_regional_votes = 0 }
+	}	
+	if = {
+		limit = { check_variable = { RUS_independent_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_independent_state_senate_regional_votes = 0 }
+	}	
+	if = {
+		limit = { check_variable = { RUS_oblastniki_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_oblastniki_state_senate_regional_votes = 0 }
+	}			
+	if = {
+		limit = { check_variable = { RUS_autonomists_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_autonomists_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_federalists_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_federalists_state_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = { check_variable = { RUS_monarchists_state_senate_regional_votes < 0 } }
+		set_variable = { RUS_monarchists_state_senate_regional_votes = 0 }
 	}	
 }
 RUS_get_regional_senators = {
@@ -2753,9 +2854,8 @@ RUS_get_regional_senators = {
 		value = temp_most_general_seats
 		index = i
 		
-		
 	}
-	log = "[THIS.GetName]: Senate R winner: [?index]"
+	log = "[THIS.GetName]: Senate R winner: [?i]"
 }
 RUS_round_senate_votes = {
 	round_variable = RUS_plsr_senate_votes
@@ -2773,7 +2873,24 @@ RUS_round_senate_votes = {
 	round_variable = RUS_independent_senate_votes
 	round_variable = RUS_autonomists_senate_votes
 	round_variable = RUS_federalists_senate_votes 
-	round_variable = RUS_monarchists_senate_votes 	
+	round_variable = RUS_monarchists_senate_votes
+
+	round_variable = RUS_plsr_senate_regional_votes
+	round_variable = RUS_nsp_senate_regional_votes
+	round_variable = RUS_psr_senate_regional_votes
+	round_variable = RUS_rsdrp_senate_regional_votes
+	round_variable = RUS_lkdp_senate_regional_votes
+	round_variable = RUS_pp_senate_regional_votes
+	round_variable = RUS_rkdp_senate_regional_votes
+	round_variable = RUS_vns_senate_regional_votes
+	round_variable = RUS_ep_senate_regional_votes
+	round_variable = RUS_rovs_senate_regional_votes
+	round_variable = RUS_nrpr_senate_regional_votes
+	round_variable = RUS_nsnp_senate_regional_votes
+	round_variable = RUS_independent_senate_regional_votes
+	round_variable = RUS_autonomists_senate_regional_votes
+	round_variable = RUS_federalists_senate_regional_votes 
+	round_variable = RUS_monarchists_senate_regional_votes 	
 }	
 RUS_count_total_state_senate_votes = {
 	set_variable = { RUS_total_state_senate_votes = RUS_plsr_state_senate_votes }
@@ -2808,7 +2925,41 @@ RUS_count_total_state_senate_votes = {
 	add_to_variable = { PREV.RUS_independent_senate_votes = RUS_independent_state_senate_votes }
 	add_to_variable = { PREV.RUS_autonomists_senate_votes = RUS_autonomists_state_senate_votes }
 	add_to_variable = { PREV.RUS_federalists_senate_votes = RUS_federalists_state_senate_votes }
-	add_to_variable = { PREV.RUS_monarchists_senate_votes = RUS_monarchists_state_senate_votes }		
+	add_to_variable = { PREV.RUS_monarchists_senate_votes = RUS_monarchists_state_senate_votes }	
+	
+	set_variable = { RUS_total_state_senate_regional_votes = RUS_plsr_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_nsp_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_psr_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_rsdrp_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_lkdp_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_pp_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_rkdp_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_vns_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_ep_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_rovs_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_nrpr_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_nsnp_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_independent_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_autonomists_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_federalists_state_senate_regional_votes }
+	add_to_variable = { RUS_total_state_senate_regional_votes = RUS_monarchists_state_senate_regional_votes }
+	
+	add_to_variable = { PREV.RUS_plsr_senate_regional_votes = RUS_plsr_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_nsp_senate_regional_votes = RUS_nsp_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_psr_senate_regional_votes = RUS_psr_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_rsdrp_senate_regional_votes = RUS_rsdrp_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_lkdp_senate_regional_votes = RUS_lkdp_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_pp_senate_regional_votes = RUS_pp_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_rkdp_senate_regional_votes = RUS_rkdp_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_vns_senate_regional_votes = RUS_vns_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_ep_senate_regional_votes = RUS_ep_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_rovs_senate_regional_votes = RUS_rovs_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_nrpr_senate_regional_votes = RUS_nrpr_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_nsnp_senate_regional_votes = RUS_nsnp_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_independent_senate_regional_votes = RUS_independent_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_autonomists_senate_regional_votes = RUS_autonomists_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_federalists_senate_regional_votes = RUS_federalists_state_senate_regional_votes }
+	add_to_variable = { PREV.RUS_monarchists_senate_regional_votes = RUS_monarchists_state_senate_regional_votes }		
 }
 RUS_set_state_presidential_votes_to_final_pop = {
 	set_variable = { RUS_plsr_state_presidential_votes = RUS_state_plsr_final_pop }
@@ -4519,7 +4670,6 @@ RUS_run_election = {
 			check_variable = { Duma_Party_Seats^8 > Duma_Party_Seats^9 }
 			check_variable = { Duma_Party_Seats^8 > Duma_Party_Seats^11 }
 			check_variable = { Duma_Party_Seats^8 > Duma_Party_Seats^12 }
-			NOT = { has_country_flag = RUS_kdp_vns_coalition }
 		}
 		set_country_flag = RUS_ELECTION_vns_victory
 	}
@@ -4682,39 +4832,7 @@ RUS_run_senate_election = {
 		RUS_round_state_senate_votes = yes
 		RUS_count_total_state_senate_votes = yes
 		
-		RUS_get_regional_senators = yes
-		set_variable = { RUS_total_state_senate_votes = RUS_plsr_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_nsp_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_psr_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_rsdrp_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_lkdp_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_pp_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_rkdp_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_vns_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_ep_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_nrpr_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_nsnp_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_independent_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_autonomists_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_federalists_state_senate_votes }
-		add_to_variable = { RUS_total_state_senate_votes = RUS_monarchists_state_senate_votes }
-
-		add_to_variable = { PREV.RUS_plsr_senate_votes = RUS_plsr_state_senate_votes }
-		add_to_variable = { PREV.RUS_nsp_senate_votes = RUS_nsp_state_senate_votes }
-		add_to_variable = { PREV.RUS_psr_senate_votes = RUS_psr_state_senate_votes }
-		add_to_variable = { PREV.RUS_rsdrp_senate_votes = RUS_rsdrp_state_senate_votes }
-		add_to_variable = { PREV.RUS_lkdp_senate_votes = RUS_lkdp_state_senate_votes }
-		add_to_variable = { PREV.RUS_pp_senate_votes = RUS_pp_state_senate_votes }
-		add_to_variable = { PREV.RUS_rkdp_senate_votes = RUS_rkdp_state_senate_votes }
-		add_to_variable = { PREV.RUS_vns_senate_votes = RUS_vns_state_senate_votes }
-		add_to_variable = { PREV.RUS_ep_senate_votes = RUS_ep_state_senate_votes }
-		add_to_variable = { PREV.RUS_nrpr_senate_votes = RUS_nrpr_state_senate_votes }
-		add_to_variable = { PREV.RUS_nsnp_senate_votes = RUS_nsnp_state_senate_votes }
-		add_to_variable = { PREV.RUS_independent_senate_votes = RUS_independent_state_senate_votes }
-		add_to_variable = { PREV.RUS_autonomists_senate_votes = RUS_autonomists_state_senate_votes }
-		add_to_variable = { PREV.RUS_federalists_senate_votes = RUS_federalists_state_senate_votes }
-		add_to_variable = { PREV.RUS_monarchists_senate_votes = RUS_monarchists_state_senate_votes }
-
+		#RUS_get_regional_senators = yes
 		
 		#Resetting temp popularity
 		set_variable = { RUS_state_rkp_temp_pop = 0 }
@@ -4785,13 +4903,6 @@ RUS_run_senate_election = {
 	}
 	if = {
 		limit = {
-			RUS = { has_country_flag = plsr_banned }
-		}
-		set_variable = { RUS_plsr_senate_votes = 0 }
-		set_variable = { RUS_plsr_senate_regional_votes = 0 }
-	}
-	if = {
-		limit = {
 			RUS = { has_country_flag = lkdp_banned }
 		}
 		set_variable = { RUS_lkdp_senate_votes = 0 }
@@ -4799,12 +4910,17 @@ RUS_run_senate_election = {
 	}
 	if = {
 		limit = {
+			RUS = { has_country_flag = pp_banned }
+		}
+		set_variable = { RUS_pp_senate_votes = 0 }
+		set_variable = { RUS_pp_senate_regional_votes = 0 }
+	}
+	if = {
+		limit = {
 			RUS = { has_country_flag = rkdp_banned }
 		}
 		set_variable = { RUS_rkdp_senate_votes = 0 }
 		set_variable = { RUS_rkdp_senate_regional_votes = 0 }
-		set_variable = { RUS_pp_senate_votes = 0 }
-		set_variable = { RUS_pp_senate_regional_votes = 0 }
 	}
 	if = {
 		limit = {
@@ -4829,7 +4945,7 @@ RUS_run_senate_election = {
 	}
 	RUS_count_total_senate_votes = yes
 	
-	set_temp_variable = { RUS_temp_parliament_barrier = RUS_total_votes }
+	set_temp_variable = { RUS_temp_parliament_barrier = RUS_total_senate_votes }
 	multiply_temp_variable = { RUS_temp_parliament_barrier = RUS_parliament_barrier }
 	
 	if = {
@@ -4837,6 +4953,9 @@ RUS_run_senate_election = {
 		set_variable = { RUS_kdp_senate_votes = RUS_lkdp_senate_votes }
 		add_to_variable = { RUS_kdp_senate_votes = RUS_pp_senate_votes }
 		add_to_variable = { RUS_kdp_senate_votes = RUS_rkdp_senate_votes }
+		set_variable = { RUS_kdp_senate_regional_votes = RUS_lkdp_senate_regional_votes }
+		add_to_variable = { RUS_kdp_senate_regional_votes = RUS_pp_senate_regional_votes }
+		add_to_variable = { RUS_kdp_senate_regional_votes = RUS_rkdp_senate_regional_votes }
 	}
 	# If below 5% fuck off (only for General Senate Elections, not regional!)
 	if = {
@@ -4882,7 +5001,7 @@ RUS_run_senate_election = {
 	}
 	if = {
 		limit = {
-			NOT = { has_country_flag = rus_election_1936 }
+			has_country_flag = kdp_united
 		}
 		if = {
 			limit = {
@@ -5250,7 +5369,7 @@ RUS_run_senate_election = {
 		index = i
 	
 	}
-	log = "[THIS.GetName]: Senate R Seats: [?index] - [?temp_most_general_seats]"
+		log = "[THIS.GetName]: Senate R Seats: [?i] - [?temp_most_general_seats]"
 	
 	round_variable = RUS_total_senate_regional_votes
 	
@@ -5540,7 +5659,7 @@ RUS_run_senate_election = {
 		index = i
 	
 	}
-	log = "[THIS.GetName]: Senate G Seats: [?index] - [?temp_most_general_seats]"
+		log = "[THIS.GetName]: Senate G Seats: [?i] - [?temp_most_general_seats]"
 	
 	round_variable = RUS_total_senate_votes
 	
@@ -14642,7 +14761,7 @@ setup_presidential_government_senate = {
 			limit = { has_country_flag = VNS_aristocratic }
 			set_politics = {
 				ruling_party = authoritarian_democrat
-				elections_allowed = no
+				elections_allowed = yes
 			}
 			hidden_effect = {
 				set_party_name = {
@@ -14655,7 +14774,7 @@ setup_presidential_government_senate = {
 		else = {
 			set_politics = {
 				ruling_party = social_conservative
-				elections_allowed = no
+				elections_allowed = yes
 			}
 		}
 		remove_all_ministers = yes
@@ -14678,17 +14797,19 @@ setup_presidential_government_senate = {
 		remove_all_ministers = yes
 		add_ideas = {
 			RUS_Nikolay_S_Trubetskoy_hog_sco
-			RUS_Pavel_Florenskiy_for_sco
+			RUS_Georgiy_V_Vernadskiy_for_sli
 			RUS_Konstantin_A_Chkheidze_eco_ade
 			RUS_Pyetr_N_Savitskiy_sec_ade
 		}
 		set_variable = { Duma_Party_Status^9 = 1 }	
-		mp_support_calc = yes
-		senators_support_calc = yes
 		add_political_power = 100
 		add_ideas = RUS_Eurasianism_Idea
-		set_cosmetic_tag = RUS_EUR
+		if = {
+			limit = { NOT = { has_cosmetic_tag = RUS_EUR_alt } }
+			set_cosmetic_tag = RUS_EUR
+		}
 		set_country_flag = disable_duma
+		set_country_flag = RUS_duma_dissolved
 		set_country_flag = RUS_DPROM
 		hidden_effect = {
 			load_base_russian_tree = yes
@@ -14716,7 +14837,7 @@ setup_presidential_government_senate = {
 		}
 		set_politics = {
 			ruling_party = market_liberal
-			elections_allowed = no
+			elections_allowed = yes
 		}
 		RUS_setup_progressive_government = yes
 	}
@@ -14732,7 +14853,7 @@ setup_presidential_government_senate = {
 		}
 		set_politics = {
 			ruling_party = market_liberal
-			elections_allowed = no
+			elections_allowed = yes
 		}
 		RUS_setup_rkdp_government = yes
 	}
@@ -14748,10 +14869,12 @@ setup_presidential_government_senate = {
 		}
 		set_politics = {
 			ruling_party = market_liberal
-			elections_allowed = no
+			elections_allowed = yes
 		}
 		RUS_setup_lkdp_government = yes
 	}	
+	mp_support_calc = yes
+	senators_support_calc = yes
 }
 setup_ruling_party_president = {
 	clr_country_flag = RUS_Conservative_Candidate_Winner
@@ -15157,8 +15280,11 @@ RUS_setup_plsr_government = {
 		limit = { 
 			NOT = { has_completed_focus = RUS_Coalition_Only_In_Name }
 		}
-		set_country_flag = radical_socialist_coalition
-		RUS_add_to_coalition = yes
+		custom_effect_tooltip = RUS_nsp_will_join_coalition
+		hidden_effect = {
+			add_radsoc_to_coalition = yes
+			set_variable = { Duma_Party_Status^2 = 1 } # NSP  (Governing)
+		}
 	}
 	if = {
 		limit = { 
@@ -15179,8 +15305,11 @@ RUS_setup_nsp_government = {
 		limit = { 
 			NOT = { has_completed_focus = RUS_Coalition_Only_In_Name }
 		}
-		set_country_flag = syndicalist_coalition
-		RUS_add_to_coalition = yes
+		custom_effect_tooltip = RUS_plsr_will_join_coalition
+		hidden_effect = {
+			add_synd_to_coalition = yes
+			set_variable = { Duma_Party_Status^1 = 1 } # PLSR  (Governing)
+		}
 	}
 	if = {
 		limit = { 
@@ -15273,13 +15402,19 @@ RUS_setup_psr_government = {
 	}
 	if = {
 		limit = { has_country_flag = RUS_socdems_rpr }
-		set_country_flag = national_populist_coalition
-		RUS_add_to_coalition = yes
+		custom_effect_tooltip = RUS_nrpr_will_join_coalition
+		hidden_effect = {
+			add_natpop_to_coalition = yes
+			set_variable = { Duma_Party_Status^12 = 1 } # NRPR  (Governing)	
+		}
 	}
 	if = {
 		limit = { has_country_flag = RUS_soclibs_rrdo }
-		set_country_flag = social_liberal_coalition
-		RUS_add_to_coalition = yes
+		custom_effect_tooltip = RUS_lkdp_will_join_coalition
+		hidden_effect = {
+			add_soclib_to_coalition = yes
+			set_variable = { Duma_Party_Status^5 = 1 } # LKDP  (Governing)
+		}
 	}
 	mp_support_calc = yes
 	senators_support_calc = yes
@@ -15301,7 +15436,7 @@ RUS_setup_lkdp_government = {
 	set_variable = { Duma_Party_Status^5 = 1 }
 }
 RUS_setup_progressive_government = {
-	add_ideas = var:RUS_pp_minister_hog
+	add_ideas = RUS_Aleksandr_I_Konovalov_hog_mli
 	add_ideas = var:RUS_lkdp_minister_for
 	add_ideas = var:RUS_rkdp_minister_eco
 	add_ideas = var:RUS_rkdp_minister_sec
@@ -16184,6 +16319,7 @@ Get_initial_RUS_LAW_FULL_LAND_PRIVATISATION = {
 	# Initial Support #
 	randomize_rsdrp_support_very_low = yes
 	randomize_psr_support_very_low = yes
+	randomize_lkdp_support_high = yes
 	randomize_pp_support_high = yes
 	randomize_rkdp_support_high = yes
 	randomize_vns_support_high = yes
@@ -17039,36 +17175,32 @@ RUS_pass_current_law = {
 			days = 1
 		}
 		add_stability = 0.04
-		RUS_increase_vns_pop = yes
+		RUS_increase_vns_pop_large = yes
+		RUS_increase_rkdp_pop_large = yes
 		set_variable = { RUS_state_monarchy_referendum_turnout = 0.37 }
-		set_variable = { RUS_state_monarchy_referendum_turnout = 0.37 }
-			set_temp_variable = { temp1 = party_popularity@ruling_party }
-			set_temp_variable = { temp3 = 1 }
-			subtract_from_temp_variable = { temp3 = modifier@consumer_goods_factor }
-			multiply_temp_variable = { temp1 = temp3 }
-			set_temp_variable = { temp2 = RUS.stability }
-			if = {
-				limit = {
-					check_variable = { temp2 < 0.5 }
-				}
-				set_temp_variable = { temp2 = 0.5 }
+		set_temp_variable = { temp1 = party_popularity@ruling_party }
+		set_temp_variable = { temp3 = 1 }
+		subtract_from_temp_variable = { temp3 = modifier@consumer_goods_factor }
+		multiply_temp_variable = { temp1 = temp3 }
+		set_temp_variable = { temp2 = RUS.stability }
+		if = {
+			limit = {
+				check_variable = { temp2 < 0.5 }
 			}
-			add_to_temp_variable = { temp2 = 1 }
-			multiply_temp_variable = { temp1 = temp2 }
-			multiply_temp_variable = { temp1 = 2 }
-			add_to_variable = { temp1 = additional_popular_support }
-			clamp_variable = {
-				var = RUS_monarchy_popular_support
-				min = 0
-				max = 1
-			}
-		set_variable = { RUS_monarchy_popular_support = temp1 }	
+			set_temp_variable = { temp2 = 0.5 }
+		}
+		add_to_temp_variable = { temp2 = 1 }
+		multiply_temp_variable = { temp1 = temp2 }
+		multiply_temp_variable = { temp1 = 2 }
+		clamp_variable = { var = temp1 min = 0 max = 1 }
+		set_variable = { RUS_monarchy_popular_support = temp1 }		
 		set_variable = { RUS_monarchy_popular_support_bonus = 0 }
 		set_variable = { RUS_monarchy_candidate_legitimacy = 0 }
-		set_variable = { RUS_monarchy_referendum_legitimacy = RUS_monarchy_popular_support }
+		set_variable = { RUS_monarchy_referendum_legitimacy = party_popularity@ruling_party }
 		set_variable = { RUS_monarchy_referendum_legitimacy_bonus = 0 }
 		set_variable = { RUS_days_till_referendum = 90 }
 		RUS_calculate_expected_monarchy_referendum = yes
+		set_country_flag = monarchy_referendum_accepted
 		activate_mission = RUS_Monarchy_Referendum_deadline
 	}
 	
@@ -17374,31 +17506,27 @@ RUS_not_pass_current_law = {
 			add_stability = 0.04
 			RUS_increase_vns_pop_large = yes
 			RUS_increase_rkdp_pop_large = yes
+			set_variable = { RUS_state_monarchy_referendum_turnout = 0.37 }			
 			set_variable = { RUS_state_monarchy_referendum_turnout = 0.37 }
-				set_temp_variable = { temp1 = party_popularity@ruling_party }
-				set_temp_variable = { temp3 = 1 }
-				subtract_from_temp_variable = { temp3 = modifier@consumer_goods_factor }
-				multiply_temp_variable = { temp1 = temp3 }
-				set_temp_variable = { temp2 = RUS.stability }
-				if = {
-					limit = {
-						check_variable = { temp2 < 0.5 }
-					}
-					set_temp_variable = { temp2 = 0.5 }
+			set_temp_variable = { temp1 = party_popularity@ruling_party }
+			set_temp_variable = { temp3 = 1 }
+			subtract_from_temp_variable = { temp3 = modifier@consumer_goods_factor }
+			multiply_temp_variable = { temp1 = temp3 }
+			set_temp_variable = { temp2 = RUS.stability }
+			if = {
+				limit = {
+					check_variable = { temp2 < 0.5 }
 				}
-				add_to_temp_variable = { temp2 = 1 }
-				multiply_temp_variable = { temp1 = temp2 }
-				multiply_temp_variable = { temp1 = 2 }
-				add_to_variable = { temp1 = additional_popular_support }
-				clamp_variable = {
-					var = RUS_monarchy_popular_support
-					min = 0
-					max = 1
-				}
-			set_variable = { RUS_monarchy_popular_support = temp1 }				
+				set_temp_variable = { temp2 = 0.5 }
+			}
+			add_to_temp_variable = { temp2 = 1 }
+			multiply_temp_variable = { temp1 = temp2 }
+			multiply_temp_variable = { temp1 = 2 }
+			clamp_variable = { var = temp1 min = 0 max = 1 }
+			set_variable = { RUS_monarchy_popular_support = temp1 }					
 			set_variable = { RUS_monarchy_popular_support_bonus = 0 }
 			set_variable = { RUS_monarchy_candidate_legitimacy = 0 }
-			set_variable = { RUS_monarchy_referendum_legitimacy = RUS_monarchy_popular_support }
+			set_variable = { RUS_monarchy_referendum_legitimacy = party_popularity@ruling_party }
 			set_variable = { RUS_monarchy_referendum_legitimacy_bonus = 0 }
 			set_variable = { RUS_days_till_referendum = 90 }
 			RUS_calculate_expected_monarchy_referendum = yes

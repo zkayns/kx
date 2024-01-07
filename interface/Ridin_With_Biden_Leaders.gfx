@@ -3013,6 +3013,33 @@ spriteTypes = {
 		texturefile = "gfx/leaders/PAP/Portrait_Papal_State_Reginaldo_Giuliani.png"
 	}
 	
+	### Lombardy ###
+	
+	spriteType = {
+		name = "GFX_Portrait_LOM_Giuseppe_Saragat"
+		texturefile = "gfx/leaders/LOM/Portrait_LOM_Giuseppe_Saragat.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_LOM_Carlo_Sforza"
+		texturefile = "gfx/leaders/LOM/Portrait_LOM_Carlo_Sforza.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_LOM_Nicolo_Carandini"
+		texturefile = "gfx/leaders/LOM/Portrait_LOM_Nicolo_Carandini.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_LOM_Achille_Grandi"
+		texturefile = "gfx/leaders/LOM/Portrait_LOM_Achille_Grandi.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_LOM_Fulvio_Balisti"
+		texturefile = "gfx/leaders/LOM/Portrait_LOM_Fulvio_Balisti.png"
+	}
+	
 	### Princely Fed People ###
 	
 	spriteType = {
@@ -3307,6 +3334,65 @@ spriteTypes = {
 		texturefile = "gfx/leaders/NEP/Portrait_Nepal_Mohan_Shumsher.png"
 	}
 	
+	### Georgia ###
+
+	spriteType = {
+		name = "GFX_Portrait_GEO_Evgeni_Gegechkori"
+		texturefile = "gfx/leaders/GEO/Portrait_GEO_Evgeni_Gegechkori.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_GEO_Iosif_Baratov"
+		texturefile = "gfx/leaders/GEO/Portrait_GEO_Iosif_Baratov.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_GEO_Grigory_Veshapeli"
+		texturefile = "gfx/leaders/GEO/Portrait_GEO_Grigory_Veshapeli.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_GEO_Ekvtime_Takaishvili"
+		texturefile = "gfx/leaders/GEO/Portrait_GEO_Ekvtime_Takaishvili.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_GEO_Shalva_Maglakelidze"
+		texturefile = "gfx/leaders/GEO/Portrait_GEO_Shalva_Maglakelidze.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_GEO_Mikheil_Tsereteli"
+		texturefile = "gfx/leaders/GEO/Portrait_GEO_Mikheil_Tsereteli.png"
+	}
+	
+	### Hawaii ###
+	
+	spriteType = {
+		name = "GFX_Portrait_HAW_John_Henry_Wilson"
+		texturefile = "gfx/leaders/HAW/Portrait_HAW_John_Henry_Wilson.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_HAW_samuel_king"
+		texturefile = "gfx/leaders/HAW/Portrait_HAW_samuel_king.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_HAW_lawrence_judd"
+		texturefile = "gfx/leaders/HAW/Portrait_HAW_lawrence_judd.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_HAW_Alexander_Baldwin"
+		texturefile = "gfx/leaders/HAW/Portrait_HAW_Alexander_Baldwin.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_HAW_james_dole"
+		texturefile = "gfx/leaders/HAW/Portrait_HAW_james_dole.png"
+	}
+	
 	###Other###
 	spriteType = {
 		name = "GFX_Portrait_Belgium_Adalbert_I"
@@ -3395,6 +3481,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_TEX_Edna_Ballard"
 		texturefile = "gfx/leaders/TEX/Portrait_TEX_Edna_Ballard.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BHC_Mohandas_Karamchand_Gandhi"
+		texturefile = "gfx/leaders/BHC/Portrait_BHC_Mohandas_Karamchand_Gandhi.png"
 	}
 	
 	### _FUN Portraits ###

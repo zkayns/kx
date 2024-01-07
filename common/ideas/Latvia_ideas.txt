@@ -296,6 +296,7 @@ ideas = {
 		LAT_Imanta_army_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LAT_Imanta_army_3"}
 			picture = LAT_saeimas_military
+			name = LAT_Imanta_army_2
 			allowed = { always = no }
 			modifier = {
 				conscription = 0.02
@@ -308,25 +309,25 @@ ideas = {
 		LAT_Imanta_army_4 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LAT_Imanta_army_4"}
 			picture = LAT_saeimas_military
+			name = LAT_Imanta_army_2
 			allowed = { always = no }
 			modifier = {
-				conscription = 0.02
+				conscription = 0.03
 				training_time_factor = -0.1
 				army_org_factor = 0.1
 				max_planning = 0.25
-				conscription = 0.01
 			}
 		}
 		LAT_Imanta_army_5 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LAT_Imanta_army_5"}
 			picture = LAT_saeimas_military
+			name = LAT_Imanta_army_2
 			allowed = { always = no }
 			modifier = {
-				conscription = 0.02
+				conscription = 0.03
 				training_time_factor = -0.1
 				army_org_factor = 0.1
 				max_planning = 0.25
-				conscription = 0.01
 				army_org_regain = 0.1
 			}
 		}

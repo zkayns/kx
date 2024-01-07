@@ -8273,6 +8273,18 @@ focus_tree = {
 					set_nationality = ROOT
 				}
 			}
+			TRM = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = RUS_wrangel_officer
+							has_trait = RUS_drozdovsky_officer
+						}
+					}
+					set_unit_leader_flag = RUS_unit_leader
+					set_nationality = ROOT
+				}
+			}
 			if = {
 				limit = { has_dlc_lar = yes }
 				if = {
@@ -8338,24 +8350,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UKR_Bring_The_Cossacks"
-			DKB = {
-				every_unit_leader = {
-					set_unit_leader_flag = DKB_unit_leader
-					set_nationality = ROOT
-				}
-			}
-			KUB = {
-				every_unit_leader = {
-					set_unit_leader_flag = KUB_unit_leader
-					set_nationality = ROOT
-				}
-			}
 			if = {
 				limit = { 
 					DKB = { 
 						exists = yes
 						is_ai = yes
+						OR = {
+							is_subject = no
+							is_subject_of = UKR
+						}
+						has_socialist_government = no
+						NOT = { has_country_flag = DKB_germans_in_power }
 					}					
+				}
+				DKB = {
+					every_unit_leader = {
+						set_unit_leader_flag = DKB_unit_leader
+						set_nationality = ROOT
+					}
 				}
 				annex_country = { target = DKB transfer_troops = yes }
 			}
@@ -8364,7 +8376,18 @@ focus_tree = {
 					KUB = { 
 						exists = yes
 						is_ai = yes
+						OR = {
+							is_subject = no
+							is_subject_of = UKR
+						}
+						has_socialist_government = no
 					}					
+				}
+				KUB = {
+					every_unit_leader = {
+						set_unit_leader_flag = KUB_unit_leader
+						set_nationality = ROOT
+					}
 				}
 				annex_country = { target = KUB transfer_troops = yes }
 			}
@@ -12042,6 +12065,7 @@ focus_tree = {
 				has_country_flag = UKR_congress_ended
 			}
 			UKR_shakhrai_in_power = yes
+			NOT = { has_active_mission = UKR_start_industrialisation_deadline }
 		}
 		prerequisite = { focus = UKR_Syndical_Plan_Economy }
 		prerequisite = { focus = UKR_Balance_Industry }
@@ -20790,6 +20814,7 @@ focus_tree = {
 		}
 		available = {
 			UKR_bolsheviks_in_power = yes
+			NOT = { has_active_mission = UKR_start_industrialisation_deadline }
 		}
 		ai_will_do = {
 			factor = 200
@@ -26091,13 +26116,15 @@ focus_tree = {
 		prerequisite = { focus = UKR_Certain_National_Vision }
 		available = {
 			is_subject = no
-			NOT = { owns_state = 91 }
 			if = {
 				limit = { has_completed_focus = UKR_Ensure_Neutrality_In_Weltkrieg }
-				var:91.owner = { 
-					is_in_faction = no
-					is_subject = no
-					has_guarantor = no
+				OR = {
+					owns_state = 91
+					var:91.owner = { 
+						is_in_faction = no
+						is_subject = no
+						has_guarantor = no
+					}
 				}
 			}
 		}
@@ -26289,14 +26316,22 @@ focus_tree = {
 		icon = GFX_UKR_The_Crimson_Klin
 		prerequisite = { focus = UKR_Certain_National_Vision }
 		available = {
-			NOT = { is_in_faction_with = var:234.owner }
-			NOT = { is_ally_with = RUS }
+			if = {
+				limit = {
+					NOT = { owns_state = 234 }
+				}
+				NOT = { is_in_faction_with = var:234.owner }
+				NOT = { is_ally_with = RUS }
+			}
 			if = {
 				limit = { has_completed_focus = UKR_Ensure_Neutrality_In_Weltkrieg }
-				var:234.owner = { 
-					is_in_faction = no
-					is_subject = no
-					has_guarantor = no
+				OR = {
+					owns_state = 234
+					var:234.owner = { 
+						is_in_faction = no
+						is_subject = no
+						has_guarantor = no
+					}
 				}
 			}
 		}

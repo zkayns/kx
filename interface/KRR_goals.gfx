@@ -101,6 +101,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_rus_comitet.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_rus_austerity_measures"
+		texturefile = "gfx/interface/goals/focus_rus_austerity_measures.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_rus_expand_combat_squads"
+		texturefile = "gfx/interface/goals/focus_rus_expand_combat_squads.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_rus_yellowshirts"
 		texturefile = "gfx/interface/goals/focus_rus_yellowshirts.png"
 	}
@@ -158,7 +166,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_focus_rus_right_communists"
-		texturefile = "gfx/interface/goals/SOV_socialist_market.png"
+		texturefile = "gfx/interface/goals/focus_rus_right_communists.png"
 	}
 	SpriteType = {
 		name = "GFX_SOV_bolsheviks_in_power"
@@ -1459,6 +1467,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/RUS_socdem_eurasia.png"		
 	}
 	SpriteType = {
+		name = "GFX_RUS_ideocracy"
+		texturefile = "gfx/interface/goals/RUS_ideocracy.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_appeal_rovs"
+		texturefile = "gfx/interface/goals/RUS_appeal_rovs.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_incorporate_panslavism"
+		texturefile = "gfx/interface/goals/RUS_incorporate_panslavism.png"		
+	}
+	SpriteType = {
 		name = "GFX_RUS_question_of_duma"
 		texturefile = "gfx/interface/goals/RUS_question_of_duma.png"		
 	}
@@ -1955,6 +1975,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SOV_labor_militarization.png"		
 	}
 	SpriteType = {
+		name = "GFX_SOV_militarization_labour"
+		texturefile = "gfx/interface/goals/SOV_militarization_labour.png"		
+	}
+	SpriteType = {
 		name = "GFX_SOV_mild_industry"
 		texturefile = "gfx/interface/goals/SOV_mild_industry.png"		
 	}	
@@ -2361,6 +2385,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_SOV_socialist_market"
 		texturefile = "gfx/interface/goals/SOV_socialist_market.png"		
+	}	
+	SpriteType = {
+		name = "GFX_SOV_support_nep"
+		texturefile = "gfx/interface/goals/SOV_support_nep.png"		
 	}	
 	SpriteType = {
 		name = "GFX_SOV_cult_of_zinoviev"
@@ -4419,6 +4447,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRM_former_allies.png"		
 	}
 	SpriteType = {
+		name = "GFX_TRM_contact_do_rovs"
+		texturefile = "gfx/interface/goals/TRM_contact_do_rovs.png"		
+	}
+	SpriteType = {
+		name = "GFX_TRM_forget_former_confederates"
+		texturefile = "gfx/interface/goals/TRM_forget_former_confederates.png"		
+	}
+	SpriteType = {
 		name = "GFX_TRM_crush_nra_nats"
 		texturefile = "gfx/interface/goals/TRM_crush_nra_nats.png"		
 	}
@@ -4517,6 +4553,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_TRM_Semyonovtsy_Issue"
 		texturefile = "gfx/interface/goals/TRM_Semyonovtsy_Issue.png"		
+	}
+	SpriteType = {
+		name = "GFX_TRM_Legacy_Whites"
+		texturefile = "gfx/interface/goals/TRM_Legacy_Whites.png"		
 	}
 	SpriteType = {
 		name = "GFX_TRM_Siberian_Council"
@@ -4987,6 +5027,82 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_RUS_Wrangel_Plan"
 		texturefile = "gfx/interface/goals/RUS_Wrangel_Plan.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Create_VDV"
+		texturefile = "gfx/interface/goals/RUS_Create_VDV.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Front_Line_Commisars"
+		texturefile = "gfx/interface/goals/RUS_Front_Line_Commisars.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Kremlin_Project"
+		texturefile = "gfx/interface/goals/RUS_Kremlin_Project.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Night_Witches"
+		texturefile = "gfx/interface/goals/RUS_Night_Witches.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_ORT_System"
+		texturefile = "gfx/interface/goals/RUS_ORT_System.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Project_Katyusha"
+		texturefile = "gfx/interface/goals/RUS_Project_Katyusha.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Reintroduce_Okhrannoye_Otdeleniye"
+		texturefile = "gfx/interface/goals/RUS_Reintroduce_Okhrannoye_Otdeleniye.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Transpolar_Flights"
+		texturefile = "gfx/interface/goals/RUS_Transpolar_Flights.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Commander_Initiative"
+		texturefile = "gfx/interface/goals/RUS_Commander_Initiative.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Electronic_Warfare"
+		texturefile = "gfx/interface/goals/RUS_Electronic_Warfare.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Equipment_Modernisation"
+		texturefile = "gfx/interface/goals/RUS_Equipment_Modernisation.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Expand_AMO"
+		texturefile = "gfx/interface/goals/RUS_Expand_AMO.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_National_High_Command_Formation_School"
+		texturefile = "gfx/interface/goals/RUS_National_High_Command_Formation_School.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Special_Forces_Office"
+		texturefile = "gfx/interface/goals/RUS_Special_Forces_Office.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Modernise_Murmansk"
+		texturefile = "gfx/interface/goals/RUS_Modernise_Murmansk.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Submarines_Kamchatka"
+		texturefile = "gfx/interface/goals/RUS_Submarines_Kamchatka.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Repair_Sevastopol"
+		texturefile = "gfx/interface/goals/RUS_Repair_Sevastopol.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Repair_Vladivostok"
+		texturefile = "gfx/interface/goals/RUS_Repair_Vladivostok.png"		
+	}
+	SpriteType = {
+		name = "GFX_RUS_Modernise_Petrograd_Dockyards"
+		texturefile = "gfx/interface/goals/RUS_Modernise_Petrograd_Dockyards.png"		
 	}
 	### Ukraine Icons ###
 	SpriteType = {

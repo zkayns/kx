@@ -2488,7 +2488,7 @@ UKR_economy = {
 				show_ideas_tooltip = kharkiv_tractor_factory
 			}
 			else = {
-				mio:UKR_kharkiv_tractor_factory2_organisation = {
+				mio:UKR_kharkiv_tractor_factory_organisation = {
 					add_mio_size = 2
 					add_mio_funds = 1000
 				}
@@ -5723,6 +5723,29 @@ UKR_foreign_policy = {
 						cancel_resistance = yes
 					}
 					force_disable_resistance = { clear = yes }
+				}
+				every_state = {
+					clr_state_flag = renamed_petrodvorets
+					clr_state_flag = renamed_state_apraksin
+					clr_state_flag = renamed_state_dmitri
+					clr_state_flag = renamed_state_imperial
+					clr_state_flag = renamed_state_leningrad
+					clr_state_flag = renamed_state_molotov
+					clr_state_flag = renamed_state_rykov
+					clr_state_flag = renamed_state_tsentrograd
+					clr_state_flag = renamed_state_zhdanovgrad
+					clr_state_flag = renamed_state_elizavetburg
+					clr_state_flag = renamed_state_frunzensk
+					clr_state_flag = renamed_state_kornilovsk
+					clr_state_flag = renamed_state_novooktyabrsk
+					clr_state_flag = renamed_state_rykov
+					clr_state_flag = renamed_state_saltykov
+					clr_state_flag = renamed_state_savinkovsk
+					clr_state_flag = renamed_state_tukhachevsk
+					clr_state_flag = renamed_state_vladimir
+					clr_state_flag = renamed_state_wrangelburg
+					clr_state_flag = renamed_state_zhukov
+					clr_state_flag = zhdanov_renamed
 				}
 			}
 			set_capital = { state = 195 }

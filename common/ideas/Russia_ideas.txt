@@ -374,8 +374,8 @@ ideas = {
 		}
 	}
 	SOV_restored_draft = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SOV_restored_draft"}
-			allowed = { always = no }
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea SOV_restored_draft"}
+		allowed = { always = no }
 		picture = generic_syndicalist_militia
 		available = { has_country_flag = RUS_yakov_fishman_added }
 		modifier = {
@@ -384,8 +384,8 @@ ideas = {
 		}
 	}
 	SOV_restored_draft_2 = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SOV_restored_draft_2"}
-			allowed = { always = no }
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea SOV_restored_draft_2"}
+		allowed = { always = no }
 		name = SOV_restored_draft
 		picture = generic_syndicalist_militia
 		available = { has_country_flag = RUS_yakov_fishman_added }
@@ -489,6 +489,7 @@ ideas = {
 				has_socialist_government = yes
 				has_government = social_democrat
 			}
+			NOT = { has_country_flag = soviet_russia_restored }
 		}
 		on_remove = {
 			if = {
@@ -573,7 +574,7 @@ ideas = {
 	RUS_non_socialist_trade_unions = {
 		on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_non_socialist_trade_unions"}
 		allowed = { always = no }
-		picture = economic_control_icon
+		picture = CAN_anti_syndicalism_decree
 		available = {
 			has_socialist_government = no
 		}
@@ -613,7 +614,7 @@ ideas = {
 	RUS_free_trade_unions = {
 		on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_free_trade_unions"}
 		allowed = { always = no }
-			picture = TUS_recovering_syndies_economy
+			picture = TUS_syndie_economy
 		modifier = {
 			syndicalist_drift = 0.02
 			social_democrat_drift = 0.02
@@ -814,7 +815,7 @@ ideas = {
 		allowed = { always = no }
 
 		modifier = {
-			consumer_goods_factor = 0.07
+			consumer_goods_factor = 0.27
 			production_factory_max_efficiency_factor = -0.05
 			industrial_capacity_factory = -0.1
 			stability_weekly = -0.002
@@ -1809,7 +1810,7 @@ ideas = {
 			modifier = {
 				conscription = 0.03
 			}
-			picture = FRA_national_mobilization_focus
+			picture = citizen_conscription_idea
 		}
 		training_barracks = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea training_barracks"}
@@ -1978,6 +1979,7 @@ ideas = {
 		rus_fight_corruption = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_fight_corruption"}
 			allowed = { always = no }
+			on_remove = { add_ideas = rus_no_corruption }
 			modifier = {
 				political_power_cost = 0.25
 				consumer_goods_factor = 0.13
@@ -3801,6 +3803,18 @@ ideas = {
 				army_org_factor = 0.05
 			}
 		}
+		RUS_new_red_army_2_lar = { #centralised command
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_new_red_army_2"}
+			allowed = { always = no }
+			name = RUS_new_red_army
+			picture = advisors_soviet
+			modifier = {
+				max_planning = 0.20
+				planning_speed = 0.20
+				army_org_factor = 0.05
+				local_intel_to_enemies = -0.1
+			}
+		}
 		RUS_new_red_army_3_lar = { #cheka
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_new_red_army_3_lar"}
 			allowed = { always = no }
@@ -3848,7 +3862,7 @@ ideas = {
 				planning_speed = 0.25
 				army_org_factor = 0.10
 				training_time_army_factor = -0.10
-				local_intel_to_enemies = -0.3
+				encryption = 1
 			}
 		}
 		RUS_revvoyensovet = {
@@ -4371,7 +4385,7 @@ ideas = {
 				stability_factor = 0.10
 				land_doctrine_cost_factor = -0.05
 			}
-			picture = army_cooperation
+			picture = IRE_populist_dictatorship_idea
 		}
 		rus_denikin_wrangel_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_denikin_wrangel_idea"}
@@ -4384,7 +4398,7 @@ ideas = {
 				stability_factor = 0.10
 				land_doctrine_cost_factor = -0.05
 			}
-			picture = army_cooperation
+			picture = IRE_populist_dictatorship_idea
 		}
 		RUS_rovs_balance = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_rovs_balance"}
@@ -5056,6 +5070,8 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.15
 				research_speed_factor = -0.025
+				resistance_damage_to_garrison = -0.1
+				army_core_attack_factor = 0.1
 			}
 		}
 					
@@ -5602,7 +5618,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_fair_labour"}
 			picture = worker_guarantees
 			allowed = { always = no }
-			available = { NOT = { has_idea = RUS_fair_labour } }
 			modifier = {
 				stability_factor = 0.04
 				political_power_gain = 0.075
@@ -5623,7 +5638,7 @@ ideas = {
 		RUS_agricultural_adjustment_act = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_agricultural_adjustment_act"}
 			allowed = { always = no }
-			picture = generic_agrarian_reform
+			picture = CAN_rural_subsidies
 			modifier = {
 				political_power_cost = 0.15
 				consumer_goods_factor = -0.175

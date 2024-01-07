@@ -480,8 +480,6 @@ focus_tree = {
 				remove_idea = LAT_army_1
 				add_idea = LAT_Imanta_army
 			}
-			activate_targeted_decision = { target = THIS decision = LAT_reorganize_high_command }
-			activate_targeted_decision = { target = THIS decision = LAT_form_training_camps }
 		}
 	}
 	focus = {
@@ -702,7 +700,7 @@ focus_tree = {
 				limit = {
 					is_core_of = EST
 				}
-				add_claim_by = ROOT
+				add_core_of = ROOT
 			}
 			EST = { country_event = LATFOR.8 }
 		}
