@@ -5249,7 +5249,7 @@ country_event = { #Ukrainian Conquest
 
 		create_wargoal = {
 			type = annex_everything
-			target = UKR
+			target = var:202.owner
 		}
 	}
 
@@ -5259,7 +5259,7 @@ country_event = { #Ukrainian Conquest
 			factor = 80
 		}
 
-		UKR = {
+		var:202.owner = {
 			country_event = {id = tram.143 days = 3}
 		}
 

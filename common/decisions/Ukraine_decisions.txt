@@ -3169,7 +3169,7 @@ political_actions = {
 	UKR_recruit_teroborona = {
 		icon = GFX_decision_generic_military
 
-		allowed = { tag = UKR }
+		allowed = { original_tag = UKR }
 		
 		available = {
 			has_war_support > 0			
@@ -3532,7 +3532,7 @@ political_actions = {
 		name = integrate_state
 		icon = eng_trade_unions_demand
 
-		allowed = { tag = UKR }
+		allowed = { original_tag = UKR }
 		
 		available = {
 			has_stability > 0
@@ -3574,7 +3574,7 @@ political_actions = {
 		name = integrate_state
 		icon = eng_trade_unions_demand
 
-		allowed = { tag = UKR }
+		allowed = { original_tag = UKR }
 
 		available = {
 			has_stability > 0
@@ -3616,7 +3616,7 @@ political_actions = {
 		name = integrate_state
 		icon = eng_trade_unions_demand
 
-		allowed = { tag = UKR }
+		allowed = { original_tag = UKR }
 
 		available = {
 			has_stability > 0
@@ -3661,10 +3661,10 @@ political_actions = {
 		allowed = { always = no } #manually activated
 
 		available = {
-			NOT = { has_wargoal_against = UKR }
+			NOT = { has_wargoal_against = var:202.owner }
 			OR = {
-				NOT = { has_war_with = UKR }
-				UKR = { surrender_progress > 0.5 }
+				NOT = { has_war_with = var:202.owner }
+				var:202.owner = { surrender_progress > 0.5 }
 			}
 		}
 
@@ -3674,7 +3674,7 @@ political_actions = {
 				any_allied_country = {
 					has_capitulated = yes
 					capital_scope = {
-						UKR = { is_ally_with = var:PREV.controller }
+						var:202.owner = { is_ally_with = var:PREV.controller }
 					}
 				}
 			}
@@ -3707,10 +3707,10 @@ political_actions = {
 		allowed = { always = no } #manually activated
 
 		available = {
-			NOT = { has_wargoal_against = UKR }
+			NOT = { has_wargoal_against = var:202.owner }
 			OR = {
-				NOT = { has_war_with = UKR }
-				UKR = { surrender_progress > 0.5 }
+				NOT = { has_war_with = var:202.owner }
+				var:202.owner = { surrender_progress > 0.5 }
 			}
 		}
 
@@ -3720,7 +3720,7 @@ political_actions = {
 				any_allied_country = {
 					has_capitulated = yes
 					capital_scope = {
-						UKR = { is_ally_with = var:PREV.controller }
+						var:202.owner = { is_ally_with = var:PREV.controller }
 					}
 				}
 			}
@@ -5943,7 +5943,7 @@ UKR_foreign_policy = {
 		name = LAT_SOV_Attack_Europe
 		icon = hol_draw_up_staff_plans
 
-		allowed = { tag = UKR }
+		allowed = { original_tag = UKR }
 
 		available = {
 			OR = {
@@ -6012,7 +6012,7 @@ UKR_foreign_policy = {
 		icon = hol_draw_up_staff_plans
 
 		allowed = {
-			tag = UKR
+			original_tag = UKR
 		}
 
 		available = {
@@ -13399,6 +13399,7 @@ UKR_petliura_category = {
 				target = USR
 				type = civil_war
 			}
+			add_civil_war_target = USR
 			hidden_effect = {
 				add_ideas = UPR_civil_war
 				country_event = {
@@ -14527,7 +14528,7 @@ UKR_civil_war = {
 		
 		visible = {
 			has_socialist_government = yes
-			var:202.owner = { has_socialist_government = yes }
+			var:221.owner = { has_socialist_government = yes }
 		}
 		
 		ai_will_do = {
@@ -17354,7 +17355,7 @@ UKR_galicia_partisans_category = {
 		name = UKR_prepare_local_resistance_in_state
 		icon = onmap_recruit_operative
 
-		allowed = { tag = UKR }
+		allowed = { original_tag = UKR }
 		
 		visible = {
 			NOT = { has_war_with = FROM.owner }
@@ -17406,7 +17407,7 @@ UKR_galicia_partisans_category = {
 		name = UKR_prepare_local_resistance_in_state
 		icon = onmap_recruit_operative
 
-		allowed = { tag = UKR }
+		allowed = { original_tag = UKR }
 		
 		visible = {
 			NOT = { has_war_with = FROM.owner }

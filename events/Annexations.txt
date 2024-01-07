@@ -289,7 +289,7 @@ country_event = { #Fate of Brest
 			modifier = {
 				factor = 0
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = WHR
 					LIT = {
 						is_ally_with = ROOT
@@ -315,7 +315,8 @@ country_event = { #Fate of Brest
 					206 = { is_claim_or_core_of_ROOT = yes } #Minsk
 				}
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes 
 				owns_state = 792
 			}
@@ -339,7 +340,7 @@ country_event = { #Fate of Brest
 				NOT = { is_ally_with = POL }
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		93 = { transfer_state_and_add_core = yes }
 	}
 
@@ -368,7 +369,7 @@ country_event = { #Fate of Brest
 			modifier = {
 				factor = 0
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = POL
 				}
 				NOT = { is_ally_with = WHR }
@@ -401,7 +402,7 @@ country_event = { #Fate of Brest
 			modifier = {
 				factor = 0
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = POL
 				}
 				NOT = { is_ally_with = LIT }
@@ -425,7 +426,8 @@ country_event = { #Fate of Brest
 				}
 			}
 			POL = { ROOT_can_grant_land = yes }
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				owns_state = 95
 			}
@@ -438,7 +440,7 @@ country_event = { #Fate of Brest
 					is_ally_with = WHR
 					is_ally_with = POL
 				}
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 			}
 			modifier = {
 				factor = 0.5
@@ -446,12 +448,12 @@ country_event = { #Fate of Brest
 			}
 			modifier = {
 				factor = 0.5
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 			}
 		}
 		set_temp_variable = { tag_to_release = POL }
 		93 = { transfer_state_and_add_claim = yes }
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		997 = { transfer_state_and_add_core = yes }
 	}
 
@@ -480,7 +482,7 @@ country_event = { #Fate of Brest
 			modifier = {
 				factor = 0
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = POL
 				}
 				NOT = { is_ally_with = WHR }
@@ -525,7 +527,7 @@ country_event = { #Fate of Brest
 			modifier = {
 				factor = 0
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = POL
 				}
 				NOT = { is_ally_with = LIT }
@@ -712,7 +714,7 @@ country_event = { #Fate of Polesia
 			modifier = {
 				factor = 0
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = WHR
 					LIT = {
 						is_ally_with = ROOT
@@ -737,7 +739,8 @@ country_event = { #Fate of Polesia
 					206 = { is_claim_or_core_of_ROOT = yes } #Minsk
 				}
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes 
 				owns_state = 792
 			}
@@ -751,10 +754,10 @@ country_event = { #Fate of Polesia
 			modifier = {
 				factor = 0
 				is_ally_with = WHR
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		997 = { transfer_state_and_add_core = yes }
 	}
 
@@ -779,7 +782,7 @@ country_event = { #Fate of Polesia
 			base = 20
 			modifier = {
 				factor = 0
-				is_ally_with = UKR
+				is_ally_with = 202.owner
 				NOT = { is_ally_with = WHR }
 			}
 		}
@@ -808,7 +811,7 @@ country_event = { #Fate of Polesia
 			base = 20
 			modifier = {
 				factor = 0
-				is_ally_with = UKR
+				is_ally_with = 202.owner
 				NOT = { is_ally_with = LIT }
 			}
 		}
@@ -5445,7 +5448,10 @@ country_event = { #Fate of Bessarabia / Moldova
 				factor = 0
 				OR = {
 					ROM = { is_ally_of_ROOT = yes }
-					UKR = { is_ally_of_ROOT = yes }
+					var:202.owner = { 
+						is_ukrainian_tag = yes
+						is_ally_of_ROOT = yes 
+					}
 				}
 			}
 		}
@@ -5535,7 +5541,8 @@ country_event = { #Fate of Bessarabia / Moldova
 				tag = ROM
 				is_ukrainian_tag = yes
 			}
-			UKR = {
+			var:202.owner = {
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				owns_state = 192
 				owns_state = 791
@@ -5544,7 +5551,7 @@ country_event = { #Fate of Bessarabia / Moldova
 		ai_chance = {
 			base = 20
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -7156,7 +7163,7 @@ country_event = { #Fate of Transcarpathia
 					is_ukrainian_tag = yes
 					AND = {
 						tag = RUS
-						RUS = { is_ally_with = UKR }
+						RUS = { is_ally_with = PREV }
 					}
 				}
 			}
@@ -7209,7 +7216,7 @@ country_event = { #Fate of Transcarpathia
 					is_ukrainian_tag = yes
 					AND = {
 						tag = RUS
-						RUS = { is_ally_with = UKR }
+						RUS = { is_ally_with = PREV }
 					}
 				}
 			}
@@ -7265,7 +7272,7 @@ country_event = { #Fate of Transcarpathia
 					is_ukrainian_tag = yes
 					AND = {
 						tag = RUS
-						RUS = { is_ally_with = UKR }
+						RUS = { is_ally_with = PREV }
 					}
 				}
 			}
@@ -7320,7 +7327,7 @@ country_event = { #Fate of Transcarpathia
 					is_ukrainian_tag = yes
 					AND = {
 						tag = RUS
-						RUS = { is_ally_with = UKR }
+						RUS = { is_ally_with = PREV }
 					}
 					HUN = { is_ally_of_ROOT = yes }
 					SVK = { is_ally_of_ROOT = yes }
@@ -7375,7 +7382,7 @@ country_event = { #Fate of Transcarpathia
 					is_ukrainian_tag = yes
 					AND = {
 						tag = RUS
-						RUS = { is_ally_with = UKR }
+						RUS = { is_ally_with = PREV }
 					}
 				}
 			}
@@ -7427,7 +7434,7 @@ country_event = { #Fate of Transcarpathia
 					is_ukrainian_tag = yes
 					AND = {
 						tag = RUS
-						RUS = { is_ally_with = UKR }
+						RUS = { is_ally_with = PREV }
 					}
 				}
 			}
@@ -7458,7 +7465,8 @@ country_event = { #Fate of Transcarpathia
 	option = {
 		name = annex.43.b #Give it to UKR
 		trigger = {
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				is_ally_of_ROOT = yes
 				owns_state = 91
 			}
@@ -7480,25 +7488,25 @@ country_event = { #Fate of Transcarpathia
 		}
 		73 = {
 			if = {
-				limit = { is_claimed_by = UKR }
-				remove_claim_by = UKR
+				limit = { is_claimed_by = var:202.owner }
+				remove_claim_by = var:202.owner
 			}
 			if = {
-				limit = { NOT = { is_core_of = UKR } }
-				add_core_of = UKR
+				limit = { NOT = { is_core_of = var:202.owner } }
+				add_core_of = var:202.owner
 			}
-			UKR = { transfer_state = PREV }
+			var:202.owner = { transfer_state = PREV }
 		}
 		1119 = {
 			if = {
-				limit = { is_claimed_by = UKR }
-				remove_claim_by = UKR
+				limit = { is_claimed_by = var:202.owner }
+				remove_claim_by = var:202.owner
 			}
 			if = {
-				limit = { NOT = { is_core_of = UKR } }
-				add_core_of = UKR
+				limit = { NOT = { is_core_of = var:202.owner } }
+				add_core_of = var:202.owner
 			}
-			UKR = { transfer_state = PREV }
+			var:202.owner = { transfer_state = PREV }
 		}
 	}
 	option = { #annex
@@ -7878,7 +7886,8 @@ country_event = { #Fate of Bucovina
 	option = {
 		name = annex.43.f #Give it to UKR
 		trigger = {
-			UKR = {
+			var:202.owner = {
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				OR = {
 					AND = {
@@ -7905,14 +7914,17 @@ country_event = { #Fate of Bucovina
 			base = 90
 			modifier = {
 				factor = 10
-				ROOT = { is_ally_with = UKR }
+				ROOT = { is_ally_with = 202.owner }
 			}
 			modifier = {
 				factor = 10
-				UKR = { same_government_type_as_ROOT = yes }
+				var:202.owner = { 
+					is_ukrainian_tag = yes
+					same_government_type_as_ROOT = yes 
+				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		80 = { add_claim_of_target_and_transfer_if_owned = yes }
 		if = {
 			limit = { 713 = { is_valid_annexation_state = yes } }
@@ -7969,7 +7981,8 @@ country_event = { #Fate of Bucovina
 		trigger = {
 			80 = { is_valid_annexation_state = yes } #Cernauti
 			713 = { is_valid_annexation_state = yes } #Suceava
-			UKR = {
+			var:202.owner = {
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				owns_state = 89 #Stanislawow
 			}
@@ -7988,16 +8001,22 @@ country_event = { #Fate of Bucovina
 			base = 90
 			modifier = {
 				factor = 10
-				UKR = { is_ally_of_ROOT = yes }
+				var:202.owner = { 
+					is_ukrainian_tag = yes
+					is_ally_of_ROOT = yes 
+				}
 				ROM = { is_ally_of_ROOT = yes }
 			}
 			modifier = {
 				factor = 10
-				UKR = { same_government_type_as_ROOT = yes }
+				var:202.owner = { 
+					is_ukrainian_tag = yes
+					same_government_type_as_ROOT = yes 
+				}
 				ROM = { same_government_type_as_ROOT = yes }
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		80 = { transfer_state_and_add_claim = yes }
 
 		custom_effect_tooltip = tooltip_white_line
@@ -8010,7 +8029,8 @@ country_event = { #Fate of Bucovina
 		trigger = {
 			80 = { is_valid_annexation_state = yes } #Cernauti
 			713 = { is_valid_annexation_state = yes } #Suceava
-			UKR = {
+			var:202.owner = {
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				owns_state = 89 #Stanislawow
 			}
@@ -8029,16 +8049,22 @@ country_event = { #Fate of Bucovina
 			base = 90
 			modifier = {
 				factor = 10
-				UKR = { is_ally_of_ROOT = yes }
+				var:202.owner = { 
+					is_ukrainian_tag = yes
+					is_ally_of_ROOT = yes 
+				}
 				TRS = { is_ally_of_ROOT = yes }
 			}
 			modifier = {
 				factor = 10
-				UKR = { same_government_type_as_ROOT = yes }
+				var:202.owner = { 
+					is_ukrainian_tag = yes
+					same_government_type_as_ROOT = yes 
+				}
 				TRS = { same_government_type_as_ROOT = yes }
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		80 = { transfer_state_and_add_claim = yes }
 
 		custom_effect_tooltip = tooltip_white_line
@@ -8714,7 +8740,8 @@ country_event = { #Fate of Volhynia
 			NOT = {
 				is_ukrainian_tag = yes
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 			}
 		}
@@ -8722,7 +8749,7 @@ country_event = { #Fate of Volhynia
 			base = 50
 			modifier = {
 				factor = 0
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 				OR = {
 					var:219.owner = {
 						is_russian_tag_that_can_integrate = yes
@@ -8733,7 +8760,7 @@ country_event = { #Fate of Volhynia
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -8836,7 +8863,7 @@ country_event = { #Fate of Volhynia
 						is_ally_with = ROOT
 						owns_state = 202
 					}
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 				}
 			}
 		}
@@ -8867,7 +8894,7 @@ country_event = { #Fate of Volhynia
 				factor = 0
 				NOT = { is_ally_with = 219.owner }
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = POL
 				}
 			}
@@ -8949,7 +8976,8 @@ country_event = { #Fate of Transnistria
 			NOT = {
 				is_ukrainian_tag = yes
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 			}
 		}
@@ -8957,11 +8985,11 @@ country_event = { #Fate of Transnistria
 			base = 50
 			modifier = {
 				factor = 0.5
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 				is_ally_with = ROM
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -8986,7 +9014,7 @@ country_event = { #Fate of Transnistria
 			modifier = {
 				factor = 0.5
 				NOT = { is_ally_with = ROM }
-				is_ally_with = UKR
+				is_ally_with = 202.owner
 			}
 		}
 		set_temp_variable = { tag_to_release = ROM }
@@ -9015,7 +9043,7 @@ country_event = { #Fate of Transnistria
 				factor = 0
 				NOT = { is_ally_with = 219.owner }
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = ROM
 				}
 			}
@@ -9035,7 +9063,10 @@ country_event = { #Fate of Transnistria
 		name = annex.47.a
 		trigger = {
 			is_russian_tag_that_can_integrate = yes
-			UKR = { is_ally_of_ROOT = yes }
+			var:202.owner = { 
+				is_ukrainian_tag = yes
+				is_ally_of_ROOT = yes 
+			}
 			NOT = {
 				is_ukrainian_tag = yes
 				tag = ROM
@@ -9046,7 +9077,7 @@ country_event = { #Fate of Transnistria
 		ai_chance = {
 			base = 100
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -9469,7 +9500,10 @@ country_event = { #Fate of West Banat
 			modifier = {
 				factor = 0
 				OR = {
-					UKR = { is_ally_of_ROOT = yes }
+					var:202.owner = { 
+						is_ukrainian_tag = yes
+						is_ally_of_ROOT = yes 
+					}
 					POL = { is_ally_of_ROOT = yes }
 				}
 				NOT = { is_ally_with = WHR }
@@ -10724,7 +10758,8 @@ country_event = { #Fate of Sevastopol
 				is_ukrainian_tag = yes
 				tag = CRM
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes 
 				OR = {
 					owns_state = 137
@@ -10737,14 +10772,14 @@ country_event = { #Fate of Sevastopol
 			base = 40
 			modifier = {
 				factor = 0
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 				var:219.owner = {
 					is_russian_tag_that_can_integrate = yes
 					is_ally_with = ROOT
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				state = 1221 #Sevastopol
@@ -10765,7 +10800,7 @@ country_event = { #Fate of Sevastopol
 			base = 40
 			modifier = {
 				factor = 0.5
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 			}
 		}
 		set_temp_variable = { tag_to_release = CRM }
@@ -10796,7 +10831,7 @@ country_event = { #Fate of Sevastopol
 				factor = 0
 				is_german_tag = yes
 				NOT = { is_ally_with = 219.owner }
-				is_ally_with = UKR
+				is_ally_with = 202.owner
 			}
 		}
 		set_temp_variable = { tag_to_release = 219.owner }
@@ -18929,7 +18964,10 @@ country_event = { #Fate of Galicia
 				factor = 0
 				OR = {
 					POL = { is_ally_of_ROOT = yes }
-					UKR = { is_ally_of_ROOT = yes }
+					var:202.owner = { 
+						is_ukrainian_tag = yes
+						is_ally_of_ROOT = yes 
+					}
 				}
 			}
 		}
@@ -18954,7 +18992,10 @@ country_event = { #Fate of Galicia
 			}
 			modifier = {
 				factor = 0.1
-				UKR = { is_ally_of_ROOT = yes }
+				var:202.owner = { 
+					is_ukrainian_tag = yes
+					is_ally_of_ROOT = yes 
+				}
 			}
 		}
 		trigger = {
@@ -18988,7 +19029,10 @@ country_event = { #Fate of Galicia
 			modifier = {
 				factor = 0.1
 				OR = {
-					UKR = { is_ally_of_ROOT = yes }
+					var:202.owner = { 
+						is_ukrainian_tag = yes
+						is_ally_of_ROOT = yes 
+					}
 					POL = { is_ally_of_ROOT = yes }
 				}
 			}
@@ -29875,7 +29919,7 @@ country_event = { # Sinai
 			factor = 20
 			modifier = {
 				factor = 2
-				is_ally_with = var:454.owner
+				is_ally_with = 454.owner
 			}
 		}
 		var:454.owner = {
@@ -43327,7 +43371,10 @@ country_event = { #Fate of Southern Belarus
 			}
 			modifier = {
 				factor = 0
-				UKR = { owns_state = 194 }
+				var:202.owner = { 
+					is_ukrainian_tag = yes
+					owns_state = 194 
+				}
 			}
 		}
 		set_temp_variable = { tag_to_release = WHR }
@@ -43353,7 +43400,8 @@ country_event = { #Fate of Southern Belarus
 					207 = { is_claim_or_core_of_ROOT = yes }
 				}
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				owns_state = 792
 				owns_state = 1228
@@ -43363,14 +43411,14 @@ country_event = { #Fate of Southern Belarus
 			base = 40
 			modifier = {
 				factor = 0
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 				var:219.owner = {
 					is_russian_tag_that_can_integrate = yes
 					is_ally_with = ROOT
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -43586,7 +43634,10 @@ country_event = { #Fate of Southern Belarus
 			owns_state = 194 #Mozyr
 			owns_state = 241 #Gomel
 			WHR = { ROOT_can_grant_land = yes }
-			UKR = {	ROOT_can_grant_land = yes }
+			var:202.owner = {
+				is_ukrainian_tag = yes
+				ROOT_can_grant_land = yes 
+			}
 		}
 		ai_chance = {
 			base = 80
@@ -43604,7 +43655,7 @@ country_event = { #Fate of Southern Belarus
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		241 = { transfer_state_and_add_core = yes } #Gonel
 		set_temp_variable = { tag_to_release = WHR }
 		every_owned_state = {
@@ -43654,7 +43705,7 @@ country_event = { #Fate of Southern Belarus
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		241 = { transfer_state_and_add_core = yes } #Gomel
 		set_temp_variable = { tag_to_release = LIT }
 		every_owned_state = {
@@ -43730,7 +43781,8 @@ country_event = { #Fate of Southern Belarus
 				ROOT_can_grant_land = yes
 				is_ally_of_ROOT = yes
 			}
-			UKR = {
+			var:202.owner = {
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				is_ally_of_ROOT = yes
 			}
@@ -43757,7 +43809,7 @@ country_event = { #Fate of Southern Belarus
 				transfer_state_and_add_claim = yes
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				state = 241 #Gomel
@@ -43842,7 +43894,8 @@ country_event = { #Fate of Southern Belarus
 				ROOT_can_grant_land = yes
 				is_ally_of_ROOT = yes
 			}
-			UKR = {
+			var:202.owner = {
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				is_ally_of_ROOT = yes
 			}
@@ -43877,7 +43930,7 @@ country_event = { #Fate of Southern Belarus
 				transfer_state_and_add_claim = yes
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				state = 241 #Gomel
@@ -43976,20 +44029,23 @@ country_event = { #Fate of Starodub
 			NOT = {
 				is_ukrainian_tag = yes
 			}
-			UKR = { ROOT_can_grant_land = yes }
+			var:202.owner = { 
+				is_ukrainian_tag = yes
+				ROOT_can_grant_land = yes 
+			}
 		}
 		ai_chance = {
 			base = 40
 			modifier = {
 				factor = 0
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 				var:219.owner = {
 					is_russian_tag_that_can_integrate = yes
 					is_ally_with = ROOT
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				state = 1230 #Starodub
@@ -44043,7 +44099,7 @@ country_event = { #Fate of Starodub
 			modifier = {
 				factor = 0
 				NOT = { is_ally_with = 219.owner }
-				is_ally_with = UKR
+				is_ally_with = 202.owner
 			}
 		}
 		set_temp_variable = { tag_to_release = 219.owner }
@@ -44052,10 +44108,6 @@ country_event = { #Fate of Starodub
 				state = 1230 #Starodub
 			}
 			transfer_state_and_add_claim = yes
-			hidden_effect = {
-				add_core_of = UKR
-				start_resistance = UKR
-			}
 		}
 	}
 	option = { #Integrate
@@ -44123,7 +44175,8 @@ country_event = { #Fate of Donbas
 			NOT = {
 				is_ukrainian_tag = yes
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes 
 				OR = {
 					owns_state = 1286
@@ -44136,14 +44189,14 @@ country_event = { #Fate of Donbas
 			base = 20
 			modifier = {
 				factor = 0
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 				var:218.owner = {
 					is_ally_with = ROOT
 					ROOT_can_grant_land = yes
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -44171,7 +44224,7 @@ country_event = { #Fate of Donbas
 			modifier = {
 				factor = 0
 				NOT = { is_ally_with = 218.owner }
-				is_ally_with = UKR
+				is_ally_with = 202.owner
 			}
 		}
 		set_temp_variable = { tag_to_release = 218.owner }
@@ -44199,7 +44252,8 @@ country_event = { #Fate of Donbas
 			owns_state = 1231 #Taganrog
 			owns_state = 1284 #Luhansk
 			owns_state = 1283 #Bakhmut
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				is_ally_of_ROOT = yes
 			}
@@ -44212,7 +44266,7 @@ country_event = { #Fate of Donbas
 			base = 80
 			modifier = {
 				factor = 0.5
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 			}
 			modifier = {
 				factor = 0.5
@@ -44225,7 +44279,7 @@ country_event = { #Fate of Donbas
 		}
 		set_temp_variable = { tag_to_release = 218.owner }
 		1231 = { transfer_state_and_add_core = yes } #Gonel
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -44476,7 +44530,7 @@ country_event = { #Fate of North Kazakhstan
 			base = 80
 			modifier = {
 				factor = 0.5
-				NOT = { is_ally_with = var:810.owner }
+				NOT = { is_ally_with = 810.owner }
 			}
 			modifier = {
 				factor = 0.5
@@ -44563,7 +44617,8 @@ country_event = { #Fate of Belgorod
 			NOT = {
 				is_ukrainian_tag = yes
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				is_ally_of_ROOT = yes
 				ROOT_can_grant_land = yes
 				owns_state = 221
@@ -44573,14 +44628,14 @@ country_event = { #Fate of Belgorod
 			base = 40
 			modifier = {
 				factor = 0
-				NOT = { is_ally_with = UKR }
+				NOT = { is_ally_with = 202.owner }
 				var:219.owner = {
 					is_russian_tag_that_can_integrate = yes
 					is_ally_with = ROOT
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -44605,7 +44660,7 @@ country_event = { #Fate of Belgorod
 			modifier = {
 				factor = 0
 				NOT = { is_ally_with = 219.owner }
-				is_ally_with = UKR
+				is_ally_with = 202.owner
 			}
 		}
 		set_temp_variable = { tag_to_release = 219.owner }
@@ -44675,7 +44730,8 @@ country_event = { #Fate of Chelm
 			NOT = {
 				is_ukrainian_tag = yes
 			}
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				ROOT_can_grant_land = yes
 				owns_state = 792
 			}
@@ -44684,7 +44740,9 @@ country_event = { #Fate of Chelm
 			base = 50
 			modifier = {
 				factor = 0
-				NOT = { is_ally_with = UKR }
+				var:202.owner = { 
+					NOT = { is_ally_of_ROOT = yes }
+				}
 				OR = {
 					var:219.owner = {
 						is_russian_tag_that_can_integrate = yes
@@ -44695,7 +44753,7 @@ country_event = { #Fate of Chelm
 				}
 			}
 		}
-		set_temp_variable = { tag_to_release = UKR }
+		set_temp_variable = { tag_to_release = 202.owner }
 		every_owned_state = {
 			limit = {
 				state = 1088 #Chelm
@@ -44760,7 +44818,7 @@ country_event = { #Fate of Chelm
 						is_ally_with = ROOT
 						owns_state = 792
 					}
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 				}
 			}
 		}
@@ -44815,7 +44873,7 @@ country_event = { #Fate of Chelm
 				factor = 0
 				NOT = { is_ally_with = 219.owner }
 				OR = {
-					is_ally_with = UKR
+					is_ally_with = 202.owner
 					is_ally_with = POL
 				}
 			}
@@ -46571,7 +46629,8 @@ country_event = { #Fate of the Crimea
 			}
 		}
 		trigger = {
-			UKR = { 
+			var:202.owner = { 
+				is_ukrainian_tag = yes
 				owns_state = 196
 				is_ally_of_ROOT = yes 
 				ROOT_can_grant_land = yes					
@@ -46581,16 +46640,16 @@ country_event = { #Fate of the Crimea
 			limit = { is_core_of = CRM }
 			remove_core_of = CRM
 			if = {
-				limit = { is_claimed_by = UKR }
-				remove_claim_by = UKR
+				limit = { is_claimed_by = var:202.owner }
+				remove_claim_by = var:202.owner
 			}
 			if = {
-				limit = { NOT = { is_core_of = UKR } }
-				add_core_of = UKR
+				limit = { NOT = { is_core_of = var:202.owner } }
+				add_core_of = var:202.owner
 			}
 			if = {
 				limit = { is_owned_by = ROOT }
-				UKR = { transfer_state = PREV }
+				var:202.owner = { transfer_state = PREV }
 			}
 		}
 	}
@@ -46637,7 +46696,7 @@ country_event = { #Fate of the Crimea
 			base = 80
 			modifier = {
 				factor = 0.5
-				is_ally_with = UKR
+				is_ally_with = 202.owner
 			}
 		}
 		set_temp_variable = { tag_to_release = 234.owner }
@@ -46724,7 +46783,10 @@ country_event = { #Fate of the East Galicia
 				factor = 0
 				OR = {
 					POL = { is_ally_of_ROOT = yes }
-					UKR = { is_ally_of_ROOT = yes }
+					var:202.owner = { 
+						is_ukrainian_tag = yes
+						is_ally_of_ROOT = yes 
+					}
 				}
 			}
 		}
@@ -46752,7 +46814,10 @@ country_event = { #Fate of the East Galicia
 			}
 			modifier = {
 				factor = 0.1
-				UKR = { is_ally_of_ROOT = yes }
+				var:202.owner = { 
+					is_ukrainian_tag = yes
+					is_ally_of_ROOT = yes 
+				}
 			}
 		}
 		trigger = {
@@ -46789,7 +46854,10 @@ country_event = { #Fate of the East Galicia
 			modifier = {
 				factor = 0.1
 				OR = {
-					UKR = { is_ally_of_ROOT = yes }
+					var:202.owner = { 
+						is_ukrainian_tag = yes
+						is_ally_of_ROOT = yes 
+					}
 					POL = { is_ally_of_ROOT = yes }
 				}
 			}
@@ -46837,14 +46905,17 @@ country_event = { #Fate of the East Galicia
 			}
 		}
 		trigger = {
-			UKR = { is_ally_of_ROOT = yes }
+			var:202.owner = { 
+				is_ukrainian_tag = yes
+				is_ally_of_ROOT = yes 
+			}
 		}
 		every_state = {
 			limit = { is_core_of = WSU }
 			remove_core_of = WSU				
 			if = {
 				limit = { is_owned_by = ROOT }
-				UKR = { transfer_state = PREV }
+				var:202.owner = { transfer_state = PREV }
 			}
 			if = {
 				limit = { 
@@ -46856,17 +46927,17 @@ country_event = { #Fate of the East Galicia
 				}
 				if = {
 					limit = { is_claimed_by = UKR }
-					remove_claim_by = UKR
+					remove_claim_by = var:202.owner
 				}			
 				if = {
-					limit = { NOT = { is_core_of = UKR } }
-					add_core_of = UKR
+					limit = { NOT = { is_core_of = var:202.owner } }
+					add_core_of = var:202.owner
 				}
 			}
 			else = {				
 				if = {
-					limit = { NOT = { is_claimed_by = UKR } }
-					add_claim_by = UKR
+					limit = { NOT = { is_claimed_by = var:202.owner } }
+					add_claim_by = var:202.owner
 				}
 			}
 		}
@@ -46893,7 +46964,7 @@ country_event = { #Fate of the East Galicia
 				remove_core_of = WSU				
 				if = {
 					limit = { is_owned_by = ROOT }
-					UKR = { transfer_state = PREV }
+					var:202.owner = { transfer_state = PREV }
 				}
 				if = {
 					limit = { 
@@ -46904,18 +46975,18 @@ country_event = { #Fate of the East Galicia
 						}
 					}
 					if = {
-						limit = { is_claimed_by = UKR }
-						remove_claim_by = UKR
+						limit = { is_claimed_by = var:202.owner }
+						remove_claim_by = var:202.owner
 					}			
 					if = {
-						limit = { NOT = { is_core_of = UKR } }
-						add_core_of = UKR
+						limit = { NOT = { is_core_of = var:202.owner } }
+						add_core_of = var:202.owner
 					}
 				}
 				else = {				
 					if = {
-						limit = { NOT = { is_claimed_by = UKR } }
-						add_claim_by = UKR
+						limit = { NOT = { is_claimed_by = var:202.owner } }
+						add_claim_by = var:202.owner
 					}
 				}
 			}
@@ -46938,7 +47009,10 @@ country_event = { #Fate of the East Galicia
 		name = annex.404.b
 		trigger = {
 			is_russian_tag_that_can_integrate = yes
-			UKR = { is_ally_of_ROOT = no }
+			var:202.owner = { 
+				is_ukrainian_tag = yes
+				is_ally_of_ROOT = no 
+			}
 		}
 		ai_chance = {
 			base = 100

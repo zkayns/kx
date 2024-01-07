@@ -1835,7 +1835,8 @@ country_event = {
 		name = whiteruthenia.69.a
 		if = {
 			limit = {
-				UKR = {
+				var:202.owner = {
+					is_ukrainian_tag = yes
 					controls_state = 93
 				}
 			}
@@ -1845,7 +1846,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				UKR = {
+				var:202.owner = {
+					is_ukrainian_tag = yes
 					controls_state = 241
 				}
 			}
@@ -1855,7 +1857,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				UKR = {
+				var:202.owner = {
+					is_ukrainian_tag = yes
 					controls_state = 997
 				}
 			}
@@ -1902,7 +1905,7 @@ country_event = {
 	option = {
 		name = whiteruthenia.71.a
 		ai_chance = { factor = 60 }
-		UKR = {
+		var:202.owner = {
 			country_event = {
 				days = 2
 				id = whiteruthenia.72
@@ -2003,7 +2006,7 @@ country_event = {
 	option = {
 		name = whiteruthenia.75.a
 		ai_chance = { factor = 60 }
-		UKR = {
+		var:202.owner = {
 			country_event = {
 				days = 2
 				id = whiteruthenia.76
@@ -7104,7 +7107,7 @@ country_event = { # Anarchists
 				OR = {
 					tag = POL
 					tag = LIT
-					tag = UKR
+					original_tag = UKR
 				}
 			}
 			set_party_name = {

@@ -571,7 +571,7 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = UKR
+			original_tag = UKR
 			OR = {
 				has_country_flag = UKR_petliura_melnyk
 				has_country_flag = UKR_petliura_shumskyi
@@ -582,7 +582,7 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = UKR
+			original_tag = UKR
 			AND = {
 				UKR_vasyl_in_power = yes
 				has_government = paternal_autocrat
@@ -593,7 +593,7 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = UKR
+			original_tag = UKR
 			AND = {
 				OR = {
 					UKR_vasyl_in_power = yes
@@ -624,7 +624,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			tag = UKR
+			original_tag = UKR
 			AND = {
 				RUS_russian_monarch = yes
 				has_idea = UKR_Pavlo_Skoropadsky_hog_pau
@@ -1321,7 +1321,7 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = UKR
+			original_tag = UKR
 			AND = {
 				UKR_vasyl_in_power = yes
 				has_government = paternal_autocrat
@@ -1332,7 +1332,7 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = UKR
+			original_tag = UKR
 			AND = {
 				OR = {
 					UKR_vasyl_in_power = yes
@@ -1364,7 +1364,7 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = UKR
+			original_tag = UKR
 			AND = {
 				RUS_russian_monarch = yes
 				has_idea = UKR_Pavlo_Skoropadsky_hog_pau
@@ -1375,7 +1375,7 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = UKR
+			original_tag = UKR
 			OR = {
 				has_country_flag = UKR_petliura_melnyk
 				has_country_flag = UKR_petliura_shumskyi

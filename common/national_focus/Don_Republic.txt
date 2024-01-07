@@ -3276,7 +3276,7 @@ focus_tree = {
 			focus = DKB_Smolensk_Conference
 		}
 		completion_reward = {
-			UKR = {
+			var:202.owner = {
 			country_event = {
 			days = 3
 			id = dkbfor.49
@@ -3481,6 +3481,16 @@ focus_tree = {
 			focus = DKB_The_Deal_Broken
 		}
 		completion_reward = {
+			if = {
+				limit = {
+					country_exists = USR
+					USR = { NOT = { is_in_faction_with = GER } }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = USR
+				}
+			}
 			if = {
 				limit = {
 					country_exists = UKR
@@ -3697,7 +3707,7 @@ focus_tree = {
 			every_country = {
 				limit = {
 					OR = {
-						tag = UKR
+						original_tag = UKR
 						tag = WHR
 						tag = LIT
 						tag = LAT

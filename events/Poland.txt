@@ -3568,10 +3568,11 @@ country_event = { # Join France - Sure
 		hidden_effect = {
 			if = {
 				limit = {
-					is_in_faction_with = UKR
-					UKR = { is_faction_leader = yes }
+					var:202.owner = { is_ukrainian_tag = yes }
+					is_in_faction_with = var:202.owner
+					var:202.owner = { is_faction_leader = yes }
 				}
-				UKR = {
+				var:202.owner = {
 					country_event = {
 						id = poland.173
 						days = 2
@@ -6337,10 +6338,13 @@ country_event = { #what to do?
 	option = { # join Ukraine
 		name = poland.450.b
 		trigger = {
-			UKR = { is_faction_leader = yes }
+			var:202.owner = {
+				is_faction_leader = yes 
+				is_ukrainian_tag = yes
+			}
 			OR = {
 				has_socialist_government = yes
-				UKR = { has_socialist_government = no }
+				var:202.owner = { has_socialist_government = no }
 			}
 		}
 		ai_chance = {
@@ -6367,7 +6371,7 @@ country_event = { #what to do?
 				}
 			}
 		}
-		UKR = { country_event = poland.451 }
+		var:202.owner = { country_event = poland.451 }
 	}
 	
 	option = { # join Serbia

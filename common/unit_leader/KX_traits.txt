@@ -869,7 +869,7 @@ leader_traits = {
 		}
 		allowed = {
 			FROM = {
-				tag = UKR
+				original_tag = UKR
 				tag = DKB
 				tag = KUB
 				tag = KLY
@@ -904,7 +904,7 @@ leader_traits = {
 		allowed = {
 			FROM = { 
 				OR = {
-					tag = UKR
+					original_tag = UKR
 					tag = UPR
 					tag = USR
 					tag = WSU
@@ -932,7 +932,7 @@ leader_traits = {
 			always = no
 		}
 		allowed = {
-			FROM = { tag = UKR }
+			FROM = { original_tag = UKR }
 		}
 		modifier = {
 		}

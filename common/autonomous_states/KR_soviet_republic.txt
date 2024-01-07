@@ -43,7 +43,7 @@ autonomy_state = {
 	}
 	allowed = {
 		OR = {
-			tag = UKR
+			original_tag = UKR
 			tag = ALO
 		}
 		overlord = { tag = RUS }

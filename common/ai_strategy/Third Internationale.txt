@@ -459,7 +459,7 @@ international_likes_sweden = {
 
 international_likes_ukraine = {
 	allowed = {
-		NOT = { tag = UKR }
+		NOT = { original_tag = UKR }
 	}
 	enable = {
 		is_in_faction_with = INT
@@ -519,7 +519,7 @@ international_likes_sov = {
 	allowed = {
 		NOT = {
 			tag = RUS
-			tag = UKR
+			original_tag = UKR
 			tag = WHR
 			tag = LIT
 			tag = LAT

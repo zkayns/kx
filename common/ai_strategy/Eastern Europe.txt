@@ -24,7 +24,7 @@ LIT_may_rebel = {
 }
 UKR_defend_only_ourselves = {
 	allowed = {
-		tag = UKR
+		original_tag = UKR
 	}
 	enable = {
 		always = yes
@@ -65,23 +65,23 @@ UKR_defend_only_ourselves = {
 UKR_civil_war = {
 	allowed = { tag = UKR }
 	enable = {
-		country_exists = UPR
+		country_exists = USR
 	}
 	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = contain
-		id = "UPR"
+		id = "USR"
 		value = 200
 	}
 	ai_strategy = {
 		type = conquer
-		id = "UPR"
+		id = "USR"
 		value = 500
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "UPR"
+		id = "USR"
 		value = 200
 	}	
 }
@@ -155,7 +155,7 @@ KAR_invade_petrozavodsk = {
 }
 UKR_ensure_neutrality = {
 	allowed = { 
-		tag = UKR
+		original_tag = UKR
 	}
 	enable = {
 		has_completed_focus = UKR_Ensure_Neutrality_In_Weltkrieg
