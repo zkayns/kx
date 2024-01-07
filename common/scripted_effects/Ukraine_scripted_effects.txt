@@ -3812,10 +3812,13 @@ UPR_setup_borotbyst_uprising_petliura = {
 }
 UPR_setup_borotbyst_uprising = {
 	hidden_effect = {		
+		disband_twenty_percent_units_delete_equipment = yes
 		start_civil_war = {
 			ideology = radical_socialist
 			# Breakaway gets old ideology of ROOT
-			size = 0
+			size = 0.5
+			navy_ratio = 0
+			air_ratio = 0
 			capital = 221
 			states = { 1233 1234 1238 1232 1229 821 240 203 259 221 227 228 1282 1283 1284 1285 1286 226 1231 200 1239 197 196 137 1220 1221 }
 			states_filter = {
@@ -3862,56 +3865,6 @@ UPR_setup_borotbyst_uprising = {
 				UKR_Hryhorii_Hrynko_sec_rso
 			}
 			set_war_support = 0.6
-			set_party_name = {
-				ideology = totalist
-				name = UKR_totalist_party
-				long_name = UKR_totalist_party_long
-			}
-			set_party_name = {
-				ideology = syndicalist
-				name = UKR_syndicalist_party
-				long_name = UKR_syndicalist_party_long
-			}
-			set_party_name = {
-				ideology = radical_socialist
-				name = UKR_radical_socialist_party3
-				long_name = UKR_radical_socialist_party3_long
-			}
-			set_party_name = {
-				ideology = social_democrat
-				name = UKR_social_democrat_party4
-				long_name = UKR_social_democrat_party4_long
-			}
-			set_party_name = {
-				ideology = market_liberal
-				name = UKR_social_liberal_party2
-				long_name = UKR_social_liberal_party2_long
-			}
-			set_party_name = {
-				ideology = social_liberal
-				name = UKR_social_liberal_party2
-				long_name = UKR_social_liberal_party2_long
-			}
-			set_party_name = {
-				ideology = social_conservative
-				name = UKR_social_conservative_party
-				long_name = UKR_social_conservative_party_long
-			}
-			set_party_name = {
-				ideology = authoritarian_democrat
-				name = UKR_authoritarian_democrat_party
-				long_name = UKR_authoritarian_democrat_party_long
-			}
-			set_party_name = {
-				ideology = paternal_autocrat
-				name = UKR_paternal_autocrat_party2
-				long_name = UKR_paternal_autocrat_party2_long
-			}
-			set_party_name = {
-				ideology = national_populist
-				name = UKR_national_populist_party
-				long_name = UKR_national_populist_party_long
-			}
 			set_politics = { 
 				ruling_party = radical_socialist
 				elections_allowed = no
