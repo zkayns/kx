@@ -100,12 +100,15 @@ focus_tree = {
 				factor = 2
 				has_war = yes
 			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = TRM_forpol option = TRM_FORPOL_ENT }
+			}
 		}
 		mutually_exclusive = { focus = TRM_Russo_Canadian_Naval_Treaty }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Jap_Naval_Treaty"
-			add_ideas = TRM_JAP_NAV_MIS
-			add_popularity = {ideology = authoritarian_democrat popularity = 0.02}
+			unlock_decision_tooltip = TRM_Russo_Japanese_Naval_Treaty
 		}
 	}
 	focus = {
@@ -136,13 +139,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Russo_Canadian_Naval_Treaty"
-			add_doctrine_cost_reduction = {
-				name = TRM_Russo_Canadian_Naval_Treaty
-				cost_reduction = 0.5
-				uses = 1
-				category = naval_doctrine
-			}
-			add_ideas = TRM_CAN_NAV_TRE
+			activate_targeted_decision = { target = ENT decision = TRM_russo_canadian_naval_treaty }
 		}
 	}
 	focus = {
@@ -593,16 +590,22 @@ focus_tree = {
 				has_completed_focus = TRM_Kolchak_Doc
 			}
 		}
+		select_effect = {
+			if = {
+				limit = { TRM_kolchak_in_power = yes }
+				country_event = {
+					id = tram.55
+					days = 15
+				}
+			}
+		}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Expand_Industry_In_Vladivostok"
 			if = {
-				limit = {
-					NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-					has_government = paternal_autocrat
-				}
+				limit = { TRM_kolchak_in_power = yes }
 				custom_effect_tooltip = upon_selecting_focus
 				effect_tooltip = { country_event = tram.55 }
 				custom_effect_tooltip = effect_upon_focus_completion
@@ -626,7 +629,6 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -907,7 +909,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Siberian_Scientists"
 			add_research_slot_until_five = yes
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	
@@ -960,7 +961,11 @@ focus_tree = {
 		id = TRM_Elite_Siberian_Squadron
 		icon = GFX_TRM_Siberian_Squadron
 		available = {
-			has_government = paternal_autocrat
+			OR = {
+				TRM_kolchak_in_power = yes
+				TRM_stark_in_power = yes
+				TRM_do_rovs_in_power = yes
+			}
 		}
 		relative_position_id = TRM_Continue_The_Militarisation
 		x = 1
@@ -1074,7 +1079,6 @@ focus_tree = {
 			custom_effect_tooltip = RUS_increase_chance_of_war
 			add_to_variable = { global.siberian_war_chance = 0.08 }
 		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
 
 	focus = {
@@ -1379,28 +1383,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			army_experience = 10
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.01
-			}
-			add_timed_idea = {
-				idea = TRM_mutual_excersises
-				days = 180
-			}
-			FNG = { 
-				army_experience = 10
-				add_timed_idea = {
-					idea = TRM_mutual_excersises_FNG
-					days = 180
-				}
-			}
-			country_event = {
-				id = tram.103
-				days = 6
-			}
-			custom_effect_tooltip = RUS_increase_chance_of_war
-			add_to_variable = { global.siberian_war_chance = 0.05 }
+			activate_targeted_decision = { target = FNG decision = TRM_Fengtian_Mutual_Excercises }
 		}
 	}
 	
@@ -1751,12 +1734,12 @@ focus_tree = {
 		id = TRM_Kolchak_Doc
 		icon = GFX_TRM_Supreme_Ruler
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 		}
 		x = 26
 		y = 0
 		cost = 4.2
+		
 		ai_will_do = {
 			base = 100
 		}
@@ -1772,6 +1755,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Kolchak_Doc"
 			country_event = tram.200
 		}
 	}
@@ -1779,8 +1763,7 @@ focus_tree = {
 		id = TRM_Crush_NRA
 		icon = GFX_TRM_Crush_NRA
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 			NOT = {
 				country_exists = SIB
 				SIB = { has_socialist_government = yes }
@@ -1793,11 +1776,9 @@ focus_tree = {
 			focus = TRM_Kolchak_Doc
 		}
 		select_effect = {
-			hidden_effect = {
-				country_event = {
-					id = trmnra.1
-					days = 2
-				}
+			country_event = {
+				id = tram.53
+				days = 5
 			}
 		}
 		cost = 5
@@ -1806,10 +1787,11 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			country_event = {
-				id = tram.148
-				days = 1
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Crush_NRA"
+			custom_effect_tooltip = upon_selecting_focus
+			effect_tooltip = { country_event = tram.53 }
+			custom_effect_tooltip = effect_upon_focus_completion
+			country_event = tram.148
 			custom_effect_tooltip = "Decisions to Crush NRA Partisans will be available"
 		}
 	}
@@ -1843,58 +1825,22 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			custom_effect_tooltip = TRM_Appease_The_Workers_tt
-			effect_tooltip = {
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 574
-							state = 565
-							state = 564
-							state = 563
-						}
-					}
-					custom_effect_tooltip = TRM_Increase_Oblastniki_Support
-					custom_effect_tooltip = TRM_Decrease_NRA_Resistance_Greatly
+			every_owned_state = {
+				limit = {
+					NOT = { state = 408 }
 				}
-				every_owned_state = {
-					limit = {
-						NOT = {
-							OR = {
-								state = 574
-								state = 565
-								state = 564
-								state = 563
-							}
-						}
-					}
-					custom_effect_tooltip = TRM_Increase_Kolchak_Support
-					custom_effect_tooltip = TRM_Decrease_NRA_Resistance_Greatly
-				}
+				TRM_Decrease_Kolchak_Support = yes
+				TRM_Decrease_NRA_Resistance = yes
 			}
 			TRM_decrease_cossack_loyalty = yes
 			TRM_decrease_rovs_loyalty = yes
-			hidden_effect = {
-				add_to_variable = { Chita_NRA_Authority = -0.12 }
-				add_to_variable = { Chita_Oblastniki_Authority = 0.12 }
-				add_to_variable = { Buryatia_NRA_Authority = -0.12 }
-				add_to_variable = { Buryatia_Oblastniki_Authority = 0.12 }
-				add_to_variable = { Yakutia_NRA_Authority = 0.12 }
-				add_to_variable = { Yakutia_Oblastniki_Authority = 0.12 }
-				add_to_variable = { Bodaybo_NRA_Authority = -0.12 }
-				add_to_variable = { Bodaybo_Oblastniki_Authority = 0.12 }
-				add_to_variable = { Amur_NRA_Authority = -0.12 }
-				add_to_variable = { Amur_Kolchak_Authority = -0.12 }
-				add_to_variable = { Blagoveschensk_NRA_Authority = -0.12 }
-				add_to_variable = { Blagoveschensk_Kolchak_Authority = 0.12 }
-				add_to_variable = { Magadan_NRA_Authority = -0.12 }
-				add_to_variable = { Magadan_Kolchak_Authority = 0.12 }
-				add_to_variable = { Nikolayevsk_NRA_Authority = -0.12 }
-				add_to_variable = { Nikolayevsk_Kolchak_Authority = 0.12 }
-				add_to_variable = { Kamchatka_NRA_Authority = -0.12 }
-				add_to_variable = { Kamchatka_Kolchak_Authority = 0.12 }
-				add_to_variable = { Khabarovsk_NRA_Authority = -0.12 }
-				add_to_variable = { Khabarovsk_Kolchak_Authority = 0.12 }
+			effect_tooltip = {
+				add_days_mission_timeout = {
+					mission = TRM_nra_sabotage
+					days = 15
+				}
 			}
+			add_to_variable = { TRM_nra_sabotage_timeout_days = 15 }
 		}
 	}
 	focus = {
@@ -1920,39 +1866,20 @@ focus_tree = {
 		cancel_if_invalid = yes
 		completion_reward = {
 			custom_effect_tooltip = TRM_Austerity_Measures_tt
-			effect_tooltip = {
-				every_owned_state = {
-					limit = {
-						NOT = { state = 408 }
-					}
-					custom_effect_tooltip = TRM_Decrease_Kolchak_Support
-					custom_effect_tooltip = TRM_Increase_NRA_Resistance_Greatly
+			every_owned_state = {
+				limit = {
+					NOT = { state = 408 }
 				}
+				TRM_Increase_Kolchak_Support = yes
+				TRM_Increase_NRA_Resistance_Greatly = yes
 			}
 			TRM_increase_cossack_loyalty = yes
-			TRM_increase_rovs_loyalty = yes
-			hidden_effect = {
-				add_to_variable = { Chita_NRA_Authority = 0.12 }
-				add_to_variable = { Chita_Kolchak_Authority = -0.12 }
-				add_to_variable = { Buryatia_NRA_Authority = 0.12 }
-				add_to_variable = { Buryatia_Kolchak_Authority = -0.12 }
-				add_to_variable = { Yakutia_NRA_Authority = -0.12 }
-				add_to_variable = { Yakutia_Kolchak_Authority = -0.12 }
-				add_to_variable = { Bodaybo_NRA_Authority = 0.12 }
-				add_to_variable = { Bodaybo_Kolchak_Authority = -0.12 }
-				add_to_variable = { Amur_NRA_Authority = 0.12 }
-				add_to_variable = { Amur_Kolchak_Authority = 0.12 }
-				add_to_variable = { Blagoveschensk_NRA_Authority = 0.12 }
-				add_to_variable = { Blagoveschensk_Kolchak_Authority = -0.12 }
-				add_to_variable = { Magadan_NRA_Authority = 0.12 }
-				add_to_variable = { Magadan_Kolchak_Authority = -0.12 }
-				add_to_variable = { Nikolayevsk_NRA_Authority = 0.12 }
-				add_to_variable = { Nikolayevsk_Kolchak_Authority = -0.12 }
-				add_to_variable = { Kamchatka_NRA_Authority = 0.12 }
-				add_to_variable = { Kamchatka_Kolchak_Authority = -0.12 }
-				add_to_variable = { Khabarovsk_NRA_Authority = 0.12 }
-				add_to_variable = { Khabarovsk_Kolchak_Authority = -0.12 }
-			}
+			TRM_increase_rovs_loyalty = yes		
+			add_days_mission_timeout = {
+				mission = TRM_nra_sabotage
+				days = -30
+			}	
+			add_to_variable = { TRM_nra_sabotage_timeout_days = -30 }
 		}
 	}
 	focus = {
@@ -1994,8 +1921,7 @@ focus_tree = {
 		id = TRM_Limit_Cossack_Autonomy
 		icon = GFX_TRM_Limit_Cossack_Autonomy
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 			NOT = { has_idea = TRM_Grigoriy_M_Semyenov_hog_pau }
 		}
 		relative_position_id = TRM_Kolchak_Doc
@@ -2009,11 +1935,18 @@ focus_tree = {
 		}
 		cost = 4
 		ai_will_do = {
-			base = 60
+			base = 10
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = TRM_path
+					option = RULE_OPTION_TRM_SEMYONOV
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			custom_effect_tooltip = TRM_Limit_Cossack_Autonomy_tt
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Limit_Cossack_Autonomy"
 			TRM_decrease_cossack_loyalty = yes
 			TRM_increase_rovs_loyalty = yes
 		}
@@ -2022,8 +1955,7 @@ focus_tree = {
 		id = TRM_Expand_Cossack_Rights
 		icon = GFX_TRM_Expand_Cossack_Rights
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 		}
 		relative_position_id = TRM_Kolchak_Doc
 		x = -1
@@ -2036,30 +1968,49 @@ focus_tree = {
 		}
 		cost = 4
 		ai_will_do = {
-			base = 60
+			base = 10
 			modifier = {
-				factor = 100
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
+				}
+			}
+			modifier = {
+				factor = 10
 				has_game_rule = {
 					rule = TRM_path
 					option = RULE_OPTION_TRM_KOLCHAK_SECURES_POWER
 				}
 			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = TRM_path
+					option = RULE_OPTION_TRM_SEMYONOV
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			custom_effect_tooltip = TRM_Expand_Cossack_Rights_tt
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Placate_The_Cossacks"
 			TRM_increase_cossack_loyalty = yes
 			TRM_decrease_rovs_loyalty = yes
-			unlock_decision_tooltip = TRM_make_chita_fully_cossack
-			unlock_decision_tooltip = TRM_make_blagoveschensk_fully_cossack
+			activate_targeted_decision = { target = 563 decision = TRM_make_chita_fully_cossack }
+			activate_targeted_decision = { target = 561 decision = TRM_make_blagoveschensk_fully_cossack }
 		}
 	}
 	focus = {
 		id = TRM_Ensure_Czech_Legion_Loyalty
 		icon = GFX_TRM_Czechs_Loyalty
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 		}
 		relative_position_id = TRM_Kolchak_Doc
 		x = -2
@@ -2074,46 +2025,8 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Ensure_Czech_Legion_Loyalty"
 			custom_effect_tooltip = TRM_Increase_Czech_Support
-			TRM = {
-				create_field_marshal = {
-					name = "Radola Gajda"
-					portrait_path = "gfx/leaders/RUS/Portrait_RUS_Radola_Gajda.png"
-					id = 243913
-					traits = {
-						offensive_doctrine
-						trickster
-						winter_specialist
-						winter_expert 
-						fast_planner
-						politically_connected 
-					}
-					skill = 4
-					attack_skill = 4
-					defense_skill = 2
-					planning_skill = 1
-					logistics_skill = 3
-				}
-				create_corps_commander = {
-					name = "Sergey Voytsekhovskiy"
-					id = 505059
-					portrait_path = "gfx/leaders/TRM/Portrait_TRM_Sergey_Wojciechowski.png"
-					traits = {
-						politically_connected 
-						war_hero  
-						harsh_leader   
-						organizer	
-						skilled_staffer	
-						hill_fighter	
-						ranger	
-					}
-					skill = 4
-					attack_skill = 3
-					defense_skill = 2
-					planning_skill = 3
-					logistics_skill = 2
-				}
-			}
 			if = {
 				limit = {
 					has_dlc = "No Step Back"
@@ -2140,7 +2053,7 @@ focus_tree = {
 				create_railway_gun = {
 					equipment = railway_gun_equipment_1
 					name = "Orlik" 
-				}				
+				}
 			}
 		}
 	}
@@ -2148,8 +2061,7 @@ focus_tree = {
 		id = TRM_Deal_With_Oblastniki
 		icon = GFX_TRM_Strangle_Federalism
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 		}
 		relative_position_id = TRM_Kolchak_Doc
 		x = -4
@@ -2162,21 +2074,24 @@ focus_tree = {
 		}
 		cost = 3.2
 		ai_will_do = {
-			base = 90
+			base = 10
 			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = YAK_independece_path
-					option = RULE_OPTION_TRM_YAKUTIA
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+					has_game_rule = {
+						rule = TRM_path
+						option = RULE_OPTION_TRM_KOLCHAK_SECURES_POWER
+					}
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
 				}
-			}
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = TRM_path
-					option = RULE_OPTION_TRM_CW
-				}
-			}
+			}	
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
@@ -2189,8 +2104,7 @@ focus_tree = {
 		id = TRM_Siberian_Regional_Council
 		icon = GFX_TRM_Siberian_Council
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 		}
 		relative_position_id = TRM_Kolchak_Doc
 		x = -6
@@ -2221,6 +2135,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Siberian_Regional_Council"
 			custom_effect_tooltip = TRM_Siberian_Regional_Council_tt
 			country_event = tram.208
 			TRM_decrease_rovs_loyalty = yes
@@ -2236,8 +2151,7 @@ focus_tree = {
 		id = TRM_Self_Government_Minorities
 		icon = GFX_TRM_Minorities_Government
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 		}
 		relative_position_id = TRM_Kolchak_Doc
 		x = -7
@@ -2268,18 +2182,18 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Decentralisation_Of_Governance"
 			custom_effect_tooltip = TRM_Self_Government_Minorities_tt
 			TRM_decrease_rovs_loyalty = yes
-			unlock_decision_tooltip = TRM_buryat_kurultai
-			unlock_decision_tooltip = TRM_yakut_munnah
+			activate_targeted_decision = { target = 564 decision = TRM_buryat_kurultai }
+			activate_targeted_decision = { target = 574 decision = TRM_yakut_munnah }		
 		}
 	}
 	focus = {
 		id = TRM_Martial_Law_In_Minority_Areas
 		icon = GFX_TRM_Martial_Law
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 		}
 		relative_position_id = TRM_Kolchak_Doc
 		x = -5
@@ -2295,26 +2209,110 @@ focus_tree = {
 		ai_will_do = {
 			base = 50
 			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = YAK_independece_path
-					option = RULE_OPTION_TRM_YAKUTIA
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
 				}
 			}
 			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = TRM_path
-					option = RULE_OPTION_TRM_CW
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+				}
+				NOT = {
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
 				}
 			}
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			custom_effect_tooltip = TRM_Martial_Law_In_Minority_Areas_tt
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Martial_Law_In_Minority_Areas"
 			TRM_increase_rovs_loyalty = yes
-			unlock_decision_tooltip = TRM_yakutia_martial_law
-			unlock_decision_tooltip = TRM_buryat_martial_law
+			if = {
+				limit = {
+					564 = { is_owned_and_controlled_by = ROOT }
+				}
+				set_country_flag = TRM_martial_law_in_buryatia
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.05
+				}
+				custom_effect_tooltip = TRM_buryat_martial_law_tt
+				564 = { 
+					TRM_Decrease_Oblastniki_Support_Greatly = yes
+					TRM_Increase_Kolchak_Support = yes
+					TRM_Increase_Semyonov_Support = yes
+					TRM_Increase_ROVS_Support = yes
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = TRM_autonomous_republic_modifier }
+						}
+						remove_dynamic_modifier = { modifier = TRM_autonomous_republic_modifier }
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = TRM_civilian_government_modifier }
+						}
+						remove_dynamic_modifier = { modifier = TRM_civilian_government_modifier }
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = TRM_cossack_host_modifier }
+						}
+						remove_dynamic_modifier = { modifier = TRM_cossack_host_modifier }
+					}
+					add_dynamic_modifier = { modifier = TRM_martial_law_modifier } 
+				}
+				TRM_clamp_spheres_of_influence = yes
+				TRM_recalculate_kolchak_variables = yes
+				hidden_effect = { country_event = tram.10003 }
+			}
+			if = {
+				limit = {
+					574 = { is_owned_and_controlled_by = ROOT }
+				}
+				set_country_flag = TRM_martial_law_in_yakutia
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.05
+				}
+				custom_effect_tooltip = TRM_yakut_martial_law_tt
+				574 = { 
+					TRM_Decrease_Oblastniki_Support_Greatly = yes
+					TRM_Increase_Kolchak_Support = yes
+					TRM_Increase_Semyonov_Support = yes
+					TRM_Increase_ROVS_Support = yes
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = TRM_autonomous_republic_modifier }
+						}
+						remove_dynamic_modifier = { modifier = TRM_autonomous_republic_modifier }
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = TRM_civilian_government_modifier }
+						}
+						remove_dynamic_modifier = { modifier = TRM_civilian_government_modifier }
+					}
+					add_dynamic_modifier = { modifier = TRM_martial_law_modifier } 
+				}		
+				TRM_clamp_spheres_of_influence = yes
+				TRM_recalculate_kolchak_variables = yes
+				hidden_effect = { country_event = tram.10001 }
+			}
 		}
 	}
 	focus = {
@@ -2332,10 +2330,28 @@ focus_tree = {
 		}
 		cost = 4
 		ai_will_do = {
-			base = 60
+			base = 10
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+					has_game_rule = {
+						rule = TRM_path
+						option = RULE_OPTION_TRM_KOLCHAK_SECURES_POWER
+					}
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
+				}
+			}	
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Stake_On_Military"
 			TRM_increase_rovs_loyalty = yes
 			every_owned_state = {
 				limit = {
@@ -2343,18 +2359,11 @@ focus_tree = {
 						state = 408
 					}
 				}
-				custom_effect_tooltip = TRM_Increase_ROVS_Support
-			}
+				TRM_Increase_ROVS_Support = yes
+			}		
 			hidden_effect = {
-				add_to_variable = { Amur_ROVS_Authority = 0.04 }
-				add_to_variable = { Bodaybo_ROVS_Authority = 0.04 }
-				add_to_variable = { Yakutia_ROVS_Authority = 0.04 }
-				add_to_variable = { Blagoveschensk_ROVS_Authority = 0.04 }
-				add_to_variable = { Buryatia_ROVS_Authority = 0.04 }
-				add_to_variable = { Kamchatka_ROVS_Authority = 0.04 }
-				add_to_variable = { Khabarovsk_ROVS_Authority = 0.04 }
-				add_to_variable = { Magadan_ROVS_Authority = 0.04 }
-				add_to_variable = { Nikolayevsk_ROVS_Authority = 0.04 }
+				TRM_clamp_spheres_of_influence = yes
+				TRM_recalculate_kolchak_variables = yes
 			}
 		}
 	}
@@ -2408,25 +2417,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			custom_effect_tooltip = TRM_Vladivostok_Business_Circle_Will_Grow_Less_Dependant_On_Japanese
-			add_to_variable = { VladBusCirOrientation = 1 }
-			effect_tooltip = {
-				every_owned_state = {
-					custom_effect_tooltip = TRM_Increase_Transamur_Businessmen_Support
-				}
-			}
-			hidden_effect = {
-				add_to_variable = { Amur_Business_Authority = 0.05 }
-				add_to_variable = { Bodaybo_Business_Authority = 0.05 }
-				add_to_variable = { Yakutia_Business_Authority = 0.05 }
-				add_to_variable = { Blagoveschensk_Business_Authority = 0.05 }
-				add_to_variable = { Buryatia_Business_Authority = 0.05 }
-				add_to_variable = { Kamchatka_Business_Authority = 0.05 }
-				add_to_variable = { Khabarovsk_Business_Authority = 0.05 }
-				add_to_variable = { Magadan_Business_Authority = 0.05 }
-				add_to_variable = { Nikolayevsk_Business_Authority = 0.05 }
-				add_to_variable = { Vladivostok_Business_Authority = 0.01 }
-			}
+			unlock_decision_tooltip = TRM_Protect_Vladivostok_Business
 		}
 	}
 	focus = {
@@ -2461,68 +2452,8 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		completion_reward = {
-			custom_effect_tooltip = TRM_Vladivostok_Business_Circle_Will_Grow_Less_Dependant_On_Japanese
-			add_to_variable = { VladBusCirOrientation = 1 }
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = -0.05
-			}
-			effect_tooltip = {
-				random_list = {
-					20 = { 409 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					20 = { 637 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					15 = { 562 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					15 = { 560 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					10 = { 657 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					10 = { 561 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					5 = { 574 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					5 = { 563 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-				}
-			}
-			hidden_effect = {
-				random_list = {
-					20 = {
-						add_to_variable = { Khabarovsk_Japanese_Authority = -0.05 }
-						add_to_variable = { Khabarovsk_Kolchak_Authority = 0.05 }
-					}
-					20 = {
-						add_to_variable = { Kamchatka_Japanese_Authority = -0.05 }
-						add_to_variable = { Kamchatka_Kolchak_Authority = 0.05 }
-					}
-					15 = {
-						add_to_variable = { Magadan_Japanese_Authority = -0.05 }
-						add_to_variable = { Magadan_Kolchak_Authority = 0.05 }
-					}
-					15 = {
-						add_to_variable = { Nikolayevsk_Japanese_Authority = -0.05 }
-						add_to_variable = { Nikolayevsk_Kolchak_Authority = 0.05 }
-					}
-					10 = {
-						add_to_variable = { Blagoveschensk_Japanese_Authority = -0.05 }
-						add_to_variable = { Blagoveschensk_Kolchak_Authority = 0.05 }
-					}
-					10 = {
-						add_to_variable = { Amur_Japanese_Authority = -0.05 }
-						add_to_variable = { Amur_Kolchak_Authority = 0.05 }
-					}
-					5 = {
-						add_to_variable = { Yakutia_Japanese_Authority = -0.05 }
-						add_to_variable = { Yakutia_Kolchak_Authority = 0.05 }
-					}
-					5 = { 
-						add_to_variable = { Chita_Japanese_Authority = -0.05 }
-						add_to_variable = { Chita_Kolchak_Authority = 0.05 }
-					}
-				}
-			}
-			TRM_recalculate_japanese_effects = yes
-			TRM_clamp_spheres_of_influence = yes
-			TRM_recalculate_kolchak_variables = yes
-			reverse_add_opinion_modifier = {
-				target = CAN
-				modifier = KR_approves_of_govt   
-			}
+		completion_reward = {			
+			activate_targeted_decision = { target = ENT decision = TRM_Seek_For_Entente_Support }
 		}
 	}
 	
@@ -2545,77 +2476,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			custom_effect_tooltip = TRM_Japanese_Arms_tt
-			add_popularity = {ideology = authoritarian_democrat popularity = 0.03}
-			custom_effect_tooltip = TRM_Vladivostok_Business_Circle_Will_Grow_More_Dependant_On_Japanese
-			add_to_variable = { VladBusCirOrientation = -1 }
-			effect_tooltip = {
-				random_list = {
-					20 = { 409 = { custom_effect_tooltip = TRM_Increase_Japanese_Support } }
-					20 = { 637 = { custom_effect_tooltip = TRM_Increase_Japanese_Support } }
-					15 = { 562 = { custom_effect_tooltip = TRM_Increase_Japanese_Support } }
-					15 = { 560 = { custom_effect_tooltip = TRM_Increase_Japanese_Support } }
-					10 = { 657 = { custom_effect_tooltip = TRM_Increase_Japanese_Support } }
-					10 = { 561 = { custom_effect_tooltip = TRM_Increase_Japanese_Support } }
-					5 = { 574 = { custom_effect_tooltip = TRM_Increase_Japanese_Support } }
-					5 = { 563 = { custom_effect_tooltip = TRM_Increase_Japanese_Support } }
-				}
-				408 = {
-					custom_effect_tooltip = TRM_Increase_Japanese_Support
-					custom_effect_tooltip = TRM_Increase_Transamur_Businessmen_Support
-				}
-			}
-			hidden_effect = {
-				random_list = {
-					20 = {
-						add_to_variable = { Khabarovsk_Japanese_Authority = 0.03 }
-						add_to_variable = { Khabarovsk_Kolchak_Authority = -0.03 }
-					}
-					20 = {
-						add_to_variable = { Kamchatka_Japanese_Authority = 0.03 }
-						add_to_variable = { Kamchatka_Kolchak_Authority = -0.03 }
-					}
-					15 = {
-						add_to_variable = { Magadan_Japanese_Authority = 0.03 }
-						add_to_variable = { Magadan_Kolchak_Authority = -0.03 }
-					}
-					15 = {
-						add_to_variable = { Nikolayevsk_Japanese_Authority = 0.03 }
-						random_list = {
-							50 = { add_to_variable = { Nikolayevsk_Kolchak_Authority = -0.03 } }
-							50 = { add_to_variable = { Nikolayevsk_ROVS_Authority = -0.03 } }
-						}
-					}
-					10 = {
-						add_to_variable = { Blagoveschensk_Japanese_Authority = 0.03 }
-						add_to_variable = { Blagoveschensk_Kolchak_Authority = -0.03 }
-					}
-					10 = {
-						add_to_variable = { Amur_Japanese_Authority = 0.03 }
-						add_to_variable = { Amur_Kolchak_Authority = -0.03 }
-					}
-					5 = {
-						add_to_variable = { Yakutia_Japanese_Authority = 0.03 }
-						add_to_variable = { Yakutia_Kolchak_Authority = -0.03 }
-					}
-					5 = { 
-						add_to_variable = { Chita_Japanese_Authority = 0.03 }
-						add_to_variable = { Chita_Kolchak_Authority = -0.03 }
-					}
-				}
-				add_to_variable = { Vladivostok_Business_Authority = 0.05 }
-				add_to_variable = { Vladivostok_Japanese_Authority = 0.05 }
-				add_to_variable = { Vladivostok_Kolchak_Authority = -0.025 }
-				add_to_variable = { Vladivostok_NRA_Authority = -0.025 }
-				add_to_variable = { Vladivostok_Oblastniki_Authority = -0.025 }
-				add_to_variable = { Vladivostok_ROVS_Authority = -0.025 }
-				set_variable = { TRM_japanese_arms_infantry = 500 }
-				set_variable = { TRM_japanese_arms_motorized = 50 }
-				activate_mission = TRM_japanese_arm_shipments
-			}
-			TRM_recalculate_japanese_effects = yes
-			TRM_clamp_spheres_of_influence = yes
-			TRM_recalculate_kolchak_variables = yes
+			activate_targeted_decision = { target = JAP decision = TRM_Japanese_Arms }
 		}
 	}
 	focus = {
@@ -2708,8 +2569,7 @@ focus_tree = {
 		id = TRM_Kolchak_Mil
 		icon = GFX_TRM_Vladivostok_Arsenal
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
+			TRM_kolchak_in_power = yes
 		}
 		relative_position_id = TRM_Kolchak_Doc
 		x = 1
@@ -2723,14 +2583,15 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Loosen_Control_Over_Vladivostok_Port"
 			408 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
-			}
+			}	
 		}
 	}
 	focus = {
@@ -2752,7 +2613,9 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Increase_Our_Legitimacy"
 			custom_effect_tooltip = TRM_Increase_Our_Legitimacy_tt			
+			unlock_decision_tooltip = RUS_Start_The_Offensive_TRM
 		}
 	}
 	focus = {
@@ -5205,9 +5068,9 @@ focus = {
 		
 	focus = {
 		id = TRM_Yui_Focus
-		icon = GFX_focus_AST_war_japan
+		icon = GFX_goal_JAP_toseiha
 		available = {
-			has_country_flag = TRM_Yui
+			TRM_japanese_in_power = yes
 		}
 		x = 8
 		y = 0
@@ -5217,14 +5080,13 @@ focus = {
 			base = 10
 		}
 		bypass = {
-			has_country_flag = TRM_Yui
+			TRM_japanese_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Yui_Focus"
 			add_stability = 0.05
 			add_war_support = 0.1
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -5232,7 +5094,7 @@ focus = {
 		icon = GFX_goal_CAL_Japan_Immigration
 		prerequisite = {focus = TRM_Yui_Focus}
 		available = {
-			has_country_flag = TRM_Yui
+			TRM_japanese_in_power = yes
 		}
 		x = -1
 		y = 1
@@ -5247,52 +5109,57 @@ focus = {
 			add_stability = -0.15
 			add_manpower = 100000
 		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
 	focus = {
-		id = TRM_Jap_Inv3
-		icon = GFX_goal_japanese_instructors
+		id = TRM_Feng_Smugglers
+		icon = GFX_goal_LEC_triads
+		x = 1
+		y = 2
+		relative_position_id = TRM_Yui_Focus
+		cost = 5
+		prerequisite = {focus = TRM_Feng_Workforce }
+		available = {
+			TRM_japanese_in_power = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Feng_Smugglers"
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250
+				producer = LEC
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+				producer = LEC
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = LEC
+			}
+		}
+	}
+	focus = {
+		id = TRM_Feng_Workforce
+		icon = GFX_goal_ANQ_fengtian_loyalty
 		x = 1
 		y = 1
 		relative_position_id = TRM_Yui_Focus
 		cost = 5
 		prerequisite = {focus = TRM_Yui_Focus}
 		available = {
-			has_country_flag = TRM_Yui
-		}
-		ai_will_do = {
-			base = 60
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Jap_Inv3"
-			if = {
-				limit = { has_idea = TRM_JAP_DEP_2 }
-				swap_ideas = {
-					remove_idea = TRM_JAP_DEP_2
-					add_idea = TRM_JAP_DEP_3
-				}
-			}
-			add_popularity = {ideology = authoritarian_democrat popularity = 0.03}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = TRM_Feng_Workforce
-		icon = GFX_goal_ANQ_fengtian_loyalty
-		x = 1
-		y = 2
-		relative_position_id = TRM_Yui_Focus
-		cost = 5
-		prerequisite = {focus = TRM_Jap_Inv3}
-		available = {
-			has_country_flag = TRM_Yui
+			TRM_japanese_in_power = yes
 			country_exists = FNG
 			NOT = { has_war_with = FNG }
 			408 = { is_owned_and_controlled_by = TRM }
 		}
 
 		ai_will_do = {
-			base = 60
+			base = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Feng_Workforce"
@@ -5305,148 +5172,62 @@ focus = {
 			}
 			add_popularity = {ideology = authoritarian_democrat popularity = 0.02}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
 		id = TRM_Yui_End
 		icon = GFX_CAL_japanese_propaganda
 		prerequisite = {focus = TRM_Yui_Jap}
 		available = {
-			has_country_flag = TRM_Yui
+			TRM_japanese_in_power = yes
 		}
 		x = -1
 		y = 2
 		relative_position_id = TRM_Yui_Focus
 		cost = 5
 		ai_will_do = {
-			base = 60
+			base = 10
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Yui_End"
 			add_stability = 0.1
 		}
-		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 	focus = {
 		id = TRM_Rising_Sun
-		icon = GFX_goal_JAP_greater_asian_sphere
+		icon = GFX_goal_Japanese_Glory
 		cost = 5
 		relative_position_id = TRM_Yui_Focus
 		x = 0
 		y = 3
-		prerequisite = {focus = TRM_Feng_Workforce}
+		prerequisite = {focus = TRM_Feng_Smugglers }
 		prerequisite = {focus = TRM_Yui_End }
 		available = {
-			has_country_flag = TRM_Yui
+			TRM_japanese_in_power = yes
 		}
 
-		ai_will_do = {
-			base = 60
-		}
-		completion_reward = {
-			add_political_power = 50
-			#country_event = {
-				#id = tramjap.3
-				#days = 1
-			#}
-		}
-	}
-	focus = {
-		id = TRM_Japanese_Annexation
-		icon = GFX_goal_Japanese_Glory
-		cost = 5
-		relative_position_id = TRM_Yui_Focus
-		x = 2
-		y = 4
-		prerequisite = {focus = TRM_Rising_Sun}
-		available = {
-			has_country_flag = TRM_Yui
-		}
-		mutually_exclusive = {
-			focus = TRM_Japanese_Colony
-			focus = TRM_Give_Ussuri_To_Fengtian
-		}
-		ai_will_do = {
-			base = 2
-		}
-		completion_reward = {
-			JAP = { country_event = {
-				id = tramjap.4
-				days = 1
-			}
-			}
-		}
-	}
-	focus = {
-		id = TRM_Japanese_Colony
-		icon = GFX_goal_japanese_imperialism
-		cost = 5
-		relative_position_id = TRM_Yui_Focus
-		x = 0
-		y = 4
-		prerequisite = {focus = TRM_Rising_Sun}
-		available = {
-			has_country_flag = TRM_Yui
-		}
-		mutually_exclusive = {
-			focus = TRM_Japanese_Annexation
-			focus = TRM_Give_Ussuri_To_Fengtian
-		}
 		ai_will_do = {
 			base = 10
 		}
 		completion_reward = {
-			JAP = { country_event = {
-				id = tramjap.5
-				days = 1
-			}
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Rising_Sun"
+			country_event = tramjap.3
 		}
 	}
-	focus = {
-		id = TRM_Give_Ussuri_To_Fengtian
-		icon = GFX_goal_FNG_Military_Man
-		cost = 5
-		relative_position_id = TRM_Yui_Focus
-		x = -2
-		y = 4
-		prerequisite = {focus = TRM_Rising_Sun}
-		available = {
-			has_country_flag = TRM_Yui
-			country_exists = FNG
-		}
-		mutually_exclusive = {
-			focus = TRM_Japanese_Colony
-			focus = TRM_Japanese_Annexation
-		}
-		ai_will_do = {
-			base = 1
-		}
-		completion_reward = {
-			JAP = { country_event = {
-				id = tramjap.6
-				days = 1
-			}
-			}
-		}
-	}
+	
+
 	focus = {
 		id = TRM_tsar_soviets
 		text = TRM_tsar_soviets
 		icon = GFX_goal_TRM_mlad_focus_first
-		cost = 5.00
-		x = 26
-		y = 11
+		cost = 5
+		x = 24
+		y = 12
 		available = {
-			custom_trigger_tooltip = {
-					tooltip = TRM_Mlad_in_power
-					has_country_flag = TRM_Mlad_in_power
-					has_government = totalist
-				}
+			TRM_Mlad_in_power = yes
 		}
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_tsar_soviets"
@@ -5460,6 +5241,7 @@ focus = {
 					ideology = totalist
 					popularity = 0.03
 				}
+			activate_mission = TRM_make_monarchy
 		}
 
 	}
@@ -5467,16 +5249,20 @@ focus = {
 		id = TRM_modern_bog
 		text = TRM_modern_bog
 		icon = GFX_goal_TRM_mlad_focus_second
-		cost = 5.00
+		cost = 5
 		prerequisite = {
-			focus = TRM_tsar_soviets
+			focus = TRM_vlad_conference
 		}
 		ai_will_do = {
 			base = 70
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SOCDEM_MLADOROSSI}
+			}
 		}
 		relative_position_id = TRM_tsar_soviets
-		x = 3
-		y = 1
+		x = 4
+		y = 2
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5506,16 +5292,16 @@ focus = {
 		id = TRM_social_monarchy
 		text = TRM_social_monarchy
 		icon = GFX_goal_TRM_The_Modern_Bogatyr
-		cost = 5.00
+		cost = 5
 		prerequisite = {
-			focus = TRM_tsar_soviets
+			focus = TRM_vlad_conference
 		}
 		ai_will_do = {
 			base = 80
 		}
 		relative_position_id = TRM_tsar_soviets
-		x = -3
-		y = 1
+		x = -4
+		y = 2
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5538,19 +5324,16 @@ focus = {
 		id = TRM_imperial_council
 		text = TRM_imperial_council
 		icon = GFX_goal_TRM_All_Imperial_Economic_Council
-		cost = 5.00
+		cost = 5
 		ai_will_do = {
 			base = 80
 		}
 		prerequisite = {
 			focus = TRM_modern_bog
 		}
-		prerequisite = {
-			focus = TRM_social_monarchy
-		}
 		relative_position_id = TRM_tsar_soviets
-		x = 4
-		y = 2
+		x = 3
+		y = 3
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5589,19 +5372,16 @@ focus = {
 		id = TRM_party_order
 		text = TRM_party_order
 		icon = GFX_goal_TRM_mlad_focus_third
-		cost = 5.00
+		cost = 5
 		prerequisite = {
 			focus = TRM_social_monarchy
-		}
-		prerequisite = {
-			focus = TRM_modern_bog
 		}
 		ai_will_do = {
 			base = 75
 		}
 		relative_position_id = TRM_tsar_soviets
-		x = -4
-		y = 2
+		x = -3
+		y = 3
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5618,7 +5398,7 @@ focus = {
 		id = TRM_soviet_democracy
 		text = TRM_soviet_democracy
 		icon = GFX_goal_TRM_Soviet_Democracy
-		cost = 5.00
+		cost = 5
 		prerequisite = {
 			focus = TRM_party_order
 		}
@@ -5627,7 +5407,7 @@ focus = {
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = -3
-		y = 3
+		y = 4
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5647,7 +5427,7 @@ focus = {
 		id = TRM_cult
 		text = TRM_cult
 		icon = GFX_goal_TRM_Cult_of_the_Vozhd
-		cost = 5.00
+		cost = 5
 		prerequisite = {
 			focus = TRM_soviet_democracy
 		}
@@ -5656,7 +5436,7 @@ focus = {
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = -2
-		y = 4
+		y = 5
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5676,9 +5456,9 @@ focus = {
 		id = TRM_vlad_conference
 		text = TRM_vlad_conference
 		icon = GFX_goal_TRM_The_Vladivostok_Conference
-		cost = 5.00
+		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_tsar_soviets
@@ -5702,9 +5482,9 @@ focus = {
 		id = TRM_ally_nationalists
 		text = TRM_ally_nationalists
 		icon = GFX_goal_TRM_nazis
-		cost = 5.00
+		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_vlad_conference
@@ -5747,16 +5527,16 @@ focus = {
 		id = TRM_our_hand_alone
 		text = TRM_our_hand_alone
 		icon = GFX_goal_TRM_hand_alone
-		cost = 5.00
+		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_ally_nationalists
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = -1
-		y = 3
+		y = 4
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5773,9 +5553,9 @@ focus = {
 		id = TRM_ally_evra
 		text = TRM_ally_evra
 		icon = GFX_RUS_young_eurasians
-		cost = 5.00
+		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_vlad_conference
@@ -5818,16 +5598,16 @@ focus = {
 		id = TRM_eurasia
 		text = TRM_eurasia
 		icon = GFX_RUS_krestostrel
-		cost = 5.00
+		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_ally_evra
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = 0
-		y = 4
+		y = 3
 			available = {
 					has_country_flag = TRM_Mlad_in_power
 				}
@@ -5840,12 +5620,12 @@ focus = {
 		id = TRM_ally_smen
 		text = TRM_ally_smen
 		icon = GFX_focus_trm_dictatorship
-		cost = 5.00
+		cost = 5
 		prerequisite = {
 			focus = TRM_vlad_conference
 		}
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		mutually_exclusive = {
 			focus = TRM_ally_nationalists
@@ -5881,16 +5661,16 @@ focus = {
 		id = TRM_worker_solidarity
 		text = TRM_worker_solidarity
 		icon = GFX_goal_CZE_panslavism
-		cost = 5.00
+		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_ally_smen
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = 1
-		y = 3
+		y = 4
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5911,16 +5691,16 @@ focus = {
 		id = TRM_plan_return
 		text = TRM_plan_return
 		icon = GFX_goal_TRM_prol_values
-		cost = 5.00
+		cost = 5
 		prerequisite = {
 			focus = TRM_imperial_council
 		}
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = 3
-		y = 3
+		y = 4
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5946,7 +5726,7 @@ focus = {
 		id = TRM_orthodox
 		text = TRM_orthodox
 		icon = GFX_goal_TRM_Orthodox_Integralism
-		cost = 5.00
+		cost = 5
 		ai_will_do = {
 			base = 75
 		}
@@ -5955,7 +5735,7 @@ focus = {
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = 2
-		y = 4
+		y = 5
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -5976,14 +5756,14 @@ focus = {
 		id = TRM_spirit_revolution
 		text = TRM_spirit_revolution
 		icon = GFX_goal_TRM_spirit
-		cost = 5.00
+		cost = 5
 		prerequisite = {
 			focus = TRM_worker_solidarity
 			focus = TRM_our_hand_alone
 			focus = TRM_eurasia
 		}
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_cult
@@ -5993,7 +5773,7 @@ focus = {
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = 0
-		y = 5
+		y = 6
 			available = {
 					custom_trigger_tooltip = {
 							tooltip = TRM_Mlad_in_power
@@ -6002,11 +5782,10 @@ focus = {
 						}
 				}
 			completion_reward = {
-					TRM = {
 							country_event = trammlad.513
-						}
 					add_political_power = 200
 					add_war_support = 0.2
+			unlock_decision_tooltip = RUS_Start_The_Offensive_TRM
 				}
 
 	}
@@ -6343,14 +6122,10 @@ focus = {
 		x = 12
 		y = 0
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6374,7 +6149,7 @@ focus = {
 		x = -1
 		y = 1
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Nationalists_Take_Over
@@ -6383,11 +6158,7 @@ focus = {
 			focus = TRM_Union_With_Mladorossi
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6402,7 +6173,7 @@ focus = {
 		x = 1
 		y = 1
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Nationalists_Take_Over
@@ -6411,11 +6182,7 @@ focus = {
 			focus = TRM_Destroy_Mladorossi
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6430,7 +6197,7 @@ focus = {
 		x = -2
 		y = 2
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Destroy_Mladorossi
@@ -6445,11 +6212,7 @@ focus = {
 			}
 		}		
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6466,7 +6229,7 @@ focus = {
 		icon = GFX_TRM_all_russian_movement
 		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		relative_position_id = TRM_Nationalists_Take_Over
 		x = -2
@@ -6475,11 +6238,7 @@ focus = {
 			focus = TRM_Contact_DO_ROVS
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6498,7 +6257,7 @@ focus = {
 		x = -3
 		y = 4
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Contact_DO_ROVS
@@ -6508,11 +6267,7 @@ focus = {
 		}
 		available = {
 			has_completed_focus = TRM_Union_With_Mladorossi
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6533,7 +6288,7 @@ focus = {
 		x = -1
 		y = 4
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Contact_DO_ROVS
@@ -6543,11 +6298,7 @@ focus = {
 		}
 		available = {
 			has_completed_focus = TRM_Destroy_Mladorossi
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		bypass = {
 			hidden_trigger = {
@@ -6570,18 +6321,14 @@ focus = {
 		x = 0
 		y = 2
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Union_With_Mladorossi
 			focus = TRM_Destroy_Mladorossi
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		bypass = {
 			has_country_flag = TRM_Monarchy
@@ -6596,7 +6343,7 @@ focus = {
 		icon = GFX_TRM_All_Imperial_Economic_Council2
 		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		relative_position_id = TRM_Nationalists_Take_Over
 		x = 0
@@ -6605,11 +6352,7 @@ focus = {
 			focus = TRM_Meet_Royal_Family
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		bypass = {
 			has_idea = TRM_imperial_council
@@ -6646,7 +6389,7 @@ focus = {
 		icon = GFX_TRM_Strict_Discipline
 		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		relative_position_id = TRM_Nationalists_Take_Over
 		x = 2
@@ -6656,11 +6399,7 @@ focus = {
 			focus = TRM_Destroy_Mladorossi
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6672,7 +6411,7 @@ focus = {
 		icon = GFX_TRM_arrest_cossacks
 		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		relative_position_id = TRM_Nationalists_Take_Over
 		x = 2
@@ -6681,11 +6420,7 @@ focus = {
 			focus = TRM_Strict_Discipline
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		bypass = {
 			hidden_trigger = {
@@ -6748,7 +6483,7 @@ focus = {
 		icon = GFX_TRM_destroy_japanese
 		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		relative_position_id = TRM_Nationalists_Take_Over
 		x = 1
@@ -6757,11 +6492,7 @@ focus = {
 			focus = TRM_Strict_Discipline
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6776,17 +6507,13 @@ focus = {
 		x = 3
 		y = 4
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Strict_Discipline
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		bypass = {
 			has_country_flag = TRM_NRA_crushed
@@ -6804,7 +6531,7 @@ focus = {
 			}
 			effect_tooltip = {
 				every_owned_state = {
-					custom_effect_tooltip = TRM_Decrease_NRA_Resistance_Greatly
+					TRM_Decrease_NRA_Resistance_Greatly = yes
 				}
 			}
 		}
@@ -6817,7 +6544,7 @@ focus = {
 		x = 2
 		y = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Eradicate_Japanese_Influence
@@ -6826,11 +6553,7 @@ focus = {
 			focus = TRM_Deal_With_NRA_Partisans
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6849,45 +6572,18 @@ focus = {
 		x = -2
 		y = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Forget_Former_Confederates
 			focus = TRM_Talks_With_ROVS
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
-			if = {
-				limit = {
-					has_idea = TRM_Siberian_Army_elite
-				}
-				swap_ideas = {
-					remove_idea = TRM_Siberian_Army_elite
-					add_idea = TRM_Peoples_Army_idea
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = TRM_Siberian_Army_regular
-				}
-				swap_ideas = {
-					remove_idea = TRM_Siberian_Army_regular
-					add_idea = TRM_Peoples_Army_1_idea
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = TRM_Siberian_Army
-					add_idea = TRM_Peoples_Army_idea
-				}
-			}
+			add_ideas = TRM_Peoples_Army_idea
 			custom_effect_tooltip = TRM_legitimacy_will_increase
 			hidden_effect = {
 				TRM_increase_legitmacy_nats = yes
@@ -6902,7 +6598,7 @@ focus = {
 		x = 0
 		y = 5
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_All_Russian_Economic_Council
@@ -6914,11 +6610,7 @@ focus = {
 			focus = TRM_Arrest_Treacherous_Cossacks
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
@@ -6933,7 +6625,7 @@ focus = {
 		x = 0
 		y = 6
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		prerequisite = {
 			focus = TRM_Hail_Vozhd
@@ -6945,15 +6637,12 @@ focus = {
 			focus = TRM_Peoples_Liberation
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_Nats_in_power
-				has_country_flag = TRM_Nats_in_power
-				has_government = national_populist
-			}
+			TRM_Nats_in_power = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Nationalists_Take_Over"
 			country_event = trammlad.531
+			unlock_decision_tooltip = RUS_Start_The_Offensive_TRM
 		}
 	}
 	focus = {
@@ -6998,12 +6687,7 @@ focus = {
 		}
 		cost = 5
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
-			has_country_leader = {
-				ruling_only = yes
-				name = "Aleksandr Kolchak"
-			}
+			TRM_kolchak_in_power = yes			
 		}
 		ai_will_do = {
 			base = 10
@@ -7026,12 +6710,7 @@ focus = {
 			focus = TRM_Restructure_Bureaucracy
 		}
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
-			has_country_leader = {
-				ruling_only = yes
-				name = "Aleksandr Kolchak"
-			}
+			TRM_kolchak_in_power = yes			
 		}
 		ai_will_do = {
 			base = 10
@@ -7054,12 +6733,7 @@ focus = {
 			focus = TRM_Restructure_Army
 		}
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
-			has_country_leader = {
-				ruling_only = yes
-				name = "Aleksandr Kolchak"
-			}
+			TRM_kolchak_in_power = yes			
 		}
 		ai_will_do = {
 			base = 10
@@ -7079,12 +6753,7 @@ focus = {
 			focus = TRM_Legitimate_Ruler_Is_Back
 		}
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
-			has_country_leader = {
-				ruling_only = yes
-				name = "Aleksandr Kolchak"
-			}
+			TRM_kolchak_in_power = yes			
 		}
 		ai_will_do = {
 			base = 10
@@ -7118,12 +6787,7 @@ focus = {
 			focus = TRM_Legitimate_Ruler_Is_Back
 		}
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
-			has_country_leader = {
-				ruling_only = yes
-				name = "Aleksandr Kolchak"
-			}
+			TRM_kolchak_in_power = yes			
 		}
 		ai_will_do = {
 			base = 10
@@ -7160,12 +6824,7 @@ focus = {
 			focus = TRM_Fate_Of_Unions
 		}
 		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
-			has_country_leader = {
-				ruling_only = yes
-				name = "Aleksandr Kolchak"
-			}
+			TRM_kolchak_in_power = yes			
 		}
 		ai_will_do = {
 			base = 10
@@ -7190,13 +6849,7 @@ focus = {
 			has_country_flag = TRM_become_russia
 			if = {
 				limit = {
-					NOT = {
-						tag = MON
-					}
-					has_country_leader = {
-						ruling_only = yes
-						name = "Aleksandr Kolchak"
-					}
+					TRM_kolchak_in_power = yes
 				}
 				has_completed_focus = TRM_The_Only_Supreme_Ruler
 			}
@@ -7427,10 +7080,7 @@ focus = {
 					NOT = {
 						tag = MON
 					}
-					has_country_leader = {
-						ruling_only = yes
-						name = "Aleksandr Kolchak"
-					}
+					TRM_kolchak_in_power = yes
 				}
 				has_completed_focus = TRM_The_Only_Supreme_Ruler
 			}

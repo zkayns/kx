@@ -78,6 +78,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/bear.png"
 	}
 	spriteType = {
+		name = "GFX_decision_kolchak"
+		texturefile = "gfx/interface/decisions/kolchak.png"
+	}
+	spriteType = {
 		name = "GFX_decision_cat_breadbasket"
 		texturefile = "gfx/interface/decisions/decisions_categories/breadbasket.png"
 	}
