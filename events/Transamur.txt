@@ -5503,7 +5503,6 @@ country_event = { #Russia wants to join the Entente CAN
 				CAN = {
 					has_war_with = TRM
 				}
-
 			}
 		}
 		add_to_faction = TRM
