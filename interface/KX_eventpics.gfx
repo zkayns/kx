@@ -698,6 +698,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/North_America/CSA/CSA_capone_vault_2.png"
 	}
 	spriteType = {
+		name = "GFX_report_event_CSA_alcatraz"
+		texturefile = "gfx/event_pictures/North_America/CSA/CSA_alcatraz.png"
+	}
+	spriteType = {
 		name = "GFX_report_event_CSA_stone_mountain"
 		texturefile = "gfx/event_pictures/North_America/CSA/CSA_stone_mountain.png"
 	}
@@ -4473,10 +4477,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_rus_gorguloff_trial"
 		texturefile = "gfx/event_pictures/Europe/Russia/rus_gorguloff_trial.png"
-	}
-	SpriteType = {
-		name = "GFX_rus_gorguloff_vozhd"
-		texturefile = "gfx/event_pictures/Europe/Russia/rus_gorguloff_vozhd.png"
 	}
 	SpriteType = {
 		name = "GFX_Savinkov_Portrait_Event"

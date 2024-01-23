@@ -312,10 +312,6 @@ country_event = { #Diterikhs dies
 		tag = TRM
 		has_country_flag = TRM_Mil_coup
 		NOT = {
-			has_country_leader = {
-				ruling_only = yes
-				name = "Mikhail Diterikhs"
-			}
 			has_country_flag = Mikhail_Diterikhs_dead
 		}
 	}
@@ -14333,7 +14329,6 @@ country_event = {
 				is_claim_or_core_of_ROOT = yes
 				NOT = { state = 566 }
 			}
-			remove_core_of = ROOT
 			remove_claim_by = ROOT
 		}
 	}

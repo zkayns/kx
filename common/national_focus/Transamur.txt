@@ -430,7 +430,7 @@ focus_tree = {
 				name = TRM_Legacy_Of_The_Weltkrieg
 	cost_reduction = 0.5
 	uses = 2
-	category = cat_fleet_in_being
+	category = naval_doctrine
 			}
 		}
 	}
@@ -518,7 +518,7 @@ focus_tree = {
 				name = TRM_A_New_Path
 	cost_reduction = 0.5
 	uses = 2
-	category = cat_trade_interdiction
+	category = naval_doctrine
 			}
 		}
 	}

@@ -1354,6 +1354,7 @@ country_event = { #Police Takeover
 			}
 			remove_ideas = NYC_the_mafia3
 			remove_ideas = NYC_the_mafia2
+			remove_ideas = NYC_the_mafia4
 			add_ideas = NYC_the_mafia
 			add_ideas = NYC_tammany_hall
 		}
@@ -2118,6 +2119,7 @@ country_event = { #Tammany Takeover
 			}
 			remove_ideas = NYC_the_mafia3
 			remove_ideas = NYC_the_mafia2
+			remove_ideas = NYC_the_mafia4
 			add_ideas = NYC_the_mafia
 		}
 	}
@@ -7741,7 +7743,7 @@ country_event = { #kemp ideo picker
 			ruling_party = radical_socialist
 			elections_allowed = no
 		}
-		increase_ruling_party_popularity_by_10 = yes
+		add_popularity = { ideology = radical_socialist popularity = 0.2 }
 		hidden_effect = {
 			country_event = {
 				id = NYC_flavor.1368
@@ -7755,7 +7757,7 @@ country_event = { #kemp ideo picker
 			ruling_party = syndicalist
 			elections_allowed = no
 		}
-		increase_ruling_party_popularity_by_10 = yes
+		add_popularity = { ideology = syndicalist popularity = 0.2 }
 		hidden_effect = {
 			country_event = {
 				id = NYC_flavor.1368
@@ -11560,6 +11562,7 @@ country_event = { #FDR Jr Demands Power
 			}
 			remove_ideas = NYC_the_mafia3
 			remove_ideas = NYC_the_mafia2
+			remove_ideas = NYC_the_mafia4
 			add_ideas = NYC_the_mafia
 			add_ideas = NYC_tammany_hall
 		}
@@ -11627,6 +11630,7 @@ country_event = { #FDR Jr Marches
 			}
 			remove_ideas = NYC_the_mafia3
 			remove_ideas = NYC_the_mafia2
+			remove_ideas = NYC_the_mafia4
 			add_ideas = NYC_the_mafia
 			add_ideas = NYC_tammany_hall
 		}

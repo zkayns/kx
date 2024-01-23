@@ -1732,6 +1732,12 @@ defined_text = {
 		}
 		localization_key = socdem_gandhism_subtype  
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = socdem_burkhanism_subtype
+		}
+		localization_key = socdem_burkhanism_subtype
+	}
 
 	text = {
 		trigger = {
@@ -2014,6 +2020,12 @@ defined_text = {
 			has_country_leader_ideology = soclib_utopian_technocracy_subtype
 		}
 		localization_key = soclib_utopian_technocracy_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = soclib_burkhanism_subtype
+		}
+		localization_key = soclib_burkhanism_subtype
 	}
  
 	text = {
@@ -2539,6 +2551,12 @@ defined_text = {
 		}
 		localization_key = qadhimism_subtype
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = soccon_synarchism_subtype
+		}
+		localization_key = soccon_synarchism_subtype
+	}
 
 	text = {
 		trigger = {
@@ -2899,6 +2917,12 @@ defined_text = {
 			has_country_leader_ideology = authdem_qadhimism_subtype
 		}
 		localization_key = authdem_qadhimism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = authdem_burkhanism_subtype
+		}
+		localization_key = authdem_burkhanism_subtype
 	}
 
 	text = {
@@ -3826,6 +3850,18 @@ defined_text = {
 			has_country_leader_ideology = dionysian_yoga_subtype
 		}
 		localization_key = dionysian_yoga_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = synarchism_subtype
+		}
+		localization_key = synarchism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = burkhanism_subtype
+		}
+		localization_key = burkhanism_subtype
 	}
 	
 	### YOU GO IN THE CORNER OF SHAME ###

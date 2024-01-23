@@ -33932,10 +33932,6 @@ country_event = { #The Fate of Italy
 		name = annex.280.m #Release as Italt
 		trigger = {
 			has_socialist_government = no
-			OR = {
-				tag = AUS
-				has_government = authoritarian_democrat
-			}
 			NOT = {
 				country_exists = ITA
 				ITA = { is_ally_of_ROOT = yes }
@@ -34817,6 +34813,21 @@ country_event = { #The Fate of Lombardy
 		clr_country_flag = LOM_CONQ
 
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 159
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 
 		ITA = { transfer_state = 159 }
 	}
@@ -34842,6 +34853,21 @@ country_event = { #The Fate of Lombardy
 		clr_country_flag = LOM_CONQ
 
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 159
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 
 		SRI = { transfer_state = 159 }
 	}
@@ -34881,6 +34907,21 @@ country_event = { #The Fate of Lombardy
 		clr_country_flag = LOM_CONQ
 
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 159
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 
 		SIC = { transfer_state = 159 }
 	}
@@ -34920,6 +34961,21 @@ country_event = { #The Fate of Lombardy
 		clr_country_flag = LOM_CONQ
 
 		reverse_add_opinion_modifier = { target = SRD modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 159
+				}
+				if = {
+					limit = { is_claimed_by = SRD }
+					remove_claim_by = SRD
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRD } }
+					add_core_of = SRD
+				}
+			}
+		}
 
 		SRD = { transfer_state = 159 }
 	}
@@ -34931,6 +34987,21 @@ country_event = { #The Fate of Lombardy
 			VNC = {
 				has_country_flag = VNC_accepted_austrian_help
 				has_country_flag = VNC_republican_revolt
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 159
+				}
+				if = {
+					limit = { is_claimed_by = VNC }
+					remove_claim_by = VNC
+				}
+				if = {
+					limit = { NOT = { is_core_of = VNC } }
+					add_core_of = VNC
+				}
 			}
 		}
 		VNC = { transfer_state = 159 }
@@ -35024,6 +35095,24 @@ country_event = { #The Fate of Venice
 		clr_country_flag = VNC_CONQ
 
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 160
+					state = 759
+					}
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 
 		ITA = { transfer_state = 160 }
 
@@ -35059,6 +35148,24 @@ country_event = { #The Fate of Venice
 		clr_country_flag = VNC_CONQ
 
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 160
+					state = 759
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 
 		SRI = { transfer_state = 160 }
 
@@ -35098,6 +35205,24 @@ country_event = { #The Fate of Venice
 		clr_country_flag = VNC_CONQ
 
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 160
+					state = 759
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 
 		SIC = { transfer_state = 160 }
 
@@ -35137,6 +35262,24 @@ country_event = { #The Fate of Venice
 		clr_country_flag = VNC_CONQ
 
 		reverse_add_opinion_modifier = { target = SRD modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 160
+					state = 759
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRD }
+					remove_claim_by = SRD
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRD } }
+					add_core_of = SRD
+				}
+			}
+		}
 
 		SRD = { transfer_state = 160 }
 
@@ -35308,6 +35451,21 @@ country_event = { #The Fate of Tuscany
 		clr_country_flag = TUS_CONQ
 
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 162 #Tuscany
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 
 		ITA = { transfer_state = 162 }
 	}
@@ -35333,6 +35491,21 @@ country_event = { #The Fate of Tuscany
 		clr_country_flag = TUS_CONQ
 
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 162 #Tuscany
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 
 		SRI = { transfer_state = 162 }
 	}
@@ -35362,6 +35535,21 @@ country_event = { #The Fate of Tuscany
 		clr_country_flag = TUS_CONQ
 
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 162 #Tuscany
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 
 		SIC = { transfer_state = 162 }
 	}
@@ -35391,6 +35579,21 @@ country_event = { #The Fate of Tuscany
 		clr_country_flag = TUS_CONQ
 
 		reverse_add_opinion_modifier = { target = SRD modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					state = 162 #Tuscany
+				}
+				if = {
+					limit = { is_claimed_by = SRD }
+					remove_claim_by = SRD
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRD } }
+					add_core_of = SRD
+				}
+			}
+		}
 
 		SRD = { transfer_state = 162 }
 	}
@@ -35727,6 +35930,24 @@ country_event = { #The Fate of Emilia
 		}
 		clr_country_flag = EMI_CONQ
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1004 
+					state = 161
+					}
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 		ITA = { 
 			transfer_state = 1004
 			transfer_state = 161
@@ -35754,6 +35975,24 @@ country_event = { #The Fate of Emilia
 		}
 		clr_country_flag = EMI_CONQ
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1004 
+					state = 161
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 		SRI = { 
 			transfer_state = 1004
 			transfer_state = 161
@@ -35785,6 +36024,24 @@ country_event = { #The Fate of Emilia
 		}
 		clr_country_flag = EMI_CONQ
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1004 
+					state = 161
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 		SIC = { 
 			transfer_state = 1004
 			transfer_state = 161
@@ -35816,6 +36073,24 @@ country_event = { #The Fate of Emilia
 		}
 		clr_country_flag = EMI_CONQ
 		reverse_add_opinion_modifier = { target = SRD modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1004 
+					state = 161
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRD }
+					remove_claim_by = SRD
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRD } }
+					add_core_of = SRD
+				}
+			}
+		}
 		SRD = { 
 			transfer_state = 1004
 			transfer_state = 161
@@ -36093,6 +36368,25 @@ country_event = { #The Fate of Rome
 		}
 		clr_country_flag = PAP_CONQ
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 2 
+					state = 764
+					state = 1149
+					}
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -36126,6 +36420,25 @@ country_event = { #The Fate of Rome
 		}
 		clr_country_flag = PAP_CONQ
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 2 
+					state = 764
+					state = 1149
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -36163,6 +36476,25 @@ country_event = { #The Fate of Rome
 		}
 		clr_country_flag = PAP_CONQ
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 2 
+					state = 764
+					state = 1149
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -36200,6 +36532,25 @@ country_event = { #The Fate of Rome
 		}
 		clr_country_flag = PAP_CONQ
 		reverse_add_opinion_modifier = { target = SRD modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 2 
+					state = 764
+					state = 1149
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRD }
+					remove_claim_by = SRD
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRD } }
+					add_core_of = SRD
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -36551,6 +36902,26 @@ country_event = { #The Fate of Central Italy
 		}
 		clr_country_flag = PAP_STATES_CONQ
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 764
+					state = 1005
+					state = 157
+					state = 1236
+					}
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -36585,6 +36956,26 @@ country_event = { #The Fate of Central Italy
 		}
 		clr_country_flag = PAP_STATES_CONQ
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 764
+					state = 1005
+					state = 157
+					state = 1236
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -36628,6 +37019,26 @@ country_event = { #The Fate of Central Italy
 		}
 		clr_country_flag = PAP_STATES_CONQ
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 764
+					state = 1005
+					state = 157
+					state = 1236
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -36666,6 +37077,26 @@ country_event = { #The Fate of Central Italy
 		}
 		clr_country_flag = PAP_STATES_CONQ
 		reverse_add_opinion_modifier = { target = SRD modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 764
+					state = 1005
+					state = 157
+					state = 1236
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRD }
+					remove_claim_by = SRD
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRD } }
+					add_core_of = SRD
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -36987,6 +37418,25 @@ country_event = { #The Fate of Piedmont
 		}
 		clr_country_flag = PIEDMONT_CONQ
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1003
+					state = 158
+					state = 838
+					}
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37011,6 +37461,25 @@ country_event = { #The Fate of Piedmont
 		}
 		clr_country_flag = PIEDMONT_CONQ
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1003
+					state = 158
+					state = 838
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37043,6 +37512,25 @@ country_event = { #The Fate of Piedmont
 		}
 		clr_country_flag = PIEDMONT_CONQ
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1003
+					state = 158
+					state = 838
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37081,6 +37569,28 @@ country_event = { #The Fate of Piedmont
 		}
 		clr_country_flag = PIEDMONT_CONQ
 		reverse_add_opinion_modifier = { target = SRD modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1003
+					state = 158
+					state = 838
+					state = 762
+					state = 735
+					state = 943
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRD }
+					remove_claim_by = SRD
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRD } }
+					add_core_of = SRD
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				is_not_claim_or_core_of_ROOT = yes
@@ -37243,6 +37753,24 @@ country_event = { #The Fate of Sardinia
 		}
 		clr_country_flag = SRD_CONQ
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1002
+					state = 114
+					}
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37266,6 +37794,24 @@ country_event = { #The Fate of Sardinia
 		}
 		clr_country_flag = SRD_CONQ
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1002
+					state = 114
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37293,6 +37839,24 @@ country_event = { #The Fate of Sardinia
 		}
 		clr_country_flag = SRD_CONQ
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 1002
+					state = 114
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37478,6 +38042,28 @@ country_event = { #The Fate of Southern Italy
 		}
 		clr_country_flag = SIC_CONQ
 		reverse_add_opinion_modifier = { target = ITA modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 117
+					state = 742
+					state = 837
+					state = 1006
+					state = 156
+					state = 115
+					}
+				}
+				if = {
+					limit = { is_claimed_by = ITA }
+					remove_claim_by = ITA
+				}
+				if = {
+					limit = { NOT = { is_core_of = ITA } }
+					add_core_of = ITA
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37509,6 +38095,28 @@ country_event = { #The Fate of Southern Italy
 		}
 		clr_country_flag = SIC_CONQ
 		reverse_add_opinion_modifier = { target = SRI modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 117
+					state = 742
+					state = 837
+					state = 1006
+					state = 156
+					state = 115
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRI }
+					remove_claim_by = SRI
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRI } }
+					add_core_of = SRI
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37536,6 +38144,28 @@ country_event = { #The Fate of Southern Italy
 		}
 		clr_country_flag = SIC_CONQ
 		reverse_add_opinion_modifier = { target = SIC modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 117
+					state = 742
+					state = 837
+					state = 1006
+					state = 156
+					state = 115
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SIC }
+					remove_claim_by = SIC
+				}
+				if = {
+					limit = { NOT = { is_core_of = SIC } }
+					add_core_of = SIC
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -37567,6 +38197,28 @@ country_event = { #The Fate of Southern Italy
 		}
 		clr_country_flag = SIC_CONQ
 		reverse_add_opinion_modifier = { target = SRD modifier = KR_returned_land }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 117
+					state = 742
+					state = 837
+					state = 1006
+					state = 156
+					state = 115
+					}
+				}
+				if = {
+					limit = { is_claimed_by = SRD }
+					remove_claim_by = SRD
+				}
+				if = {
+					limit = { NOT = { is_core_of = SRD } }
+					add_core_of = SRD
+				}
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
