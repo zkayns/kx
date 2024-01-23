@@ -590,26 +590,11 @@ focus_tree = {
 				has_completed_focus = TRM_Kolchak_Doc
 			}
 		}
-		select_effect = {
-			if = {
-				limit = { TRM_kolchak_in_power = yes }
-				country_event = {
-					id = tram.55
-					days = 15
-				}
-			}
-		}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Expand_Industry_In_Vladivostok"
-			if = {
-				limit = { TRM_kolchak_in_power = yes }
-				custom_effect_tooltip = upon_selecting_focus
-				effect_tooltip = { country_event = tram.55 }
-				custom_effect_tooltip = effect_upon_focus_completion
-			}
 			408 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
