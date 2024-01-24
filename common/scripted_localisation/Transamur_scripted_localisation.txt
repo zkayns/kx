@@ -196,6 +196,12 @@ defined_text = {
 	name = TransamurGetRegionStatus
 	text = {
 		trigger = {
+			has_dynamic_modifier = { modifier = TRM_japanese_vladivostok_modifier }
+		}
+		localization_key = TRM_japanese_vladivostok_modifier
+	}
+	text = {
+		trigger = {
 			has_dynamic_modifier = { modifier = TRM_martial_law_modifier }
 		}
 		localization_key = TRM_martial_law_modifier
@@ -218,6 +224,30 @@ defined_text = {
 		}
 		localization_key = TRM_cossack_host_modifier
 	}	
+}
+defined_text = {
+	name = TransamurGetStatePops
+	text = {
+		localization_key = TRM_State_Pops
+	}
+}
+defined_text = {
+	name = GFX_idea_oblastniki_influence
+	text = {
+		trigger = {
+			check_variable = { party_popularity@social_liberal > 0.24 }
+		}
+		localization_key = "GFX_idea_oblastniki_influence_3"
+	}
+	text = {
+		trigger = {
+			check_variable = { party_popularity@social_liberal > 0.1 }
+		}
+		localization_key = "GFX_idea_oblastniki_influence_2"
+	}
+	text = {
+		localization_key = "GFX_idea_oblastniki_influence_1"
+	}
 }
 defined_text = {
 	name = GetCossackOrientation

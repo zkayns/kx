@@ -30050,17 +30050,18 @@ country_event = { # West Ukraine
 				hidden_effect = {
 					set_country_flag = UKR_joined_DA
 					UKR_update_military = yes
-				}			
+				}		
+				add_opinion_modifier = {
+					target = PREV
+					modifier = KR_trade_agreement
+				}
+				reverse_add_opinion_modifier = {
+					target = PREV
+					modifier = KR_trade_agreement
+				}
 			}
 			add_ideas = AUS_UKR_excessive_trade_with_austria
-			add_opinion_modifier = {
-				target = 202.owner
-				modifier = KR_trade_agreement
-			}
-			reverse_add_opinion_modifier = {
-				target = 202.owner
-				modifier = KR_trade_agreement
-			}
+			
 		}
 	}	
 }
@@ -40352,9 +40353,11 @@ country_event = { # Ukraine Wants to Join the International
 			factor = 0
 		}
 		add_stability = -0.02
-		reverse_add_opinion_modifier = {
-			target = 202.owner
-			modifier = KR_hates_govt
+		var:202.owner = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = KR_hates_govt
+			}
 		}
 	}
 }

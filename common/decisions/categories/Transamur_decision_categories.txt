@@ -47,6 +47,14 @@ TRM_russian_expansion = {
 	visible_when_empty = yes
 }
 
+TRM_oblastniki_influence = {
+	icon = GFX_decision_revolt
+	priority = 90
+
+	allowed = {
+		original_tag = TRM
+	}
+}
 TRM_Siberian_Insurgency = {
 	icon = GFX_decision_revolt
 	priority = 100

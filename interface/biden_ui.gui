@@ -4200,6 +4200,8 @@ guiTypes = {
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_TRM_Vladimir_Kappel"
 		}
+		
+		iconType = { #
 			name = "Anastasiy_Vonsyatsky"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_TRM_Anastasiy_Vonsyatsky"

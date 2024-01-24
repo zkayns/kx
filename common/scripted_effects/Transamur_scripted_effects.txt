@@ -1541,13 +1541,8 @@ TRM_calculate_overall_authorities = {
 							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_KOLCHAK_SECURES_POWER }
 							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
 							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
-							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV_MONARCHY }
-							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_YUI }
-							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SOCDEM_MLADOROSSI}
 							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
 							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
-							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_PEPEL }
-							has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_PEPEL_OBL }
 						}
 					}
 				}
@@ -1567,9 +1562,11 @@ TRM_calculate_overall_authorities = {
 							}
 						}
 					}
-					country_exists = BRY
-					BRY = { has_government = totalist }
-					date > 1936.1.1
+					AND = {
+						country_exists = BRY
+						BRY = { has_government = totalist }
+						date > 1936.1.1
+					}
 				}
 			}
 			set_country_flag = TRM_crush_remnants_of_nra
@@ -1614,6 +1611,46 @@ TRM_recalculate_nra_effects = {
 		force_update_dynamic_modifier = yes
 	}
 }
+TRM_recalculate_oblastniki_effects = {
+	if = {
+		limit = {
+			has_country_flag = TRM_oblastniki_operate
+		}
+		#Max influence effects at 50% popularity
+		set_variable = { TRM_oblastniki_influence_var = TRM.party_popularity@social_liberal }
+		clamp_variable = {
+			var = TRM_oblastniki_influence_var
+			min = 0
+			max = 0.5
+		}
+		set_temp_variable = { TRM_oblastniki_negative_factor = TRM_oblastniki_influence_var }
+		multiply_temp_variable = { TRM_oblastniki_negative_factor = 2 }
+		
+		set_variable = { TRM.TRM_oblastniki_stability = -0.25 }
+		set_variable = { TRM.TRM_oblastniki_war_support = -0.2 }
+		set_variable = { TRM.TRM_oblastniki_resource_gain = -0.1 }
+		set_variable = { TRM.TRM_oblastniki_conscription = -0.5 }
+				
+		multiply_variable = { TRM.TRM_oblastniki_stability = TRM_oblastniki_negative_factor }
+		multiply_variable = { TRM.TRM_oblastniki_war_support = TRM_oblastniki_negative_factor }
+		multiply_variable = { TRM.TRM_oblastniki_resource_gain = TRM_oblastniki_negative_factor }
+		multiply_variable = { TRM.TRM_oblastniki_conscription = TRM_oblastniki_negative_factor }
+		
+		if = {
+				limit = { OR = {
+					has_government = social_liberal
+					has_government = social_democrat
+					}
+				}
+				divide_variable = { TRM.TRM_oblastniki_stability = -1 }
+				divide_variable = { TRM.TRM_oblastniki_war_support = -1 }
+				divide_variable = { TRM.TRM_oblastniki_resource_gain = -1 }
+				divide_variable = { TRM.TRM_oblastniki_conscription = -1 }
+			}
+		}
+		clear_variable = TRM_oblastniki_influence_var
+		force_update_dynamic_modifier = yes
+}
 
 setup_soviet_transamur = {
 	ROOT = { save_global_event_target_as = soviet_russia }
@@ -1637,20 +1674,10 @@ setup_soviet_transamur = {
 			}
 		}
 		transfer_units_fraction = {
-				target = RUS
-				size = 0.1
-				navy_ratio = 0.1
-				keep_unit_leaders_trigger = { always = yes }
-		}
-		random_unit_leader = {
-				limit = { has_id = 457 }	
-				remove_unit_leader = yes
-			}
-		set_cosmetic_tag = TRM_NRA
-		set_party_name = {
-			ideology = totalist
-			long_name = TRM_NRA_party_long
-			name = TRM_NRA_party
+			target = RUS
+			size = 0.1
+			navy_ratio = 0.1
+			keep_unit_leaders_trigger = { always = yes }
 		}
 		country_event = {
 			id = trmnra.100
@@ -1658,53 +1685,8 @@ setup_soviet_transamur = {
 		}
 		set_country_flag = SOV_restored_in_transamur
 		set_country_flag = SOV_must_deal_with_opposition
-		remove_all_ministers = yes
-		add_ideas = SIB_Alexander_Krasnoshchyokov_hog_sde
-		add_ideas = RUS_Georgiy_M_Malenkov_for_rso 
-		add_ideas = RUS_Sergey_M_Kirov_eco_tot
-		add_ideas = RUS_Georgiy_M_Malenkov_sec_rso
-		add_ideas = {
-			SOV_oblastnik_resistance
-			SOV_semyenov_loyalists_resistance
-			SOV_kolchak_loyalists_resistance
-			SOV_siberian_monarchists_resistance
-		}
-		create_country_leader = {
-			name = "Vasily Blyukher"
-			desc = "POLITICS_BLYUKHER_DESC"
-			picture = "gfx/leaders/TRM/TRM_Vasily_Blyukher.png"
-			expire = "1.1.1"
-			ideology = red_junta_subtype
-		}
-		add_stability = 0.1
-		hidden_effect = {
-			set_popularities = {
-				totalist = 52
-				syndicalist = 16
-				radical_socialist = 19
-				social_democrat = 13
-				social_liberal = 0
-				market_liberal = 0
-				social_conservative = 0
-				authoritarian_democrat = 0
-				paternal_autocrat = 0
-				national_populist = 0
-			}
-		} 
-		set_politics = {
-			ruling_party = totalist
-			elections_allowed = no
-		}
-		country_event = {
-			id = trmnra.101
-			days = 10
-		}
-		RUS = {
-			country_event = {
-				id = trmnra.102
-				days = 15
-			}
-		}
+		add_stability = 0.1		
+		unlock_decision_tooltip = RUS_Start_The_Offensive_TRM
 	}
 }
 TRM_do_after_coup_purge = {
@@ -2034,7 +2016,10 @@ RUS_increase_chance_of_war = {
 	add_to_variable = { global.siberian_war_chance = 0.03 }
 	if = {
 		limit = { 
-			check_variable = { global.siberian_war_chance > 0.9 }
+			OR = {
+				check_variable = { global.siberian_war_chance = 1 }
+				check_variable = { global.siberian_war_chance > 1 }
+			}
 		}
 		if = {
 			limit = { tag = TRM }

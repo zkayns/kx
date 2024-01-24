@@ -143,100 +143,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TRM_North_Pacific_Trade_Route
-		icon = GFX_TRM_North_Pacific_Trade_Route
-		available = {
-			NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-			has_government = paternal_autocrat
-		}
-		relative_position_id = TRM_Russias_Eastern_Harbour
-		x = 1
-		y = 4
-		prerequisite = {
-			focus = TRM_Russo_Canadian_Naval_Treaty
-		}
-		cost = 4
-		ai_will_do = {
-			base = 60
-		}
-		cancel_if_invalid = yes
-		completion_reward = {
-			custom_effect_tooltip = TRM_Vladivostok_Business_Circle_Will_Grow_Less_Dependant_On_Japanese
-			add_to_variable = { VladBusCirOrientation = 1 }
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = -0.05
-			}
-			effect_tooltip = {
-				random_list = {
-					20 = { 409 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					20 = { 637 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					15 = { 562 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					15 = { 560 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					10 = { 657 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					10 = { 561 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					5 = { 574 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					5 = { 563 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-				}
-			}
-			hidden_effect = {
-				random_list = {
-					20 = {
-						add_to_variable = { Khabarovsk_Japanese_Authority = -0.05 }
-						add_to_variable = { Khabarovsk_Kolchak_Authority = 0.05 }
-					}
-					20 = {
-						add_to_variable = { Kamchatka_Japanese_Authority = -0.05 }
-						add_to_variable = { Kamchatka_Kolchak_Authority = 0.05 }
-					}
-					15 = {
-						add_to_variable = { Magadan_Japanese_Authority = -0.05 }
-						add_to_variable = { Magadan_Kolchak_Authority = 0.05 }
-					}
-					15 = {
-						add_to_variable = { Nikolayevsk_Japanese_Authority = -0.05 }
-						add_to_variable = { Nikolayevsk_Kolchak_Authority = 0.05 }
-					}
-					10 = {
-						add_to_variable = { Blagoveschensk_Japanese_Authority = -0.05 }
-						add_to_variable = { Blagoveschensk_Kolchak_Authority = 0.05 }
-					}
-					10 = {
-						add_to_variable = { Amur_Japanese_Authority = -0.05 }
-						add_to_variable = { Amur_Kolchak_Authority = 0.05 }
-					}
-					5 = {
-						add_to_variable = { Yakutia_Japanese_Authority = -0.05 }
-						add_to_variable = { Yakutia_Kolchak_Authority = 0.05 }
-					}
-					5 = { 
-						add_to_variable = { Chita_Japanese_Authority = -0.05 }
-						add_to_variable = { Chita_Kolchak_Authority = 0.05 }
-					}
-				}
-			}
-			TRM_recalculate_japanese_effects = yes
-			TRM_clamp_spheres_of_influence = yes
-			TRM_recalculate_kolchak_variables = yes
-			TRM = { 
-				give_military_access = CAN
-				diplomatic_relation = {
-					country = CAN
-					relation = docking_rights
-					active = yes
-				}
-				add_opinion_modifier = {
-					target = CAN
-					modifier = KR_trade_agreement
-				}
-				reverse_add_opinion_modifier = {
-					target = CAN
-					modifier = KR_trade_agreement
-				}
-			}
-		}
-	}
-	focus = {
 		id = TRM_Expand_The_Vladivostok_Port_Authority
 		icon = GFX_USA_ports_atlantic
 		prerequisite = {
@@ -2105,16 +2011,15 @@ focus_tree = {
 			base = 100
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = YAK_independece_path
-					option = RULE_OPTION_TRM_YAKUTIA
-				}
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = TRM_path
-					option = RULE_OPTION_TRM_CW
+				OR = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
 				}
 			}
 		}
@@ -2124,8 +2029,6 @@ focus_tree = {
 			custom_effect_tooltip = TRM_Siberian_Regional_Council_tt
 			country_event = tram.208
 			TRM_decrease_rovs_loyalty = yes
-			unlock_decision_tooltip = TRM_open_chita_assembly
-			unlock_decision_tooltip = TRM_open_blagoveschensk_assembly
 			add_days_mission_timeout = {
 				mission = TRM_oblastniki_committee
 				days = 15
@@ -2152,16 +2055,15 @@ focus_tree = {
 			base = 60
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = YAK_independece_path
-					option = RULE_OPTION_TRM_YAKUTIA
-				}
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = TRM_path
-					option = RULE_OPTION_TRM_CW
+				OR = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
 				}
 			}
 		}
@@ -2483,71 +2385,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			custom_effect_tooltip = TRM_Vladivostok_Business_Circle_Will_Grow_Less_Dependant_On_Japanese
-			add_to_variable = { VladBusCirOrientation = 1 }
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = -0.05
-			}
-			effect_tooltip = {
-				random_list = {
-					20 = { 409 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					20 = { 637 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					15 = { 562 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					15 = { 560 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					10 = { 657 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					10 = { 561 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					5 = { 574 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-					5 = { 563 = { custom_effect_tooltip = TRM_Decrease_Japanese_Support } }
-				}
-				408 = {
-					custom_effect_tooltip = TRM_Decrease_Japanese_Support
-					custom_effect_tooltip = TRM_Increase_Transamur_Businessmen_Support
-					custom_effect_tooltip = TRM_Increase_Kolchak_Support
-				}
-			}
-			hidden_effect = {
-				random_list = {
-					20 = {
-						add_to_variable = { Khabarovsk_Japanese_Authority = -0.05 }
-						add_to_variable = { Khabarovsk_Kolchak_Authority = 0.05 }
-					}
-					20 = {
-						add_to_variable = { Kamchatka_Japanese_Authority = -0.05 }
-						add_to_variable = { Kamchatka_Kolchak_Authority = 0.05 }
-					}
-					15 = {
-						add_to_variable = { Magadan_Japanese_Authority = -0.05 }
-						add_to_variable = { Magadan_Kolchak_Authority = 0.05 }
-					}
-					15 = {
-						add_to_variable = { Nikolayevsk_Japanese_Authority = -0.05 }
-						add_to_variable = { Nikolayevsk_Kolchak_Authority = 0.05 }
-					}
-					10 = {
-						add_to_variable = { Blagoveschensk_Japanese_Authority = -0.05 }
-						add_to_variable = { Blagoveschensk_Kolchak_Authority = 0.05 }
-					}
-					10 = {
-						add_to_variable = { Amur_Japanese_Authority = -0.05 }
-						add_to_variable = { Amur_Kolchak_Authority = 0.05 }
-					}
-					5 = {
-						add_to_variable = { Yakutia_Japanese_Authority = -0.05 }
-						add_to_variable = { Yakutia_Kolchak_Authority = 0.05 }
-					}
-					5 = { 
-						add_to_variable = { Chita_Japanese_Authority = -0.05 }
-						add_to_variable = { Chita_Kolchak_Authority = 0.05 }
-					}
-				}
-				add_to_variable = { Vladivostok_Japanese_Authority = -0.1 }
-				add_to_variable = { Vladivostok_Kolchak_Authority = 0.05 }
-				add_to_variable = { Vladivostok_Business_Authority = 0.05 }
-			}
-			TRM_recalculate_japanese_effects = yes
-			TRM_clamp_spheres_of_influence = yes
-			TRM_recalculate_kolchak_variables = yes
+			activate_targeted_decision = { target = ENT decision = TRM_Open_British_Embassy }				
 		}
 	}
 	focus = {
@@ -2637,311 +2475,6 @@ focus_tree = {
 		}
 	}
 	
-	
-
-###Expand###
-	focus = {
-		id = TRM_Expand_RCW
-		icon = GFX_goal_MON_we_dont_need_russia
-		available = {
-			has_idea = TRM_dream
-		}
-		x = 36
-		y = 0
-		cost = 1
-		available = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-					has_government = paternal_autocrat
-				}
-				has_completed_focus = TRM_Kolchak_Doc
-			}
-		}
-		ai_will_do = {
-			base = 1000
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Expand_RCW"
-			army_experience = 25
-			custom_effect_tooltip = RUS_increase_chance_of_war
-			add_to_variable = { global.siberian_war_chance = 0.15 }
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}	
-	
-	focus = {
-		id = TRM_FE_RUS
-		icon = GFX_DKB_ban_rus_army
-		mutually_exclusive = {focus = TRM_FE_SOV}
-		prerequisite = { focus = TRM_Expand_RCW }
-		available = {
-			has_idea = TRM_dream
-			has_war = no
-			is_subject = no
-			OR = {
-				GER = {
-					has_war_with = RUS
-				}
-				AND = {
-					OR = {
-						has_completed_focus = TRM_Form_A_New_Cabinet
-						has_completed_focus = TRM_Our_Proud_Varyag_2
-						has_completed_focus = TRM_Stay_Independent
-						has_completed_focus = TRM_KDV
-						has_completed_focus = TRM_NDS
-						has_completed_focus = TRM_New_Far_Eastern_Republic
-						has_completed_focus = TRM_Transbaikal_Union
-						has_completed_focus = TRM_Russian_Empire_In_Exile
-						has_completed_focus = TRM_spirit_revolution
-						has_completed_focus = TRM_Hail_Tsar
-						has_completed_focus = TRM_ROVS_Secures_The_Power
-					}
-					date < 1939.1.1
-				}
-			}
-		}
-		x = -1
-		y = 3
-		relative_position_id = TRM_Expand_RCW
-		cost = 5
-		ai_will_do = {
-			base = 5
-			modifier = {
-				factor = 0
-				is_in_faction = no
-				RUS = {
-					NOT = {
-						any_enemy_country = { is_actual_major = yes }
-					}
-				}
-			}
-			modifier = {
-				factor = 5
-				RUS = { has_war_with = RVA }
-			}
-		}
-		bypass = {
-			OR = {
-				NOT = { country_exists = RUS }
-				has_war_with = RUS
-			}
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_FE_RUS"
-			custom_effect_tooltip = TRM_rus
-			custom_effect_tooltip = RUS_increase_chance_of_war
-			add_to_variable = { global.siberian_war_chance = 0.15 }
-			custom_effect_tooltip = unlocks_decision
-			custom_effect_tooltip = RUS_Start_The_Offensive_TRM_tooltip
-		}
-	}
-
-	focus = {
-		id = TRM_FE_SOV
-		icon = GFX_RUS_brutus_of_world_revolution
-		mutually_exclusive = { focus = TRM_FE_RUS}
-		prerequisite = {
-			focus = TRM_Expand_RCW
-		}
-		available = {
-			RUS = { has_country_flag = soviet_russia_restored }
-			has_idea = TRM_dream
-			has_war = no
-			is_subject = no
-		}
-		x = 1
-		y = 3
-		relative_position_id = TRM_Expand_RCW
-		cost = 1
-		ai_will_do = {
-			base = 10000
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_FE_SOV"
-			custom_effect_tooltip = TRM_sov
-			custom_effect_tooltip = RUS_increase_chance_of_war
-			add_to_variable = { global.siberian_war_chance = 0.25 }
-			custom_effect_tooltip = unlocks_decision
-			custom_effect_tooltip = RUS_Start_The_Offensive_TRM_tooltip
-		}
-	}
-
-	focus = {
-		id = TRM_Claim_West_Sib
-		icon = GFX_focus_attack_RUS
-		available = {
-			date > 1939.1.1
-			has_idea = TRM_dream
-			has_war = no
-			is_subject = no
-			if = {
-				limit = {
-					RUS = {
-						controls_state = 566
-					}
-				}
-				RUS = {
-					has_war_with = GER
-				}
-			}
-		}
-		bypass = {
-				RUS = {
-					exists = yes
-					has_war_with = TRM
-				}
-		}
-		prerequisite = {focus = TRM_FE_RUS focus = TRM_FE_SOV}
-		x = 0
-		y = 4
-		relative_position_id = TRM_Expand_RCW
-		cost = 5
-		ai_will_do = {
-			base = 5
-			modifier = {
-				factor = 2
-				is_actual_major = yes
-			}
-			modifier = {
-				factor = 0
-				is_in_faction = no
-				NOT = {
-					RUS = {
-						has_war = yes
-						any_enemy_country = { is_actual_major = yes }
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-					RUS = {
-						has_war = yes
-						any_enemy_country = { is_actual_major = yes }
-					}
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Claim_West_Sib"
-			country_event = { id = tram.106 days = 1 }
-			custom_effect_tooltip = RUS_increase_chance_of_war
-			add_to_variable = { global.siberian_war_chance = 0.1 }
-		}
-	}
-
-	focus = {
-		id = TRM_Become_Russia
-		icon = GFX_goal_RUS_new_russia
-		available = {
-			has_war = no
-			195 = { is_owned_and_controlled_by = TRM }
-			219 = { is_owned_and_controlled_by = TRM }
-			NOT = { country_exists = RUS }
-			NOT = { soviets_exist = yes }
-			is_subject = no
-		}
-		prerequisite = {focus = TRM_Claim_West_Sib}
-		x = 0
-		y = 5
-		relative_position_id = TRM_Expand_RCW
-		cost = 5
-		ai_will_do = {
-			base = 100
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Become_Russia"
-			custom_effect_tooltip = TRM_change
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_completed_focus = TRM_Monarchy
-							has_completed_focus = TRM_tsar_soviets
-							has_country_flag = TRM_NRA_Coup
-							has_country_flag = TRM_Semyonov_Coup
-							has_country_flag = TRM_Yui
-						}
-					}
-				}				
-				set_cosmetic_tag = TRM_RUS
-			}
-			if = {
-				limit = {
-					AND = {
-						has_socialist_government = yes
-						NOT = {
-							has_completed_focus = TRM_tsar_soviets
-						}
-					}
-				}
-				setup_soviet_russia = yes
-				ROOT = { save_global_event_target_as = soviet_russia }
-				set_cosmetic_tag = TRM_UNITED_SOV
-			}
-			if = {
-				limit = {
-					has_country_leader = {
-						ruling_only = yes
-						name = "Aleksandr Kolchak"
-					}
-				}
-				set_cosmetic_tag = TRM_PROV
-				add_ideas = TRM_Aftermath_Sib_War
-			}
-			if = {
-				limit = {
-					has_completed_focus = TRM_Nationalists_Take_Over
-				}
-				set_cosmetic_tag = TRM_nats_empire
-			}
-			if = {
-				limit = {
-					NOT = { has_idea = TRM_Aftermath_Sib_War }
-				}
-				add_timed_idea = {
-					idea = TRM_Aftermath_Sib_War
-					days = 365
-				}
-			}
-			hidden_effect = {
-				every_state = {
-					limit = {
-							is_core_of = RUS
-						NOT = { is_core_of = TRM }
-					}
-					if = {
-						limit = { is_claimed_by = TRM }
-						remove_claim_by = TRM
-					}
-					add_core_of = TRM
-				}
-
-				country_event = {id = tram.145 days = 7}
-
-				set_country_flag = TRM_become_russia
-				if = {
-					limit = {
-						has_idea = TRM_japanese_influence_idea
-					}
-					country_event = {
-						id = tram.1491
-						days = 15
-					}
-				}
-				random_other_country = {
-					news_event = {
-						id = tramnews.4
-						days = 1
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	
-
 
 ### Politic ###
 
@@ -3796,45 +3329,6 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 		
-	focus = {
-		id = TRM_Trade_Jap
-		icon = GFX_goal_JAP_yen
-		relative_position_id = TRM_Rep
-		x = 5
-		y = 4
-		cost = 5
-		available = {
-			OR = {
-				has_government = social_conservative
-				AND = {
-					has_government = market_liberal
-					NOT = { has_country_flag = can_inv_trm }
-				}
-			}
-			
-		}
-		prerequisite = {
-			focus = TRM_Support_Local_Landowners
-			focus = TRM_Attract_Foreign_Investments
-		}
-		ai_will_do = {
-			base = 10
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Trade_Jap"
-			TRM = { add_opinion_modifier = { target = JAP modifier = trade_with_japan } }
-			if = {
-				limit = { has_idea = TRM_JAP_INF_START }
-				swap_ideas = {
-					remove_idea = TRM_JAP_INF_START
-					add_idea = TRM_JAP_INF_TRADE
-				}
-			}
-			add_popularity = {ideology = authoritarian_democrat popularity = 0.03}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-	}
-	
 	focus = {
 		id = TRM_Secure_Our_Borders
 		icon = GFX_goal_generic_barricades
@@ -4998,15 +4492,10 @@ focus = {
 			focus = TRM_Jap_Inv2
 		}
 		available = {
-			has_completed_focus = TRM_New_Far_Eastern_Republic
 			NOT = { 
 				is_in_faction_with = JAP
 				is_subject_of = JAP
 			}
-		}
-		bypass = {
-			is_in_faction_with = JAP
-			NOT = { is_subject_of = JAP }
 		}
 		mutually_exclusive = { focus = TRM_Co_Prosper_Within_Japan }
 		ai_will_do = {
@@ -5014,7 +4503,7 @@ focus = {
 		}
 		completion_reward = {
 			JAP = { add_to_faction = TRM }
-			add_to_array = { global.asian_economic_sphere = ROOT }
+			JAP_add_to_economic_sphere = yes
 		}
 	}
 	focus = {
@@ -5031,10 +4520,6 @@ focus = {
 			focus = TRM_Jap_Inv2
 		}
 		available = {
-			has_completed_focus = TRM_Japanese_Colony
-			is_subject_of = JAP
-		}
-		bypass = {
 			is_subject_of = JAP
 		}
 		mutually_exclusive = { focus = TRM_Co_Prosper_With_Japan }
@@ -5240,10 +4725,6 @@ focus = {
 		}
 		ai_will_do = {
 			base = 70
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SOCDEM_MLADOROSSI}
-			}
 		}
 		relative_position_id = TRM_tsar_soviets
 		x = 4

@@ -1559,11 +1559,9 @@ TRM_Soviet_Tsardom_Idea: "A True Soviet Tsardom"
 TRM_Soviet_Tsardom_Idea_desc: "To the shock of many, we have finally triumphed, the Red Tsar has reclaimed Russia, and now the ideals of the Mladorossi are dominant in all of Russia. Now Vozhd Kazem-Bek and the Tsar look outwards, to reclaim the Tsardom; and the legacy attached to it. "
 
 TRM_nra_resistance_modifier: "£pol_idea NRA Resistance"
-TRM_nra_resistance_idea: "[GetNRAResistanceName]"
-TRM_nra_resistance_idea_desc: "[GetNRAResistanceDesc]\n§W--------------\n$MODIFIER_STABILITY_FACTOR$: [?TRM.TRM_nra_stability|=%+]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?TRM.TRM_nra_industrial_capacity|=%+]\n$MODIFIER_RECRUITABLE_POPULATION_FACTOR$: [?TRM.TRM_nra_conscription|=%+]§!"
 
 TRM_japanese_vladivostok: "Gongota Agreement of 1920"
-TRM_japanese_vladivostok_desc: "On February 18, 1918 the Supreme Council of the Entente made a decision about the occupation of Vladivostok and Harbin, as well as of the CEL area by Japanese troops. Over the next two years the Reds were completely defeated in the Far East, and control of the territory was mainly exercised by Ataman Semenov together with the Imperial Army of Japan. During this time in the Far East the Japanese bought land plots, factories and various concessions from the returning Russian owners.\n\nAfter the Russian Civil War ended, Sazonov's government was forced to sign the Gongot Agreement, ceding northern Sakhalin to Japan and agreeing to establish a buffer Trans-Amur state with its capital in Vladivostok."
+TRM_japanese_vladivostok_desc: "On February 18, 1918 the Supreme Council of the Entente made a decision about the occupation of Vladivostok and Harbin, as well as of the Chinese Eastern Railway area by Japanese troops. Over the next two years the Reds were completely defeated in the Far East, and control of the territory was mainly exercised by Ataman Semyenov together with the Imperial Army of Japan. During this time in the Far East the Japanese bought land plots, factories and various concessions from the returning Russian owners.\n\nAfter the Russian Civil War ended, Sazonov's government was forced to sign the notorious Gongota Agreement, ceding northern Sakhalin to Japan and agreeing to establish a buffer state of Transamur with its capital in Vladivostok."
 TRM_japanese_vladivostok_modifier: "Japanese Control of Vladivostok Port\n§WThe Port of Vladivostok is controlled by the Japanese Kwantung Army, limiting our trade possibilities§!"
 
 TRM_japanese_naval_blockade: "Japanese Naval Blockade"
@@ -1578,17 +1576,6 @@ TRM_economic_ties_to_japan_high: "§CDependence on Japan:§! §RExtremely High§
 TRM_economic_ties_to_japan_high_desc: "Few seriously dispute that our nation is little more than a Japanese lapdog at this point, and the Transamur regime's weakness has gone from an open secret to a blatant fact."
 
 TRM_oblastniki_influence_modifier: "£pol_idea Oblastniki Resistance"
-TRM_oblastniki_influence_idea: "[GetOblastnikiName]"
-TRM_oblastniki_influence_idea_desc: "[GetOblastnikiDesc]\n§W--------------\n[OblastnikiStability][OblastnikiWarSupport][OblastnikiLocalResources][OblastnikiRecruitablePopulation]§!"
-
-TRM_oblastniki_stability_text: "Stability: [?TRM.TRM_oblastniki_stability|=%+]\n"
-TRM_oblastniki_stability_text_last: "Stability: [?TRM.TRM_oblastniki_stability|=%+]"
-TRM_oblastniki_war_support_text: "War Support: [?TRM.TRM_oblastniki_war_support|=%+]\n"
-TRM_oblastniki_war_support_text_last: "War Support: [?TRM.TRM_oblastniki_war_support|=%+]"
-TRM_oblastniki_local_resources_text: "Resource Gain Efficiency: [?TRM.TRM_oblastniki_resource_gain|=%+]\n"
-TRM_oblastniki_local_resources_text_last: "Resource Gain Efficiency: [?TRM.TRM_oblastniki_resource_gain|=%+]"
-TRM_oblastniki_recruitable_population_text: "Recruitable Population: [?TRM.TRM_oblastniki_conscription|=%+]\n"
-TRM_oblastniki_recruitable_population_text_last: "Recruitable Population: [?TRM.TRM_oblastniki_conscription|=%+]"
 
 TRM_aid_from_japan_tt: "Modify §HJapanese Dependence§! by\nConstruction Speed: §G+5.00%§!\nStability: §R-3.00%§!\n"
 TRM_zaibatsu_investments_tt: "Modify §HJapanese Dependence§! by\nConstruction Speed: §G+5.00%§!\n£prod_eff_cap  Production Efficiency Cap§G+5.00%§!\nStability: §R-2.00%§!\n"
@@ -1777,7 +1764,7 @@ TRM_The_Only_Supreme_Ruler_desc: "Nobody deserves the honorary title of the Supr
 
 ### Kolchak Mechanic ###
 TRM_Dealing_With_NRA: "Invisible Army"
-TRM_Dealing_With_NRA_desc: "\n       «Through valleys and over hills\n       Went the division forward\n       To capture in battle Primorye\n       The stronghold of the White Army».\n\n\nThe so-called §NPeople's Revolutionary Army§! is invisible for several reasons.\nFirst, its power and strength are greatly exaggerated, and the army consists of a bunch of guerrillas and the disruptors of the §g53rd Siberian Rifle Division§!.\nSecond, because of partisan tactics. The §NNRA§! raids stealthily, often under the cover of night, smashing warehouses and blowing up railroad tracks, sabotaging local factories and bolstering peasant discontent. Their leadership most likely sits in §RRed Harbin§!, a stronghold of the local \"Red Emigre\", and consists of a mixed §NSocialist-Revolutionary§!-§RBolshevik§! bloc. It is necessary to deal a final and decisive blow to the partisans and stabilize the Far East.\n\nAverage §NNRA§! Resistance: [?TRM.TRM_Overall_NRA_Resistance|N%0]"
+TRM_Dealing_With_NRA_desc: "\n       «Through valleys and over hills\n       Went the division forward\n       To capture in battle Primorye\n       The stronghold of the White Army».\n\n\nThe so-called §NPeople's Revolutionary Army§! is invisible for several reasons.\nFirst, its power and strength are greatly exaggerated, and the army consists of a bunch of guerrillas.\nSecond, because of partisan tactics. The §NNRA§! raids stealthily, often under the cover of night, smashing warehouses and blowing up railroad tracks, sabotaging local factories and bolstering peasant discontent. It is necessary to deal a final and decisive blow to the partisans and stabilize the Far East.\n\nAverage §NNRA§! Resistance: [?TRM.TRM_Overall_NRA_Resistance|N%0]"
 
 TRM_crush_nra_in_state: "Infiltrate NRA Cells in [FROM.GetName]"
 TRM_nra_sabotage: "The NRA Plans a Sabotage"
@@ -1787,7 +1774,7 @@ TRM_crush_remnants_of_nra_tt: "The NRA resistance is more than §R5%§!"
 
 
 TRM_Spheres_Of_Influence: "Kolchak's Regime"
-TRM_Spheres_Of_Influence_desc: "By seizing power in [TRM.GetNameDefCap] in 1925, Admiral Kolchak has united various groups of people into a state of constant politics, scandals and debates. This led to establishment of nominal §Mspheres of influence§!, in which certain political groups have more authority and influence among the citizens, than the others.\nAs the groups are different ideologically, the conflict of interests is an inevitable part of modern [TRM.GetAdjective] politics. This makes Admiral Kolchak an important figure in the centre of the Far-Eastern chaos, trying to bridle ambitions of each group and at the same time impose his own policies.\nIf the situation severely violates the equilibrium of forces, the resistance to Kolchak government §Vwill become apparent§!\n\nAverage Support of §XKolchak§! Regime: [?TRM.TRM_Overall_Kolchak_Support|X%0]\n\nAverage §CCossack§! Authority: [?TRM.TRM_Overall_Cossack_Support|C%0]\nCossack Loyalty: [GetCossackOrientation]\n\nAverage §LDO-ROVS§! Authority: [?TRM.TRM_Overall_ROVS_Support|L%0]\nDO-ROVS Loyalty: [GetROVSOrientation]\n\nAverage §lDemocrat§! Resentment: [?TRM.party_popularity@social_liberal|l%0]"
+TRM_Spheres_Of_Influence_desc: "By seizing power in [TRM.GetNameDefCap] in 1925, Admiral Kolchak has united various groups of people into a state of constant politics, scandals and debates. This led to establishment of nominal §Mspheres of influence§!, in which certain political groups have more authority and influence among the citizens, than the others.\nAs the groups are different ideologically, the conflict of interests is an inevitable part of modern [TRM.GetAdjective] politics. This makes Admiral Kolchak an important figure in the centre of the Far-Eastern chaos, trying to bridle ambitions of each group and at the same time impose his own policies.\nIf the situation severely violates the equilibrium of forces, the resistance to Kolchak government §Vwill become apparent§!\n\nAverage Support of §XKolchak§! Regime: [?TRM.TRM_Overall_Kolchak_Support|X%0]\n\nAverage §CCossack§! Authority: [?TRM.TRM_Overall_Cossack_Support|C%0]\nCossack Loyalty: [GetCossackOrientation]\n\nAverage §LDO-ROVS§! Authority: [?TRM.TRM_Overall_ROVS_Support|L%0]\nDO-ROVS Loyalty: [GetROVSOrientation]\n\nAverage §lDemocrat§! Resentment: §l[?TRM.party_popularity@social_liberal|%0]§!"
 
 
 
@@ -1838,12 +1825,12 @@ TRM_japanese_arm_shipments: "Japanese Arms Shipment Arrival"
 
 Mikhail_Diterikhs_dead: "Mikhail Diterikhs is dead"
 
-TRM_Increase_Oblastniki_Support: "§OOblastniki§! authority §Rwill increase§!\n"
-TRM_Increase_Oblastniki_Support_Greatly: "§OOblastniki§! authority §Rwill §Cgreatly§! increase§!\n"
-TRM_Decrease_Oblastniki_Support: "§OOblastniki§! authority §Gwill decrease§!\n"
-TRM_Decrease_Oblastniki_Support_Greatly: "§OOblastniki§! authority §Gwill §Cgreatly§! decrease§!\n"
-TRM_Decrease_Oblastniki_Support_Slightly: "§OOblastniki§! authority §Gwill §Mslightly§! decrease§!\n"
-TRM_Increase_Oblastniki_Support_Slightly: "§OOblastniki§! authority §Rwill §Mslightly§! increase§!\n"
+TRM_Increase_Oblastniki_Support: "§lOblastniki§! authority §Rwill increase§!\n"
+TRM_Increase_Oblastniki_Support_Greatly: "§lOblastniki§! authority §Rwill §Cgreatly§! increase§!\n"
+TRM_Decrease_Oblastniki_Support: "§lOblastniki§! authority §Gwill decrease§!\n"
+TRM_Decrease_Oblastniki_Support_Greatly: "§lOblastniki§! authority §Gwill §Cgreatly§! decrease§!\n"
+TRM_Decrease_Oblastniki_Support_Slightly: "§lOblastniki§! authority §Gwill §Mslightly§! decrease§!\n"
+TRM_Increase_Oblastniki_Support_Slightly: "§lOblastniki§! authority §Rwill §Mslightly§! increase§!\n"
 TRM_Increase_ROVS_Support: "§LDO-ROVS§! authority §Rwill increase§!\n"
 TRM_Decrease_ROVS_Support: "§LDO-ROVS§! authority §Gwill decrease§!\n"
 TRM_Increase_Semyonov_Support: "§CTransbaikal Cossacks§! authority §Rwill increase§!\n"
@@ -1863,20 +1850,22 @@ TRM_Decrease_Japanese_Support: "§gJapanese§! authority §Gwill decrease§!\n"
 TRM_Increase_Kolchak_Support: "§XKolchak§! government's authority §Gwill increase§!\n"
 TRM_Decrease_Kolchak_Support: "§XKolchak§! government's authority §Rwill decrease§!\n"
 
-TRM_Amur_tt: "§MAMUR§!\n§W--------------\n§!Administration: §Y[561.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?561.ROVS_Authority|l%0]\n§gJapanese§! - [?561.Japanese_Authority|g%0]\n§XKolchak§! - [?561.Kolchak_Authority|X%0]\n§NNRA§! - [?561.NRA_Authority|N%0]\n§lDemocrats§! - [?561.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?561.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?561.Business_Authority|c%0]\n"
-TRM_Bodaybo_tt: "§MBODAYBO§!\n§W--------------\n§!Administration: §Y[565.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?565.ROVS_Authority|l%0]\n§gJapanese§! - [?565.Japanese_Authority|g%0]\n§XKolchak§! - [?565.Kolchak_Authority|X%0]\n§NNRA§! - [?565.NRA_Authority|N%0]\n§lDemocrats§! - [?565.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?565.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?565.Business_Authority|c%0]\n"
-TRM_Blagoveschensk_tt: "§MBLAGOVESCHENSK§!\n§W--------------\n§!Administration: §Y[657.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?657.ROVS_Authority|l%0]\n§gJapanese§! - [?657.Japanese_Authority|g%0]\n§XKolchak§! - [?657.Kolchak_Authority|X%0]\n§NNRA§! - [?657.NRA_Authority|N%0]\n§lDemocrats§! - [?657.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?657.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?657.Business_Authority|c%0]\n"
-TRM_Buryatia_tt: "§MVERKHNEUDINSK§!\n§W--------------\n§!Administration: §Y[564.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?564.ROVS_Authority|l%0]\n§gJapanese§! - [?564.Japanese_Authority|g%0]\n§XKolchak§! - [?564.Kolchak_Authority|X%0]\n§NNRA§! - [?564.NRA_Authority|N%0]\n§lDemocrats§! - [?564.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?564.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?564.Business_Authority|c%0]\n"
-TRM_Chita_tt: "§MCHITA§!\n§W--------------\n§!Administration: §Y[563.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?563.ROVS_Authority|l%0]\n§gJapanese§! - [?563.Japanese_Authority|g%0]\n§XKolchak§! - [?563.Kolchak_Authority|X%0]\n§NNRA§! - [?563.NRA_Authority|N%0]\n§lDemocrats§! - [?563.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?563.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?563.Business_Authority|c%0]\n"
-TRM_Kamchatka_tt: "§MKAMCHATKA§!\n§W--------------\n§!Administration: §Y[637.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?637.ROVS_Authority|l%0]\n§gJapanese§! - [?637.Japanese_Authority|g%0]\n§XKolchak§! - [?637.Kolchak_Authority|X%0]\n§NNRA§! - [?637.NRA_Authority|N%0]\n§lDemocrats§! - [?637.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?637.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?637.Business_Authority|c%0]\n"
-TRM_Khabarovsk_tt: "§MKHABAROVSK§!\n§W--------------\n§!Administration: §Y[409.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?409.ROVS_Authority|l%0]\n§gJapanese§! - [?409.Japanese_Authority|g%0]\n§XKolchak§! - [?409.Kolchak_Authority|X%0]\n§NNRA§! - [?409.NRA_Authority|N%0]\n§lDemocrats§! - [?409.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?409.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?409.Business_Authority|c%0]\n"
-TRM_Kurily_tt: "§MKURILY§!\n§W--------------\n§!Administration: §Y[555.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?555.ROVS_Authority|l%0]\n§gJapanese§! - [?555.Japanese_Authority|g%0]\n§XKolchak§! - [?555.Kolchak_Authority|X%0]\n§NNRA§! - [?555.NRA_Authority|N%0]\n§lDemocrats§! - [?555.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?555.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?555.Business_Authority|c%0]\n"
-TRM_Magadan_tt: "§MOKHOTSK§!\n§W--------------\n§!Administration: §Y[562.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?562.ROVS_Authority|l%0]\n§gJapanese§! - [?562.Japanese_Authority|g%0]\n§XKolchak§! - [?562.Kolchak_Authority|X%0]\n§NNRA§! - [?562.NRA_Authority|N%0]\n§lDemocrats§! - [?562.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?562.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?562.Business_Authority|c%0]\n"
-TRM_Nikolayevsk_tt: "§MNIKOLAYEVSK§!\n§W--------------\n§!Administration: §Y[560.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?560.ROVS_Authority|l%0]\n§gJapanese§! - [?560.Japanese_Authority|g%0]\n§XKolchak§! - [?560.Kolchak_Authority|X%0]\n§NNRA§! - [?560.NRA_Authority|N%0]\n§lDemocrats§! - [?560.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?560.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?560.Business_Authority|c%0]\n"
-TRM_Sakhalin_tt: "§MSAKHALIN§!\n§W--------------\n§!Administration: §Y[537.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?537.ROVS_Authority|l%0]\n§gJapanese§! - [?537.Japanese_Authority|g%0]\n§XKolchak§! - [?537.Kolchak_Authority|X%0]\n§NNRA§! - [?537.NRA_Authority|N%0]\n§lDemocrats§! - [?537.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?537.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?537.Business_Authority|c%0]\n"
-TRM_Vladivostok_tt: "§MVLADIVOSTOK§!\n§W--------------\n§!Administration: §Y[408.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?408.ROVS_Authority|l%0]\n§gJapanese§! - [?408.Japanese_Authority|g%0]\n§XKolchak§! - [?408.Kolchak_Authority|X%0]\n§NNRA§! - [?408.NRA_Authority|N%0]\n§lDemocrats§! - [?408.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?408.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?408.Business_Authority|c%0]\n"
-TRM_Primorye_tt: "§MPRIMORYE§!\n§W--------------\n§!Administration: §Y[1246.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?1246.ROVS_Authority|l%0]\n§gJapanese§! - [?1246.Japanese_Authority|g%0]\n§XKolchak§! - [?1246.Kolchak_Authority|X%0]\n§NNRA§! - [?1246.NRA_Authority|N%0]\n§lDemocrats§! - [?1246.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?1246.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?1246.Business_Authority|c%0]\n"
-TRM_Yakutia_tt: "§MYAKUTSK§!\n§W--------------\n§!Administration: §Y[574.TransamurGetRegionStatus]§!\n§LDO-ROVS§! - [?574.ROVS_Authority|l%0]\n§gJapanese§! - [?574.Japanese_Authority|g%0]\n§XKolchak§! - [?574.Kolchak_Authority|X%0]\n§NNRA§! - [?574.NRA_Authority|N%0]\n§lDemocrats§! - [?574.Oblastniki_Authority|l%0]\n§CTransbaikal Cossack§! - [?574.Cossack_Authority|C%0]\n§cVladivostok Business§! - [?574.Business_Authority|c%0]\n"
+TRM_Amur_tt: "§MAMUR§!\n§W--------------\n§!Administration: §Y[561.TransamurGetRegionStatus]§![561.TransamurGetStatePops]
+TRM_Bodaybo_tt: "§MBODAYBO§!\n§W--------------\n§!Administration: §Y[565.TransamurGetRegionStatus]§![565.TransamurGetStatePops]"
+TRM_Blagoveschensk_tt: "§MBLAGOVESCHENSK§!\n§W--------------\n§!Administration: §Y[657.TransamurGetRegionStatus]§![657.TransamurGetStatePops]"
+TRM_Buryatia_tt: "§MVERKHNEUDINSK§!\n§W--------------\n§!Administration: §Y[564.TransamurGetRegionStatus]§![564.TransamurGetStatePops]"
+TRM_Chita_tt: "§MCHITA§!\n§W--------------\n§!Administration: §Y[563.TransamurGetRegionStatus]§![563.TransamurGetStatePops]"
+TRM_Kamchatka_tt: "§MKAMCHATKA§!\n§W--------------\n§!Administration: §Y[637.TransamurGetRegionStatus]§![637.TransamurGetStatePops]"
+TRM_Khabarovsk_tt: "§MKHABAROVSK§!\n§W--------------\n§!Administration: §Y[409.TransamurGetRegionStatus]§![409.TransamurGetStatePops]"
+TRM_Kurily_tt: "§MKURILY§!\n§W--------------\n§!Administration: §Y[555.TransamurGetRegionStatus]§![555.TransamurGetStatePops]
+TRM_Magadan_tt: "§MOKHOTSK§!\n§W--------------\n§!Administration: §Y[562.TransamurGetRegionStatus]§![562.TransamurGetStatePops]"
+TRM_Nikolayevsk_tt: "§MNIKOLAYEVSK§!\n§W--------------\n§!Administration: §Y[560.TransamurGetRegionStatus]§![560.TransamurGetStatePops]"
+TRM_Sakhalin_tt: "§MSAKHALIN§!\n§W--------------\n§!Administration: §Y[537.TransamurGetRegionStatus]§![537.TransamurGetStatePops]"
+TRM_Vladivostok_tt: "§MVLADIVOSTOK§!\n§W--------------\n§!Administration: §Y[408.TransamurGetRegionStatus]§![408.TransamurGetStatePops]"
+TRM_Primorye_tt: "§MPRIMORYE§!\n§W--------------\n§!Administration: §Y[1246.TransamurGetRegionStatus]§![1246.TransamurGetStatePops]"
+TRM_Yakutia_tt: "§MYAKUTSK§!\n§W--------------\n§!Administration: §Y[574.TransamurGetRegionStatus]§![574.TransamurGetStatePops]"
+
+TRM_State_Pops: "\n§LDO-ROVS§! - §L[?ROVS_Authority|%0]§!\n§gJapanese§! - §g[?Japanese_Authority|%0]§!\n§XKolchak§! - §X[?Kolchak_Authority|%0]§!\n§NNRA§! - §N[?NRA_Authority|%0]§!\n§lOblastniki§! - §l[?Oblastniki_Authority|%0]§!\n§CTransbaikal Cossack§! - §C[?Cossack_Authority|%0]§!\n§cVladivostok Business§! - §c[?Business_Authority|%0]§!\n"
 TRM_Amur_TITLE: "§LThe Region of Amur connects the Transbaikal region with the rest of the Far-Eastern territory by making it a strategically important region for Kolchak Government. Kolchak ensured the control of the Transsiberian Railroad in Amur Region with the help of the DO-ROVS, which made town of Zeya a military base. Even though the governmental forces are controling the majority of Amur region, the NRA partisans are also active here, trying to regain control over Amur for years without any success.§!"
 TRM_Bodaybo_TITLE: "§LLocated in the Patom Highlands, Bodaybo was once known to be a perspective gold-mining region in Eastern Siberia, but in 1915 the area was cut off from the supply centers and as a result, gold production by 1921 decreased tenfold.\nWhile Kolchak's government tried to boost the gold industry in the region, it is still highly inefficient and the local civilian government takes about 80% of the gold to improve the area, providing the central authorities with almost no profit.§!"
 TRM_Blagoveschensk_TITLE: "§LCity of Blagoveschensk, having the same name as the region, is a gradually developing and industrializing city, a large and important river port. It is known to once become the capital of the Amur Labour Socialist Republic during the Civil War and the socialist sentiments are still strong here. Moreover, the region is a home to the Amur Cossack Host.\nThe city, same to Zeya, is under the control of the DO-ROVS detachments aimed to bring peace and order in the region.§!"
@@ -1901,11 +1890,11 @@ TRM_increase_rovs_loyalty_tt: "§LDO-ROVS§! will become §Gmore loyal§! to §X
 TRM_decrease_rovs_loyalty_tt: "§LDO-ROVS§! will become §Rless loyal§! to §XKolchak§!\n"
 
 TRM_this_will_greatly_anger_cossacks: "Completing this decision will §Vgreatly anger§! §CTransbaikal Cossacks§!"\n
-TRM_this_will_greatly_anger_oblastniki: "Completing this decision will §Vgreatly anger§! §lDemocrats§!\n"
+TRM_this_will_greatly_anger_oblastniki: "Completing this decision will §Vgreatly anger§! §lOblastniki§!\n"
 
 TRM_martial_law_in_state: "§CTransbaikal Cossacks§! received full authority over §M[FROM.GetName]§!"
 TRM_martial_law_in_amur: "§CTransbaikal Cossacks§! received full authority over §MBlagoveschensk§!"
-TRM_opened_state_assembly: "§lDemocrats§! received full authority over this state"
+TRM_opened_state_assembly: "§lOblastniki§! received full authority over this state"
 TRM_open_assembly_state: "Local Assembly in [FROM.GetName]"
 TRM_make_chita_fully_cossack: "Establish Official Borders of the §CTransbaikal Cossack Host§!"
 TRM_make_blagoveschensk_fully_cossack: "Establish Official Borders of the §CAmur Cossack Host§!"
@@ -1931,15 +1920,15 @@ TRM_Expand_Cossack_Rights_tt: "Completing this focus will unlock £decision_icon
 TRM_Crush_NRA_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gdecrease§! £resistance_texticon §RNRA partisans§! resistance\n"
 TRM_Appease_The_Workers_tt: "Workers and peasants will become §Gmore friendly§! towards our government and will act §Gless radical§!\n"
 TRM_Austerity_Measures_tt: "Workers and peasants will become §Rless friendly§! towards our government and will act §Rmore radical§!\n"
-TRM_Siberian_Regional_Council_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gincrease§! §XKolchak§! authority at the cost of appeasing §lDemocrats§!\n"
-TRM_Deal_With_Oblastniki_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gincrease§! §XKolchak§! authority, but at the same time increase £resistance_texticon §lDemocrats§! resentment\n"
+TRM_Siberian_Regional_Council_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gincrease§! §XKolchak§! authority at the cost of appeasing §lOblastniki§!\n"
+TRM_Deal_With_Oblastniki_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gincrease§! §XKolchak§! authority, but at the same time increase £resistance_texticon §lOblastniki§! resentment\n"
 TRM_Self_Government_Minorities_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gincrease§! §XKolchak§! authority in [574.GetName] and [564.GetName]\n"
 TRM_Martial_Law_In_Minority_Areas_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gincrease§! §XKolchak§! authority in [574.GetName] and [564.GetName]\n"
 TRM_Japanese_Arms_tt: "Completing this focus will activate monthly shipments of §gJapanese§! equipment to §YVladivostok§!\n"
-TRM_buryat_kurultai_tt: "Holding the All-Buryat Kurultai will §Gincrease§! Buryats' opinion of §XKolchak§! and §Gdecrease§! £resistance_texticon §lDemocrats§! resentment, but at the same time §Gdecrease§! Buryat separatism."
-TRM_buryat_martial_law_tt: "Invoking the Martial Law in [564.GetName] will §Rdecrease§! Buryats' opinion of §XKolchak§! and §Gincrease§! £resistance_texticon §lDemocrats§! resentment, but at the same time greatky §Rincrease§! Buryat separatism, leading to a possible revolt."
-TRM_yakut_munnah_tt: "Holding the All-Yakut Munn'ah will §Gincrease§! Yakuts' opinion of §XKolchak§! and §Gdecrease§! £resistance_texticon §lDemocrats§! resentment, but at the same time §Gdecrese§! Yakut separatism."
-TRM_yakut_martial_law_tt: "Invoking the Martial Law in [574.GetName] will §Rdecrease§! Yakuts' opinion of §XKolchak§! and §Gincrease§! £resistance_texticon §lDemocrats§! resentment, but at the same greatly §Rincrease§! Yakut separatism, leading to a possible revolt."
+TRM_buryat_kurultai_tt: "Holding the All-Buryat Kurultai will §Gincrease§! Buryats' opinion of §XKolchak§! and §Gdecrease§! £resistance_texticon §lOblastniki§! resentment, but at the same time §Gdecrease§! Buryat separatism."
+TRM_buryat_martial_law_tt: "Invoking the Martial Law in [564.GetName] will §Rdecrease§! Buryats' opinion of §XKolchak§! and §Gincrease§! £resistance_texticon §lOblastniki§! resentment, but at the same time greatky §Rincrease§! Buryat separatism, leading to a possible revolt."
+TRM_yakut_munnah_tt: "Holding the All-Yakut Munn'ah will §Gincrease§! Yakuts' opinion of §XKolchak§! and §Gdecrease§! £resistance_texticon §lOblastniki§! resentment, but at the same time §Gdecrese§! Yakut separatism."
+TRM_yakut_martial_law_tt: "Invoking the Martial Law in [574.GetName] will §Rdecrease§! Yakuts' opinion of §XKolchak§! and §Gincrease§! £resistance_texticon §lOblastniki§! resentment, but at the same greatly §Rincrease§! Yakut separatism, leading to a possible revolt."
 TRM_Diterikhs_Will_Deal_With_NRA_tt: "The success of operations against §NNRA§! will be §Gincreased§! in [561.GetName], [560.GetName] and [657.GetName]"
 TRM_Semyonov_Will_Deal_With_NRA_tt: "The success of operations against §NNRA§! will be §Gincreased§! in [563.GetName] and [564.GetName]"
 Infiltrate_NRA_will_show_when_you_activate_it: "§MThe effects of this operation will show up when you activate it!§!"
@@ -2337,6 +2326,14 @@ TRM_Give_Ussuri_To_Fengtian_desc: "While we are currently holding the lands of O
 TRM_New_Far_Eastern_Republic: "The New Far-Eastern Republic"
 TRM_New_Far_Eastern_Republic_desc: "With our actions we have transformed the decaying Transamur into a new and strong Far-Eastern Republic."
 
+
+TRM_Co_Prosper_With_Japan: "Co-Prosper With Japan"
+TRM_Co_Prosper_With_Japan_desc: "While it’s true that Japan has given us much, it doesn’t mean we need to give up our independence. We have to keep our close ties with them as partners, not servants."
+
+TRM_Co_Prosper_Within_Japan: "Co-Prosper Within Japan"
+TRM_Co_Prosper_Within_Japan_desc: "We owe Japan too much to just sit by and be independent. The time has come for our ascension."
+
+
 TRM_Expand_RCW: "Lessons of the Kolchak Putsch"
 TRM_Expand_RCW_desc: "Since the Kolchak Putsch we have some border conflicts with Russia, but we kept the Far-East and now know their weak spots."
 
@@ -2605,20 +2602,12 @@ TRM_raise_militia_desc: "The time has come to fight for our freedom. Patriotic c
 TRM_oblastniki_influence: "Siberian Regionalism"
 TRM_oblastniki_influence_desc: "The Oblastniki, Siberian Regionalists are those who believe that the entire region of Siberia should be at least autonomous. After the putsch Kolchak has given a promise to give wide autonomy to Siberia. However, his cooperation with Japanese and authoritarin rule is limiting the dreams of Oblastniki. Their resistance will grow from day to day if Kolchak does not fulfil his promise. But notice, the more promises Kolchak gives them, the stronger their possible revolt will be, if Admiral will break his word.\n\nWe've already made: [?TRM.OblastnikiPromises|O0] promises."
 
-TRM_will_fulfill_part_of_promises: "§GThis decision will fulfil some promises §XKolchak§! made to the §lDemocrats§!\n§!"
+TRM_will_fulfill_part_of_promises: "§GThis decision will fulfil some promises §XKolchak§! made to the §lOblastniki§!\n§!"
 
 TRM_oblastniki_committee: "Monthly Oblastniki Rally"
 TRM_oblastniki_committee_desc: "Every month the Oblastniki convene a meeting and prepare a report about current state of Siberian regionalism."
 
-TRM_open_chita_assembly: "Local Assembly in Chita"
-TRM_open_irkutsk_assembly: "Local Assembly in Irkutsk"
-TRM_open_krasnoyarsk_assembly: "Local Assembly in Krasnoyarsk"
-TRM_open_scheglovsk_assembly: "Local Assembly in Scheglovsk"
-TRM_open_novonikolaevsk_assembly: "Local Assembly in Novo-Nikolayevsk"
-TRM_open_barnaul_assembly: "Local Assembly in Barnaul"
-TRM_open_omsk_assembly: "Local Assembly in Omsk"
-TRM_open_ekaterinburg_assembly: "Local Assembly in Yekaterinburg"
-TRM_open_chelyabinsk_assembly: "Local Assembly in Chelyabinsk"
+TRM_open_assembly_in_state: "Open Local Council in [FROM.GetName]"
 TRM_destroy_separatism: "Destroy Separatism"
 
 TRM_oblastnik_council: "Create Siberian Regional Council"
@@ -2878,7 +2867,7 @@ TRM_Frantisek_Zvonicek_for_npo: "František Zvoníček"
 
 ### Economy Minister ###
 TRM_Vladimir_Merzheevsky_eco_tot: "Vladimir Merzheevsky" #mladorossi
-TRM_Alexander_Krasnoshchyokov_eco_syn: "Aleksander Krasnoschyokov" #centrosibir
+TRM_Boris_Shumyatsky_eco_rso: "Boris Shumyatsky" #centrosibir
 TRM_Yevgeniy_Timofeev_eco_rso: "Evgeny Timofeev" #radsoc NRA
 TRM_Vladimir_M_Krutovsky_eco_sde: "Vladimir Krutovsky" #socdem NRA
 TRM_Sergey_Zenkovskiy_eco_sde: "Sergey Zenkovskiy" #socdem mladorossi

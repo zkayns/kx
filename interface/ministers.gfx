@@ -48378,8 +48378,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/TRM/TRM_Boris_Shumyatsky.png"
 	}
 	spriteType = {
-		name = "GFX_idea_TRM_Nikolay_Kalashnikov_hog_rso"
-		texturefile = "gfx/interface/ministers/TRM/TRM_Nikolay_Kalashnikov.png"
+		name = "GFX_idea_TRM_Alexander_Krasnoshchyokov_hog_rso"
+		texturefile = "gfx/interface/ministers/TRM/TRM_Alexander_Krasnoshchyokov.png"
 	}
 	spriteType = {
 		name = "GFX_idea_TRM_Florian_Fedorovich_hog_sde"
@@ -48488,8 +48488,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/TRM/TRM_Vladimir_Merzheevsky.png"
 	}
 	spriteType = {
-		name = "GFX_idea_TRM_Alexander_Krasnoshchyokov_eco_syn"
-		texturefile = "gfx/interface/ministers/TRM/TRM_Alexander_Krasnoshchyokov.png"
+		name = "GFX_idea_TRM_Boris_Shumyatsky_eco_rso"
+		texturefile = "gfx/interface/ministers/TRM/TRM_Boris_Shumyatsky.png"
 	}
 	spriteType = {
 		name = "GFX_idea_TRM_Yevgeniy_Timofeev_eco_rso"

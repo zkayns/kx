@@ -109,20 +109,7 @@ TRM_Dealing_With_NRA = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = TRM_path
-						option = RULE_OPTION_TRM_NRA_COUP_RADSOC
-					}
-					has_game_rule = {
-						rule = TRM_path
-						option = RULE_OPTION_TRM_NRA_COUP_SYNDIE
-					}
-					has_game_rule = {
-						rule = TRM_path
-						option = RULE_OPTION_TRM_NRA_COUP
-					}
-				}
+				TRM_nra_game_rule = yes
 			}
 		}
 
@@ -1477,10 +1464,7 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
-			OR = {
-				has_country_flag = TRM_entente_full_support
-				has_country_flag = TRM_entente_partial_support
-			}
+			has_completed_focus = TRM_Seek_For_Entente_Support
 		}
 		available = {
 			NOT = { TRM_semyenov_in_power = yes }
@@ -1576,6 +1560,12 @@ TRM_japanese_influence = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
 		}
+		available = { 
+			OR = {
+				has_completed_focus = TRM_Seek_For_Entente_Support
+				has_completed_focus = TRM_The_Japanese_Qustion
+			}
+		}
 		
 		cost = 25
 		days_remove = 70
@@ -1603,23 +1593,8 @@ TRM_japanese_influence = {
 				remove_idea = TRM_economic_ties_to_japan_0
 				add_idea = TRM_economic_ties_to_japan_1
 			}
-			add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
-			custom_effect_tooltip = TRM_Vladivostok_Business_Circle_Will_Grow_More_Dependant_On_Japanese
-			add_to_variable = { VladBusCirOrientation = -1 }
-			effect_tooltip = {
-				random_list = {
-					20 = { 409 = { TRM_Increase_Japanese_Support = yes } }
-					20 = { 1246 = { TRM_Increase_Japanese_Support = yes } }
-					15 = { 637 = { TRM_Increase_Japanese_Support = yes } }
-					15 = { 562 = { TRM_Increase_Japanese_Support = yes } }
-					10 = { 560 = { TRM_Increase_Japanese_Support = yes } }
-					5 = { 657 = { TRM_Increase_Japanese_Support = yes } }
-					5 = { 561 = { TRM_Increase_Japanese_Support = yes } }
-					5 = { 574 = { TRM_Increase_Japanese_Support = yes } }
-					5 = { 563 = { TRM_Increase_Japanese_Support = yes } }
-				}
-			}
 			hidden_effect = {
+				add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
 				random_list = {
 					20 = {
 						409 = { add_to_variable = { Japanese_Authority = 0.03 } }
@@ -1661,8 +1636,6 @@ TRM_japanese_influence = {
 						563 = { add_to_variable = { Kolchak_Authority = -0.03 } }
 					}
 				}
-			}
-			hidden_effect = {
 				TRM_clamp_spheres_of_influence = yes
 				TRM_recalculate_kolchak_variables = yes
 			}
@@ -3326,244 +3299,36 @@ TRM_oblastniki_influence = {
 		}
 	}
 		
-	TRM_open_irkutsk_assembly = {
-		visible = {
+	TRM_open_assembly_in_state = {
+		#icon
+		targets = { 566 568 569 570 40 571 653 572 811 654 }
+		target_trigger = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+		}
+		target_root_trigger = { 
 			has_country_flag = TRM_oblastniki_operate
 			NOT = { has_government = social_liberal }
 		}
-		available = {
-			566 = { is_owned_and_controlled_by = ROOT }
-		}
+		state_target = yes
 		cost = 75
-		days_remove = 2
 		fire_only_once = yes
 		
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				set_temp_variable = { temp = party_popularity@social_liberal }
+				factor = temp
+			}
 		}
 		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_irkutsk_assembly"
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete TRM_open_irkutsk_assembly target: [FROM.GetName]"
+			set_temp_variable = { pop_to_remove = FROM.state_population_k }
+			divide_temp_variable = { pop_to_remove = -50000 }
+			clamp_temp_variable = { var = pop_to_remove min = -0.12 max = -0.01 }
 			add_popularity = {
 				ideology = social_liberal
-				popularity = -0.03
-			}
-			TRM_recalculate_oblastniki_effects = yes
-			custom_effect_tooltip = TRM_will_fulfill_part_of_promises
-			add_to_variable = { OblastnikiPromises = -1 }
-			clamp_variable = {
-				var = OblastnikiPromises
-				min = 0
-			}
-		}
-	}
-	TRM_open_krasnoyarsk_assembly = {
-		visible = {
-			has_country_flag = TRM_oblastniki_operate
-			NOT = { has_government = social_liberal }
-		}
-		available = {
-			568 = { is_owned_and_controlled_by = ROOT }
-		}
-		cost = 75
-		days_remove = 2
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_krasnoyarsk_assembly"
-			add_popularity = {
-				ideology = social_liberal
-				popularity = -0.03
-			}
-			TRM_recalculate_oblastniki_effects = yes
-			custom_effect_tooltip = TRM_will_fulfill_part_of_promises
-			add_to_variable = { OblastnikiPromises = -1 }
-			clamp_variable = {
-				var = OblastnikiPromises
-				min = 0
-			}
-		}
-	}
-	TRM_open_scheglovsk_assembly = {
-		visible = {
-			has_country_flag = TRM_oblastniki_operate
-			NOT = { has_government = social_liberal }
-		}
-		available = {
-			569 = { is_owned_and_controlled_by = ROOT }
-		}
-		cost = 75
-		days_remove = 2
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_scheglovsk_assembly"
-			add_popularity = {
-				ideology = social_liberal
-				popularity = -0.03
-			}
-			TRM_recalculate_oblastniki_effects = yes
-			custom_effect_tooltip = TRM_will_fulfill_part_of_promises
-			add_to_variable = { OblastnikiPromises = -1 }
-			clamp_variable = {
-				var = OblastnikiPromises
-				min = 0
-			}
-		}
-	}
-	TRM_open_novonikolaevsk_assembly = {
-		visible = {
-			has_country_flag = TRM_oblastniki_operate
-			NOT = { has_government = social_liberal }
-		}
-		available = {
-			570 = { is_owned_and_controlled_by = ROOT }
-		}
-		cost = 75
-		days_remove = 2
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_novonikolaevsk_assembly"
-			add_popularity = {
-				ideology = social_liberal
-				popularity = -0.03
-			}
-			TRM_recalculate_oblastniki_effects = yes
-			custom_effect_tooltip = TRM_will_fulfill_part_of_promises
-			add_to_variable = { OblastnikiPromises = -1 }
-			clamp_variable = {
-				var = OblastnikiPromises
-				min = 0
-			}
-		}
-	}
-	TRM_open_barnaul_assembly = {
-		visible = {
-			has_country_flag = TRM_oblastniki_operate
-			NOT = { has_government = social_liberal }
-		}
-		available = {
-			40 = { is_owned_and_controlled_by = ROOT }
-		}
-		cost = 75
-		days_remove = 2
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_barnaul_assembly"
-			add_popularity = {
-				ideology = social_liberal
-				popularity = -0.03
-			}
-			TRM_recalculate_oblastniki_effects = yes
-			custom_effect_tooltip = TRM_will_fulfill_part_of_promises
-			add_to_variable = { OblastnikiPromises = -1 }
-			clamp_variable = {
-				var = OblastnikiPromises
-				min = 0
-			}
-		}
-	}
-	TRM_open_omsk_assembly = {
-		visible = {
-			has_country_flag = TRM_oblastniki_operate
-			NOT = { has_government = social_liberal }
-		}
-		available = {
-			571 = { is_owned_and_controlled_by = ROOT }
-		}
-		cost = 75
-		days_remove = 2
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_omsk_assembly"
-			add_popularity = {
-				ideology = social_liberal
-				popularity = -0.03
-			}
-			TRM_recalculate_oblastniki_effects = yes
-			custom_effect_tooltip = TRM_will_fulfill_part_of_promises
-			add_to_variable = { OblastnikiPromises = -1 }
-			clamp_variable = {
-				var = OblastnikiPromises
-				min = 0
-			}
-		}
-	}
-	TRM_open_ekaterinburg_assembly = {
-		visible = {
-			has_country_flag = TRM_oblastniki_operate
-			NOT = { has_government = social_liberal }
-		}
-		available = {
-			653 = { is_owned_and_controlled_by = ROOT }
-		}
-		cost = 75
-		days_remove = 2
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_ekaterinburg_assembly"
-			add_popularity = {
-				ideology = social_liberal
-				popularity = -0.03
-			}
-			TRM_recalculate_oblastniki_effects = yes
-			custom_effect_tooltip = TRM_will_fulfill_part_of_promises
-			add_to_variable = { OblastnikiPromises = -1 }
-			clamp_variable = {
-				var = OblastnikiPromises
-				min = 0
-			}
-		}
-	}
-	TRM_open_chelyabinsk_assembly = {
-		visible = {
-			has_country_flag = TRM_oblastniki_operate
-			NOT = { has_government = social_liberal }
-		}
-		available = {
-			572 = { is_owned_and_controlled_by = ROOT }
-		}
-		cost = 75
-		days_remove = 2
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_chelyabinsk_assembly"
-			add_popularity = {
-				ideology = social_liberal
-				popularity = -0.03
+				popularity = var:pop_to_remove
 			}
 			TRM_recalculate_oblastniki_effects = yes
 			custom_effect_tooltip = TRM_will_fulfill_part_of_promises
@@ -3715,10 +3480,7 @@ TRM_russian_expansion = {
 	}
 	TRM_send_a_delegation_to_major_power = {
 		visible = {
-			OR = {
-				has_completed_focus = TRM_Freedom_Blazes_in_the_East
-				has_completed_focus = TRM_Form_A_New_Cabinet
-			}
+			has_completed_focus = TRM_Form_A_New_Cabinet
 		}
 		available = {
 			NOT = { has_country_flag = TRM_currently_sent_a_delegation }
@@ -4002,12 +3764,9 @@ TRM_russian_expansion = {
 							GER = { has_war_with = RUS }
 							date > 1939.1.1
 						}
-						AND = {
-							custom_trigger_tooltip = {
-								tooltip = RUS_Start_The_Offensive_tooltip
-								check_variable = { global.siberian_war_chance > 0.84 }
-							}
-							date < 1939.1.1
+						custom_trigger_tooltip = {
+							tooltip = RUS_Start_The_Offensive_tooltip
+							check_variable = { global.siberian_war_chance > 0.84 }
 						}
 					}
 					OR = {
@@ -4022,6 +3781,7 @@ TRM_russian_expansion = {
 						has_completed_focus = TRM_spirit_revolution
 						has_completed_focus = TRM_Hail_Tsar
 						has_completed_focus = TRM_ROVS_Secures_The_Power
+						has_country_flag = SOV_restored_in_transamur
 					}
 				}
 			}			
@@ -4032,7 +3792,7 @@ TRM_russian_expansion = {
 			NOT = { has_non_aggression_pact_with = FROM }
 		}
 
-		targets = { RUS RVA WRA RRF DKB }
+		targets = { RUS RVA WRA RRF }
 		target_root_trigger = {
 			has_idea = TRM_dream			
 			NOT = { has_active_mission = TRM_will_declare_war_on_RUS }
@@ -4335,7 +4095,7 @@ TRM_russian_expansion = {
 		available = {
 			has_war = no
 			is_subject = no
-			has_completed_focus = TRM_Semyenovs_Fiefdom
+			has_completed_focus = TRM_New_Far_Eastern_Republic
 		}
 		cost = 0
 		fire_only_once = yes
