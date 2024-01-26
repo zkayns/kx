@@ -4208,6 +4208,18 @@ guiTypes = {
 		}
 		
 		iconType = { #
+			name = "Grigoriy_M_Semyenov"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_TRM_Grigory_Semyonov"
+		}
+		
+		iconType = { #
+			name = "Viktor_N_Pepelyayev"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_TRM_Victor_Pepelyaev"
+		}
+		
+		iconType = { #
 			name = "Anastasiy_Vonsyatsky"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_TRM_Anastasiy_Vonsyatsky"

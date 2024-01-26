@@ -923,35 +923,15 @@ country_event = {
 		every_unit_leader = {
 			retire = yes
 		}
-		create_field_marshal = {
-			name = "Vasily Blyukher"
-			portrait_path = "gfx/leaders/TRM/TRM_Vasily_Blyukher.png"
-			id = 505050
-			traits = {
-				offensive_doctrine
-				politically_connected
-				trickster
+		XXA = {
+			random_unit_leader = {
+				limit = { has_id = 505049 }
+				set_nationality = ROOT
 			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
-		}
-		create_corps_commander = {
-			name = "Genrikh Eikhe"
-			portrait_path = "gfx/leaders/TRM/TRM_Genrikh_Eikhe.png"
-			id = 505049
-			traits = {
-				politically_connected
-				infantry_leader
-				trait_engineer
+			random_unit_leader = {
+				limit = { has_id = 505050 }
+				set_nationality = ROOT
 			}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 1
 		}
 		hidden_effect = { load_oob = BRY_NRA }
 		country_event = {
@@ -2502,35 +2482,15 @@ country_event = {
 		every_unit_leader = {
 			retire = yes
 		}
-		create_field_marshal = {
-			name = "Vasily Blyukher"
-			portrait_path = "gfx/leaders/TRM/TRM_Vasily_Blyukher.png"
-			id = 505050
-			traits = {
-				offensive_doctrine
-				politically_connected
-				trickster
+		XXA = {
+			random_unit_leader = {
+				limit = { has_id = 505049 }
+				set_nationality = ROOT
 			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
-		}
-		create_corps_commander = {
-			name = "Genrikh Eikhe"
-			portrait_path = "gfx/leaders/TRM/TRM_Genrikh_Eikhe.png"
-			id = 505049
-			traits = {
-				politically_connected
-				infantry_leader
-				trait_engineer
+			random_unit_leader = {
+				limit = { has_id = 505050 }
+				set_nationality = ROOT
 			}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 1
 		}
 		hidden_effect = { load_oob = BRY_NRA }
 		country_event = {
@@ -2600,35 +2560,15 @@ country_event = {
 		every_unit_leader = {
 			retire = yes
 		}
-		create_field_marshal = {
-			name = "Vasily Blyukher"
-			portrait_path = "gfx/leaders/TRM/TRM_Vasily_Blyukher.png"
-			id = 505050
-			traits = {
-				offensive_doctrine
-				politically_connected
-				trickster
+		XXA = {
+			random_unit_leader = {
+				limit = { has_id = 505049 }
+				set_nationality = ROOT
 			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
-		}
-		create_corps_commander = {
-			name = "Genrikh Eikhe"
-			portrait_path = "gfx/leaders/TRM/TRM_Genrikh_Eikhe.png"
-			id = 505049
-			traits = {
-				politically_connected
-				infantry_leader
-				trait_engineer
+			random_unit_leader = {
+				limit = { has_id = 505050 }
+				set_nationality = ROOT
 			}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 1
 		}
 		hidden_effect = { load_oob = BRY_NRA }
 		country_event = {

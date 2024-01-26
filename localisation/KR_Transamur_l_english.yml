@@ -1546,11 +1546,6 @@ TRM_economic_ties_to_japan_high_desc: "Few seriously dispute that our nation is 
 
 TRM_oblastniki_influence_modifier: "£pol_idea Oblastniki Resistance"
 
-TRM_aid_from_japan_tt: "Modify §HJapanese Dependence§! by\nConstruction Speed: §G+5.00%§!\nStability: §R-3.00%§!\n"
-TRM_Aid_From_Japan_completed: "$has_completed_decision$$TRM_Aid_From_Japan$§!"
-TRM_russo_canadian_naval_treaty_completed: "$has_completed_decision$$TRM_russo_canadian_naval_treaty$§!"
-TRM_Russo_Japanese_Naval_Treaty_completed: "$has_completed_decision$$TRM_Russo_Japanese_Naval_Treaty$§!"
-TRM_zaibatsu_investments_tt: "Modify §HJapanese Dependence§! by\nConstruction Speed: §G+5.00%§!\n£prod_eff_cap  Production Efficiency Cap§G+5.00%§!\nStability: §R-2.00%§!\n"
 trm_northern_expansion: "Northern Expansion"
 
 TRM_Aftermath_Sib_War: "Aftermath of the Siberian War"
@@ -1736,7 +1731,7 @@ TRM_The_Only_Supreme_Ruler_desc: "Nobody deserves the honorary title of the Supr
 
 ### Kolchak Mechanic ###
 TRM_Dealing_With_NRA: "Invisible Army"
-TRM_Dealing_With_NRA_desc: "\n       «Through valleys and over hills\n       Went the division forward\n       To capture in battle Primorye\n       The stronghold of the White Army».\n\n\nThe so-called §NPeople's Revolutionary Army§! is invisible for several reasons.\nFirst, its power and strength are greatly exaggerated, and the army consists of a bunch of guerrillas.\nSecond, because of partisan tactics. The §NNRA§! raids stealthily, often under the cover of night, smashing warehouses and blowing up railroad tracks, sabotaging local factories and bolstering peasant discontent. It is necessary to deal a final and decisive blow to the partisans and stabilize the Far East.\n\nAverage §NNRA§! Resistance: [?TRM.TRM_Overall_NRA_Resistance|N%0]"
+TRM_Dealing_With_NRA_desc: "\n       «Through valleys and over hills\n       Went the division forward\n       To capture in battle Primorye\n       The stronghold of the White Army».\n\n\nThe so-called §NPeople's Revolutionary Army§! is invisible for several reasons.\nFirst, its power and strength are greatly exaggerated, and the army consists of a bunch of guerrillas.\nSecond, because of partisan tactics. The §NNRA§! raids stealthily, often under the cover of night, smashing warehouses and blowing up railroad tracks, sabotaging local factories and bolstering peasant discontent. It is necessary to deal a final and decisive blow to the partisans and stabilize the Far East.\n\nAverage §NNRA§! Resistance: [?TRM.TRM_Overall_NRA_Resistance|N%0]\n\n§HKeep NRA resistance under 20%§!"
 
 TRM_crush_nra_in_state: "Infiltrate NRA Cells in [FROM.GetName]"
 TRM_nra_sabotage: "The NRA Plans a Sabotage"
@@ -2500,8 +2495,13 @@ Aleksandr_Kolchak_escaped: "Alexsandr Kolchak has escaped!"
 TRM_relations_JAP_broke: "We have cut our ties with Japan"
 TRM_oblastniki_banned: "We have put down the Oblastniki resistance"
 TRM_motorised_tooltip: "Two £nato_unit_motorized_icon_small  §HMotorised§! divisions will be deployed."
-TRM_transbaikal_tooltip: "We will establish £KR_game_rule_flag_TRM_SEM §YTransbaikal Military District§! in §Y[563.GetName]§! and §Y[564.GetName]§!.\n§CGrigoriy Semyonov§!, §CIvan Gamov§!, §CVladimir Tolstov§!, §CLeonid Skipetrov§!, §CDmitriy Semyonov§! will become unavailable as generals.\nWe won't be able to interact with §Y[563.GetName]§! and §Y[564.GetName]§!\n\n§RThe success of the martial law under Cossacks is not guaranteed. With high possibility they will try to break free. Moreover, the Military disctrict can fail and other political organisation can rise to power there.§!"
-
+TRM_transbaikal_tooltip: "We will establish £KR_game_rule_flag_TRM_SEM §YTransbaikal Military District§! in §Y[563.GetName]§! and §Y[564.GetName]§!.\n§CGrigoriy Semyenov§!, §CIvan Gamov§!, §CVladimir Tolstov§!, §CLeonid Skipetrov§!, §CDmitriy Semyenov§! will become unavailable as generals.\nWe won't be able to interact with §Y[563.GetName]§! and §Y[564.GetName]§!\n\n§RThe success of the martial law under Cossacks is not guaranteed. With high possibility they will try to break free. Moreover, the Military disctrict can fail and other political organisation can rise to power there.§!"
+TRM_Russo_Japanese_Naval_Treaty_completed: "$has_completed_decision$$TRM_Russo_Japanese_Naval_Treaty$§!"
+TRM_russo_canadian_naval_treaty_completed: "$has_completed_decision$$TRM_russo_canadian_naval_treaty$§!"
+TRM_Seek_For_Entente_Support_completed: "$has_completed_decision$$TRM_Seek_For_Entente_Support$§!"
+TRM_Aid_From_Japan_completed: "$has_completed_decision$$TRM_Aid_From_Japan$§!"
+TRM_japanese_influence_less_5: "§gJapanese§! Influence is less than 5%"
+TRM_has_japanese_influence: "§gJapanese§! Influence is present in [ROOT.GetName]"
 
 ### Flags ###
 TRM_control_FE: "The Russian Far East is ours"
@@ -2730,9 +2730,9 @@ TRM_SIB_ROVS2: "Provisional Transamur Government"
 TRM_SIB_ROVS2_ADJ: "Transamurian"
 TRM_SIB_ROVS2_DEF: "the Provisional Transamur Government"
 
-TRM_SOV: "Far-Eastern Republic"
+TRM_SOV: "Far-Eastern People's Republic"
 TRM_SOV_ADJ: "Far-Eastern"
-TRM_SOV_DEF: "the Far-Eastern Republic"
+TRM_SOV_DEF: "the Far-Eastern People's Republic"
 
 TRM_NRA: "People's Revolutionary Army"
 TRM_NRA_ADJ: "Far-Eastern"

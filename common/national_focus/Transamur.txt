@@ -2692,6 +2692,10 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Increase_Our_Legitimacy"
+			custom_effect_tooltip = upon_selecting_focus
+			effect_tooltip = { country_event = tram.212 }
+			custom_effect_tooltip = effect_upon_focus_completion
 			country_event = tram.1481
 		}
 	}

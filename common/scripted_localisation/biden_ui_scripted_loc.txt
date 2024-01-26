@@ -427,6 +427,28 @@ defined_text = {
 	}		
 	text = {
 		trigger = {
+			tag = TRM
+			TRM_kolchak_in_power = yes
+			OR = { 
+				has_idea = TRM_Viktor_N_Pepelyayev_hog_mli
+				has_idea = TRM_Grigoriy_M_Semyenov_hog_pau
+			}
+		}
+		localization_key = SR_OR_LEADER
+	}		
+	text = {
+		trigger = {
+			tag = TRM
+			RUS_russian_monarch = yes
+			OR = { 
+				has_idea = TRM_Mikhail_K_Diterikhs_hog_pau
+				has_idea = TRM_Vladimir_Kappel_hog_pau
+			}
+		}
+		localization_key = VD_OR_LEADER
+	}		
+	text = {
+		trigger = {
 			tag = SIC
 		}
 		localization_key = KNG_OR_LEADER
@@ -1175,6 +1197,29 @@ defined_text = {
 		}
 		localization_key = VZ_OR_LEADER2
 	}		
+	text = {
+		trigger = {
+			tag = TRM
+			TRM_kolchak_in_power = yes
+			OR = { 
+				has_idea = TRM_Viktor_N_Pepelyayev_hog_mli
+				has_idea = TRM_Grigoriy_M_Semyenov_hog_pau
+			}
+		}
+		localization_key = PM_OR_LEADER2
+	}		
+			
+	text = {
+		trigger = {
+			tag = TRM
+			RUS_russian_monarch = yes
+			OR = { 
+				has_idea = TRM_Mikhail_K_Diterikhs_hog_pau
+				has_idea = TRM_Vladimir_Kappel_hog_pau
+			}
+		}
+		localization_key = VD_OR_LEADER2
+	}
 	text = {
 		trigger = {
 			tag = SIC
@@ -7813,7 +7858,31 @@ defined_text = {
 		trigger = {
 			has_idea = TRM_Anastasiy_Vonsyatsky_hog_npo
 		}
-		localization_key = "Anastasiy Vonsyatsky"
+		localization_key = TRM_Anastasiy_Vonsyatsky_hog_npo
+	}
+	text = { #Fired by Minister Ideas
+		trigger = {
+			has_idea = TRM_Mikhail_K_Diterikhs_hog_pau
+		}
+		localization_key = TRM_Mikhail_K_Diterikhs_hog_pau
+	}
+	text = { #Fired by Minister Ideas
+		trigger = {
+			has_idea = TRM_Vladimir_Kappel_hog_pau
+		}
+		localization_key = TRM_Vladimir_Kappel_hog_pau
+	}
+	text = { #Fired by Minister Ideas
+		trigger = {
+			has_idea = TRM_Viktor_N_Pepelyayev_hog_mli
+		}
+		localization_key = TRM_Viktor_N_Pepelyayev_hog_mli
+	}
+	text = { #Fired by Minister Ideas
+		trigger = {
+			has_idea = TRM_Grigoriy_M_Semyenov_hog_pau
+		}
+		localization_key = TRM_Grigoriy_M_Semyenov_hog_pau
 	}
 	
 	text = { #Fired by Minister Ideas
@@ -13863,6 +13932,30 @@ defined_text = {
 			has_idea = TRM_Anastasiy_Vonsyatsky_hog_npo
 		}
 		localization_key = [GetVonsyatskyPortrait]
+	}
+	text = { #Fired by Minister Ideas
+		trigger = {
+			has_idea = TRM_Mikhail_K_Diterikhs_hog_pau
+		}
+		localization_key = GFX_Portrait_TRM_Mikhail_Diterikhs
+	}
+	text = { #Fired by Minister Ideas
+		trigger = {
+			has_idea = TRM_Vladimir_Kappel_hog_pau
+		}
+		localization_key = GFX_Portrait_TRM_Vladimir_Kappel
+	}
+	text = { #Fired by Minister Ideas
+		trigger = {
+			has_idea = TRM_Viktor_N_Pepelyayev_hog_mli
+		}
+		localization_key = GFX_Portrait_TRM_Victor_Pepelyaev
+	}
+	text = { #Fired by Minister Ideas
+		trigger = {
+			has_idea = TRM_Grigoriy_M_Semyenov_hog_pau
+		}
+		localization_key = GFX_Portrait_TRM_Grigory_Semyonov
 	}
 	### Ukrainians ###
 	text = {
