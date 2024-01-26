@@ -85,8 +85,7 @@ on_actions = {
 						clr_country_flag = TRM_NRA_coup
 						clr_country_flag = TRM_Semyonov_Coup
 						clr_country_flag = TRM_Kolchak_alive
-						remove_ideas = TRM_anti_kolchak
-						remove_ideas = TRM_oblastniki_influence_idea
+						TRM_remove_oblastniki_influence = yes
 						hidden_effect = {
 							remove_dynamic_modifier = { modifier = TRM_oblastniki_influence_modifier }
 							set_country_flag = TRM_oblastniki_banned

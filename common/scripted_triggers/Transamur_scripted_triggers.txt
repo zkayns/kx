@@ -76,7 +76,7 @@ TRM_semyenov_in_power = {
 	custom_trigger_tooltip = {
 		tooltip = TRM_Semyonov_Coup
 		has_country_leader = {
-			name = "Grigory Semyenov"
+			name = "Grigory Semyonov"
 			ruling_only = yes
 		}
 	}
@@ -134,7 +134,7 @@ TRM_democrats_in_power = {
 	custom_trigger_tooltip = {
 		tooltip = TRM_Dem_coup
 		OR = {
-			has_government = social_liberal
+			has_left_democratic_government = yes
 			has_right_democratic_government = yes
 		}
 	}

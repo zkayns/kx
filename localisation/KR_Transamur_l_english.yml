@@ -47,7 +47,7 @@ TRM_rovs_party_long: "Dalnevostochniy Otdel Rossiyskogo Obsche-Voinskogo Soyuza 
 TRM_national_populist_party: "Natsionalisty"
 TRM_national_populist_party_long: "Nationalisty\n§gThe All-Russian National-Revolutionary Labour Worker-Peasant Party of Nationalists, or as they're commonly referred to, All-Russian Nationalist Movement or the Natsionalisty, are an ultranationalist political organization who in recent years have become increasingly popular among the citizens on Transamur. Formed in 1931 by local politician and Kolchak loyalist, Anastasiy Vonsyatsky, the Natsionalisty have found support amongst Manchurian Russians and monarchist exiles. Young emigres still loyal to the ideals of a Russian Tsardom have flocked to this movement in awe of Vonsyatsky’s fiery speeches denouncing Bolshevism, Kerensky and Western Capitalism. All of which he accuses of degenerating the Russian people whilst declaring loyalty to Admiral Kolchak, the Russian Orthodox Church and a restored Tsardom. Espousing the homegrown ideology of “True Russian Nationalism”, the Natsionalisty have organised its members into a paramilitary force known as the, Black Vanguard, undoubtedly a reference to the Black Hundred.\n\n The Black Vanguard have provided security to Kolchak’s regime and have engaged in rounding up political dissidents as well as prominent members of the Jewish Vladivostok community accused of promoting ''dangerous foreign ideologies''. Admiral Kolchak has allowed for these actions to take place without officially endorsing the movements, perhaps to appease the Japanese authorities wary of an anti-foreign movement.§!"
 TRM_semyonov_party: "Voyskovoy Krug"
-TRM_semyonov_party_long: "Voyskovoy Krug\n§gThe Far-Eastern Cossack Host and its leader, Grigoriy Semyenov is a pro-Japanese cossack organisation, that looks forward to further cooperation with Japan and Mongolia. The Host is characterized by cruelty towards socialists and radical disapproval of liberal democracy. Unlike other Cossack Hosts in Russia, The Far-Eastern one sees itself as independent from the Petrograd Regime influence.§!"
+TRM_semyonov_party_long: "Voyskovoy Krug\n§gThe Far-Eastern Cossack Host and its leader, Grigoriy Semyonov is a pro-Japanese cossack organisation, that looks forward to further cooperation with Japan and Mongolia. The Host is characterized by cruelty towards socialists and radical disapproval of liberal democracy. Unlike other Cossack Hosts in Russia, The Far-Eastern one sees itself as independent from the Petrograd Regime influence.§!"
 TRM_authoritarian_democrat_party: "Yaponskaya Delegatsiya"
 TRM_authoritarian_democrat_party_long: "Yaponskaya Delegatsiya\n§gThe Japanese Delegation is an official group of Japanese politicans and diplomats, sent by the Japanese Government. They are operating in Transamur since its foundation and they look forward to establishing close economic and political ties with Japan.§!"
 TRM_moryaki_party: "Moryaki"
@@ -81,8 +81,8 @@ tram.997.d: "The business circles of Vladivostok-namely, the Merkulov Brothers, 
 tram.996.t: "DO-ROVS - Siberian Monarchists"
 tram.996.d: "General Diterikhs is a convinced monarchist, whose ideas are sometimes even too radical. Disappointed in the decision of the constituent assembly to establish a Republic and not return the tsar to the throne, Diterikhs soon joined Kolchak's putsch in 1925 and ended up in Transamur with him.\n\nHere he founded the so-called 'Far Eastern Branch of the Russian All-Military Union' and settled in Nikolayevsk, where a camp of his 'Crusaders' has been created. In addition, Diterikhs also established military control over the Trans-Siberian Railway near the Rukhlovo station, where the railway connects Primorye with Transbaikalia and Yakutia.\n\nDiterikhs is still more or less loyal to the Admiral, as he hopes that the Supreme Ruler will restore the Monarchy as soon as he takes Moscow. Nobody knows why Diterikhs is so sure of this, but Kolchak should be careful, because if the DO-ROVS is not loyal to the Supreme Ruler, anything can be expected from them."
 
-tram.995.t: "Ataman Semyenov and the Cossacks"
-tram.995.d: "Ataman Semyenov is an extraordinary person. Fluent in Buryat and Mongolian, Semyenov has surrounded himself with loyal people and has his own interests in the Far Eastern region. The ataman of the Trans-Baikal Cossacks, the marching ataman of the Amur and Ussuri Cossacks, Semyenov is the main representative of the interests of the Cossacks in Transamur. Despite the fact that he supported Admiral Kolchak both during the civil war and during the coup, his real intentions are unknown. According to rumors, his Cossack troops are supplied with Japanese weapons.\n\nAt the moment, Semyenov is actually waging a war with the remnants of Bolshevism - the partisans of the NRA, and despite the fact that he supports the oblasts and Buryat autonomists, he is engaged in power struggle with them for power in Transbaikalia. It is not known how loyal the Cossacks are to Kolchak, but the Supreme Ruler knows one thing for sure - you can expect anything from them."
+tram.995.t: "Ataman Semyonov and the Cossacks"
+tram.995.d: "Ataman Semyonov is an extraordinary person. Fluent in Buryat and Mongolian, Semyonov has surrounded himself with loyal people and has his own interests in the Far Eastern region. The ataman of the Trans-Baikal Cossacks, the marching ataman of the Amur and Ussuri Cossacks, Semyonov is the main representative of the interests of the Cossacks in Transamur. Despite the fact that he supported Admiral Kolchak both during the civil war and during the coup, his real intentions are unknown. According to rumors, his Cossack troops are supplied with Japanese weapons.\n\nAt the moment, Semyonov is actually waging a war with the remnants of Bolshevism - the partisans of the NRA, and despite the fact that he supports the oblasts and Buryat autonomists, he is engaged in power struggle with them for power in Transbaikalia. It is not known how loyal the Cossacks are to Kolchak, but the Supreme Ruler knows one thing for sure - you can expect anything from them."
 
 tram.994.t: "NRA - The Last Stronghold of Bolshevism"
 tram.994.d: "The Far Eastern People's Revolutionary Army is all that remains of the Red Army in the Far East, if these partisans can be called an army at all. General Blucher, their leader, is undoubtedly a coward. Having been defeated by the Siberian Army, he deserted and hid in the Siberian taiga. Surprisingly, somehow, the partisan movement in Transbaikalia was able to survive until our days. Perhaps the slave conditions of the workers in Chita and Khabarovsk contributed to this, but now the NRA are isolated partisans scattered across Transbaikalia, agitating for a return to Bolshevism. Leading an underground struggle and arranging sabotage, this movement must be destroyed."
@@ -183,9 +183,9 @@ tram.48.a: "Yes, [TRM.GetLeader] should be removed!"
 tram.48.b: "Who they think they are?"
 
 tram.49.t: "Transamur Submits"
-tram.49.d: "[TRM.GetLeader] has decided to submit and kneel before us. Now, there is an empty office of the Vladivostok governorship, and so we shall find a replacement. There are several available options: Ataman Semyenov, leader of Transbaikal Cossack Host. A content Cossack ataman, he would be unlikely to cause serious problems. There is also the choice of the General Yui Mitsue who once was in command of Japanese Expeditionary Corps during the Russian Civil War. An old man deserving of a proper retirement, rule in Transamur would be a good fit for him. Still, several liberal ministers have been suggesting that we should establish a new democratic regime in Transamur instead."
+tram.49.d: "[TRM.GetLeader] has decided to submit and kneel before us. Now, there is an empty office of the Vladivostok governorship, and so we shall find a replacement. There are several available options: Ataman Semyonov, leader of Transbaikal Cossack Host. A content Cossack ataman, he would be unlikely to cause serious problems. There is also the choice of the General Yui Mitsue who once was in command of Japanese Expeditionary Corps during the Russian Civil War. An old man deserving of a proper retirement, rule in Transamur would be a good fit for him. Still, several liberal ministers have been suggesting that we should establish a new democratic regime in Transamur instead."
 tram.49.a: "General Mitsue, you have a new order."
-tram.49.c: "Humble servants like Semyenov are always welcome."
+tram.49.c: "Humble servants like Semyonov are always welcome."
 tram.49.e: "A loyalist democratic government would be fine."
 
 tram.50.t: "A New Order in Transamur"
@@ -305,7 +305,7 @@ tram.80.c: "Kolchak gets overthrown."
 tram.81.t: "Kolchak Assassinated!"
 tram.81.d: "Alexander Kolchak, leader of Transamur for more than 12 years, has been brutally killed in a bombing attack! There are several pretenders to his position, as all of them share either popular support or armed force."
 tram.81.a: "Mikhail Diterikhs is the new leader of Transamur!"
-tram.81.b: "Ataman Semyenov is the new leader of Transamur!"
+tram.81.b: "Ataman Semyonov is the new leader of Transamur!"
 tram.81.c: "General Pepelyaev leads is the new leader of Transamur!"
 tram.81.e: "In chaos Mladorossi seize power!"
 tram.81.f: "Viktor Pepelyaev managed to preserve his position as Kolchak's second-in-command."
@@ -334,7 +334,7 @@ tram.90.a: "Does it mean we are no longer independent?"
 tram.91.t: "Yui Mitsue Dies"
 tram.91.d: "Today, our governor in Transamur, general Yui Mitsuei died at the age of 79. Pro-Japanese politicians in Vladivostok Duma have called for Transamur to be made a new prefecture of our empire. Shall we accept their proposal?"
 tram.91.a: "Indeed, integrate them."
-tram.91.b: "Far too costly. Transamur will remain loyal under Semyenov."
+tram.91.b: "Far too costly. Transamur will remain loyal under Semyonov."
 tram.91.c: "Far too costly. Send Oi Shigemoto as a new colonial government."
 
 tram.92.t: "Propose Reunification with Russia?"
@@ -366,7 +366,7 @@ tram.97.a: "Destroy them!"
 tram.97.b: "We can do nothing, for now."
 
 tram.98.t: "Coup in Transamur"
-tram.98.d: "News about anti-Kolchak coup in Transamur has recently reached us. It appears that Alexander Kolchak, our de-facto puppet leader of the Vladivostok regime, has been removed from power, and [TRM.GetLeader] has become the new dictator. Perhaps we should try to counter-coup him before he starts a geopolitical crisis?"
+tram.98.d: "News about anti-Kolchak coup in Transamur has recently reached us. It appears that Alexander Kolchak, our de-facto puppet leader of the Vladivostok regime, has been removed from power, and [TRM.GetLeader] has become the new ruler. Perhaps we should try to counter-coup him before he starts a geopolitical crisis?"
 tram.98.a: "Greet the new government."
 tram.98.b: "We should attempt to oust the new government."
 
@@ -439,8 +439,8 @@ tram.119.a: "On the other hand, we can avoid a meaningless bloodshed..."
 tram.119.b: "We are not their minions! To arms!"
 
 tram.120.t: "A Second in Command"
-tram.120.d: "An entire week has passed since the assassination of Kolchak and the successful military coup. Now, with the political atmosphere somewhat cooler, the opportunity has finally come for Wojciechowski to choose a deputy to help rule his military cabinet. There are three candidates for this post: the current head of government General Semyenov; young and ambitious general Pepelyaev and conservative Admiral Stark. Though fresh blood may gives us a new opportunities, serious ideological differences exist between Wojciechowski and the more liberal Pepelyaev and Stark will potentially lead to tensions later."
-tram.120.a: "Grigoriy Semyenov will stay in his office."
+tram.120.d: "An entire week has passed since the assassination of Kolchak and the successful military coup. Now, with the political atmosphere somewhat cooler, the opportunity has finally come for Wojciechowski to choose a deputy to help rule his military cabinet. There are three candidates for this post: the current head of government General Semyonov; young and ambitious general Pepelyaev and conservative Admiral Stark. Though fresh blood may gives us a new opportunities, serious ideological differences exist between Wojciechowski and the more liberal Pepelyaev and Stark will potentially lead to tensions later."
+tram.120.a: "Grigoriy Semyonov will stay in his office."
 tram.120.b: "Anatoliy Pepelyaev, some fresh blood..."
 tram.120.c: "Georgiy Stark, a renowned Admiral..."
 
@@ -525,7 +525,7 @@ tram.1481.d.nocoup: "The last step before reclamation of all of Russia. The new 
 tram.1481.a: "This time we will succeed."
 tram.1481.b: "The Oblastnik Council of Supreme Ruler!"
 tram.1481.c: "Merkulov will become the PM!"
-tram.1481.e: "Semyenov will become the PM!"
+tram.1481.e: "Semyonov will become the PM!"
 tram.1481.f: "Diterikhs will become the PM!"
 tram.1481.g: "Status-Quo Council of Supreme Ruler!"
 
@@ -719,8 +719,8 @@ tram.202.d: "Business circles in Vladivostok are the origins of such a state as 
 tram.202.a: "Watch them closely..."
 
 tram.205.t: "Help With Fighting NRA?"
-tram.205.d: "In war, all means are good, and to finally finish off the Bolshevik infection in the Far East, we can turn to one of the political groups loyal to us. There are only two options: the Semyenov Cossacks, who will easily deal with the partisans in their native lands, or the Diterikhs DO-ROVS-organized and disciplined military, who almost as much hate the Bolsheviks as we do."
-tram.205.a: "We will need Semyenov's help"
+tram.205.d: "In war, all means are good, and to finally finish off the Bolshevik infection in the Far East, we can turn to one of the political groups loyal to us. There are only two options: the Semyonov Cossacks, who will easily deal with the partisans in their native lands, or the Diterikhs DO-ROVS-organized and disciplined military, who almost as much hate the Bolsheviks as we do."
+tram.205.a: "We will need Semyonov's help"
 tram.205.b: "We will need Diterikhs's help"
 tram.205.c: "We will cope alone."
 
@@ -754,10 +754,19 @@ tram.213.t: "Tensions in Vladivostok"
 tram.213.d: "Kolchak's statement, despite its seemingly routine in the political sphere, seems to have led to a crisis among ministers, which affected the overall stability of the country. The news about the formation of a new government has raised the ears of the whole of Vladivostok, and people are wondering who will become the new prime minister under the Supreme Ruler. In addition, citizens are afraid of Japan's interference in the decision of Kolchak. Against the background of small popular unrest and a sharp aggravation of distrust of the Supreme Ruler, slogans of free and fair elections are again heard on the streets."
 tram.213.a: "Something is happening"
 
-tram.215.t: "A Delegation From [FROM.GetNameDefCap]"
-tram.215.d: "The government of [FROM.GetNameDefCap] has sent us a foreign delegation, asking for an official recognition of our state as legitimate Russian government. The regime of the self-proclaimed Supreme Ruler of Russia may seem to us ridiculous, but if we are feeling free to oppose the Russian Government in Petrograd and Moscow, we can formally recognize [FROM.GetAdjective] independence."
+tram.215.t: "A Delegation From [FROM.GetName]"
+tram.215.d: "The government of [FROM.GetNameDef] has sent us a foreign delegation, asking for an official recognition of our state as legitimate Russian government. The regime of the self-proclaimed Supreme Ruler of Russia may seem to us ridiculous, but if we are feeling free to oppose the [219.Owner.GetAdjective] government in Moscow, we can formally recognize [TRM.GetAdjective] as the legitimate one."
 tram.215.a: "We should not recognize this Japanese colony..."
-tram.215.b: "They will have our recogniton"
+tram.215.b: "They will have our recogniton."
+
+tram.2151.t: "[FROM.GetName] Recognized Transamur!"
+tram.2151.d: "We have just received the news that the [FROM.GetAdjective] government has treacherously recognized Vladivostok as the legitimate Russian government and opened embassy. We must stand strong against any threats to our legitimacy and act against them!"
+tram.2151.a: "We must apply trade sanctions!"
+tram.2151.b: "Cut all ties with them!"
+
+tram.2152.t: "End of Diplomatic Relations with [FROM.GetName]"
+tram.2152.d: "We have just received the news that the [FROM.GetAdjective] government has cut all ties with us and ended any diplomatic relations between our nations because of our recognition of the 'Vladivostok'."
+tram.2152.a: "What can we do?"
 
 tram.216.t: "[FROM.GetName] Refuses to Recognize Us"
 tram.216.d: "The cowardly [FROM.GetAdjective] government refused to recognize us and has sent our delegation back to Vladivostok. We'll see what will they do when the boots of the Siberian Army march through Moscow."
@@ -829,12 +838,10 @@ tram.300.d: "Due to our harsh policies towards Yakut people, the local civilian 
 tram.300.a: "Long live Free Yakutia!"
 tram.300.b: "Conquer the Yakut traitors!"
 
-tram.310.t: "Chaos in the Far-East!"
-tram.310.d: "It seems that the final desires and attempts of Admiral Kolchak to hold together our nation were vain. The Yakuts have proclaimed the Provisional Republic of Yakutia and seceded, and the others followed their example. We have no choice but to fight for our Motherland and turn it back to normal!"
-tram.310.a: "Long Live Transamur!"
-tram.310.b: "Long Live Yakutia!"
-tram.310.e: "Long Live Siberia!"
-tram.310.c: "Long Live [BRY.GetName]!"
+tram.310.t: "The National Committee of the Buryat-Mongols"
+tram.310.d: "It seems that the final desires and attempts of Admiral Kolchak to hold together our nation were vain. The Buryat-Mongols have proclaimed their own state in Trans-Baikal and seceded. Furthermore, the Cossacks have joined them, supporting the insurgency against our leader."
+tram.310.a: "Long Live [BRY.GetName]!"
+tram.310.b: "Deal with those traitors!"
 
 tram.301.t: "The Japanese Conquer Our Lands!"
 tram.301.d: "In the immediate chaos of the Kolchak's fiefdom, the Japanese with the help of Vladivostok Business circles have seized some our territories. The Kwantung Army is now controlling our cities and the Japanese Fleet is guarding our ports. We must decide what to do."
@@ -860,14 +867,14 @@ tram.401.d: "We must decide the fate of the traitor generals who sided with Kolc
 tram.401.a: "Let them serve the Motherland."
 tram.401.b: "They should be tried for treason!"
 
-tram.402.t: "Fate of Ataman Semyenov"
-tram.402.d: "We have confirmed reports on Ataman Semyenov being a corrupted Japanese agent, who received weapons and money to coup Kolchak and make Russian Far East a Japanese colony. Even though we have pardoned other Transamur officers, the fate of this particular traitor should be very clear - death."
+tram.402.t: "Fate of Ataman Semyonov"
+tram.402.d: "We have confirmed reports on Ataman Semyonov being a corrupted Japanese agent, who received weapons and money to coup Kolchak and make Russian Far East a Japanese colony. Even though we have pardoned other Transamur officers, the fate of this particular traitor should be very clear - death."
 tram.402.a: "This is the right thing to do."
 
 tram.403.t: "Fate of Atamans Gamov and Tolstov"
-tram.403.d: "Ataman Gamov of the Amur Cossack Host and Ataman Tolstov of the Ural Cossack Host have joined Admiral Kolchak and are known to be close associates of Ataman Semyenov. They probably knew about his plans and therefore they cannot be trusted. However, we can still let them live, even reviving the Ural Cossack Host."
+tram.403.d: "Ataman Gamov of the Amur Cossack Host and Ataman Tolstov of the Ural Cossack Host have joined Admiral Kolchak and are known to be close associates of Ataman Semyonov. They probably knew about his plans and therefore they cannot be trusted. However, we can still let them live, even reviving the Ural Cossack Host."
 tram.403.a: "Let them live..."
-tram.403.b: "No mercy for Semyenov's henchmen"
+tram.403.b: "No mercy for Semyonov's henchmen"
 
 tram.404.t: "Fate of Admiral Kolchak"
 tram.404.d: "Is this man an Admiral-traitor, or a hero of Russia? Who is Admiral Kolchak? The Russian Cincinnatus, who made a difficult choice during the civil war, and then again-for the sake of saving the Motherland and opposing Kerenshchina. Perhaps we should spare the admiral if he is willing to give up all claims to the title of Supreme Ruler and continue his naval service, as he has always wanted."
@@ -988,7 +995,7 @@ trmnra.3.a: "The end of dictatorship!"
 
 trmnra.4.t: "Transbaikal Cossacks Declare Independence!"
 trmnra.4.d: "We have definetely underestimated the NRA. Not only is it an armed militia, but they are also professional mercenaries. After Khabarovsk and Chita had fallen under the Red Banner, socialists tried to establish control over Vladivostok. We would have won easily, but the majority of the population seem to be dissatisfied with Kolchak's rule and they are stupid enough to join the bloody socialists. The streets of Vladivostok are now covered in blood."
-trmnra.4.a: "Semyenov's bandits should be crushed!"
+trmnra.4.a: "Semyonov's bandits should be crushed!"
 trmnra.4.b: "We should save Russia from socialist bandits!"
 
 trmnra.6.t: "Admiral Kolchak Murdered"
@@ -1019,11 +1026,11 @@ trmnra.43.d: "After our actions, the Japanese has naval blockaded us. While this
 trmnra.43.a: "Stay strong."
 
 trmnra.9.t: "Buryat-Mongolian SR"
-trmnra.9.d: "The Region of Transbaikal is not only Semyenov Cossacks' den, but also a land of people who were always oppressed - Buryats. We respect the Buryat workers and we wish that they are free. They need the freedom that they never got from Emperor, Kerenskiy and Kolchak."
+trmnra.9.d: "The Region of Transbaikal is not only Semyonov Cossacks' den, but also a land of people who were always oppressed - Buryats. We respect the Buryat workers and we wish that they are free. They need the freedom that they never got from Emperor, Kerenskiy and Kolchak."
 trmnra.9.a: "Promise them autonomy."
 
 trmnra.10.t: "The Land of Buryat-Mongols"
-trmnra.10.d: "We understand the pressing need of Buryat workers to become independent, but the region of Transbaikal was for a long time ruled by Ataman Semyenov - anti-Bolshevist scum, Japanese puppet and a coward. We never got him during the Civil War and he's likely to escape when we liberated Chita. But we should greatly increase garrisons at the border with Mongolia."
+trmnra.10.d: "We understand the pressing need of Buryat workers to become independent, but the region of Transbaikal was for a long time ruled by Ataman Semyonov - anti-Bolshevist scum, Japanese puppet and a coward. We never got him during the Civil War and he's likely to escape when we liberated Chita. But we should greatly increase garrisons at the border with Mongolia."
 trmnra.10.a: "You are already liberated!"
 
 trmnra.90.t: "Buryats Demand Autonomy"
@@ -1129,13 +1136,13 @@ trmnra.61.d: "Today the military command in Vladivostok was absolutely delighted
 trmnra.61.a: "Good riddance."
 
 
-tramsem.1.t: "Ataman Semyenov"
+tramsem.1.t: "Ataman Semyonov"
 tramsem.1.d: "Ataman Semenov, the leader of the Transbaikal Cossacks, did not recognize the Kolchak government during the Civil War. After the founding of Transamur, he really wanted to join us, subjecting the entire Transbaikalia region to our jurisdiction. In the conditions of an actual civil war in the region, we can give Transbaikalia under the full control of Semenov. Temporarily, until he puts things in order there. We can be sure that Semenov will cope with the suppression of the troubles in Transbaikalia. However, there are rumors that Semyonov is coordinated by Japan, and Kolchak is concerned that Semyonov may rebel with the help of the Japanese. Something has to be done."
 tramsem.1.a: "That's the best we can do now."
 tramsem.1.b: "Don't do anything before we talk to the Japanese."
 tramsem.1.c: "Do nothing."
 
-tramsem.2.t: "Who is Semyenov?"
+tramsem.2.t: "Who is Semyonov?"
 tramsem.2.d: "The Japanese Delegation insists that they do not support any Cossack Hosts in the territory of Transamur and recognize the supreme power of our government. It seems that nothing can be done..."
 tramsem.2.a: "Well... let's do this, then."
 tramsem.2.b: "That is definetely a bad idea."
@@ -1150,11 +1157,11 @@ tramsem.4.d: "The Trans-Baikal region is a springboard for constant resistance t
 tramsem.4.a: "We should deal with the situation."
 
 tramsem.5.t: "Support Oblastniki"
-tramsem.5.d: "Ataman Semyenov has close relations with Buryat people. We can gain the support of the Oblastniki if we promise to give them autonomy. And Ataman Semyenov always keeps his promises."
+tramsem.5.d: "Ataman Semyonov has close relations with Buryat people. We can gain the support of the Oblastniki if we promise to give them autonomy. And Ataman Semyonov always keeps his promises."
 tramsem.5.a: "Talk to their leaders"
 
 tramsem.6.t: "An Offer From [TRM.GetNameDef]"
-tramsem.6.d: "The new government of Transamur offers us an alliance. Their new leader, Ataman Semyenov is a close friend and ally of Baron Ungern-Sternberg."
+tramsem.6.d: "The new government of Transamur offers us an alliance. Their new leader, Ataman Semyonov is a close friend and ally of Baron Ungern-Sternberg."
 tramsem.6.b: "Reject their advances."
 tramsem.6.a: "Accept their offer."
 
@@ -1166,61 +1173,23 @@ tramsem.62.d: "Mongolia has rejected our offer to cooperate"
 tramsem.62.a: "Too bad!"
 
 tramsem.7.t: "The Buryat-Mongolian State"
-tramsem.7.d: "The lands west of Chita are populated by the brave Buryat-Mongols. With the support of Oblastniki and Ataman Semyenov personally, these lands rightfully belong to the people who live there. The Buryat state will now exist with the help of Ataman Semyenov and under military and economic dependency on Russia. Ataman Semyenov decided to give all the power in the new state to their spiritual leader - Bidia Dandaron, a radical Buddhist."
+tramsem.7.d: "The lands west of Chita are populated by the brave Buryat-Mongols. With the support of Oblastniki and Ataman Semyonov personally, these lands rightfully belong to the people who live there. The Buryat state will now exist with the help of Ataman Semyonov and under military and economic dependency on Russia. Ataman Semyonov decided to give all the power in the new state to their spiritual leader - Bidia Dandaron, a radical Buddhist."
 tramsem.7.a: "Buryat-Mongols shall be free."
 
 tramsem.9.t: "The Eastern Okraina"
-tramsem.9.d: "The Eastern Okraine, or the Russian Eastern Outskirts is a state, where the whole civil and military power on the territory of Russian eastern outskirts is in Ataman Semyenov's hands. Our country stays stronger than ever."
-tramsem.9.a: "Long Live Ataman Semyenov"
+tramsem.9.d: "The Eastern Okraine, or the Russian Eastern Outskirts is a state, where the whole civil and military power on the territory of Russian eastern outskirts is in Ataman Semyonov's hands. Our country stays stronger than ever."
+tramsem.9.a: "Long Live Ataman Semyonov"
 
 tramsem.8.t: "The Transbaikal Union"
-tramsem.8.d: "The Far-Eastern Republic is a home to various cossack hosts - Ussuri, Amur and Semyenov's one - Transbaikal. We united all the host - but we should proclaim that we are the land of cossacks and we should promote our identity and make everyone respect it."
+tramsem.8.d: "The Far-Eastern Republic is a home to various cossack hosts - Ussuri, Amur and Semyonov's one - Transbaikal. We united all the host - but we should proclaim that we are the land of cossacks and we should promote our identity and make everyone respect it."
 tramsem.8.a: "The Union forever!"
 
 
 tramjap.3.t: "Fate of the Russian Far-East"
-tramjap.3.d: ""
-tramjap.3.a: "Our loyal puppet, Ataman Semyenov, should take charge."
+tramjap.3.d: "The provisional occupational authority of Yui Mitsue has come to an end, as reported from Tokyo. However, this is not the end of the colonial administration, as various Japanese officials suggest to change government in Vladivostok to appease the local population. Among the candidates our long-term Cossack ally Grigoriy Semyonov, as well as Vladivostok business circle, headed by the Merkulovs."
+tramjap.3.a: "Our loyal puppet, Ataman Semyonov, should take charge."
 tramjap.3.b: "Prolong Mitsue's occupation authority."
 tramjap.3.c: "Give up power to the civilian government."
-
-tramjap.4.t: "Fate of the Russian Far-East"
-tramjap.4.d: ""
-tramjap.4.a: "We should annex Kamchatka and Okhotsk"
-tramjap.4.b: "We have no interest in these wastelands."
-
-tramjap.5.t: "Fate of Primorye"
-tramjap.5.d: ""
-tramjap.5.a: "We should directly annex it into our Empire!"
-tramjap.5.b: "Our loyal puppet should control this area."
-
-tramjap.6.t: "Fate of Transbaikalia"
-tramjap.6.d: ""
-tramjap.6.a: "Give these lands for our loyal puppet Semyenov"
-tramjap.6.b: "Let the local Buryats govern themselves."
-tramjap.6.c: "This lands should belong to the Supreme Siberian Authority"
-tramjap.6.e: "Give these lands to the Mongols."
-
-tramjap.7.t: "Fate of Yakutsk"
-tramjap.7.d: ""
-tramjap.7.a: "Establish a Pro-Japanese local government there."
-tramjap.7.b: "Leave this land for Yakuts to govern themselves."
-tramjap.7.c: ""
-
-tramjap.8.t: "The Rest of Russian Far-East"
-tramjap.8.d: ""
-tramjap.8.a: "Follow the terms of secret pact with Russia."
-tramjap.8.b: "Release Yakut people, leave the rest for Semyenov"
-tramjap.8.c: "Release Yakut people,"
-
-tramjap.5.t: "Supreme Siberian Authority"
-tramjap.5.d: "The territory of the Russian Far-East is unstable and we risk confrontation with Russia. It is better for us to keep this territories as our colony."
-tramjap.5.a: "Take Okhotsk and Kamchatka"
-
-tramjap.6.t: "The Second Nerchinsk Treaty"
-tramjap.6.d: "The Lands of Transamur were once stolen by Russia from the Qing Empire in an unfair treaty. It is time we return these lands to the legitimate owner."
-tramjap.6.a: "Split Transamur with Fengtian"
-tramjap.6.b: "Split Transamur with Fengtian and take the coast - leave everything else to our puppet."
 
 tramnews.1.d: "Admiral Kolchak, the leader of the Far-Eastern Republic of Transamur since 1925, when he attempted to coup the government of President Kerensky, has been arrested and executed today in Vladivostok by disloyal generals. Dissatisfied with Kolchak's firm hand policies and Japanese Dependence, the new government will hopefully try to appease the needs of the citizens."
 tramnews.1.a: "Perhaps he wasn't a good ruler then..."
@@ -1242,8 +1211,8 @@ tramnews.5.d: "The People's Revolutionary Army, an underground Bolshevik organis
 tramnews.5.a: "Congratulate the new government."
 tramnews.5.b: "This will definetely destabilize the Asian region."
 
-tramnews.6.t: "Ataman Semyenov Seizes Power in Transamur"
-tramnews.6.d: "The leader of the Transbaikal Cossack Host, Ataman Semyenov, has seized power in the Far-Eastern Republic of Transamur. It is said that Semyenov has connections with the Japanese Empire and that he would not do that without Tokyo's intervention. While it is unknown, what can be expected from the Transamur now, it is clear that this event will greatly destabilize the region."
+tramnews.6.t: "Ataman Semyonov Seizes Power in Transamur"
+tramnews.6.d: "The leader of the Transbaikal Cossack Host, Ataman Semyonov, has seized power in the Far-Eastern Republic of Transamur. It is said that Semyonov has connections with the Japanese Empire and that he would not do that without Tokyo's intervention. While it is unknown, what can be expected from the Transamur now, it is clear that this event will greatly destabilize the region."
 tramnews.6.a: "A Cossack state in the Far-East?"
 
 tramnews.7.t: "Transamur Plunges Into Chaos!"
@@ -1561,8 +1530,8 @@ TRM_Soviet_Tsardom_Idea_desc: "To the shock of many, we have finally triumphed, 
 TRM_nra_resistance_modifier: "£pol_idea NRA Resistance"
 
 TRM_japanese_vladivostok: "Gongota Agreement of 1920"
-TRM_japanese_vladivostok_desc: "On February 18, 1918 the Supreme Council of the Entente made a decision about the occupation of Vladivostok and Harbin, as well as of the Chinese Eastern Railway area by Japanese troops. Over the next two years the Reds were completely defeated in the Far East, and control of the territory was mainly exercised by Ataman Semyenov together with the Imperial Army of Japan. During this time in the Far East the Japanese bought land plots, factories and various concessions from the returning Russian owners.\n\nAfter the Russian Civil War ended, Sazonov's government was forced to sign the notorious Gongota Agreement, ceding northern Sakhalin to Japan and agreeing to establish a buffer state of Transamur with its capital in Vladivostok."
-TRM_japanese_vladivostok_modifier: "Japanese Control of Vladivostok Port\n§WThe Port of Vladivostok is controlled by the Japanese Kwantung Army, limiting our trade possibilities§!"
+TRM_japanese_vladivostok_desc: "On February 18, 1918 the Supreme Council of the Entente made a decision about the occupation of Vladivostok and Harbin, as well as of the Chinese Eastern Railway area by Japanese troops. Over the next two years the Reds were completely defeated in the Far East, and control of the territory was mainly exercised by Ataman Semyonov together with the Imperial Army of Japan. During this time in the Far East the Japanese bought land plots, factories and various concessions from the returning Russian owners.\n\nAfter the Russian Civil War ended, Sazonov's government was forced to sign the notorious Gongota Agreement, ceding northern Sakhalin to Japan and agreeing to establish a buffer state of Transamur with its capital in Vladivostok."
+TRM_japanese_vladivostok_modifier: "Japanese Control\n§WThe Port of Vladivostok is controlled by the Japanese Kwantung Army, limiting our trade possibilities§!"
 
 TRM_japanese_naval_blockade: "Japanese Naval Blockade"
 
@@ -1578,6 +1547,9 @@ TRM_economic_ties_to_japan_high_desc: "Few seriously dispute that our nation is 
 TRM_oblastniki_influence_modifier: "£pol_idea Oblastniki Resistance"
 
 TRM_aid_from_japan_tt: "Modify §HJapanese Dependence§! by\nConstruction Speed: §G+5.00%§!\nStability: §R-3.00%§!\n"
+TRM_Aid_From_Japan_completed: "$has_completed_decision$$TRM_Aid_From_Japan$§!"
+TRM_russo_canadian_naval_treaty_completed: "$has_completed_decision$$TRM_russo_canadian_naval_treaty$§!"
+TRM_Russo_Japanese_Naval_Treaty_completed: "$has_completed_decision$$TRM_Russo_Japanese_Naval_Treaty$§!"
 TRM_zaibatsu_investments_tt: "Modify §HJapanese Dependence§! by\nConstruction Speed: §G+5.00%§!\n£prod_eff_cap  Production Efficiency Cap§G+5.00%§!\nStability: §R-2.00%§!\n"
 trm_northern_expansion: "Northern Expansion"
 
@@ -1615,7 +1587,7 @@ TRM_Kolchak_Doc: "The Supreme Ruler"
 TRM_Kolchak_Doc_desc: "Kolchak claims himself to be the "Supreme Ruler of Russia". For our leader to bolster his image, he needs a strong propaganda machine to help foster an effective cult of personality. Everyone should know about his glorious persona and great deeds. Kolchak must be seen as Father of the Nation in the eyes of his people."
 
 TRM_Semyonovtsy_Issue: "Semyenovites Issue"
-TRM_Semyonovtsy_Issue_desc: "Ataman Semyenov, head of the Transbaikal Cossacks has supported the Kolchak Putsch, and helped us to annex Transbaikal region. However, we are not sure, if he is truly dedicated to our cause, as there are rumors he is secretly supported by the Japanese."
+TRM_Semyonovtsy_Issue_desc: "Ataman Semyonov, head of the Transbaikal Cossacks has supported the Kolchak Putsch, and helped us to annex Transbaikal region. However, we are not sure, if he is truly dedicated to our cause, as there are rumors he is secretly supported by the Japanese."
 
 TRM_Limit_Cossack_Autonomy: "Limit Cossack Autonomy"
 TRM_Limit_Cossack_Autonomy_desc: "The Cossacks possess a lot of power and influence in the regions of their Hosts and Kolchak believes that their power should be limited. While this will make Cossack even less loyal to us, we can be sure that they don't do any power abuse."
@@ -1774,7 +1746,7 @@ TRM_crush_remnants_of_nra_tt: "The NRA resistance is more than §R5%§!"
 
 
 TRM_Spheres_Of_Influence: "Kolchak's Regime"
-TRM_Spheres_Of_Influence_desc: "By seizing power in [TRM.GetNameDefCap] in 1925, Admiral Kolchak has united various groups of people into a state of constant politics, scandals and debates. This led to establishment of nominal §Mspheres of influence§!, in which certain political groups have more authority and influence among the citizens, than the others.\nAs the groups are different ideologically, the conflict of interests is an inevitable part of modern [TRM.GetAdjective] politics. This makes Admiral Kolchak an important figure in the centre of the Far-Eastern chaos, trying to bridle ambitions of each group and at the same time impose his own policies.\nIf the situation severely violates the equilibrium of forces, the resistance to Kolchak government §Vwill become apparent§!\n\nAverage Support of §XKolchak§! Regime: [?TRM.TRM_Overall_Kolchak_Support|X%0]\n\nAverage §CCossack§! Authority: [?TRM.TRM_Overall_Cossack_Support|C%0]\nCossack Loyalty: [GetCossackOrientation]\n\nAverage §LDO-ROVS§! Authority: [?TRM.TRM_Overall_ROVS_Support|L%0]\nDO-ROVS Loyalty: [GetROVSOrientation]\n\nAverage §lDemocrat§! Resentment: §l[?TRM.party_popularity@social_liberal|%0]§!"
+TRM_Spheres_Of_Influence_desc: "By seizing power in [TRM.GetNameDefCap] in 1925, Admiral Kolchak has united various groups of people into a state of constant politics, scandals and debates. This led to establishment of nominal §Mspheres of influence§!, in which certain political groups have more authority and influence among the citizens, than the others.\nAs the groups are different ideologically, the conflict of interests is an inevitable part of modern [TRM.GetAdjective] politics. This makes Admiral Kolchak an important figure in the centre of the Far-Eastern chaos, trying to bridle ambitions of each group and at the same time impose his own policies.\nIf the situation severely violates the equilibrium of forces, the resistance to Kolchak government §Vwill become apparent§!\n\nAverage Support of §XKolchak§! Regime: [?TRM.TRM_Overall_Kolchak_Support|X%0]\n\nAverage §CCossack§! Authority: [?TRM.TRM_Overall_Cossack_Support|C%0]\nCossack Loyalty: [GetCossackOrientation]\n\nAverage §LDO-ROVS§! Authority: [?TRM.TRM_Overall_ROVS_Support|L%0]\nDO-ROVS Loyalty: [GetROVSOrientation]\n\nAverage §lOblastniki§! Resentment: §l[?TRM.party_popularity@social_liberal|%0]§!"
 
 
 
@@ -1835,8 +1807,8 @@ TRM_Increase_ROVS_Support: "§LDO-ROVS§! authority §Rwill increase§!\n"
 TRM_Decrease_ROVS_Support: "§LDO-ROVS§! authority §Gwill decrease§!\n"
 TRM_Increase_Semyonov_Support: "§CTransbaikal Cossacks§! authority §Rwill increase§!\n"
 TRM_Increase_Semyonov_Support_Greatly: "§CTransbaikal Cossacks§! authority §Rwill §Cgreatly§! increase§!\n"
-TRM_Decrease_Semyonov_Support: "§CTransbaikal Cossack§! authority §Gwill decrease§!\n"
-TRM_Decrease_Semyonov_Support_Greatly: "§CTransbaikal Cossack§! authority §Gwill §Cgreatly§! decrease§!\n"
+TRM_Decrease_Semyonov_Support: "§CCossack§! authority §Gwill decrease§!\n"
+TRM_Decrease_Semyonov_Support_Greatly: "§CCossack§! authority §Gwill §Cgreatly§! decrease§!\n"
 TRM_Increase_NRA_Resistance: "§NNRA§! resistance §Rwill increase§!\n"
 TRM_Increase_NRA_Resistance_Greatly: "§NNRA§! resistance §Rwill §Cgreatly§! increase§!\n"
 TRM_Increase_NRA_Resistance_Slightly: "§NNRA§! resistance §Rwill §Mslightly§! increase§!\n"
@@ -1865,12 +1837,12 @@ TRM_Vladivostok_tt: "§MVLADIVOSTOK§!\n§W--------------\n§!Administration: §
 TRM_Primorye_tt: "§MPRIMORYE§!\n§W--------------\n§!Administration: §Y[1246.TransamurGetRegionStatus]§![1246.TransamurGetStatePops]"
 TRM_Yakutia_tt: "§MYAKUTSK§!\n§W--------------\n§!Administration: §Y[574.TransamurGetRegionStatus]§![574.TransamurGetStatePops]"
 
-TRM_State_Pops: "\n§LDO-ROVS§! - §L[?ROVS_Authority|%0]§!\n§gJapanese§! - §g[?Japanese_Authority|%0]§!\n§XKolchak§! - §X[?Kolchak_Authority|%0]§!\n§NNRA§! - §N[?NRA_Authority|%0]§!\n§lOblastniki§! - §l[?Oblastniki_Authority|%0]§!\n§CTransbaikal Cossack§! - §C[?Cossack_Authority|%0]§!\n§cVladivostok Business§! - §c[?Business_Authority|%0]§!\n"
+TRM_State_Pops: "\n§LDO-ROVS§! - §L[?TRM.ROVS_Authority_this|%0]§!\n§gJapanese§! - §g[?TRM.Japanese_Authority_this|%0]§!\n§XKolchak§! - §X[?TRM.Kolchak_Authority_this|%0]§!\n§NNRA§! - §N[?TRM.NRA_Authority_this|%0]§!\n§lOblastniki§! - §l[?TRM.Oblastniki_Authority_this|%0]§!\n§CCossack§! - §C[?TRM.Cossack_Authority_this|%0]§!\n§cVladivostok Business§! - §c[?TRM.Business_Authority_this|%0]§!\n"
 TRM_Amur_TITLE: "§LThe Region of Amur connects the Transbaikal region with the rest of the Far-Eastern territory by making it a strategically important region for Kolchak Government. Kolchak ensured the control of the Transsiberian Railroad in Amur Region with the help of the DO-ROVS, which made town of Zeya a military base. Even though the governmental forces are controling the majority of Amur region, the NRA partisans are also active here, trying to regain control over Amur for years without any success.§!"
 TRM_Bodaybo_TITLE: "§LLocated in the Patom Highlands, Bodaybo was once known to be a perspective gold-mining region in Eastern Siberia, but in 1915 the area was cut off from the supply centers and as a result, gold production by 1921 decreased tenfold.\nWhile Kolchak's government tried to boost the gold industry in the region, it is still highly inefficient and the local civilian government takes about 80% of the gold to improve the area, providing the central authorities with almost no profit.§!"
 TRM_Blagoveschensk_TITLE: "§LCity of Blagoveschensk, having the same name as the region, is a gradually developing and industrializing city, a large and important river port. It is known to once become the capital of the Amur Labour Socialist Republic during the Civil War and the socialist sentiments are still strong here. Moreover, the region is a home to the Amur Cossack Host.\nThe city, same to Zeya, is under the control of the DO-ROVS detachments aimed to bring peace and order in the region.§!"
 TRM_Buryatia_TITLE: "§LRegion of Verkhneudinsk, named after the largest city in the area, was a great battlefield during the civil war: events, that significantly determined the current affairs in the region. Verkhneudinsk, bordering Irkutsk region of Russia is in a state of constant war preparations and increased border security, maintained by the joint forces of Kolchak and Cossacks. At the same time, the region has a local civilian government of Oblastniki and Buryats, who view Verkhneudinsk as their native and rightful home.\nMoreover, the region is filled with NRA partisans who try to provoke and sabotage either of the present political groups.§!"
-TRM_Chita_TITLE: "§LChita is a large transport hub, which brings together a lot of Far-Eastern workers and, therefore, NRA partisans. What is more, local Chita Oblastniki are also a powerful force in the region, who are engaged in the power struggle with the local Master of Chita...\nThe region is under an undisputed control of Ataman Semyenov, who constantly terrorizes NRA and Oblastniki and builds a strong Cossack Host. Even though Kolchak needs Semyenov's support, he does not know about his real intentions and Japanese ties.§!"
+TRM_Chita_TITLE: "§LChita is a large transport hub, which brings together a lot of Far-Eastern workers and, therefore, NRA partisans. What is more, local Chita Oblastniki are also a powerful force in the region, who are engaged in the power struggle with the local Master of Chita...\nThe region is under an undisputed control of Ataman Semyonov, who constantly terrorizes NRA and Oblastniki and builds a strong Cossack Host. Even though Kolchak needs Semyonov's support, he does not know about his real intentions and Japanese ties.§!"
 TRM_Kamchatka_TITLE: "§LBeing the easternmost part of the Eurasian continent, Kamchatka is the 'godforsaken place'. Despite being such a notorious place, it still has some benefits, regarding fishery. Moreover, the Vladivostok Business circles and the Japanese are investing much resources into city of Petropavlovsk, trying to build a new seaport and a shipyard.§!"
 TRM_Kurily_TITLE: "§LThe Kuril Islands which were a part of the Japanese Empire since 1875, despite being an absolutely useless region at first glance, is strategically important for the Pacific Fleet. The Vries Strait between the islands is the only ice-free strait, which allows the Pacific Fleet to leave the Okhotsk Sea for the Pacific Ocean.§!"
 TRM_Khabarovsk_TITLE: "§LThe Region of Khabarovsk was one of the main battlefields during the Civil War. Right now the Ussuri Cossack Host is located here, though its power is very limited due to the fact, that Khabarovsk is located in the so-called 'core Transamur'. The private sector and industry in the city is monopolized by Vladivostok Business Circles, which helps the NRA to bolster socialist sentiments in the region. Even though Khabarovsk is under military control of Kolchak's government, it also has the presence of the Japanese and Fengtian garrisons that ensure regular trading on concessional terms with Vladivostok Business Circle.§!"
@@ -1899,9 +1871,9 @@ TRM_open_assembly_state: "Local Assembly in [FROM.GetName]"
 TRM_make_chita_fully_cossack: "Establish Official Borders of the §CTransbaikal Cossack Host§!"
 TRM_make_blagoveschensk_fully_cossack: "Establish Official Borders of the §CAmur Cossack Host§!"
 
-TRM_final_stage_of_petropavlovks_dockyard: "Complete the §YPetropavlovsk Port Project§!"
+TRM_final_stage_of_petropavlovks_dockyard: "Complete the §YPetropavlovsk Port§! Construction"
 
-TRM_improve_yakutian_tracts: "Renovate Yakutian Tracts"
+TRM_improve_yakutian_tracts: "Renovate Yakutsk Tracts"
 TRM_seek_for_blue_clay: "Fund Expedition to Seek For §CBlue Clay§!"
 TRM_seek_for_blue_clay_tt: "A special expedition to seek the precious §CBlue Clay§! fields will be organised. Its success, however, is not guaranteed"
 TRM_increase_border_control_with_Russia: "Increase Border Control with Russia"
@@ -1914,9 +1886,9 @@ TRM_revoke_yakutia_martial_law: "Revoke Martial Law in [574.GetName]"
 TRM_send_division_to_yakutia: "Send Divisions To [574.GetName]"
 TRM_revive_goldmining_bodaybo: "Revive Goldmining in [565.GetName]"
 
-TRM_Limit_Cossack_Autonomy_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gdecrease§! §CTransbaikal Cossack§! authority\n"
+TRM_Limit_Cossack_Autonomy_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gdecrease§! §CCossack§! authority\n"
 TRM_Increase_Our_Legitimacy_tt: "Completing this focus will unlock £decision_icon_small Decisions to send delegations to the Major Powers\n"
-TRM_Expand_Cossack_Rights_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Rincrease§! §CTransbaikal Cossack§! authority\n"
+TRM_Expand_Cossack_Rights_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Rincrease§! §CCossack§! authority\n"
 TRM_Crush_NRA_tt: "Completing this focus will unlock £decision_icon_small Decisions to §Gdecrease§! £resistance_texticon §RNRA partisans§! resistance\n"
 TRM_Appease_The_Workers_tt: "Workers and peasants will become §Gmore friendly§! towards our government and will act §Gless radical§!\n"
 TRM_Austerity_Measures_tt: "Workers and peasants will become §Rless friendly§! towards our government and will act §Rmore radical§!\n"
@@ -2126,7 +2098,7 @@ TRM_Mil_ML_End_desc: "The situation has finally stabilised. Nobody can argue aga
 
 TRM_Holy_Cross: "The Armed Forces of Holy Cross"
 TRM_Holy_Cross_desc: "During the civil war general Diterikhs has declared a crusade against Bolshevism and summoned all Orthodox Christians to the defence of their country. Now Diterikhs wants to revive the Holy Cross Militia to enlarge the conscription."
-holy_cross_divisions: "\nSeveral §YHoly Cross§! divisions will be deployed."
+TRM_holy_cross_divisions: "\n6 §YHoly Cross§! divisions will be deployed."
 
 TRM_Ties_With_Church: "Ties With Church"
 TRM_Ties_With_Church_desc: "With our public proclamations about restoring the monarchy, the Church of the Far-East has agreed to help us in our goals. Being close allies of Kolchak they have a strong position that we could use."
@@ -2270,8 +2242,8 @@ TRM_The_Last_Bolshevism_desc: "The rest of Russia may have fallen to reactionari
 TRM_Autonomous_Republic: "The Autonomous Republic"
 TRM_Autonomous_Republic_desc: "The west may have been liberated, but that is no reason to give up our independence. We will go under the wing of the Soviet Government in the east and become an autonomous nation under their protection. "
 
-TRM_Semyonov_In_Power: "Ataman Semyenov In Power"
-TRM_Semyonov_In_Power_desc: "With the overthrow of Kolchak by Diterikhs, Grigory Semyenov felt that the time was right to act and now he rules the nation."
+TRM_Semyonov_In_Power: "Ataman Semyonov In Power"
+TRM_Semyonov_In_Power_desc: "With the overthrow of Kolchak by Diterikhs, Grigory Semyonov felt that the time was right to act and now he rules the nation."
 
 TRM_Ally_Oblastniki: "Ally Oblastniki"
 TRM_Ally_Oblastniki_desc: "If we promise the Oblastniki to give them their much wanted autonomy they can become our most reliable allies in the Far-East."
@@ -2283,13 +2255,13 @@ TRM_Support_Buryat_Autonomy: "Support Buryat Autonomy"
 TRM_Support_Buryat_Autonomy_desc: "By giving the Buryat-Mongols their own state under our watch we could have their undying loyalty and full support in the coming struggles."
 
 TRM_Anti_Socialist_Sentiments: "Anti-Socialist Sentiments"
-TRM_Anti_Socialist_Sentiments_desc: "One of the things that Kolchak and Semyenov share is their contempt for socialists. For the Ataman they are nothing more than treasonous elements that want to hurt our people."
+TRM_Anti_Socialist_Sentiments_desc: "One of the things that Kolchak and Semyonov share is their contempt for socialists. For the Ataman they are nothing more than treasonous elements that want to hurt our people."
 
 TRM_Expand_Military_Production: "Expand Military Production"
 TRM_Expand_Military_Production_desc: "For our position of power to survive, we need to expand our arsenal by increasing the production of armaments."
 
 TRM_Cossack_Statehood: "Cossack Statehood"
-TRM_Cossack_Statehood_desc: "With Semyenov leading the Transbaikal Cossacks, he knows that their ways of life need to be protected and even brought for the rest of Far-East to strenghten it."
+TRM_Cossack_Statehood_desc: "With Semyonov leading the Transbaikal Cossacks, he knows that their ways of life need to be protected and even brought for the rest of Far-East to strenghten it."
 
 TRM_Buryat_Mongol_Cavalry: "Buryat-Mongolian Cavalry"
 TRM_Buryat_Mongol_Cavalry_desc: "The Buryat-Mongols have a very long and proud history when it comes to cavalry warfare. With their statehood achieved, there are many of them that are willing to join our army."
@@ -2528,7 +2500,7 @@ Aleksandr_Kolchak_escaped: "Alexsandr Kolchak has escaped!"
 TRM_relations_JAP_broke: "We have cut our ties with Japan"
 TRM_oblastniki_banned: "We have put down the Oblastniki resistance"
 TRM_motorised_tooltip: "Two £nato_unit_motorized_icon_small  §HMotorised§! divisions will be deployed."
-TRM_transbaikal_tooltip: "We will establish £KR_game_rule_flag_TRM_SEM §YTransbaikal Military District§! in §Y[563.GetName]§! and §Y[564.GetName]§!.\n§CGrigoriy Semyenov§!, §CIvan Gamov§!, §CVladimir Tolstov§!, §CLeonid Skipetrov§!, §CDmitriy Semyenov§! will become unavailable as generals.\nWe won't be able to interact with §Y[563.GetName]§! and §Y[564.GetName]§!\n\n§RThe success of the martial law under Cossacks is not guaranteed. With high possibility they will try to break free. Moreover, the Military disctrict can fail and other political organisation can rise to power there.§!"
+TRM_transbaikal_tooltip: "We will establish £KR_game_rule_flag_TRM_SEM §YTransbaikal Military District§! in §Y[563.GetName]§! and §Y[564.GetName]§!.\n§CGrigoriy Semyonov§!, §CIvan Gamov§!, §CVladimir Tolstov§!, §CLeonid Skipetrov§!, §CDmitriy Semyonov§! will become unavailable as generals.\nWe won't be able to interact with §Y[563.GetName]§! and §Y[564.GetName]§!\n\n§RThe success of the martial law under Cossacks is not guaranteed. With high possibility they will try to break free. Moreover, the Military disctrict can fail and other political organisation can rise to power there.§!"
 
 
 ### Flags ###
@@ -2541,8 +2513,8 @@ TRM_Dem_coup: "A Republic has been founded"
 TRM_Dem_coup_NOT: "A Republic has not been founded"
 TRM_Yui: "Yui Mitsue is in power"
 TRM_Yui_NOT: "Yui Mitsue is not in power"
-TRM_Semyonov_Coup: "Ataman Semyenov has taken power"
-TRM_Semyonov_Coup_NOT: "Ataman Semyenov has not taken power"
+TRM_Semyonov_Coup: "Ataman Semyonov has taken power"
+TRM_Semyonov_Coup_NOT: "Ataman Semyonov has not taken power"
 TRM_NRA_coup: "The NRA has taken power"
 TRM_NRA_coup_NOT: "The NRA has not taken power"
 TRM_capital_irk: "Irkutsk is the current capital"
@@ -2600,7 +2572,7 @@ TRM_raise_militia: "Raise Urban Militia in Vladivostok"
 TRM_raise_militia_desc: "The time has come to fight for our freedom. Patriotic citizens of Vladivostok are forming militia groups to defend their homeland. With little help from us we can organise them into auxiliary units to fill up the lines."
 
 TRM_oblastniki_influence: "Siberian Regionalism"
-TRM_oblastniki_influence_desc: "The Oblastniki, Siberian Regionalists are those who believe that the entire region of Siberia should be at least autonomous. After the putsch Kolchak has given a promise to give wide autonomy to Siberia. However, his cooperation with Japanese and authoritarin rule is limiting the dreams of Oblastniki. Their resistance will grow from day to day if Kolchak does not fulfil his promise. But notice, the more promises Kolchak gives them, the stronger their possible revolt will be, if Admiral will break his word.\n\nWe've already made: [?TRM.OblastnikiPromises|O0] promises."
+TRM_oblastniki_influence_desc: "The Oblastniki, Siberian Regionalists are those who believe that the entire region of Siberia should be at least autonomous. After the putsch Kolchak has given a promise to give wide autonomy to Siberia. However, his cooperation with Japanese and authoritarin rule is limiting the dreams of Oblastniki. Their resistance will grow from day to day if Kolchak does not fulfil his promise."
 
 TRM_will_fulfill_part_of_promises: "§GThis decision will fulfil some promises §XKolchak§! made to the §lOblastniki§!\n§!"
 
@@ -2608,7 +2580,8 @@ TRM_oblastniki_committee: "Monthly Oblastniki Rally"
 TRM_oblastniki_committee_desc: "Every month the Oblastniki convene a meeting and prepare a report about current state of Siberian regionalism."
 
 TRM_open_assembly_in_state: "Open Local Council in [FROM.GetName]"
-TRM_destroy_separatism: "Destroy Separatism"
+TRM_destroy_separatism: "Destroy Oblastnik Cells"
+TRM_destroy_separatism_available: "Average §lOblastniki§! Resentment is below §l5%§!"
 
 TRM_oblastnik_council: "Create Siberian Regional Council"
 TRM_oblastnik_council_desc: "The Siberian Regional Council will consist of Oblastniki politicians, who will implement social and economic reforms in the Siberian region."
@@ -2846,7 +2819,7 @@ TRM_Aleksandr_Kolchak_hog_pau: "Aleksander Kolchak" #Kolchak
 TRM_Mikhail_K_Diterikhs_hog_pau: "Mikhail Diterikhs" #ROVS
 TRM_Vladimir_Kappel_hog_pau: "Vladimir Kappel" #ROVS
 TRM_Sergey_Voytsekhovskiy_hog_pau: "Sergey Voytsekhovskiy"
-TRM_Grigoriy_M_Semyenov_hog_pau: "Grigoriy Semyenov" #Semyenov
+TRM_Grigoriy_M_Semyenov_hog_pau: "Grigoriy Semyonov" #Semyonov
 TRM_Anastasiy_Vonsyatsky_hog_npo: "Anastasiy Vonsiatsky" #Nationalists
 TRM_Radola_Gajda_hog_npo: "Radola Gajda"
 
@@ -2891,7 +2864,7 @@ TRM_Yakov_Gorbov_sec_sde: "Yakov Gorbov" #socdem mladorossi
 TRM_Leonid_A_Ustrugov_sec_mli: "Leonid Ustrugov" #kadet
 TRM_Georgiy_Stark_sec_sco: "Georgiy Stark" #merkulovs/Kolchakite
 TRM_Vladimir_Gantimurov_sec_ade: "Vladimir Gantimurov" #Musketeers
-TRM_Boris_Shepunov_sec_pau: "Boris Shepunov" #semyenov
+TRM_Boris_Shepunov_sec_pau: "Boris Shepunov" #Semyonov
 TRM_Arkady_Udintsev_sec_pau: "Arkady Udintsev" #ROVS
 TRM_Mikhail_Matkovsky_sec_npo: "Mikhail Matkovsky" #Nationalists
 TRM_Felix_Achille_Camara_sec_npo: "Felix Achille de la Cámara"

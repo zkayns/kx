@@ -325,70 +325,58 @@ create_country_leader = {
 
 ### Field Marshals ###
 create_field_marshal = {
-	name = "Radola Gajda"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Radola_Gajda.png"
-	id = 243913
-	traits = {
-		offensive_doctrine
-		trickster
-		winter_specialist
-		fast_planner
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_field_marshal = {
 	name = "Mikhail Diterikhs"
 	id = 505058
 	portrait_path = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
-	traits = {
-		politically_connected
-		infantry_leader
-		infantry_expert 
-	}
+	traits = { offensive_doctrine politically_connected infantry_leader infantry_expert old_guard }
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
 }
-
+create_field_marshal = {
+	name = "Grigoriy Semyenov"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Grigory_Semyonov.png"
+	id = 243910
+	traits = { defensive_doctrine cossack_leader cavalry_leader media_personality politically_connected }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
 
 
 ### Corps Commanders ###
 create_corps_commander = {
+	name = "Radola Gajda"
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Radola_Gajda.png"
+	id = 243913
+	traits = { trickster winter_specialist }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
 	name = "Sergey Voytsekhovskiy"
 	id = 505059
 	portrait_path = "gfx/leaders/TRM/Portrait_TRM_Sergey_Wojciechowski.png"
-	traits = {
-		politically_connected 
-		war_hero  
-		harsh_leader   
-		organizer	
-		skilled_staffer	
-		hill_fighter	
-		ranger	
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
+	traits = { war_hero harsh_leader organizer ranger }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Anatoliy Pepelyaev"
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Anatoliy_Pepelyaev.png"
 	id = 505060
-	traits = {
-		career_officer
-		old_guard
-		skilled_staffer
-	}
+	traits = { career_officer old_guard skilled_staffer }
 	skill = 3
 	attack_skill = 4
 	defense_skill = 2
@@ -402,11 +390,7 @@ create_corps_commander = {
 	desc = "POLITICS_VLADIMIR_KAPPEL_DESC"	
 	id = 404
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Kappel.png"
-	traits = {
-		brilliant_strategist
-		winter_specialist
-		winter_expert
-	}
+	traits = { brilliant_strategist winter_specialist winter_expert }
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -414,22 +398,6 @@ create_corps_commander = {
 	logistics_skill = 4
 }
 
-create_corps_commander = {
-	name = "Grigoriy Semyenov"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Grigory_Semyonov.png"
-	id = 243910
-	traits = {
-		cossack_leader
-		cavalry_leader
-		media_personality
-		politically_connected
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
 create_corps_commander = {
 	name = "Sergey Baranovskiy"
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Sergey_Baranovskiy.png"
@@ -444,11 +412,7 @@ create_corps_commander = {
 	name = "Innokentiy Smolin"
 	id = 505053
 	portrait_path = "gfx/leaders/TRM/TRM_Innokentiy_Smolin.png"
-	traits = {
-		infantry_leader
-		winter_specialist
-		old_guard
-	}
+	traits = { infantry_leader winter_specialist old_guard }
 	skill = 3
 	attack_skill = 3
 	defense_skill = 1
@@ -459,10 +423,7 @@ create_corps_commander = {
 	name = "Ivan Gamov"
 	id = 505054
 	portrait_path = "gfx/leaders/TRM/TRM_Ivan_Gamov.png"
-	traits = {
-		cossack_leader
-		cavalry_leader
-	}
+	traits = { cossack_leader cavalry_leader }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
@@ -473,10 +434,7 @@ create_corps_commander = {
 	name = "Boris Bogoslovsky"
 	id = 505078
 	portrait_path = "gfx/leaders/TRM/Portrait_TRM_Boris_Bogoslovskiy.png"
-	traits = {
-		artillery_specialist
-		hidden_sympathies
-	}
+	traits = { artillery_specialist hidden_sympathies }
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
@@ -488,9 +446,7 @@ create_corps_commander = {
 	name = "Mikhail Khanzhin"
 	id = 50004
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Khanzhin.png"
-	traits = {
-		old_guard
-	}
+	traits = { old_guard }
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -501,9 +457,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Dmitriy Semyenov"
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Dmitriy_Semyenov.png"
-	traits = {
-		organizer
-	}
+	traits = { organizer }
 	id = 243912
 	skill = 2
 	attack_skill = 1
@@ -576,9 +530,9 @@ create_navy_leader = {
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Georgiy_Stark.png"
 	traits = { }
 	skill = 3
-	maneuvering_skill = 2
+	attack_skill = 2
 	defense_skill = 3
-	attack_skill = 3
+	maneuvering_skill = 3
 	coordination_skill = 2
 }
 
@@ -586,11 +540,7 @@ create_navy_leader = {
 	name = "Aleksandr Kolchak "
 	id = 50001
 	portrait_path = "gfx/leaders/TRM/Portrait_TRM_Aleksandr_Kolchak.png"
-	traits = {
-		superior_tactician
-		war_hero 
-		navy_media_personality
-	}
+	traits = { superior_tactician war_hero navy_media_personality }
 	skill = 4
 	maneuvering_skill = 3
 	defense_skill = 3

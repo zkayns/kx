@@ -15,7 +15,7 @@ TRM_Dealing_With_NRA = {
 		}
 		target_root_trigger = {
 			NOT = { has_country_flag = TRM_NRA_crushed }
-			has_idea = TRM_nra_resistance_idea
+			has_dynamic_modifier = { modifier = TRM_nra_resistance_modifier }
 			has_completed_focus = TRM_Crush_NRA		
 		}
 		highlight_states = {
@@ -23,7 +23,8 @@ TRM_Dealing_With_NRA = {
 		}
 		fixed_random_seed = no
 		on_map_mode = map_only 
-		cost = 25
+		custom_cost_text = CP_15
+		custom_cost_trigger = { command_power > 14.99 }
 		days_remove = 15
 		days_re_enable = 30
 		fire_only_once = no
@@ -41,10 +42,10 @@ TRM_Dealing_With_NRA = {
 					modifier = {
 						FROM = { 
 							set_temp_variable = {
-								kolchak_authority_temp = Kolchak_Authority
+								TRM.kolchak_authority_temp = Kolchak_Authority
 							}
 						}
-						factor = kolchak_authority_temp
+						factor = TRM.kolchak_authority_temp
 					}
 					FROM = { 
 						TRM_Decrease_NRA_Resistance_Greatly = yes
@@ -58,10 +59,10 @@ TRM_Dealing_With_NRA = {
 					modifier = {
 						FROM = { 
 							set_temp_variable = {
-								kolchak_authority_temp = NRA_Authority
+								TRM.kolchak_authority_temp = NRA_Authority
 							}
 						}
-						factor = kolchak_authority_temp
+						factor = TRM.kolchak_authority_temp
 					}
 					FROM = {
 						TRM_Increase_NRA_Resistance = yes
@@ -139,13 +140,7 @@ TRM_Dealing_With_NRA = {
 					set_variable = { NRA_Authority = 0 }
 				}
 			}
-			remove_ideas = TRM_nra_resistance_idea 
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = TRM_nra_resistance_modifier }
-				clear_variable = TRM_nra_stability
-				clear_variable = TRM_nra_industrial_capacity
-				clear_variable = TRM_nra_conscription
-			}
+			remove_dynamic_modifier = { modifier = TRM_nra_resistance_modifier }
 			TRM_clamp_spheres_of_influence = yes
 			TRM_recalculate_kolchak_variables = yes
 		}
@@ -692,9 +687,7 @@ TRM_Spheres_Of_Influence = {
 			}
 			every_owned_state = { 
 				limit = {
-					NOT = {
-						state = 408
-					}
+					NOT = { state = 408 }
 				}
 				TRM_Decrease_Oblastniki_Support_Slightly = yes
 			}
@@ -746,9 +739,7 @@ TRM_Spheres_Of_Influence = {
 			}
 			every_owned_state = { 
 				limit = {
-					NOT = {
-						state = 408
-					}
+					NOT = { state = 408 }
 				}
 				TRM_Decrease_Oblastniki_Support_Slightly = yes
 			}
@@ -948,9 +939,7 @@ TRM_Spheres_Of_Influence = {
 			}
 			every_owned_state = { 
 				limit = {
-					NOT = {
-						state = 408
-					}
+					NOT = { state = 408 }
 				}
 				TRM_Decrease_Oblastniki_Support_Slightly = yes
 			}
@@ -1026,9 +1015,7 @@ TRM_Spheres_Of_Influence = {
 			}
 			every_owned_state = { 
 				limit = {
-					NOT = {
-						state = 408
-					}
+					NOT = { state = 408 }
 				}
 				TRM_Decrease_Oblastniki_Support_Slightly = yes
 			}
@@ -1117,9 +1104,7 @@ TRM_Spheres_Of_Influence = {
 			}
 			every_owned_state = { 
 				limit = {
-					NOT = {
-						state = 408
-					}
+					NOT = { state = 408 }
 				}
 				TRM_Decrease_Oblastniki_Support_Slightly = yes
 			}
@@ -2983,11 +2968,7 @@ TRM_japanese_influence = {
 
 		visible = {
 			has_idea = TRM_dream
-			OR = {
-				is_subject_of = JAP
-				is_in_faction_with = JAP
-				has_idea = TRM_oblastniki_influence_idea
-			}
+			TRM_has_japanese_influence = yes
 		}
 
 		cost = 0
@@ -3019,6 +3000,7 @@ TRM_japanese_influence = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_Leave_Japan"
+			TRM_remove_japanese_influence = yes
 			JAP = {
 				set_autonomy = {
 					target = ROOT
@@ -3030,9 +3012,6 @@ TRM_japanese_influence = {
 				}
 			}
 			hidden_effect = {
-				TRM = {
-					TRM_remove_japanese_influence = yes
-				}
 				JAP = {
 					diplomatic_relation = {
 						country = TRM
@@ -3067,7 +3046,7 @@ TRM_oblastniki_influence = {
 			has_country_flag = TRM_oblastniki_banned
 		}
 
-		days_mission_timeout = 30
+		days_mission_timeout = 70
 
 		cancel_trigger = {
 			has_country_flag = TRM_oblastniki_banned
@@ -3081,75 +3060,18 @@ TRM_oblastniki_influence = {
 				ideology = social_liberal
 				popularity = 0.02
 			}
-			effect_tooltip = {
-				random_list = {
-					20 = { 564 = { custom_effect_tooltip = TRM_Increase_Oblastniki_Support } }
-					20 = { 563 = { custom_effect_tooltip = TRM_Increase_Oblastniki_Support } }
-					15 = { 565 = { custom_effect_tooltip = TRM_Increase_Oblastniki_Support } }
-					15 = { 574 = { custom_effect_tooltip = TRM_Increase_Oblastniki_Support } }
-					10 = { 657 = { custom_effect_tooltip = TRM_Increase_Oblastniki_Support } }
-					10 = { 561 = { custom_effect_tooltip = TRM_Increase_Oblastniki_Support } }
-					5 = { 560 = { custom_effect_tooltip = TRM_Increase_Oblastniki_Support } }
-					5 = { 409 = { custom_effect_tooltip = TRM_Increase_Oblastniki_Support } }
+			every_owned_state = {
+				limit = {
+					NOT = { state = 408 }
 				}
+				TRM_Increase_Oblastniki_Support = yes
 			}
 			hidden_effect = {
-				random_list = {
-					20 = {
-						add_to_variable = { Buryatia_Oblastniki_Authority = 0.02 }
-						random_list = {
-							50 = { add_to_variable = { Buryatia_Kolchak_Authority = -0.02 } }
-							50 = { add_to_variable = { Buryatia_Cossack_Authority = -0.02 } }
-						}
-						
-					}
-					20 = {
-						add_to_variable = { Chita_Oblastniki_Authority = 0.02 }
-						random_list = {
-							50 = { add_to_variable = { Chita_Kolchak_Authority = -0.02 } }
-							50 = { add_to_variable = { Chita_Cossack_Authority = -0.02 } }
-						}
-					}
-					15 = {
-						add_to_variable = { Bodaybo_Oblastniki_Authority = 0.02 }
-						add_to_variable = { Bodaybo_Kolchak_Authority = -0.02 }
-					}
-					15 = {
-						add_to_variable = { Yakutia_Oblastniki_Authority = 0.02 }
-						add_to_variable = { Yakutia_Kolchak_Authority = -0.02 }
-					}
-					10 = {
-						add_to_variable = { Blagoveschensk_Oblastniki_Authority = 0.02 }
-						random_list = {
-							34 = { add_to_variable = { Blagoveschensk_Kolchak_Authority = -0.02 } }
-							33 = { add_to_variable = { Blagoveschensk_Cossack_Authority = -0.02 } }
-							33 = { add_to_variable = { Blagoveschensk_ROVS_Authority = -0.02 } }
-						}						
-					}
-					10 = {
-						add_to_variable = { Amur_Oblastniki_Authority = 0.02 }
-						random_list = {
-							50 = { add_to_variable = { Amur_Kolchak_Authority = -0.02 } }
-							50 = { add_to_variable = { Amur_ROVS_Authority = -0.02 } }
-						}
-					}
-					5 = {
-						add_to_variable = { Nikolayevsk_Oblastniki_Authority = 0.02 }
-						random_list = {
-							50 = { add_to_variable = { Nikolayevsk_Kolchak_Authority = -0.02 } }
-							50 = { add_to_variable = { Nikolayevsk_ROVS_Authority = -0.02 } }
-						}
-					}
-					5 = { 
-						add_to_variable = { Khabarovsk_Oblastniki_Authority = 0.02 }
-						add_to_variable = { Khabarovsk_Kolchak_Authority = -0.02 }
-					}
-				}
-			}
-			hidden_effect = {
-				activate_mission = TRM_oblastniki_committee
+				TRM_clamp_spheres_of_influence = yes
+				TRM_recalculate_kolchak_variables = yes
 				TRM_recalculate_oblastniki_effects = yes
-			}
+				activate_mission = TRM_oblastniki_committee
+			}	
 		}
 	}
 	TRM_give_promises = {
@@ -3159,51 +3081,14 @@ TRM_oblastniki_influence = {
 		}
 
 		cost = 25
-		days_remove = 7
-		days_re_enable = 30
+		days_remove = 14
+		days_re_enable = 50
 
 		ai_will_do = {
 			factor = 100
 			modifier = {
 				factor = 0
 				check_variable = { ROOT.party_popularity@social_liberal < 0.1 }
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = TRM_path 
-						option = RULE_OPTION_TRM_MONARCHY
-					}
-					has_game_rule = {
-						rule = TRM_path 
-						option = RULE_OPTION_TRM_NEW_MILITARY_CABINET
-					}
-					has_game_rule = {
-						rule = TRM_path 
-						option = RULE_OPTION_TRM_MORYAKI_IN_POWER
-					}
-					has_game_rule = {
-						rule = TRM_path 
-						option = RULE_OPTION_TRM_SEMYONOV
-					}
-					has_game_rule = {
-						rule = TRM_path 
-						option = RULE_OPTION_TRM_YUI
-					}
-					has_game_rule = {
-						rule = TRM_path 
-						option = RULE_OPTION_TRM_MLADOROSSI
-					}
-					has_game_rule = {
-						rule = TRM_path 
-						option = RULE_OPTION_TRM_OBLASTNIKI
-					}
-					has_game_rule = {
-						rule = TRM_path 
-						option = RULE_OPTION_TRM_MERKULOV
-					}
-				}
 			}
 		}
 
@@ -3214,93 +3099,46 @@ TRM_oblastniki_influence = {
 				popularity = -0.03
 			}
 			add_to_variable = { OblastnikiPromises = 1 }
-			effect_tooltip = {
-				random_list = {
-					20 = { 564 = { custom_effect_tooltip = TRM_Decrease_Oblastniki_Support } }
-					20 = { 563 = { custom_effect_tooltip = TRM_Decrease_Oblastniki_Support } }
-					15 = { 565 = { custom_effect_tooltip = TRM_Decrease_Oblastniki_Support } }
-					15 = { 574 = { custom_effect_tooltip = TRM_Decrease_Oblastniki_Support } }
-					10 = { 657 = { custom_effect_tooltip = TRM_Decrease_Oblastniki_Support } }
-					10 = { 561 = { custom_effect_tooltip = TRM_Decrease_Oblastniki_Support } }
-					5 = { 560 = { custom_effect_tooltip = TRM_Decrease_Oblastniki_Support } }
-					5 = { 409 = { custom_effect_tooltip = TRM_Decrease_Oblastniki_Support } }
+			every_owned_state = {
+				limit = {
+					NOT = { state = 408 }
 				}
+				TRM_Decrease_Oblastniki_Support = yes
 			}
 			hidden_effect = {
-				random_list = {
-					20 = {
-						add_to_variable = { Buryatia_Oblastniki_Authority = -0.03 }
-						add_to_variable = { Buryatia_Kolchak_Authority = 0.03 }
-					}
-					20 = {
-						add_to_variable = { Chita_Oblastniki_Authority = -0.03 }
-						add_to_variable = { Chita_Kolchak_Authority = 0.03 }
-					}
-					15 = {
-						add_to_variable = { Bodaybo_Oblastniki_Authority = -0.03 }
-						add_to_variable = { Bodaybo_Kolchak_Authority = 0.03 }
-					}
-					15 = {
-						add_to_variable = { Yakutia_Oblastniki_Authority = -0.03 }
-						add_to_variable = { Yakutia_Kolchak_Authority = 0.03 }
-					}
-					10 = {
-						add_to_variable = { Blagoveschensk_Oblastniki_Authority = -0.03 }
-						add_to_variable = { Blagoveschensk_Kolchak_Authority = 0.03 }
-					}
-					10 = {
-						add_to_variable = { Amur_Oblastniki_Authority = -0.03 }
-						add_to_variable = { Amur_Kolchak_Authority = 0.03 }
-					}
-					5 = {
-						add_to_variable = { Nikolayevsk_Oblastniki_Authority = -0.03 }
-						add_to_variable = { Nikolayevsk_Kolchak_Authority = 0.03 }
-					}
-					5 = { 
-						add_to_variable = { Khabarovsk_Oblastniki_Authority = 0.03 }
-						add_to_variable = { Khabarovsk_Kolchak_Authority = 0.03 }
-					}
-				}
-			}
-			TRM_recalculate_oblastniki_effects = yes
+				TRM_clamp_spheres_of_influence = yes
+				TRM_recalculate_kolchak_variables = yes
+				TRM_recalculate_oblastniki_effects = yes
+			}	
 		}
 	}
 	TRM_destroy_separatism = {
-		visible = {
-			OR = {
-				has_socialist_government = yes
-				has_government = authoritarian_democrat
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TRM_destroy_separatism_available
+				check_variable = { party_popularity@social_liberal < 0.05 }
 			}
 		}
-		cost = 25
-		days_remove = 1
+		visible = {
+			has_dynamic_modifier = { modifier = TRM_oblastniki_influence_modifier }
+			has_left_democratic_government = no
+		}
+		
+		cost = 0
 		fire_only_once = yes
 		
 		ai_will_do = {
 			factor = 100
 		}
 		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_oblastnik_council"
-			remove_ideas = TRM_oblastniki_influence_idea
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = TRM_oblastniki_influence_modifier }
-				clear_variable = TRM_oblastniki_stability
-				clear_variable = TRM_oblastniki_war_support
-				clear_variable = TRM_oblastniki_resource_gain
-				clear_variable = TRM_oblastniki_conscription
-			}
-			set_country_flag = TRM_oblastniki_banned
-			clr_country_flag = TRM_oblastniki_operate
-			set_political_party = {
-				ideology = social_liberal
-				popularity = 0
-			}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TRM_oblastnik_council"
+			TRM_remove_oblastniki_influence = yes
 		}
 	}
 		
 	TRM_open_assembly_in_state = {
-		#icon
+		icon = GFX_decision_SWI_no_elected_president
 		targets = { 566 568 569 570 40 571 653 572 811 654 }
 		target_trigger = {
 			FROM = { is_owned_and_controlled_by = ROOT }
@@ -3322,7 +3160,7 @@ TRM_oblastniki_influence = {
 		}
 		
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision complete TRM_open_irkutsk_assembly target: [FROM.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete TRM_open_assembly_in_state target: [FROM.GetName]"
 			set_temp_variable = { pop_to_remove = FROM.state_population_k }
 			divide_temp_variable = { pop_to_remove = -50000 }
 			clamp_temp_variable = { var = pop_to_remove min = -0.12 max = -0.01 }
@@ -3480,7 +3318,7 @@ TRM_russian_expansion = {
 	}
 	TRM_send_a_delegation_to_major_power = {
 		visible = {
-			has_completed_focus = TRM_Form_A_New_Cabinet
+			has_completed_focus = TRM_Increase_Our_Legitimacy
 		}
 		available = {
 			NOT = { has_country_flag = TRM_currently_sent_a_delegation }
@@ -3488,16 +3326,14 @@ TRM_russian_expansion = {
 		target_trigger = {
 			FROM = {
 				is_actual_major = yes
+				is_subject = no
+				NOT = { is_ally_with = RUS }
 				has_socialist_government = no
+				is_russian_tag = no
 				NOT = {
-					OR = {
-						tag = RUS
-						tag = ROOT
-						tag = JAP
-						tag = CAN
-						tag = GER
-						tag = TRM
-					}
+					tag = JAP
+					tag = ENT
+					tag = GER
 				}
 			}
 		}
@@ -3507,13 +3343,17 @@ TRM_russian_expansion = {
 		ai_will_do = {
 			factor = 100
 		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel TRM_send_a_delegation_to_major_power target: [From.GetName]"
+			clr_country_flag = TRM_currently_sent_a_delegation
+		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision TRM_send_a_delegation_to_major_power target: [From.GetName]"
 			set_country_flag = { flag = TRM_currently_sent_a_delegation days = 15 value = 1 }
 			FROM = {
 				country_event = {
 					id = tram.215
-					days = 5
+					days = 2
 				}
 			}
 		}		
@@ -3566,10 +3406,7 @@ TRM_russian_expansion = {
 					}
 				}
 			}
-			OR = {
-				owns_state = 566
-				owns_state = 564
-			}
+			is_owner_neighbor_of = FROM
 		}
 		cost = 0
 		days_remove = 30
@@ -4017,25 +3854,22 @@ TRM_russian_expansion = {
 				ROOT = { save_global_event_target_as = soviet_russia }
 				set_cosmetic_tag = TRM_UNITED_SOV
 			}
-			if = {
+			else_if = {
 				limit = {
 					TRM_kolchak_in_power = yes
 				}
 				set_cosmetic_tag = TRM_PROV
 				add_ideas = TRM_Aftermath_Sib_War
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_country_flag = TRM_Nats_in_power
 					
 				}
 				set_cosmetic_tag = TRM_nats_empire
 			}
-			if = {
-				limit = {
-					has_country_flag = TRM_Mlad_in_power
-					has_government = totalist
-				}
+			else_if = {
+				limit = { TRM_Mlad_in_power = yes }
 				custom_effect_tooltip = TRM_mlad_vicrory
 				add_political_power = 400
 				add_stability = 0.1
@@ -4070,13 +3904,10 @@ TRM_russian_expansion = {
 					add_core_of = TRM
 				}
 
-				country_event = {id = tram.145 days = 7}
-
+				country_event = { id = tram.145 days = 7 }
 				set_country_flag = TRM_become_russia
 				if = {
-					limit = {
-						has_idea = TRM_japanese_influence_idea
-					}
+					limit = { has_idea = TRM_japanese_influence_idea }
 					country_event = {
 						id = tram.1491
 						days = 15
@@ -4086,7 +3917,7 @@ TRM_russian_expansion = {
 					news_event = {
 						id = tramnews.4
 						days = 1
-		}
+					}
 				}
 			}
 		}
@@ -4448,16 +4279,18 @@ TRM_Mlad_cat = {
 			factor = 1000
 		}
 
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel TRM_Denounce_RUS"
+			clr_country_flag = TRM_already_denouncing_nation
+		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision TRM_Denounce_RUS"
 			set_country_flag = TRM_already_denouncing_nation
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_Denounce_RUS"
-			custom_effect_tooltip = TRM_legitimacy_will_increase
-			hidden_effect = {
-				TRM_increase_legitmacy = yes
-			}
+			clr_country_flag = TRM_already_denouncing_nation
+			TRM_increase_legitmacy = yes
 		}
 	}
 	TRM_Denounce_false_tsar = {
@@ -4486,10 +4319,7 @@ TRM_Mlad_cat = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_Denounce_false_tsar"
-			custom_effect_tooltip = TRM_legitimacy_will_increase
-			hidden_effect = {
-				TRM_increase_legitmacy = yes
-			}
+			TRM_increase_legitmacy = yes
 		}
 	}
 	TRM_pro_imperial_propaganda = {
@@ -4538,10 +4368,7 @@ TRM_Mlad_cat = {
 				ideology = totalist
 				popularity = 0.02
 			}
-			custom_effect_tooltip = TRM_legitimacy_will_decrease
-			hidden_effect = {
-				TRM_decrease_legitmacy = yes
-			}
+			TRM_decrease_legitmacy = yes
 		}
 	}
 	TRM_make_monarchy = {
@@ -4568,10 +4395,7 @@ TRM_Mlad_cat = {
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout TRM_make_monarchy target: [From.GetName]"
-			custom_effect_tooltip = TRM_legitimacy_will_decrease
-			hidden_effect = {
-				TRM_decrease_legitmacy = yes
-			}
+			TRM_decrease_legitmacy = yes
 		}
 	}
 	TRM_legitimacy_decrease = {
@@ -4594,9 +4418,8 @@ TRM_Mlad_cat = {
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout TRM_legitimacy_decrease target: [From.GetName]"
-			custom_effect_tooltip = TRM_legitimacy_will_decrease
+			TRM_decrease_legitmacy = yes
 			hidden_effect = {
-				TRM_decrease_legitmacy = yes
 				activate_mission = TRM_legitimacy_decrease
 			}
 		}
@@ -4606,52 +4429,70 @@ TRM_Siberian_Insurgency = {
 	TRM_yakut_revolt = {
 		icon = GFX_decision_revolt
 		allowed = { always = no } #manually activated 
-		available = {
-			574 = { resistance < 10 }
-			country_exists = YAK
+		available = { 
+			hidden_trigger = { always = no }
 		}
 		
-		days_mission_timeout = 45
+		days_mission_timeout = 70
 
 		cancel_trigger = {
-			574 = { resistance < 10 }
-			country_exists = YAK
+			OR = {
+				574 = { resistance < 10 }
+				country_exists = YAK
+			}
 		}
-		complete_effect = {
+		cancel_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision TRM_yakut_revolt"
+			remove_targeted_decision = { target = 574 decision = TRM_yakut_munnah }
+			remove_targeted_decision = { target = 574 decision = TRM_revoke_yakutia_martial_law }
+			remove_targeted_decision = { target = 574 decision = TRM_send_division_to_yakutia }
 			574 = {
+				remove_claim_by = TRM
+				add_core_of = TRM
 				cancel_resistance = yes
 				force_disable_resistance = { clear = yes }
 			}
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout TRM_yakut_revolt"
+			remove_targeted_decision = { target = 574 decision = TRM_yakut_munnah }
+			remove_targeted_decision = { target = 574 decision = TRM_revoke_yakutia_martial_law }
+			remove_targeted_decision = { target = 574 decision = TRM_send_division_to_yakutia }
 			country_event = tram.300 #transamur civil war
 		}
 	}
 	TRM_buryat_revolt = {
 		icon = GFX_decision_revolt
 		allowed = { always = no } #manually activated 
-		available = {
-			564 = { resistance < 10 }
-			country_exists = BRY
+		available = { 
+			hidden_trigger = { always = no }
 		}
 		
-		days_mission_timeout = 45
+		days_mission_timeout = 70
 
 		cancel_trigger = {
-			564 = { resistance < 10 }
-			country_exists = BRY
+			OR = {
+				564 = { resistance < 10 }
+				country_exists = BRY
+			}
 		}
-		complete_effect = {
+		cancel_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision TRM_buryat_revolt"
+			remove_targeted_decision = { target = 564 decision = TRM_revoke_buryat_martial_law }
+			remove_targeted_decision = { target = 564 decision = TRM_send_division_to_buryatia }
+			remove_targeted_decision = { target = 564 decision = TRM_buryat_kurultai }
 			564 = {
+				remove_claim_by = TRM
+				add_core_of = TRM
 				cancel_resistance = yes
 				force_disable_resistance = { clear = yes }
 			}
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout TRM_buryat_revolt"
+			remove_targeted_decision = { target = 564 decision = TRM_revoke_buryat_martial_law }
+			remove_targeted_decision = { target = 564 decision = TRM_send_division_to_buryatia }
+			remove_targeted_decision = { target = 564 decision = TRM_buryat_kurultai }
 			country_event = tram.310 #transamur civil war
 		}
 	}
@@ -4659,7 +4500,10 @@ TRM_Siberian_Insurgency = {
 		icon = GFX_decision_generic_civil_support
 		allowed = { always = no }
 		available = {
-			FROM = { is_owned_and_controlled_by = ROOT }
+			FROM = { 
+				is_owned_and_controlled_by = ROOT 
+				has_resistance = yes
+			}
 		}
 		cost = 40
 		days_remove = 14
@@ -4687,15 +4531,13 @@ TRM_Siberian_Insurgency = {
 				TRM_Decrease_Kolchak_Support = yes
 				TRM_Decrease_Semyonov_Support = yes
 				TRM_Decrease_ROVS_Support = yes
+				add_resistance = -10
 			}
 			if = {
 				limit = {
 					FROM = { has_dynamic_modifier = { modifier = TRM_martial_law_modifier } }
 				}
 				FROM = { remove_dynamic_modifier = { modifier = TRM_martial_law_modifier } }
-			}
-			FROM = {
-				add_resistance = -10
 			}
 			TRM_clamp_spheres_of_influence = yes
 			TRM_recalculate_kolchak_variables = yes
@@ -4740,8 +4582,6 @@ TRM_Siberian_Insurgency = {
 					add_to_variable = { Oblastniki_Authority = -0.02 }
 					add_to_variable = { Kolchak_Authority = 0.02 }
 				}
-			}
-			FROM = {
 				add_resistance = -10
 			}
 			TRM_clamp_spheres_of_influence = yes

@@ -1143,6 +1143,8 @@ focus_tree = {
 			has_government = totalist
 		}
 		completion_reward = {
+			set_temp_variable = { target = TRM }
+			clear_all_relations_with_TARGET = yes
 			declare_war_on = {
 				target = TRM
 				type = annex_everything
@@ -1626,26 +1628,18 @@ focus_tree = {
 			has_government = paternal_autocrat
 		}
 		completion_reward = {
+			set_temp_variable = { target = TRM }
+			clear_all_relations_with_TARGET = yes
 			if = {
 				limit = { has_idea = BRY_Military_District }
-			remove_ideas = BRY_Military_District
-			}
-			TRM = {
-				set_autonomy = {
-					target = BRY
-					autonomy_state = autonomy_free
-				}
-			}
-			if = {
-				limit = { is_in_faction = yes }
-				leave_faction = yes
-			}
+				remove_ideas = BRY_Military_District
+			}			
 			if = {
 				limit = {
 					NOT = { has_cosmetic_tag = BRY_MON }
 				}
-			drop_cosmetic_tag = yes
-			hidden_effect = { set_cosmetic_tag = BRY_MON }
+				drop_cosmetic_tag = yes
+				hidden_effect = { set_cosmetic_tag = BRY_MON }
 			}
 			declare_war_on = {
 				target = TRM

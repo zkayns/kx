@@ -4915,20 +4915,7 @@ country_event = { #RCW
 			}
 			set_nationality = SIB
 		}		
-		remove_ideas = TRM_oblastniki_influence_idea
-		hidden_effect = {
-			remove_dynamic_modifier = { modifier = TRM_oblastniki_influence_modifier }
-			clear_variable = TRM_oblastniki_stability
-			clear_variable = TRM_oblastniki_war_support
-			clear_variable = TRM_oblastniki_resource_gain
-			clear_variable = TRM_oblastniki_conscription
-		}
-		set_country_flag = TRM_oblastniki_banned
-		clr_country_flag = TRM_oblastniki_operate
-		set_political_party = {
-			ideology = social_liberal
-			popularity = 0
-		}
+		TRM_remove_oblastniki_influence = yes				
 		SIB = {
 			add_ideas = SIB_fighting_for_free_siberia
 			add_ideas = TRM_Siberian_Army
