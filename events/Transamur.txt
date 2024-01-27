@@ -643,28 +643,8 @@ country_event = { #Replace HOS - TRM event
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-				}
-			JAP = {
-				diplomatic_relation = {
-				country = TRM
-				relation = guarantee
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = non_aggression_pact
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = military_access
-				active = no
-			}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}	
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
 			}
 		}
 	}
@@ -1361,6 +1341,7 @@ country_event = {
 		else = {
 			create_country_leader = {
 				name = "Mikhail Diterikhs"
+				desc = "POLITICS_MIKHAIL_DITERIKHS"
 				picture = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
 				expire = "1.1.1"
 				ideology = junta_subtype
@@ -2364,32 +2345,9 @@ country_event = { #Russian Republic(TRM) breaks away!
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-				}
-			JAP = {
-				diplomatic_relation = {
-				country = TRM
-				relation = guarantee
-				active = no
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
 			}
-			diplomatic_relation = {
-				country = TRM
-				relation = non_aggression_pact
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = military_access
-				active = no
-			}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}	
-			}
-		}
-		JAP = {
-			remove_from_faction = TRM
 		}
 		declare_war_on = {
 			target = TRM
@@ -2413,32 +2371,9 @@ country_event = { #Russian Republic(TRM) breaks away!
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-				}
-			JAP = {
-				diplomatic_relation = {
-				country = TRM
-				relation = guarantee
-				active = no
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
 			}
-			diplomatic_relation = {
-				country = TRM
-				relation = non_aggression_pact
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = military_access
-				active = no
-			}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}	
-			}
-		}
-		JAP = {
-			remove_from_faction = TRM
 		}
 	}
 }
@@ -3892,29 +3827,9 @@ country_event = { #Stop TRM profits for JAP
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-				}
-			JAP = {
-				diplomatic_relation = {
-					country = TRM
-					relation = guarantee
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = non_aggression_pact
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = military_access
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
 			}
-		}
 		}
 	}
 }
@@ -4188,28 +4103,8 @@ country_event = { #cut ties with the japanese
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-				}
-			JAP = {
-				diplomatic_relation = {
-				country = TRM
-				relation = guarantee
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = non_aggression_pact
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = military_access
-				active = no
-			}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}	
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
 			}
 		}
 	}
@@ -5586,7 +5481,7 @@ country_event = { #Nra win
 				}
 				remove_unit_leader = yes
 			}
-				}
+		}
 		remove_all_ministers = yes
 		add_ideas = TRM_Pyetr_Nikiforov_hog_tot 
 		add_ideas = TRM_Genrich_Eiche_for_tot 
@@ -5609,6 +5504,7 @@ country_event = { #Nra win
 			else = {
 				create_country_leader = {
 					name = "Mikhail Diterikhs"
+					desc = "POLITICS_MIKHAIL_DITERIKHS"
 					picture = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
 					expire = "1.1.1"
 					ideology = junta_subtype
@@ -5719,6 +5615,7 @@ country_event = { #Nra win
 					set_nationality = ROOT
 				}
 			}
+			bolsheviks_gome_home = yes
 		}
 	}
 }
@@ -5738,13 +5635,13 @@ country_event = { #Semyenov Splits
 					state = 565
 					state = 564
 					state = 563
-	}
-}
+				}
+			}
 			transfer_state_to = BRY
 			add_core_of = BRY
 			remove_core_of = TRM
 			add_claim_by = TRM
-			}
+		}
 		BRY = { 
 			transfer_technology_without_doctrines = yes
 			division_template = {
@@ -5757,60 +5654,42 @@ country_event = { #Semyenov Splits
 					irregular_cavalry = { x = 1 y = 0 }
 					irregular_cavalry = { x = 1 y = 1 }
 					irregular_cavalry = { x = 1 y = 2 }
-			}
 				}
+			}
 			random_owned_controlled_state = {
 				prioritize = { 563 }
 				create_unit = {
 					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
 					owner = BRY
 					prioritize_location = 12641 
+					count = 3
+				}
 			}
-				create_unit = {
-					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
-					owner = BRY
-					prioritize_location = 12641 
-		}
-				create_unit = {
-					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
-					owner = BRY
-					prioritize_location = 12641 
-	}
-		}
 			random_owned_controlled_state = {
 				prioritize = { 564 }
 				create_unit = {
 					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
 					owner = BRY
 					prioritize_location = 7816 
-		}			
-				create_unit = {
-					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
-					owner = BRY
-					prioritize_location = 7816 
-		}
-				create_unit = {
-					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
-					owner = BRY
-					prioritize_location = 7816 
-			}
+					count = 3
+				}			
 			}
 			if = {
 				limit = {
 					NOT = { has_government = paternal_autocrat }
-		}
+				}
 				set_politics = {
 					ruling_party = paternal_autocrat
 					elections_allowed = no
-		}
 				}
 			}
+		}
 		delete_unit_template_and_units = {
 			division_template = "Kazatskaya Diviziya"
 			disband = yes
-				}
+		}
 		activate_targeted_decision = { target = BRY decision = TRM_Attack_Yakutia_Buryatia }
-			}
+	}
 	option = {
 		name = trmnra.4.b
 		trigger = { is_ai = no }
@@ -5826,7 +5705,7 @@ country_event = { #Semyenov Splits
 			add_core_of = BRY
 			remove_core_of = TRM
 			add_claim_by = TRM
-			}
+		}
 		BRY = { 
 			transfer_technology_without_doctrines = yes
 			division_template = {
@@ -5839,7 +5718,7 @@ country_event = { #Semyenov Splits
 					irregular_cavalry = { x = 1 y = 0 }
 					irregular_cavalry = { x = 1 y = 1 }
 					irregular_cavalry = { x = 1 y = 2 }
-			}
+				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 563 }
@@ -5847,50 +5726,32 @@ country_event = { #Semyenov Splits
 					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
 					owner = BRY
 					prioritize_location = 12641 
-			}
-				create_unit = {
-					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
-					owner = BRY
-					prioritize_location = 12641 
-			}
-				create_unit = {
-					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
-					owner = BRY
-					prioritize_location = 12641 
+					count = 3
 				}
-		}
+			}
 			random_owned_controlled_state = {
 				prioritize = { 564 }
 				create_unit = {
 					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
 					owner = BRY
 					prioritize_location = 7816 
+					count = 3
+				}			
 			}
-				create_unit = {
-					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
-					owner = BRY
-					prioritize_location = 7816 
-				}
-				create_unit = {
-					division = "division_template = \"Kazatskaya Diviziya\" start_experience_factor = 0.1"
-					owner = BRY
-					prioritize_location = 7816 
-			}
-		}
-		if = {
-			limit = {
+			if = {
+				limit = {
 					NOT = { has_government = paternal_autocrat }
-			}
+				}
 				set_politics = {
 					ruling_party = paternal_autocrat
 					elections_allowed = no
+				}
 			}
 		}
-	}
 		delete_unit_template_and_units = {
 			division_template = "Kazatskaya Diviziya"
 			disband = yes
-}
+		}
 		activate_targeted_decision = { target = BRY decision = TRM_Attack_Yakutia_Buryatia }
 		BRY = { change_tag_from = ROOT }
 	}
@@ -5944,30 +5805,8 @@ country_event = { #Anti-japanese propaganda
 			ideology = authoritarian_democrat
 			popularity = -0.05
 		}
-		hidden_effect = {
-			JAP = {
-				diplomatic_relation = {
-					country = TRM
-					relation = guarantee
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = non_aggression_pact
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = military_access
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}				
-			}
-		}
+		set_temp_variable = { target = JAP }
+		clear_all_relations_with_TARGET = yes		
 		JAP = {
 			country_event = {
 				id = trmnra.42
@@ -5998,29 +5837,9 @@ country_event = { #Transamur cut ties with us
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-			}				
-			JAP = {
-				diplomatic_relation = {
-					country = TRM
-					relation = guarantee
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = non_aggression_pact
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = military_access
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}				
-			}
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
+			}	
 		}
 	}
 	option = {
@@ -6578,6 +6397,7 @@ country_event = { #NRA wins
 			else = {
 				create_country_leader = {
 					name = "Mikhail Diterikhs"
+					desc = "POLITICS_MIKHAIL_DITERIKHS"
 					picture = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
 					expire = "1.1.1"
 					ideology = junta_subtype
@@ -6735,6 +6555,7 @@ country_event = { #NRA wins
 			else = {
 				create_country_leader = {
 					name = "Mikhail Diterikhs"
+					desc = "POLITICS_MIKHAIL_DITERIKHS"
 					picture = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
 					expire = "1.1.1"
 					ideology = junta_subtype
@@ -9372,29 +9193,9 @@ country_event = {
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-			}				
-			JAP = {
-				diplomatic_relation = {
-				country = TRM
-				relation = guarantee
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = non_aggression_pact
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = military_access
-				active = no
-			}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}	
-			}
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes			
+			}			
 		}
 	}	
 }
@@ -10493,28 +10294,8 @@ country_event = {
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-			}				
-			JAP = {
-				diplomatic_relation = {
-					country = TRM
-					relation = guarantee
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = non_aggression_pact
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = military_access
-					active = no
-				}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}	
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes			
 			}
 		}
 	}
@@ -11917,28 +11698,8 @@ country_event = {
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-				}
-			JAP = {
-				diplomatic_relation = {
-				country = TRM
-				relation = guarantee
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = non_aggression_pact
-				active = no
-			}
-			diplomatic_relation = {
-				country = TRM
-				relation = military_access
-				active = no
-			}
-				diplomatic_relation = {
-					country = TRM
-					relation = docking_rights
-					active = no
-				}	
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
 			}
 		}		
 		FROM = {

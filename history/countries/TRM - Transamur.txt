@@ -327,6 +327,7 @@ create_country_leader = {
 ### Field Marshals ###
 create_field_marshal = {
 	name = "Mikhail Diterikhs"
+	desc = "POLITICS_MIKHAIL_DITERIKHS_GENERAL"
 	id = 505058
 	portrait_path = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
 	traits = { offensive_doctrine politically_connected infantry_leader infantry_expert old_guard }
@@ -385,13 +386,12 @@ create_corps_commander = {
 	logistics_skill = 2
 }
 
-
 create_corps_commander = {
 	name = "Vladimir Kappel"
 	desc = "POLITICS_VLADIMIR_KAPPEL_DESC"	
 	id = 404
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Kappel.png"
-	traits = { brilliant_strategist winter_specialist winter_expert }
+	traits = { brilliant_strategist winter_specialist winter_expert cavalry_leader }
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -409,6 +409,7 @@ create_corps_commander = {
 	planning_skill = 2
 	logistics_skill = 2
 }
+
 create_corps_commander = {
 	name = "Innokentiy Smolin"
 	id = 505053
@@ -420,17 +421,19 @@ create_corps_commander = {
 	planning_skill = 2
 	logistics_skill = 2
 }
+
 create_corps_commander = {
 	name = "Ivan Gamov"
 	id = 505054
 	portrait_path = "gfx/leaders/TRM/TRM_Ivan_Gamov.png"
-	traits = { cossack_leader cavalry_leader }
+	traits = { cossack_leader cavalry_officer }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
 }
+
 create_corps_commander = {
 	name = "Boris Bogoslovsky"
 	id = 505078
@@ -497,10 +500,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Vladimir Tolstov"
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Tolstov.png"
-	traits = {
-		cossack_leader
-		cavalry_leader
-	}
+	traits = { cossack_leader cavalry_leader }
 	id = 505056
 	skill = 2
 	attack_skill = 3

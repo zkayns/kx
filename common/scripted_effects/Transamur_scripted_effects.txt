@@ -490,6 +490,7 @@ TRM_setup_the_civil_war_buryat = {
 			else = {
 				create_country_leader = {
 					name = "Mikhail Diterikhs"
+					desc = "POLITICS_MIKHAIL_DITERIKHS"
 					picture = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
 					expire = "1.1.1"
 					ideology = junta_subtype
