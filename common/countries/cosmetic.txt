@@ -171,8 +171,8 @@ SOV_zhdanov = {
 	color_ui = rgb { 163 17 31 }
 }
 TRM_NRA = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 163 17 31 }
+	color = rgb { 204 0 41 }
+	color_ui = rgb { 204 0 41 }	
 }
 SOV_anarchy = {
 	color = rgb { 79 0 20 }

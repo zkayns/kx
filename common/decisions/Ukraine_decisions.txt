@@ -13401,13 +13401,38 @@ UKR_petliura_category = {
 			}
 			add_civil_war_target = USR
 			hidden_effect = {
+				random_other_country = { news_event = ukrnews.13 }
 				add_ideas = UPR_civil_war
 				country_event = {
 					id = ukrsoc.282
 					days = 20
 					random_days = 40
 				}
+				country_event = {
+					id = crm.301
+					days = 7
+					random_days = 2
+				}
+				USR = {
+					activate_targeted_decision = { target = 792 decision = UKR_initiate_peasant_uprising_in_volyn }
+				}
 			}
+			activate_targeted_decision = { target = 1286 decision = UKR_initiate_loyalist_uprising_in_southeast }
+			#if at war, give wargoal to enemies
+			every_other_country = {
+				limit = {
+					OR = {
+						has_wargoal_against = PREV
+						has_offensive_war_with = PREV
+					}
+					can_declare_war_on = USR
+				}
+				create_wargoal = {
+					target = USR
+					type = annex_everything
+				}
+			}
+			UKR_setup_decisions_for_intervention = yes
 		}
 	}
 	UKR_petliura_resistance_mission = {
@@ -14517,7 +14542,7 @@ UKR_civil_war = {
 			}
 			send_volunteers_to_TARGET = yes		
 			hidden_effect = {
-				remove_targeted_decision = { target = var:221.owner decision = UKR_support_borotbysts }
+				remove_targeted_decision = { target = USR decision = UKR_support_borotbysts }
 				remove_targeted_decision = { target = UKR decision = UKR_intervention }
 			}
 		}
@@ -14554,7 +14579,7 @@ UKR_civil_war = {
 			}
 			send_volunteers_to_TARGET = yes		
 			hidden_effect = {
-				remove_targeted_decision = { target = var:202.owner decision = UKR_support_kyiv }
+				remove_targeted_decision = { target = UKR decision = UKR_support_kyiv }
 				remove_targeted_decision = { target = UKR decision = UKR_intervention }
 			}
 		}
@@ -14632,8 +14657,8 @@ UKR_civil_war = {
 				random = 48
 			}
 			hidden_effect = {
-				remove_targeted_decision = { target = var:202.owner decision = UKR_support_kyiv }
-				remove_targeted_decision = { target = var:221.owner decision = UKR_support_borotbysts }
+				remove_targeted_decision = { target = UKR decision = UKR_support_kyiv }
+				remove_targeted_decision = { target = USR decision = UKR_support_borotbysts }
 			}			
 		}
 		remove_effect = {
