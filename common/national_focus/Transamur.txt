@@ -3137,7 +3137,7 @@ focus = {
 			TRM_democrats_in_power = yes
 			has_democratic_government = yes
 		}
-		x = 8
+		x = 10
 		y = 2
 		relative_position_id = TRM_Crisis
 		cost = 3
@@ -3165,16 +3165,42 @@ focus = {
 			TRM_democrats_in_power = yes
 			has_government = social_democrat
 		}
+		bypass = {
+			has_government = social_democrat
+			has_elections = yes
+		}
 		ai_will_do = {
 			base = 100
-		}
-		bypass = {
-			TRM_democrats_in_power = yes
-			has_government = social_democrat
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Rep"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	focus = {
+		id = TRM_Regionalists
+		icon = GFX_TRM_Support_Regionalist_Movement
+		cost = 5
+		relative_position_id = TRM_Rep
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = TRM_Rep
+		}
+		available = {
+			TRM_democrats_in_power = yes
+			has_government = social_liberal
+		}
+		bypass = {
+			has_government = social_liberal
+			has_elections = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Regionalists"
 			custom_effect_tooltip = unlock_focuses
 		}
 	}
@@ -3196,8 +3222,8 @@ focus = {
 			base = 100
 		}
 		bypass = {
-			TRM_democrats_in_power = yes
 			has_government = market_liberal
+			has_elections = yes
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
@@ -3223,8 +3249,8 @@ focus = {
 			base = 100
 		}
 		bypass = {
-			TRM_democrats_in_power = yes
 			has_government = social_conservative
+			has_elections = yes
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
@@ -3233,81 +3259,76 @@ focus = {
 		}
 	}
 	focus = {
-		id = TRM_Stay_Independent
-		icon = GFX_focus_trm_federal
+		id = TRM_Support_Peasants
+		icon = GFX_RUS_Bring_Prosperity_To_Peasants
 		cost = 5
-		relative_position_id = TRM_Rep
-		x = 1
-		y = 2
-		prerequisite = {
-			focus = TRM_RSDRP_PSR
-			focus = TRM_KDV
-		}
+		relative_position_id = TRM_RSDRP_PSR
+		x = -1
+		y = 1
 		available = {
-			TRM_democrats_in_power = yes
-			OR = {
-				has_government = social_democrat
-				has_government = market_liberal
-			}
+			has_government = social_democrat
 		}
-		mutually_exclusive = {
-			focus = TRM_Vladivostok_Referendum
+		prerequisite = { 
+			focus = TRM_RSDRP_PSR
 		}
 		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 100
-				RUS = { has_democratic_government = no }
-			}
+			base = 10
 		}
-		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Rep"
-			add_stability = 0.05
-			add_popularity = {
-				ideology = social_democrat
-				popularity = 0.05
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Support_Peasants"
+			add_stability = 0.1
 		}
 	}
 	
 	focus = {
-		id = TRM_Vladivostok_Referendum
-		icon = GFX_goal_generic_elections
+		id = TRM_Siberian_Identity
+		icon = GFX_YAK_Siberia
 		cost = 5
-		relative_position_id = TRM_Rep
-		x = -1
-		y = 2
-		prerequisite = {
-			focus = TRM_RSDRP_PSR
-			focus = TRM_KDV
-		}
+		relative_position_id = TRM_Regionalists
+		x = 1
+		y = 1
 		available = {
-			TRM_democrats_in_power = yes
-			OR = {
-				has_government = social_democrat
-				has_government = market_liberal
-			}
-			RUS = { has_left_democratic_government = yes }
+			TRM_nra_in_power = yes
+			has_government = social_democrat
 		}
-		mutually_exclusive = {
-			focus = TRM_Stay_Independent
+		prerequisite = { 
+			focus = TRM_Regionalists
 		}
 		ai_will_do = {
-			base = 50
+			base = 10
 		}
-		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Rep"
-			add_stability = -0.05
-			RUS = {
-				country_event = {
-					id = rusfor.1078
-					days = 5
-				}
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Siberian_Identity"
+			country_event = tram.74
+			add_ideas = RUS_Siberian_Identity_1
+		}
+	}
+	focus = {
+		id = TRM_Fight_Russian_Imperialism
+		icon = GFX_UKR_Smash_Russian_Imperialism
+		cost = 5
+		relative_position_id = TRM_Regionalists
+		x = 0
+		y = 2
+		available = {
+			TRM_nra_in_power = yes
+			has_government = social_liberal
+		}
+		prerequisite = { 
+			focus = TRM_Siberian_Identity
+		}
+		ai_will_do = {
+			base = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Fight_Russian_Imperialism"
+			swap_ideas = {
+				remove_idea = RUS_Siberian_Identity_1
+				add_idea = RUS_Siberian_Identity_2
 			}
 		}
 	}
+	
 	focus = {
 		id = TRM_Secure_Workers_Rights
 		text = RUS_sec_rights
@@ -3317,7 +3338,7 @@ focus = {
 		x = -2
 		y = 3
 		prerequisite = {
-			focus = TRM_Stay_Independent
+			focus = TRM_Support_Peasants
 		}
 		available = {
 			TRM_democrats_in_power = yes
@@ -3337,14 +3358,16 @@ focus = {
 	focus = {
 		id = TRM_Rep_Goods
 		icon = GFX_goal_socialist_infrastructure
-		prerequisite = {focus = TRM_Stay_Independent}
+		prerequisite = {
+			focus = TRM_RSDRP_PSR
+			focus = TRM_Regionalists
+		}
 		available = {
-			TRM_democrats_in_power = yes
-			has_government = social_democrat
+			has_left_democratic_government = yes
 		}
 		relative_position_id = TRM_Rep
-		x = 0
-		y = 3
+		x = -1
+		y = 2
 		cost = 5
 		ai_will_do = {
 			base = 60
@@ -3357,29 +3380,27 @@ focus = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
-		id = TRM_Federalism
-		icon = GFX_focus_trm_federal
-		prerequisite = {
+		id = TRM_Federalisation
+		icon = GFX_YAK_Siberia
+		prerequisite = { 
 			focus = TRM_Secure_Workers_Rights
+			focus = TRM_Fight_Russian_Imperialism
 		}
-		prerequisite = {
-			focus = TRM_Rep_Goods
-		}
+		prerequisite = { focus = TRM_Rep_Goods }
 		available = {
-			TRM_democrats_in_power = yes
-			has_government = social_democrat
+			has_left_democratic_government = yes
 		}
 		relative_position_id = TRM_Rep
 		x = -1
 		y = 4
 		cost = 5
 		ai_will_do = {
-			base = 60
+			base = 10
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Federalism"
-			add_ideas = TRM_Sib_Fed
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Federalisation"
+			country_event = tram.73
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3388,7 +3409,8 @@ focus = {
 		id = TRM_Rep_Res
 		icon = GFX_goal_great_science
 		prerequisite = {
-			focus = TRM_Rep_Goods
+			focus = TRM_Secure_Workers_Rights
+			focus = TRM_Fight_Russian_Imperialism
 			focus = TRM_Support_Small_Business
 			focus = TRM_Attract_Foreign_Investments
 		}

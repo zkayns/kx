@@ -239,46 +239,8 @@ tram.64.t: "The Kolchak's Mistake"
 tram.64.d: "\"In my meetings with Kolchak I repeatedly raised the question of handing over the land to those who work it. I said that it would raise his authority in the eyes of the common people. But he didn't listen to me, trusting more the talking heads in the government. And that is where he is now - in the grave. It was the lack of popular support that took him to the grave, because at the time of the coup no one followed the admiral."
 tram.64.a: "God rest his soul...\""
 
-tram.65.t: "Another Day, Another Agrument"
-tram.65.d: "\"Another day, another argument. This time my brother and I were discussing what to do with the land. I argued that all land should be given to the people who work it. Victor, on the other hand, insisted that the complete socialization of land would harm small businesses. At the end of a long argument, he offered me a compromise, not to socialize all the land, but only part of it, to create and issue the so-called "Law on Land Quotas". I agreed with him on this compromise, but on the condition that he himself would fully prepare this bill.\""
-tram.65.a: "A compromise, at least."
-
-tram.66.t: "Clarification"
-tram.66.d: "\"...I feel better today - a little lighter. My thoughts are beginning to come to order. What faith means. Lord, what a mercy and comfort to people. I believe in God's Providence. According to His divine Providence it is necessary for me to drink this cup of mental suffering. Many, many doubts were caused by our present situation. The harsh campaign ahead, the bad clothes, the insanely bad food, the small size of the unit. I myself sometimes fell into despondency. Apparently, it was God's will that we go, so let His will be done over us..."
-tram.66.a: "...And it will be easier, no discouragement, cheerfulness.\""
-
-tram.67.t: "Federation, But Which Type?"
-tram.67.d: "Our government has decided that the most desirable form of territorial structure for our state is a federation. But here again we are faced with the question - what kind of federation? Oblastniki elements insist that local authorities should have the same broad powers as the states in the United States. They are opposed by the Cadet elements, whose view is expressed by General Pepelyaev's brother Victor, who also recognizes the importance of the federal structure and local authorities, but believes that if the center has issued a law, the local authorities must obey it.\nAfter weighing the pros and cons, Pepelyaev decided that..."
-tram.67.a: "\"Only greater local authority can maintain the unity of our great power. Implement the plan of federalization of the regionalists!\""
-tram.67.b: "\"Victor has always tried to give me the advice that would best suit this or that situation, and this time, I am sure, he will not let me down.\""
-
-tram.68.t: "Muzhik General"
-tram.68.d: "\"I was repeatedly called a Muzhik general behind my back, because of my, in their opinion, too soft attitude toward the soldiers, because I did not allow them to plunder villages and towns, because of real brotherly relations in the units under my control, because of the true Christian morality in them. But who has the Lord's grace now? If I am called a \"Muzhik general\", then let me not disavow this nickname, but rather accept it, to show my true people's essence.\""
-tram.68.a: "For people..."
-
-tram.69.t: "May the Country Be Free"
-tram.69.d: ""...One thing that is strong in me is a sense of faith, that is really help and hope. Do not leave me, O Lord, languishing in grief, doubting, weak, cowardly, if you have sent me here for this service, give me strength, God, help me, give me the opportunity to complete the work with less blood - save my family - nothing more is needed for me. Save the homeland, give it peace, end this war, restore the brotherhood of the Orthodox faith, make it so, O Lord, that next year all the hearts of the reconciled may glorify Your Christmas in Russian churches..."
-tram.69.a: "\"Glory to God in the highest, and on earth peace, goodwill toward men.\""
-
-tram.70.t: "Pepelyaev's Retirement?"
-tram.70.d: "With the awful assassination of the Supreme Leader, Viktor Pepelyaev remained, perhaps, the last loyal Kolchakite. As his right hand, Prime-Minister in harsh times of Civil War, he went on with supporting Kolchak after the failed putsch. With the Supreme Leader gone, a window for liberalisation has opened in Transamur. Pepelyaev should decide if he should retire, finally ending the legacy of Kolchakites and open the door for Nikolay Uhtomsky, the second most influential Kadet in the Far-East, or stay in his position."
-tram.70.a: "Pepelyaev stays."
-tram.70.b: "Pepelyaev retires."
-
-tram.71.t: "The People's Directorate"
-tram.71.d: ""
-tram.71.a: "Russia's freedom will start in the Far-East"
-tram.71.b: "We don't need all of Russia - Siberia should be free!"
-tram.71.c: "We don't need all of Siberia either - we must remain a buffer state."
-
-tram.72.t: "Fate of Kadets and Merkulovs"
-tram.72.d: ""
-tram.72.a: "We don't need them in the new Republic."
-tram.72.b: "Allow Kadets to participate, but not Merkulovs"
-tram.72.c: "Both parties can participate."
-
 tram.73.t: "Transforming into Federation"
-tram.73.d: ""
+tram.73.d: "The lands of Siberia have been centralized under the Moscow or Petrograd authority for too long. It is time for us to federalize these lands - and two choices are present. The first one is radical - create the United States of Siberia, giving large autonomy for all 'states' that would form the core of our new republic. The second choice is to just give autonomy for the minority nations, such as Yakuts, Tungus people, Buryat-Mongols and others."
 tram.73.a: "The American variant responds to our needs!"
 tram.73.b: "We don't need such radicalism - only minorities can get federal rights."
 
@@ -2803,6 +2765,10 @@ TRM_PROV_DEF: "the Provisional Reconstruction Authority of the Supreme Ruler of 
 TRM_GU: "Green Ukraine"
 TRM_GU_ADJ: "Green Ukrainian"
 TRM_GU_DEF: "Green Ukraine"
+
+TRM_SIB_usa: "United States of Siberia"
+TRM_SIB_usa_ADJ: "Siberian"
+TRM_SIB_usa_DEF: "the United States of Siberia"
 
 ### Head of Government ###
 TRM_Alexander_Kazembek_hog_tot: "Alexander Kazem-Bek" #mladorossi

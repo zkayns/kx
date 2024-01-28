@@ -3485,8 +3485,14 @@ TRM_russian_expansion = {
 						}
 					}
 					TRM = { 
-						NOT = { has_country_flag = Aleksandr_Kolchak_dead }
-						has_government = paternal_autocrat
+						TRM_kolchak_in_power = yes
+					}
+				}
+				AND = {
+					RUS = { has_left_democratic_government = yes }
+					TRM = { 
+						TRM_democrats_in_power = yes
+						has_government = social_democrat
 					}
 				}
 			}
