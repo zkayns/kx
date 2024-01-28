@@ -13400,6 +13400,9 @@ UKR_petliura_category = {
 				type = civil_war
 			}
 			add_civil_war_target = USR
+			add_war_support = 0.5
+			add_ideas = war_economy
+			increase_conscription = yes
 			hidden_effect = {
 				random_other_country = { news_event = ukrnews.13 }
 				add_ideas = UPR_civil_war
@@ -13676,7 +13679,13 @@ UKR_petliura_category = {
 		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete UKR_uns_leftwing_resistance_mission"
-			activate_mission = UKR_uns_leftwing_resistance_mission
+			hidden_effect = { 
+				country_event = {
+					id = ukrsoc.301
+					days = 15
+					random_days = 10
+				}
+			}
 		}
 		
 		timeout_effect = {
@@ -13705,7 +13714,13 @@ UKR_petliura_category = {
 		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete UKR_uns_rightwing_resistance_mission"
-			activate_mission = UKR_uns_rightwing_resistance_mission
+			hidden_effect = { 
+				country_event = {
+					id = ukrsoc.301
+					days = 15
+					random_days = 10
+				}
+			}
 		}
 		
 		timeout_effect = {

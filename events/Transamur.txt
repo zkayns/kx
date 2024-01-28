@@ -6668,6 +6668,7 @@ country_event = { #NRA wins
 			}
 		}
 	}
+}
 country_event = { 
 	id = trmnra.22
 	title = trmnra.22.t

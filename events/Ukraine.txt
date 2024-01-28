@@ -13631,6 +13631,7 @@ country_event = { # Victory
 			UKR_Andriy_Zhuk_eco_sde
 			UKR_Oleksander_Dotsenko_sec_sde
 		}
+		end_coalition = yes
 		clr_country_flag = UKR_dyrektoria_tree_unlocked
 		complete_national_focus = UKR_Petliura_Coup
 		set_variable = { UKR_petliura_resistance_mission_cost = 25 }
@@ -23057,7 +23058,10 @@ country_event = { # Petliura
 	
 	is_triggered_only = yes
 	picture = GFX_report_event_UKR_vasyl4
-	trigger = { has_war_with = USR }
+	trigger = { 
+		has_war_with = USR 
+		NOT = { has_global_flag = UKR_dnieper_explosion }
+	}
 	
 	option = {
 		name = ukrsoc.282.a
@@ -23819,6 +23823,27 @@ country_event = { # Petliura
 	}
 }
 
+country_event = { #Hidden AI event
+	id = ukrsoc.301 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ukrsoc.301" }
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		if = {
+			limit = {
+				NOT = { has_active_mission = UKR_uns_leftwing_resistance_mission }
+			}
+			activate_mission = UKR_uns_leftwing_resistance_mission
+		}
+		if = {
+			limit = {
+				NOT = { has_active_mission = UKR_uns_rightwing_resistance_mission }
+			}
+			activate_mission = UKR_uns_rightwing_resistance_mission
+		}
+	}
+}
 
 ### Khrushchev ###
 ## Bolsheviks

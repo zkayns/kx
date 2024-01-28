@@ -10340,6 +10340,53 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UKR_Moderate_Taxation"
 			add_ideas = UKR_moderate_taxation
+			hidden_effect = {				
+				if = {
+					limit = {
+						has_completed_focus = UKR_Stop_Radical_Left_Reforms
+						has_completed_focus = UKR_Work_With_Bouregoisie
+						NOT = { country_exists = USR }
+					}
+					if = {
+						limit = {
+							is_ai = yes
+							has_game_rule = { rule = UKR_future option = UKR_FUTURE_PETLIURA }
+						}
+						complete_national_focus = UKR_National_Union_Holds
+						country_event = ukrsoc.290
+					}
+					else_if = {
+						limit = {
+							OR = {
+								check_variable = { UKR_uns_right_authority > 65 }
+								AND = {
+									is_ai = yes
+									has_game_rule = { rule = UKR_future option = UKR_FUTURE_PETLIURA_FAILS_USDRP }
+								}
+							}
+						}
+						complete_national_focus = UKR_Left_Wing_Splits
+						country_event = ukrsoc.294
+					}
+					else_if = {
+						limit = {
+							OR = {
+								check_variable = { UKR_uns_left_authority > 65 }
+								AND = {
+									is_ai = yes
+									has_game_rule = { rule = UKR_future option = UKR_FUTURE_PETLIURA_FAILS_UPSF }
+								}
+							}
+						}
+						complete_national_focus = UKR_Right_Wing_Splits
+						country_event = ukrsoc.297
+					}
+					else = {
+						complete_national_focus = UKR_National_Union_Holds
+						country_event = ukrsoc.290
+					}
+				}
+			}
 		}
 	}
 	focus = {

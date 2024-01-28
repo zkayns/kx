@@ -87,7 +87,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_KR_game_rule_flag_TRM_NRA"
-		texturefile = "gfx/flags/small/TRM_NRA.tga"
+		texturefile = "gfx/flags/small/TRM_radical_socialist.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
