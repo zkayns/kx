@@ -266,7 +266,23 @@ TRM_Spheres_Of_Influence = {
 		
 		days_remove = 30
 		days_re_enable = 90
-		ai_will_do = { factor = 100 }
+		ai_will_do = { 
+			factor = 25 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NEW_MILITARY_CABINET }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MORYAKI_IN_POWER }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_YUI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_OBLASTNIKI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MERKULOV }
+				}
+			}
+		}
 		highlight_states = {
 			highlight_states_trigger = {
 				OR = {
@@ -331,7 +347,23 @@ TRM_Spheres_Of_Influence = {
 		
 		days_remove = 30
 		days_re_enable = 90
-		ai_will_do = { factor = 100 }
+		ai_will_do = { 
+			factor = 25 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NEW_MILITARY_CABINET }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MORYAKI_IN_POWER }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_YUI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_OBLASTNIKI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MERKULOV }
+				}
+			}
+		}
 		highlight_states = {
 			highlight_states_trigger = {
 				OR = {
@@ -396,7 +428,23 @@ TRM_Spheres_Of_Influence = {
 		
 		days_remove = 30
 		days_re_enable = 90
-		ai_will_do = { factor = 100 }
+		ai_will_do = { 
+			factor = 25 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NEW_MILITARY_CABINET }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MORYAKI_IN_POWER }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_YUI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_OBLASTNIKI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MERKULOV }
+				}
+			}
+		}
 		highlight_states = {
 			highlight_states_trigger = {
 				OR = {
@@ -461,7 +509,23 @@ TRM_Spheres_Of_Influence = {
 		
 		days_remove = 30
 		days_re_enable = 90
-		ai_will_do = { factor = 100 }
+		ai_will_do = { 
+			factor = 25 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NEW_MILITARY_CABINET }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MORYAKI_IN_POWER }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_YUI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_OBLASTNIKI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MERKULOV }
+				}
+			}
+		}
 		highlight_states = {
 			highlight_states_trigger = {
 				OR = {
@@ -508,23 +572,48 @@ TRM_Spheres_Of_Influence = {
 			NOT = { has_country_flag = TRM_already_boosting_support }
 		}
 		cost = 25
-		ai_will_do = {
-			factor = 10
+		ai_will_do = { 
+			factor = 25 
 			modifier = {
-				factor = 2
-				check_variable = { 574.Kolchak_Authority < 0.3 }
+				factor = 0
+				OR = {
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NEW_MILITARY_CABINET }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MORYAKI_IN_POWER }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_YUI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_OBLASTNIKI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MERKULOV }
+				}
 			}
-		}
+		}	
 		
 		days_remove = 30
 		days_re_enable = 90
-		ai_will_do = { factor = 100 }
+		ai_will_do = { 
+			factor = 25 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NEW_MILITARY_CABINET }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MORYAKI_IN_POWER }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_YUI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_OBLASTNIKI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MERKULOV }
+				}
+			}
+		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 574
 			}
 		}
-		targets = { 1246 409 560 561 562 563 564 565 574 637 657 }
 		cancel_trigger = {
 			TRM_kolchak_in_power = no
 		}
@@ -566,10 +655,7 @@ TRM_Spheres_Of_Influence = {
 		}
 		
 		cancel_trigger = {
-			OR = {
-				has_country_flag = Aleksandr_Kolchak_dead
-				NOT = { has_government = paternal_autocrat }
-			}
+			TRM_kolchak_in_power = no
 		}
 		cancel_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision cancel TRM_revive_goldmining_bodaybo target: [From.GetName]"
@@ -673,6 +759,19 @@ TRM_Spheres_Of_Influence = {
 		state_target = yes
 		ai_will_do = {
 			factor = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
+				}
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_buryat_kurultai target: [From.GetName]"
@@ -726,6 +825,22 @@ TRM_Spheres_Of_Influence = {
 		days_remove = 40
 		fire_only_once = yes
 		state_target = yes
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = YAK_independece_path
+						option = RULE_OPTION_TRM_YAKUTIA
+					}
+					has_game_rule = {
+						rule = BRY_independence_path
+						option = TRM_BURYAT_REVOLT
+					}
+				}
+			}
+		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_yakut_munnah target: [From.GetName]"
 			add_popularity = {
@@ -1029,84 +1144,6 @@ TRM_Spheres_Of_Influence = {
 				every_owned_state = {
 					add_to_variable = { Kolchak_Authority = 0.01 }
 				}
-			}
-			TRM_clamp_spheres_of_influence = yes
-			TRM_recalculate_kolchak_variables = yes
-		}
-	}
-	TRM_open_assembly_state = {
-		available = {
-			FROM = { is_owned_and_controlled_by = ROOT }
-			has_completed_focus = TRM_Siberian_Regional_Council
-			FROM = { NOT = { has_state_flag = TRM_martial_law_in_state } }
-		}
-		cost = 75
-		fire_only_once = yes
-		days_remove = 15
-		
-		state_target = yes
-		targets = { 657 563 566 568 569 570 40 571 653 572 }
-		target_trigger = {
-			FROM = { is_owned_and_controlled_by = ROOT }
-		}
-		target_root_trigger = {
-			has_country_flag = TRM_oblastniki_operate
-			has_completed_focus = TRM_Siberian_Regional_Council				
-			NOT = { has_government = social_liberal }
-		}
-		
-		ai_will_do = {
-			factor = 40
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = TRM_path
-					option = RULE_OPTION_TRM_SEMYONOV
-				}
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_open_assembly_state [FROM.GetName]"
-			add_popularity = {
-				ideology = social_liberal
-				popularity = -0.05
-			}
-			FROM = { set_state_flag = TRM_opened_state_assembly }
-			custom_effect_tooltip = TRM_this_will_greatly_anger_cossacks
-			TRM_decrease_cossack_loyalty = yes
-			TRM_decrease_rovs_loyalty = yes
-			if = {
-				limit = {
-					FROM = { has_dynamic_modifier = { modifier = TRM_martial_law_modifier } }
-				}
-				FROM = { remove_dynamic_modifier = { modifier = TRM_martial_law_modifier } }
-			}
-			if = {
-				limit = {
-					FROM = { has_dynamic_modifier = { modifier = TRM_autonomous_republic_modifier } }
-				}
-				FROM = { remove_dynamic_modifier = { modifier = TRM_autonomous_republic_modifier } }
-			}
-			if = {
-				limit = {
-					FROM = { has_dynamic_modifier = { modifier = TRM_cossack_host_modifier } }
-				}
-				FROM = { remove_dynamic_modifier = { modifier = TRM_cossack_host_modifier } }
-			}
-			FROM = { 
-				add_dynamic_modifier = { modifier = TRM_civilian_government_modifier } 
-			}			
-			FROM = { 
-				TRM_Increase_Oblastniki_Support = yes
-				TRM_Increase_Kolchak_Support = yes
-				TRM_Decrease_Semyonov_Support = yes
-				TRM_Decrease_ROVS_Support = yes
-			}
-			every_owned_state = { 
-				limit = {
-					NOT = { state = 408 }
-				}
-				TRM_Decrease_Oblastniki_Support_Slightly = yes
 			}
 			TRM_clamp_spheres_of_influence = yes
 			TRM_recalculate_kolchak_variables = yes
@@ -2934,7 +2971,7 @@ TRM_japanese_influence = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2990,7 +3027,11 @@ TRM_japanese_influence = {
 				has_war = yes
 			}
 			modifier = {
-				factor = 0
+				factor = 100
+				has_game_rule = { rule = TRM_forpol option = TRM_FORPOL_ENT }
+			}
+			modifier = {
+				add = 0
 				strength_ratio = {
 					tag = JAP
 					ratio < 1
@@ -3085,7 +3126,7 @@ TRM_oblastniki_influence = {
 		days_re_enable = 50
 
 		ai_will_do = {
-			factor = 100
+			factor = 20
 			modifier = {
 				factor = 0
 				check_variable = { ROOT.party_popularity@social_liberal < 0.1 }
@@ -3136,10 +3177,13 @@ TRM_oblastniki_influence = {
 			TRM_remove_oblastniki_influence = yes
 		}
 	}
-		
 	TRM_open_assembly_in_state = {
 		icon = GFX_decision_SWI_no_elected_president
-		targets = { 566 568 569 570 40 571 653 572 811 654 }
+		available = {
+			has_completed_focus = TRM_Siberian_Regional_Council
+			FROM = { NOT = { has_state_flag = TRM_martial_law_in_state } }
+		}
+		targets = { 657 563 566 568 569 570 40 571 653 572 811 654 }
 		target_trigger = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 		}
@@ -3150,17 +3194,26 @@ TRM_oblastniki_influence = {
 		state_target = yes
 		cost = 75
 		fire_only_once = yes
+		days_remove = 15
 		
 		ai_will_do = {
-			factor = 100
+			factor = 40
 			modifier = {
 				set_temp_variable = { temp = party_popularity@social_liberal }
 				factor = temp
+			}
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = TRM_path
+					option = RULE_OPTION_TRM_SEMYONOV
+				}
 			}
 		}
 		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete TRM_open_assembly_in_state target: [FROM.GetName]"
+			FROM = { set_state_flag = TRM_opened_state_assembly }
 			set_temp_variable = { pop_to_remove = FROM.state_population_k }
 			divide_temp_variable = { pop_to_remove = -50000 }
 			clamp_temp_variable = { var = pop_to_remove min = -0.12 max = -0.01 }
@@ -3175,6 +3228,37 @@ TRM_oblastniki_influence = {
 				var = OblastnikiPromises
 				min = 0
 			}
+			custom_effect_tooltip = TRM_this_will_greatly_anger_cossacks
+			TRM_decrease_cossack_loyalty = yes
+			TRM_decrease_rovs_loyalty = yes
+			if = {
+				limit = {
+					FROM = { has_dynamic_modifier = { modifier = TRM_martial_law_modifier } }
+				}
+				FROM = { remove_dynamic_modifier = { modifier = TRM_martial_law_modifier } }
+			}
+			if = {
+				limit = {
+					FROM = { has_dynamic_modifier = { modifier = TRM_autonomous_republic_modifier } }
+				}
+				FROM = { remove_dynamic_modifier = { modifier = TRM_autonomous_republic_modifier } }
+			}
+			if = {
+				limit = {
+					FROM = { has_dynamic_modifier = { modifier = TRM_cossack_host_modifier } }
+				}
+				FROM = { remove_dynamic_modifier = { modifier = TRM_cossack_host_modifier } }
+			}
+			FROM = { 
+				add_dynamic_modifier = { modifier = TRM_civilian_government_modifier } 
+			}			
+			FROM = { 
+				TRM_Increase_Oblastniki_Support = yes
+				TRM_Increase_Kolchak_Support = yes
+				TRM_Decrease_Semyonov_Support = yes
+				TRM_Decrease_ROVS_Support = yes
+			}
+			TRM_recalculate_kolchak_variables = yes
 		}
 	}
 }
@@ -3209,7 +3293,7 @@ TRM_russian_expansion = {
 		}
 
 		ai_will_do = {
-			factor = 1000
+			factor = 100
 		}
 
 		remove_effect = {
@@ -3593,33 +3677,28 @@ TRM_russian_expansion = {
 			tag = TRM
 		}
 		available = {
-			OR = {
-				has_global_flag = RCW_begun
-				AND = {
-					OR = {
-						AND = {
-							GER = { has_war_with = RUS }
-							date > 1939.1.1
-						}
-						custom_trigger_tooltip = {
-							tooltip = RUS_Start_The_Offensive_tooltip
-							check_variable = { global.siberian_war_chance > 0.84 }
-						}
+			if = {
+				limit = { russian_civil_war = no }
+				OR = {
+					GER = { has_war_with = RUS }
+					custom_trigger_tooltip = {
+						tooltip = RUS_Start_The_Offensive_tooltip
+						check_variable = { global.siberian_war_chance > 0.84 }
 					}
-					OR = {
-						has_completed_focus = TRM_Form_A_New_Cabinet
-						has_completed_focus = TRM_Our_Proud_Varyag_2
-						has_completed_focus = TRM_Stay_Independent
-						has_completed_focus = TRM_KDV
-						has_completed_focus = TRM_NDS
-						has_completed_focus = TRM_New_Far_Eastern_Republic
-						has_completed_focus = TRM_Transbaikal_Union
-						has_completed_focus = TRM_Russian_Empire_In_Exile
-						has_completed_focus = TRM_spirit_revolution
-						has_completed_focus = TRM_Hail_Tsar
-						has_completed_focus = TRM_ROVS_Secures_The_Power
-						has_country_flag = SOV_restored_in_transamur
-					}
+				}
+				OR = {
+					has_completed_focus = TRM_Form_A_New_Cabinet
+					has_completed_focus = TRM_Our_Proud_Varyag_2
+					has_completed_focus = TRM_Stay_Independent
+					has_completed_focus = TRM_KDV
+					has_completed_focus = TRM_NDS
+					has_completed_focus = TRM_New_Far_Eastern_Republic
+					has_completed_focus = TRM_Transbaikal_Union
+					has_completed_focus = TRM_Russian_Empire_In_Exile
+					has_completed_focus = TRM_spirit_revolution
+					has_completed_focus = TRM_Hail_Tsar
+					has_completed_focus = TRM_ROVS_Secures_The_Power
+					has_country_flag = SOV_restored_in_transamur
 				}
 			}			
 			OR = {
@@ -3968,10 +4047,6 @@ TRM_russian_expansion = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 
 		remove_effect = {
@@ -4023,10 +4098,6 @@ TRM_russian_expansion = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 
 		remove_effect = {
@@ -4074,10 +4145,6 @@ TRM_russian_expansion = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 
 		remove_effect = {
@@ -4127,10 +4194,6 @@ TRM_russian_expansion = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 
 		remove_effect = {
@@ -4159,10 +4222,6 @@ TRM_russian_expansion = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 
 		remove_effect = {
@@ -4201,38 +4260,6 @@ TRM_russian_expansion = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				OR = {
-					has_war = yes
-					strength_ratio = {
-						tag = FROM
-						ratio < 0.8
-					}
-					FROM = {
-						any_allied_country = {
-							is_faction_leader = yes
-							overlord = {
-								strength_ratio = {
-									tag = ROOT
-									ratio > 0.7
-								}
-							}
-						}
-					}
-					FROM = {
-						is_subject = yes
-						overlord = {
-							strength_ratio = {
-								tag = ROOT
-								ratio > 0.7
-							}
-						}
-					}
-					FROM = { is_in_faction = yes }
-					has_country_flag = imminent_war
-				}
-			}
 		}
 		cancel_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision cancel TRM_Attack_Yakutia_Buryatia target: [From.GetName]"
@@ -4276,7 +4303,7 @@ TRM_Mlad_cat = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 25
 		}
 
 		cancel_effect = {
@@ -4310,7 +4337,7 @@ TRM_Mlad_cat = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 25
 		}
 
 		complete_effect = {
@@ -4334,7 +4361,7 @@ TRM_Mlad_cat = {
 		days_re_enable = 29
 
 		ai_will_do = {
-			factor = 1000
+			factor = 25
 		}
 
 		remove_effect = {
@@ -4358,11 +4385,11 @@ TRM_Mlad_cat = {
 		days_re_enable = 29
 
 		ai_will_do = {
-			factor = 1000
+			factor = 2
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_pro_imperial_propaganda"
+			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_massive_parties"
 			add_stability = 0.02
 			add_popularity = {
 				ideology = totalist
@@ -4695,7 +4722,7 @@ TRM_Siberian_Insurgency = {
 		state_target = yes
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 100
 		}
 		highlight_states = { 
 			highlight_state_targets = {
