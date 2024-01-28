@@ -6127,7 +6127,44 @@ country_event = { #last bastion of bolshevism
 	option = {
 		name = trmnra.16.a
 		ai_chance = {
-			factor = 30
+			factor = 15
+			modifier = {
+			factor = 1000
+				has_game_rule = {
+					rule = TRM_path 
+					option = RULE_OPTION_TRM_NRA_COUP_RADSOC
+				}
+			}
+			modifier = {
+			factor = 1000
+				has_game_rule = {
+					rule = TRM_path 
+					option = RULE_OPTION_TRM_NRA_COUP
+				}
+			}
+		}
+		retire_country_leader = yes		
+		create_country_leader = {
+			name = "Pyetr Nikiforov"
+			picture = "gfx/leaders/TRM/Portrait_TRM_Pyetr_Nikiforov.png"
+			expire = "1.1.1"
+			ideology = authcom_subtype
+		}
+		remove_ideas = TRM_dream
+		every_state = {
+			limit = { 
+				is_core_of = RUS
+				is_claim_or_core_of_ROOT = yes
+			}
+			remove_claim_by = ROOT
+		}
+		custom_effect_tooltip = RUS_decrease_chance_of_war
+		add_to_variable = { global.siberian_war_chance = -0.15 }
+	}
+	option = {
+		name = trmnra.16.a2
+		ai_chance = {
+			factor = 15
 			modifier = {
 			factor = 1000
 				has_game_rule = {
@@ -6154,17 +6191,21 @@ country_event = { #last bastion of bolshevism
 		set_politics = {
 			ruling_party = radical_socialist
 		}
-		set_temp_variable = { nra_popularity = party_popularity@totalist }
-		multiply_temp_variable = { nra_popularity = 100 }
+		set_temp_variable = { nra_popularity = party_popularity_100@totalist }
 		set_political_party = {
 			ideology = radical_socialist
-			popularity = nra_popularity
-		}
-		set_political_party = {
-			ideology = totalist
-			popularity = 10
+			popularity = var:nra_popularity
 		}
 		remove_ideas = TRM_dream
+		every_state = {
+			limit = { 
+				is_core_of = RUS
+				is_claim_or_core_of_ROOT = yes
+			}
+			remove_claim_by = ROOT
+		}
+		custom_effect_tooltip = RUS_decrease_chance_of_war
+		add_to_variable = { global.siberian_war_chance = -0.15 }
 	}
 	option = {
 		name = trmnra.16.b
@@ -6172,28 +6213,34 @@ country_event = { #last bastion of bolshevism
 			factor = 60
 			modifier = {
 			factor = 1000
-				has_game_rule = {
-					rule = TRM_path 
-					option = RULE_OPTION_TRM_NRA_COUP_BOLSHEVIKS
+				OR = {
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_BOLSHEVIKS }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_FRUNZE }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_TUKHA }
+			}
+		}
+		if = {
+			limit = {
+				RUS = {
+					has_socialist_government = no
+					NOT = { has_government = social_democrat }
 				}
 			}
-			modifier = {
-			factor = 1000
-				has_game_rule = {
-					rule = TRM_path 
-					option = RULE_OPTION_TRM_NRA_COUP_FRUNZE
-				}
-			}
-			modifier = {
-			factor = 1000
-				has_game_rule = {
-					rule = TRM_path 
-					option = RULE_OPTION_TRM_NRA_COUP_TUKHA
+			RUS = {
+				every_unit_leader = {
+					limit = {
+						has_trait = hidden_sympathies
+					}
+					remove_unit_leader_trait = hidden_sympathies
+					set_nationality = ROOT
 				}
 			}
 		}
-		setup_soviet_transamur = yes
 		hidden_effect = {
+			country_event = {
+				id = trmnra.100
+				days = 7
+			}		
 			random_other_country = {
 				news_event = {
 					id = russianews.5
@@ -6201,6 +6248,9 @@ country_event = { #last bastion of bolshevism
 				}
 			}
 		}
+		add_stability = 0.1		
+		set_country_flag = SOV_restored_in_transamur
+		unlock_decision_tooltip = RUS_Start_The_Offensive_TRM
 	}
 	option = {
 		name = trmnra.16.c
@@ -6328,6 +6378,7 @@ country_event = { #Soviet Transamur
 	
 	option = {
 		name = trmnra.100.b
+		trigger = { has_unit_leader = 1955 }
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -6344,17 +6395,15 @@ country_event = { #Soviet Transamur
 			expire = "1.1.1"
 			ideology = red_junta_subtype
 		}
-		set_cosmetic_tag = SOV_tukhachevsky
-		set_country_flag = tukhachevsky_power
 		set_party_name = {
 			ideology = totalist
 			long_name = SOV_frunze_party_long
 			name = SOV_frunze_party
 		}
-		complete_national_focus = SOV_chairman_frunze
 	}
 	option = {
 		name = trmnra.100.c
+		trigger = { has_unit_leader = 1954 }
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -6372,14 +6421,11 @@ country_event = { #Soviet Transamur
 			ideology = internationalism_subtype
 			traits = { red_napoleon }
 		}
-		set_cosmetic_tag = SOV_tukhachevsky
-		set_country_flag = tukhachevsky_power
 		set_party_name = {
 			ideology = totalist
 			long_name = SOV_tukh_party_long
 			name = SOV_tukh_party
 		}
-		complete_national_focus = SOV_dictatorship_tukhachevsky
 	}
 	option = {
 		name = trmnra.100.a
@@ -6406,14 +6452,6 @@ country_event = { #Soviet Transamur
 			ideology = authcom_subtype
 			traits = {}
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			RUS_Grigoriy_Y_Zinoviev_hog_tot
-			SOV_Lev_Kamenev_for_tot
-			RUS_Evgeniy_A_Preobrazhenskiy_eco_tot
-			SOV_Genrikh_Yagoda_sec_tot
-		}
-		complete_national_focus = RUS_Bolsheviks_In_Power
 	}
 }
 country_event = {

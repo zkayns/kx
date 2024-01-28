@@ -113,10 +113,7 @@ focus = {
 	y = 1
 	prerequisite = { focus = RUS_Zhukov_Restores_Socialism }
 	available = {
-		has_country_leader = {
-			name = "Mikhail Tukhachevsky"
-			ruling_only = yes
-		}
+		RUS_mikhail_tukhachevsky_in_power = yes
 	}
 	ai_will_do = { factor = 100 }
 	completion_reward = {
@@ -4746,12 +4743,7 @@ focus = {
 	prerequisite = {
 		focus = RUS_Zhukov_Restores_Socialism
 	}
-	available = {
-		has_country_leader = {
-			name = "Mikhail Frunze"
-			ruling_only = yes
-		}
-	}
+	available = { RUS_mikhail_frunze_in_power = yes}
 	ai_will_do = {
 		factor = 20
 	}

@@ -1408,39 +1408,181 @@ TRM_recalculate_oblastniki_effects = {
 
 setup_soviet_transamur = {
 	ROOT = { save_global_event_target_as = soviet_russia }
-	hidden_effect = {
-		set_cosmetic_tag = SOV
+	hidden_effect = {		
+		RUS = {
+			every_unit_leader = {
+				limit = {
+					has_trait = hidden_sympathies
+				}
+				remove_unit_leader_trait = hidden_sympathies
+				set_nationality = ROOT
+			}
+		}
 		set_country_flag = soviet_russia_restored
 		load_focus_tree = Russia_Socialist
-		if = {
-			limit = {
-				RUS = { has_socialist_government = no }
-				RUS = { NOT = { has_government = social_democrat } }
-			}
-			RUS = {
-				every_unit_leader = {
-					limit = {
-						has_trait = hidden_sympathies
-					}
-					remove_unit_leader_trait = hidden_sympathies
-					set_nationality = ROOT
-				}
-			}
-		}
-		transfer_units_fraction = {
-			target = RUS
-			size = 0.1
-			navy_ratio = 0.1
-			keep_unit_leaders_trigger = { always = yes }
-		}
-		country_event = {
-			id = trmnra.100
-			days = 7
-		}
-		set_country_flag = SOV_restored_in_transamur
+		set_country_flag = RUS_duma_dissolved
 		set_country_flag = SOV_must_deal_with_opposition
-		add_stability = 0.1		
-		unlock_decision_tooltip = RUS_Start_The_Offensive_TRM
+		set_country_flag = soc_dems_are_socialists
+		set_temp_variable = { RUS_new_sde = party_popularity_100@social_democrat}
+		add_to_temp_variable = { RUS_new_sde = party_popularity_100@social_liberal  }
+		add_to_temp_variable = { RUS_new_sde = party_popularity_100@market_liberal  }
+		add_to_temp_variable = { RUS_new_sde = party_popularity_100@social_conservative  }
+		add_to_temp_variable = { RUS_new_sde = party_popularity_100@authoritarian_democrat  }
+		add_to_temp_variable = { RUS_new_sde = party_popularity_100@paternal_autocrat  }
+		add_to_temp_variable = { RUS_new_sde = party_popularity_100@national_populist  }
+		
+		divide_temp_variable = { RUS_new_sde = 3 }
+		
+		set_temp_variable = { RUS_new_rso = party_popularity_100@radical_socialist }
+		add_to_temp_variable = { RUS_new_rso = RUS_new_sde }
+		set_temp_variable = { RUS_new_syn  = party_popularity_100@syndicalist }
+		add_to_temp_variable = { RUS_new_syn = RUS_new_sde }
+		
+		
+		set_temp_variable = { sum = 100 }
+		subtract_from_temp_variable = { sum = RUS_new_sde }
+		subtract_from_temp_variable = { sum = party_popularity_100@totalist }
+		subtract_from_temp_variable = { sum = RUS_new_rso }
+		subtract_from_temp_variable = { sum = RUS_new_syn }
+		
+		add_to_temp_variable = { RUS_new_sde = sum } #avoid rounding errors	
+		
+		set_popularities = {
+			totalist = party_popularity_100@totalist
+			syndicalist = RUS_new_syn
+			radical_socialist = RUS_new_rso
+			social_democrat = RUS_new_sde
+			social_liberal = 0
+			market_liberal = 0
+			social_conservative = 0
+			authoritarian_democrat = 0
+			paternal_autocrat = 0
+			national_populist = 0
+		}		
+		for_each_scope_loop = {
+			array = CAN.faction_members
+			embargo_ROOT = yes
+		}
+		for_each_scope_loop = {
+			array = GER.faction_members
+			embargo_ROOT = yes
+		}
+		for_each_scope_loop = {
+			array = AUS.faction_members
+			embargo_ROOT = yes
+		}
+		FRP = { embargo_ROOT = yes }
+		GBR = { embargo_ROOT = yes }
+		random_unit_leader = {
+			limit = { has_id = 455 }
+			set_leader_portrait = GFX_Portrait_Soviet_Vasily_Chuikov
+		}
+		random_unit_leader = {
+			limit = { has_id = 17897 }
+			set_leader_portrait = GFX_Portrait_SOV_Semyon_Hitler
+					}
+		random_unit_leader = {
+			limit = { has_id = 447 }
+			set_leader_portrait = GFX_Portrait_SOV_Aleksandr_Yegorov
+				}
+		random_unit_leader = {
+			limit = { has_id = 449 }	
+			set_leader_portrait = GFX_Portrait_RUS_Gregory_Zhukov_General
+		}
+	}
+	if = {
+		limit = {
+			is_faction_leader = yes
+		}
+		set_faction_name = fourth_internationale
+	}
+	else = {
+		create_faction = fourth_internationale
+	}
+	if = {
+		limit = { 
+			OR = {
+				RUS_mikhail_frunze_in_power = yes 
+				RUS_mikhail_tukhachevsky_in_power = yes 
+			}
+		}
+		set_cosmetic_tag = SOV_tukhachevsky
+		set_country_flag = tukhachevsky_power
+		unlock_national_focus = RUS_Zhukov_Restores_Socialism
+		hidden_effect = {
+			country_event = {
+				id = russoc.108
+				days = 180
+				random_days = 40
+			}
+			country_event = {
+				id = russoc.109
+				days = 250
+				random_days = 30
+			}
+			country_event = {
+				id = russoc.110
+				days = 150
+				random_days = 20
+			}
+			country_event = {
+				id = russoc.111
+				days = 300
+				random_days = 30
+			}
+		}
+		remove_all_ministers = yes
+		if = {
+			limit = { RUS_mikhail_frunze_in_power = yes }
+			add_ideas = {
+				SOV_Mikhail_V_Frunze_hog_tot
+				SOV_Robert_P_Eydeman_for_tot
+				SOV_Avgust_I_Kork_eco_tot
+				SOV_Vladimir_Antonov_Ovseyenko_sec_tot
+			}
+			hidden_effect = {
+				country_event = {
+					id = russoc.159
+					days = 180
+					random_days = 600
+				}
+			} 
+		}
+		else = {
+			add_ideas = {
+				SOV_Mikhail_Tukhachevskiy_hog_tot
+				SOV_Iona_Yakir_for_tot
+				SOV_Ieronim_Uborevich_eco_tot
+				SOV_Vitaliy_Primakov_sec_tot
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			has_country_leader = {
+				ruling_only = yes
+				name = "Grigory Zinoviev"
+			}
+		}
+		set_cosmetic_tag = SOV
+		set_country_flag = bolsheviks_victorous
+		complete_national_focus = RUS_Bolsheviks_In_Power
+		remove_all_ministers = yes
+		add_ideas = {
+			RUS_Grigoriy_Y_Zinoviev_hog_tot
+			SOV_Lev_Kamenev_for_tot
+			RUS_Evgeniy_A_Preobrazhenskiy_eco_tot
+			SOV_Georgy_Blagonravov_sec_tot
+		}
+		hidden_effect = {
+			country_event = {
+				id = russoc.112
+				months = 5
+			}				
+		}
+	}
+	else = {	
+		set_cosmetic_tag = TRM_UNITED_SOV
 	}
 }
 TRM_do_after_coup_purge = {

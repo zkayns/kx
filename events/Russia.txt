@@ -28810,7 +28810,7 @@ country_event = { #Troika dissolves
 	
 	option = {
 		name = russoc.85.a
-		trigger = { has_unit_leader = 449 }		
+		trigger = { has_unit_leader = 449 }
 		ai_chance = {
 			base = 35
 			modifier = {
@@ -28889,6 +28889,14 @@ country_event = { #Troika dissolves
 			ruling_party = totalist
 			elections_allowed = no
 		}
+		hidden_effect = {
+			country_event = {
+				id = russoc.159
+				days = 180
+				random_days = 600
+			}
+		} 
+		
 	}
 	option = {
 		name = russoc.85.c

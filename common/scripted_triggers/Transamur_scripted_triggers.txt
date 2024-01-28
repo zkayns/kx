@@ -55,6 +55,18 @@ TRM_nra_in_power = {
 				name = "Aleksandr Krasnoshchyekov"
 				ruling_only = yes
 			}
+			has_country_leader = {
+				name = "Vasily Blyukher"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Mikhail Frunze"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Mikhail Tukhachevsky"
+				ruling_only = yes
+			}
 		}
 	}
 }

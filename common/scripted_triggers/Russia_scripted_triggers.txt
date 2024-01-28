@@ -23,11 +23,26 @@ RUS_democratic_tree_visible = {
 soviets_exist = {
 	custom_trigger_tooltip = {
 		tooltip = soviet_russia_restored
-		RUS = {
-			has_event_target = soviet_russia
-			has_country_flag = soviet_russia_restored
-			exists = yes
+		any_country = {
+			limit = {
+				is_russian_tag_that_can_integrate = yes
+				has_event_target = soviet_russia
+				has_country_flag = soviet_russia_restored
+				exists = yes
+			}
 		}
+	}
+}
+RUS_mikhail_tukhachevsky_in_power = {
+	has_country_leader = {
+		name = "Mikhail Tukhachevsky"
+		ruling_only = yes
+	}
+}
+RUS_mikhail_frunze_in_power = {
+	has_country_leader = {
+		name = "Mikhail Frunze"
+		ruling_only = yes
 	}
 }
 led_by_trm_crm_or_dkb = {

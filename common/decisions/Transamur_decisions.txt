@@ -3935,9 +3935,7 @@ TRM_russian_expansion = {
 						}
 					}
 				}
-				setup_soviet_russia = yes
-				ROOT = { save_global_event_target_as = soviet_russia }
-				set_cosmetic_tag = TRM_UNITED_SOV
+				setup_soviet_transamur = yes
 			}
 			else_if = {
 				limit = {
@@ -4015,6 +4013,9 @@ TRM_russian_expansion = {
 				has_completed_focus = TRM_New_Far_Eastern_Republic
 				has_completed_focus = TRM_Regionalists
 			}
+		}
+		visible = {
+			has_idea = TRM_dream
 		}
 		cost = 0
 		fire_only_once = yes
