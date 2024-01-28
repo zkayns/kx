@@ -14103,7 +14103,7 @@ shared_focus = {
 	completion_reward = {
 		add_political_power = 100
 		add_stability = 0.025
-		unlock_decision_tooltip = RUS_Raise_NRA_decision
+		unlock_decision_tooltip = RUS_Start_The_Offensive
 	}
 }
 shared_focus = {

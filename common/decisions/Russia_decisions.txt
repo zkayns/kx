@@ -10138,6 +10138,7 @@ RUS_Siberian_War = {
 			OR = {
 				has_completed_focus = RUS_Reclaim_Far_East
 				has_completed_focus = RUS_KER_Enemy_In_The_East
+				has_completed_focus = RUS_Raise_NRA
 			}
 		}
 		target_trigger = {
