@@ -10,7 +10,7 @@ TRM_nra_resistance_modifier = {
 TRM_oblastniki_influence_modifier = {
 	enable = { always = yes }
 	remove_trigger = { always = no }
-	icon = "GFX_idea_oblastniki_influence"
+	icon = GFX_idea_oblastniki_influence_1
 
 	stability_factor = TRM_oblastniki_stability
 	war_support_factor = TRM_oblastniki_war_support

@@ -1454,87 +1454,89 @@ TRM_do_after_coup_purge = {
 		division_template = "Kazatskaya Diviziya"
 		disband = yes
 	}
-	if = {
-		limit = {
-			has_unit_leader = 243910
-		}
-		random_unit_leader = {
-				limit = { has_id = 243910 }	
-				remove_unit_leader = yes
-			}
+	random_unit_leader = {
+		limit = { has_id = 243910 }	
+		remove_unit_leader = yes
 	}
-	if = {
-		limit = {
-			has_unit_leader = 505054
-		}
-		random_unit_leader = {
-				limit = { has_id = 505054 }	
-				remove_unit_leader = yes
-			}
+	random_unit_leader = {
+		limit = { has_id = 505054 }	
+		remove_unit_leader = yes
 	}
-	if = {
-		limit = {
-			has_unit_leader = 505056
-		}
-		random_unit_leader = {
-				limit = { has_id = 505056 }	
-				remove_unit_leader = yes
-			}
+	random_unit_leader = {
+		limit = { has_id = 505056 }	
+		remove_unit_leader = yes
 	}
-	if = {
-		limit = {
-			has_unit_leader = 243911
-		}
-		random_unit_leader = {
-				limit = { has_id = 243911 }	
-				remove_unit_leader = yes
-			}
+	random_unit_leader = {
+		limit = { has_id = 243911 }	
+		remove_unit_leader = yes
 	}
-	if = {
-		limit = {
-			has_unit_leader = 243912
-		}
-		random_unit_leader = {
-				limit = { has_id = 243912 }	
-				remove_unit_leader = yes
-			}
+	random_unit_leader = {
+		limit = { has_id = 243912 }	
+		remove_unit_leader = yes
 	}
-	
 	if = {
 		limit = {
 			TRM_stark_in_power = yes
 		}
-		if = {
-			limit = {
-				has_unit_leader = 505058
-			}
-			random_unit_leader = {
-				limit = { has_id = 505058 }	
-				remove_unit_leader = yes
-			}
+		random_unit_leader = {
+			limit = { has_id = 505058 }	
+			remove_unit_leader = yes
 		}
+		set_country_flag = Mikhail_Diterikhs_dead
 	}
 	else_if = {
 		limit = {
 			TRM_do_rovs_in_power = yes
 		}
-		if = {
-			limit = {
-				has_unit_leader = 50002
-			}
-			random_unit_leader = {
-				limit = { has_id = 50002 }	
-				remove_unit_leader = yes
-			}
+		random_unit_leader = {
+			limit = { has_id = 50002 }	
+			remove_unit_leader = yes
 		}
 	}
 	else_if = {
-		limit = { TRM_nra_in_power = yes }
+		limit = { 
+			OR = {
+				TRM_nra_in_power = yes 
+				TRM_Mlad_in_power = yes
+			}
+		}
 		every_unit_leader = {
 			limit = { has_unit_leader_flag = CAN_TRM_expedition_leader }
 			set_nationality = ENT
 			remove_unit_leader_trait = TRM_british_expeditionary
 			add_unit_leader_trait = GBR_british_exile_trait
+		}
+		random_unit_leader = {
+			limit = { has_id = 1159 }
+			remove_unit_leader = yes
+		}
+		random_unit_leader = {
+			limit = { has_id = 1153 }
+			remove_unit_leader = yes
+		}
+		random_unit_leader = {
+			limit = { has_id = 1152 }
+			remove_unit_leader = yes
+		}
+		random_unit_leader = {
+			limit = { has_id = 1151 }
+			remove_unit_leader = yes
+		}
+		random_unit_leader = {
+			limit = { has_id = 21516 }
+			remove_unit_leader = yes
+		}
+		random_unit_leader = {
+			limit = { has_id = 11523 }
+			remove_unit_leader = yes
+		}
+		random_unit_leader = {
+			limit = { has_id = 11524 }
+			remove_unit_leader = yes
+		}
+		random_unit_leader = {
+			limit = { has_id = 11525 }
+			remove_unit_leader = yes
 		}
 	}
 }
