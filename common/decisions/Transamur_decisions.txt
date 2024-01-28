@@ -3695,7 +3695,7 @@ TRM_russian_expansion = {
 				OR = {
 					has_completed_focus = TRM_Form_A_New_Cabinet
 					has_completed_focus = TRM_Our_Proud_Varyag_2
-					has_completed_focus = TRM_Stay_Independent
+					has_completed_focus = TRM_RSDRP_PSR
 					has_completed_focus = TRM_KDV
 					has_completed_focus = TRM_NDS
 					has_completed_focus = TRM_New_Far_Eastern_Republic
@@ -4011,7 +4011,10 @@ TRM_russian_expansion = {
 		available = {
 			has_war = no
 			is_subject = no
-			has_completed_focus = TRM_New_Far_Eastern_Republic
+			OR = {
+				has_completed_focus = TRM_New_Far_Eastern_Republic
+				has_completed_focus = TRM_Regionalists
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -4025,15 +4028,14 @@ TRM_russian_expansion = {
 			remove_ideas = TRM_dream
 			add_ideas = TRM_Sib_Fed
 			every_state = {
-				limit = {
-					is_owned_by = RUS
+				limit = { 
 					is_core_of = RUS
 					is_claim_or_core_of_ROOT = yes
 				}
 				remove_claim_by = ROOT
 			}
 			custom_effect_tooltip = RUS_decrease_chance_of_war
-			add_to_variable = { global.siberian_war_chance = -0.05 }
+			add_to_variable = { global.siberian_war_chance = -0.15 }
 		}
 	}
 	TRM_relocate_capital_1 = {

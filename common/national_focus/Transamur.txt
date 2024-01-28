@@ -3326,6 +3326,7 @@ focus = {
 				remove_idea = RUS_Siberian_Identity_1
 				add_idea = RUS_Siberian_Identity_2
 			}
+			unlock_decision_tooltip = TRM_refuse_war
 		}
 	}
 	
@@ -3437,9 +3438,6 @@ focus = {
 		id = TRM_Support_Small_Business
 		text = RUS_sup_buss
 		icon = GFX_goal_NFA_Work_With_Local_Businesses
-		prerequisite = {
-			focus = TRM_Stay_Independent
-		}
 		prerequisite = {
 			focus = TRM_Rep_Fac
 		}
@@ -4517,10 +4515,8 @@ focus = {
 			}
 		}
 		completion_reward = {
-			country_event = {
-					id = tramsem.9
-					days = 1
-			}
+			country_event = tramsem.9
+			unlock_decision_tooltip = TRM_refuse_war
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

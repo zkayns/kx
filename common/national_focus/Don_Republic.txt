@@ -5997,7 +5997,6 @@ focus = {
 			focus = DKB_Into_The_Future
 		}
 		completion_reward = {
-			unlock_decision_tooltip = RUS_Raise_NRA_decision
 			unlock_decision_tooltip = SOV_Approach_Japan
 			unlock_decision_tooltip = SOV_Demand_Tuva
 		}
