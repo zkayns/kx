@@ -34,46 +34,14 @@ TRM_Dealing_With_NRA = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_crush_nra_in_state target: [From.GetName]"
-			random_list = {
-				100 = {
-					modifier = {
-						factor = TRM_Overall_Kolchak_Support
-					}
-					modifier = {
-						FROM = { 
-							set_temp_variable = {
-								TRM.kolchak_authority_temp = Kolchak_Authority
-							}
-						}
-						factor = TRM.kolchak_authority_temp
-					}
-					FROM = { 
-						TRM_Decrease_NRA_Resistance_Greatly = yes
-						TRM_Increase_Kolchak_Support = yes
-					}
-				}
-				100 = {
-					modifier = {
-						factor = TRM_Overall_NRA_Resistance
-					}
-					modifier = {
-						FROM = { 
-							set_temp_variable = {
-								TRM.kolchak_authority_temp = NRA_Authority
-							}
-						}
-						factor = TRM.kolchak_authority_temp
-					}
-					FROM = {
-						TRM_Increase_NRA_Resistance = yes
-						TRM_Decrease_Kolchak_Support = yes
-						damage_building = {
-							type = infrastructure
-							damage = 1
-						}
-					}
-				}
-			}			
+			FROM = { 
+				TRM_Decrease_NRA_Resistance_Greatly = yes
+				TRM_Increase_Kolchak_Support = yes
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}	
+			}
 			TRM_clamp_spheres_of_influence = yes
 			TRM_recalculate_kolchak_variables = yes
 		}
@@ -85,7 +53,16 @@ TRM_Dealing_With_NRA = {
 		allowed = { always = no } #manually activated
 
 		available = {
-			has_country_flag = TRM_crush_remnants_of_nra
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = TRM_crush_remnants_of_nra_tt
+					check_variable = { TRM_Overall_NRA_Resistance < 0.05 }
+				}
+				AND = {
+					country_exists = BRY
+					BRY = { has_government = totalist }
+				}
+			}
 		}
 
 		cancel_trigger = {
@@ -123,11 +100,11 @@ TRM_Dealing_With_NRA = {
 				popularity = -0.05
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = totalist
 				popularity = -0.15
 			}
 			add_popularity = {
-				ideology = social_democrat
+				ideology = radical_socialist
 				popularity = -0.1
 			}
 			effect_tooltip = {
@@ -3155,10 +3132,13 @@ TRM_oblastniki_influence = {
 	}
 	TRM_destroy_separatism = {
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TRM_destroy_separatism_available
-				check_variable = { party_popularity@social_liberal < 0.05 }
-			}
+			if = {
+				limit = { has_socialist_government = no }
+				custom_trigger_tooltip = {
+					tooltip = TRM_destroy_separatism_available
+					check_variable = { party_popularity@social_liberal < 0.05 }
+				}
+			}	
 		}
 		visible = {
 			has_dynamic_modifier = { modifier = TRM_oblastniki_influence_modifier }

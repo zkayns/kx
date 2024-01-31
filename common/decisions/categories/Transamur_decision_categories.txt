@@ -54,6 +54,9 @@ TRM_oblastniki_influence = {
 	allowed = {
 		original_tag = TRM
 	}
+	visible = {
+		NOT = { has_country_flag = TRM_oblastniki_banned }
+	}
 }
 TRM_Siberian_Insurgency = {
 	icon = GFX_decision_revolt

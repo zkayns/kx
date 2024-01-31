@@ -646,6 +646,13 @@ country_event = { #Replace HOS - TRM event
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes
 			}
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
+			}
 		}
 	}
 }
@@ -1437,7 +1444,6 @@ country_event = {
 				}
 			}
 		}
-		complete_national_focus = TRM_The_New_Supreme_Ruler
 		remove_all_ministers = yes
 		add_ideas = {
 			TRM_Mikhail_K_Diterikhs_hog_pau 
@@ -1492,7 +1498,7 @@ country_event = {
 				}
 			}
 		}
-		name = tram.81.b
+		name = tram.81.f
 		add_stability = 0.1
 		add_war_support = -0.1
 		add_popularity = {
@@ -1608,7 +1614,7 @@ country_event = {
 	}
 	
 	option = {
-		name = tram.81.e
+		name = tram.81.b
 		trigger = {
 			OR = {
 				check_variable = { CossackOrientation < 0 }
@@ -1658,13 +1664,15 @@ country_event = {
 			}
 		}
 		set_capital = { state = 563 }
-		add_ideas = TRM_Grigoriy_M_Semyenov_hog_pau
-		add_ideas = BRT_Ivan_P_Kalmykov_for_pau
-		add_ideas = BRT_Leonid_V_Verigo_eco_pau
-		add_ideas = TRM_Boris_Shepunov_sec_pau		
+		add_ideas = {
+			TRM_Grigoriy_M_Semyenov_hog_pau
+			BRT_Ivan_P_Kalmykov_for_pau
+			BRT_Leonid_V_Verigo_eco_pau
+			TRM_Boris_Shepunov_sec_pau		
+		}
 	}
 	option = {
-		name = tram.81.f
+		name = tram.81.e
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -1701,15 +1709,8 @@ country_event = {
 					set_nationality = NSW
 				}
 			}
-		}
-		
-		effect_tooltip = {
-			unlock_national_focus = TRM_tsar_soviets
-		}
-		
-		hidden_effect = {
-			complete_national_focus = TRM_tsar_soviets
 		}		
+		complete_national_focus = TRM_tsar_soviets
 	}
 }
 
@@ -2371,6 +2372,13 @@ country_event = { #Russian Republic(TRM) breaks away!
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes
 			}
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
+			}
 		}
 		declare_war_on = {
 			target = TRM
@@ -2397,11 +2405,70 @@ country_event = { #Russian Republic(TRM) breaks away!
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes
 			}
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
+			}
 		}
 	}
 }
 
 ###Kolchak dead, Japan gets a message###
+
+###Russian Republic(TRM) breaks away###
+
+country_event = { #Russian Republic(TRM) breaks away!
+	id = tram.98
+	immediate = { log = "[GetDateText]: [Root.GetName]: event tram.98" }
+	title = tram.98.t
+	desc = tram.98.d
+	is_triggered_only = yes
+
+	option = { #war
+		name = tram.98.b
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 0
+				FROM = { TRM_semyenov_in_power = yes }
+			}
+		}
+		set_global_flag = PRI_breaksaway
+		hidden_effect = {
+			TRM = {
+				TRM_remove_japanese_influence = yes
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
+			}
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
+			}
+		}
+		declare_war_on = {
+			target = TRM
+			type = annex_everything
+		}
+	}
+
+	option = { #leave them
+		name = tram.98.a
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 0
+				TRM = { has_socialist_government = yes }
+			}
+		}		
+	}
+}
+
 country_event = {
 	id = tram.100
 	immediate = { log = "[GetDateText]: [Root.GetName]: event tram.100" }
@@ -3853,6 +3920,13 @@ country_event = { #Stop TRM profits for JAP
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes
 			}
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
+			}
 		}
 	}
 }
@@ -4128,6 +4202,13 @@ country_event = { #cut ties with the japanese
 				TRM_remove_japanese_influence = yes
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes
+			}
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
 			}
 		}
 	}
@@ -5505,39 +5586,41 @@ country_event = { #Nra win
 				remove_unit_leader = yes
 			}
 		}
-		remove_all_ministers = yes
-		add_ideas = TRM_Pyetr_Nikiforov_hog_tot 
-		add_ideas = TRM_Genrich_Eiche_for_tot 
-		add_ideas = TRM_Boris_Shumyatsky_eco_rso 
-		add_ideas = TRM_Matvei_Berman_sec_tot
-		add_ideas = RUS_siberian_monarchists_resistance
-		add_ideas = RUS_kolchak_loyalists_resistance
-		if = {
-			limit = { TRM_kolchak_in_power = yes }
-			remove_ideas = TRM_Aleksandr_Kolchak_cnav_pau
+		hidden_effect = {
+			remove_all_ministers = yes
+			add_ideas = TRM_Pyetr_Nikiforov_hog_tot 
+			add_ideas = TRM_Genrich_Eiche_for_tot 
+			add_ideas = TRM_Boris_Shumyatsky_eco_rso 
+			add_ideas = TRM_Matvei_Berman_sec_tot
+			add_ideas = RUS_siberian_monarchists_resistance
+			add_ideas = RUS_kolchak_loyalists_resistance
 			if = {
-				limit = { has_country_flag = Mikhail_Diterikhs_dead }
-				create_country_leader = {
-					name = "Vladimir Kappel"
-					picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Kappel.png"
-					expire = "1.1.1"
-					ideology = junta_subtype
+				limit = { TRM_kolchak_in_power = yes }
+				remove_ideas = TRM_Aleksandr_Kolchak_cnav_pau
+				if = {
+					limit = { has_country_flag = Mikhail_Diterikhs_dead }
+					create_country_leader = {
+						name = "Vladimir Kappel"
+						picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Kappel.png"
+						expire = "1.1.1"
+						ideology = junta_subtype
+					}
 				}
-			}
-			else = {
-				create_country_leader = {
-					name = "Mikhail Diterikhs"
-					desc = "POLITICS_MIKHAIL_DITERIKHS"
-					picture = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
-					expire = "1.1.1"
-					ideology = junta_subtype
-					traits = {}
+				else = {
+					create_country_leader = {
+						name = "Mikhail Diterikhs"
+						desc = "POLITICS_MIKHAIL_DITERIKHS"
+						picture = "gfx/leaders/TRM/Portrait_TRM_Diterikhs.png"
+						expire = "1.1.1"
+						ideology = junta_subtype
+						traits = {}
+					}
+				}				
+				set_party_name = {
+					ideology = paternal_autocrat
+					long_name = TRM_rovs_party_long
+					name = TRM_rovs_party
 				}
-			}				
-			set_party_name = {
-				ideology = paternal_autocrat
-				long_name = TRM_rovs_party_long
-				name = TRM_rovs_party
 			}
 		}
 		add_popularity = {
@@ -5550,20 +5633,24 @@ country_event = { #Nra win
 		}
 		add_radsoc_to_coalition = yes
 		add_synd_to_coalition = yes
-		set_party_name = {
-			ideology = totalist
-			long_name = TRM_NRA_party_long
-			name = TRM_NRA_party
-		}
-		create_country_leader = {
-			name = "Vasily Blyukher"
-			desc = "POLITICS_BLYUKHER_DESC"
-			picture = "gfx/leaders/TRM/TRM_Vasily_Blyukher.png"
-			expire = "1.1.1"
-			ideology = red_junta_subtype
-		}
-		set_cosmetic_tag = TRM_NRA
 		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Kazatskaya Diviziya"
+				disband = yes
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name = TRM_NRA_party_long
+				name = TRM_NRA_party
+			}
+			create_country_leader = {
+				name = "Vasily Blyukher"
+				desc = "POLITICS_BLYUKHER_DESC"
+				picture = "gfx/leaders/TRM/TRM_Vasily_Blyukher.png"
+				expire = "1.1.1"
+				ideology = red_junta_subtype
+			}
+			set_cosmetic_tag = TRM_NRA
 			division_template = {
 				name = "Partizanskaya Diviziya"			# Militia Division
 				division_names_group = SOV_MIL_01
@@ -5597,20 +5684,18 @@ country_event = { #Nra win
 					owner = ROOT
 					count = 2
 				}
-			}	
-			hidden_effect = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_id = 243910
-							has_id = 505054
-							has_id = 505056
-							has_id = 243911
-							has_id = 243912
-						}
+			}
+			every_unit_leader = {
+				limit = {
+					OR = {
+						has_id = 243910
+						has_id = 505054
+						has_id = 505056
+						has_id = 243911
+						has_id = 243912
 					}
-					set_nationality = BRY
 				}
+				set_nationality = BRY
 			}
 			every_unit_leader = {
 				limit = {
@@ -5626,8 +5711,6 @@ country_event = { #Nra win
 					days = 3
 				}
 			}			
-		}
-		hidden_effect = {
 			XXA = {
 				random_unit_leader = {
 					limit = { has_id = 505049 }
@@ -5830,7 +5913,12 @@ country_event = { #Anti-japanese propaganda
 		}
 		set_temp_variable = { target = JAP }
 		clear_all_relations_with_TARGET = yes		
-		JAP = {
+		JAP = {			
+			diplomatic_relation = {
+				country = TRM
+				relation = docking_rights
+				active = no
+			}
 			country_event = {
 				id = trmnra.42
 				days = 2
@@ -5863,6 +5951,13 @@ country_event = { #Transamur cut ties with us
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes
 			}	
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
+			}
 		}
 	}
 	option = {
@@ -8743,7 +8838,14 @@ country_event = {
 				TRM_remove_japanese_influence = yes
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes			
-			}			
+			}	
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
+			}		
 		}
 	}	
 }
@@ -9844,6 +9946,13 @@ country_event = {
 				TRM_remove_japanese_influence = yes
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes			
+			}
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
 			}
 		}
 	}
@@ -11248,6 +11357,13 @@ country_event = {
 				TRM_remove_japanese_influence = yes
 				set_temp_variable = { target = JAP }
 				clear_all_relations_with_TARGET = yes
+			}
+			JAP = {			
+				diplomatic_relation = {
+					country = TRM
+					relation = docking_rights
+					active = no
+				}
 			}
 		}		
 		FROM = {

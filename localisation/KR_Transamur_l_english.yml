@@ -270,9 +270,9 @@ tram.81.t: "Kolchak Assassinated!"
 tram.81.d: "Alexander Kolchak, leader of Transamur for more than 12 years, has been brutally killed in a bombing attack! There are several pretenders to his position, as all of them share either popular support or armed force."
 tram.81.a: "Mikhail Diterikhs is the new leader of Transamur!"
 tram.81.b: "Ataman Semyonov is the new leader of Transamur!"
-tram.81.c: "General Pepelyaev leads is the new leader of Transamur!"
+tram.81.c: "Rear-Admiral Stark leads is the new leader of Transamur!"
 tram.81.e: "In chaos Mladorossi seize power!"
-tram.81.f: "Viktor Pepelyaev managed to preserve his position as Kolchak's second-in-command."
+tram.81.f: "Oblastniki seize the power and restore democracy."
 
 transamur_elections_tt: "§GThe Elections will be held in two months.§!"
 
@@ -1089,15 +1089,15 @@ trmnra.58.d: "Just last night there was an explosion at a weapons factory in Bla
 trmnra.58.a: "They will pay for it!"
 
 trmnra.59.t: "Industrial Sabotage"
-trmnra.59.d: "This morning Khabarovsk residents woke up to a terrifying sight and sound: a bomb exploded at a factory, killing several people and injuring dozens more. The bomb severely damaged the plant and also damaged local infrastructure. None other than the NRA claimed responsibility for the attack, which claimed that the purpose of the attack was to hit Japanese businesses in the country. Although the response of local firefighters and police is admirable, many locals are extremely alarmed and some even accuse the Lithuanian government of inaction. There is even a growing murmur that the government's actions in recent days are only provoking the NRA to organize more terrorist attacks. If we want to regain the trust of our people, we must redouble our efforts to show the people that we can protect them!"
+trmnra.59.d: "This morning Khabarovsk residents woke up to a terrifying sight and sound: a bomb exploded at a factory, killing several people and injuring dozens more. The bomb severely damaged the plant and also damaged local infrastructure. None other than the NRA claimed responsibility for the attack, which claimed that the purpose of the attack was to hit Japanese businesses in the country. Although the response of local firefighters and police is admirable, many locals are extremely alarmed and some even accuse the Far-Eastern government of inaction. There is even a growing murmur that the government's actions in recent days are only provoking the NRA to organize more terrorist attacks. If we want to regain the trust of our people, we must redouble our efforts to show the people that we can protect them!"
 trmnra.59.a: "We will prevail!"
 
 trmnra.60.t: "Railway Bombing"
-trmnra.60.d: "Residents along the Trans-Siberian Railway woke up to a loud explosion and a cloud of smoke in the middle of the night. Apparently, the IRA terrorists struck quickly in the dark and just as quickly fled into the Lithuanian forests. The implication of their attack is clear: the rail lines in Siberia play a key supply role, and without them the troops in Transbaikalia would have difficulty with food and ammunition. Although we will send recovery crews to get our trains up and running more quickly, the latest attack reflects the increasingly violent nature of the NRA. We will make sure that when we find them, they pay for their crimes."
+trmnra.60.d: "Residents along the Trans-Siberian Railway woke up to a loud explosion and a cloud of smoke in the middle of the night. Apparently, the NRA terrorists struck quickly in the dark and just as quickly fled into the Siberian forests. The implication of their attack is clear: the rail lines in Siberia play a key supply role, and without them the troops in Transbaikalia would have difficulty with food and ammunition. Although we will send recovery crews to get our trains up and running more quickly, the latest attack reflects the increasingly violent nature of the NRA. We will make sure that when we find them, they pay for their crimes."
 trmnra.60.a: "We will catch them!"
 
 trmnra.61.t: "Failed Attack"
-trmnra.61.d: "Today the military command in Vladivostok was absolutely delighted when the news of the actual victory reached them. It turns out that in their conceited arrogance the NRA dogs had attempted to raid a small military outpost near Chita in broad daylight. Most likely, they intended to raid the base solely for supplies, since they were on the run and were probably running out of fuel for their so-called rebellion. After a silly strike on the base, the defenders fired from fortified positions and towers littered with sandbags, fighting off NRA forces like fish in a barrel. Finally, after suffering significant losses, the IRA again fled, but not immediately, leaving their wounded and fallen comrades behind. News of the victory reached the streets of every Lithuanian town, and the military and government praised the response. At last we had a great success, a testament to the strength of our government and the loyalty of our military to [ROOT.GetLeader]!"
+trmnra.61.d: "Today the military command in Vladivostok was absolutely delighted when the news of the actual victory reached them. It turns out that in their conceited arrogance the NRA dogs had attempted to raid a small military outpost near Chita in broad daylight. Most likely, they intended to raid the base solely for supplies, since they were on the run and were probably running out of fuel for their so-called rebellion. After a silly strike on the base, the defenders fired from fortified positions and towers littered with sandbags, fighting off NRA forces like fish in a barrel. Finally, after suffering significant losses, the NRA again fled, but not immediately, leaving their wounded and fallen comrades behind. News of the victory reached the streets of every Siberian town, and the military and government praised the response. At last we had a great success, a testament to the strength of our government and the loyalty of our military to [ROOT.GetLeader]!"
 trmnra.61.a: "Good riddance."
 
 
@@ -1701,7 +1701,7 @@ TRM_Dealing_With_NRA_desc: "\n       «Through valleys and over hills\n       We
 TRM_crush_nra_in_state: "Infiltrate NRA Cells in [FROM.GetName]"
 TRM_nra_sabotage: "The NRA Plans a Sabotage"
 TRM_crush_remnants_of_nra: "Crush the NRA Remnants"
-TRM_crush_remnants_of_nra_tt: "The NRA resistance is more than §R5%§!"
+TRM_crush_remnants_of_nra_tt: "The NRA resistance is less than §R5%§!"
 
 
 
