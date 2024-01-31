@@ -3288,8 +3288,7 @@ focus = {
 		x = 1
 		y = 1
 		available = {
-			TRM_nra_in_power = yes
-			has_government = social_democrat
+			has_government = social_liberal
 		}
 		prerequisite = { 
 			focus = TRM_Regionalists
@@ -3311,7 +3310,6 @@ focus = {
 		x = 0
 		y = 2
 		available = {
-			TRM_nra_in_power = yes
 			has_government = social_liberal
 		}
 		prerequisite = { 
@@ -3342,7 +3340,6 @@ focus = {
 			focus = TRM_Support_Peasants
 		}
 		available = {
-			TRM_democrats_in_power = yes
 			has_government = social_democrat
 		}
 		ai_will_do = {
@@ -3382,7 +3379,7 @@ focus = {
 	}
 	focus = {
 		id = TRM_Federalisation
-		icon = GFX_YAK_Siberia
+		icon = GFX_focus_trm_federal
 		prerequisite = { 
 			focus = TRM_Secure_Workers_Rights
 			focus = TRM_Fight_Russian_Imperialism
@@ -4103,10 +4100,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Look_Out_To_Brother"
 			RUS = {
-				country_event = {
-					id = trmnra.14
-					days = 1
-				}
+				country_event = trmnra.14
 			}
 		}
 	}
@@ -4173,10 +4167,7 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_The_Last_Bolshevism"
-			country_event = {
-					id = trmnra.16
-					days = 1
-			}
+			country_event = trmnra.16
 		}
 	}
 	
@@ -4210,10 +4201,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Autonomous_Republic"
 			RUS = {
-				country_event = {
-					id = trmnra.17
-					days = 1
-				}
+				country_event = trmnra.17
 			}
 		}
 	}
@@ -6102,7 +6090,22 @@ focus = {
 			has_war = no
 			has_country_flag = TRM_become_russia
 			is_subject = no
-			is_neighbor_of = DKB
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = DKB
+					tag = DKB
+					is_ally_with = KUB
+					tag = KUB
+					is_ally_with = KLY
+					tag = KLY
+					is_ally_with = MTR
+					tag = MTR
+					is_ally_with = DAG
+					tag = DAG
+					is_ally_with = ABK
+					tag = ABK
+				}
+			}
 		}
 		x = -5
 		y = 1
@@ -6188,7 +6191,12 @@ focus = {
 			has_war = no
 			has_country_flag = TRM_become_russia
 			is_subject = no
-			is_neighbor_of = GEO
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = GEO
+					tag = GEO
+				}
+			}
 		}
 		x = -6
 		y = 2
@@ -6226,7 +6234,12 @@ focus = {
 			has_war = no
 			has_country_flag = TRM_become_russia
 			is_subject = no
-			is_neighbor_of = AZE
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = AZE
+					tag = AZE
+				}
+			}
 		}
 		x = -4
 		y = 2
@@ -6264,7 +6277,12 @@ focus = {
 			has_war = no
 			has_country_flag = TRM_become_russia
 			is_subject = no
-			is_neighbor_of = ARM
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = ARM
+					tag = ARM
+				}
+			}
 		}
 		x = -5
 		y = 3
@@ -6305,8 +6323,12 @@ focus = {
 			has_war = no
 			has_country_flag = TRM_become_russia
 			is_subject = no
-				is_neighbor_of = TUR
-				
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = TUR
+					tag = TUR
+				}
+			}
 		}
 		x = 4
 		y = 1
@@ -6339,14 +6361,13 @@ focus = {
 				add_claim_by = ROOT
 			}
 			if = {
-				limit = {
-					country_exists = TUR
-				}
+				limit = { can_declare_war_on = 773.owner }
 				create_wargoal = {
-					type = annex_everything
-					target = TUR
+					target = 773.owner
+					type = take_state_focus
+					generator = { 1225 773 }
 				}
-			}
+			}	
 		}
 	}
 	focus = {
@@ -6358,7 +6379,12 @@ focus = {
 			has_war = no
 			has_country_flag = TRM_become_russia
 			is_subject = no
-			is_neighbor_of = PER
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = PER
+					tag = PER
+				}
+			}
 		}
 		x = 4
 		y = 2
@@ -6725,7 +6751,12 @@ focus = {
 			}
 			if = {
 				limit = { country_exists = KAR }
-				is_neighbor_of = KAR
+				any_neighbor_country = {
+					OR = {
+						is_ally_with = KAR
+						tag = KAR
+					}
+				}
 			}
 		}
 		x = -2
@@ -6787,7 +6818,7 @@ focus = {
 		bypass = {
 			OR = {
 				NOT = { country_exists = WHR }
-				UKR = { is_in_faction_with = GER }
+				WHR = { is_in_faction_with = GER }
 			}
 		}
 		will_lead_to_war_with = WHR
@@ -6923,9 +6954,20 @@ focus = {
 			has_war = no
 			has_country_flag = TRM_become_russia
 			is_subject = no
-			OR = {
-				is_neighbor_of = ROM
-				is_neighbor_of = RRM
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = ROM
+					tag = ROM
+				}
+			}
+			if = {
+				limit = { country_exists = MOL }
+				any_neighbor_country = {
+					OR = {
+						is_ally_with = MOL
+						tag = MOL
+					}
+				}
 			}
 		}
 		x = 2

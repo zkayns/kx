@@ -45,6 +45,7 @@ autonomy_state = {
 		OR = {
 			original_tag = UKR
 			tag = ALO
+			tag = TRM
 		}
 		overlord = { tag = RUS }
 	}

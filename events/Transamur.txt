@@ -6112,8 +6112,10 @@ country_event = { #TRM wants to join us
 	option = {
 		name = trmnra.14.a
 		add_stability = 0.025
-		annex_country = { target = TRM transfer_troops = yes }
-		
+		TRM = {
+			every_unit_leader = { set_nationality = ROOT }
+		}
+		annex_country = { target = TRM transfer_troops = yes }		
 	}
 }
 
@@ -6160,6 +6162,7 @@ country_event = { #last bastion of bolshevism
 		}
 		custom_effect_tooltip = RUS_decrease_chance_of_war
 		add_to_variable = { global.siberian_war_chance = -0.15 }
+		set_cosmetic_tag = TRM_SOV
 	}
 	option = {
 		name = trmnra.16.a2
@@ -6206,17 +6209,19 @@ country_event = { #last bastion of bolshevism
 		}
 		custom_effect_tooltip = RUS_decrease_chance_of_war
 		add_to_variable = { global.siberian_war_chance = -0.15 }
+		set_cosmetic_tag = TRM_SOV
 	}
 	option = {
 		name = trmnra.16.b
 		ai_chance = {
 			factor = 60
 			modifier = {
-			factor = 1000
-				OR = {
-					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_BOLSHEVIKS }
-					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_FRUNZE }
-					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_TUKHA }
+				factor = 1000
+					OR = {
+						has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_BOLSHEVIKS }
+						has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_FRUNZE }
+						has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NRA_COUP_TUKHA }
+				}
 			}
 		}
 		if = {
@@ -6271,22 +6276,15 @@ country_event = { #TRM wants to join us
 	option = {
 		name = trmnra.17.a
 		add_stability = 0.025
-		SOV = {
-			set_autonomy = {
-				target = TRM
-				autonomous_state = kr_autonomous_puppet
-				freedom_level = 0.75
-			}
-			TRM = {
-				set_politics = {
-					ruling_party = totalist
-				}
-				set_party_name = {
-					ideology = totalist
-					long_name = TRM_NRA_party_long
-					name = TRM_NRA_party
-				}
-			}
+		TRM = { get_current_government_type = yes }
+		set_autonomy = {
+			target = TRM
+			autonomous_state = kr_autonomous_soviet_republic
+			freedom_level = 0.75
+		}
+		TRM = {
+			restore_previous_government_type = yes
+			set_cosmetic_tag = TRM_SOV
 		}
 	}
 }

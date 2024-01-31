@@ -24,12 +24,10 @@ soviets_exist = {
 	custom_trigger_tooltip = {
 		tooltip = soviet_russia_restored
 		any_country = {
-			limit = {
-				is_russian_tag_that_can_integrate = yes
-				has_event_target = soviet_russia
-				has_country_flag = soviet_russia_restored
-				exists = yes
-			}
+			is_russian_tag_that_can_integrate = yes
+			has_event_target = soviet_russia
+			has_country_flag = soviet_russia_restored
+			exists = yes
 		}
 	}
 }

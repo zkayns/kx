@@ -1380,30 +1380,25 @@ TRM_recalculate_oblastniki_effects = {
 		set_temp_variable = { TRM_oblastniki_negative_factor = TRM_oblastniki_influence_var }
 		multiply_temp_variable = { TRM_oblastniki_negative_factor = 2 }
 		
-		set_variable = { TRM.TRM_oblastniki_stability = -0.25 }
 		set_variable = { TRM.TRM_oblastniki_war_support = -0.2 }
 		set_variable = { TRM.TRM_oblastniki_resource_gain = -0.1 }
-		set_variable = { TRM.TRM_oblastniki_conscription = -0.5 }
 				
-		multiply_variable = { TRM.TRM_oblastniki_stability = TRM_oblastniki_negative_factor }
 		multiply_variable = { TRM.TRM_oblastniki_war_support = TRM_oblastniki_negative_factor }
 		multiply_variable = { TRM.TRM_oblastniki_resource_gain = TRM_oblastniki_negative_factor }
-		multiply_variable = { TRM.TRM_oblastniki_conscription = TRM_oblastniki_negative_factor }
 		
 		if = {
-				limit = { OR = {
+			limit = { 
+				OR = {
 					has_government = social_liberal
 					has_government = social_democrat
-					}
 				}
-				divide_variable = { TRM.TRM_oblastniki_stability = -1 }
-				divide_variable = { TRM.TRM_oblastniki_war_support = -1 }
-				divide_variable = { TRM.TRM_oblastniki_resource_gain = -1 }
-				divide_variable = { TRM.TRM_oblastniki_conscription = -1 }
 			}
+			divide_variable = { TRM.TRM_oblastniki_war_support = -1 }
+			divide_variable = { TRM.TRM_oblastniki_resource_gain = -1 }
 		}
-		clear_variable = TRM_oblastniki_influence_var
-		force_update_dynamic_modifier = yes
+	}
+	clear_variable = TRM_oblastniki_influence_var
+	force_update_dynamic_modifier = yes
 }
 
 setup_soviet_transamur = {

@@ -12,10 +12,8 @@ TRM_oblastniki_influence_modifier = {
 	remove_trigger = { always = no }
 	icon = GFX_idea_oblastniki_influence_1
 
-	stability_factor = TRM_oblastniki_stability
 	war_support_factor = TRM_oblastniki_war_support
 	local_resources_factor = TRM_oblastniki_resource_gain
-	conscription_factor = TRM_oblastniki_conscription
 }
 
 TRM_japanese_vladivostok_modifier = {
