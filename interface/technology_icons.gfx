@@ -37426,11 +37426,11 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_TRM_tactical_bomber2_medium"
-		texturefile = "gfx/interface/technologies/Japan/JAP_tactical_bomber2.dds"
+		texturefile = "gfx/interface/technologies/JAP_tactical_bomber2.dds"
 	}
 	SpriteType = {
 		name = "GFX_TRM_tactical_bomber3_medium"
-		texturefile = "gfx/interface/technologies/Japan/JAP_tactical_bomber3.dds"
+		texturefile = "gfx/interface/technologies/JAP_tactical_bomber3.dds"
 	}
 	SpriteType = {
 		name = "GFX_TRM_jet_tactical_bomber1_medium"
@@ -37550,7 +37550,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_TRM_early_bomber_medium"
-		texturefile = "gfx/interface/technologies/Transamur/TRM_early_bomber.png"
+		texturefile = "gfx/interface/technologies/Japan/JAP_early_bomber.png"
 	}
 	SpriteType = {
 		name = "GFX_TRM_early_fighter_medium"
