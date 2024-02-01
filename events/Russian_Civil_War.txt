@@ -3954,6 +3954,8 @@ country_event = { #RCW
 			RUS_Isaak_Z_Shteinberg_eco_syn
 			RUS_Vladimir_E_Trutovskiy_sec_syn
 		}
+		add_radsoc_to_coalition = yes
+		add_socdem_to_coalition = yes
 		country_event = {
 			id = rcw.36
 			days = 3
@@ -3990,6 +3992,7 @@ country_event = { #RCW
 			ideology = national_populist
 			popularity = 0.1
 		}
+		add_natpop_to_coalition = yes
 		if = {
 			limit = {
 				has_idea = SOV_nationalist_resistance
@@ -5527,9 +5530,26 @@ country_event = { #RCW
 				NOT = { controls_province = 11375 }
 				NOT = { controls_province = 6380 }
 			}
-			country_event = {
-				id = rcw.501
-				days = 7
+			if = {
+				limit = {
+					is_ai = yes
+					OR = {
+						has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_PLSR }
+						has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_NSP }
+						has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_PSR }
+						has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_MENSHEVIKS }
+						has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_TRADEUNIONISTS }
+						has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_ZHUKOV }
+						has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_TUKHA }
+						has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_FRUNZE }
+					}
+				}
+			}
+			else = {
+				country_event = {
+					id = rcw.501
+					days = 7
+				}
 			}
 		}
 		else = {
@@ -5571,7 +5591,7 @@ country_event = { #RCW
 			RUS_Evgeniy_A_Preobrazhenskiy_eco_tot
 			SOV_Georgy_Blagonravov_sec_tot
 		}
-		complete_national_focus = RUS_Bolsheviks_In_Power
+		unlock_national_focus = RUS_Bolsheviks_In_Power
 		set_country_flag = zhukov_invites_bolsheviks
 		if = {
 			limit = { has_idea = rus_brest_litovsk }

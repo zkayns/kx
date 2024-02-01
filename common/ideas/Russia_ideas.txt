@@ -6525,6 +6525,7 @@ ideas = {
 			picture = RUS_fighting_for_together
 			available = { 
 				country_exists = RUS
+				is_in_faction = yes
 			}
 			modifier = {
 				army_attack_factor = 0.05
