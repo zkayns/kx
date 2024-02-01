@@ -4088,7 +4088,8 @@ focus = {
 		}
 		available = {
 			TRM_nra_in_power = yes
-			RUS = { has_country_flag = soviet_russia_restored }			
+			RUS = { has_country_flag = soviet_russia_restored }
+			NOT = { has_war_with = RUS }
 		}
 		mutually_exclusive = {
 			focus = TRM_The_Last_Bolshevism
@@ -4123,7 +4124,13 @@ focus = {
 		}
 		available = {
 			TRM_nra_in_power = yes
-			NOT = { soviets_exist = yes }
+			if = {
+				limit = { soviets_exist = yes }
+				NOT = { has_government = totalist }
+			}
+			else = {
+				NOT = { soviets_exist = yes }
+			}
 			RUS = {
 				if = {
 					limit = {
@@ -4189,7 +4196,8 @@ focus = {
 		}
 		available = {
 			TRM_nra_in_power = yes
-			RUS = { has_country_flag = soviet_russia_restored }			
+			RUS = { has_country_flag = soviet_russia_restored }	
+			NOT = { has_war_with = RUS }
 		}
 		mutually_exclusive = {
 			focus = TRM_Look_Out_To_Brother

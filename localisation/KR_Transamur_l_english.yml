@@ -1055,27 +1055,6 @@ trmnra.23.d: "The coup we founded in Transamur has failed, the revolutionaries w
 trmnra.23.a: "Crush them!"
 trmnra.23.b: "Back down."
 
-trmnra.100.t: "Vasily Blyukher Steps Down"
-trmnra.100.d: "The Far-Eastern Republic is now the last stronghold of Bolshevism in the world. By achieving this final goal of restoring Soviet power, we are now facing a much stronger enemy to the West. That is why Vasily Blyukher has decided to step down as the leader. He says that all the power are now delegated to..."
-trmnra.100.a: "...the Bolsheviks, returned from exile."
-trmnra.100.b: "...Frunze"
-trmnra.100.c: "...Tukhachevsky"
-
-trmnra.101.t: "Attacking the Petrograd Regime"
-trmnra.101.d: "Too long we've been waiting for a chance to liberate our fellow Russians from the tyranny of corrupted German lapdogs and Reactionaries. Our boys are ready to fight, guns are loaded, and trucks are fuelled. Should we officially declare war on them?"
-trmnra.101.a: "To arms!"
-trmnra.101.b: "We need another month to prepare an invasion."
-trmnra.101.c: "We need another half-year to prepare an invasion."
-trmnra.101.e: "We need another year to prepare an invasion."
-
-trmnra.102.t: "The Reds in Vladivostok"
-trmnra.102.d: "The Vladivostok Regime has fallen only to be replaced by the Bolsheviks, returned from exile. It seems that the Second Russian Civil War is now inevitable. We must reclaim our Far-Eastern lands and finally destroy the Reds!"
-trmnra.102.a: "To arms!"
-trmnra.102.b: "We need another month to prepare an invasion."
-trmnra.102.c: "We need another half-year to prepare an invasion."
-trmnra.102.e: "We need another year to prepare an invasion."
-
-
 trmnra.56.t: "Peasant Unrest"
 trmnra.56.d: "The NRA partisans are weakening the stability of our Motherland. Recently, one of them managed to raise a peasant uprising in one of our provinces. Fortunately, the uprising was soon calmed down by our loyal officers, and the rest of peasants escaped home."
 trmnra.56.a: "I want the head of the bomber on my desk!"
@@ -1100,6 +1079,49 @@ trmnra.61.t: "Failed Attack"
 trmnra.61.d: "Today the military command in Vladivostok was absolutely delighted when the news of the actual victory reached them. It turns out that in their conceited arrogance the NRA dogs had attempted to raid a small military outpost near Chita in broad daylight. Most likely, they intended to raid the base solely for supplies, since they were on the run and were probably running out of fuel for their so-called rebellion. After a silly strike on the base, the defenders fired from fortified positions and towers littered with sandbags, fighting off NRA forces like fish in a barrel. Finally, after suffering significant losses, the NRA again fled, but not immediately, leaving their wounded and fallen comrades behind. News of the victory reached the streets of every Siberian town, and the military and government praised the response. At last we had a great success, a testament to the strength of our government and the loyalty of our military to [ROOT.GetLeader]!"
 trmnra.61.a: "Good riddance."
 
+
+trmnra.100.t: "Vasily Blyukher Steps Down"
+trmnra.100.d: "The Far-Eastern Republic is now the last stronghold of Bolshevism in the world. By achieving this final goal of restoring Soviet power, we are now facing a much stronger enemy to the West. That is why Vasily Blyukher has decided to step down as the leader. He says that all the power are now delegated to..."
+trmnra.100.a: "...the Bolsheviks, returned from exile."
+trmnra.100.b: "...Frunze"
+trmnra.100.c: "...Tukhachevsky"
+
+trmnra.101.t: "Attacking the Petrograd Regime"
+trmnra.101.d: "Too long we've been waiting for a chance to liberate our fellow Russians from the tyranny of corrupted German lapdogs and Reactionaries. Our boys are ready to fight, guns are loaded, and trucks are fuelled. Should we officially declare war on them?"
+trmnra.101.a: "To arms!"
+trmnra.101.b: "We need another month to prepare an invasion."
+trmnra.101.c: "We need another half-year to prepare an invasion."
+trmnra.101.e: "We need another year to prepare an invasion."
+
+trmnra.102.t: "The Reds in Vladivostok"
+trmnra.102.d: "The Vladivostok Regime has fallen only to be replaced by the Bolsheviks, returned from exile. It seems that the Second Russian Civil War is now inevitable. We must reclaim our Far-Eastern lands and finally destroy the Reds!"
+trmnra.102.a: "To arms!"
+trmnra.102.b: "We need another month to prepare an invasion."
+trmnra.102.c: "We need another half-year to prepare an invasion."
+trmnra.102.e: "We need another year to prepare an invasion."
+
+trmnra.103.t: "The NRA and the Russian Civil War"
+trmnra.103.d: "Once again, Russia has fallen into a bloody civil war, with socialists against reactionaries marching towards each other. While the industrial cities were seized by workers, still there are supporters of the old regime. The command naturally views the Petrograd government as our allies in liberating all of Russia, however, there are also views that [RUS.GetLeader] is not a true representative of the people's will, but an opportunist. We must decide, whether we should join arms with them against [RVA.GetLeader] and [RRF.GetLeader], or claim the leadership of workers and peasants for us only."
+trmnra.103.a: "We must help our allies in Petrograd!"
+trmnra.103.b: "Down with traitors! [ROOT.GetLeader] is the legitimate ruler of all Russia!"
+
+trmnra.104.t: "The NRA Joins Us!"
+trmnra.104.d: "The People's Revolutionary Army in the Far-East has pledged their loyalty to our regime and agreed to join arms with us against the counter-revolutionaries."
+trmnra.104.a: "Soon, all of Russia will be liberated..."
+
+trmnra.105.t: "Stab in Back!"
+trmnra.105.d: "The People's Revolutionary Army in the Far-East has betrayed the ideals of the Revolution and has declared our government illegitimate. These traitors have now crossed the border in a war against the workers and peasants."
+
+trmnra.106.t: "Bolshevist Revolt in Petrograd!"
+trmnra.106.d: "The recent losses of our allies in Moscow and Nizhny Novgorod have clearly shown that they are not capable of ruling the country and win the war. The Russian Communist Party, which was in opposition to them, have seized power in Petrograd, arresting the government. Now, with Grigoriy Zinoviev leading the nation, perhaps, it is time for us to re-think our cooperation and declare their government illegitimate, also giving refugee to the Left SRs."
+trmnra.106.d2: "The recent losses of our enemies in Moscow and Nizhny Novgorod have clearly shown that they are not capable of ruling the country and win the war. The Russian Communist Party, which was in opposition to them, have seized power in Petrograd, arresting the government. Now, with Grigoriy Zinoviev leading the nation, perhaps, it is time for us to re-think our allegiance and recognize their government, signing a peace treaty and joining their forces."
+trmnra.106.a: "The Bolsheviks are to blame. We are the true revolutionary government!"
+trmnra.106.b: "The Left SRs were to blame. Join the Bolsheviks!"
+trmnra.106.c: "We should not reconsider our alliances in these dire times."
+
+trmnra.107.t: "Anarchist Revolt in Petrograd!"
+trmnra.107.d: "The Communists have not lasted long... the anarchists, associated with the Left SRs, and all those who were outraged by the Bolshevist coup have prevailed. Now, as anarchy sweeps across Russia, perhaps, it is time for us to re-think our cooperation and declare their government illegitimate."
+trmnra.107.a: "Russia needs stability, not anarchy. We are the true revolutionary government!"
 
 tramsem.1.t: "Ataman Semyonov"
 tramsem.1.d: "Ataman Semenov, the leader of the Transbaikal Cossacks, did not recognize the Kolchak government during the Civil War. After the founding of Transamur, he really wanted to join us, subjecting the entire Transbaikalia region to our jurisdiction. In the conditions of an actual civil war in the region, we can give Transbaikalia under the full control of Semenov. Temporarily, until he puts things in order there. We can be sure that Semenov will cope with the suppression of the troubles in Transbaikalia. However, there are rumors that Semyonov is coordinated by Japan, and Kolchak is concerned that Semyonov may rebel with the help of the Japanese. Something has to be done."

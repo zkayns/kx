@@ -1355,6 +1355,10 @@ TRM_japanese_influence = {
 				add = -10
 				has_political_power < 100
 			}
+			modifier = {
+				factor = 0
+				check_variable = { party_popularity@authoritarian_democrat < 0.05 }
+			}
 		}
 
 		remove_effect = {
@@ -1464,11 +1468,13 @@ TRM_japanese_influence = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
 			has_completed_focus = TRM_Seek_For_Entente_Support
+			has_socialist_government = yes
 		}
 		available = {
 			NOT = { TRM_semyenov_in_power = yes }
 			NOT = { has_country_flag = TRM_Aid_From_Japan_completed }
 		}
+		cancel_if_not_visible = yes
 		
 		fixed_random_seed = no
 		cost = 0
@@ -1558,6 +1564,7 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
+			TRM_nra_in_power = no
 		}
 		available = { 
 			OR = {
@@ -1566,6 +1573,7 @@ TRM_japanese_influence = {
 			}
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 70
 		fire_only_once = yes
@@ -1713,8 +1721,10 @@ TRM_japanese_influence = {
 		}
 		visible = {
 			NOT = { has_government = authoritarian_democrat }
+			has_socialist_government = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 70
 		fire_only_once = yes
@@ -1807,8 +1817,10 @@ TRM_japanese_influence = {
 		}
 		visible = {
 			NOT = { has_government = authoritarian_democrat }
+			has_socialist_government = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 30
 		fire_only_once = yes
@@ -1965,8 +1977,10 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
+			TRM_nra_in_power = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 70
 		fire_only_once = yes
@@ -2067,15 +2081,19 @@ TRM_japanese_influence = {
 		icon = GFX_decision_gre_paying_ifc_debt
 		allowed = { always = no }
 		
-		visible = {
-			NOT = { has_global_flag = TRM_relations_JAP_broke }
+		available = {
 			OR = {
 				1246 = { is_owned_and_controlled_by = ROOT }
 				408 = { is_owned_and_controlled_by = ROOT }
 				409 = { is_owned_and_controlled_by = ROOT }
 			}
 		}
+		visible = {
+			NOT = { has_global_flag = TRM_relations_JAP_broke }
+			TRM_nra_in_power = no
+		}
 
+		cancel_if_not_visible = yes
 		cost = 50
 		days_remove = 30
 		
@@ -2187,6 +2205,11 @@ TRM_japanese_influence = {
 		icon = GFX_decision_generic_factory
 		allowed = { always = no }
 
+		visible = {
+			NOT = { has_global_flag = TRM_relations_JAP_broke }
+			TRM_nra_in_power = no
+		}
+		cancel_if_not_visible = yes
 		cost = 50
 		days_remove = 90
 		days_re_enable = 30
@@ -2215,8 +2238,10 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
+			TRM_nra_in_power = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 15
 		days_remove = 56
 		fire_only_once = yes
@@ -2326,8 +2351,10 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
+			TRM_nra_in_power = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 70
 		fire_only_once = yes
@@ -2459,8 +2486,10 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
+			TRM_nra_in_power = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 35
 		fire_only_once = yes
@@ -2588,8 +2617,10 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
+			has_socialist_government = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 35
 		fire_only_once = yes
@@ -2626,8 +2657,10 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
+			TRM_nra_in_power = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 35
 		fire_only_once = yes
@@ -2738,8 +2771,10 @@ TRM_japanese_influence = {
 		visible = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
+			TRM_nra_in_power = no
 		}
 		
+		cancel_if_not_visible = yes
 		cost = 25
 		days_remove = 35
 		fire_only_once = yes
@@ -2864,7 +2899,9 @@ TRM_japanese_influence = {
 		}
 		visible = {
 			NOT = { has_global_flag = TRM_relations_JAP_broke }
+			has_socialist_government = no
 		}
+		cancel_if_not_visible = yes
 		cost = freedec?0
 		fire_only_once = yes
 		
@@ -2981,7 +3018,6 @@ TRM_japanese_influence = {
 		}
 
 		visible = {
-			has_idea = TRM_dream
 			TRM_has_japanese_influence = yes
 		}
 
@@ -3477,6 +3513,7 @@ TRM_russian_expansion = {
 				}
 			}
 			is_owner_neighbor_of = FROM
+			NOT = { has_war_with = RUS }
 		}
 		cost = 0
 		days_remove = 30
@@ -3525,6 +3562,7 @@ TRM_russian_expansion = {
 					owns_state = 564
 				}
 			}				
+			NOT = { has_war_with = RUS }
 		}	
 		
 		custom_cost_trigger = {
@@ -3619,7 +3657,8 @@ TRM_russian_expansion = {
 					is_owner_neighbor_of = RUS
 					owns_state = 564
 				}
-			}				
+			}
+			NOT = { has_war_with = RUS }
 		}	
 		
 		cost = 30
@@ -3686,7 +3725,7 @@ TRM_russian_expansion = {
 					has_completed_focus = TRM_ROVS_Secures_The_Power
 					has_country_flag = SOV_restored_in_transamur
 				}
-			}			
+			}
 			OR = {
 				is_owner_neighbor_of = FROM
 				any_allied_country = { is_owner_neighbor_of = FROM }
@@ -3696,7 +3735,7 @@ TRM_russian_expansion = {
 
 		targets = { RUS RVA WRA RRF }
 		target_root_trigger = {
-			has_idea = TRM_dream			
+			has_idea = TRM_dream
 			NOT = { has_active_mission = TRM_will_declare_war_on_RUS }
 		}
 		target_trigger = {

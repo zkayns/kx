@@ -479,6 +479,12 @@ initialize_rcw = {
 							days = 30
 						}
 					}
+					TRM = {
+						country_event = {
+							id = trmnra.103
+							days = 10
+						}
+					}
 				}
 			}
 		}

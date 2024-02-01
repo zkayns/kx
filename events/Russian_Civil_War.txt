@@ -5613,7 +5613,13 @@ country_event = { #RCW
 			country_event = {
 				id = rcw.502
 				days = 5
-			}				
+			}		
+			TRM = {
+				country_event = {
+					id = trmnra.106
+					days = 2
+				}
+			}
 		}
 	}
 }
@@ -5813,6 +5819,14 @@ country_event = { #RCW
 			set_country_flag = SOV_red_guard_congress
 		}
 		remove_sovnarkom = yes
+		hidden_effect = {					
+			TRM = {
+				country_event = {
+					id = trmnra.107
+					days = 2
+				}
+			}
+		}
 	}
 }
 country_event = { #RCW
