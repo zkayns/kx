@@ -4998,18 +4998,6 @@ UKR_revolution = {
 		allow_achievements = yes
 	}
 	option = {
-		name = UKR_REVOLUTION_CIVIL_WAR
-		text = "RULE_OPTION_UKR_REVOLUTION_CIVIL_WAR"
-		desc = "RULE_OPTION_UKR_REVOLUTION_CIVIL_WAR_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = UKR_REVOLUTION_COUP
-		text = "RULE_OPTION_UKR_REVOLUTION_COUP"
-		desc = "RULE_OPTION_UKR_REVOLUTION_COUP_DESC"
-		allow_achievements = yes
-	}
-	option = {
 		name = UKR_REVOLUTION_DISABLED
 		text = "RULE_OPTION_UKR_REVOLUTION_DISABLED"
 		desc = "RULE_OPTION_UKR_REVOLUTION_DISABLED_DESC"

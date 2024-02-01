@@ -50,49 +50,9 @@ country_event = {
 	option = {
 		name = bolsheviks.3.a
 		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = SOV_restored_in_transamur }
-				}
-				country_event = {
-					id = bolsheviks.4
-					days = 3
-				}
-			}
-			else = {
-				country_event = {
-					id = bolsheviks.5
-					days = 3
-				}
-			}
-		}
-	}
-}
-country_event = { #Peasant riot
-	id = bolsheviks.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bolsheviks.4" }
-	title = bolsheviks.4.t
-	desc = bolsheviks.4.d
-	is_triggered_only = yes
-	picture = GFX_report_event_SOV_event_peasants
-	trigger = {
-		NOT = { has_country_flag = SOV_restored_in_transamur }
-	}	
-	option = {
-		name = bolsheviks.4.a
-		255 = {
-			set_demilitarized_zone = yes
-			force_enable_resistance = {
-				occupier = SOV
-			}
-			start_resistance = yes
-			set_resistance = 20
-		}
-		add_ideas = RUS_socialist_resistance
-		hidden_effect = {
 			country_event = {
 				id = bolsheviks.5
-				days = 6
+				days = 3
 			}
 		}
 	}
@@ -143,7 +103,11 @@ country_event = {
 					NOT = { has_country_flag = SOV_restored_in_transamur }
 				}
 				country_event = {
-					id = bolsheviks.7
+					id = bolsheviks.10
+					days = 7
+				}
+				country_event = {
+					id = bolsheviks.8
 					days = 3
 				}
 			}
@@ -152,60 +116,6 @@ country_event = {
 					id = bolsheviks.8
 					days = 3
 				}
-			}
-		}
-	}
-}
-country_event = {
-	id = bolsheviks.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bolsheviks.7" }
-	title = bolsheviks.7.t
-	desc = bolsheviks.7.d
-	is_triggered_only = yes
-	trigger = {
-		NOT = { has_country_flag = SOV_restored_in_transamur }
-	}
-	option = {
-		name = bolsheviks.7.a
-		add_stability = -0.1
-		set_country_flag = SOV_peasant_riots
-		257 = {
-			set_demilitarized_zone = yes
-			force_enable_resistance = {
-				occupier = SOV
-			}
-			start_resistance = yes
-			set_resistance = 20
-		}
-		258 = {
-			set_demilitarized_zone = yes
-			force_enable_resistance = {
-				occupier = SOV
-			}
-			start_resistance = yes
-			set_resistance = 20
-		}
-		254 = {
-			set_demilitarized_zone = yes
-			force_enable_resistance = {
-				occupier = SOV
-			}
-			start_resistance = yes
-			set_resistance = 20
-		}
-		223 = {
-			set_demilitarized_zone = yes
-			force_enable_resistance = {
-				occupier = SOV
-			}
-			start_resistance = yes
-			set_resistance = 20
-		}
-		activate_mission_tooltip = SOV_dealing_with_peasant_riots
-		hidden_effect = {
-			country_event = {
-				id = bolsheviks.8
-				days = 5
 			}
 		}
 	}
@@ -772,11 +682,8 @@ country_event = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 255 
-					state = 257 
-					state = 258 
-					state = 254 
-					state = 223
+					state = 249 
+					state = 651 
 				}
 			}
 			set_demilitarized_zone = no
@@ -811,51 +718,6 @@ country_event = {
 		sovnarkom_decrease_kamenev_authority = yes
 		set_country_flag = SOV_peasant_riots_ended
 		hidden_effect = {
-			255 = { 
-				set_demilitarized_zone = no
-				if = {
-					limit = { has_resistance = yes }
-					cancel_resistance = yes
-				}
-				force_disable_resistance = { clear = yes }
-				add_core_of = ROOT
-			}
-			257 = { 
-				set_demilitarized_zone = no
-				if = {
-					limit = { has_resistance = yes }
-					cancel_resistance = yes
-				}
-				force_disable_resistance = { clear = yes }
-				add_core_of = ROOT
-			}
-			258 = { 
-				set_demilitarized_zone = no
-				if = {
-					limit = { has_resistance = yes }
-					cancel_resistance = yes
-				}
-				force_disable_resistance = { clear = yes }
-				add_core_of = ROOT
-			}
-			254 = { 
-				set_demilitarized_zone = no
-				if = {
-					limit = { has_resistance = yes }
-					cancel_resistance = yes
-				}
-				force_disable_resistance = { clear = yes }
-				add_core_of = ROOT
-			}
-			223 = { 
-				set_demilitarized_zone = no
-				if = {
-					limit = { has_resistance = yes }
-					cancel_resistance = yes
-				}
-				force_disable_resistance = { clear = yes }
-				add_core_of = ROOT
-			}
 			249 = { 
 				set_demilitarized_zone = no
 				if = {

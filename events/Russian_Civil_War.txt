@@ -3383,26 +3383,24 @@ country_event = { #RCW
 			modifier = {
 				factor = 1000
 				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_PLSR
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_TRADEUNIONISTS
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_NSP
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_MENSHEVIKS
-					}					
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR }
+					has_game_rule = { rule = SOV_PATH option = RULE_OPTION_SOV_PATH_PLSR }
+					has_game_rule = { rule = SOV_PATH option = RULE_OPTION_SOV_PATH_TRADEUNIONISTS }
+					has_game_rule = { rule = SOV_PATH option = RULE_OPTION_SOV_PATH_NSP }
+					has_game_rule = { rule = SOV_PATH option = RULE_OPTION_SOV_PATH_MENSHEVIKS }					
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_BOLSHEVIKS }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_MAYAKOVSKY }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_GASTEV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_LUNACHARSKY }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_ZINOVIEV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_KAMENEV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_SOKOLNIKOV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_CHICHERIN }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_MOLOTOV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_YAGODA }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_KAGANOVICH }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_YEZHOV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_TSENTROBALT }
 				}
 			}
 		}
@@ -3434,7 +3432,7 @@ country_event = { #RCW
 				picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Bukharin.png"
 				expire = "1.1.1"
 				ideology = bukharinist_subtype
-				traits = {}
+				traits = { RUS_ex_bolshevik }
 			}
 			set_cosmetic_tag = SOV
 			set_country_flag = soviet_russia_restored
@@ -3508,66 +3506,14 @@ country_event = { #RCW
 						rule = SOV_PATH
 						option = RULE_OPTION_SOV_PATH_FRUNZE
 					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_MAYAKOVSKY
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_GASTEV
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_LUNACHARSKY
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_ZINOVIEV
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_KAMENEV
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_SOKOLNIKOV
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_CHICHERIN
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_MOLOTOV
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_YAGODA
-					}					
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_KAGANOVICH
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_YEZHOV
-					}					
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_TSENTROBALT
-					}
-					has_game_rule = {
-						rule = SOV_PATH
-						option = RULE_OPTION_SOV_PATH_BOLSHEVIKS
-					}
 				}
 			}
 		}
-			random_unit_leader = {
+		random_unit_leader = {
 			limit = { has_id = 447 }
 			set_leader_portrait = GFX_Portrait_SOV_Aleksandr_Yegorov
 				promote_leader = yes
-			}
+		}
 		hidden_effect = {
 			random_unit_leader = {
 				limit = { has_id = 449 }	
@@ -5555,5 +5501,336 @@ country_event = { #RCW
 	option = {
 		name = rcw.263.b
 		add_popularity = { ideology = national_populist popularity = -0.05 }
+	}
+}
+
+country_event = { #RCW
+	id = rcw.500
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.500" }
+	title = rcw.500.t
+	desc = rcw.500.d
+	
+	is_triggered_only = yes
+	trigger = {
+		tag = RUS
+		has_country_leader = {
+			name = "Maria Spiridonova"
+			ruling_only = yes
+		}
+		has_idea = SOV_foreign_aid
+	}
+		
+	option = {
+		name = rcw.500.a
+		if = {
+			limit = {
+				NOT = { controls_province = 11375 }
+				NOT = { controls_province = 6380 }
+			}
+			country_event = {
+				id = rcw.501
+				days = 7
+			}
+		}
+		else = {
+			custom_effect_tooltip = "Bolshevist influence grows..."
+		}
+	}
+}
+country_event = { #RCW
+	id = rcw.501
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.501" }
+	title = rcw.501.t
+	desc = rcw.501.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.501.a
+		set_party_name = {
+			ideology = radical_socialist
+			name = RUS_radical_socialist_party
+			long_name = RUS_radical_socialist_party_long
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Grigory Zinoviev"
+			desc = "POLITICS_GRIGORY_ZINOVIEV_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Grigoriy_Zinoviev.png"
+			expire = "1.1.1"
+			ideology = authcom_subtype
+			traits = {}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			RUS_Grigoriy_Y_Zinoviev_hog_tot
+			SOV_Lev_Kamenev_for_tot
+			RUS_Evgeniy_A_Preobrazhenskiy_eco_tot
+			SOV_Georgy_Blagonravov_sec_tot
+		}
+		complete_national_focus = RUS_Bolsheviks_In_Power
+		set_country_flag = zhukov_invites_bolsheviks
+		if = {
+			limit = { has_idea = rus_brest_litovsk }
+			remove_ideas = rus_brest_litovsk
+		}
+		else_if = {
+			limit = { has_idea = rus_brest_litovsk_1 }
+			remove_ideas = rus_brest_litovsk_1
+		}
+		hidden_effect = {
+			set_political_party = {
+				ideology = national_populist
+				popularity = 0
+			}
+			country_event = {
+				id = russoc.112
+				months = 5
+			}	
+			country_event = {
+				id = rcw.502
+				days = 5
+			}				
+		}
+	}
+}
+country_event = { #RCW
+	id = rcw.502
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.502" }
+	title = rcw.502.t
+	desc = rcw.502.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_SOV_event_peasants
+		
+	option = {
+		name = rcw.502.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_BOLSHEVIKS }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_MAYAKOVSKY }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_GASTEV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_LUNACHARSKY }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_ZINOVIEV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_KAMENEV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_SOKOLNIKOV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_CHICHERIN }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_MOLOTOV }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_YAGODA }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_KAGANOVICH }
+					has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_YEZHOV }
+				}
+			}
+		}
+		add_stability = 0.05
+		add_political_power = 20
+		hidden_effect = {
+			country_event = {
+				id = rcw.504
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = rcw.502.b
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = SOV_path option = RULE_OPTION_SOV_PATH_TSENTROBALT }
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = rcw.503
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #RCW
+	id = rcw.503
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.503" }
+	title = rcw.503.t
+	desc = rcw.503.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.503.a		
+		add_stability = 0.1
+		add_political_power = 80
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #RCW
+	id = rcw.504
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.504" }
+	title = rcw.504.t
+	desc = rcw.504.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.504.a		
+		add_stability = -0.15
+		add_popularity = {
+			ideology = totalist
+			popularity = -0.05
+		}
+		country_event = {
+			id = rcw.505
+			days = 3
+		}
+	}
+}
+country_event = { #RCW
+	id = rcw.505
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.505" }
+	title = rcw.505.t
+	desc = rcw.505.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.505.a
+		country_event = {
+			id = rcw.506
+			days = 3
+		}
+	}
+	option = {
+		name = rcw.505.b	
+		country_event = {
+			id = rcw.509
+			days = 3
+		}
+	}
+}
+
+country_event = { #RCW
+	id = rcw.506
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.506" }
+	title = rcw.506.t
+	desc = rcw.506.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.506.a
+		country_event = {
+			id = rcw.507
+			days = 1
+		}
+	}
+}
+
+country_event = { #RCW
+	id = rcw.507
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.507" }
+	title = rcw.507.t
+	desc = rcw.507.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.507.a
+		country_event = {
+			id = rcw.508
+			days = 2
+		}
+	}
+}
+
+country_event = { #RCW
+	id = rcw.508
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.508" }
+	title = rcw.508.t
+	desc = rcw.508.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.508.a
+		remove_all_ministers = yes
+		add_ideas = {
+			SOV_Pavel_E_Dybenko_hog_rso
+			SOV_Anarchist_Union_for_rso
+			SOV_Anarchist_Union_eco_rso
+			SOV_Anarchist_Union_sec_rso
+		}
+		create_country_leader = {
+			name = "Pavel Dybenko"
+			desc = "POLITICS_PAVEL_DYBENKO_DESC"
+			picture = "gfx/leaders/SOV/Pavel_Dybenko.png"
+			expire = "1.1.1"
+			ideology = radsoc_red_junta_subtype
+		}
+		complete_national_focus = SOV_Tsentrobalt_In_Control
+		set_cosmetic_tag = SOV_tsentrobalt
+		set_party_name = {
+			ideology = radical_socialist
+			name = SOV_tsentrobalt_party
+			long_name = SOV_tsentrobalt_party_long
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				has_country_flag = SOV_red_army_congress
+			}
+			clr_country_flag = SOV_red_army_congress
+			set_country_flag = SOV_red_guard_congress
+		}
+		remove_sovnarkom = yes
+	}
+}
+country_event = { #RCW
+	id = rcw.509
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.509" }
+	title = rcw.509.t
+	desc = rcw.509.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.509.a
+		country_event = {
+			id = rcw.506
+			days = 2
+		}
+	}
+	option = {
+		name = rcw.509.b
+		ai_chance = { base = 0 }
+		country_event = {
+			id = rcw.510
+			days = 2
+		}
+	}
+}
+
+country_event = { #RCW
+	id = rcw.510
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.510" }
+	title = rcw.510.t
+	desc = rcw.510.d
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = rcw.510.a
+		add_stability = -0.1
+		add_ideas = RUS_socialist_resistance		
 	}
 }

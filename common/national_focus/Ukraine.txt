@@ -7626,11 +7626,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = UKR_Land_Reform_Plan
 				NOT = {
-					OR = {
-						has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_GUARANTEED }
-						has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_CIVIL_WAR }
-						has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_COUP }
-					}
+					has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_GUARANTEED }
 				}
 			}
 		}

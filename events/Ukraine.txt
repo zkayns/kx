@@ -25234,8 +25234,6 @@ country_event = { #Hidden AI event for going radical paths
 					has_game_rule = { rule = UKR_future option = UKR_FUTURE_SHUMSKYI_SOVIET }
 					has_game_rule = { rule = UKR_future option = UKR_FUTURE_SHUMSKYI_DICTATOR }
 					has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_GUARANTEED }
-					has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_CIVIL_WAR }
-					has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_COUP }
 					has_country_flag = UKR_ai_borotbysts
 				}			
 			}
@@ -26708,8 +26706,6 @@ country_event = { # End of Reform?
 					is_ai = yes
 					OR = {
 						has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_GUARANTEED }
-						has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_CIVIL_WAR }
-						has_game_rule = { rule = UKR_revolution option = UKR_REVOLUTION_COUP }
 						has_country_flag = UKR_ai_borotbysts
 					}
 				}
