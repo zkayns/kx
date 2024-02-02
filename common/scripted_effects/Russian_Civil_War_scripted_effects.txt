@@ -507,7 +507,6 @@ initialize_rcw = {
 						target = event_target:soviet_russia
 						type = civil_war
 					}
-					add_civil_war_target = event_target:soviet_russia
 				}
 				if = {
 					limit = {
@@ -528,7 +527,6 @@ initialize_rcw = {
 						target = RRF
 						type = civil_war
 					}
-					add_civil_war_target = RRF
 				}
 				if = {
 					limit = {
@@ -538,7 +536,6 @@ initialize_rcw = {
 						target = TRM
 						type = civil_war
 					}
-					add_civil_war_target = TRM
 				}
 				hidden_effect = {
 					if = {
@@ -640,7 +637,6 @@ initialize_rcw = {
 						target = RUS
 						type = civil_war
 					}
-					add_civil_war_target = RUS
 				}
 				if = {
 					limit = {

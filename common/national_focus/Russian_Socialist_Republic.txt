@@ -6103,7 +6103,6 @@ focus = {
 		focus = SOV_Chairman_Zinoviev
 	}
 	available = {
-		russian_civil_war = no
 		OR = {
 			has_country_leader = {
 				ruling_only = yes

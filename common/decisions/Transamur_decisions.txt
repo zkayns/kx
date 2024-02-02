@@ -31,6 +31,10 @@ TRM_Dealing_With_NRA = {
 		
 		ai_will_do = {
 			factor = 80
+			modifier = {
+				factor = 0
+				TRM_nra_game_rule = yes
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove TRM_crush_nra_in_state target: [From.GetName]"

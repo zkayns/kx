@@ -16,6 +16,7 @@ RUS_civil_war_decisions = {
 				has_war_with = GER
 				has_war_with = DKB
 				has_war_with = TRM
+				has_war_with = FIN
 			}
 			if = {
 				limit = { tag = RRF }

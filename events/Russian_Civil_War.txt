@@ -3076,7 +3076,21 @@ country_event = {
 			set_stability = 0.6
 			set_war_support = 0.5
 		}
-		country_event = { id = russoc.1 days = 5 }
+		if = {
+			limit = {
+				OR = {
+					has_country_leader = {
+						name = "Maria Spiridonova"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Aleksandr Yegorov"
+						ruling_only = yes
+					}
+				}
+			}
+			country_event = { id = russoc.1 days = 5 }
+		}
 		for_each_scope_loop = {
 			array = RUS.RUS_starting_states_array
 			add_core_of = RUS
@@ -4906,9 +4920,9 @@ country_event = { #RCW
 		ai_chance = {
 			base = 20
 		}
-		set_political_party = {
+		add_popularity = {
 			ideology = national_populist
-			popularity = 22
+			popularity = 0.2
 		}
 		remove_ideas_with_trait = head_of_government
 		add_ideas = RUS_Boris_V_Savinkov_hog_npo
