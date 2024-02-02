@@ -3778,6 +3778,17 @@ TRM_russian_expansion = {
 					value = -1000
 				}
 			}
+			for_each_scope_loop = {
+				array = FROM.faction_members
+				if = {
+					limit = { is_neighbor_of = ROOT }
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+				}
+			}
 			add_political_power = 10
 		}
 		complete_effect = {
@@ -3804,7 +3815,7 @@ TRM_russian_expansion = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Start_The_Offensive target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Start_The_Offensive_TRM target: [From.GetName]"
 			FROM = {
 				add_ai_strategy = {
 					type = prepare_for_war

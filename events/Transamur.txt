@@ -786,7 +786,13 @@ country_event = { #Cooperatives
 	}
 	option = {
 		name = tram.53.b
-		ai_chance = { base = 35 }
+		ai_chance = { 
+			base = 35 
+			modifier = {
+				factor = 0
+				TRM_nra_game_rule = yes
+			}
+		}
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = -0.05
@@ -9386,18 +9392,16 @@ country_event = {
 		ai_chance = {
 			factor = 15
 			modifier = {
-				factor = 5
-				has_idea = TRM_Grigoriy_M_Semyenov_hog_pau
-			}
-			modifier = {
-				factor = 0.5
-				has_completed_focus = TRM_Limit_Cossack_Autonomy
-			}
-			modifier = {
-				factor = 3
-				has_completed_focus = TRM_Expand_Cossack_Rights
-			}
-			
+				factor = 0
+				OR = {
+					TRM_nra_game_rule = yes
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_OBLASTNIKI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MERKULOV }
+				}
+			}		
 		}
 		TRM_increase_cossack_loyalty = yes
 		TRM_decrease_rovs_loyalty = yes
@@ -9432,13 +9436,26 @@ country_event = {
 				factor = 4
 				has_completed_focus = TRM_Stake_On_Military
 			}
-		}
-			every_owned_state = {
-				limit = {
-					NOT = {
-						state = 408
-					}
+			modifier = {
+				factor = 0
+				TRM_nra_game_rule = yes
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					TRM_nra_game_rule = yes
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NEW_MILITARY_CABINET }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MORYAKI_IN_POWER }
 				}
+			}	
+		}
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 408
+				}
+			}
 			TRM_Increase_ROVS_Support = yes
 		}
 		TRM_increase_rovs_loyalty = yes
@@ -9459,24 +9476,26 @@ country_event = {
 		ai_chance = {
 			factor = 70
 			modifier = {
-				factor = 0.2
-				has_idea = TRM_Grigoriy_M_Semyenov_hog_pau
-			}
-			modifier = {
-				factor = 1.2
-				has_completed_focus = TRM_Limit_Cossack_Autonomy
-			}
-			modifier = {
-				factor = 0.9
-				has_completed_focus = TRM_Expand_Cossack_Rights
-			}
-			modifier = {
 				factor = 0.6
 				has_completed_focus = TRM_Martial_Law_In_Minority_Areas
 			}
 			modifier = {
 				factor = 0.4
 				has_completed_focus = TRM_Stake_On_Military
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_SEMYONOV }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MONARCHY }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NEW_MILITARY_CABINET }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MORYAKI_IN_POWER }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MLADOROSSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_NATSI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_OBLASTNIKI }
+					has_game_rule = { rule = TRM_path option = RULE_OPTION_TRM_MERKULOV }
+				
+				}
 			}
 		}
 	}
@@ -9591,7 +9610,17 @@ country_event = {
 		}
 		add_stability = 0.1
 		add_political_power = 25
-		remove_ideas = TRM_dream 
+		remove_ideas = TRM_dream
+		add_ideas = TRM_Sib_Fed
+		every_state = {
+			limit = { 
+				is_core_of = RUS
+				is_claim_or_core_of_ROOT = yes
+			}
+			remove_claim_by = ROOT
+		}
+		custom_effect_tooltip = RUS_decrease_chance_of_war
+		add_to_variable = { global.siberian_war_chance = -0.15 }
 		custom_effect_tooltip = TRM_MERK_tooltip
 	}
 	option = {
