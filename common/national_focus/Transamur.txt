@@ -3183,6 +3183,7 @@ focus = {
 		available = {
 			TRM_democrats_in_power = yes
 			has_government = social_democrat
+			has_elections = yes
 		}
 		bypass = {
 			has_government = social_democrat
@@ -3199,7 +3200,7 @@ focus = {
 	}
 	focus = {
 		id = TRM_Regionalists
-		icon = GFX_TRM_Support_Regionalist_Movement
+		icon = GFX_goal_ideology_social_liberal
 		cost = 5
 		relative_position_id = TRM_Rep
 		x = 0
@@ -3210,6 +3211,7 @@ focus = {
 		available = {
 			TRM_democrats_in_power = yes
 			has_government = social_liberal
+			has_elections = yes
 		}
 		bypass = {
 			has_government = social_liberal
@@ -3236,6 +3238,7 @@ focus = {
 		available = {
 			TRM_democrats_in_power = yes
 			has_government = market_liberal
+			has_elections = yes
 		}
 		ai_will_do = {
 			base = 10
@@ -3263,6 +3266,7 @@ focus = {
 		available = {
 			TRM_democrats_in_power = yes
 			has_government = social_conservative
+			has_elections = yes
 		}
 		ai_will_do = {
 			base = 10

@@ -1114,6 +1114,7 @@ country_event = { #
 	is_triggered_only = yes
 	
 	option = {
+		name = tram.73.a	
 		ai_chance = { base = 60 }
 		add_stability = 0.1
 		increase_ruling_party_popularity_by_10 = yes
@@ -1127,6 +1128,18 @@ country_event = { #
 		ai_chance = { base = 40 }
 		add_stability = 0.05
 		add_political_power = 100
+	}	
+}
+
+country_event = { #
+	id = tram.73
+	immediate = { log = "[GetDateText]: [Root.GetName]: event tram.73" }
+	title = tram.73.t
+	desc = tram.73.d
+	is_triggered_only = yes
+	
+	option = {
+		name = tram.74.a
 	}	
 }
 ####Political####
@@ -1867,7 +1880,7 @@ country_event = {
 	}
 
 	option = { # KDV
-		name = tram.86.b
+		name = tram.86.c
 		ai_chance = {
 			base = 20
 		}
@@ -1896,7 +1909,7 @@ country_event = {
 	}
 
 	option = { # NDS
-		name = tram.86.c
+		name = tram.86.e
 		ai_chance = {
 			base = 15
 		}
@@ -1927,7 +1940,7 @@ country_event = {
 	}
 
 	option = { # Military Coup
-		name = tram.86.e
+		name = tram.86.f
 		ai_chance = {
 			base = 20
 			modifier = {

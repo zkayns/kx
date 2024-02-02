@@ -1532,6 +1532,8 @@ TRM_economic_ties_to_japan_high: "§CDependence on Japan:§! §RExtremely High§
 TRM_economic_ties_to_japan_high_desc: "Few seriously dispute that our nation is little more than a Japanese lapdog at this point, and the Transamur regime's weakness has gone from an open secret to a blatant fact."
 
 TRM_oblastniki_influence_modifier: "£pol_idea Oblastniki Resistance"
+TRM_Siberian_Identity: "Promoting the Siberian Identity"
+TRM_Siberian_Identity_desc: ""
 
 trm_northern_expansion: "Northern Expansion"
 
@@ -2513,6 +2515,8 @@ TRM_Yui: "Yui Mitsue is in power"
 TRM_Yui_NOT: "Yui Mitsue is not in power"
 TRM_Semyonov_Coup: "Ataman Semyonov has taken power"
 TRM_Semyonov_Coup_NOT: "Ataman Semyonov has not taken power"
+TRM_Moryaki_Coup: "Moryaki have taken power"
+TRM_Moryaki_Coup_NOT: "Moryaki have not taken power"
 TRM_NRA_coup: "The NRA has taken power"
 TRM_NRA_coup_NOT: "The NRA has not taken power"
 TRM_capital_irk: "Irkutsk is the current capital"
@@ -2815,6 +2819,7 @@ TRM_Aleksandr_Ugrimov_hog_sde: "Aleksandr Ugrimov" #socdem mladorossi
 TRM_Viktor_N_Pepelyayev_hog_mli: "Viktor Pepelyaev" #Kolchakite
 TRM_Nikolay_Uhtomski_hog_mli: "Nikolay Ukhtomsky" #kadet
 TRM_Nikolay_Merkulov_hog_sco: "Nikolay Merkulov" #merkulovs
+TRM_Georgiy_Stark_hog_sco: "Georgiy Stark" #merkulovs
 TRM_Vladimir_Gantimurov_hog_ade: "Vladimir Gantimurov" #musketeers
 TRM_Anatoliy_Pepelyaev_hog_pau: "Anatoliy Pepelyaev" #ROVS
 TRM_Aleksandr_Kolchak_hog_pau: "Aleksander Kolchak" #Kolchak

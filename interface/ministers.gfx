@@ -48414,6 +48414,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/TRM/TRM_Nikolay_Merkulov.png"
 	}
 	spriteType = {
+		name = "GFX_idea_TRM_Georgiy_Stark_hog_sco"
+		texturefile = "gfx/interface/ministers/TRM/TRM_Georgiy_Stark.png"
+	}
+	spriteType = {
 		name = "GFX_idea_TRM_Anatoliy_Pepelyaev_hog_pau"
 		texturefile = "gfx/interface/ministers/TRM/TRM_Anatoliy_Pepelyaev.png"
 	}
