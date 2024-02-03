@@ -1,4 +1,30 @@
 defined_text = {
+	name = GetSiberianWarStatus
+	text = {
+		trigger = { 
+			OR = {
+				AND = {
+					tag = TRM 
+					OR = {
+						has_war_with = RUS
+						has_war_with = RVA
+						has_war_with = WRA
+						has_war_with = RRF
+					}
+				}
+				AND = {
+					tag = RUS
+					has_war_with = TRM
+				}
+			}
+		}
+		localization_key = TRM_siberian_war_status_war
+	}
+	text = {
+		localization_key = TRM_siberian_war_status_no_war
+	}
+}
+defined_text = {
 	name = GetNRAResistanceName
 	text = {
 		trigger = {

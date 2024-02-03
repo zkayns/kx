@@ -1132,10 +1132,10 @@ country_event = { #
 }
 
 country_event = { #
-	id = tram.73
-	immediate = { log = "[GetDateText]: [Root.GetName]: event tram.73" }
-	title = tram.73.t
-	desc = tram.73.d
+	id = tram.74
+	immediate = { log = "[GetDateText]: [Root.GetName]: event tram.74" }
+	title = tram.74.t
+	desc = tram.74.d
 	is_triggered_only = yes
 	
 	option = {

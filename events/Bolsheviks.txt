@@ -690,12 +690,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		NOT = { has_country_flag = SOV_restored_in_transamur }
+		russian_civil_war = yes
 	}
 	option = {
 		name = bolsheviks.12.a
-		ai_chance = {
-			factor = 35
-		}
 		add_stability = -0.1
 		add_political_power = -100
 		sovnarkom_decrease_yagoda_authority = yes
