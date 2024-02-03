@@ -21091,11 +21091,6 @@ country_event = { # Borotbysts
 		name = ukrsoc.207.a
 		army_experience = 30
 		if = {
-			limit = { has_idea = Hetman_army }
-			remove_ideas = Hetman_army
-		}
-		complete_national_focus = UKR_Povstanarmia
-		if = {
 			limit = {
 				NOT = { has_template = "Ukrainska Radianska Dyviziia" }
 			}

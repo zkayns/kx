@@ -3137,11 +3137,17 @@ UPR_setup_borotbyst_uprising_petliura = {
 				UKR_Antin_Prikhodko_for_rso
 				UKR_Panas_P_Lyubchenko_eco_rso
 				UKR_Hryhorii_Hrynko_sec_rso
+				UKR_lingering_ukrainisation
 			}
 			set_war_support = 0.6
 			set_politics = { 
 				ruling_party = radical_socialist
 				elections_allowed = no
+			}
+			set_party_name = { 
+				ideology = radical_socialist
+				name = UKR_syndicalist_party
+				long_name = UKR_syndicalist_party_long
 			}
 			add_dynamic_modifier = { modifier = UKR_breadbasket_of_europe_modifier	} 
 			add_dynamic_modifier = { modifier = UKR_ukrainian_army	} 

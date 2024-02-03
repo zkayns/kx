@@ -502,6 +502,7 @@ initialize_rcw = {
 				if = {
 					limit = {
 						event_target:soviet_russia = { exists = yes }
+						NOT = { has_war_with = event_target:soviet_russia }
 					}
 					declare_war_on = {
 						target = event_target:soviet_russia
@@ -511,6 +512,7 @@ initialize_rcw = {
 				if = {
 					limit = {
 						country_exists = RUS
+						NOT = { has_war_with = RUS }
 					}
 					declare_war_on = {
 						target = RUS
@@ -522,6 +524,7 @@ initialize_rcw = {
 						NOT = { has_global_flag = RRF_RVA_ceasefire }
 						NOT = { has_non_aggression_pact_with = RRF }
 						country_exists = RRF
+						NOT = { has_war_with = RRF }
 					}
 					declare_war_on = {
 						target = RRF
@@ -531,6 +534,7 @@ initialize_rcw = {
 				if = {
 					limit = {
 						has_country_flag = RCW_will_declare_war_on_TRM
+						NOT = { has_war_with = TRM }
 					}
 					declare_war_on = {
 						target = TRM
@@ -566,6 +570,7 @@ initialize_rcw = {
 				if = {
 					limit = {
 						event_target:soviet_russia = { exists = yes }
+						NOT = { has_war_with = event_target:soviet_russia }
 					}
 					declare_war_on = {
 						target = event_target:soviet_russia
@@ -575,6 +580,7 @@ initialize_rcw = {
 				if = {
 					limit = {
 						country_exists = RUS
+						NOT = { has_war_with = RUS }
 					}
 					declare_war_on = {
 						target = RUS
@@ -586,6 +592,7 @@ initialize_rcw = {
 						NOT = { has_global_flag = RRF_RVA_ceasefire }
 						NOT = { has_non_aggression_pact_with = RVA }
 						country_exists = RVA
+						NOT = { has_war_with = RVA }
 					}
 					declare_war_on = {
 						target = RVA
@@ -595,6 +602,7 @@ initialize_rcw = {
 				if = {
 					limit = {
 						has_country_flag = RCW_will_declare_war_on_TRM
+						NOT = { has_war_with = TRM }
 					}
 					declare_war_on = {
 						target = TRM
