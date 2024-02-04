@@ -821,29 +821,6 @@ SOV_integration_refusal_chance = {
 		has_autonomy_state = kr_autonomous_soviet_republic
 	}
 
-	### SOVREP COUNT ###
-	modifier = {
-		set_temp_variable = { num_republics = 0 }
-		overlord = {
-			all_subject_countries = {
-				if = {
-					limit = { 
-						OR = { 
-							has_autonomy_state = kr_labour_commune
-							has_autonomy_state = kr_autonomous_soviet_republic
-							has_autonomy_state = kr_soviet_republic_not_equal
-							has_autonomy_state = kr_soviet_republic_equal
-						}
-					} 
-					add_to_temp_variable = { num_republics = 1 }
-				}
-				always = yes
-			}
-		}
-		multiply_temp_variable = { num_republics = 10 }
-		add = num_republics
-	}
-
 	### IC RATIO ###
 	modifier = {
 		factor = 0.9
