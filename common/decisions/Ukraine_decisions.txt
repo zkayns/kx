@@ -3861,6 +3861,13 @@ UKR_seeking_allies = {
 			log = "[GetDateText]: [Root.GetName]: Decision UKR_join_internationale target: [From.GetName]"
 			set_country_flag = { flag = UKR_joining_faction days = 15 value = 1 }
 			FROM = { country_event = ukraine.37  }
+			if = {
+				limit = {
+					FROM = { tag = RUS }
+				}
+				custom_effect_tooltip = if_FROM_agrees
+				effect_tooltip = { FROM = { SOV_puppet_ROOT_effect = yes } }
+			}
 			UKR_remove_brotfrieden_without_events = yes
 		}
 	}	

@@ -1428,8 +1428,36 @@ russoc.135.b: "Simply convert Russian to the Latin alphabet and make it mandator
 russoc.135.c: "Keep true to Rykov’s voluntary language program."
 
 
-russoc.1001.t: "The Loss "
 
+russoc.500.t: "[FROM.GetNameDefCap] Attempts to Increase Integration"
+russoc.500.d.integration_level_1: "After we voluntarily agreed to join forces in the revolutionary struggle against Russia, it could be considered that confidence in our government was assured. Nevertheless, at the recent convention [FROM.GetLeader] insisted that further supervision of our internal affairs was necessary for the continued success of the revolution.\n\nFor now, this means only a slight increase in the number of ministers from [FROM.Capital.GetCapitalVictoryPointName], but things will subtly but tangibly change as they are adopted. The broad autonomy we've enjoyed so far will begin to wane, and many will start to turn away from [ROOT.GetLeader] and look to [FROM.GetLeader] for leadership. Perhaps it's time to break free and save our independence."
+russoc.500.d.integration_level_2: "We have long enjoyed autonomy in [ROOT.Capital.GetCapitalVictoryPointName], away from the prying eyes of the central government. This has improved governance in many ways, yet that seems to be changing.\n\nThe ruling party [FROM.GetRulingParty], operating out of [FROM.GetNameDef], is pushing for greater control over our largely autonomous government. They insist on control over several key internal functions that we thought would be left alone when we originally agreed to join [FROM.GetFactionName]. Of course, refusal will have dire consequences, but we are fast approaching a tipping point where it will be difficult to break free from [FROM.GetRulingParty]'s reign."
+russoc.500.d.integration_final: "This was long expected, but there was still some shock in [ROOT.GetLeader]'s entourage when [FROM.GetNameDef] made his move today. At an emergency congress of the Soviets, [FROM.GetLeader] spoke about [ROOT.GetNameDef]'s future and assured that the central government would take the necessary steps to make his rule conform to [FROM.GetRulingParty]'s ideals. Worst of all, the congress decreed the transformation of our own party into a regional branch of [FROM.GetRulingParty].\n\nAt this point, we have no other choice: either we go down in history as good soldiers of the [FROM.GetRulingParty], or [ROOT.GetLeader] will make one last desperate move for independence. This pivotal moment will decide the future fate of our nation."
+russoc.500.a: "We accept [FROM.GetAdjective] rule."
+russoc.500.b: "We oppose this encroachment!"
+
+russoc.501.t: "Integration of [ROOT.GetNameDef] Progresses"
+
+russoc.501.intro: "We have long enjoyed our autonomy as a Soviet Republic, far from the shadow of the central government. For the sake of the struggle for self-determination of nations, we decided that only self-government would help in the unity of the struggle. Indeed, over the years, we have sought our own reforms and to strengthen our cultural differences from Russia."
+
+russoc.501.d.integration_level_1: "russoc.501.intro$\n\nGovernment officials from [Overlord.GetNameDef], concerned about what they called \"growing separatism and counter-revolutionary nationalism\", demanded that our schools immediately adopt their language as the language of instruction in the classrooms. At the same time, many teachers and professors have filed protests against our government, and local, still free from the influence of [Overlord.GetRulingParty], radio stations and newspapers are criticizing the official course of both our and [Overlord.GetAdjective] governments."
+russoc.501.d.integration_level_2: "$russoc.501.intro$\n\nGovernment officials from [overlord.GetNameDef] have demanded that our local radio stations and newspapers stop producing media in their native language. From now on, the news is broadcast in the language of [overlord.GetNameDef]. Several prominent authors in our province have resigned in protest, and voices have been raised in fear of further centralization."
+russoc.501.d.integration_final: "Our homeland, outwardly looking the same as before, has undergone significant political, social and economic changes since the centralization of our country. Ministers are now appointed directly by the central government at [Overlord.Capital.GetCapitalVictoryPointName]. Our economy has undergone profound changes as the once useful national monetary system collapsed after the adoption of the Russian currency. In addition, all of our national forces have been nationalized, resulting in the disappearance of any notion of political independence from the central government."
+russoc.501.a: "Change comes inevitably."
+
+russoc.502.t: "Our Efforts to Integrate [FROM.GetNameDef]"
+russoc.502.intro: "In recent weeks we have taken steps to further integrate the Soviet government of [FROM.GetName] with our own, making slow but steady progress in this direction. This, of course, has not gone unnoticed by [FROM.GetLeader] and [FROM.GetRulingParty], but they seem to have generally acquiesced to our demands, whether out of sincere ideological loyalty or because they consider the integration a fait accompli."
+
+russoc.502.d.integration_level_1: "$russoc.502.intro$\n\nThe future of Russia and the world belongs to the new youth, and they must learn our methods and understand our power if we want a social revolution in the minds. Let us send out an order that the schools use our language in teaching and conversation."
+russoc.502.d.integration_level_2: "$russoc.502.intro$\n\nTo prepare for this, let us announce to their government that henceforth they must use our language in all forms of public communication. Not only will this help break down language barriers, but it will also prevent local disagreements. In any case, our control over [FROM.GetNameDef] has been greatly strengthened compared to the past."
+russoc.502.d.integration_final: "Our efforts to integrate [FROM.GetAdjective] Soviet Republic with our own have been a complete success. We have succeeded, with the help of the congresses of the Soviets that have been convened, in bringing their national, and in fact nationalist separatist government and party directly under our control. Now, the loyal ministers we have appointed will remain loyal to the country and the revolution, and we can fear no insurgency or rebellion.
+russoc.502.a: "One step further in the road to greatness."
+
+russoc.503.t: "[FROM.GetNameDefCap] Revolts Against Integration"
+russoc.503.d: "Although we have tried to be as tolerant as possible of some of [FROM.GetLeader]'s nationalistic manifestations under the slogans of the nation's right to self-determination, [FROM.GetLeader] has stubbornly resisted our efforts to bring [FROM.GetNameDef] into conformity with what is expected of our revolutionary cause.\n\nInstead, he has rallied [FROM.GetRulingParty] against us, denouncing what he calls \"[ROOT.Capital.GetCapitalVictoryPointName] tyranny\" and \"Great Russian chauvinism\". We must endeavor to quell this rebellion quickly and, with any luck, avoid further damage to our cause."
+russoc.503.a: "A small price to pay for International revolution."
+
+SOV_integration_refusal_chance_tooltip: "\n§RRefusal Chance: [?refusal_weight|%-]§! \nInfluencing factors:\n   - §YGovernment Type§!\n   - §YTotal Number of Soviet Republics§!\n   - §YRelative Army Strength§!\n   - §YRelative Industrial Strength§!\n   - §YOpinion§!\n"
 
 ###
 

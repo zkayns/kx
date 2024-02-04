@@ -536,6 +536,13 @@ setup_puppet_KUB = {
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = KUB }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}		
 	else_if = {
 		limit = { has_democratic_socialist_government = yes }

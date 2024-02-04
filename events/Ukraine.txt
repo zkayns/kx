@@ -40243,10 +40243,13 @@ country_event = { # Ukraine Wants to Join the International
 
 	option = {
 		name = ukraine.37.a
-		ai_chance = {
-			factor = 100
+		if = {
+			limit = { tag = RUS }
+			SOV_puppet_FROM_effect = yes
 		}
-		add_to_faction = var:202.owner
+		else = {
+			add_to_faction = var:202.owner
+		}
 		hidden_effect = {
 			var:202.owner = {
 				country_event = {

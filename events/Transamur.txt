@@ -1722,6 +1722,7 @@ country_event = {
 			
 		hidden_effect = {
 			remove_ideas = TRM_Aleksandr_Kolchak_cnav_pau
+			set_country_flag = Aleksandr_Kolchak_dead
 			hidden_effect = {
 				random_unit_leader = {
 					limit = { has_id = 50001 }			
@@ -5606,6 +5607,7 @@ country_event = { #Nra win
 			}
 		}
 		hidden_effect = {
+			set_country_flag = Aleksandr_Kolchak_dead
 			remove_all_ministers = yes
 			add_ideas = TRM_Pyetr_Nikiforov_hog_tot 
 			add_ideas = TRM_Genrich_Eiche_for_tot 
@@ -10639,16 +10641,6 @@ country_event = {
 }
 country_event = {
 	id = tram.400
-	immediate = {
-		every_owned_state = {
-			limit = {
-				is_core_of = TRM
-				is_claim_or_core_of_ROOT = yes
-				NOT = { state = 566 }
-			}
-			remove_claim_by = ROOT
-		}
-	}
 	title = tram.400.t
 	desc = tram.400.d
 	fire_only_once = yes
@@ -10727,6 +10719,7 @@ country_event = {
 					has_government = social_liberal
 				}
 			}
+			NOT = { has_country_flag = RUS_cannot_release_TRM }
 		}
 		ai_chance = {
 			factor = 0
@@ -10783,6 +10776,13 @@ country_event = {
 				}
 				remove_ideas = TRM_dream
 				set_cosmetic_tag = TRM_SOV
+			}
+			if = {
+				limit = {
+					ROOT = { has_country_flag = soviet_russia_restored }
+				}
+				set_temp_variable = { target = TRM }
+				SOV_puppet_TARGET_effect = yes
 			}
 		}
 		else_if = {

@@ -24,8 +24,7 @@ ideas = {
 		}
 		UKR_village_outflow = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_village_outflow"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = PAL_Shortage_of_Goods 
 			available = { has_country_flag = UKR_agriculture_crisis }
 			modifier = {
@@ -35,8 +34,7 @@ ideas = {
 		}
 		UKR_brotfrieden_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_brotfrieden_idea"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_brotfrieden 
 			modifier = {
 				stability_factor = -0.05
@@ -54,8 +52,7 @@ ideas = {
 		}
 		UKR_brotfrieden_idea_GER = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_brotfrieden_idea_GER"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_brotfrieden_idea
 			picture = GRE_german_ownership
 			modifier = {
@@ -70,8 +67,7 @@ ideas = {
 		UKR_treaty_with_russia = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_treaty_with_russia"}
 			picture = MON_russian_help_icon
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = RUS
 				NOT = { has_war_with = RUS }
@@ -131,8 +127,7 @@ ideas = {
 		UKR_austrian_trade = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_austrian_trade"}
 			picture = GRE_austrian_sanctions
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = AUS
 				NOT = { has_war_with = AUS }
@@ -197,8 +192,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_austrian_trade_ump"}
 			picture = GRE_austrian_sanctions
 			name = UKR_austrian_trade
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = AUS
 				NOT = { has_war_with = AUS }
@@ -243,8 +237,7 @@ ideas = {
 				}
 			}
 			picture = UKR_trade
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = AUS_ukrainian_trade
 			available = {
 				country_exists = UKR
@@ -262,8 +255,7 @@ ideas = {
 		UKR_excessive_trade_with_austria = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_excessive_trade_with_austria"}
 			picture = GRE_austrian_sanctions
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = AUS
 				NOT = { has_war_with = AUS }
@@ -327,8 +319,7 @@ ideas = {
 		}			
 		UKR_brotfrieden_idea_AUS = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_brotfrieden_idea_AUS"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_brotfrieden_idea
 			picture = GRE_austrian_ownership 
 			modifier = {
@@ -374,8 +365,7 @@ ideas = {
 		}
 		UKR_derzhavna_varta = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_derzhavna_varta"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_derzhavna_varta
 			modifier = {
 				political_power_gain = -0.04
@@ -386,8 +376,7 @@ ideas = {
 		}	
 		UKR_reformed_derzhavna_varta = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_reformed_derzhavna_varta"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_derzhavna_varta
 			picture = UKR_derzhavna_varta
 			modifier = {
@@ -399,8 +388,7 @@ ideas = {
 		}	
 		UKR_reformed_derzhavna_varta_lar = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_reformed_derzhavna_varta_lar"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_derzhavna_varta
 			picture = UKR_derzhavna_varta
 			modifier = {
@@ -415,8 +403,7 @@ ideas = {
 		}	
 		UKR_derzhvarta_fallout = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_derzhvarta_fallout"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_derzhvarta_fallout
 			picture = generic_spy_intel
 			modifier = {
@@ -429,8 +416,7 @@ ideas = {
 		}	
 		UKR_derzhvarta_fallout_lar = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_derzhvarta_fallout_lar"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_derzhvarta_fallout
 			picture = generic_spy_intel
 			modifier = {
@@ -444,8 +430,7 @@ ideas = {
 		}	
 		UKR_urban_rural_divide = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_urban_rural_divide"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = UKR_divided
 			modifier = {
 				stability_factor = -0.1
@@ -455,8 +440,7 @@ ideas = {
 		}	
 		UKR_lingering_ukrainisation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_lingering_ukrainisation"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = UKR_ukrainisation
 			modifier = {
 				political_power_gain = -0.05
@@ -466,8 +450,7 @@ ideas = {
 		}	
 		UKR_ukrainisation_efforts = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ukrainisation_efforts"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = UKR_ukrainisation
 			modifier = {
 				political_power_gain = -0.06
@@ -477,8 +460,7 @@ ideas = {
 		}	
 		UKR_ukrainisation_efforts_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ukrainisation_efforts_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			name = UKR_ukrainisation_efforts
 			picture = UKR_ukrainisation
 			modifier = {
@@ -489,8 +471,7 @@ ideas = {
 		}	
 		UKR_ukrainisation_efforts_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ukrainisation_efforts_3"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			name = UKR_ukrainisation_efforts
 			picture = UKR_ukrainisation
 			modifier = {
@@ -504,8 +485,7 @@ ideas = {
 		}	
 		UKR_ukrainisation_efforts_4 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ukrainisation_efforts_4"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			name = UKR_ukrainisation_efforts
 			picture = UKR_ukrainisation
 			modifier = {
@@ -519,8 +499,7 @@ ideas = {
 		}	
 		UKR_stable_identity = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_stable_identity"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = UKR_ukraine_flag_idea
 			modifier = {
 				political_power_gain = 0.05
@@ -546,8 +525,7 @@ ideas = {
 		}
 		UKR_red_kyiv = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_red_kyiv"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_red_kyiv_idea
 		}	
 		UKR_minor_concessions = {
@@ -592,8 +570,7 @@ ideas = {
 		}
 		UKR_general_strike = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_general_strike"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_government = social_democrat }
 			}
@@ -605,8 +582,7 @@ ideas = {
 		}	
 		UKR_general_strike_big = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_general_strike_big"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_government = social_democrat }
 			}
@@ -619,8 +595,7 @@ ideas = {
 		}	
 		UKR_strikes_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_strikes_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_government = social_democrat }
 			}
@@ -633,8 +608,7 @@ ideas = {
 		}	
 		UKR_strikes_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_strikes_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_government = social_democrat }
 			}
@@ -648,8 +622,7 @@ ideas = {
 		UKR_paying_polish_concessions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_paying_polish_concessions"}
 			picture = capital_outflow
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.07
 				political_power_gain = -0.02
@@ -667,8 +640,7 @@ ideas = {
 		UKR_peasant_unrest = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_peasant_unrest"}
 			picture = DEI_abandoned_ethical_policy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				local_resources_factor = -0.04
 			}
@@ -676,8 +648,7 @@ ideas = {
 		UKR_negot_peasants = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_negot_peasants"}
 			picture = generic_agrarian_reform
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.13
 				production_factory_max_efficiency_factor = -0.03				
@@ -729,8 +700,7 @@ ideas = {
 		UKR_social_nationalist_resistance = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_social_nationalist_resistance"}
 			picture = SPR_masters_of_our_own_fate
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				if = {
 					limit = { has_global_flag = UPR_dyrektoria_uprising_UPR }
@@ -751,8 +721,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_social_nationalist_resistance_1"}
 			picture = SPR_masters_of_our_own_fate
 			name = UKR_social_nationalist_resistance
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				if = {
 					limit = { has_global_flag = UPR_dyrektoria_uprising_UPR }
@@ -773,8 +742,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_social_nationalist_resistance_2"}
 			picture = SPR_crush_the_revolution
 			name = UKR_social_nationalist_resistance
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				if = {
 					limit = { has_global_flag = UPR_dyrektoria_uprising_UPR }
@@ -811,8 +779,7 @@ ideas = {
 				}
 			}
 			picture = UKR_nationalist_resistance_idea
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				if = {
 					limit = { has_global_flag = UPR_dyrektoria_uprising_UPR }
@@ -833,8 +800,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_nationalist_resistance_1"}
 			picture = UKR_nationalist_resistance_idea
 			name = UKR_nationalist_resistance
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				if = {
 					limit = { has_global_flag = UPR_dyrektoria_uprising_UPR }
@@ -855,8 +821,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_nationalist_resistance_2"}
 			picture = UKR_nationalist_resistance_idea
 			name = UKR_nationalist_resistance
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				if = {
 					limit = { has_global_flag = UPR_dyrektoria_uprising_UPR }
@@ -893,8 +858,7 @@ ideas = {
 				}
 			}
 			picture = NFA_red_resistance
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				has_socialist_government = no
 				has_left_democratic_government = no
@@ -910,8 +874,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_dyrektoria_resistance_1"}
 			picture = NFA_red_resistance
 			name = UKR_dyrektoria_resistance
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				has_socialist_government = no
 				has_left_democratic_government = no
@@ -927,8 +890,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_dyrektoria_resistance_2"}
 			picture = NFA_red_resistance
 			name = UKR_dyrektoria_resistance
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				has_socialist_government = no
 				has_left_democratic_government = no
@@ -971,8 +933,7 @@ ideas = {
 		UKR_borotbyst_uprising = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_borotbyst_uprising"}
 			picture = POL_the_peasants_strike
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_borotbysts_in_power = no }
 			modifier = {
 				political_power_gain = -0.15
@@ -988,8 +949,7 @@ ideas = {
 		UKR_all_ukrainian_strike = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_all_ukrainian_strike"}
 			picture = NOR_labour_conflicts
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_borotbysts_in_power = no }
 			modifier = {
 				production_factory_max_efficiency_factor = -0.17
@@ -1108,8 +1068,6 @@ ideas = {
 		}
 		UKR_industrialisation_protofis_1 = { # Very Bad Industrialisation Progress - Hetmanate + Protofis
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_protofis_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1120,8 +1078,6 @@ ideas = {
 		}
 		UKR_industrialisation_protofis_2 = { # Bad Industrialisation Progress - Hetmanate + Protofis
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_protofis_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1132,8 +1088,6 @@ ideas = {
 		}
 		UKR_industrialisation_protofis_3 = { # Okay Industrialisation Progress - Hetmanate + Protofis
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_protofis_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1144,8 +1098,6 @@ ideas = {
 		}
 		UKR_industrialisation_protofis_4 = { # Good Industrialisation Progress - Hetmanate + Protofis
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_protofis_4" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1156,8 +1108,6 @@ ideas = {
 		}
 		UKR_industrialisation_protofis_5 = { # Very Good Industrialisation Progress - Hetmanate + Protofis
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_protofis_5" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1168,8 +1118,6 @@ ideas = {
 		}
 		UKR_industrialisation_protofis_6 = { # Very Good Industrialisation Progress - Hetmanate + Protofis
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_protofis_6" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1180,8 +1128,6 @@ ideas = {
 		}
 		UKR_industrialisation_protofis_7 = { # fantastic Industrialisation Progress - Hetmanate + Protofis
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_protofis_7" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_succesful_four_year_plan
 			modifier = {
@@ -1192,8 +1138,6 @@ ideas = {
 		}
 		UKR_industrialisation_hetmanate_1 = { # Very Bad Industrialisation Progress - Hetmanate (no Protofis)
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_hetmanate_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1204,8 +1148,6 @@ ideas = {
 		}
 		UKR_industrialisation_hetmanate_2 = { # Bad Industrialisation Progress - Hetmanate (no Protofis)
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_hetmanate_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1216,8 +1158,6 @@ ideas = {
 		}
 		UKR_industrialisation_hetmanate_3 = { # Okay Industrialisation Progress - Hetmanate (no Protofis)
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_hetmanate_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1228,8 +1168,6 @@ ideas = {
 		}
 		UKR_industrialisation_hetmanate_4 = { # Good Industrialisation Progress - Hetmanate (no Protofis)
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_hetmanate_4" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1240,8 +1178,6 @@ ideas = {
 		}
 		UKR_industrialisation_hetmanate_5 = { # Very Good Industrialisation Progress - Hetmanate (no Protofis)
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_hetmanate_5" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1252,8 +1188,6 @@ ideas = {
 		}
 		UKR_industrialisation_hetmanate_6 = { # Great Industrialisation Progress - Hetmanate (no Protofis)
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_hetmanate_6" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1264,8 +1198,6 @@ ideas = {
 		}
 		UKR_industrialisation_hetmanate_7 = { # fantastic Industrialisation Progress - Hetmanate (no Protofis)
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_hetmanate_7" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_succesful_four_year_plan
 			modifier = {
@@ -1276,8 +1208,6 @@ ideas = {
 		}
 		UKR_industrialisation_republic_1 = { # Very Bad Industrialisation Progress - Republican
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_hetmanate_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1288,8 +1218,6 @@ ideas = {
 		}
 		UKR_industrialisation_republic_2 = { # Bad Industrialisation Progress - Republican
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_republic_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1303,8 +1231,6 @@ ideas = {
 		}
 		UKR_industrialisation_republic_3 = { # Okay Industrialisation Progress - Republican
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_republic_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1318,8 +1244,6 @@ ideas = {
 		}
 		UKR_industrialisation_republic_4 = { # Good Industrialisation Progress - Republican
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_republic_4" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1333,8 +1257,6 @@ ideas = {
 		}
 		UKR_industrialisation_republic_5 = { # Very Good Industrialisation Progress - Republican
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_republic_5" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1348,8 +1270,6 @@ ideas = {
 		}
 		UKR_industrialisation_republic_6 = { # Great Industrialisation Progress - Republican
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_republic_6" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1363,8 +1283,6 @@ ideas = {
 		}
 		UKR_industrialisation_republic_7 = { # fantastic Industrialisation Progress - Republican
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_republic_7" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_succesful_four_year_plan
 			modifier = {
@@ -1378,8 +1296,6 @@ ideas = {
 		}
 		UKR_industrialisation_leftist_1 = { # Very Bad Industrialisation Progress - Leftist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_leftist_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1390,8 +1306,6 @@ ideas = {
 		}
 		UKR_industrialisation_leftist_2 = { # Bad Industrialisation Progress - Leftist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_leftist_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1403,8 +1317,6 @@ ideas = {
 		}
 		UKR_industrialisation_leftist_3 = { # Okay Industrialisation Progress - Leftist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_leftist_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1416,8 +1328,6 @@ ideas = {
 		}
 		UKR_industrialisation_leftist_4 = { # Good Industrialisation Progress - Leftist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_leftist_4" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1429,8 +1339,6 @@ ideas = {
 		}
 		UKR_industrialisation_leftist_5 = { # Very Good Industrialisation Progress - Leftist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_leftist_5" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1442,8 +1350,6 @@ ideas = {
 		}
 		UKR_industrialisation_leftist_6 = { # Great Industrialisation Progress - Leftist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_leftist_6" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1455,8 +1361,6 @@ ideas = {
 		}
 		UKR_industrialisation_leftist_7 = { # fantastic Industrialisation Progress - Leftist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_leftist_7" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_succesful_four_year_plan
 			modifier = {
@@ -1468,8 +1372,6 @@ ideas = {
 		}
 		UKR_industrialisation_nationalist_1 = { # Very Bad Industrialisation Progress - Nationalist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_nationalist_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1481,8 +1383,6 @@ ideas = {
 		}
 		UKR_industrialisation_nationalist_2 = { # Bad Industrialisation Progress - Nationalist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_nationalist_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_disjointed_industry
 			modifier = {
@@ -1494,8 +1394,6 @@ ideas = {
 		}
 		UKR_industrialisation_nationalist_3 = { # Okay Industrialisation Progress - Nationalist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_nationalist_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1507,8 +1405,6 @@ ideas = {
 		}
 		UKR_industrialisation_nationalist_4 = { # Good Industrialisation Progress - Nationalist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_nationalist_4" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_second_five_year_plan
 			modifier = {
@@ -1520,8 +1416,6 @@ ideas = {
 		}
 		UKR_industrialisation_nationalist_5 = { # Very Good Industrialisation Progress - Nationalist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_nationalist_5" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1533,8 +1427,6 @@ ideas = {
 		}
 		UKR_industrialisation_nationalist_6 = { # Great Industrialisation Progress - Nationalist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_nationalist_6" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = SOV_third_five_year_plan
 			modifier = {
@@ -1546,8 +1438,6 @@ ideas = {
 		}
 		UKR_industrialisation_nationalist_7 = { # fantastic Industrialisation Progress - Nationalist
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_industrialisation_leftist_7" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			name = UKR_industrialisation
 			picture = POL_succesful_four_year_plan
 			modifier = {
@@ -1977,8 +1867,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ger_all_concessions_harsh"}
 			name = UKR_ger_some_concessions
 			picture = LIB_ger_bailout
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = GER }
 				country_exists = GER
@@ -2001,8 +1890,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ger_all_concessions"}
 			name = UKR_ger_some_concessions
 			picture = LIB_ger_bailout
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = GER }
 				country_exists = GER
@@ -2022,8 +1910,7 @@ ideas = {
 		UKR_ger_some_concessions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ger_some_concessions"}
 			picture = LIB_ger_bailout
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = GER }
 				country_exists = GER
@@ -2038,8 +1925,7 @@ ideas = {
 		UKR_bel_some_concessions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_bel_some_concessions"}
 			picture = flemish_economy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = BEL }
 				country_exists = BEL
@@ -2054,8 +1940,7 @@ ideas = {
 		UKR_aus_some_concessions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_aus_some_concessions"}
 			picture = GRE_austrian_ownership
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = AUS }
 				country_exists = AUS
@@ -2074,8 +1959,7 @@ ideas = {
 		UKR_pol_some_concessions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_pol_some_concessions"}
 			picture = RUS_foreign_concessions
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = POL }
 				country_exists = POL
@@ -2089,8 +1973,7 @@ ideas = {
 		UKR_swe_some_concessions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_swe_some_concessions"}
 			picture = swe_scania_vabis
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = SWE }
 				country_exists = SWE
@@ -2106,8 +1989,7 @@ ideas = {
 		UKR_cze_some_concessions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_cze_some_concessions"}
 			picture = CZE_Czech_Industrial_Power
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = CZE }
 				country_exists = CZE
@@ -2122,8 +2004,7 @@ ideas = {
 		UKR_hol_some_concessions = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_hol_some_concessions"}
 			picture = shell
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				NOT = { has_war_with = HOL }
 				country_exists = HOL
@@ -2139,8 +2020,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_paying_compensations_0"}
 			name = UKR_paying_compensations
 			picture = great_depression
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_gain = -0.03
 				consumer_goods_factor = 0.07
@@ -2150,8 +2030,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_paying_compensations_1"}
 			name = UKR_paying_compensations
 			picture = great_depression
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_gain = -0.04
 				consumer_goods_factor = 0.13
@@ -2161,8 +2040,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_paying_compensations_2"}
 			name = UKR_paying_compensations
 			picture = great_depression
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_gain = -0.05
 				consumer_goods_factor = 0.1
@@ -2172,8 +2050,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_paying_compensations_3"}
 			name = UKR_paying_compensations
 			picture = great_depression
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_gain = -0.06
 				consumer_goods_factor = 0.1
@@ -2183,8 +2060,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_paying_compensations_4"}
 			name = UKR_paying_compensations
 			picture = great_depression
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_gain = -0.07
 				consumer_goods_factor = 0.16
@@ -2193,8 +2069,7 @@ ideas = {
 		UKR_ukrainian_compensation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ukrainian_compensation"}
 			picture = monopoly
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.03
 				consumer_goods_factor = -0.06
@@ -2231,8 +2106,7 @@ ideas = {
 				}
 			}
 			picture = UKR_regent
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				UKR_leo_stefan_in_power = yes
 				date < 1946.06.12
@@ -2248,8 +2122,7 @@ ideas = {
 		}			
 		UKR_loyal_intelligentsia = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_loyal_intelligentsia" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			picture = generic_research_bonus
 			modifier = {
@@ -2259,8 +2132,7 @@ ideas = {
 		}
 		UKR_highest_moral_authority = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_highest_moral_authority" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			picture = SOV_new_old_church
 			modifier = {
@@ -2272,8 +2144,7 @@ ideas = {
 		UKR_uskhd_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_uskhd_1"}
 			picture = national_produce
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			name = UKR_uskhd
 			modifier = {
@@ -2284,8 +2155,7 @@ ideas = {
 		UKR_uskhd_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_uskhd_2"}
 			picture = national_produce_2
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			name = UKR_uskhd
 			modifier = {
@@ -2297,8 +2167,7 @@ ideas = {
 		UKR_uskhd_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_uskhd_3"}
 			picture = national_produce_2
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			name = UKR_uskhd
 			modifier = {
@@ -2310,8 +2179,7 @@ ideas = {
 		UKR_happy_workers = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_happy_workers"}
 			picture = BBR_workers_aid
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.03
 				production_factory_max_efficiency_factor = 0.03
@@ -2321,8 +2189,7 @@ ideas = {
 		UKR_ukrainian_agrarianism = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ukrainian_agrarianism"}
 			picture = UKR_agrarian
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.2
 				production_lack_of_resource_penalty_factor = -0.05
@@ -2332,8 +2199,7 @@ ideas = {
 		UKR_Constitution_National_Accord = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Constitution_National_Accord"}
 			picture = constitution
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				paternal_autocrat_drift = -0.02
@@ -2344,8 +2210,7 @@ ideas = {
 		UKR_National_Rada = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_National_Rada"}
 			picture = UKR_parliament
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				drift_defence_factor = -0.15
@@ -2356,8 +2221,7 @@ ideas = {
 		UKR_charity = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_charity"}
 			picture = LIT_crown_4
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_vasyl_in_power = yes }
 			modifier = {
 				stability_factor = 0.05
@@ -2368,8 +2232,6 @@ ideas = {
 		UKR_udkhp_liberalisation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_udkhp_liberalisation" }
 			picture = HOL_syndicalist_neutrality
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				political_power_factor = 0.12
@@ -2379,8 +2241,7 @@ ideas = {
 		UKR_organic_corporatism_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_organic_corporatism_1"}
 			picture = corporatist_economy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_organic_corporatism
 			available = { UKR_has_socialist_government = no }
 			modifier = {
@@ -2391,8 +2252,7 @@ ideas = {
 		UKR_organic_corporatism_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_organic_corporatism_2"}
 			picture = corporatist_economy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_organic_corporatism
 			available = { UKR_has_socialist_government = no }
 			modifier = {
@@ -2405,8 +2265,7 @@ ideas = {
 		UKR_new_monarchy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_new_monarchy"}
 			picture = UKR_crown
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				war_support_factor = 0.05
@@ -2417,8 +2276,7 @@ ideas = {
 		UKR_impending_failure = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_impending_failure"}
 			picture = UKR_broken
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				war_support_weekly = -0.001
@@ -2429,8 +2287,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_impending_failure_1"}
 			picture = UKR_broken
 			name = UKR_impending_failure
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				war_support_weekly = -0.002
@@ -2441,8 +2298,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_impending_failure_2"}
 			picture = UKR_broken
 			name = UKR_impending_failure
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				war_support_weekly = -0.003
@@ -2453,8 +2309,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_impending_failure_3"}
 			picture = UKR_broken
 			name = UKR_impending_failure
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				war_support_weekly = -0.004
@@ -2465,8 +2320,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_impending_failure_4"}
 			picture = UKR_broken
 			name = UKR_impending_failure
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_has_socialist_government = no }
 			modifier = {
 				war_support_weekly = -0.005
@@ -2476,8 +2330,7 @@ ideas = {
 		UKR_provisional_dictatorship = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_provisional_dictatorship"}
 			picture = IRE_populist_dictatorship_idea
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				UKR_upss_in_power = yes
 				has_elections = no 
@@ -2492,8 +2345,7 @@ ideas = {
 		UKR_temporary_lack_of_personnel = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_temporary_lack_of_personnel"}
 			picture = prc_low_popular_support
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_upss_in_power = yes }
 			modifier = {
 				stability_weekly = -0.001
@@ -2503,8 +2355,7 @@ ideas = {
 		UKR_compromises_with_dyrektoria = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_compromises_with_dyrektoria"}
 			picture = generic_social_democracy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_upss_in_power = yes }
 			modifier = {
 				stability_factor = 0.1
@@ -2514,8 +2365,7 @@ ideas = {
 		UKR_masarykian_influence = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_masarykian_influence"}
 			picture = CZE_masarykian_progressivism_idea
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_upss_in_power = yes }
 			modifier = {
 				consumer_goods_factor = -0.15
@@ -2525,8 +2375,7 @@ ideas = {
 		UKR_national_socialist_vision = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_national_socialist_vision"}
 			picture = UKR_national_socialists
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_upss_in_power = yes }
 			modifier = {
 				consumer_goods_factor = -0.15
@@ -2539,8 +2388,7 @@ ideas = {
 		UKR_social_principle = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_social_principle"}
 			picture = MAF_labour_charter
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { UKR_upss_in_power = yes }
 			modifier = {
 				industrial_capacity_factory = 0.03
@@ -2551,8 +2399,7 @@ ideas = {
 		UKR_state_supervision = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_state_supervision"}
 			picture = partially_planned
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				industrial_capacity_factory = 0.03
 				stability_factor = 0.05
@@ -2563,8 +2410,7 @@ ideas = {
 		UKR_rural_education = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_rural_education"}
 			picture = CZE_education
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				research_speed_factor = 0.05
 				political_power_factor = 0.05
@@ -2573,8 +2419,7 @@ ideas = {
 		UKR_mazepa_ukraine = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mazepa_ukraine"}
 			picture = UKR_mazepa
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				research_speed_factor = 0.05
 				political_power_factor = 0.05
@@ -2583,8 +2428,7 @@ ideas = {
 		UKR_strong_military_apparatus = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_strong_military_apparatus"}
 			picture = NFA_mil_state
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				command_power_gain_mult = 0.25
 				experience_gain_army = 0.04
@@ -2597,8 +2441,7 @@ ideas = {
 		UKR_legacy_of_polubotkovtsi = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_legacy_of_polubotkovtsi"}
 			picture = UKR_soborna_ukraina
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
@@ -2607,8 +2450,7 @@ ideas = {
 		UKR_ensuring_sovereignity_by_strong_army = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ensuring_sovereignity_by_strong_army"}
 			picture = UKR_soborna_ukraina
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
@@ -2620,8 +2462,7 @@ ideas = {
 		UKR_disciplined_army = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_disciplined_army"}
 			picture = army_cooperation
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				army_org_factor = 0.07
 				army_morale_factor = 0.07
@@ -2633,8 +2474,7 @@ ideas = {
 		UKR_traditional_values = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_disciplined_army"}
 			picture = UKR_trad
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				war_support_factor = 0.05
 				army_core_defence_factor = 0.03
@@ -2644,8 +2484,7 @@ ideas = {
 		UKR_legacy_of_unp = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_legacy_of_unp"}
 			picture = UKR_soborna_ukraina
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				surrender_limit = 0.07
 				army_attack_against_major_factor = 0.05
@@ -2654,8 +2493,8 @@ ideas = {
 		}			
 		UKR_organic_solidarism = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_organic_solidarism"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
+			
 			picture = coop_clubs
 			modifier = {
 				consumer_goods_factor = -0.15
@@ -2665,8 +2504,8 @@ ideas = {
 		}
 		UKR_national_order = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_national_order"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
+			
 			picture = saf_ossewabrandwag_fascism
 			modifier = {
 				conscription_factor = -0.05
@@ -2677,8 +2516,8 @@ ideas = {
 		}
 		UKR_anti_muscovite_state = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_anti_muscovite_state"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
+			
 			picture = ever_present_russians
 			modifier = {
 				conscription_factor = -0.025
@@ -2692,8 +2531,7 @@ ideas = {
 		}
 		UKR_integral_nationalism_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_integral_nationalism_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_integral_nationalism
 			picture = UKR_self_defence
 			modifier = {
@@ -2703,8 +2541,7 @@ ideas = {
 		}
 		UKR_integral_nationalism_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_integral_nationalism_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_integral_nationalism
 			picture = UKR_self_defence
 			modifier = {
@@ -2716,8 +2553,7 @@ ideas = {
 		}
 		UKR_integral_nationalism_3 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_integral_nationalism_3"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_integral_nationalism
 			picture = UKR_self_defence
 			modifier = {
@@ -2730,8 +2566,7 @@ ideas = {
 		}
 		UKR_integral_nationalism_4 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_integral_nationalism_4"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_integral_nationalism
 			picture = UKR_self_defence
 			modifier = {
@@ -2746,8 +2581,7 @@ ideas = {
 		}
 		UKR_integral_nationalism_5 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_integral_nationalism_5"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_integral_nationalism
 			picture = UKR_self_defence
 			modifier = {
@@ -2762,8 +2596,8 @@ ideas = {
 		}
 		UKR_sunm_organisation = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_sunm_organisation"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
+			
 			picture = UKR_sunm
 			modifier = {
 				conscription_factor = 0.05
@@ -2774,8 +2608,8 @@ ideas = {
 		}
 		UKR_plast_organisation = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_plast_organisation"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
+			
 			picture = UKR_plast
 			modifier = {
 				conscription_factor = 0.02
@@ -2787,8 +2621,7 @@ ideas = {
 		}
 		UKR_sun_economy_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_sun_economy_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_sun_economy
 			picture = industrial_protectionism
 			modifier = {
@@ -2799,8 +2632,7 @@ ideas = {
 		}
 		UKR_sun_economy_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_sun_economy_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_sun_economy
 			picture = industrial_protectionism
 			modifier = {
@@ -2813,8 +2645,7 @@ ideas = {
 		}
 		UKR_sun_economy_3 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_sun_economy_3"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_sun_economy
 			picture = corporatist_economy
 			modifier = {
@@ -2828,8 +2659,7 @@ ideas = {
 		}
 		UKR_soborna_ukraina = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_soborna_ukraina"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_soborna_ukraina
 			modifier = {
 				stability_factor = 0.05
@@ -2839,8 +2669,7 @@ ideas = {
 		}
 		UKR_soborna_ukraina_1 = { #from UKR_State_Above_All
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_soborna_ukraina_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_soborna_ukraina
 			name = UKR_soborna_ukraina
 			modifier = {
@@ -2854,8 +2683,7 @@ ideas = {
 		}
 		UKR_soborna_ukraina_2 = { #from UKR_Statism_Hierarchy
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_soborna_ukraina_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_soborna_ukraina
 			name = UKR_soborna_ukraina
 			modifier = {
@@ -2871,8 +2699,7 @@ ideas = {
 		}
 		UKR_soborna_ukraina_3 = { #from UKR_Strong_Army
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_soborna_ukraina_3"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_soborna_ukraina
 			name = UKR_soborna_ukraina
 			modifier = {
@@ -2885,8 +2712,7 @@ ideas = {
 		}
 		UKR_soborna_ukraina_4 = { #from UKR_Strong_Army + #from UKR_State_Above_All
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_soborna_ukraina_4"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_soborna_ukraina
 			name = UKR_soborna_ukraina
 			modifier = {
@@ -2902,8 +2728,7 @@ ideas = {
 		}
 		UKR_soborna_ukraina_5 = { #from UKR_Strong_Army + #from UKR_Statism_Hierarchy
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_soborna_ukraina_5"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_soborna_ukraina
 			name = UKR_soborna_ukraina
 			modifier = {
@@ -2921,8 +2746,7 @@ ideas = {
 		}
 		UKR_self_defense = { 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_self_defense"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_self_defence
 			modifier = {
 				conscription_factor = 0.15
@@ -2931,8 +2755,7 @@ ideas = {
 		}
 		UKR_cult_of_konovalets = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_cult_of_konovalets"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_cult_of_konovalets_icon
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -2949,8 +2772,6 @@ ideas = {
 		}
 		UKR_state_syndicalism1 = { #moderate
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_state_syndicalism1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			name = UKR_state_syndicalism
 			picture = state_economy
 			modifier = {
@@ -2960,8 +2781,6 @@ ideas = {
 		}
 		UKR_state_syndicalism2 = { #radical
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_state_syndicalism2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			name = UKR_state_syndicalism
 			picture = state_economy
 			modifier = {
@@ -2971,8 +2790,7 @@ ideas = {
 		}
 		UKR_single_trade_union = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_single_trade_union"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = KIV_unionism_idea
 			modifier = {
@@ -2982,8 +2800,7 @@ ideas = {
 		}
 		UKR_gosplan = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_gosplan"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = man_five_year_plan_industry
 			modifier = {
@@ -2995,8 +2812,7 @@ ideas = {
 		}
 		UKR_national_economy_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_national_economy_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			name = UKR_national_economy
 			picture = man_five_year_plan_industry
@@ -3012,8 +2828,7 @@ ideas = {
 		}
 		UKR_national_economy_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_national_economy_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			name = UKR_national_economy
 			picture = man_five_year_plan_industry
@@ -3030,8 +2845,7 @@ ideas = {
 		}
 		UKR_national_economy_3 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_national_economy_3"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			name = UKR_national_economy
 			picture = man_five_year_plan_industry
@@ -3048,8 +2862,7 @@ ideas = {
 		}
 		UKR_soviet_power = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_soviet_power"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = {
 				OR = {
 					has_socialist_government = yes 
@@ -3064,8 +2877,7 @@ ideas = {
 		}
 		UKR_skrypnyk_education = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_skrypnyk_education"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = soviet_enlightenment
 			modifier = {
@@ -3075,8 +2887,7 @@ ideas = {
 		}
 		UKR_educated_nation = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_educated_nation"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = soviet_enlightenment
 			modifier = {
@@ -3087,8 +2898,7 @@ ideas = {
 		}
 		UKR_business_fleeing = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_business_fleeing"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					has_socialist_government = yes 
@@ -3104,8 +2914,7 @@ ideas = {
 		}
 		UKR_nonfunctioning_plants = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_nonfunctioning_plants"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }			
 			picture = FRA_factory_strikes
 			modifier = {
 				consumer_goods_factor = 0.1
@@ -3115,8 +2924,7 @@ ideas = {
 		}
 		UKR_industry_committees = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_industry_committees"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = BBR_workers_market
 			modifier = {
@@ -3126,8 +2934,7 @@ ideas = {
 		}
 		UKR_centralised_economy_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_centralised_economy_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			name = UKR_centralised_economy
 			picture = democratic_centralism_1
@@ -3138,8 +2945,7 @@ ideas = {
 		}
 		UKR_centralised_economy_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_centralised_economy_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			name = UKR_centralised_economy
 			picture = democratic_centralism_1
@@ -3151,8 +2957,7 @@ ideas = {
 		}
 		UKR_centralised_economy_3 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_centralised_economy_3"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			name = UKR_centralised_economy
 			picture = democratic_centralism_1
@@ -3165,8 +2970,7 @@ ideas = {
 		}
 		UKR_centralised_economy_4 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_centralised_economy_4"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = democratic_centralism_2
 			modifier = {
@@ -3178,8 +2982,7 @@ ideas = {
 		}
 		UKR_ideological_commissars = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_ideological_commissars"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = HUN_commissars_idea
 			modifier = {
@@ -3189,8 +2992,7 @@ ideas = {
 		}
 		UKR_help_the_poor = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_help_the_poor"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = BBR_rural_aid
 			modifier = {
@@ -3201,8 +3003,7 @@ ideas = {
 		}
 		UKR_dekulakization = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_dekulakization"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = HOL_mass_collectivisation
 			modifier = {
@@ -3212,8 +3013,7 @@ ideas = {
 		}
 		UKR_voluntary_collectivization = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_voluntary_collectivization"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = agricultural_collectivization
 			modifier = {
@@ -3224,8 +3024,7 @@ ideas = {
 		}
 		UKR_red_terror = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_red_terror"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			available = { has_socialist_government = yes }
 			picture = HUN_red_terror_idea
 			modifier = {
@@ -3236,8 +3035,7 @@ ideas = {
 		}
 		UKR_democratic_communism = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_democratic_communism"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = communal_democracy
 			modifier = {
 				party_popularity_stability_factor = -0.5
@@ -3250,8 +3048,7 @@ ideas = {
 		}
 		UKR_workers_management = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_workers_management"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = communal_management
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
@@ -3260,8 +3057,7 @@ ideas = {
 		}
 		UKR_workers_management_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_workers_management_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = communal_management
 			name = UKR_workers_management
 			modifier = {
@@ -3271,8 +3067,7 @@ ideas = {
 		}
 		UKR_tu_soviets_guarantees = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_tu_soviets_guarantees"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = KIV_unionism_idea
 			modifier = {
 				stability_factor = 0.05
@@ -3282,8 +3077,7 @@ ideas = {
 		}
 		UKR_ukapist_economy = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_ukapist_economy"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = UKR_Dedicated_Workers_idea
 			modifier = {
 				stability_factor = 0.05
@@ -3293,8 +3087,7 @@ ideas = {
 		}
 		UKR_Lessons_Of_NEP = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_Lessons_Of_NEP"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = SOV_cult_bukharin
 			modifier = {
 				production_factory_max_efficiency_factor = -0.02
@@ -3307,8 +3100,7 @@ ideas = {
 		}
 		UKR_syndical_planned_economy = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_syndical_planned_economy"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = syndie_management
 			modifier = {
 				production_factory_max_efficiency_factor = 0.02
@@ -3322,8 +3114,7 @@ ideas = {
 		}
 		UKR_balanced_industry = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_balanced_industry"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = IRE_heavy_industry
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
@@ -3334,8 +3125,7 @@ ideas = {
 		UKR_ukapist_economy_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_ukapist_economy"}
 			name = UKR_ukapist_economy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = syndie_management
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
@@ -3352,8 +3142,7 @@ ideas = {
 		}
 		UKR_benefits_for_workers = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_benefits_for_workers"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_Dedicated_Workers_idea
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
@@ -3370,8 +3159,7 @@ ideas = {
 		}
 		UKR_common_interests = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_common_interests" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = DEI_abandoned_ethical_policy
 			modifier = {
 				local_building_slots_factor = 0.2
@@ -3381,8 +3169,7 @@ ideas = {
 		}
 		UKR_guided_economy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_common_interests" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = economic_control_icon
 			modifier = {
 				production_speed_industrial_complex_factor = 0.08
@@ -3393,8 +3180,7 @@ ideas = {
 		UKR_ukrainian_autonomy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ukrainian_autonomy" }
 			available = { UKR_has_restored_russian_empire = yes }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_soborna_ukraina
 			modifier = {
 				conscription_factor = -0.05
@@ -3406,8 +3192,7 @@ ideas = {
 		UKR_one_indivisible_federation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_one_indivisible_federation"}
 			available = { UKR_has_restored_russian_empire = yes }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = {
 				political_power_cost = 0.05
@@ -3419,8 +3204,7 @@ ideas = {
 		}
 		UKR_unpolitical_population = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_unpolitical_population" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = BBR_reactionar_future
 			modifier = {
 				stability_weekly_factor = -0.7
@@ -3431,8 +3215,7 @@ ideas = {
 		}
 		UKR_hetman_constitution_udkhp = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_hetman_constitution_udkhp" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_crown
 			name = UKR_hetman_constitution
 			modifier = {
@@ -3444,8 +3227,7 @@ ideas = {
 		}
 		UKR_hetman_constitution_uskhd = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_hetman_constitution_uskhd" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_crown
 			name = UKR_hetman_constitution
 			modifier = {
@@ -3457,8 +3239,7 @@ ideas = {
 		}
 		UKR_hetman_constitution_shd = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_hetman_constitution_shd" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_crown
 			name = UKR_hetman_constitution
 			modifier = {
@@ -3470,8 +3251,7 @@ ideas = {
 		}
 		UKR_legacy_of_first_hetmanate_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_legacy_of_first_hetmanate_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_legacy_of_first_hetmanate
 			modifier = {
@@ -3481,8 +3261,7 @@ ideas = {
 		}
 		UKR_legacy_of_first_hetmanate_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_legacy_of_first_hetmanate_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_legacy_of_first_hetmanate
 			modifier = {
@@ -3494,8 +3273,7 @@ ideas = {
 		}
 		UKR_legacy_of_first_hetmanate_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_legacy_of_first_hetmanate_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_legacy_of_first_hetmanate
 			modifier = {
@@ -3508,8 +3286,7 @@ ideas = {
 		}
 		UKR_legacy_of_first_hetmanate_4 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_legacy_of_first_hetmanate_4" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_legacy_of_first_hetmanate
 			modifier = {
@@ -3525,8 +3302,7 @@ ideas = {
 		}
 		UKR_legacy_of_first_hetmanate_5 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_legacy_of_first_hetmanate_5" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_legacy_of_first_hetmanate
 			modifier = {
@@ -3543,8 +3319,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3558,8 +3333,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3574,8 +3348,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3590,8 +3363,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_4 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_4" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3606,8 +3378,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_5 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_5" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3622,8 +3393,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_6 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_6" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3638,8 +3408,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_7 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_7" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3654,8 +3423,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_8 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_8" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3670,8 +3438,7 @@ ideas = {
 		}
 		UKR_mykola_mikhnovskyi_influence_idea_9 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mykola_mikhnovskyi_influence_idea_9" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = { 
 				OR = {
 					UKR_pavlo_skoropadsky_in_power = yes 
@@ -3686,8 +3453,7 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			modifier = {
 				war_support_factor = 0.03
@@ -3695,8 +3461,7 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_ivan_po_influence_idea_1
 			modifier = {
@@ -3705,8 +3470,7 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_ivan_po_influence_idea_1
 			modifier = {
@@ -3715,8 +3479,6 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_4 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_4" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			picture = UKR_mace
 			name = UKR_ivan_po_influence_idea_1
 			modifier = {
@@ -3725,8 +3487,7 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_5 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_5" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_ivan_po_influence_idea_1
 			modifier = {
@@ -3735,8 +3496,6 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_6 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_6" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			picture = UKR_mace
 			name = UKR_ivan_po_influence_idea_1
 			modifier = {
@@ -3745,8 +3504,7 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_7 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_7" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_ivan_po_influence_idea_1
 			modifier = {
@@ -3755,8 +3513,6 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_8 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_8" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			picture = UKR_mace
 			name = UKR_ivan_po_influence_idea_1
 			modifier = {
@@ -3765,8 +3521,7 @@ ideas = {
 		}
 		UKR_ivan_po_influence_idea_9 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ivan_po_influence_idea_9" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_mace
 			name = UKR_ivan_po_influence_idea_1
 			modifier = {
@@ -3775,8 +3530,7 @@ ideas = {
 		}
 		UKR_ethnic_unrest = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_ethnic_unrest" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_ethnic
 			modifier = {
 				stability_weekly = -0.001
@@ -3823,8 +3577,7 @@ ideas = {
 		}
 		UKR_two_party_system = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_two_party_system"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = BBR_all_for_the_party_idea
 			modifier = {
 				political_power_gain = 0.05
@@ -3835,8 +3588,7 @@ ideas = {
 		}
 		UKR_indicative_planning = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_indicative_planning"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = man_five_year_plan_industry
 			modifier = {
 				production_factory_max_efficiency_factor = 0.02
@@ -3849,8 +3601,7 @@ ideas = {
 		}
 		UKR_decentralized_planning = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_decentralized_planning"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = man_five_year_plan_industry
 			modifier = {
 				production_factory_max_efficiency_factor = 0.06
@@ -3863,8 +3614,6 @@ ideas = {
 		}
 		UKR_mass_nationalization = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mass_nationalization" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			picture = IRE_heavy_industry
 			modifier = {
 				consumer_goods_factor = -0.15
@@ -3874,8 +3623,7 @@ ideas = {
 		
 		UKR_ratekommunismus = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_ratekommunismus"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_ratecommunism
 			modifier = {
 				political_power_gain = 0.03
@@ -3884,8 +3632,7 @@ ideas = {
 		}
 		UKR_cultural_autonomy = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_cultural_autonomy"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = BBR_top_down_autonomy
 			modifier = {
 				party_popularity_stability_factor = 0.25
@@ -3895,8 +3642,7 @@ ideas = {
 		}
 		UKR_welfare = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_welfare"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = HOL_welfare_state
 			modifier = {
 				party_popularity_stability_factor = 0.25
@@ -3908,8 +3654,6 @@ ideas = {
 		}
 		UKR_mechanisation_of_countryside = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_mechanisation_of_countryside" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			picture = LIT_invested_in_farms
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
@@ -3917,8 +3661,7 @@ ideas = {
 		}
 		UKR_municipal_socialism = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_municipal_socialism"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = democratic_centralism_1
 			modifier = {
 				consumer_goods_factor = -0.06
@@ -3928,8 +3671,7 @@ ideas = {
 		}
 		UKR_socialism_in_city = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_socialism_in_city"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = social_enterprises
 			modifier = {
 				political_power_cost = 0.05
@@ -3939,8 +3681,7 @@ ideas = {
 		}
 		UKR_small_business = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_small_business"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = CZE_small_business_idea
 			modifier = {
 				stability_factor = 0.02
@@ -3952,8 +3693,7 @@ ideas = {
 		}
 		UKR_small_business_tax = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_small_business_tax"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = CZE_small_business_idea
 			modifier = {
 				political_power_gain = 0.01
@@ -3964,8 +3704,7 @@ ideas = {
 		}
 		UKR_street_demonstrations = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_street_demonstrations"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = HUN_demonstrations_idea
 			modifier = {
 				stability_weekly = 0.002
@@ -3974,8 +3713,7 @@ ideas = {
 		}
 		UKR_social_security = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_social_security"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = worker_guarantees
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.02
@@ -3985,8 +3723,7 @@ ideas = {
 		}
 		UKR_austromarxism_influence = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_austromarxism_influence"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = GER_Iron_Front
 			modifier = {
 				party_popularity_stability_factor = 0.25
@@ -3994,8 +3731,7 @@ ideas = {
 		}
 		UKR_demsoc_constitution_0 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_demsoc_constitution_0"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = constitution
 			name = UKR_demsoc_constitution
 			modifier = {
@@ -4007,8 +3743,7 @@ ideas = {
 		}
 		UKR_demsoc_constitution_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_demsoc_constitution_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = constitution
 			name = UKR_demsoc_constitution
 			modifier = {
@@ -4021,8 +3756,7 @@ ideas = {
 		}
 		UKR_demsoc_constitution_1_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_demsoc_constitution_1_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = constitution
 			name = UKR_demsoc_constitution
 			modifier = {
@@ -4036,8 +3770,7 @@ ideas = {
 		}
 		UKR_demsoc_constitution_2 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_demsoc_constitution_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = constitution
 			name = UKR_demsoc_constitution
 			modifier = {
@@ -4050,8 +3783,7 @@ ideas = {
 		}
 		UKR_demsoc_constitution_2_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_demsoc_constitution_2_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = constitution
 			name = UKR_demsoc_constitution
 			modifier = {
@@ -4065,8 +3797,6 @@ ideas = {
 		}
 		UKR_limited_soviets = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_limited_soviets"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			picture = HOL_banned_unions
 			allowed = { always = no }
 			modifier = {
@@ -4077,8 +3807,7 @@ ideas = {
 		UKR_public_associations = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_public_associations"}
 			picture = protect_the_humble
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				monthly_population = 0.03
 				stability_weekly_factor = 0.15
@@ -4089,8 +3818,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_primacy_of_rada_1"}
 			name = UKR_primacy_of_rada
 			picture = UKR_parliament
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				drift_defence_factor = -0.15
 				party_popularity_stability_factor = -0.05
@@ -4101,8 +3829,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_primacy_of_rada_2"}
 			name = UKR_primacy_of_rada
 			picture = UKR_parliament
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				drift_defence_factor = -0.15
 				party_popularity_stability_factor = -0.05
@@ -4115,8 +3842,7 @@ ideas = {
 		UKR_labour_principle = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_labour_principle"}
 			picture = farmer_labor_alliance
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_cost = 0.07
 				stability_factor = 0.05
@@ -4126,8 +3852,7 @@ ideas = {
 		UKR_separation_of_powers = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_separation_of_powers"}
 			picture = BBR_economic_independence
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.03
 				production_factory_max_efficiency_factor = -0.02
@@ -4137,8 +3862,7 @@ ideas = {
 		UKR_apolitic_disciplined_army = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_apolitic_disciplined_army"}
 			picture = army_cooperation
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				drift_defence_factor = -0.1
 				war_support_factor = 0.1
@@ -4150,8 +3874,7 @@ ideas = {
 		UKR_subordinate_peoples_militia = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_subordinate_peoples_militia"}
 			picture = SIA_military_expenditure_cut
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				army_org_factor = -0.08
 				war_support_factor = -0.15
@@ -4160,8 +3883,7 @@ ideas = {
 		UKR_general_conscription = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_general_conscription"}
 			picture = BBR_citizen_conscription_idea
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				army_morale_factor = -0.02
 				war_support_factor = -0.07
@@ -4172,8 +3894,7 @@ ideas = {
 		UKR_joint_state_planning = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_joint_state_planning"}
 			picture = partially_planned
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				production_speed_buildings_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.07
@@ -4183,8 +3904,7 @@ ideas = {
 		UKR_wide_autonomy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_wide_autonomy"}
 			picture = UKR_autonomy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				global_building_slots_factor = 0.1
 				monthly_population = 0.15
@@ -4195,8 +3915,7 @@ ideas = {
 		UKR_peasant_committees = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_peasant_committees"}
 			picture = agricultural_committee
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				supply_consumption_factor = 0.05
 				consumer_goods_factor = -0.15
@@ -4206,8 +3925,7 @@ ideas = {
 		UKR_national_autonomy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_national_autonomy"}
 			picture = UKR_autonomy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				monthly_population = 0.1
 				non_core_manpower = 0.1
@@ -4217,8 +3935,7 @@ ideas = {
 		UKR_communal_democracy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_communal_democracy"}
 			picture = communal_democracy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.15
 				supply_consumption_factor = 0.05
@@ -4232,8 +3949,7 @@ ideas = {
 		UKR_soviet_democracy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_soviet_democracy"}
 			picture = TRM_Soviet_Democracy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.15
 				stability_factor = 0.05
@@ -4288,8 +4004,7 @@ ideas = {
 		UKR_trudova_respublika = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_trudova_respublika"}
 			picture = syndie_republic
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				supply_consumption_factor = 0.05
 				consumer_goods_factor = -0.15
@@ -4300,8 +4015,7 @@ ideas = {
 		UKR_state_estates = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_state_estates"}
 			picture = coop_clubs
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.15
 				production_factory_start_efficiency_factor = 0.03
@@ -4313,8 +4027,7 @@ ideas = {
 		UKR_unsolved_land_reform = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_unsolved_land_reform"}
 			picture = RUS_unfinished_land_reform
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				social_democrat_drift = -0.05
 				syndicalist_drift = 0.05
@@ -4324,8 +4037,7 @@ ideas = {
 		UKR_selyanska_spilka = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_selyanska_spilka"}
 			picture = GAL_rural_society
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				monthly_population = 0.05
 				local_resources_factor = 0.07
@@ -4335,8 +4047,7 @@ ideas = {
 		UKR_hope_for_future = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_hope_for_future"}
 			picture = RUS_Bring_Democracy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
 				political_power_gain = 0.08
@@ -4346,8 +4057,7 @@ ideas = {
 		UKR_narodnik_const = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_narodnik_const"}
 			picture = social_planning_3
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				party_popularity_stability_factor = 0.15
 				local_resources_factor = 0.15
@@ -4360,8 +4070,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_labor_principle" }
 			name = UKR_labor_principle
 			picture = generic_syndicalist_worker
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			modifier = {
 				stability_factor = 0.05
 				political_power_factor = 0.05
@@ -4371,8 +4079,7 @@ ideas = {
 		UKR_teroborona_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_teroborona"}
 			picture = UKR_teroborona
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				custom_modifier_tooltip = UKR_teroborona_idea_tt
 				unit_limit_bonus = 15
@@ -4384,8 +4091,7 @@ ideas = {
 		UKR_meritocracy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_meritocracy"}
 			picture = MEX_meritocracy_idea
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				production_factory_start_efficiency_factor = 0.02
 				production_factory_max_efficiency_factor = 0.05
@@ -4394,8 +4100,7 @@ ideas = {
 		}
 		UKR_political_commissars = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_political_commissars"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = generic_secret_police
 			modifier = {
 				max_command_power = 50
@@ -4405,8 +4110,7 @@ ideas = {
 		}
 		UKR_sbu = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_political_commissars"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = generic_secret_police
 			modifier = {
 				max_command_power = 50
@@ -4420,8 +4124,7 @@ ideas = {
 		}		
 		UKR_sbu_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_political_commissars"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_sbu
 			picture = generic_secret_police
 			modifier = {
@@ -4436,8 +4139,7 @@ ideas = {
 		}		
 		UKR_loyal_society_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_loyal_society_idea"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_loyal_society_idea
 			picture = generic_secret_police
 			modifier = {
@@ -4452,8 +4154,7 @@ ideas = {
 		}		
 		UKR_loyal_society_idea_1 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_loyal_society_idea_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			name = UKR_loyal_society_idea
 			picture = generic_secret_police
 			modifier = {
@@ -4468,8 +4169,7 @@ ideas = {
 		}		
 		UKR_moderate_taxation = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_moderate_taxation"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = generic_taxation
 			modifier = {
 				political_power_gain = -0.02
@@ -4480,8 +4180,7 @@ ideas = {
 		UKR_duumvirat_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea"}
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4491,8 +4190,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea_1"}
 			name = UKR_duumvirat_idea
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4507,8 +4205,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea_2"}
 			name = UKR_duumvirat_idea
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4523,8 +4220,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea_3"}
 			name = UKR_duumvirat_idea
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4539,8 +4235,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea_4"}
 			name = UKR_duumvirat_idea
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4555,8 +4250,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea_5"}
 			name = UKR_duumvirat_idea
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4571,8 +4265,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea_6"}
 			name = UKR_duumvirat_idea
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4587,8 +4280,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea_7"}
 			name = UKR_duumvirat_idea
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4603,8 +4295,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_duumvirat_idea_8"}
 			name = UKR_duumvirat_idea
 			picture = UKR_duumvirat
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			available = {
 				country_exists = USR
 				NOT = { has_war_with = USR }
@@ -4670,8 +4361,7 @@ ideas = {
 
 		UKR_air_fleet = {	# air school
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_air_fleet" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = generic_aircraft_support
 			modifier = {
 				air_defence_factor = 0.1
@@ -4686,8 +4376,7 @@ ideas = {
 
 		UKR_merchant_marine = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_merchant_marine" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = generic_coastal_navy
 			modifier = {
 				trade_opinion_factor = 0.15
@@ -4707,8 +4396,7 @@ ideas = {
 		}		
 		UKR_funding_armament = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_funding_armament" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = SOV_third_five_year_plan_military
 			equipment_bonus = {
 				infantry_equipment = {
@@ -4741,8 +4429,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_red_army_1"}
 			picture = HUN_red_army_idea
 			name = UKR_povstanarmia
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				max_planning_factor = 0.15
 			}
@@ -4751,8 +4438,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_red_army_2"}
 			picture = HUN_red_army_idea
 			name = UKR_povstanarmia
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				max_planning = 0.2
 				cavalry_attack_factor = 0.05
@@ -4763,8 +4449,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_red_army_3"}
 			picture = HUN_red_army_idea
 			name = UKR_povstanarmia
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				army_org_factor = 0.05
 				max_planning = 0.25
@@ -4774,8 +4459,7 @@ ideas = {
 		}
 		UKR_peoples_army_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_peoples_army_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			name = UKR_peoples_army
 			picture = UKR_unr_army
 			modifier = {
@@ -4784,8 +4468,7 @@ ideas = {
 		}
 		UKR_peoples_army_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_peoples_army_2" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			name = UKR_peoples_army
 			picture = UKR_unr_army
 			modifier = {
@@ -4796,8 +4479,7 @@ ideas = {
 		}
 		UKR_peoples_army_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_peoples_army_3" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			name = UKR_peoples_army
 			picture = UKR_unr_army
 			modifier = {
@@ -4809,8 +4491,7 @@ ideas = {
 		
 		UKR_elite_army = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_elite_army" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = advisors_ukraine
 			modifier = {
 				recon_factor = 0.1
@@ -4820,8 +4501,7 @@ ideas = {
 		UKR_elite_army_3_sun = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_elite_army_3_sun" }
 			name = UKR_national_army
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_national_army
 			modifier = {
 				recon_factor = 0.1
@@ -4836,8 +4516,7 @@ ideas = {
 		UKR_elite_army_3_hetman = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_elite_army_3_hetman" }
 			name = UKR_elite_army
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_hetman_army
 			modifier = {
 				recon_factor = 0.1
@@ -4848,8 +4527,7 @@ ideas = {
 		UKR_elite_army_4_hetman = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_elite_army_4_hetman" }
 			name = UKR_elite_army
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_hetman_army
 			modifier = {
 				recon_factor = 0.1
@@ -4861,8 +4539,7 @@ ideas = {
 		UKR_elite_army_5_hetman = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_elite_army_5_hetman" }
 			name = UKR_elite_army
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = UKR_hetman_army
 			modifier = {
 				recon_factor = 0.1
@@ -4873,8 +4550,7 @@ ideas = {
 		}
 		UKR_army_leadership_reorganisation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_army_leadership_reorganisation" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = RUS_planning_school
 			modifier = {
 				war_support_weekly = 0.0015
@@ -4883,8 +4559,7 @@ ideas = {
 		}
 		UKR_cossack_reserve_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_cossack_reserve_1" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = ETH_national_studs
 			modifier = {
 				war_support_factor = 0.05
@@ -4895,8 +4570,7 @@ ideas = {
 		}
 		UKR_shadow_of_mighty_wings = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_shadow_of_mighty_wings" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = GER_imperial_pride_guns
 			modifier = {
 				land_doctrine_cost_factor = -0.1
@@ -4906,8 +4580,7 @@ ideas = {
 		UKR_shadow_of_mighty_wings_2 = {	# GER pilot training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_shadow_of_mighty_wings_2" }
 			name = UKR_shadow_of_mighty_wings
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = GER_imperial_pride_guns
 			modifier = {
 				land_doctrine_cost_factor = -0.1
@@ -4918,8 +4591,7 @@ ideas = {
 		UKR_shadow_of_mighty_wings_3 = {	# rockets
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_shadow_of_mighty_wings_3" }
 			name = UKR_shadow_of_mighty_wings
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = GER_imperial_pride_guns
 			modifier = {
 				land_doctrine_cost_factor = -0.1
@@ -4936,8 +4608,7 @@ ideas = {
 		UKR_shadow_of_mighty_wings_4 = {	# rockets + GER pilot training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_shadow_of_mighty_wings_4" }
 			name = UKR_shadow_of_mighty_wings
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = GER_imperial_pride_guns
 			modifier = {
 				land_doctrine_cost_factor = -0.1
@@ -4954,8 +4625,7 @@ ideas = {
 
 		UKR_protection_of_dual_monarchy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_protection_of_dual_monarchy" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = advisors_austria
 			modifier = {
 				land_doctrine_cost_factor = -0.1
@@ -4965,8 +4635,7 @@ ideas = {
 		UKR_protection_of_dual_monarchy_2 = {	# AUS skoda
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_protection_of_dual_monarchy_2" }
 			name = UKR_protection_of_dual_monarchy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = advisors_austria
 			modifier = {
 				land_doctrine_cost_factor = -0.1
@@ -4986,8 +4655,7 @@ ideas = {
 		UKR_protection_of_dual_monarchy_3 = { # AUS united command
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_protection_of_dual_monarchy_3" }
 			name = UKR_protection_of_dual_monarchy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = advisors_austria
 			modifier = {
 				land_doctrine_cost_factor = -0.1
@@ -4998,8 +4666,7 @@ ideas = {
 		UKR_protection_of_dual_monarchy_4 = {	# AUS united command + skoda
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_protection_of_dual_monarchy_4" }
 			name = UKR_protection_of_dual_monarchy
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = advisors_austria
 			modifier = {
 				land_doctrine_cost_factor = -0.1
@@ -5018,8 +4685,7 @@ ideas = {
 		}
 		UKR_stronghold_of_internationale = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_stronghold_of_internationale" }
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = MEX_revolutionary_army
 			modifier = {
 				war_support_factor = 0.15
@@ -5028,8 +4694,7 @@ ideas = {
 		UKR_stronghold_of_internationale_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_stronghold_of_internationale" }
 			name = UKR_stronghold_of_internationale
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = MEX_revolutionary_army
 			modifier = {
 				war_support_factor = 0.15
@@ -5045,8 +4710,7 @@ ideas = {
 		UKR_stronghold_of_internationale_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_stronghold_of_internationale" }
 			name = UKR_southern_flank_of_revolution
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = advisors_soviet
 			modifier = {
 				war_support_factor = 0.15
@@ -5058,8 +4722,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Tractors_to_Tanks_ideas" }
 			picture = generic_acquire_tanks
 			name = UKR_Tractors_to_Tanks
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			equipment_bonus = {
 				armor = {
 					build_cost_ic = -0.1
@@ -5070,8 +4733,7 @@ ideas = {
 		UKR_Artillery_Tradition = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Artillery_Tradition" }
 			picture = generic_artillery_regiments
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				experience_gain_artillery_combat_factor = 0.15
 				army_strength_factor = 0.05
@@ -5083,8 +4745,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Artillery_Tradition_1" }
 			name = UKR_Artillery_Tradition
 			picture = generic_artillery_regiments
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				experience_gain_artillery_combat_factor = 0.15
 				army_strength_factor = 0.05
@@ -5103,8 +4764,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Artillery_Tradition_2" }
 			name = UKR_Artillery_Tradition
 			picture = generic_artillery_regiments
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				experience_gain_artillery_combat_factor = 0.15
 				army_strength_factor = 0.05
@@ -5117,8 +4777,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Artillery_Tradition_3" }
 			name = UKR_Artillery_Tradition
 			picture = generic_artillery_regiments
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				experience_gain_artillery_combat_factor = 0.15
 				army_strength_factor = 0.05
@@ -5138,8 +4797,7 @@ ideas = {
 		UKR_USS_tactics = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_USS_tactics" }
 			picture = UKR_USS
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				special_forces_cap = 0.15
 				special_forces_no_supply_grace = 120
@@ -5150,8 +4808,7 @@ ideas = {
 		UKR_morska_pikhota = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_morska_pikhota" }
 			picture = UKR_marines
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				extra_marine_supply_grace = 48
 				amphibious_invasion = 0.15
@@ -5161,8 +4818,7 @@ ideas = {
 		UKR_paratroopers = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_paratroopers" }
 			picture = UKR_vdv
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				extra_paratrooper_supply_grace = 48
 				paradrop_organization_factor = 0.15
@@ -5171,8 +4827,6 @@ ideas = {
 		}
 		UKR_direct_injection = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_direct_injection"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
 			picture = air_support_focus
 			equipment_bonus = {
 				small_plane_airframe = {
@@ -5188,8 +4842,7 @@ ideas = {
 		UKR_partisan_warfare = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_partisan_warfare" }
 			picture = chi_army_corruption3
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			modifier = {
 				max_dig_in = 1
 				dig_in_speed_factor = 0.10
@@ -5202,8 +4855,7 @@ ideas = {
 		
 		UKR_black_monday = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_black_monday"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = usa_great_depression_3
 			name = UKR_black_monday
 			modifier = {
@@ -5215,8 +4867,7 @@ ideas = {
 		}
 		UKR_black_monday_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_black_monday_1"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = usa_great_depression_3
 			name = UKR_black_monday
 			modifier = {
@@ -5228,8 +4879,7 @@ ideas = {
 		}
 		UKR_black_monday_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_black_monday_2"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = usa_great_depression_2
 			name = UKR_black_monday
 			modifier = {
@@ -5244,8 +4894,7 @@ ideas = {
 			on_remove = {
 				country_event = ukreco.32
 			}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { always = yes }
+			allowed = { always = no }
 			picture = usa_great_depression
 			name = UKR_black_monday
 			modifier = {
@@ -5257,8 +4906,7 @@ ideas = {
 		}
 		UKR_protofis_investments = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_protofis_investments"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = ast_volunteer_defence_corps
 			removal_cost = -1
 			modifier = {
@@ -5268,8 +4916,7 @@ ideas = {
 		}
 		UKR_Ties_Germany = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Ties_Germany"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = GER_shield
 			removal_cost = -1
 			modifier = {
@@ -5280,8 +4927,7 @@ ideas = {
 		} 
 		UKR_Ties_Russia = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Ties_Russia"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = RUS_fighting_for_russia
 			removal_cost = -1
 			modifier = {
@@ -5294,8 +4940,7 @@ ideas = {
 		
 		UKR_Ties_Austria = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_Ties_Austria"}
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			picture = GRE_austrian_sanctions
 			removal_cost = -1
 			modifier = {
@@ -5309,8 +4954,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_martial_law"}
 			on_add = { set_variable = { UKR_CP_pacification = 4 } }
 			picture = TEX_corrupt_police
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			available = { 
 				OR = {
 					has_elections = no 
@@ -5327,8 +4970,6 @@ ideas = {
 		UKR_decentralized_governance = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_decentralized_governance"}
 			picture = generic_local_self_management
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			modifier = {
 				political_power_factor = 0.03
 				production_speed_buildings_factor = 0.03
@@ -5337,8 +4978,6 @@ ideas = {
 		UKR_local_radas_sun = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_local_radas_sun"}
 			picture = generic_local_self_management
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			modifier = {
 				political_power_factor = 0.04
 				production_speed_buildings_factor = 0.03
@@ -5380,8 +5019,6 @@ ideas = {
 				activate_targeted_decision = { target = KUB decision = UKR_Restore_Zaporozhian_Host }
 			}
 			picture = UKR_cossack
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
 			modifier = {
 				conscription = 0.01
 				army_org_Factor = 0.04
@@ -6131,8 +5768,7 @@ ideas = {
 		UKR_upsf_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_upsf_1" }
 			picture = political_liberalism
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				production_factory_start_efficiency_factor = 0.05
 				stability_weekly_factor = 0.5
@@ -6142,8 +5778,7 @@ ideas = {
 		UKR_decentralizing_administration = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_decentralizing_administration" }
 			picture = generic_central_management
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				stability_weekly_factor = -0.5
 				political_power_gain = -0.2
@@ -6152,8 +5787,7 @@ ideas = {
 		UKR_decentralization = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_decentralization" }
 			picture = generic_central_management
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
@@ -6163,8 +5797,7 @@ ideas = {
 		UKR_bund_cooperation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_bund_cooperation" }
 			picture = LIT_bundas_ownership
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				industrial_capacity_factory = 0.1
 				production_factory_efficiency_gain_factor = 0.05
@@ -6173,8 +5806,7 @@ ideas = {
 		UKR_sideline_bund = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_sideline_bund" }
 			picture = LIT_bundas_controlled_ownership
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				industrial_capacity_factory = 0.05
 				production_factory_efficiency_gain_factor = 0.07
@@ -6183,8 +5815,7 @@ ideas = {
 		UKR_progressive_taxation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_progressive_taxation" }
 			picture = generic_taxation
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.065
 				political_power_gain = -0.05				
@@ -6193,8 +5824,7 @@ ideas = {
 		UKR_free_professional_education = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_free_professional_education" }
 			picture = educational_spending
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_cost = 0.01
 				stability_factor = 0.03
@@ -6204,8 +5834,7 @@ ideas = {
 		UKR_8_hours_days = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_free_professional_education" }
 			picture = CRM_8_hours_day
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = -0.03
 				line_change_production_efficiency_factor = -0.02
@@ -6217,8 +5846,7 @@ ideas = {
 		UKR_introducing_regulated_market = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_introducing_regulated_market" }
 			picture = industrial_protectionism
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.1
 				stability_factor = 0.05
@@ -6230,8 +5858,7 @@ ideas = {
 		UKR_intelligentsia = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_introducing_regulated_market" }
 			picture = generic_research_bonus
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				research_speed_factor = 0.07
 				monthly_population = 0.05
@@ -6240,8 +5867,7 @@ ideas = {
 		UKR_citizen_militia = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_citizen_militia" }
 			picture = generic_manpower_bonus
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				modifier_army_sub_unit_militia_attack_factor = 0.05
 				modifier_army_sub_unit_militia_defence_factor = 0.05
@@ -6253,8 +5879,7 @@ ideas = {
 		UKR_administrative_reorganisation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_administrative_reorganisation" }
 			picture = generic_central_management
-			allowed = { original_tag = UKR }
-			allowed_civil_war = { NOT = { has_government = radical_socialist } }
+			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.07
 				industrial_capacity_factory = 0.05

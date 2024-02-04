@@ -6825,6 +6825,18 @@ country_event = {
 			}
 			1221 = { add_core_of = ROOT }
 		}
+		create_country_leader = {
+			name = "Dmitriy Ulyanov"
+			desc = "POLITICS_DMITRIY_ULYANOV_DESC"
+			picture = "gfx/leaders/CRM/Portrait_CRM_Dmitry_Ulyanov.png"
+			expire = "1.1.1"
+			ideology = radsoc_communism_subtype
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			name = CRM_totalist_party
+			long_name = CRM_totalist_party_long
+		}
 		clear_all_relations = yes
 		hidden_effect = {
 			diplomatic_relation = {

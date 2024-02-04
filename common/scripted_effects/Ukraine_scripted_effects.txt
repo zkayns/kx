@@ -8776,11 +8776,8 @@ UKR_setup_puppet = {
 		}
 		else_if = {
 			limit = { soviets_exist = yes }
-			set_autonomy = {
-				target = UKR
-				autonomous_state = kr_autonomous_soviet_republic
-				freedom_level = 0.75
-			}
+			set_temp_variable = { target = UKR }
+			SOV_puppet_TARGET_effect = yes
 			UKR = {
 				UKR_clear_all_flags = yes
 				UKR_clear_all_decisions = yes

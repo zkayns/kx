@@ -1275,15 +1275,15 @@ KUB_foreign_policy_decisions = {
 
 		available = {
 			at_peace_or_same_enemies_as_FROM = yes
-			OR = {
-				russian_civil_war = no
-				AND = {
-					russian_civil_war = yes
-					OR = {
-						has_war_with = DKB
-						is_owner_neighbor_of = ROOT
-					}
+			if = {
+				limit = { russian_civil_war = yes }
+				OR = {
+					has_war_with = DKB
+					is_owner_neighbor_of = FROM
 				}
+			}
+			else = {
+				russian_civil_war = no
 			}
 		}
 
@@ -1307,6 +1307,13 @@ KUB_foreign_policy_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision KUB_join_internationale target: [From.GetName]"
 			FROM = { country_event = kub.204 }
+			if = {
+				limit = {
+					FROM = { tag = RUS }
+				}
+				custom_effect_tooltip = if_FROM_agrees
+				effect_tooltip = { FROM = { SOV_puppet_ROOT_effect = yes } }
+			}
 		}
 	}
 	KUB_all_russian_ambitions = {

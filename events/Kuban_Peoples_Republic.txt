@@ -1470,29 +1470,7 @@ country_event = {
 
 	option = {
 		name = kub.204.a
-		if = {
-			limit = { 
-				FROM = { is_ai = no }
-			}
-			FROM = { get_current_government_type = yes }
-			set_autonomy = {
-				target = FROM
-				autonomous_state = kr_autonomous_soviet_republic
-			}
-			FROM = { restore_previous_government_type = yes }
-		}
-		else = {
-			FROM = {
-				every_unit_leader = {
-					set_unit_leader_flag = KUB_original_leaders
-					set_nationality = ROOT
-				}
-			}
-			annex_country = {
-				target = FROM
-				transfer_troops = yes
-			}
-		}
+		SOV_puppet_FROM_effect = yes
 	}	
 }
 country_event = { 

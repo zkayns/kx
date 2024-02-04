@@ -30261,6 +30261,215 @@ country_event = { #
 	}	
 }
 
+##########################
+### PUPPET INTEGRATION ###
+##########################
+
+country_event = { #FROM requests our integration
+	id = russoc.500
+	title = russoc.500.t
+
+	desc = {
+		text = russoc.500.d.integration_level_1
+		trigger = {
+			NOT = { has_autonomy_state = kr_autonomous_soviet_republic }
+			NOT = { has_autonomy_state = kr_soviet_republic_not_equal }
+		}
+	}
+	desc = {
+		text = russoc.500.d.integration_level_2
+		trigger = { has_autonomy_state = kr_soviet_republic_not_equal }
+	}
+	desc = {
+		text = russoc.500.d.integration_final
+		trigger = { has_autonomy_state = kr_autonomous_soviet_republic }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event russoc.500 option russoc.500.a"
+		name = russoc.500.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				FROM = { ROOT = { set_temp_variable = { acceptance = mtth:SOV_integration_acceptance_chance } } }
+				always = yes
+				add = var:acceptance
+			}
+		}
+		effect_tooltip = { activate_mission = SOV_subject_integration_timer }
+	}
+
+	option = {
+		log = "[GetLogInfo]: event russoc.500 option russoc.500.b"
+		name = russoc.500.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				FROM = { ROOT = { set_temp_variable = { refusal = mtth:SOV_integration_refusal_chance } } }
+				always = yes
+				add = var:refusal
+			}
+		}
+		hidden_effect = { remove_mission = SOV_subject_integration_timer }
+		set_country_flag = @FROM_revolted_against_SOV
+		create_wargoal = {
+			target = FROM
+			type = topple_government
+		}
+		SOV_break_puppet_effect = yes
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+			country_event = { id = russoc.503 hours = 8 }
+		}
+	}
+}
+
+country_event = { #Overlord increases integration
+	id = russoc.501
+	title = russoc.501.t
+
+	desc = {
+		text = russoc.501.d.integration_level_1
+		trigger = {
+			NOT = { has_autonomy_state = kr_autonomous_soviet_republic }
+			NOT = { has_autonomy_state = kr_soviet_republic_not_equal }
+		}
+	}
+	desc = {
+		text = russoc.501.d.integration_level_2
+		trigger = { has_autonomy_state = kr_soviet_republic_not_equal }
+	}
+	desc = {
+		text = russoc.501.d.integration_final
+		trigger = { has_autonomy_state = kr_autonomous_soviet_republic }
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = target
+	}
+
+	option = {
+		log = "[GetLogInfo]: event russoc.501 option russoc.501.a"
+		name = russoc.501.a
+		hidden_effect = { overlord = { country_event = russoc.502 } }
+		effect_tooltip = {
+			if = {
+				limit = { has_autonomy_state = kr_autonomous_soviet_republic }
+				overlord = {
+					add_collaboration = { target = ROOT value = 0.05 }
+					SOV_integrate_TARGET_effect = yes
+				}
+			}
+			else_if = {
+				limit = { has_autonomy_state = kr_soviet_republic_equal }
+				overlord = {
+					add_collaboration = { target = ROOT value = 0.05 }
+					set_autonomy = {
+						target = event_target:target
+						autonomy_state = kr_autonomous_soviet_republic
+						end_wars = no
+					}
+				}
+			}
+			else = {
+				overlord = {
+					add_collaboration = { target = ROOT value = 0.05 }
+					set_autonomy = {
+						target = event_target:target
+						autonomy_state = kr_soviet_republic_equal
+						end_wars = no
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Increased Integration of FROM
+	id = russoc.502
+	title = russoc.502.t
+
+	desc = {
+		text = russoc.502.d.integration_level_1
+		trigger = {
+			NOT = { has_autonomy_state = kr_autonomous_soviet_republic }
+			NOT = { has_autonomy_state = kr_soviet_republic_not_equal }
+		}
+	}
+	desc = {
+		text = russoc.502.d.integration_level_2
+		trigger = { has_autonomy_state = kr_soviet_republic_not_equal }
+	}
+	desc = {
+		text = russoc.502.d.integration_final
+		trigger = { has_autonomy_state = kr_autonomous_soviet_republic }
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { save_event_target_as = target }
+	}
+
+	option = {
+		log = "[GetLogInfo]: event russoc.502 option russoc.502.a"
+		name = russoc.502.a
+		add_collaboration = { target = FROM value = 0.05 }
+		if = {
+			limit = { FROM = { has_autonomy_state = kr_autonomous_soviet_republic } }
+			SOV_integrate_TARGET_effect = yes
+		}
+		else = {
+			FROM = { get_current_government_type = yes }
+			if = {
+				limit = { FROM = { has_autonomy_state = kr_soviet_republic_not_equal } }
+				set_autonomy = {
+					target = FROM
+					autonomy_state = kr_autonomous_soviet_republic
+					end_wars = no
+				}
+			}
+			else = {
+				set_autonomy = {
+					target = FROM
+					autonomy_state = kr_soviet_republic_not_equal
+					end_wars = no
+				}
+			}
+			FROM = { restore_previous_government_type = yes }
+		}
+	}
+}
+
+country_event = { #Republic refused integration
+	id = russoc.503
+	title = russoc.503.t
+	desc = russoc.503.d
+	
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event russoc.503 option russoc.503.a"
+		name = russoc.503.a #Attack
+		effect_tooltip = {
+			FROM = { SOV_break_puppet_effect = yes }
+		}
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+
 
 ### Don-Kuban seizes Astrakhan ###
 country_event = {
@@ -32882,6 +33091,10 @@ country_event = { #Russia offers us an alliance
 				}
 			}
 		}
+		if = {
+			limit = { soviets_exist = yes }
+			effect_tooltip = { FROM = { SOV_puppet_ROOT_effect = yes } }
+		}
 	}
 	option = {
 		name = rusfor.52.b
@@ -32960,17 +33173,16 @@ country_event = { #Russia offers us an alliance
 			}
 		}
 		FROM = { country_event = { id = rusfor.58 days = 1 } }
+		if = {
+			limit = { soviets_exist = yes }
+			custom_effect_tooltip = if_FROM_agrees
+			effect_tooltip = { FROM = { SOV_puppet_ROOT_effect = yes } }
+		}
 	}
 	option = {
 		name = rusfor.52.c
 		ai_chance = {
 			factor = 30
-			modifier = {
-				add = 50
-				FROM = {
-					any_owned_state = { is_claim_or_core_of_ROOT = yes }
-				}
-			}
 			modifier = {
 				add = 30
 				OR = {
@@ -33094,18 +33306,25 @@ country_event = { #Country responds
 			has_country_flag = RUS_allied_@FROM
 		}
 		clr_country_flag = RUS_allied_@FROM
-		add_to_faction = FROM
+		
 		if = {
-			limit = {
-				FROM = {
-					OR = {
-						tag = EST
-						tag = LAT
-						tag = LIT
+			limit = { soviets_exist = yes }
+			SOV_puppet_FROM_effect = yes
+		}
+		else = {
+			add_to_faction = FROM
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							tag = EST
+							tag = LAT
+							tag = LIT
+						}
 					}
 				}
+				set_country_flag = RUS_will_liberate_baltic
 			}
-			set_country_flag = RUS_will_liberate_baltic
 		}
 	}
 
@@ -33315,15 +33534,17 @@ country_event = { #Country wants their claims back
 			modifier = {
 				factor = 0
 				has_completed_focus = RUS_Expansionism
-				RUS_savinkov_in_power = no
-			}
-			modifier = {
-				factor = 0.6
-				RUS_savinkov_in_power = yes
+				has_socialist_government = no
 			}
 		}
-		effect_tooltip = {
-			add_to_faction = FROM
+		effect_tooltip = {			
+			if = {
+				limit = { soviets_exist = yes }
+				SOV_puppet_FROM_effect = yes
+			}
+			else = {
+				add_to_faction = FROM
+			}
 			every_owned_state = {
 				limit = { is_claim_or_core_of_FROM = yes }
 				if = {
@@ -33383,7 +33604,13 @@ country_event = { #Russia accepts
 	option = {
 		name = rusfor.59.a
 		FROM = {
-			add_to_faction = ROOT
+			if = {
+				limit = { soviets_exist = yes }
+				SOV_puppet_ROOT_effect = yes
+			}
+			else = {
+				add_to_faction = ROOT
+			}
 			every_owned_state = {
 				limit = { is_claim_or_core_of_ROOT = yes }
 				if = {

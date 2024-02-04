@@ -42,11 +42,7 @@ autonomy_state = {
 		kr_soviet_republic_equal
 	}
 	allowed = {
-		OR = {
-			original_tag = UKR
-			tag = ALO
-			tag = TRM
-		}
+		is_possible_autonomous_soviet_republic_tag = yes
 		overlord = { tag = RUS }
 	}
 

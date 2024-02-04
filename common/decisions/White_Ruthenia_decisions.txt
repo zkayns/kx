@@ -996,22 +996,11 @@ WHR_foreign_policy = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_russian_alliance"
 			set_country_flag = { flag = WHR_allies days = 20 value = 1 }
+			FROM = { country_event = whiteruthenia.48 }
 			if = {
-				limit = {
-					OR = {
-						has_socialist_government = yes
-						has_government = social_democrat
-					}
-					FROM = {
-						has_socialist_government = yes
-						has_government = social_democrat
-					}
-					NOT = { owns_state = 243 }
-				}
-				FROM = { country_event = whrpol.37 }
-			}
-			else = {
-				FROM = { country_event = whiteruthenia.48 }
+				limit = { soviets_exist = yes }
+				custom_effect_tooltip = if_FROM_agrees
+				effect_tooltip = { FROM = { SOV_puppet_ROOT_effect = yes } }
 			}
 		}
 	}

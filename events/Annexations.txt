@@ -934,7 +934,7 @@ country_event = { #Romanian liberation
 			ROM = { 
 				RUS_install_puppet_monarchy = yes
 			}
-		}	
+		}
 	}	
 	option = { #integrate
 		name = eurasian_integration.option
@@ -2350,6 +2350,13 @@ country_event = { #Fate of Karelia
 		set_temp_variable = { tag_to_release = KAR }
 		release_targeted_tag = yes
 		KAR = { KAR_setup_puppet_karelia = yes }
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = KAR }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 	
 	option = { #Give it to Finland
@@ -5464,7 +5471,14 @@ country_event = { #Fate of Bessarabia / Moldova
 			MOL = { 
 				RUS_install_puppet_monarchy = yes
 			}
-		}	
+		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = MOL }
+			SOV_puppet_TARGET_effect = yes
+		}		
 	}
 
 	option = { # Liberate Greater Moldavia
@@ -5505,6 +5519,13 @@ country_event = { #Fate of Bessarabia / Moldova
 				RUS_install_puppet_monarchy = yes
 			}
 		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = MOL }
+			SOV_puppet_TARGET_effect = yes
+		}	
 		ROM = { set_cosmetic_tag = RRM_WAL }
 	}
 
@@ -10370,6 +10391,13 @@ country_event = { #Fate of Latvia
 					}
 				}
 			}
+			if = {
+				limit = {
+					ROOT = { has_country_flag = soviet_russia_restored }
+				}
+				set_temp_variable = { target = LAT }
+				SOV_puppet_TARGET_effect = yes
+			}	
 		}
 	}
 	
@@ -10514,6 +10542,13 @@ country_event = { #Fate of Latvia
 				}
 			}
 			else = { 
+				if = {
+					limit = {
+						ROOT = { has_country_flag = soviet_russia_restored }
+					}
+					set_temp_variable = { target = LAT }
+					SOV_puppet_TARGET_effect = yes
+				}	
 				LAT = { set_cosmetic_tag = BAT_PRI }
 			}			
 			880 = { retain_state = yes } #Latgale
@@ -10657,6 +10692,13 @@ country_event = { #Fate of Estonia
 		}
 		set_temp_variable = { tag_to_release = EST }
 		release_targeted_tag = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = EST }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 
 	option = { #give to UBD
@@ -11457,7 +11499,14 @@ country_event = { # Abkhazia
 			add_state_core = 1190
 		}
 		set_temp_variable = { tag_to_release = ABK }
-		release_targeted_tag = yes		
+		release_targeted_tag = yes	
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = ABK }
+			SOV_puppet_TARGET_effect = yes
+		}		
 	}
 
 	option = { #Give to georgia
@@ -12199,6 +12248,13 @@ country_event = { #The fate of Georgia
 			}			
 		}
 		else = {
+			if = {
+				limit = {
+					ROOT = { has_country_flag = soviet_russia_restored }
+				}
+				set_temp_variable = { target = GEO }
+				SOV_puppet_TARGET_effect = yes
+			}
 			GEO = { set_cosmetic_tag = GEO_TCU }
 		}
 		recheck_annexations = yes
@@ -12288,6 +12344,13 @@ country_event = { #The fate of Georgia
 		set_temp_variable = { tag_to_release = GEO }
 		release_targeted_tag = yes
 		recheck_annexations = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = GEO }
+			SOV_puppet_TARGET_effect = yes
+		}	
 	}
 
 	option = { #Integrate
@@ -13449,6 +13512,13 @@ country_event = { #The fate of Bukhara
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = TRK }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 
 	option = { #Integrate
@@ -13566,6 +13636,13 @@ country_event = { #The fate of Uzbekistan
 		}
 		set_temp_variable = { tag_to_release = UZB }
 		release_targeted_tag = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = UZB }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 
 	option = { #Release Uzbekistan but take Transcaspia
@@ -13724,6 +13801,13 @@ country_event = { #The fate of Kokand
 		set_temp_variable = { tag_to_release = KYR }
 		release_targeted_tag = yes
 		KYR = { set_cosmetic_tag = KYR_KOK }
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = ABK }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 	option = { #give to Central Asian ally
 		name = annex.79.d
@@ -13856,6 +13940,13 @@ country_event = { #The fate of Kazakhstan
 		}
 		set_temp_variable = { tag_to_release = ALO }
 		release_targeted_tag = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = ALO }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 
 	option = { #
@@ -15040,6 +15131,13 @@ country_event = { #The Annexation of Armenia
 		}
 		set_temp_variable = { tag_to_release = ARM }
 		release_targeted_tag = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = ARM }
+			SOV_puppet_TARGET_effect = yes
+		}	
 	}
 
 	option = { #Integrate
@@ -15174,6 +15272,13 @@ country_event = { #The Annexation of Azerbaijan
 		}
 		set_temp_variable = { tag_to_release = AZE }
 		release_targeted_tag = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = AZE }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 
 	option = { #Integrate
@@ -16385,7 +16490,7 @@ country_event = { #Fate of Ukraine
 		}
 		set_temp_variable = { tag_to_release = UKR }
 		release_targeted_tag = yes
-		UKR_setup_puppet = yes	
+		UKR_setup_puppet = yes
 	}
 	option = { #Puppet
 		name = annex.123.b
@@ -24725,6 +24830,13 @@ country_event = { #Fate of Mongolia
 				RUS_install_puppet_monarchy = yes
 			}
 		}	
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = MON }
+			SOV_puppet_TARGET_effect = yes
+		}	
 	}
 	option = { #Integrate
 		name = eurasian_integration.option
@@ -24834,6 +24946,13 @@ country_event = { #Fate of Mongolia
 				RUS_install_puppet_monarchy = yes
 			}
 		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = MON }
+			SOV_puppet_TARGET_effect = yes
+		}	
 	}
 
 	option = { #Split between Mongolia and China
@@ -24880,6 +24999,13 @@ country_event = { #Fate of Mongolia
 				RUS_install_puppet_monarchy = yes
 			}
 		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = MON }
+			SOV_puppet_TARGET_effect = yes
+		}	
 	}
 
 	option = { #Give it to China
@@ -45637,6 +45763,13 @@ country_event = { #Fate of Transbaikalia
 				}
 			}
 		}
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = BRY }
+			SOV_puppet_TARGET_effect = yes
+		}
 			
 	}
 	option = { #Release BRY, give the rest to SIB
@@ -45676,6 +45809,13 @@ country_event = { #Fate of Transbaikalia
 		}
 		puppet_released_tag = yes
 		set_temp_variable = { tag_to_release = SIB }
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = BRY }
+			SOV_puppet_TARGET_effect = yes
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -45717,7 +45857,14 @@ country_event = { #Fate of Transbaikalia
 			}
 			transfer_state_and_add_core = yes
 		}
-		puppet_released_tag = yes
+		puppet_released_tag = yes		
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = BRY }
+			SOV_puppet_TARGET_effect = yes
+		}
 		set_temp_variable = { tag_to_release = TRM }
 		every_owned_state = {
 			limit = {
@@ -46755,6 +46902,13 @@ country_event = { #Fate of Kalmykia
 		}
 		set_temp_variable = { tag_to_release = KLY }
 		release_targeted_tag = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = KLY }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 	option = { #Give to cossacks
 		name = annex.401.e
@@ -46915,6 +47069,13 @@ country_event = { #Fate of Mountain Republic
 		}
 		set_temp_variable = { tag_to_release = MTR }
 		release_targeted_tag = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = MTR }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 	option = { #Integrate not russia
 		name = annex.402.b
@@ -47209,6 +47370,13 @@ country_event = { #Fate of the Crimea
 				}
 			}
 		}
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = CRM }
+			SOV_puppet_TARGET_effect = yes
+		}
 	}
 	option = { #Integrate not russia
 		name = annex.403.b
@@ -47448,7 +47616,14 @@ country_event = { #Fate of the East Galicia
 			WSU = { 
 				RUS_install_puppet_monarchy = yes
 			}
-		}	
+		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = WSU }
+			SOV_puppet_TARGET_effect = yes
+		}		
 	}
 	option = {
 		name = annex.146.b #Give to Poland

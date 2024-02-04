@@ -1,3 +1,22 @@
+
+defined_text = {
+	name = SOV_integration_refusal_chance_tooltip
+	text = {
+		trigger = {
+			FROM = {
+				set_temp_variable = { refusal_weight = mtth:SOV_integration_refusal_chance }
+
+				set_temp_variable = { total_weight = mtth:SOV_integration_acceptance_chance }
+				add_to_temp_variable = { total_weight = refusal_weight }
+
+				divide_temp_variable = { refusal_weight = total_weight }
+
+				check_variable = { refusal_weight > 0 }
+			}
+		}
+		localization_key = SOV_integration_refusal_chance_tooltip
+	
+
 defined_text = {
 	name = GetRKPTroikaFavorite
 	text = {

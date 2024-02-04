@@ -1496,9 +1496,15 @@ country_event = {
 	option = {
 		name = whiteruthenia.48.a
 		ai_chance = { factor = 100 }
-		add_to_faction = WHR
+		if = {
+			limit = { soviets_exist = yes }
+			SOV_puppet_FROM_effect = yes
+		}
+		else = {
+			effect_tooltip = { add_to_faction = FROM }
+		}
 		add_stability = 0.07
-		WHR = {
+		FROM = {
 			country_event = {
 				id = whiteruthenia.49
 				days = 1
