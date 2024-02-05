@@ -15,7 +15,8 @@ defined_text = {
 			}
 		}
 		localization_key = SOV_integration_refusal_chance_tooltip
-	
+	}
+}
 
 defined_text = {
 	name = GetRKPTroikaFavorite
