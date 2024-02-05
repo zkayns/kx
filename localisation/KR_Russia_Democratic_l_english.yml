@@ -682,20 +682,6 @@ rusdem.349.a:0 "That's a great achievement!"
 RUS_soc_has_dissolved_duma:0 "Duma was dissolved"
 RUS_soc_has_abolished_senate:0 "Senate was dissolved"
 
-### Events possibly leading to RCW ###
-
-RUS_Siberian_Insurgency_decisions:0 "The Siberian Insurgency"
-RUS_Siberian_Insurgency_decisions_desc:0 "While we have secured our power in §GWestern Russia§!, territories eastern to §GUral Mountains§! are now in a state of §Ranarchy§!. The local authorities have proclaimed the restoration of the independent Siberian Republic and try to get control over these regions. We have to restore order there in order to suppress the Oblastniks and bring Siberia back under our control."
-
-RUS_control_state:0 "Restore Order in [FROM.GetName]"
-
-RUS_Tambov_Rebellion_decisions:0 "Pacification of Tambov"
-RUS_Tambov_Rebellion_decisions_desc:0 "Tambov is the core region of NRPR support. §FBoris Savinkov§! has now seized power in Tambov and neighbouring regions and tries to raise peasant opposition to our rule. If we don't manage to suppress their uprisings in time, they can become a real force."
-
-RUS_control_rrf_state:0 "Suppress Peasant Revolt in [FROM.GetName]"
-
-CP_5_PP_15:0 "£command_power §Y5§! £pol_power §Y15§!" 
-CP_5_PP_15_blocked:0 "£command_power §R5§! £pol_power §R15§!" 
 
 ### NRPR Democratic Events ###
 #351-410 reserved for nrpr
@@ -3465,7 +3451,7 @@ BDR_paternal_autocrat:0 "Bosphorus-Dardanelles Governorate"
  BDR_paternal_autocrat_party_long:0 "Russian Administration"
  BDR_national_populist_party:0 "OPK"
  BDR_national_populist_party_long:0 "Oikoumenikón Patriarkhíon Konstantinoupóleos (Ecumenical Patriarchate of Constantinople)"
- 
+
  
 ### Domestic Enemies ###
 RUS_dealing_with_opposition:0 "Dealing with Unrest"

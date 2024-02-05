@@ -560,7 +560,7 @@ RCW_discredited_regime: "Discredited Regime"
 RCW_discredited_regime_desc: "Our government, despite promoting democratic principles, is discredited in the eyes of common people. Nobody wants to fight for us..."
 
 RCW_legacy_of_civil_war: "Legacy of the First Civil War"
-RCW_legacy_of_civil_war_desc: "Our leaders and generals have fought in the First Russian Civil War, and since then have developed not only their named divisions and formed their own Camarillas, but also gained a lot of experience. Fighting ith us is dangerous."
+RCW_legacy_of_civil_war_desc: "Our leaders and generals have fought in the First Russian Civil War, and since then have developed not only their named divisions and formed their own Camarillas, but also gained a lot of experience. Fighting against us is dangerous."
 
 RRF_Popular_Movement: "Popular Movement"
 RRF_Popular_Movement_desc: "Born in the chaos of the Civil War, the NRPR ideological foundation is in Narodism, appealing to the wide masses of peasants, promising them prosperity and greatness of the Motherland."
@@ -568,6 +568,19 @@ RRF_Combat_Squads: "Combat Squads"
 RRF_Combat_Squads_desc: "BO-NRPR, commonly known as Combat Squads, is the paramilitary wing of the NRPR, mainly aimed at fight with socialists, strikes and anyone else, who is considered to be dangerous by the Vozhd and the Party."
 RRF_Green_Army_Support: "Green Army Support"
 RRF_Green_Army_Support_desc: "The Green Army, being constituted from peasant guerillas instead of regular soldiers, has proven to be a highly successful and rapidly self-mobilizing force. Their support will ensure another unyielding obstacle stands between Russia and our enemies."
+
+RUS_Siberian_Insurgency_decisions: "The Siberian Insurgency"
+RUS_Siberian_Insurgency_decisions_desc: "While we have secured our power in §GWestern Russia§!, territories eastern to §GUral Mountains§! are now in a state of §Ranarchy§!. The local authorities have proclaimed the restoration of the independent Siberian Republic and try to get control over these regions. We have to restore order there in order to suppress the Oblastniks and bring Siberia back under our control."
+
+RUS_control_state: "Restore Order in [FROM.GetName]"
+
+RUS_Tambov_Rebellion_decisions: "Pacification of Tambov"
+RUS_Tambov_Rebellion_decisions_desc: "Tambov is the core region of NRPR support. §FBoris Savinkov§! has now seized power in Tambov and neighbouring regions and tries to raise peasant opposition to our rule. If we don't manage to suppress their uprisings in time, they can become a real force."
+
+RUS_control_rrf_state: "Suppress Peasant Revolt in [FROM.GetName]"
+
+CP_5_PP_15: "£command_power §Y5§! £pol_power §Y15§!" 
+CP_5_PP_15_blocked: "£command_power §R5§! £pol_power §R15§!" 
 
 RVA: "Second Volunteer Army"
 RVA_ADJ: "Russian Volunteer"
