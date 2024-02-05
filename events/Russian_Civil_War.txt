@@ -1747,46 +1747,20 @@ country_event = { #RCW
 	option = {
 		name = rcw.27.a
 		ai_chance = {
-			factor = 90
+			factor = 100
 		}
-		if = {
-			limit = {
-				OR = {
-					has_socialist_government = yes
-					has_government = social_democrat
-				}
+		RUS = {
+			country_event = {
+				id = rcw.28
+				days = 2
+				random = 48
 			}
-			RUS = {
-				country_event = {
-					id = rcw.28
-					days = 2
-					random = 48
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					has_country_leader = {
-						name = "Stanisłaŭ Bułak-Bałachowič"
-						ruling_only = yes
-					}
-					has_government = national_populist
-				}
-			}
-			RRF = {
-				country_event = {
-					id = rcw.28
-					days = 2
-					random = 48
-				}
-			}
-		}
+		}		
 	}
 	option = {
 		name = rcw.27.b
 		ai_chance = {
-			factor = 10
+			factor = 0
 		}
 		add_stability = 0.05
 		add_political_power = -50
@@ -1890,18 +1864,7 @@ country_event = { #RCW
 				}
 				transfer_state_to = WHR
 			}
-			if = {
-				limit = {
-					FROM = {
-						NOT = { has_country_flag = WHR_anarchists }
-						OR = {
-							has_socialist_government = yes
-							has_government = social_democrat
-						}
-					}
-				}
-				SOV_puppet_FROM_effect = yes
-			}
+			SOV_puppet_FROM_effect = yes
 		}
 	}
 }
@@ -1934,16 +1897,7 @@ country_event = { #RCW
 			}
 			transfer_state_to = WHR
 		}
-		if = {
-			limit = {
-				NOT = { has_country_flag = WHR_anarchists }
-				OR = {
-					has_socialist_government = yes
-					has_government = social_democrat
-				}
-			}
-			FROM = { SOV_puppet_ROOT_effect = yes }
-		}			
+		FROM = { SOV_puppet_ROOT_effect = yes }
 	}
 }
 country_event = { #RCW

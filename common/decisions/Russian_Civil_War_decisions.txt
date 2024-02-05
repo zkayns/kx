@@ -225,22 +225,14 @@ RUS_civil_war_decisions = {
 						NOT = { has_country_flag = WHR_anarchists }
 						OR = {
 							has_socialist_government = yes
-							has_government = social_democrat
-							has_country_leader = {
-								name = "Stanisłaŭ Bułak-Bałachowič"
-								ruling_only = yes
-							}
-							has_government = national_populist
+							has_government = social_democrat							
 						}
 						is_subject = no
 						russian_civil_war = yes
 					}
 					country_event = rcw.27
 				}
-				else_if = {
-					limit = {
-						russian_civil_war = yes
-					}
+				else = {
 					country_event = whiteruthenia.63
 				}
 			}

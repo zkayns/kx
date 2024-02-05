@@ -1693,7 +1693,19 @@ is_possible_autonomous_soviet_republic_tag = {
 		original_tag = WSU
 	}
 }
-	
+russia_is_to_become_socialist = {
+	OR = {
+		has_game_rule = { rule = RUS_post_assassination option = RUS_POST_ASSASSINATION_REVOLUTION }
+		has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR }
+		has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION }
+		has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_EURASIA_PATH_LEFT_BOLSHEVIKS }
+		has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_EURASIA_PATH_LEFT_NAZBOL }
+		has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_EURASIA_PATH_REVOLUTION }
+		RUS = { plsr_in_power = yes }
+		RUS = { lpsr_in_power = yes }
+		NOT = { has_country_flag = RUS_decided_to_stay_democratic }
+	}
+}
 	
 	
 	
