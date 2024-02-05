@@ -1641,8 +1641,7 @@ bolsheviks.12.b: "Fight for independent Idel-Ural!"
 
 bolsheviks.13.t: "The Tatars and Bashkirs Revolt"
 bolsheviks.13.d: "The illegitimate government of Bolsheviks have caused the Tatars and Bashirs to rebel. The government, including [ROOT.GetLeader] suggest we should immediately intervene in the war, perhaps at a cost of losing these territories, but right now we have an advantage over forces of Bolsheviks. Perhaps it is our last chance to quickly overthrow them and restore our power over Russia."
-bolsheviks.13.a: "Guarantee their independence."
-bolsheviks.13.b: "Declare war on Bolsheviks!"
+bolsheviks.13.a: "We will deal with them later."
 bolsheviks.13.c: "Neither we recognize them!"
 
 bolsheviks.14.t: "Sokolnikov and Zinoviev Blamed in Revisionism"

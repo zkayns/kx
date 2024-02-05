@@ -6103,6 +6103,7 @@ focus = {
 		focus = SOV_Chairman_Zinoviev
 	}
 	available = {
+		has_war = no
 		OR = {
 			has_country_leader = {
 				ruling_only = yes
@@ -6338,6 +6339,7 @@ focus = {
 					ruling_only = yes
 					name = "Grigory Zinoviev"
 				}
+				has_war = no
 			}
 			has_country_flag = congress_of_soviets_ended		
 		}

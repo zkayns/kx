@@ -1764,6 +1764,24 @@ country_event = { #RCW
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				OR = {
+					has_country_leader = {
+						name = "Stanisłaŭ Bułak-Bałachowič"
+						ruling_only = yes
+					}
+					has_government = national_populist
+				}
+			}
+			RRF = {
+				country_event = {
+					id = rcw.28
+					days = 2
+					random = 48
+				}
+			}
+		}
 	}
 	option = {
 		name = rcw.27.b
@@ -1837,32 +1855,53 @@ country_event = { #RCW
 			target = FROM
 			modifier = KR_hates_govt
 		}
-		242 = {
-			owner = {
-				country_event = {
-					id = rcw.31
-					days = 2
+		every_enemy_country = {
+			limit = { 
+				OR = {
+					tag = RUS
+					tag = RVA
+					tag = WRA
+					tag = RRF
 				}
 			}
+			country_event = {
+				id = rcw.31
+				days = 2
+			}
 		}
-		every_state = {
-			limit = {
-				OR = {
-					state = 1287
-					state = 1292
-					state = 243
-					state = 755
-					state = 242
-					state = 1293
+		FROM = { country_event = rcw.30 }
+		effect_tooltip = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 1287
+						state = 1292
+						state = 243
+						state = 755
+						state = 242
+						state = 1293
+					}
 				}
+				if = {
+					limit = {
+						NOT = { is_claimed_by = WHR }
+					}
+					add_claim_by = WHR
+				}
+				transfer_state_to = WHR
 			}
 			if = {
 				limit = {
-					NOT = { is_claimed_by = WHR }
+					FROM = {
+						NOT = { has_country_flag = WHR_anarchists }
+						OR = {
+							has_socialist_government = yes
+							has_government = social_democrat
+						}
+					}
 				}
-				add_claim_by = WHR
+				SOV_puppet_FROM_effect = yes
 			}
-			transfer_state_to = WHR
 		}
 	}
 }
@@ -1895,22 +1934,16 @@ country_event = { #RCW
 			}
 			transfer_state_to = WHR
 		}
-		give_military_access = FROM
-		diplomatic_relation = {
-			country = FROM
-			relation = non_aggression_pact
-			active = yes
-		}
-		FROM = {
-			every_enemy_country = {
-				WHR = {
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}
+		if = {
+			limit = {
+				NOT = { has_country_flag = WHR_anarchists }
+				OR = {
+					has_socialist_government = yes
+					has_government = social_democrat
 				}
 			}
-		}
+			FROM = { SOV_puppet_ROOT_effect = yes }
+		}			
 	}
 }
 country_event = { #RCW
@@ -1929,20 +1962,6 @@ country_event = { #RCW
 		add_opinion_modifier = {
 			target = FROM
 			modifier = KR_outraged
-		}
-		add_stability = -0.05
-	}
-	option = {
-		name = rcw.31.b
-		trigger = {
-			is_owner_neighbor_of = WHR
-		}
-		ai_chance = {
-			base = 99
-		}
-		declare_war_on = {
-			target = WHR
-			type = annex_everything
 		}
 		add_stability = -0.05
 	}
@@ -5674,6 +5693,10 @@ country_event = { #RCW
 			country_event = {
 				id = rcw.504
 				days = 3
+			}
+			country_event = {
+				id = bolsheviks.12
+				days = 30
 			}
 		}
 	}
