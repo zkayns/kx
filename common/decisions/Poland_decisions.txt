@@ -1302,13 +1302,7 @@ PLC_intermarium = {
 			has_country_flag = PLC_formed_intermarium
 			country_exists = FIN
 			FIN = {
-				OR = {
-				AND = {
-				is_subject = no
-				is_in_faction = no	
-				}	
-				is_subject_of = POL
-				}
+				is_puppet = no
 			}
 		}
 		complete_effect = {
@@ -1338,13 +1332,8 @@ PLC_intermarium = {
 			has_country_flag = PLC_formed_intermarium
 			country_exists = HUN
 			HUN = {
-				OR = {
-				AND = {
-				is_subject = no
-				is_in_faction = no	
-				}	
-				is_subject_of = POL
-				}
+				is_puppet = no
+				is_in_faction = no
 			}
 		}
 		complete_effect = {

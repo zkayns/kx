@@ -3880,10 +3880,6 @@ country_event = { #Fight radicalism
 			ideology = syndicalist
 			popularity = -0.04
 		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = -0.03
-		}
 	}
 }
 country_event = {#Elections

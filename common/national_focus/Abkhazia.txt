@@ -790,7 +790,6 @@ focus_tree = {
 				ideology = totalist
 				popularity = -0.15
 			}
-			ABK_reduce_desolated_land = yes
 		}
 	}
 	focus = {
@@ -809,7 +808,19 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ABK_Pressure_Separatism"
 			add_ideas = ABK_integration_efforts
-			ABK_reduce_minority_protests = yes
+			if = {
+				limit = { has_idea = ABK_abkhaz_minority_protests_1 }
+				swap_ideas = {
+					remove_idea = ABK_abkhaz_minority_protests_1
+					add_idea = ABK_abkhaz_minority_protests_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ABK_abkhaz_minority_protests
+					add_idea = ABK_abkhaz_minority_protests_1
+				}
+			}
 		}
 	}
 	focus = {
@@ -854,8 +865,19 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ABK_National_Autonomy"
 			add_ideas = ABK_national_cultural_autonomy
-			ABK_reduce_minority_protests = yes
-			ABK_reduce_desolated_land = yes
+			if = {
+				limit = { has_idea = ABK_abkhaz_minority_protests_1 }
+				swap_ideas = {
+					remove_idea = ABK_abkhaz_minority_protests_1
+					add_idea = ABK_abkhaz_minority_protests_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ABK_abkhaz_minority_protests
+					add_idea = ABK_abkhaz_minority_protests_1
+				}
+			}		
 		}
 	}
 	focus = {
@@ -875,7 +897,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ABK_Ideal_Province"
 			ABK_reduce_desolated_land = yes
-			ABK_reduce_minority_protests = yes
+			remove_ideas = ABK_abkhaz_minority_protests_2
 		}
 	}
 	focus = {
@@ -1198,7 +1220,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ABK_Social_Guarantees"
 			add_stability = 0.05
 			add_political_power = 35
-			ABK_reduce_desolated_land = yes
 		}
 	}
 	focus = {
@@ -1661,7 +1682,6 @@ focus_tree = {
 				name = ABK_afro_abkhazian_party
 				long_name = ABK_afro_abkhazian_party_long
 			}
-			ABK_reduce_desolated_land = yes
 		}
 	}
 	focus = {
@@ -1689,8 +1709,7 @@ focus_tree = {
 			}
 			add_ideas = ABK_Nestor_Lakoba_for_rso
 			add_ideas = ABK_Andronik_Tomasian_eco_rso
-			add_ideas = ABK_Samson_Chanba_sec_rso		
-			ABK_reduce_desolated_land = yes	
+			add_ideas = ABK_Samson_Chanba_sec_rso			
 		}
 	}
 	focus = {
@@ -1714,7 +1733,19 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ABK_Guarantee_Majority_Rights"
 			add_stability = 0.1
 			add_ideas = ABK_national_cultural_autonomy
-			ABK_reduce_minority_protests = yes
+			if = {
+				limit = { has_idea = ABK_abkhaz_minority_protests_1 }
+				swap_ideas = {
+					remove_idea = ABK_abkhaz_minority_protests_1
+					add_idea = ABK_abkhaz_minority_protests_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ABK_abkhaz_minority_protests
+					add_idea = ABK_abkhaz_minority_protests_1
+				}
+			}
 		}
 	}
 	focus = {
@@ -1768,7 +1799,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ABK_Deal_With_Poverty"
 			ABK_reduce_desolated_land = yes
-			ABK_reduce_minority_protests = yes
 			1080 = {
 				increase_state_category_by_one_level = yes
 				add_extra_state_shared_building_slots = 1
@@ -1884,7 +1914,6 @@ focus_tree = {
 					transfer_state_to = ROOT 
 				}
 			}
-			ABK_reduce_minority_protests = yes
 		}
 	}
 	focus = {
