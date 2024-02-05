@@ -4651,7 +4651,7 @@ focus_tree = {
 				MON_sternberg_in_power = yes
 			}
 			has_country_flag = MON_russia_friends_flag
-			soviets_exist = no		
+			RUS = { NOT = { has_country_flag = soviet_russia_restored } }	
 		}
 		prerequisite = { focus = MON_look_at_russia_policy }
 		ai_will_do = {
@@ -4686,7 +4686,7 @@ focus_tree = {
 				tooltip = MON_sternberg_tooltip
 				MON_sternberg_in_power = yes
 			}
-			soviets_exist = no	
+			RUS = { NOT = { has_country_flag = soviet_russia_restored } }	
 		}
 		prerequisite = { focus = MON_russia_friendship }
 		ai_will_do = {
@@ -4712,7 +4712,7 @@ focus_tree = {
 				tooltip = MON_sternberg_tooltip
 				MON_sternberg_in_power = yes
 			}
-			soviets_exist = no	
+			RUS = { NOT = { has_country_flag = soviet_russia_restored } }	
 		}
 		prerequisite = { focus = MON_russia_friendship }
 		ai_will_do = {
@@ -4737,7 +4737,7 @@ focus_tree = {
 				tooltip = MON_sternberg_tooltip
 				MON_sternberg_in_power = yes
 			}
-			soviets_exist = no	
+			RUS = { NOT = { has_country_flag = soviet_russia_restored } }	
 		}
 		prerequisite = { focus = MON_give_russians_citizenship }
 		prerequisite = { focus = MON_military_mission_to_russia }
@@ -4773,7 +4773,7 @@ focus_tree = {
 				tooltip = MON_sternberg_tooltip
 				MON_sternberg_in_power = yes
 			}
-			soviets_exist = no	
+			RUS = { NOT = { has_country_flag = soviet_russia_restored } }	
 		}
 		prerequisite = { focus = MON_conscript_siberian_russians }
 		ai_will_do = {
@@ -4808,7 +4808,7 @@ focus_tree = {
 				tooltip = MON_sternberg_tooltip
 				MON_sternberg_in_power = yes
 			}
-			soviets_exist = no	
+			RUS = { NOT = { has_country_flag = soviet_russia_restored } }	
 		}
 		prerequisite = { focus = MON_conscript_siberian_russians }
 		ai_will_do = {
@@ -4836,7 +4836,7 @@ focus_tree = {
 			}
 			has_global_flag = northwest_conflict_ended
 			has_war = no
-			soviets_exist = no	
+			RUS = { NOT = { has_country_flag = soviet_russia_restored } }	
 		}
 		prerequisite = { focus = MON_promote_cooperation_between_us }
 		prerequisite = { focus = MON_request_arms }
@@ -4865,7 +4865,7 @@ focus_tree = {
 			}
 			OR = {
 				has_country_flag = MON_our_own_way_flag
-				soviets_exist = yes
+				RUS = { has_country_flag = soviet_russia_restored }
 			}
 		}
 		prerequisite = { focus = MON_look_at_russia_policy }

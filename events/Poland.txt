@@ -4851,8 +4851,8 @@ country_event = { # Type-Polish Program
 		name = poland.208.f # Russian Designs
 		trigger = {
 			has_socialist_government = yes
-			soviets_exist = yes
-			NOT = { has_war_with = SOV }
+			RUS = { has_country_flag = soviet_russia_restored }
+			NOT = { has_war_with = RUS }
 		}
 		army_experience = 10
 		if = {

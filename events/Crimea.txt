@@ -3961,7 +3961,7 @@ country_event = {
 				OR = {
 					UKR = { UKR_has_socialist_government = yes }
 					RUS = { is_in_faction_with = ROOT }
-					soviets_exist = yes
+					RUS = { has_country_flag = soviet_russia_restored }
 				}
 			}
 		}
@@ -3975,7 +3975,7 @@ country_event = {
 				factor = 0
 				OR = {
 					RUS = { is_in_faction_with = ROOT }
-					soviets_exist = yes
+					RUS = { has_country_flag = soviet_russia_restored }
 				}
 			}
 		}

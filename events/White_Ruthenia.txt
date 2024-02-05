@@ -1497,7 +1497,7 @@ country_event = {
 		name = whiteruthenia.48.a
 		ai_chance = { factor = 100 }
 		if = {
-			limit = { soviets_exist = yes }
+			limit = { has_country_flag = soviet_russia_restored }
 			SOV_puppet_FROM_effect = yes
 		}
 		else = {
@@ -5845,7 +5845,7 @@ country_event = { # Anti-German Revolution
 					}
 				}
 				NOT = {
-					soviets_exist = yes
+					RUS = { has_country_flag = soviet_russia_restored }
 					has_war_with = RUS
 				}
 			}

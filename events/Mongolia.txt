@@ -2492,7 +2492,7 @@ country_event = {
 		}
 		NOT = {
 			country_exists = RUS
-			soviets_exist = yes
+			RUS = { has_country_flag = soviet_russia_restored }
 		}
 		OR = {
 			NOT = { country_exists = TRM }
@@ -11015,7 +11015,9 @@ country_event = { # russia policy
 	option = { # buddy up with Russia
 		name = mon.169.a
 		trigger = {
-			soviets_exist = no
+			RUS = {
+				NOT = { has_country_flag = soviet_russia_restored }
+			}
 		}
 		set_country_flag = MON_russia_friends_flag
 		add_political_power = 100

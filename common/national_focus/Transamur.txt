@@ -4148,11 +4148,13 @@ focus = {
 		available = {
 			TRM_nra_in_power = yes
 			if = {
-				limit = { soviets_exist = yes }
-				NOT = { has_government = totalist }
+				limit = { RUS = { has_country_flag = soviet_russia_restored } }
+				RUS = {
+					NOT = { has_government = totalist }
+				}
 			}
 			else = {
-				NOT = { soviets_exist = yes }
+				NOT = { RUS = { has_country_flag = soviet_russia_restored } }
 			}
 			RUS = {
 				if = {

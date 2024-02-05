@@ -27204,7 +27204,7 @@ country_event = { #Nation at war
 	desc = {
 		trigger = {
 			has_war_with = RUS
-			soviets_exist = yes
+			RUS = { has_country_flag = soviet_russia_restored }
 			UKR = {
 				has_elected_government = no
 				UKR_pavlo_skoropadsky_in_power = yes
@@ -31182,11 +31182,11 @@ country_event = { #The Conspiracy Strikes
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ukrfor.74 FROM = [From.GetName]" }
 	title = ukrfor.74.t
 	desc = {
-		trigger = { soviets_exist = no }
+		trigger = { RUS = { NOT = { has_country_flag = soviet_russia_restored } } }
 		text = ukrfor.74.d
 	}
 	desc = {
-		trigger = { soviets_exist = yes }
+		trigger = { RUS = { has_country_flag = soviet_russia_restored } }
 		text = ukrfor.74.d2
 	}
 	picture = GFX_report_event_UKR_propaganda
@@ -31231,7 +31231,7 @@ country_event = { #The Conspiracy Strikes
 		custom_effect_tooltip = UKR_economic_crisis_tt
 		if = {
 			limit = { 
-				soviets_exist = yes
+				RUS = { has_country_flag = soviet_russia_restored }
 				has_war_with = RUS
 			}
 			RUS = { white_peace_with_ROOT = yes }

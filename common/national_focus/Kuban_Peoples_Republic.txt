@@ -1293,7 +1293,7 @@ focus_tree = {
 				has_completed_focus = KUB_End_Rada_Conflict
 			}
 			has_country_flag = KUB_new_ataman_elected
-			soviets_exist = no
+			RUS = { has_socialist_government = no }
 			has_war = no
 			hidden_trigger = { 
 				NOT = { has_country_flag = RUS_refused_us }
@@ -2002,8 +2002,8 @@ focus_tree = {
 		}
 		bypass = {
 			kuban_is_pro_russian = yes
-			soviets_exist = yes
-			TRM = { KUB_has_bolsheviks = yes		 }
+			RUS = { has_country_flag = soviet_russia_restored }
+			TRM = { has_socialist_government = yes }
 		}
 		prerequisite = {
 			focus = KUB_Follow_Lineitsy_Tactics
@@ -2337,7 +2337,7 @@ focus_tree = {
 				activate_targeted_decision = { target = GER decision = KUB_buy_tank }		
 			}
 			else_if = {
-				limit = { soviets_exist = no }
+				limit = { RUS = { NOT = { has_country_flag = soviet_russia_restored } } }
 				activate_targeted_decision = { target = RUS decision = KUB_buy_tank }
 			}
 			add_tech_bonus = {

@@ -527,7 +527,7 @@ international_likes_sov = {
 		}
 	}
 	enable = {
-		soviets_exist = yes
+		RUS = { has_country_flag = soviet_russia_restored }
 		has_socialist_government = yes
 		NOT = { has_war_with = RUS }
 	}

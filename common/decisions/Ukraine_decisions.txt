@@ -3831,8 +3831,8 @@ UKR_seeking_allies = {
 				limit = {
 					FROM = { tag = RUS }
 				}
-				soviets_exist = yes
 				FROM = { 
+					has_country_flag = soviet_russia_restored
 					NOT = { is_in_faction_with = INT }
 				}
 			}

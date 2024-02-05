@@ -272,7 +272,9 @@ KUB_Economy = {
 		icon = GFX_decision_generic_factory
 		allowed = { always = no }
 		available = {
-			soviets_exist = no
+			RUS = {
+				NOT = { has_country_flag = soviet_russia_restored }
+			}
 		}
 		days_remove = 35
 		cost = 35
@@ -1291,7 +1293,7 @@ KUB_foreign_policy_decisions = {
 			is_subject = no
 			is_in_faction = no
 			KUB_has_bolsheviks = yes
-			soviets_exist = yes
+			RUS = { has_country_flag = soviet_russia_restored }
 			FROM = { 
 				NOT = { has_war_with = ROOT }
 			}

@@ -206,9 +206,9 @@ GEO_foreign_policy_decisions = {
 				limit = {
 					FROM = { tag = RUS }
 				}
-				soviets_exist = yes
 				russian_civil_war = no
 				FROM = { 
+					has_country_flag = soviet_russia_restored
 					NOT = { is_in_faction_with = INT }
 					NOT = { has_war_with = ROOT }
 				}
