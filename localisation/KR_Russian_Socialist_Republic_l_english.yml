@@ -11,6 +11,10 @@ SOV: "Russian Socialist Republic"
 SOV_ADJ: "Russian"
 SOV_DEF: "the Russian Soviet Federative Socialist Republic"
 
+SOV_nsp: "Russian Socialist Republic"
+SOV_nsp_ADJ: "Russian"
+SOV_nsp_DEF: "the Russian Soviet Federative Socialist Republic"
+
 SOV_psr: "Russian Labour Republic"
 SOV_psd_ADJ: "Russian"
 SOV_psr_DEF: "the Russian Labour Republic"
