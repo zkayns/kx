@@ -4335,10 +4335,12 @@ focus = {
 		}
 		available = {
 			TRM_semyenov_in_power = yes
+			NOT = { country_exists = BRY }
 		}
 		bypass = {
 			hidden_trigger = { has_global_flag = TRM_will_release_bry_cossacks }
 		}
+		bypass_if_unavailable = yes
 		ai_will_do = {
 			base = 10
 		}

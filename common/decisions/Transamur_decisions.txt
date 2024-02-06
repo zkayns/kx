@@ -1472,7 +1472,7 @@ TRM_japanese_influence = {
 			TRM_has_japanese_influence = yes
 			NOT = { has_government = authoritarian_democrat }
 			has_completed_focus = TRM_Seek_For_Entente_Support
-			has_socialist_government = yes
+			has_socialist_government = no
 		}
 		available = {
 			NOT = { TRM_semyenov_in_power = yes }
