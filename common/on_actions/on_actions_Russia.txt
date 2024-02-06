@@ -462,7 +462,6 @@ on_actions = {
 						}
 					}
 					log = "KX_Event_Logging;[ROOT.GetName] Intervened in RCW;[GetDateText];[ROOT.GetName];[FROM.GetName]"
-					TRM = { add_ideas = RCW_major_TRM }
 				}				
 			}
 			if = {
@@ -493,6 +492,10 @@ on_actions = {
 					hidden_effect = {
 						RUS = { country_event = rusfor.1491 }
 					}
+				}
+				if = {
+					limit = { russian_civil_war = yes }
+					TRM = { add_ideas = RCW_major_TRM }
 				}
 				hidden_effect = {
 					RUS = { 

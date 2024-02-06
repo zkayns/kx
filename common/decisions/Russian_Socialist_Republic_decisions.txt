@@ -685,18 +685,6 @@ SOV_Spreading_The_Revolution_decisions = {
 				country_event = russoc.500
 				hidden_effect = { activate_mission = SOV_subject_integration_timer }
 			}
-			custom_effect_tooltip = "[ROOT.SOV_integration_refusal_chance_tooltip]"
-			if = {
-				limit = { NOT = { check_variable = { refusal_weight = 0 } } }
-				custom_effect_tooltip = if_they_refuse_tt
-				effect_tooltip = {
-					FROM = { SOV_break_puppet_effect = yes }
-					create_wargoal = {
-						target = FROM
-						type = annex_everything
-					}
-				}
-			}
 		}
 
 		remove_effect = {

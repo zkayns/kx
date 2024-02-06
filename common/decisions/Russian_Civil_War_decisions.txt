@@ -15,7 +15,6 @@ RUS_civil_war_decisions = {
 			NOT = {
 				has_war_with = GER
 				has_war_with = DKB
-				has_war_with = TRM
 				has_war_with = FIN
 			}
 			if = {
@@ -459,7 +458,7 @@ RUS_civil_war_decisions = {
 				}
 				else_if = {
 					limit = { RUS_wrangel_in_power = yes }
-					FROM = { has_country_flag = TRM_Mil_coup }
+					FROM = { TRM_do_rovs_in_power = yes }
 				}
 			}
 		}
@@ -508,7 +507,7 @@ RUS_civil_war_decisions = {
 		}
 		selectable_mission = no
 		fire_only_once = yes
-		days_mission_timeout = 600
+		days_mission_timeout = 365
 		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RCW_give_to_the_people target: [From.GetName]"
@@ -543,35 +542,32 @@ RUS_civil_war_decisions = {
 		}
 		available = {
 			has_global_flag = RCW_begun
-			OR = {
-				AND = {
-					tag = RUS
-					NOT = { country_exists = RRF }
-					NOT = { country_exists = RVA }
-					NOT = { country_exists = WRA }
-					has_war_with = TRM
-				}
-				AND = {
-					tag = RRF
-					NOT = { country_exists = RUS }
-					NOT = { country_exists = RVA }
-					NOT = { country_exists = WRA }
-					has_war_with = TRM
-				}
-				AND = {
-					tag = RVA
-					NOT = { country_exists = RUS }
-					NOT = { country_exists = RRF }
-					NOT = { country_exists = WRA }
-					has_war_with = TRM
-				}
-				AND = {
-					tag = WRA
-					NOT = { country_exists = RUS }
-					NOT = { country_exists = RRF }
-					NOT = { country_exists = RVA }
-					has_war_with = TRM
-				}
+			if = {
+				limit = { tag = RRF }
+				NOT = { country_exists = RUS }
+				NOT = { country_exists = RVA }
+				NOT = { country_exists = WRA }
+				has_war_with = TRM
+			}
+			else_if = {
+				limit = { tag = RVA }
+				NOT = { country_exists = RUS }
+				NOT = { country_exists = RRF }
+				NOT = { country_exists = WRA }
+				has_war_with = TRM
+			}
+			else_if = {
+				limit = { tag = WRA }
+				NOT = { country_exists = RUS }
+				NOT = { country_exists = RRF }
+				NOT = { country_exists = RVA }
+				has_war_with = TRM
+			}
+			else = {
+				NOT = { country_exists = WRA }
+				NOT = { country_exists = RRF }
+				NOT = { country_exists = RVA }
+				has_war_with = TRM
 			}
 		}
 		cost = 0
@@ -579,17 +575,14 @@ RUS_civil_war_decisions = {
 		ai_will_do = { 
 			base = 2000
 		}
-		targets = { TRM }
-		target_root_trigger = {
-			has_war_with = FROM
-		}
-		target_trigger = {
+		visible = {
 			has_global_flag = RCW_begun
+			has_war_with = TRM
 		}
 		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_propose_ceasefire_trm"
-			FROM = { country_event = rcw.101 }
+			TRM = { country_event = rcw.101 }
 		}
 	}		
 	RCW_conquer_siberia = {

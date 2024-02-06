@@ -1261,10 +1261,10 @@ focus_tree = {
 				is_subject = no
 				NOT = { is_in_faction_with = JAP }
 				OR = {
-					has_country_flag = TRM_Kolchak_alive
-					has_country_flag = TRM_Mil_coup
-					has_country_flag = TRM_Moryaki_Coup
-					has_country_flag = TRM_Semyonov_Coup
+					TRM_kolchak_in_power = yes
+					TRM_do_rovs_in_power = yes
+					TRM_semyenov_in_power = yes
+					TRM_stark_in_power = yes
 				}
 			}
 			has_country_flag = TRM_accepted_alliance

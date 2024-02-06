@@ -914,6 +914,118 @@ RUS_crush_transamur = {
 	}
 }
 
+RUS_crush_RVA = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			country_exists = RVA
+			has_war_with = RVA
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = RVA
+		value = 400
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RVA
+		value = 50
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 137 #Primorye
+		value = 30000
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = RVA
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
+
+RUS_crush_RRF = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			country_exists = RRF
+			has_war_with = RRF
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = RRF
+		value = 400
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RRF
+		value = 50
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 133 #Primorye
+		value = 30000
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = RRF
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
+RUS_crush_WRA = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			country_exists = WRA
+			has_war_with = WRA
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = WRA
+		value = 400
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = WRA
+		value = 50
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 132 #Primorye
+		value = 30000
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = WRA
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
 
 russia_likes_serbia = {
 	allowed = {

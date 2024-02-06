@@ -832,7 +832,9 @@ ideas = {
 	rus_austerity_measures = {
 		on_add = {log = "[GetDateText]: [Root.GetName]: add idea rus_austerity_measures"}
 		allowed = { always = no }
-
+		available = { 
+			NOT = { has_country_flag = soviet_russia_restored }
+		}
 		modifier = {
 			consumer_goods_factor = 0.27
 			production_factory_max_efficiency_factor = -0.05
@@ -6426,20 +6428,43 @@ ideas = {
 				war_support_factor = -0.2
 			}
 		}
-		RCW_legacy_of_civil_war = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RCW_legacy_of_civil_war"}
+		RVA_legacy_of_civil_war = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RVA_legacy_of_civil_war"}
 			allowed = { always = no }
 			picture = RUS_Yunarmiya
 			modifier = {
 				surrender_limit = 0.05
-				war_support_factor = 0.2
 				army_morale_factor = 0.05
-				army_org_factor = 0.05
+				experience_gain_army = 0.05
+				command_power_gain_mult = 0.15
 			}
 			targeted_modifier = {
 				tag = RUS
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
+			}
+		}
+		RVA_staff_split = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RVA_staff_split"}
+			allowed = { always = no }
+			picture = RUS_divided_army
+			modifier = {
+				army_org_factor = -0.25
+				training_time_army_factor = 0.2
+				land_doctrine_cost_factor = 0.5
+				planning_speed = -0.15
+			}
+		}
+		RVA_voluntary_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RVA_voluntary_army"}
+			allowed = { always = no }
+			available = {
+				RUS_kornilov_in_power = yes
+			}
+			picture = RUS_divided_army
+			modifier = {
+				conscription_factor = -0.25
+				stability_factor = 0.15
 			}
 		}
 		RRF_Popular_Movement = {
@@ -6493,11 +6518,11 @@ ideas = {
 				has_government = national_populist
 			}
 			modifier = {
-				conscription = 0.02
+				conscription_factor = 0.02
 				command_power_gain_mult = 0.15
 				production_lack_of_resource_penalty_factor = -0.07
-				equipment_capture_factor = 0.25
-				out_of_supply_factor = -0.15
+				equipment_capture_factor = 0.05
+				out_of_supply_factor = -0.05
 			}
 		}
 		RCW_joint_front_idea = {
@@ -6528,9 +6553,9 @@ ideas = {
 				is_in_faction = yes
 			}
 			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				army_strength_factor = 0.05
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				army_strength_factor = 0.03
 			}
 		}
 		RCW_major = {

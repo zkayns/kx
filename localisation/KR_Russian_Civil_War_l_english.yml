@@ -491,7 +491,7 @@ rcw.509.d: "Having decided to take up the defense, detachments of the Red Guards
 rcw.509.a: "Attack! Crush them once and for all!"
 rcw.509.b: "Wait for reinforcements"
 
-rcw.510.a: "Mutiny Suppressed"
+rcw.510.t: "Mutiny Suppressed"
 rcw.510.d: "The arriving reinforcements gave us the opportunity to completely dislodge the sailors from Petrograd. The further organized assault on Kronstadt was given to our troops without much difficulty. The mutineers were captured and later shot"
 rcw.510.a: "No traitor will escape the punishing sword of the revolution"
 
@@ -559,8 +559,12 @@ RCW_transamur_front_idea: "Push Against [TRM.GetName]"
 RCW_discredited_regime: "Discredited Regime"
 RCW_discredited_regime_desc: "Our government, despite promoting democratic principles, is discredited in the eyes of common people. Nobody wants to fight for us..."
 
-RCW_legacy_of_civil_war: "Legacy of the First Civil War"
-RCW_legacy_of_civil_war_desc: "Our leaders and generals have fought in the First Russian Civil War, and since then have developed not only their named divisions and formed their own Camarillas, but also gained a lot of experience. Fighting against us is dangerous."
+RVA_legacy_of_civil_war: "Legacy of the First Civil War"
+RVA_legacy_of_civil_war_desc: "Our leaders and generals have fought in the First Russian Civil War, and since then have developed not only their named divisions and formed their own Camarillas, but also gained a lot of experience. Fighting against us is dangerous."
+RVA_staff_split: "Divided Military Staff"
+RVA_staff_split_desc: "Factionalism within the ROVS seriously weakens our military capabilities."
+RVA_voluntary_army: "Voluntary Army"
+RVA_voluntary_army_desc: "The lack of forced conscription leads to serious manpower deficit in our ranks. Kornilov's focus on strike forces and unwillingness to conscript the masses due to the fear of instability can prevent us for achieving victory over the Reds, but as soon as a new leader assumes the mantle of power, he will likely announce general mobilisation."
 
 RRF_Popular_Movement: "Popular Movement"
 RRF_Popular_Movement_desc: "Born in the chaos of the Civil War, the NRPR ideological foundation is in Narodism, appealing to the wide masses of peasants, promising them prosperity and greatness of the Motherland."

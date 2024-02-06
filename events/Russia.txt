@@ -41424,45 +41424,19 @@ country_event = { #vladivostok captured
 	desc = rusfor.1422.d
 	fire_only_once = yes
 	trigger = {
-			tag = RUS
+		tag = RUS
 		controls_state = 408
 		has_war_with = TRM
 	}
 	option = {
 		name = rusfor.1422.a
-		remove_ideas = RUS_Siberian_War_Buff
-		TRM = { separate_peace_all_wars = yes }
 		if = {
 			limit = {
 				TRM = { is_subject_of = JAP }
 			}
 			white_peace = JAP
 		}
-		annex_country = {
-			target = TRM
-			transfer_troops = yes
-		}		
-	}
-	option = {
-		name = rusfor.1422.b
-		trigger = {
-			TRM = { is_subject_of = JAP }
-		}
-		remove_ideas = RUS_Siberian_War_Buff
-		TRM = { separate_peace_all_wars = yes }
-		annex_country = {
-			target = TRM
-			transfer_troops = yes
-		}
-		if = {
-			limit = {
-				NOT = { has_war_with = JAP }
-			}
-			declare_war_on = {
-				target = JAP
-				type = annex_everything
-			}
-		}
+		TRM = { force_capitulate = yes }
 	}
 }
 country_event = { #Hidden failsafe event if TRM peaces out before Vladivostok is captured
@@ -41473,7 +41447,7 @@ country_event = { #Hidden failsafe event if TRM peaces out before Vladivostok is
 	fire_only_once = yes
 	hidden = yes
 	trigger = {
-			tag = RUS
+		tag = RUS
 		has_idea = RUS_Siberian_War_Buff
 		TRM = { exists = no }
 	}

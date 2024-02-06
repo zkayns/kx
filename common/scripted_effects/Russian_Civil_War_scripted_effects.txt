@@ -63,7 +63,7 @@ setup_soviet_russia = {
 		set_country_flag = RUS_duma_dissolved
 		set_country_flag = SOV_must_deal_with_opposition
 		load_focus_tree = Russia_Socialist
-		set_stability = 0.1
+		set_stability = 0.6
 		set_war_support = 0.4
 		set_country_flag = soc_dems_are_socialists
 		if = {
@@ -249,7 +249,7 @@ setup_rcw_workers_initial = {
 		set_country_flag = Dmitri_N_Verderevsky_dead
 		set_country_flag = Aleksandr_A_Kazakov_dead
 		ROOT = { save_global_event_target_as = soviet_russia }
-		set_stability = 0.1
+		set_stability = 0.6
 		set_war_support = 0.4
 		set_country_flag = soc_dems_are_socialists
 		remove_all_ministers = yes
@@ -332,8 +332,6 @@ setup_rcw_workers_initial = {
 			limit = { has_id = 449 }	
 			set_leader_portrait = GFX_Portrait_RUS_Gregory_Zhukov_General
 		}
-		add_ideas = SOV_chaotic_revolution
-		country_lock_all_division_template = yes
 	}
 }
 initialize_rcw = {
@@ -861,8 +859,6 @@ setup_savinkov_civil_war = {
 		RVA = {
 			transfer_technology_without_doctrines = yes
 			country_lock_all_division_template = yes
-			RUS_transfer_russian_ideas = yes
-			add_political_power = 100
 			country_event = {
 				id = rcw.19
 				days = 5
@@ -990,8 +986,6 @@ setup_soviets_dem_civil_war = {
 		RVA = {
 			transfer_technology_without_doctrines = yes
 			country_lock_all_division_template = yes
-			RUS_transfer_russian_ideas = yes
-			add_political_power = 100
 			country_event = {
 				id = rcw.19
 				days = 5
@@ -1105,8 +1099,6 @@ setup_soviets_wrangel_civil_war = { #less democratic, more autocratic
 		RVA = {
 			transfer_technology_without_doctrines = yes
 			country_lock_all_division_template = yes
-			RUS_transfer_russian_ideas = yes
-			add_political_power = 100
 			create_country_leader = {
 				name = "Pyotr Wrangel"
 				desc = "POLITICS_PYOTR_VRANGEL_DESC"
@@ -1124,7 +1116,6 @@ setup_soviets_wrangel_civil_war = { #less democratic, more autocratic
 				popularity = -0.1
 			}
 			set_cosmetic_tag = RVA_wrangel
-			load_base_russian_tree = yes 
 			country_event = {
 				id = rcw.19
 				days = 5
@@ -1241,8 +1232,6 @@ setup_soviets_denikin_civil_war = { #more democrats on his side
 		RVA = {
 			transfer_technology_without_doctrines = yes
 			country_lock_all_division_template = yes
-			RUS_transfer_russian_ideas = yes
-			add_political_power = 100
 			add_ideas = RUS_rovs_denikin
 			create_country_leader = {
 				name = "Anton Denikin"
@@ -1350,10 +1339,7 @@ setup_soviets_civil_war = {
 			set_major = yes
 			transfer_technology_without_doctrines = yes
 			transfer_navy = { target = RUS }
-			add_ideas = SOV_chaotic_revolution
-			country_lock_all_division_template = yes
 			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
 			add_ideas = {
 				RUS_nationalist_resistance
 				RUS_monarchist_resistance
@@ -1536,10 +1522,7 @@ setup_soviets_petrograd_civil_war = {
 			set_major = yes
 			transfer_technology_without_doctrines = yes
 			transfer_navy = { target = RUS }
-			add_ideas = SOV_chaotic_revolution
-			country_lock_all_division_template = yes
 			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
 			add_ideas = {
 				RUS_nationalist_resistance
 				RUS_monarchist_resistance_1
@@ -1655,10 +1638,7 @@ setup_soviets_moscow_civil_war = {
 			set_major = yes
 			transfer_technology_without_doctrines = yes
 			transfer_navy = { target = RUS }
-			add_ideas = SOV_chaotic_revolution
-			country_lock_all_division_template = yes
 			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
 			add_ideas = {
 				RUS_nationalist_resistance
 				RUS_monarchist_resistance_1
@@ -1932,7 +1912,6 @@ setup_savinkov_not_rrf = {
 			transfer_navy = { target = RUS }
 			country_lock_all_division_template = yes
 			add_state_claim = 329 #Tuva
-			RUS_transfer_russian_ideas = yes
 			hidden_effect = { load_oob = "RUS_RRF_civil_war" }
 		}
 		for_each_scope_loop = {
@@ -2101,7 +2080,7 @@ setup_rva_cw_victory = {
 				limit = {
 					RVA = {
 						has_country_leader = {
-							name = "Lavr Kornilov "
+							name = "Lavr Kornilov"
 							ruling_only = yes
 						}
 					}
@@ -2571,7 +2550,6 @@ setup_wra_cw_victory = {
 				name = WRA_paternal_autocrat_party
 				long_name = WRA_paternal_autocrat_party_long
 			}
-			load_focus_tree = { tree = russia_focus } #later to change
 			annex_country = {
 				target = WRA
 				transfer_troops = yes
@@ -3071,7 +3049,7 @@ setup_soviet_psr = {
 		set_country_flag = RUS_duma_dissolved
 		set_country_flag = SOV_must_deal_with_opposition
 		load_focus_tree = Russia_Socialist
-		set_stability = 0.1
+		set_stability = 0.6
 		set_war_support = 0.4
 		set_country_flag = soc_dems_are_socialists
 		set_politics = {
@@ -3209,26 +3187,6 @@ setup_soviet_psr = {
 	}
 }
 
-RUS_transfer_russian_ideas = {
-	hidden_effect = {
-		if = {
-			limit = {
-				RUS = {
-					has_idea = rus_unfinished_land_reform
-				}
-			}
-			PREV = { setup_unfinished_land_reform = yes }
-		}
-		if = {
-			limit = {
-				RUS = {
-					has_dynamic_modifier = { modifier = RUS_backward_industry_modifier }
-				}
-			}
-			PREV = { setup_backward_industry = yes }
-		}		
-	}
-}
 RCW_merge_popularities = {
 	set_temp_variable = { RUS_new_tot = party_popularity_100@totalist }
 	add_to_temp_variable = { RUS_new_tot = FROM.party_popularity_100@totalist }

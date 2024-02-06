@@ -3827,7 +3827,6 @@ country_event = { #RCW
 				set_demilitarized_zone = no
 			}
 			hidden_effect = { 
-				load_base_russian_tree = yes
 				set_country_flag = unlock_military
 				country_event = {
 					id = rcw.219
@@ -3880,7 +3879,6 @@ country_event = { #RCW
 				set_demilitarized_zone = no
 			}
 			hidden_effect = { 
-				load_base_russian_tree = yes
 				set_country_flag = unlock_military
 				country_event = {
 					id = rcw.219
@@ -4525,7 +4523,6 @@ country_event = { #RCW
 				set_demilitarized_zone = no
 			}
 			hidden_effect = { 
-				load_base_russian_tree = yes
 				set_country_flag = unlock_military
 				country_event = {
 					id = rcw.211
@@ -4540,8 +4537,6 @@ country_event = { #RCW
 					days = 280
 					random_days = 200
 				}
-				set_country_flag = make_russian_junta_tree_visible
-				mark_focus_tree_layout_dirty = yes
 			}
 		}
 		transfer_units_fraction = {
@@ -4680,7 +4675,6 @@ country_event = { #RCW
 		if = {
 			limit = {
 				TRM = { 
-					has_country_flag = TRM_Dem_coup
 					has_democratic_government = yes
 				}
 			}

@@ -13518,8 +13518,8 @@ shared_focus = {
 			remove_ideas = rus_brest_litovsk
 		}
 		else_if = {
-			limit = { has_idea = rus_brest_litovsk1 }
-			remove_ideas = rus_brest_litovsk1
+			limit = { has_idea = rus_brest_litovsk_1 }
+			remove_ideas = rus_brest_litovsk_1
 		}
 		unlock_decision_tooltip = SOV_Join_The_Internationale
 		hidden_effect = { 

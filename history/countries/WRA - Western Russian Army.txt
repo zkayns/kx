@@ -194,6 +194,9 @@ add_ideas = {
 	WRA_low_legitimacy
 	WRA_german_support
 	WRA_baltische_landeswher
+	RUS_socialist_resistance
+	RUS_democrat_resistance_1
+	RUS_nationalist_resistance_1
 }
 
 add_ai_strategy = {

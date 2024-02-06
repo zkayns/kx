@@ -198,6 +198,9 @@ add_ideas = {
 	RRF_Combat_Squads
 	RRF_Green_Army_Support	
 	RRF_victory_expectations	
+	RUS_socialist_resistance_1
+	RUS_monarchist_resistance_1
+	RUS_democrat_resistance
 }
 
 save_global_event_target_as = Muscovy_Owner
