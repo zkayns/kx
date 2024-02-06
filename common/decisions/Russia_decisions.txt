@@ -7413,16 +7413,12 @@ RUS_Integration_decisions = {
 	RUS_Annex_Puppet = {
 		priority = 100
 		icon = eng_trade_unions_support
-
-		
-
 		available = {
 			has_war = no
 			FROM = {
 				NOT = { has_autonomy_state = kr_nominal_puppet }
 				if = {
 					limit = { tag = ALO }
-					}
 					FROM = {
 						OR = {
 							has_completed_focus = ALO_Integration
@@ -7432,14 +7428,7 @@ RUS_Integration_decisions = {
 				}
 			}
 		}
-
-		visible = {
-			FROM = {
-				is_subject_of = ROOT
-			}
-		}
-
-		targets = { ALO TRK KYR UZB DKB KUB KLY MTR GEO AZE ARM BRY YAK TRM }
+		targets = { ABK ALO TRK KYR UZB DKB KUB KLY MTR GEO AZE ARM BRY YAK TRM }
 		target_trigger = {
 			has_subject = FROM
 			FROM = {

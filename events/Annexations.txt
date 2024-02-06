@@ -13691,6 +13691,13 @@ country_event = { #The fate of Uzbekistan
 				}
 			}
 		}
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = ABK }
+			SOV_puppet_TARGET_effect = yes
+		}	
 	}
 
 	option = { #give to Central Asian ally
@@ -13861,6 +13868,13 @@ country_event = { #The fate of Kokand
 		}
 		set_temp_variable = { tag_to_release = KYR }
 		release_targeted_tag = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = soviet_russia_restored }
+			}
+			set_temp_variable = { target = KYR }
+			SOV_puppet_TARGET_effect = yes
+		}	
 	}
 	option = { #Integrate
 		name = annex.79.c
