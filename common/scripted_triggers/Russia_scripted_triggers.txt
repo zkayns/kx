@@ -1590,10 +1590,10 @@ has_russian_unification_superevent = {
 		has_idea = RUS_Vladimir_K_Volsky_hog_rso
 		has_completed_focus = SOV_Tsentrobalt_In_Control
 		has_country_leader = {
-			name = "Grigoriy Semyenov"
+			name = "Grigory Semyonov"
 			ruling_only = yes
 		}
-		has_country_flag = TRM_NRA_coup
+		TRM_nra_in_power = yes
 		AND = {
 			tag = TRM
 			OR = {
