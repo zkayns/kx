@@ -128,13 +128,12 @@ WRA.1.a: ""
 WRA.2.t: "A Call for Help from the Russian Army"
 WRA.2.d: "A delegation of ambassadors from Germany recently came to us to convey to us that an army has been formed in northwestern Russia against the Bolsheviks and is asking for help. The ambassadors also drew our attention to the importance of this decision, since both our position and neighborhood with the Communists and Germany's opinion of us depend on our response: after all, this military formation was created with the support of the Kaiser." 
 WRA.2.a: "Declare our full readiness!"
-WRA.2.b: "We can't help, our army is weak" (Effect: Western Army receives the event "Finns refuse", Finland's relations with Germany are damaged by 80).
+WRA.2.b: "We can't help, our army is weak"
 
 WRA.3.t: "Finns Agree!"
 WRA.3.d: "The Finns are already bringing their troops and are ready to fight alongside us to defeat Bolshevism!"
 WRA.3.a: "Hooray!"
-# (Effect: Northern Front alliance is formed. Finland declares war on the Russian Federation).
-  
+
 WRA.4.t: "Finns Refuse!"
 WRA.4.d: "Unfortunately, the Finns have refused our request."
 WRA.4.a: "Hooray!"
