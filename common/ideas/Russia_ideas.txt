@@ -6230,7 +6230,7 @@ ideas = {
 			available = {
 				RUS_kornilov_in_power = yes
 			}
-			picture = RUS_divided_army
+			picture = advisors_russia
 			modifier = {
 				conscription_factor = -0.25
 				stability_factor = 0.15
