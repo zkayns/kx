@@ -5539,7 +5539,7 @@ focus = {
 				uses = 1
 				category = infantry_weapons
 			}
-			add_ideas = RUS_armament_production_1
+			add_ideas = SOV_armament_production_1
 		}
 	}
 	focus = {
@@ -5571,8 +5571,8 @@ focus = {
 			custom_effect_tooltip = SOV_The_Peoples_Logistics_Corps_tooltip
 			hidden_effect = {
 				swap_ideas = {
-					remove_idea = RUS_armament_production_1
-					add_idea = RUS_armament_production_2
+					remove_idea = SOV_armament_production_1
+					add_idea = SOV_armament_production_2
 				}
 			}
 		}
@@ -5606,8 +5606,8 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Local_Workshops"
 			swap_ideas = {
-				remove_idea = RUS_armament_production_1
-				add_idea = RUS_armament_production_3
+				remove_idea = SOV_armament_production_1
+				add_idea = SOV_armament_production_3
 			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY }

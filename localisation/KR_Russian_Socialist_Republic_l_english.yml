@@ -131,12 +131,15 @@ SOV_labour_republic: "Labour Republic"
 SOV_aftermath_of_the_civil_war: "Aftermath of the War"
 SOV_gosplan: "Gosplan"
 SOV_chaotic_revolution: "Chaotic Revolution"
+SOV_for_the_revolution: "For the Revolution"
 SOV_new_red_army: "New Red Army"
 SOV_war_communism: "War Communism"
 SOV_krasnaya_gvardiya: "Krasnaya Gvardiya"
 SOV_armament_production: "Armament Production"
 SOV_frunzes_reform_plan: "Frunze's Reform Plan"
 SOV_tukhachevskiys_reform_plan: "Tukhachevskiy's Reform Plan"
+SOV_old_guard_reform_plan: "Old Guard's Reform Plan"
+SOV_total_war: "Total War"
 RUS_peoples_army: "Russian People's Army"
 SOV_foreign_aid: "Foreign Aid"
 SOV_separation_of_powers: "Separation of Powers"
@@ -184,6 +187,10 @@ SOV_semyenov_loyalists_resistance_1: "Cossack Resistance: §YModerate§!"
 SOV_semyenov_loyalists_resistance_1_desc: "The Far-Eastern Cossacks, fearing losing their rights and privileges continue to fight against our rule."
 SOV_semyenov_loyalists_resistance_2: "Cossack Resistance: §GDamaged§!"
 SOV_semyenov_loyalists_resistance_2_desc: "The Far-Eastern Cossacks, fearing losing their rights and privileges continue to fight against our rule."
+SOV_defensive_echelon_modifier: "Defensive Echelon"
+SOV_defensive_measures_forts: "Add a total of §Y28 Land Forts§! in provinces around Moscow.\n"
+
+
 
 SOV_technocracy: "Soviet Technocracy"
 SOV_technocracy_desc: "The best minds in Russia - engineers, scientists, intellectuals, in general, everyone - who has the best education and skills in their field, should run our working-class country. Only under their effective rule can we achieve incredible success."
@@ -278,9 +285,6 @@ SOV_Voluntary_Collectivisation_tooltip: "Modify §HLabour Republic§! or §HProl
 SOV_Fight_Urban_Rural_Conflict_tooltip: "Modify §HLabour Republic§! or §HProletarian Humanism§! by\nMonthly Population: [?0.10|G=%0]"
 SOV_Break_Smychka_Tooltip: "Modify §HBureaucratic Centralism§! or §HIndustrial Democracy§! by\nResource Production: [?0.1|==%0]\nDaily Political Power Gain: [?-0.3|=+]\n\nIndustrial Research Speed: [?0.1|+=%0]"
 SOV_Cement_Chairman_tooltip: "Modify §HBureaucratic Centralism§! or §HIndustrial Democracy§! by\nIndustrial Research Speed: [?0.1|+=%0]"
-SOV_Rally_The_Defectors_tooltip: "§RDefections will be hampered by Okhrannoye Otdeleniye operatives.§!"
-SOV_The_Peoples_Logistics_Corps_tooltip: "Modify §HArmament Production§! by\nSupply Consumption: [?-0.1|-=%1]\nArmy Fuel Consumption: [?-0.1|-=%]"
-SOV_Dedicated_Artillery_Battalions_tooltip: "Modify §HArmament Production§! by\n§HTowed Artillery§!: £production_cost  Production Cost:  [?-0.1|-=%]"
 SOV_Mass_Breakthroughs_tooltip: "Modify §HTukhachevskiy's Reform Plan§! by\nDivisions Speed: [?0.1|+=%]\n§HArmour§!: Breakthrough: [?0.1|+=%0]"
 SOV_Land_Air_Integration_tooltip: "Modify §HTukhachevskiy's Reform Plan§! by\n§HClose Air Support§!: £production_cost  Production Cost:  [?-0.1|-=%]"
 SOV_Separation_Of_Powers_tooltip: "Modify §HLabour Republic§! or §HIndustrial Democracy§! by\nConsumer Goods Factories: [?-0.05|H=%1]"
@@ -523,66 +527,6 @@ SOV_The_War_Effort_desc: "We will need to organise the revolutionary war effort,
 SOV_Rebuild_The_Red_Army: "Rebuild the Red Army"
 SOV_Rebuild_The_Red_Army_desc: "The Red Army will have to be rebuilt, if we want to win this revolution. A centralised army proved itself to be a capable fighting force the first time around, and it will be a capable one the second time around too. Even so, we must be aware of the failures and mistakes of its first incarnation."
 
-SOV_Centralised_Command: "Centralised Command"
-SOV_Centralised_Command_desc: "A centralised command is necessary in military combat - any other alternative would just result in total disaster, something we need to avoid at all costs. Thus, we will aim to create a cohesive military chain of command, to allow for a more effective fighting force."
-
-SOV_Reinstate_The_Cheka: "Reinstate the Cheka"
-SOV_Reinstate_The_Cheka_desc: "The All-Russian Extraordinary Commission carried out its duties with diligence. Now that socialist rule has been established, however, we face the threat of subversion from counter-revolutionaries from across the world. In order to fend off the threats both from within and from abroad we must expand the institution and modernise its methods."
-
-SOV_War_Communism: "War Communism"
-SOV_War_Communism_desc: "We must take multiple measures to win this war and to spread the revolution to Russia, however unpopular and brutal many of these may prove to be. They are necessary to win the war and improve the life of the general population in the long-term."
-
-SOV_The_Second_Red_Army: "The Second Red Army"
-SOV_The_Second_Red_Army_desc: "The Red Army must be rebuilt, as it was a great display of proletarian power, even if it was defeated at the end. However, the solution is to rebuild the Red Army and learn from its failure, not to reject the Red Army and the principles it was founded on."
-
-SOV_Reorganise_Armament_Production: "Reorganise Armament Production"
-SOV_Reorganise_Armament_Production_desc: "The current state of armament production is a disaster. We must reorganise the armament production and end the chaos in the production chain. Only if we do this we can guarantee that every soldier will have a gun to fight the forces of reaction."
-
-SOV_The_Peoples_Logistics_Corps: "The People's Logistics Corps"
-SOV_The_Peoples_Logistics_Corps_desc: "We must properly organise our logistics. In order to do this, we will create the 'People's Logistic Corps,' which will be in charge of the supply chains, hopefully improving the current state of our logistics - in many areas, a total disaster."
-
-SOV_Dedicated_Artillery_Battalions: "Dedicated Artillery Battalions"
-SOV_Dedicated_Artillery_Battalions_desc: "We will create independent artillery battalions, which will serve to support our troops and break the enemy lines with waves of artillery shells, preventing them from launching any effective counter-attacks."
-
-SOV_Local_Workshops: "Local Workshops"
-SOV_Local_Workshops_desc: "We will create local workshops all throughout the nation, to allow for local arms production, which is better suited to serve the local situation and needs than a centralised way of organising the production."
-
-SOV_Empower_The_Krasnaya_Gvardiya: "Empower the Krasnaya Gvardiya"
-SOV_Empower_The_Krasnaya_Gvardiya_desc: "We must create a bottom-up army structure - an army which is truly representative of the revolutionary spirit. We will support the democratic election of commanders, even if it may cause some issues at times - the soldiers in the field probably know better who should command them than our leaders, far away from the situation."
-
-SOV_Decentralised_Structure: "Decentralised Structure"
-SOV_Decentralised_Structure_desc: "We must further decentralise the revolutionary army of ours, giving every part of the chain considerable autonomy and preventing the higher-ups from being able to dictate to the rest of the chain what they should do and how."
-
-SOV_Reconnaissance_Units: "Reconnaissance Units"
-SOV_Reconnaissance_Units_desc: "By creating units dedicated to reconnaissance we will always be one step ahead of the enemy. We will know what their next plan is and what we need to do to counteract it."
-
-SOV_Officer_Initiative: "Officer Initiative"
-SOV_Officer_Initiative_desc: "Encouraging officers to make their own decisions autonomously will allow for better responses to sudden changes, as they are more knowledgeable about the situation on the ground than some far away higher-ups, who never visited the area properly."
-
-SOV_Small_Unit_Tactics: "Small Unit Tactics"
-SOV_Small_Unit_Tactics_desc: "Instead of using masses of troops, using small units allows for us to be far quicker in our attacks and surprise than if we use large waves of soldiers. This will also give us more easily the element of surprise."
-
-SOV_Frunzes_Reform_Plan: "Frunze's Reform Plan"
-SOV_Frunzes_Reform_Plan_desc: "With the revolution secured, for now, we can focus on other matters. Frunze has proposed that we should focus on improving the high command and officer training and generally improve the defence of the army against a possible invasion, a real threat, as the forces of reaction will probably try to end the revolution in the future."
-
-SOV_Expand_The_High_Command: "Expand the High Command"
-SOV_Expand_The_High_Command_desc: "The high command will need to be expanded to include many of the best generals we have, who were all able to show their skill in the Second Russian Revolution. Only a high command truly including the best of the best will be able to make intelligent decisions."
-
-SOV_Officer_Training_Academies: "Officer Training Academies"
-SOV_Officer_Training_Academies_desc: "Our military academies are in many ways still a relic of the past, with most being from the time of the Tsar. We will create a series of new military academies, following the best doctrine, not the most traditional doctrine. Only this way we will create an officer corps, which is truly superior to the ones of the capitalists."
-
-SOV_Professional_Engineer_Corps: "Professional Engineer Corps"
-SOV_Professional_Engineer_Corps_desc: "Our army still lacks a proper engineer corps, at least a formalised one. We will change this situation by creating a formal engineer corps, which will be professionally trained in their craft."
-
-SOV_Tukhachevskiys_Reform_Plan: "Tukhachevskiy's Reform Plan"
-SOV_Tukhachevskiys_Reform_Plan_desc: "Tukhachevskiy has proposed to use the doctrine of deep battle, which proposes the use of combined arms and overwhelming land-air attacks. Such a doctrine would make the army a true force to be reckoned with on the offensive."
-
-SOV_Mass_Breakthroughs: "Mass Breakthroughs"
-SOV_Mass_Breakthroughs_desc: "Armour is the future, we will need to support the development of new tanks if we want to create a truly modern arm force, which is able to encircle and destroy enemy divisions at record speeds."
-
-SOV_Land_Air_Integration: "Land-Air Integration"
-SOV_Land_Air_Integration_desc: "The integrated use of soldiers and aircraft will allow for the overwhelming of the troops and for our army to crush the enemy completely."
-
 SOV_Establish_The_VVS: "Establish the VVS"
 SOV_Establish_The_VVS_desc: "The VVS (Voyenno-Vozdushnye Sily, 'Military Air Force') is badly outdated. We use the same planes and tactics today that we did twenty years ago. By expanding our air-bases and training new recruits we could change this."
 
@@ -607,45 +551,6 @@ SOV_Take_To_The_Seas_desc: "If we are to stand proud among the great nations of 
 RUS_Frunze_Is_General: "§YMikhail Frunze§! is serving as [ROOT.GetName] general"
 RUS_Tukha_Is_General: "§YMikhail Tukhachevsky§! is serving as [ROOT.GetName] general"
 RUS_Zhukov_Is_General: "§YGeorgy Zhukov§! is serving as [ROOT.GetName] general"
-
-RUS_Establish_SVR: "Establish the SVR"
-RUS_Establish_SVR_desc: "Although Russia had many internal security services, their main purpose was to keep the peace at home, something which is of no use for an army that moves forward far beyond the borders. That's exactly why we need to create a new agency, integrated into and serving the military, to focus on the civilian side of warfare on foreign soil. The time has come to create the Foreign Intelligence Service, or SVR for short."
-
-SOV_Peoples_Army: "People's Army"
-SOV_Peoples_Army_desc: "The People's Army was one of the first anti-bolshevist forces in the East of Russia during the Civil War. The People's Army played a vital role in the victory of Socialist-Revolutionaries, despite the fact that it was later united with the Siberian Army of Kolchak. We shall recreate the People's Army of Russia, now a united force for all of Russia."
-
-SOV_Legacy_Of_Republican_Forces: "Legacy of the White Forces"
-SOV_Legacy_Of_Republican_Forces_desc: "We shall base our doctrine on the legacy of White Forces: the People's Army, the Siberian Army and the Russian Army after the war. So that the main basis of the army will be Kornilov's Strike Forces, transformed into the new strike forces of the People's Army. All the experience the republican forces got from the 1920s-1930s will be used in favour of our new army."
-
-SOV_Professional_Army: "Professional Army"
-SOV_Professional_Army_desc: "The army should not be a collection of inexperienced soldiers and amateur guerrillas. We will create a new army consisting of professional soldiers and capable of conducting effective military activities for the benefit of the motherland."
-
-SOV_Peoples_Officer_Corps: "People's Officer Corps"
-SOV_Peoples_Officer_Corps_desc: "The People's Officer Corps should be formed to train new generals and field marshals - the future of our country. In addition, such an officer corps will help us develop our military doctrine and make the army effective."
-
-SOV_Call_To_The_Masses: "Mass Concentration"
-SOV_Call_To_The_Masses_desc: "Mass concentration is the answer to the question of resources. Without effective mobilization and readiness to defend our borders, we will not be able to defend even the border zone, let alone successful offensives and attacks."
-
-SOV_Guerilla_Warfare: "Partisan Warfare"
-SOV_Guerilla_Warfare_desc: "The Red Guards are primarily volunteers, which means they must be able not only to mobilize quickly and effectively, but also to act behind enemy lines. This will help us create an effective sabotage network in the bosom of enemy troops and will allow us to wage an asymmetric war - with our superiority."
-
-SOV_Militia_Support_Auxiliaries: "Militia Support Auxiliaries"
-SOV_Militia_Support_Auxiliaries_desc: "We will not be able to cope without sufficient supply of auxiliary equipment to our forces."
-
-SOV_Rebuild_The_Military_Industrial_Complex: "Rebuild the Military Industrial Complex"
-SOV_Rebuild_The_Military_Industrial_Complex_desc: "We must be prepared for the fact that in the conditions of war our factories will not be enough. We must rebuild the military-industrial complex so that the production of weapons and heavy industry is our advantage."
-
-SOV_Tanks_For_Revolution: "Tanks For Revolution"
-SOV_Tanks_For_Revolution_desc: "Revolution is undoubtedly progress, and without modern weapons we will not be able to free the working masses from the oppression of the capitalists. The new design and equipment of tanks will help us in this."
-
-SOV_Military_Research: "Military Research"
-SOV_Military_Research_desc: "Without constant study of military doctrine, we will not be able to resist the enemies. Research in the field of military operations will encourage us to adopt new tactics that have not been used on the field before."
-
-SOV_New_Weapon_Designs: "New Weapon Designs"
-SOV_New_Weapon_Designs_desc: "Leading scientists in the field of inventing new weapons are working daily on new rifles, pistols and machine guns - the weapons of the proletarians and peasants, thanks to which any army will fall."
-
-SOV_Peoples_Mechanized_Divisions: "People's Mechanized Division"
-SOV_Peoples_Mechanized_Divisions_desc: "The People's mechanized divisions will move our military strategy to a new level. Fast-moving and adapted troops will be able to break through the enemy's defense lines and encircle them."
 
 RUS_Profsoyuzovtsy_Majority: "Profsoyuzovtsy Majority"
 RUS_Profsoyuzovtsy_Majority_desc: "The NSP faction of Trade Unionists gained the majority at the Congress"
@@ -2451,16 +2356,6 @@ SOV_The_Soviet_Republics_desc: "The division of the old Tsarist lands into vario
 SOV_General_Of_Revolution: "General of Revolution"
 SOV_General_Of_Revolution_desc: "Being a veteran of the Russian Civil War, Frunze is a real pioneer of the Russian Revolution. Under his leadership, our country will be a great world superpower and a vanguard of world socialism."
 
-RUS_Zhukovs_Reform_Plan: "Zhukov's Reform Plan"
-RUS_Zhukovs_Reform_Plan_desc: "Zhukov has come up with a plan with the goal of increasing conscription while also standardizing equipment production. This will allow us to further churn out more weapons of war from our factories, further fueling our future war efforts. With these reforms underway, the fires of innovation and efficiency shall burn bright within every Russian factory and foundry."
-
-RUS_Mass_Conscription_SOV: "Mass Conscription"
-RUS_Mass_Conscription_SOV_desc: "In order to win the wars that are inevitably coming down the line, especially with the world situation growing ever more chaotic and with our ambitions of conquest and liberation in the name of socialism, we must issue higher quotas on conscriptions while lowering the bar for possible volunteers and conscripts. We will need bodies if we are to win."
-
-RUS_Standarisation_Of_Equipment_Production_SOV: "Standardization of Equipment Production"
-RUS_Standarisation_Of_Equipment_Production_SOV_desc: "Standardized production methods will enable us to produce all of our military equipment more efficiently and at far faster rates. Not only will this increase production rates overall, it will also improve the quality of our weapons. As parts, ammunition, and manufacturing methods become standardized, incompatibility issues between equipment parts and types will become a thing of the past, meaning less headaches for our soldiers on the frontlines as well."
-
-
 ### Frunze Ideas###
 SOV_CULTURE_FRUNZE: "New Russian Culture"
 SOV_RES_FRUNZE: "Socialist Education"
@@ -2852,6 +2747,105 @@ SOV_No_Need_In_Terror_desc: "Under the Cheka mass executions of suspected enemie
 
 SOV_Elect_The_New_Chairman: "Elect the New Chairman"
 SOV_Elect_The_New_Chairman_desc: "Our mission is complete. The government has been restored, people are learning to trust one another again and the Cheka have been broken and destroyed in totality. There is no longer any threat of them ever rising again and we have taken steps to make sure any future government never makes the same mistake we did. Now, we have only one mission left: turn over leadership back to the civilian government. While some have entertained the notion of a permanent State of Emergency to rule that idea lasted about as long as a daisy on the tundra. We are here to restore democracy, not destroy it. To finalize the return to normalcy we shall organize a new election for a new chairman, restored to full powers by us."
+
+### Army Focuses ###
+RUS_Mobilise_Urban_Militias: "Mobilise Urban Militias"
+RUS_Mobilise_Urban_Militias_desc: "The cities have been the heart land of the revolution ever since the beginning, they were the birth ground of it. We will mobilize militias from the cities to serve in the revolution and allow for the spread of it, because if we do not mobilize large swaths of the population fast, the revolution may be crushed by the reactionaries."
+RUS_Krasnaya_Gvardiya_Units: "Krasnaya Gvardiya Units"
+RUS_Krasnaya_Gvardiya_Units_desc: "Many members of the socialists are still in hiding, we will have to mobilize and organize these people into military formations, as we need every soldier we can at this point, if we want to survive the onslaught of the reactionaries."
+RUS_Rally_The_Defectors: "Rally the Defectors"
+RUS_Rally_The_Defectors_desc: "Many in the Russian army are dissatisfied with the status quo, which makes them perfect to recruit to the revolution, so they can serve in a true attempt to change the status quo and improve the life of the population and make the army serve the people, not the bankers."
+
+RUS_The_War_Effort: "The War Effort"
+RUS_The_War_Effort_desc: "The early days of the revolution have left our military command structure in disarray. Factions and ideological differences have led to a lack of coordination and direction within our land forces.. We will need to organize the revolutionary war effort, as it has been a pure disaster beforehand. We will re-establish much of the bureaucracy and state apparatus which was destroyed in the wake of the failure of the First Civil War. "
+RUS_Revolutionary_Indoctrination: "Revolutionary Indoctrination"
+RUS_Revolutionary_Indoctrination_desc: "We must establish ideological education programs to ensure our military forces are not only physically strong but also deeply committed to the socialist cause. Strengthen the revolutionary spirit within our ranks."
+RUS_Local_Defense_Militias: "Local Defense Militias"
+RUS_Local_Defense_Militias_desc: "Empower local communities to form their own defense militias, adding a layer of decentralized defense. While effective in localized threats, this approach hampers overall strategic coordination."
+RUS_Local_Defense_Militias_tt: "Raise Militia Units in [THIS.GetName]"
+
+RUS_Embolden_Local_Commanders: "Embolden Local Commanders"
+RUS_Embolden_Local_Commanders_desc: "Encourage local commanders to take initiative on the battlefield. This decentralized approach empowers individual leaders but may lead to conflicting strategies and a lack of overall coordination."
+RUS_Land_Requisition_Policy: "Land Requisition Policy"
+RUS_Land_Requisition_Policy_desc: "Implement a policy of requisitioning land and resources to sustain our army. This decentralized approach may lead to inefficiencies, but it is a necessary step in securing resources for the revolutionary cause."
+RUS_Equipment_Salvaging: "Salvaging Equipment"
+RUS_Equipment_Salvaging_desc: "Scour battlefields and depots for salvageable equipment and weapons. Repurpose and refurbish these resources to equip our growing army, maximizing our limited resources."
+
+RUS_Rebuild_The_Red_Army: "Rebuild the Red Army"
+RUS_Rebuild_The_Red_Army_desc: "The Red Army will have to be rebuild, if we want to win this revolution. A centralized army proved itself to be a capable fighting force the first time around, it will be a capable one the second time around too, though we should avoid the failures of and mistakes of the first incarnation."
+RUS_Establish_SVR: "Establish the SVR"
+RUS_Establish_SVR_desc: "Although Russia had many internal security services, their main purpose was to keep the peace at home, something which is of no use for an army that moves forward far beyond the borders. That's exactly why we need to create a new agency, integrated into and serving the military, to focus on the civilian side of warfare on foreign soil. The time has come to create the Foreign Intelligence Service, or SVR for short."
+RUS_Centralised_Command: "Centralised Command Structure"
+RUS_Centralised_Command_desc: "A centralised command is necessary in a military combat, any other alternative would just result in total disaster, something we need to avoid at all costs. Thus we will aim to create a cohesive military chain of command, to allow for a more effective fighting force."
+RUS_The_Second_Red_Army: "The Second Red Army"
+RUS_The_Second_Red_Army_desc: "The Red Army will be rebuild, as it was a great display of proletarian power, even if it was defeated at the end. However, the solution is to rebuild the Red Army and learn from its failure, not to reject the Red Army and the principles it was founded on."
+RUS_Special_Forces_Training: "Special Forces Training"
+RUS_Special_Forces_Training_desc: "Develop specialized units within the Red Army for special operations and unconventional warfare. Train elite forces capable of undertaking high-risk missions with precision and effectiveness."
+
+RUS_Reorganise_Armament_Production: "Reorganise Armament Production"
+RUS_Reorganise_Armament_Production_desc: "The current state of armament production is a pure disaster, we will have to reorganise the armament production and end the chaos in the production chain. Only if we do this we can guarantee that every soldier will have a gun to fight the forces of reaction."
+RUS_The_Peoples_Logistics_Corps: "The People's Logistics Corps"
+RUS_The_Peoples_Logistics_Corps_desc: "We will have to properly organize the logistics, to do this we will create the 'People's Logistic Corps,' which will be in charge of the logistics, which will hopefully end the current state of logistics, which in many areas is a total disaster."
+RUS_Dedicated_Artillery_Battalions: "Dedicated Artillery Battalions"
+RUS_Dedicated_Artillery_Battalions_desc: "We will create dedicated artillery battalions, which will serve to break the lines with legions of artillery shells, which will prevent any real counter-attack, at best."
+RUS_Local_Workshops: "Local Workshops"
+RUS_Local_Workshops_desc: "We will create local workshops all throughout the nation, to allow for local arms production, which is better suited to serve the local situation and needs than a centralized way of organizing the production."
+SOV_Rebuild_The_Military_Industrial_Complex: "Rebuild the Military Industrial Complex"
+SOV_Rebuild_The_Military_Industrial_Complex_desc: "We must be prepared for the fact that in the conditions of war our factories will not be enough. We must rebuild the military-industrial complex so that the production of weapons and heavy industry is our advantage."
+SOV_Tanks_For_Revolution: "Tanks For Revolution"
+SOV_Tanks_For_Revolution_desc: "Revolution is undoubtedly progress, and without modern weapons we will not be able to free the working masses from the oppression of the capitalists. The new design and equipment of tanks will help us in this."
+SOV_Military_Research: "Military Research"
+SOV_Military_Research_desc: "Without constant study of military doctrine, we will not be able to resist the enemies. Research in the field of military operations will encourage us to adopt new tactics that have not been used on the field before."
+SOV_New_Weapon_Designs: "New Weapon Designs"
+SOV_New_Weapon_Designs_desc: "Leading scientists in the field of inventing new weapons are working daily on new rifles, pistols and machine guns - the weapons of the proletarians and peasants, thanks to which any army will fall."
+SOV_Peoples_Mechanized_Divisions: "People's Mechanized Division"
+SOV_Peoples_Mechanized_Divisions_desc: "The People's mechanized divisions will move our military strategy to a new level. Fast-moving and adapted troops will be able to break through the enemy's defense lines and encircle them."
+
+RUS_Empower_The_Krasnaya_Gvardiya: "Empower the Krasnaya Gvardiya"
+RUS_Empower_The_Krasnaya_Gvardiya_desc: "We will need to create a bottom-up form of army, an army which is truly representing the revolutionary spirit of the revolution. We will support the democratic election of commanders too, even if it will cause some issues at times, as it local soldiers probably know better who should command them then some people far away from the situation."
+RUS_Decentralised_Structure: "Decentralised Structure"
+RUS_Decentralised_Structure_desc: "We will further decentralize the revolutionary army of ours, giving every part of the chain considerable autonomy and preventing the higher-ups from being able to dictate to the rest of the chain what they should do and how."
+RUS_Reconnaissance_Units: "Reconnaissance Units"
+RUS_Reconnaissance_Units_desc: "By creating units dedicated to reconnaissance we will always be one step ahead of the enemy, we will know what their next plan is and what we need to do to counter-act it."
+RUS_Officer_Initiative: "Officer Initiative"
+RUS_Officer_Initiative_desc: "Encouraging officer initiative to make their own decisions autonomously will allow for better responses to sudden changes, as they are more knowledgeable about the situation on the ground than some far away higher-ups, who never visited the area properly."
+RUS_Small_Unit_Tactics: "Small Unit Tactics"
+RUS_Small_Unit_Tactics_desc: "Instead of using masses of troops, using small units allows for us to be far quicker in our attacks and surprise than if we use a large amount of units. This will also give us more easily the element of surprise, than if we use many units."
+SOV_Guerilla_Warfare: "Partisan Warfare"
+SOV_Guerilla_Warfare_desc: "The Red Guards are primarily volunteers, which means they must be able not only to mobilize quickly and effectively, but also to act behind enemy lines. This will help us create an effective sabotage network in the bosom of enemy troops and will allow us to wage an asymmetric war - with our superiority."
+SOV_Militia_Support_Auxiliaries: "Militia Support Auxiliaries"
+SOV_Militia_Support_Auxiliaries_desc: "We will not be able to cope without sufficient supply of auxiliary equipment to our forces."
+RUS_Partisan_Tactics: "Partisan Tactics"
+RUS_Partisan_Tactics_desc: "Train our forces in guerrilla warfare and partisan tactics to counter more organized counter-revolutionary forces. While effective in certain situations, this decentralized approach hinders our ability to engage in conventional warfare."
+RUS_Urban_Warfare_Specialists: "Urban Warfare Specialists"
+RUS_Urban_Warfare_Specialists_desc: "Specialize Red Guard units in urban warfare tactics. Cities and towns are the battlegrounds of the revolution, and having specialists in navigating urban environments will give us a decisive edge in defensive and offensive operations."
+RUS_Officer_Training_Academies: "Officer Training Academies"
+RUS_Officer_Training_Academies_desc: "Our military academies are in many ways still a relic of the past, with most being from the time of the Tsar. We will create a series of new military academies, following the best doctrine, not the most traditional doctrine. Only this way we will create an officer corps, which is truly superior to the ones of the capitalists."
+RUS_Professional_Engineer_Corps: "Professional Engineer Corps"
+RUS_Professional_Engineer_Corps_desc: "Our army still lacks a proper engineer corps, at least a formalized one. We will change this situation by creating a formal engineer corps, which will be professionally trained in their craft."
+
+RUS_Frunzes_Reform_Plan: "Frunze's Reform Plan"
+RUS_Frunzes_Reform_Plan_desc: "With the revolution secured, for now, we can focus on other matters. Frunze has proposed that we should focus on improving the high command and officer training and generally improve the defence of the army against a possible invasion, a real threat, as the forces of reaction will probably try to end the revolution in the future."
+RUS_Expand_The_High_Command: "Expand the High Command"
+RUS_Expand_The_High_Command_desc: "The high command will need to be expanded to include many of the best generals we have, who were all able to show their skill in the Second Russian Revolution. Only a high command truly including the best of the best will be able to do intelligent decisions."
+RUS_Heavy_Tank_Development: "Heavy Tank Fleet"
+RUS_Heavy_Tank_Development_desc: "Follow Frunze's emphasis on heavy tank development, investing in powerful and well-armored tanks. Prioritize the creation of formidable tank divisions capable of withstanding enemy assaults."
+
+RUS_Tukhachevskiys_Reform_Plan: "Tukhachevskiy's Reform Plan"
+RUS_Tukhachevskiys_Reform_Plan_desc: "Tukhachevskiy has proposed to use the doctrine of deep battle, which proposes the use of combined arms and overwhelming land-air attacks. Such a doctrine would make the army a true force to be reckoned with on the offensive."
+RUS_Total_War_Effort: "Total War Effort"
+RUS_Total_War_Effort_desc: ""In order to win the wars that are inevitably coming down the line, especially with the world situation growing ever more chaotic and with our ambitions of conquest and liberation in the name of socialism, we must issue higher quotas on conscriptions while lowering the bar for possible volunteers and conscripts. We will need to mobilize the entire Soviet population for the upcoming total war, echoing Tukhachevsky's belief in a brutal and bloody conflict fought by the entire population. We will need bodies if we are to win."
+RUS_Mass_Breakthroughs: "Mass Breakthroughs"
+RUS_Mass_Breakthroughs_desc: "Armour is the future, we will need to support the development of new tanks if we want to create a truly modern arm force, which is able to encircle and destroy enemy divisions at record speeds."
+RUS_Land_Air_Integration: "Land-Air Integration"
+RUS_Land_Air_Integration_desc: "The integrated use of soldiers and aircraft will allow for the overwhelming of the troops and for our army to crush the enemy completely."
+
+RUS_Defensive_Buildup_Strategy: "Defensive Buildup Strategy"
+RUS_Defensive_Buildup_Strategy_desc: "Align with the Old Guard's strategy of a defensive buildup. Prioritize the defense of the Soviet territories and the steady growth of military power to withstand potential external threats."
+RUS_Urban_Defensive_Perimeters: "Urban Defensive Perimeters"
+RUS_Urban_Defensive_Perimeters_desc: "Nobody wants to repeat the experience of the Great War, but the truth is that we may be forced to defend the Rodina from invaders. Petrograd and Tsaritsyn have been identified as prime strategic targets in such an instance — and so detailed plans have been drawn up for their defense, should the worst come."
+RUS_Strategic_Exhaustion_Doctrine: "Strategic Exhaustion Doctrine"
+RUS_Strategic_Exhaustion_Doctrine_desc: "Adopt the Old Guard's doctrine of strategic exhaustion. Focus on wearing down the enemy through prolonged defense, emphasizing the resilience and endurance of the Red Army."
 
 
 ### NSP factions ###

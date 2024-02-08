@@ -427,7 +427,6 @@ RUS_civil_war_decisions = {
 							tag = RRF
 							NOT = { has_global_flag = RCW_SOV_RRF_peace }
 						}
-						tag = WRA
 						tag = TRM
 					}
 					exists = yes
@@ -466,7 +465,7 @@ RUS_civil_war_decisions = {
 			has_global_flag = RCW_begun
 			NOT = { has_global_flag = RCW_over }			
 		}
-		targets = { ALO DKB WRA TRM }
+		targets = { ALO DKB TRM }
 		target_root_trigger = { is_faction_leader = yes }
 		target_trigger = {
 			FROM = {
@@ -1174,6 +1173,14 @@ RUS_civil_war_decisions = {
 			NOT = {
 				has_country_flag = RCW_is_recruiting
 				FROM = { is_demilitarized_zone = yes }
+			}
+			if = {
+				limit = { has_focus_tree = Russia_Socialist }
+				has_completed_focus = RUS_Local_Defense_Militias
+			}
+			else_if = {
+				limit = { tag = RRF }
+				has_completed_focus = RRF_Organize_Green_Armies
 			}
 		}
 		visible = {

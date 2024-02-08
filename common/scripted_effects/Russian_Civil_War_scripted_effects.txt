@@ -249,6 +249,7 @@ setup_rcw_workers_initial = {
 		set_country_flag = Dmitri_N_Verderevsky_dead
 		set_country_flag = Aleksandr_A_Kazakov_dead
 		ROOT = { save_global_event_target_as = soviet_russia }
+		add_ideas = SOV_chaotic_revolution_1
 		set_stability = 0.6
 		set_war_support = 0.4
 		set_country_flag = soc_dems_are_socialists
@@ -494,7 +495,7 @@ initialize_rcw = {
 				country_lock_all_division_template = yes
 				add_ideas = {
 					RCW_major
-					extensive_conscription
+					limited_conscription
 					war_economy
 				} 
 				if = {

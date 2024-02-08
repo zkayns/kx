@@ -153,6 +153,25 @@ KAR_invade_petrozavodsk = {
 		manual_attack = yes
 	}
 }
+WRA_northern_offensive_strategy = {
+	allowed = {
+		tag = WRA
+	}
+	enable = {
+		has_idea = WRA_northern_offensive
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = RUS
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+}
 UKR_ensure_neutrality = {
 	allowed = { 
 		original_tag = UKR

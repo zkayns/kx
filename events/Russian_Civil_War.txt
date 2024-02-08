@@ -1,5 +1,6 @@
 
 add_namespace = rcw
+add_namespace = WRA
 
 country_event = { #RCW
 	id = rcw.1
@@ -5851,5 +5852,141 @@ country_event = { #RCW
 		name = rcw.510.a
 		add_stability = -0.1
 		add_ideas = RUS_socialist_resistance		
+	}
+}
+
+country_event = { #RCW
+	id = WRA.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event WRA.1" }
+	title = WRA.1.t
+	desc = WRA.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = WRA.1.a		
+	}
+}
+
+country_event = { #RCW
+	id = WRA.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event WRA.2" }
+	title = WRA.2.t
+	desc = WRA.2.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WRA.2.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					country_exists = KAR
+					KAR = { has_war_with = RUS }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				KAR = { has_war_with = RUS }
+				FIN = {
+					NOT = { has_war_with = RUS }
+				}
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_faction = "Northern Front"
+				add_to_faction = ROOT
+				if = {
+					limit = {
+						NOT = { has_war_with = RUS }
+					}
+					declare_war_on = {
+						target = RUS
+						type = annex_everything
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = WRA.3
+				days = 1
+				random = 24
+			}
+		}
+	}
+	option = {
+		name = WRA.2.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_war_with = RUS
+				OR = {
+					FIN_is_monarchy = yes
+					FIN_national_coalition_victory = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_war_with = RUS
+				OR = {
+					FIN_is_monarchy = no
+					FIN_national_coalition_victory = no
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = WRA.4
+				days = 1
+				random = 24
+			}
+		}
+	}
+}
+
+country_event = { #RCW
+	id = WRA.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event WRA.3" }
+	title = WRA.3.t
+	desc = WRA.3.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WRA.3.a
+		create_faction = "Northern Front"
+		add_to_faction = FROM
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_war_with = RUS }
+				}
+			}
+			FROM = {
+				declare_war_on = {
+					target = RUS
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+country_event = { #RCW
+	id = WRA.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event WRA.4" }
+	title = WRA.4.t
+	desc = WRA.4.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WRA.4.a
+		add_opinion_modifier = { target = FROM modifier = medium_decrease }
 	}
 }
