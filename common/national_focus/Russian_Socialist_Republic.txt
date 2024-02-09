@@ -9996,7 +9996,7 @@ focus = {
 	}
 	shared_focus = {
 		id = RUS_Mobilise_Urban_Militias
-		icon = GFX_BBR_red_militia_justice
+		icon = GFX_DKB_don_army
 		relative_position_id = RUS_Zhukov_Restores_Socialism
 		x = 14
 		y = 8
@@ -10167,17 +10167,19 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_The_War_Effort"
-			swap_ideas = {
-				remove_idea = SOV_chaotic_revolution_1
-				add_idea = SOV_chaotic_revolution_2
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = SOV_chaotic_revolution_1
+					add_idea = SOV_chaotic_revolution_2
+				}
 			}
-			effect_tooltip = { country_lock_all_division_template = yes }
+			effect_tooltip = { country_lock_all_division_template = no }
 			RUS_remove_divided_staff_ideas = yes			
 		}
 	}
 	shared_focus = {
 		id = RUS_Revolutionary_Indoctrination
-		icon = GFX_goal_SOV_army
+		icon = GFX_goal_SKM_Revolutionary_Zeal
 		relative_position_id = RUS_The_War_Effort
 		x = 0
 		y = 1
@@ -10209,7 +10211,7 @@ focus = {
 	}
 	shared_focus = {
 		id = RUS_Local_Defense_Militias
-		icon = GFX_goal_SOV_army
+		icon = GFX_goal_integrate_the_militia
 		relative_position_id = RUS_The_War_Effort
 		x = -2
 		y = 1
@@ -10238,7 +10240,7 @@ focus = {
 	}
 	shared_focus = {
 		id = RUS_Embolden_Local_Commanders
-		icon = GFX_goal_SOV_army
+		icon = GFX_SOV_militia
 		relative_position_id = RUS_The_War_Effort
 		x = 2
 		y = 1
@@ -10837,7 +10839,7 @@ focus = {
 	}
 	shared_focus = {
 		id = RUS_Urban_Defensive_Perimeters
-		icon = GFX_goal_EGY_Palestine_Defence
+		icon = GFX_EGY_Palestine_Defence
 		cost = 8
 	
 		relative_position_id = RUS_Defensive_Buildup_Strategy

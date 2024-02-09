@@ -72,7 +72,7 @@ focus_tree = {
 	}
 	focus = {
 		id = WRA_Baltic_Volunteers
-		icon = GFX_goal_BAT_officers
+		icon = GFX_BAT_officers
 		relative_position_id = WRA_The_Second_Northern_Campaign
 		x = -1
 		y = 2
@@ -185,8 +185,6 @@ focus_tree = {
 			}
 		}
 	}
-
-	
 		
 	focus = {
 		id = WRA_White_Petrograd
@@ -199,9 +197,7 @@ focus_tree = {
 			focus = WRA_Baltic_Volunteers
 			focus = WRA_Grassroots_Agitation 
 		}
-		prerequisite = { focus = RRF_Political_Institutions_Reform }
-		
-		
+				
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WRA_White_Petrograd"
 			add_timed_idea = {

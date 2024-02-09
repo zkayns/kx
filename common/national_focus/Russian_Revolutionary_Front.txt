@@ -723,7 +723,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RRF_Tula_Armaments_Factory"
 			add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 5000 producer = RRF }
-			add_equipment_to_stockpile = { type = artillery_equipment_0 amount = 500 producer = RRF }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = RRF }
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { has_dlc_aat = yes }
