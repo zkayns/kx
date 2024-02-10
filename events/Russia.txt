@@ -19574,9 +19574,9 @@ country_event = {
 	option = {
 		name = rusd.33.a
 		ai_chance = {
-			base = 99
+			base = 100
 			modifier = {
-				factor = 0.4
+				add = -35
 				has_authoritarian_government = no
 			}
 		}
@@ -19597,9 +19597,9 @@ country_event = {
 	option = {
 		name = rusd.33.b
 		ai_chance = {
-			base = 1
+			base = 0
 			modifier = {
-				factor = 35
+				add = 35
 				has_authoritarian_government = no
 			}
 		}

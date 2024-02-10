@@ -168,13 +168,20 @@ RUS_civil_war_decisions = {
 				limit = {
 					tag = ALO
 				}
-				country_event = rcw.32
+				country_event = {
+					id = rcw.32
+					days = 7
+					random_days = 4
+				}
 			}
 			else_if = {
 				limit = {
 					tag = FIN
 				}
-				country_event = rcw.37
+				country_event = {
+					id = rcw.37
+					days = 14
+				}
 			}
 			else_if = {
 				limit = {
@@ -207,7 +214,10 @@ RUS_civil_war_decisions = {
 				limit = {
 					original_tag = UKR
 				}
-				country_event = rcw.55
+				country_event = {
+					id = rcw.55
+					days = 4
+				}
 			}
 			else_if = {
 				limit = {
@@ -229,10 +239,18 @@ RUS_civil_war_decisions = {
 						is_subject = no
 						russian_civil_war = yes
 					}
-					country_event = rcw.27
+					country_event = {
+						id = rcw.27
+						days = 5
+						random_days = 10
+					}
 				}
 				else = {
-					country_event = whiteruthenia.63
+					country_event = {
+						id = whiteruthenia.63
+						days = 5
+						random_days = 10
+					}
 				}
 			}
 		}

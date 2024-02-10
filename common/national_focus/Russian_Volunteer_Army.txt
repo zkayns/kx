@@ -744,7 +744,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RVA_Clandestine_Recruitment_Campaign
-		icon = GFX_goal_NYC_new_york_volunteers
+		icon = GFX_goal_generic_recruit_spies
 		relative_position_id = RVA_Emergency_Mobilization
 		x = 0
 		y = 3

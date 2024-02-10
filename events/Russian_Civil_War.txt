@@ -2340,7 +2340,7 @@ country_event = { #RCW
 	option = {
 		name = rcw.38.a
 		ai_chance = {
-			base = 85
+			base = 75
 			modifier = {
 				factor = 0
 				OR = {
@@ -2360,19 +2360,19 @@ country_event = { #RCW
 			target = KAR
 			type = annex_everything
 		}
-		FIN = {
-			country_event = {
-				id = rusd.33
-				days = 1
-			}
-		}
+		#FIN = {
+		#	country_event = {
+		#		id = rusd.33
+		#		days = 1
+		#	}
+		#}
 		add_war_support = 0.05
 		add_stability = -0.02
 	}
 	option = {
 		name = rcw.38.b
 		ai_chance = {
-			base = 15
+			base = 25
 			modifier = {
 				factor = 1000
 				has_game_rule = {
@@ -2565,31 +2565,7 @@ country_event = { #RCW
 		}
 		FRP = { embargo_ROOT = yes }
 		GBR = { embargo_ROOT = yes }
-		custom_effect_tooltip = SOV_russian_generals_will_return
-		ENG = {
-			every_unit_leader = {
-				limit = {
-					has_trait = SOV_bolshevik_officer 
-				}
-				set_nationality = ROOT
-			}
-		}
-		FRA = {
-			every_unit_leader = {
-				limit = {
-					has_trait = SOV_bolshevik_officer 
-				}
-				set_nationality = ROOT
-			}
-		}
-		FOP = {
-			every_unit_leader = {
-				limit = {
-					has_trait = SOV_bolshevik_officer 
-				}
-				set_nationality = ROOT
-			}
-		}
+		bolsheviks_gome_home = yes
 		if = {
 			limit = {
 				country_exists = RUS

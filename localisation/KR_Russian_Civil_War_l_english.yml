@@ -175,13 +175,13 @@ rcw.36.d:0 "Some of the peasant regions, mostly located around Tambov, have rise
 rcw.36.a:0 "A dangerous enemy we have to deal with."
 rcw.36.b:0 "Prosperity for Peasants! (Play as Russian State)"
 
-rcw.37.t:0 "Seize Eastern Karelia?"
-rcw.37.d:0 "[RUS.GetName] is now in a weak position. A chaotic revolution led to insurgency in Siberia and strengthening of Transamur. We can take an advantage of the situation and capture Eastern Karelia - the land that is ought to be ours!"
+rcw.37.t:0 "Uprising in White Karelia?"
+rcw.37.d:0 "[RUS.GetName] is now in a weak position. A chaotic revolution led to a new civil war and now we can take an advantage of the situation and allow additional investments to White Karelian rebels - the land that is ought to be ours!"
 rcw.37.a:0 "Capture Karelia."
 rcw.37.b:0 "Better not provoke the Russians."
 
-rcw.38.t:0 "Eastern Karelia Uprising!"
-rcw.38.d:0 "Karelo-Finnish Nationalists have taken advantage of our yet weak power and have invaded Eastern Karelia, threatening to seize Murmansk railway and our naval base in Murmansk. We can intervene now and secure our Northern Base."
+rcw.38.t:0 "White Karelia Uprising!"
+rcw.38.d:0 "Karelian and Finnish Nationalists have taken advantage of our yet weak power and have invaded Eastern Karelia, threatening to seize Murmansk railway and our naval base in Murmansk. We can intervene now and secure our Northern Base."
 rcw.38.a:0 "Declare war on them!"
 rcw.38.b:0 "We'll deal with them later."
 
