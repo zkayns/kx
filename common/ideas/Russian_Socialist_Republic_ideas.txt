@@ -681,7 +681,7 @@ ideas = {
 		}
 		SOV_for_the_revolution_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SOV_for_the_revolution_1" }
-			picture = militia_support
+			picture = BBR_militia_support
 			name = SOV_for_the_revolution
 			allowed = { always = no }
 			modifier = {
@@ -690,7 +690,7 @@ ideas = {
 		}
 		SOV_for_the_revolution_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SOV_for_the_revolution_2" }
-			picture = militia_support
+			picture = BBR_militia_support
 			name = SOV_for_the_revolution
 			allowed = { always = no }
 			modifier = {

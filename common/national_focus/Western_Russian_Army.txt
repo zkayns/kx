@@ -64,9 +64,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WRA_Grassroots_Agitation"
 			increase_ruling_party_popularity_by_5 = yes
-			swap_ideas = {
-				remove_idea = WRA_low_legitimacy
-				add_idea = WRA_low_legitimacy_1
+			if = {
+				limit = { has_idea = WRA_low_legitimacy_1 }
+				swap_ideas = {
+					remove_idea = WRA_low_legitimacy_1
+					add_idea = WRA_low_legitimacy_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = WRA_low_legitimacy
+					add_idea = WRA_low_legitimacy_1
+				}
 			}
 		}
 	}
@@ -192,7 +201,7 @@ focus_tree = {
 		relative_position_id = WRA_The_Second_Northern_Campaign
 		x = 0
 		y = 3
-		cost = 5
+		cost = 2
 		prerequisite = { 
 			focus = WRA_Baltic_Volunteers
 			focus = WRA_Grassroots_Agitation 
@@ -381,7 +390,10 @@ focus_tree = {
 				}
 			}
 			else = {
-				add_ideas = WRA_centralised_command_2
+				swap_ideas = {
+					remove_idea = WRA_centralised_command_0
+					add_idea = WRA_centralised_command_2
+				}
 			}
 		}
 	}
@@ -433,7 +445,10 @@ focus_tree = {
 				}
 			}
 			else = {
-				add_ideas = WRA_centralised_command_1
+				swap_ideas = {
+					remove_idea = WRA_centralised_command_0
+					add_idea = WRA_centralised_command_1
+				}
 			}
 		}
 	}
@@ -446,16 +461,25 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = WRA_Mobilize_Supporters }
 		
-		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WRA_Mobilization_Drive"
 			add_manpower = 20000
 			add_stability = 0.05
 			add_war_support = 0.10
 			add_command_power = 50
-			swap_ideas = {
-				remove_idea = WRA_low_legitimacy_1
-				add_idea = WRA_low_legitimacy_2
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_idea = WRA_low_legitimacy_1 }
+				swap_ideas = {
+					remove_idea = WRA_low_legitimacy_1
+					add_idea = WRA_low_legitimacy_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = WRA_low_legitimacy
+					add_idea = WRA_low_legitimacy_1
+				}
 			}
 		}
 	}
@@ -625,7 +649,7 @@ focus_tree = {
 focus = {
 	id = WRA_Streamline_Intelligence_Gathering
 	icon = GFX_goal_generic_espionage
-	cost = 4
+	cost = 5
 
 	relative_position_id = WRA_The_Second_Northern_Campaign
 	x = -2
@@ -738,7 +762,10 @@ focus = {
 			}
 		}
 		else = {
-			add_ideas = WRA_centralised_command_6
+			swap_ideas = {
+				remove_idea = WRA_centralised_command_0
+				add_idea = WRA_centralised_command_6
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }

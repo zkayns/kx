@@ -944,21 +944,6 @@ create_corps_commander = {
 	planning_skill = 2
 	logistics_skill = 2
 }
-create_corps_commander = {
-	name = "Pavel Bermondt-Avalov"
-	desc = "POLITICS_PAVEL_BERMONDT_AVALOV_GENERAL_DESC"
-	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Pavel_Bermondt_Avalov.png"
-	traits = {
-		cavalry_officer
-		politically_connected
-	}
-	id = 78823
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 1
-}
 
 create_corps_commander = {
 	name = "Abram Dragomirov"

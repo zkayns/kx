@@ -9923,7 +9923,7 @@ focus = {
 				RUS_is_eurasia = yes
 			}
 		}
-		cost = 1
+		cost = 2
 		ai_will_do = {
 			factor = 1000
 			modifier = {
@@ -10008,7 +10008,7 @@ focus = {
 				RUS_is_eurasia = yes
 			}
 		}
-		cost = 1
+		cost = 2
 		ai_will_do = {
 			factor = 1000
 			modifier = {
@@ -10183,7 +10183,7 @@ focus = {
 		relative_position_id = RUS_The_War_Effort
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		prerequisite = { focus = RUS_The_War_Effort }
 		ai_will_do = {
 			factor = 20
@@ -10232,7 +10232,7 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Local_Defense_Militias"
 			effect_tooltip = {
 				every_owned_state = {
-					custom_effect_tooltip = unlock_decision
+					custom_effect_tooltip = unlock_decision_tooltip
 					custom_effect_tooltip = RUS_Local_Defense_Militias_tt
 				}
 			}
@@ -10244,7 +10244,7 @@ focus = {
 		relative_position_id = RUS_The_War_Effort
 		x = 2
 		y = 1
-		cost = 3
+		cost = 4
 		prerequisite = { focus = RUS_The_War_Effort }
 		ai_will_do = {
 			factor = 20
@@ -10290,7 +10290,7 @@ focus = {
 		relative_position_id = RUS_The_War_Effort
 		x = 1
 		y = 2
-		cost = 3
+		cost = 5
 		prerequisite = { focus = RUS_Embolden_Local_Commanders }
 		prerequisite = { focus = RUS_Local_Defense_Militias }
 		prerequisite = { focus = RUS_Revolutionary_Indoctrination }
@@ -10326,7 +10326,7 @@ focus = {
 		relative_position_id = RUS_The_War_Effort
 		x = -1
 		y = 2
-		cost = 3
+		cost = 5
 		prerequisite = { focus = RUS_Embolden_Local_Commanders }
 		prerequisite = { focus = RUS_Local_Defense_Militias }
 		prerequisite = { focus = RUS_Revolutionary_Indoctrination }

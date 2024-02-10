@@ -2114,20 +2114,91 @@ country_event = { #RCW
 country_event = { #RCW
 	id = rcw.37
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.37" }
-	title = rusd.31.t
-	desc = rusd.31.d	
+	title = rcw.37.t
+	desc = rcw.37.d	
 	fire_only_once = yes
 	
 	is_triggered_only = yes
+	
 	option = {
-		name = rusd.31.a
+		name = rcw.37.a
 		ai_chance = {
-			base = 100
+			base = 30
+			modifier = {
+				add = -30
+				has_authoritarian_government = no
+			}
+			modifier = {
+				factor = 0 
+				has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_DIPLOMACY }
+			}
+		}
+		embargo_FROM = yes
+		KAR = { give_military_access = FIN }
+		if = {
+			limit = { 
+				NOT = { has_war_with = FROM }
+			}
+			add_to_war = {
+				targeted_alliance = KAR
+				enemy = FROM
+				hostility_reason = FIN_heimosodat
+			}
+		}
+		add_war_support = 0.1
+		add_ideas = KAR_finnish_intervention
+	}
+	option = {
+		name = rcw.37.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 30
+				has_authoritarian_government = no
+			}
 			modifier = {
 				factor = 0
+				has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_WAR }
+			}
+		}
+		add_political_power = -25
+		add_stability = -0.05
+		decrease_ruling_party_popularity_by_5 = yes
+		embargo_FROM = yes
+		KAR = { save_event_target_as = volunteer_target }
+		send_volunteers_to_TARGET = yes
+	}
+	option = {
+		name = rcw.37.c
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_WAR }
+			}
+		}
+		add_political_power = -25
+		add_stability = -0.05
+		embargo_FROM = yes
+	}
+}
+country_event = { #RCW
+	id = rcw.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.38" }
+	title = rcw.38.t
+	desc = rcw.38.d	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = rcw.38.a
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 1000
 				has_game_rule = {
 					rule = KAR_REBELLION
-					option = RULE_OPTION_KAR_DISABLED
+					option = RULE_OPTION_KAR_GUARANTEED_RI
 				}
 			}
 		}
@@ -2210,164 +2281,116 @@ country_event = { #RCW
 				days = 1
 			}
 		}
-		every_other_country = {
-			limit = {
-				tag = RUS
-				has_authoritarian_government = no
-			}
+		declare_war_on = {
+			target = KAR
+			type = annex_everything
+		}
+		FIN = {
 			country_event = {
-				id = rcw.38
-				days = 5
+				id = rcw.37
+				days = 1
 			}
 		}
+		add_war_support = 0.05
+		add_stability = -0.02
 	}
 	option = {
-		name = rusd.31.c
-		trigger = { is_ai = no }
-			215 = {
-				add_core_of = KAR
-				transfer_state_to = KAR
-			}
-			1326 = { add_core_of = KAR }
-			216 = {	add_core_of = KAR }
-			1327 = { add_core_of = KAR }
-			146 = { add_claim_by = KAR }			
-			1324 = { add_claim_by = KAR }			
-			1325 = { add_claim_by = KAR }			
-			1274 = { add_claim_by = KAR }					
-			KAR = {
+		name = rcw.38.a2
+		ai_chance = {
+			base = 0
+		}
+		215 = {
+			add_core_of = KAR
+			transfer_state_to = KAR
+		}
+		1326 = { add_core_of = KAR }
+		216 = {	add_core_of = KAR }
+		1327 = { add_core_of = KAR }
+		146 = { add_claim_by = KAR }			
+		1324 = { add_claim_by = KAR }			
+		1325 = { add_claim_by = KAR }			
+		1274 = { add_claim_by = KAR }			
+		KAR = {
 			transfer_technology_without_doctrines = yes
-				division_template = {
-					name = "Karjalan rykmentti" # 
-					division_names_group = FIN_INF_01
+			division_template = {
+				name = "Karjalan rykmentti" # 
+				division_names_group = FIN_INF_01
 
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 1 y = 3 }
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
-					}
-					support = {
-						recon = { x = 0 y = 0 }
-					}
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
 				}
-				division_template = {
-					name = "Metsäsissit" # Miliztruppe
-					division_names_group = FIN_MIL_01
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+			}
+			division_template = {
+				name = "Metsäsissit" # Miliztruppe
+				division_names_group = FIN_INF_03
 
-					regiments = {
-						militia = { x = 0 y = 0 }
-						militia = { x = 0 y = 1 }
-						militia = { x = 0 y = 2 }
-						militia = { x = 1 y = 0 }
-						militia = { x = 1 y = 1 }
-						militia = { x = 1 y = 2 }
-						militia = { x = 2 y = 0 }
-						militia = { x = 2 y = 1 }
-						militia = { x = 2 y = 2 }
-					}
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
 				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Karjalan 1. rykmentti\" division_template = \"Karjalan rykmentti\" start_experience_factor = 0.6"
-						owner = KAR
-					}
+				support = {
+					long_range_patrol_support = { x = 0 y = 0 }
 				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.4"
-						owner = KAR
-					}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Karjalan 1. rykmentti\" division_template = \"Karjalan rykmentti\" start_experience_factor = 0.6"
+					owner = KAR
 				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.3"
-						owner = KAR
-					}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.4"
+					owner = KAR
 				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.2"
-						owner = KAR
-					}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.3"
+					owner = KAR
 				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.2"
+					owner = KAR
+				}
+			}
 			country_event = {
 				id = kar.100
 				days = 1
-			}
-			}
-			every_other_country = {
-				limit = {
-					tag = RUS
-					has_authoritarian_government = no
-				}
-				country_event = {
-					id = rcw.38
-				days = 5
-			}
-		}
-		KAR = { change_tag_from = ROOT }
-	}
-	option = {
-		name = rusd.31.b
-		ai_chance = {
-			factor = 0
-			modifier = {
-				add = 100
-				has_game_rule = {
-					rule = KAR_REBELLION
-					option = RULE_OPTION_KAR_DISABLED
-				}
-			}
-		}
-		add_stability = -0.025
-	}
-}
-country_event = { #RCW
-	id = rcw.38
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rcw.38" }
-	title = rcw.38.t
-	desc = rcw.38.d	
-	fire_only_once = no
-	is_triggered_only = yes
-	
-	option = {
-		name = rcw.38.a
-		ai_chance = {
-			base = 75
-			modifier = {
-				factor = 0
-				OR = {
-					FIN = { is_in_faction = yes }
-					FIN = { has_guarantor = yes }
-				}
-			}
-			modifier = {
-				factor = 1000
-				has_game_rule = {
-					rule = KAR_REBELLION
-					option = RULE_OPTION_KAR_GUARANTEED_RI
-				}
 			}
 		}
 		declare_war_on = {
 			target = KAR
 			type = annex_everything
 		}
-		#FIN = {
-		#	country_event = {
-		#		id = rusd.33
-		#		days = 1
-		#	}
-		#}
+		FIN = {
+			country_event = {
+				id = rcw.37
+				days = 1
+			}
+		}
 		add_war_support = 0.05
 		add_stability = -0.02
+		KAR = { change_tag_from = ROOT }
 	}
 	option = {
 		name = rcw.38.b
@@ -2381,8 +2404,194 @@ country_event = { #RCW
 				}
 			}
 		}
+		215 = {
+			add_core_of = KAR
+			transfer_state_to = KAR
+		}
+		1326 = { add_core_of = KAR }
+		216 = {	add_core_of = KAR }
+		1327 = { add_core_of = KAR }
+		146 = { add_claim_by = KAR }			
+		1324 = { add_claim_by = KAR }			
+		1325 = { add_claim_by = KAR }			
+		1274 = { add_claim_by = KAR }			
+		KAR = {
+			transfer_technology_without_doctrines = yes
+			division_template = {
+				name = "Karjalan rykmentti" # 
+				division_names_group = FIN_INF_01
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+			}
+			division_template = {
+				name = "Metsäsissit" # Miliztruppe
+				division_names_group = FIN_INF_03
+
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
+				}
+				support = {
+					long_range_patrol_support = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Karjalan 1. rykmentti\" division_template = \"Karjalan rykmentti\" start_experience_factor = 0.6"
+					owner = KAR
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.4"
+					owner = KAR
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.3"
+					owner = KAR
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.2"
+					owner = KAR
+				}
+			}
+			country_event = {
+				id = kar.100
+				days = 1
+			}
+		}
 		add_political_power = -15
 		add_stability = -0.05
+		FIN = {
+			country_event = {
+				id = rcw.37
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = rcw.38.b2
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = KAR_REBELLION
+					option = RULE_OPTION_KAR_GUARANTEED_RA
+				}
+			}
+		}
+		215 = {
+			add_core_of = KAR
+			transfer_state_to = KAR
+		}
+		1326 = { add_core_of = KAR }
+		216 = {	add_core_of = KAR }
+		1327 = { add_core_of = KAR }
+		146 = { add_claim_by = KAR }			
+		1324 = { add_claim_by = KAR }			
+		1325 = { add_claim_by = KAR }			
+		1274 = { add_claim_by = KAR }			
+		KAR = {
+			transfer_technology_without_doctrines = yes
+			division_template = {
+				name = "Karjalan rykmentti" # 
+				division_names_group = FIN_INF_01
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+			}
+			division_template = {
+				name = "Metsäsissit" # Miliztruppe
+				division_names_group = FIN_INF_03
+
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
+				}
+				support = {
+					long_range_patrol_support = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Karjalan 1. rykmentti\" division_template = \"Karjalan rykmentti\" start_experience_factor = 0.6"
+					owner = KAR
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.4"
+					owner = KAR
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.3"
+					owner = KAR
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Metsäsissit\" division_template = \"Metsäsissit\" start_experience_factor = 0.2"
+					owner = KAR
+				}
+			}
+			country_event = {
+				id = kar.100
+				days = 1
+			}
+		}
+		add_political_power = -15
+		add_stability = -0.05
+		FIN = {
+			country_event = {
+				id = rcw.37
+				days = 1
+			}
+		}
+		KAR = { change_tag_from = ROOT }
 	}
 }
 country_event = { #RCW
@@ -5840,7 +6049,8 @@ country_event = { #RCW
 	is_triggered_only = yes
 	
 	option = {
-		name = WRA.1.a		
+		name = WRA.1.a
+		add_ideas = WRA_centralised_command_0
 	}
 }
 

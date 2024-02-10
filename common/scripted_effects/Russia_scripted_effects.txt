@@ -3142,14 +3142,41 @@ RUS_reduce_poor_inf = {
 }
 RUS_remove_divided_staff_ideas = {
 	clr_country_flag = rus_divided_army
-	remove_ideas = {
-		rus_divided_staff
-		rus_divided_staff1
-		rus_divided_staff2
-		rus_divided_staff3
-		rus_divided_staff4
-		rus_divided_staff6
-		rus_experienced_military
+	if = {
+		limit = { has_idea = rus_divided_staff }
+		remove_ideas = rus_divided_staff
+	}
+	if = {
+		limit = { has_idea = rus_divided_staff1 }
+		remove_ideas = rus_divided_staff1
+	}
+	if = {
+		limit = { has_idea = rus_divided_staff2 }
+		remove_ideas = rus_divided_staff2
+	}
+	if = {
+		limit = { has_idea = rus_divided_staff3 }
+		remove_ideas = rus_divided_staff3
+	}
+	if = {
+		limit = { has_idea = rus_divided_staff4 }
+		remove_ideas = rus_divided_staff4
+	}
+	if = {
+		limit = { has_idea = rus_divided_staff6 }
+		remove_ideas = rus_divided_staff6
+	}
+	if = {
+		limit = { has_idea = rus_divided_staff5 }
+		remove_ideas = rus_divided_staff5
+	}
+	if = {
+		limit = { has_idea = rus_divided_marine }
+		remove_ideas = rus_divided_marine
+	}
+	if = {
+		limit = { has_idea = rus_experienced_military }
+		remove_ideas = rus_experienced_military
 	}
 }
 RUS_remove_riga_accords = {

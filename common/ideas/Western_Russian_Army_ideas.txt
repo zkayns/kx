@@ -131,12 +131,25 @@ ideas = {
 				breakthrough_bonus_against = 0.05
 			}
 		}
+		WRA_centralised_command_0 = { #Officer Training
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_0" }
+			name = WRA_centralised_army_command
+			picture = RUS_northwestern_army
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
 		WRA_centralised_command_1 = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_1" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			
 				max_planning = 0.10
 				training_time_army_factor = -0.05
 			}
@@ -144,9 +157,12 @@ ideas = {
 		WRA_centralised_command_2 = { #Autonomous Command
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_2" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			
 				planning_speed = 0.10
 				org_loss_when_moving = -0.05
 			}
@@ -154,22 +170,27 @@ ideas = {
 		WRA_centralised_command_3 = { #Territorial Defense
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_3" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				
 				planning_speed = 0.10
 				org_loss_when_moving = -0.05
 			
-				army_morale_factor = 0.05
+				army_morale_factor = 0.1
 				army_infantry_defence_factor = 0.05
 			}
 		}
 		WRA_centralised_command_4 = { ##Officer Training + Autonomous Command
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_4" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			
 				planning_speed = 0.10
 				org_loss_when_moving = -0.05
 			
@@ -180,25 +201,30 @@ ideas = {
 		WRA_centralised_command_5 = { #Officer Training + Territorial Defense
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_5" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				
 				planning_speed = 0.10
 				org_loss_when_moving = -0.05
 			
 				max_planning = 0.10
 				training_time_army_factor = -0.05
 			
-				army_morale_factor = 0.05
+				army_morale_factor = 0.1
 				army_infantry_defence_factor = 0.05
 			}
 		}
 		WRA_centralised_command_6 = { #Intelligence
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_6" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			
 				initiative_factor = 0.02
 				intel_from_combat_factor = 0.1
 				recon_factor_while_entrenched = 0.1
@@ -207,9 +233,12 @@ ideas = {
 		WRA_centralised_command_7 = { #Intelligence + Officer training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_7" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			
 				initiative_factor = 0.02
 				intel_from_combat_factor = 0.1
 				recon_factor_while_entrenched = 0.1
@@ -221,9 +250,11 @@ ideas = {
 		WRA_centralised_command_8 = { #Intelligence + Autonomous Command
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_8" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				
 				initiative_factor = 0.02
 				intel_from_combat_factor = 0.1
 				recon_factor_while_entrenched = 0.1
@@ -231,16 +262,18 @@ ideas = {
 				planning_speed = 0.10
 				org_loss_when_moving = -0.05
 			
-				army_morale_factor = 0.05
+				army_morale_factor = 0.1
 				army_infantry_defence_factor = 0.05
 			}
 		}
 		WRA_centralised_command_9 = { #Intelligence + Autonomous Command + Territorial Defense
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_8" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				
 				initiative_factor = 0.02
 				intel_from_combat_factor = 0.1
 				recon_factor_while_entrenched = 0.1
@@ -248,16 +281,19 @@ ideas = {
 				planning_speed = 0.10
 				org_loss_when_moving = -0.05
 			
-				army_morale_factor = 0.05
+				army_morale_factor = 0.1
 				army_infantry_defence_factor = 0.05
 			}
 		}
 		WRA_centralised_command_10 = { #Intelligence + Officer Training + Autonomous Command
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_10" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			
 				initiative_factor = 0.02
 				intel_from_combat_factor = 0.1
 				recon_factor_while_entrenched = 0.1
@@ -272,9 +308,11 @@ ideas = {
 		WRA_centralised_command_11 = { #all
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WRA_centralised_command_11" }
 			name = WRA_centralised_army_command
-			picture = generic_manpower_bonus
+			picture = RUS_northwestern_army
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.05
+				
 				initiative_factor = 0.02
 				intel_from_combat_factor = 0.1
 				recon_factor_while_entrenched = 0.1
@@ -285,7 +323,7 @@ ideas = {
 				max_planning = 0.10
 				training_time_army_factor = -0.05
 			
-				army_morale_factor = 0.05
+				army_morale_factor = 0.1
 				army_infantry_defence_factor = 0.05
 			}
 		}

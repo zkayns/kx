@@ -63,7 +63,6 @@ RUS_civil_war_decisions = {
 				tag = SIB
 				tag = LAT
 				tag = EST
-				tag = FIN
 				tag = GER
 				tag = WHR
 			}
@@ -93,13 +92,6 @@ RUS_civil_war_decisions = {
 				NOT = { has_government = paternal_autocrat }
 				is_subject = no
 			}
-			if = {
-				limit = {
-					tag = FIN
-				}
-				country_exists = RVA
-				NOT = { has_completed_focus = FIN_diplomacy }
-			}			
 			if = {
 				limit = {
 					tag = WHR
@@ -172,15 +164,6 @@ RUS_civil_war_decisions = {
 					id = rcw.32
 					days = 7
 					random_days = 4
-				}
-			}
-			else_if = {
-				limit = {
-					tag = FIN
-				}
-				country_event = {
-					id = rcw.37
-					days = 14
 				}
 			}
 			else_if = {

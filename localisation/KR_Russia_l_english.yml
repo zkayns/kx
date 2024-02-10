@@ -6240,16 +6240,18 @@ duma_support_tt:0 "You must have at least §G276§! §CDuma§! Support and §G76
 two_thirds_of_senate_required:0 "More than §G100§! Senators should support our government"
 
 ### traits ###
-RUS_denikin_officer:0 "Denikin's Confederate"
-RUS_denikin_officer_desc:0 "This officer is either in favor of §GRepublic§! or §CConstitutional Monarchy§! and is aligned with Denikin."
-RUS_wrangel_officer:0 "Wrangel's Confederate"
-RUS_wrangel_officer_desc:0 "This officer is either in favor of §RAbsolute Monarchy§! or is aligned with Wrangel."
-RUS_drozdovsky_officer:0 "Drozdovskiy's Confederate"
-RUS_drozdovsky_officer_desc:0 "This officer is in favor of §RAbsolute Monarchy§! and is aligned with Drozdovskiy."
-RUS_kornilov_officer:0 "Kornilov's Confederate"
-RUS_kornilov_officer_desc:0 "This officer is aligned with Kornilov."
-RUS_markov_officer:0 "Markov's Confederate"
-RUS_markov_officer_desc:0 "This officer is in favor of §CConstitutional Monarchy§! and is aligned with Markov."
+RUS_denikin_officer: "Denikintsy Officer"
+RUS_denikin_officer_desc: "This officer is either in favor of §GRepublic§! or §CConstitutional Monarchy§! and is aligned with general Anton Denikin."
+RUS_avalov_officer: "North-Western Army Officer"
+RUS_avalov_officer_desc: "This officer is in favor of §RAbsolute Monarchy§! and was a member of the §YNorth-Western Army§! (Northern Corps) during the Russian Civil War."
+RUS_wrangel_officer: "Southern Army Officer"
+RUS_wrangel_officer_desc: "This officer is either in favor of §RAbsolute Monarchy§! or is aligned with general Pyetr Wrangel, or served in the Southern Army during the Russian Civil War."
+RUS_drozdovsky_officer: "Drozdovtsy Officer"
+RUS_drozdovsky_officer_desc: "This officer is in favor of §RAbsolute Monarchy§! and is aligned with general Mikhail Drozdovsky."
+RUS_kornilov_officer: "Kornilovtsy Officer"
+RUS_kornilov_officer_desc: "This officer is either aligned with general Lavr Kornilov or was a part of Kornilov Strike Forced or served in the Volunteer Army during the Russian Civil War."
+RUS_markov_officer: "Markovtsy Officer"
+RUS_markov_officer_desc: "This officer is in favor of §CConstitutional Monarchy§! and is aligned with general Sergey Markov."
 
 ### Gorgulov name update ###
 RUS_GOR:0 "Russian Peasants' Republic"

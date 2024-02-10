@@ -722,6 +722,20 @@ initialize_rcw = {
 				id = russia.1920 
 				days = 400
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = KAR_REBELLION
+							option = RULE_OPTION_KAR_DISABLED
+						}
+					}
+				}
+				country_event = {
+					id = rcw.38
+					days = 14
+				}
+			}
 		}
 	}
 }
@@ -1964,7 +1978,10 @@ setup_western_russian_army = {
 			NOT = { is_owned_by = BAT }
 			NOT = { is_owned_by = EST }
 		}
-		hidden_effect = { remove_core_of = RUS }
+		hidden_effect = { 
+			remove_core_of = RUS 
+			add_claim_by = RUS
+		}
 		add_core_of = WRA
 		transfer_state_to = WRA
 	}
@@ -1978,11 +1995,16 @@ setup_western_russian_army = {
 		}
 	}
 	RVA = {
+		random_unit_leader = {
+			limit = { has_id = 78823 }
+			promote_leader = yes
+			set_nationality = WRA
+		}
 		every_unit_leader = {
 			limit = {
 				OR = {
-					has_id = 78823
 					has_id = 78824
+					has_trait = RUS_avalov_officer
 				}
 			}
 			set_nationality = WRA

@@ -22,7 +22,7 @@ focus_tree = {
 		icon = GFX_RUS_True_Revolution
 		x = 3
 		y = 0
-		cost = 2
+		cost = 3
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RRF_Military_Council_Reform"
@@ -36,7 +36,7 @@ focus_tree = {
 		relative_position_id = RRF_Military_Council_Reform
 		x = 2
 		y = 1
-		cost = 2
+		cost = 3
 		prerequisite = { focus = RRF_Military_Council_Reform }
 		
 		completion_reward = {
@@ -70,7 +70,7 @@ focus_tree = {
 		relative_position_id = RRF_Military_Council_Reform
 		x = 0
 		y = 1
-		cost = 2
+		cost = 4
 		prerequisite = { focus = RRF_Military_Council_Reform }
 		
 		completion_reward = {
@@ -85,14 +85,14 @@ focus_tree = {
 		relative_position_id = RRF_Military_Council_Reform
 		x = -2
 		y = 1
-		cost = 2
+		cost = 3
 		prerequisite = { focus = RRF_Military_Council_Reform }
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RRF_Organize_Green_Armies"
 			effect_tooltip = {
 				every_owned_state = {
-					custom_effect_tooltip = unlock_decision
+					custom_effect_tooltip = unlock_decision_tooltip
 					custom_effect_tooltip = RRF_Organize_Green_Armies_tt
 				}
 			}
@@ -606,11 +606,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 5
-		prerequisite = { 
-			focus = RRF_Organize_Green_Armies
-			focus = RRF_Combat_Squads_Activation 
-		}
 		prerequisite = { focus = RRF_Political_Institutions_Reform }
+		prerequisite = { focus = RRF_Organize_Green_Armies }
+		prerequisite = { focus = RRF_Combat_Squads_Activation }
 		
 		
 		completion_reward = {
