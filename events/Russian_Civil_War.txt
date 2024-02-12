@@ -2123,14 +2123,19 @@ country_event = { #RCW
 	option = {
 		name = rcw.37.a
 		ai_chance = {
-			base = 30
+			base = 50
 			modifier = {
 				add = -30
 				has_authoritarian_government = no
 			}
 			modifier = {
 				factor = 0 
-				has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_DIPLOMACY }
+				OR = {
+					has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_DIPLOMACY }
+					has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_DISABLED }
+					has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_ENEMIES }
+					has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_VOLUNTEERS }
+				}
 			}
 		}
 		embargo_FROM = yes
@@ -2151,14 +2156,19 @@ country_event = { #RCW
 	option = {
 		name = rcw.37.b
 		ai_chance = {
-			base = 50
+			base = 30
 			modifier = {
 				add = 30
 				has_authoritarian_government = no
 			}
 			modifier = {
-				factor = 0
-				has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_WAR }
+				factor = 0 
+				OR = {
+					has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_WAR }
+					has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_DISABLED }
+					has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_ENEMIES }
+					has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_GUARANTEED }
+				}
 			}
 		}
 		add_political_power = -25
@@ -2173,8 +2183,12 @@ country_event = { #RCW
 		ai_chance = {
 			base = 20
 			modifier = {
-				factor = 0
-				has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_WAR }
+				factor = 0 
+				OR = {
+					has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_WAR }
+					has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_VOLUNTEERS }
+					has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_GUARANTEED }
+				}
 			}
 		}
 		add_political_power = -25

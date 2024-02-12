@@ -197,7 +197,7 @@ add_ideas = {
 	RUS_democrat_resistance_1
 	RUS_nationalist_resistance_1
 }
-
+set_country_flag = KR_set_up_ai_templates
 add_ai_strategy = {
 	type = ignore_claim
 	id = "EST"

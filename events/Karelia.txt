@@ -238,6 +238,10 @@ country_event = {
 					option = FIN_EXPANSIONISM_WAR
 				}
 			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = KAR_fin_intervention option = KAR_FIN_INTERVENTION_ENEMIES }
+			}			
 		}
 		effect_tooltip = { give_guarantee = KAR }
 		FROM = {

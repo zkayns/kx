@@ -542,7 +542,10 @@ country_event = {
 		activate_targeted_decision = { decision = CRM_reward_collaborators target = ROOT }
 		activate_targeted_decision = { decision = CRM_punish_dissenters target = ROOT }
 		complete_national_focus = CRM_German_Garrison
-		every_owned_state = { start_resistance = event_target:CRM_crimea_uprising }
+		every_owned_state = { 
+			limit = { NOT = { state = 1221 } }
+			start_resistance = event_target:CRM_crimea_uprising 
+		}
 		add_ideas = CRM_local_resistance_1
 	}
 	option = {
@@ -561,7 +564,10 @@ country_event = {
 		activate_targeted_decision = { decision = CRM_use_propaganda target = ROOT }
 		activate_targeted_decision = { decision = CRM_attack_infrastructure target = ROOT }
 		complete_national_focus = CRM_Crimean_Dyrektoria
-		every_owned_state = { start_resistance = event_target:CRM_crimea_uprising }
+		every_owned_state = { 
+			limit = { NOT = { state = 1221 } }
+			start_resistance = event_target:CRM_crimea_uprising 
+		}
 		add_ideas = CRM_german_might_1
 	}	
 }
