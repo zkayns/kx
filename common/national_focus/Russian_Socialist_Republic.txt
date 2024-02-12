@@ -11464,7 +11464,7 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Partisan_Tactics"
-			add_ideas = SOV_partisan_tactics
+			add_ideas = SOV_partisan_warfare
 		}
 	}
 	shared_focus = {
@@ -11797,7 +11797,7 @@ focus = {
 	}
 	shared_focus = {
 		id = SOV_Standardise_Pilot_Training
-		text = SOV_Standardise_Pilot_Training
+		text = RUS_Standardise_Pilot_Training
 		icon = GFX_MON_air_doctrines_II
 		cost = 5
 	

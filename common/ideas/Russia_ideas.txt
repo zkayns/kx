@@ -6206,7 +6206,6 @@ ideas = {
 		RVA_partisan_warfare = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RVA_partisan_warfare"}
 			allowed = { always = no }
-			name = RVA_staff_split
 			picture = chi_army_corruption2
 			modifier = {
 				max_dig_in = 1

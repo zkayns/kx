@@ -703,6 +703,18 @@ ideas = {
 				industrial_capacity_factory = 0.15
 			}
 		}
+		SOV_partisan_warfare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SOV_partisan_warfare"}
+			allowed = { always = no }
+			name = RVA_partisan_warfare
+			picture = chi_army_corruption2
+			modifier = {
+				max_dig_in = 1
+				dig_in_speed_factor = 0.05
+				pocket_penalty = 0.05
+				equipment_capture = 0.07
+			}
+		}
 		SOV_armament_production_1 = { #initial
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SOV_armament_production_1"}
 			allowed = { always = no }

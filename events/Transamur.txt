@@ -196,7 +196,8 @@ country_event = { #Transamur breaks away!
 		hidden_effect = {
 			TRM = {
 				TRM_remove_japanese_influence = yes
-				separate_peace_all_wars = yes
+				set_temp_variable = { target = JAP }
+				clear_all_relations_with_TARGET = yes
 			}
 		}
 		JAP = {
@@ -6493,8 +6494,8 @@ country_event = { #Cut ties
 		set_global_flag = TRM_relations_JAP_broke
 		TRM = {
 			TRM_remove_japanese_influence = yes
-			leave_faction = yes
-			separate_peace_all_wars = yes
+			set_temp_variable = { target = JAP }
+			clear_all_relations_with_TARGET = yes
 		}
 	}
 }
@@ -9102,7 +9103,8 @@ country_event = {
 						name = "Kirill I"
 						ruling_only = yes
 					}
-					name = "Vladimir III"
+					has_country_leader = {
+						name = "Vladimir III"
 						ruling_only = yes
 					}
 					has_country_flag = Kirill_Romanov_dead

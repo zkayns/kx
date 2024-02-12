@@ -486,7 +486,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RVA_Scrap_Reuse_Initiative
-		icon = GFX_goal_generic_military_equipment
+		icon = GFX_focus_generic_military_equipment
 		relative_position_id = RVA_Improvised_Workshops
 		x = 0
 		y = 2

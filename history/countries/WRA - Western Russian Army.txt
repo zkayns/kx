@@ -289,7 +289,7 @@ create_country_leader = {
 
 
 create_corps_commander = {
-	name = "Pavel Bermondt-Avalov"
+	name = "Pavel Bermondt-Avalov "
 	desc = "POLITICS_PAVEL_BERMONDT_AVALOV_GENERAL_DESC"
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Pavel_Bermondt_Avalov.png"
 	traits = { RUS_avalov_officer cavalry_officer politically_connected }
