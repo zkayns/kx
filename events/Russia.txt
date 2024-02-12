@@ -27119,7 +27119,12 @@ country_event = {#Results
 				name = "Aleksey Rykov"
 				ruling_only = yes
 			}
+			has_country_leader = {
+				name = "Aleksandr Yegorov"
+				ruling_only = yes
+			}
 		}
+		russian_civil_war = no
 	}	
 	option = {
 		name = russoc.39.b

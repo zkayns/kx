@@ -1139,7 +1139,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Kirill Meretskov"
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Kirill_Meretskov.png"
-	traits = { trait_reckless infantry_officer harsh_leader }
+	traits = { trait_reckless militias_officer harsh_leader }
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
@@ -1163,7 +1163,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Aleksandr Gorbatov"
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Gorbatov.png"
-	traits = { career_officer cavalry_officer old_guard }
+	traits = { career_officer cavalry_officer old_guard hidden_sympathies }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 3
@@ -1186,7 +1186,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Nikolay Krylov"
 	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Krylov.png"
-	traits = { infantry_leader  urban_assault_specialist }
+	traits = { infantry_leader urban_assault_specialist hidden_sympathies }
 	skill = 2
 	attack_skill = 1
 	defense_skill = 3
@@ -1415,19 +1415,7 @@ random_unit_leader = {
 	set_nationality = ENG
 }
 random_unit_leader = {
-	limit = { has_id = 17895 }
-	add_unit_leader_trait = SOV_bolshevik_officer
-	set_unit_leader_flag = SOV_british_clique
-	set_nationality = ENG
-}
-random_unit_leader = {
 	limit = { has_id = 17896 }
-	add_unit_leader_trait = SOV_bolshevik_officer
-	set_unit_leader_flag = SOV_british_clique
-	set_nationality = ENG
-}
-random_unit_leader = {
-	limit = { has_id = 17898 }
 	add_unit_leader_trait = SOV_bolshevik_officer
 	set_unit_leader_flag = SOV_british_clique
 	set_nationality = ENG

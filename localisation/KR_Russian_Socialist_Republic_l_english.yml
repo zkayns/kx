@@ -2410,8 +2410,8 @@ listofsocialistpartieswithoutfactions: "Left SRs: [?vkps_value|C0]\nSocialists-R
 listofsocialistpartieswithoutbolsheviksandmensheviks: "Profsoyuzovtsy: [?profsoyuz_value|C0]\nLeft SRs: [?vkps_value|C0]\nSocialists-Revolutionaries [?psr_value|C0]\nNSP: [?nsp_value|C0]"
 
 
-SOV_bolshevik_officer: "Former Red Army General"
-SOV_bolshevik_officer_desc: "This officer will leave back home as soon as there is a chance."
+SOV_bolshevik_officer: "Former RKKA General"
+SOV_bolshevik_officer_desc: "This officer is a well-known Red Army general, that will leave back to his homeland as soon as there is a chance."
 ### New Congress Focuses ###
 SOV_Premier_Volsky: "Premier Volsky"
 SOV_Premier_Volsky_desc: "Vladimir Volsky has been named the head of our Party. As an avid Socialist and supporter of the Revolution his appointment is seen as unsurprising by many. His devotion to the party goes back to 1903 and has since kept a close friendship with the Spiridonova. While, for one reason or another, Spiridonova herself was unable to secure leadership to many of her supporters, Volsky is the next best thing. Promising to return the PSR to its revolutionary roots he has gained many followers and now the establishment trembles as it waits for his next move."
