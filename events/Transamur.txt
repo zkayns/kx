@@ -290,13 +290,33 @@ country_event = { #Kirill dies
 	title = {
 		text = rusd.95.t.tsar
 		trigger = {
-			has_completed_focus = TRM_Russian_Empire_In_Exile
+			has_country_leader = {
+				ruling_only = yes
+				name = "Kirill I"
+			}
+			TRM_Mlad_in_power = no
+			NOT = { has_government = national_populist }
+		}
+	}
+	title = {
+		text = trammlad.505.t
+		trigger = {
+			has_country_leader = { ruling_only = yes name = "Kirill I" }
+			OR = {
+				TRM_Mlad_in_power = yes
+				has_government = national_populist
+			}
 		}
 	}
 	title = {
 		text = rusd.95.t.other
 		trigger = {
-			NOT = { has_completed_focus = TRM_Russian_Empire_In_Exile }
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Kirill I"
+				}
+			}
 		}
 	}
 	desc = {
@@ -305,6 +325,18 @@ country_event = { #Kirill dies
 			has_country_leader = {
 				ruling_only = yes
 				name = "Kirill I"
+			}
+			TRM_Mlad_in_power = no
+			NOT = { has_government = national_populist }
+		}
+	}
+	desc = {
+		text = trammlad.505.d
+		trigger = {
+			has_country_leader = { ruling_only = yes name = "Kirill I" }
+			OR = {
+				TRM_Mlad_in_power = yes
+				has_government = national_populist
 			}
 		}
 	}
@@ -331,6 +363,8 @@ country_event = { #Kirill dies
 				ruling_only = yes
 				name = "Kirill I"
 			}
+			TRM_Mlad_in_power = no
+			NOT = { has_government = national_populist }
 		}
 		set_country_flag = Kirill_Romanov_dead
 		create_country_leader = {
@@ -340,6 +374,39 @@ country_event = { #Kirill dies
 			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 		}
+	}
+	option = {
+		name = rusd.95.a
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "Kirill I"
+			}
+			OR = {
+				TRM_Mlad_in_power = yes
+				has_government = national_populist 
+			}
+		}
+		set_country_flag = Kirill_Romanov_dead
+		create_country_leader = {
+			name = "Vladimir III"
+			desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
+			picture = "gfx/leaders/TRM/Portrait_TRM_Vladimir_III.png"
+			expire = "1.1.1"
+			ideology = mladorossi_subtype
+			traits = { peoples_tsar }
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Vladimir III"
+				desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
+				picture = "gfx/leaders/TRM/Portrait_TRM_Vladimir_III.png"
+				expire = "1.1.1"
+				ideology = national_restorationism_subtype
+			}
+		}
+		set_country_flag = TRM_TSAR_VLAD
+		set_country_flag = Kirill_Romanov_dead
 	}
 	option = {
 		name = rusd.95.c
@@ -8139,74 +8206,6 @@ country_event = {
 	}
 }
 country_event = {
-	id = trammlad.151
-	immediate = {log = "[GetDateText]: [Root.GetName]: event trammlad.151"}
-	title = trammlad.151.t
-	desc = trammlad.151.d
-	picture = GFX_news_event_TRM_tsar_kir
-
-	trigger = {
-		TRM_Mlad_in_power = yes
-		has_country_leader = {
-			ruling_only = yes
-				name = "Mladorossi Regency Council"
-		}
-		RUS = {
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					name = "Kirill I"
-				}
-				has_country_leader = {
-					ruling_only = yes
-					name = "Vladimir III"
-				}
-				has_country_flag = Kirill_Romanov_dead
-			}
-		}
-	}
-	
-	immediate = {
-		RUS = {
-			set_country_flag = Kirill_Romanov_dead
-		}
-	}
-	
-	fire_only_once = yes
-
-	option = { 
-		name = trammlad.151.a
-		create_country_leader = {
-			name = "Kirill I"
-			desc = "POLITICS_KYRIL_ROMANOV_MLAD_DESC"
-			picture = "gfx/leaders/TRM/Portrait_TRM_Tsar_Kyril.png"
-			expire = "1.1.1"
-			ideology = mladorossi_subtype
-			traits = {peoples_tsar}
-		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Kirill I"
-				desc = "POLITICS_KYRIL_ROMANOV_MLAD_DESC"
-				picture = "gfx/leaders/TRM/Portrait_TRM_Tsar_Kyril.png"
-				expire = "1.1.1"
-				ideology = national_restorationism_subtype
-			}
-		}
-		set_country_flag = TRM_Monarchy
-		set_country_flag = TRM_KYRIL_TSAR
-		custom_effect_tooltip = TRM_legitimacy_will_increase
-		hidden_effect = {
-			TRM_increase_legitmacy = yes
-			country_event = {
-				id = rusd.204
-				days = 60
-				random_days = 344
-			}
-		}
-	}
-}
-country_event = {
 	id = trammlad.150
 	immediate = {log = "[GetDateText]: [Root.GetName]: event trammlad.150"}
 	title = trammlad.150.t
@@ -8229,8 +8228,11 @@ country_event = {
 					ruling_only = yes
 					name = "Vladimir III"
 				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Andrei I"
+				}
 			}
-			has_country_flag = Kirill_Romanov_dead
 		}
 	}
 	
@@ -8238,13 +8240,84 @@ country_event = {
 
 	option = { 
 		name = trammlad.150.a
+		trigger = {
+			NOT = {
+				has_country_flag = Kirill_Romanov_dead
+			}
+			RUS = { 
+				NOT = { 
+					OR = {
+						has_country_flag = Kirill_Romanov_dead 
+						has_country_leader = {
+							ruling_only = yes
+							name = "Kirill I"
+						}
+						has_country_leader = {
+							ruling_only = yes
+							name = "Vladimir III"
+						}
+					}
+				}
+			}
+		}
+		create_country_leader = {
+			name = "Kirill I"
+			desc = "POLITICS_KYRIL_ROMANOV_MLAD_DESC"
+			picture = "gfx/leaders/TRM/Portrait_TRM_Tsar_Kyril.png"
+			expire = "1.1.1"
+			ideology = mladorossi_subtype
+			traits = { peoples_tsar }
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Kirill I"
+				desc = "POLITICS_KYRIL_ROMANOV_MLAD_DESC"
+				picture = "gfx/leaders/TRM/Portrait_TRM_Tsar_Kyril.png"
+				expire = "1.1.1"
+				ideology = national_restorationism_subtype
+			}
+		}
+		set_country_flag = TRM_Monarchy
+		set_country_flag = TRM_KYRIL_TSAR
+		TRM_increase_legitmacy = yes
+		hidden_effect = {
+			country_event = {
+				id = rusd.204
+				days = 60
+				random_days = 344
+			}
+		}
+	}
+	option = { 
+		name = trammlad.150.b
+		trigger = {
+			OR = {
+				has_country_flag = Kirill_Romanov_dead
+				RUS = { has_country_flag = Kirill_Romanov_dead }
+			}
+			RUS = { 
+				NOT = { 
+					OR = {
+						has_country_flag = Kirill_Romanov_dead 
+						has_country_leader = {
+							ruling_only = yes
+							name = "Kirill I"
+						}
+						has_country_leader = {
+							ruling_only = yes
+							name = "Vladimir III"
+						}
+					}
+				}
+			}
+		}
 		create_country_leader = {
 			name = "Vladimir III"
 			desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
 			picture = "gfx/leaders/TRM/Portrait_TRM_Vladimir_III.png"
 			expire = "1.1.1"
 			ideology = mladorossi_subtype
-			traits = {peoples_tsar}
+			traits = { peoples_tsar }
 		}
 		hidden_effect = {
 			create_country_leader = {
@@ -8257,9 +8330,8 @@ country_event = {
 		}
 		set_country_flag = TRM_Monarchy
 		set_country_flag = TRM_TSAR_VLAD
-		custom_effect_tooltip = TRM_legitimacy_will_increase
+		TRM_increase_legitmacy = yes
 		hidden_effect = {
-			TRM_increase_legitmacy = yes
 			country_event = {
 				id = rusd.204
 				days = 60
@@ -8267,6 +8339,45 @@ country_event = {
 			}
 		}
 	}
+	option = { 
+		name = trammlad.150.c
+		trigger = {
+			RUS = { 
+				NOT = { 
+					has_country_leader = {
+						ruling_only = yes
+						name = "Andrei I"
+					}
+				}
+			}		
+		}
+		create_country_leader = {
+			name = "Andrei I"
+			desc = "POLITICS_ANDREI_ROMANOV_DESC"
+			picture = "gfx/leaders/TRM/Portrait_TRM_Andrei_Romanov.png"
+			expire = "1.1.1"
+			ideology = mladorossi_subtype
+			traits = { peoples_tsar }
+		}		
+		hidden_effect = {
+			create_country_leader = {
+				name = "Andrei I"
+				desc = "POLITICS_ANDREI_ROMANOV_DESC"
+				picture = "gfx/leaders/TRM/Portrait_TRM_Andrei_Romanov.png"
+				expire = "1.1.1"
+				ideology = national_restorationism_subtype
+			}
+		}
+		set_country_flag = TRM_Monarchy
+		TRM_increase_legitmacy = yes
+		hidden_effect = {
+			country_event = {
+				id = rusd.204
+				days = 60
+				random_days = 344
+			}
+		}
+	}	
 }
 country_event = {
 	id = trammlad.149
@@ -8462,31 +8573,8 @@ country_event = {
 	id = trammlad.504
 	immediate = {log = "[GetDateText]: [Root.GetName]: event trammlad.504"}
 	
-	title = {
-		text = trammlad.504.t
-		trigger = {
-			date > 1938.10.12
-		}
-	}
-	title = {
-		text =  trammlad.504.t.alexi
-		trigger = {
-			date > 1938.10.12
-		}
-	}
-	
-	desc = {
-		text = trammlad.504.d
-		trigger = {
-			date > 1938.10.12
-		}
-	}
-	desc = {
-		text =  trammlad.504.d.alexi
-		trigger = {
-			date > 1938.10.12
-		}
-	}
+	title = trammlad.504.t
+	desc = trammlad.504.d
 	picture = GFX_news_event_TRM_tsar_alexander
 
 	is_triggered_only = yes
@@ -8494,130 +8582,10 @@ country_event = {
 	fire_only_once = yes
 
 	option = { 
-		trigger = { date < 1938.10.12 }
-		name = trammlad.504.a
-		create_country_leader = {
-			name = "Alexander IV"
-			desc = "POLITICS_ALEXANDER_ROMANOV_DESC"
-			picture = "gfx/leaders/TRM/Portrait_TRM_Alexander_Romanov.png"
-			expire = "1.1.1"
-			ideology = mladorossi_subtype
-			traits = {peoples_tsar}
-		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Alexander IV"
-				desc = "POLITICS_ALEXANDER_ROMANOV_DESC"
-				picture = "gfx/leaders/TRM/Portrait_TRM_Alexander_Romanov.png"
-				expire = "1.1.1"
-				ideology = national_restorationism_subtype
-			}
-		}
-		set_country_flag = TRM_TSAR_ALEX
-		set_country_flag = TRM_Monarchy
-		custom_effect_tooltip = TRM_legitimacy_will_increase
-		hidden_effect = {
-			TRM_increase_legitmacy = yes
-		}
-	}
-	option = { 
-		trigger = { date > 1938.10.12 }
 		name = trammlad.504.b
-		create_country_leader = {
-			name = "Andrei I"
-			desc = "POLITICS_ANDREI_ROMANOV_DESC"
-			picture = "gfx/leaders/TRM/Portrait_TRM_Andrei_Romanov.png"
-			expire = "1.1.1"
-			ideology = mladorossi_subtype
-			traits = {peoples_tsar}
-		}
-		set_country_flag = TRM_Monarchy
-		custom_effect_tooltip = TRM_legitimacy_will_increase
-		hidden_effect = {
-			TRM_increase_legitmacy = yes
-		}
 	}
 }
 
-country_event = {
-	id = trammlad.505
-	immediate = {log = "[GetDateText]: [Root.GetName]: event trammlad.505"}
-	title = trammlad.505.t
-	desc = trammlad.505.d
-	picture = GFX_news_event_TRM_tsar_vlad
-
-	trigger = {
-		has_country_flag = TRM_KYRIL_TSAR
-		date > 1938.10.12
-		RUS = {
-			NOT = {
-				has_country_leader = {
-					name = "Vladimir III"
-					ruling_only = yes
-				}
-			}
-		}
-	}
-	
-	fire_only_once = yes
-
-	option = { 
-		name = trammlad.505.a
-		create_country_leader = {
-			name = "Vladimir III"
-			desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
-			picture = "gfx/leaders/TRM/Portrait_TRM_Vladimir_III.png"
-			expire = "1.1.1"
-			ideology = mladorossi_subtype
-			traits = {peoples_tsar}
-		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Vladimir III"
-				desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
-				picture = "gfx/leaders/TRM/Portrait_TRM_Vladimir_III.png"
-				expire = "1.1.1"
-				ideology = national_restorationism_subtype
-			}
-		}
-		set_country_flag = TRM_TSAR_VLAD
-	}
-}
-country_event = {
-	id = trammlad.506
-	immediate = {log = "[GetDateText]: [Root.GetName]: event trammlad.506"}
-	title = trammlad.506.t
-	desc = trammlad.506.d
-	picture = GFX_news_event_TRM_tsar_andrei
-
-	trigger = {
-		has_country_flag = TRM_TSAR_ALEX
-		date > 1938.10.12
-	}
-	
-	fire_only_once = yes
-
-	option = { 
-		name = trammlad.506.a
-		create_country_leader = {
-			name = "Andrei I"
-			desc = "POLITICS_ANDRE_ROMANOV_DESC"
-			picture = "gfx/leaders/TRM/Portrait_TRM_Andrei_Romanov.png"
-			expire = "1.1.1"
-			ideology = mladorossi_subtype
-			traits = {peoples_tsar}
-		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Andrei I"
-				desc = "POLITICS_ANDRE_ROMANOV_DESC"
-				picture = "gfx/leaders/TRM/Portrait_TRM_Andrei_Romanov.png"
-				expire = "1.1.1"
-				ideology = national_restorationism_subtype
-			}
-		}
-	}
-}
 country_event = {
 	id = trammlad.507
 	immediate = {log = "[GetDateText]: [Root.GetName]: event trammlad.507"}
@@ -8945,10 +8913,7 @@ country_event = {
 		}
 		add_war_support = 0.15
 		set_country_flag = TRM_DOROVS_joined_Nats
-		custom_effect_tooltip = TRM_legitimacy_will_increase
-		hidden_effect = {
-			TRM_increase_legitmacy = yes
-		}
+		TRM_increase_legitmacy = yes
 	}
 }
 country_event = {
@@ -9080,10 +9045,7 @@ country_event = {
 				}
 			}
 		}
-		custom_effect_tooltip = TRM_legitimacy_will_increase
-		hidden_effect = {
-			TRM_increase_legitmacy = yes
-		}
+		TRM_increase_legitmacy = yes
 	}
 }
 country_event = {
@@ -9138,6 +9100,9 @@ country_event = {
 				NOT = {
 					has_country_leader = {
 						name = "Kirill I"
+						ruling_only = yes
+					}
+					name = "Vladimir III"
 						ruling_only = yes
 					}
 					has_country_flag = Kirill_Romanov_dead
