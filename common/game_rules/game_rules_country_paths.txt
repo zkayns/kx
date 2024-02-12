@@ -3885,6 +3885,56 @@ RUS_RCW = {
 		allow_achievements = yes
 	}
 }
+RUS_rcw_sov_rrf_pact = {
+	name = "RUS_RCW_SOV_RRF_PACT"
+	group = "RULE_GROUP_KAISERREICH_RULES_EASTERN_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_RUS_RCW_SOV_RRF_PACT_RANDOM"
+		desc = "RULE_OPTION_RUS_RCW_SOV_RRF_PACT_RANDOM"
+		allow_achievements = yes
+	}
+	option = {
+		name = RUS_RCW_SOV_RRF_PACT_GUARANTEED
+		text = "RULE_OPTION_RUS_RCW_SOV_RRF_PACT_GUARANTEED"
+		desc = "RULE_OPTION_RUS_RCW_SOV_RRF_PACT_GUARANTEED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RUS_RCW_SOV_RRF_PACT_DISABLED
+		text = "RULE_OPTION_RUS_RCW_SOV_RRF_PACT_DISABLED"
+		desc = "RULE_OPTION_RUS_RCW_SOV_RRF_PACT_DISABLED_DESC"
+		allow_achievements = yes
+	}
+}
+RUS_rcw_joint_front = {
+	name = "RUS_RCW_JOINT_FRONT"
+	group = "RULE_GROUP_KAISERREICH_RULES_EASTERN_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_RUS_RCW_JOINT_FRONT_RANDOM"
+		desc = "RULE_OPTION_RUS_RCW_JOINT_FRONT_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RUS_RCW_JOINT_FRONT_GUARANTEED
+		text = "RULE_OPTION_RUS_RCW_JOINT_FRONT_GUARANTEED"
+		desc = "RULE_OPTION_RUS_RCW_JOINT_FRONT_GUARANTEED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RUS_RCW_JOINT_FRONT_DISABLED
+		text = "RULE_OPTION_RUS_RCW_JOINT_FRONT_DISABLED"
+		desc = "RULE_OPTION_RUS_RCW_JOINT_FRONT_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RUS_RCW_JOINT_FRONT_RRF_ONLY
+		text = "RULE_OPTION_RUS_RCW_JOINT_FRONT_RRF_ONLY"
+		desc = "RULE_OPTION_RUS_RCW_JOINT_FRONT_RRF_ONLY_DESC"
+		allow_achievements = yes
+	}
+}
 KAR_REBELLION = {
 	name = "KAR_REBELLION"
 	group = "RULE_GROUP_KAISERREICH_RULES_EASTERN_EUROPE"

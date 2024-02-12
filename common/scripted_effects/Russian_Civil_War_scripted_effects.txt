@@ -2721,8 +2721,11 @@ RCW_demobilize_forces = {
 			delete_unit_template_and_units = { division_template = "Respublikanskoye Opolcheniye" disband = yes }
 		}
 		if = {
-			limit = { has_template = "Krasnogvardeitsy" }
-			delete_unit_template_and_units = { division_template = "Krasnogvardeitsy" disband = yes }
+			limit = { has_completed_focus = RUS_Rebuild_The_Red_Army }
+			if = {
+				limit = { has_template = "Krasnogvardeitsy" }
+				delete_unit_template_and_units = { division_template = "Krasnogvardeitsy" disband = yes }
+			}
 		}
 	}
 	RRF = {

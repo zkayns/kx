@@ -1210,16 +1210,14 @@ RUS_civil_war_decisions = {
 		fire_only_once = no
 		days_remove = 6
 		cost = 0
-		on_map_mode = map_only 
-		
+		on_map_mode = map_only		
 		
 		state_target = yes
 		target_array = RUS.RUS_starting_states_array 
 		target_trigger = {
 			FROM = {
-				is_controlled_by = ROOT
 				NOT = { has_state_flag = RCW_recruited_@ROOT }
-				impassable = no
+				valid_state_for_spawning_friendly_unit = yes
 				NOT = { has_state_category = zero }
 				NOT = { has_state_category = one }
 			}
@@ -1236,14 +1234,8 @@ RUS_civil_war_decisions = {
 			highlight_state_targets = {
 				state = FROM
 			}
-		}
+		}		
 		
-		
-		cancel_trigger = {
-			has_global_flag = RCW_begun
-		}
-	
-	
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1269,14 +1261,15 @@ RUS_civil_war_decisions = {
 			}			
 		}
 		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel RCW_recruit_state target: [From.GetName]"
 			clr_country_flag = RCW_is_recruiting
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision RCW_recruit_state"
-			set_country_flag = RCW_is_recruiting
+			log = "[GetDateText]: [Root.GetName]: Decision RCW_recruit_state target: [From.GetName]"
+			set_country_flag = { flag = RCW_is_recruiting value = 1 days = 6 }
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove RCW_recruit_state"
+			log = "[GetDateText]: [Root.GetName]: Decision remove RCW_recruit_state target: [From.GetName]"
 			clr_country_flag = RCW_is_recruiting
 			FROM = {
 				set_state_flag = RCW_recruited_@ROOT

@@ -9945,16 +9945,20 @@ focus = {
 				division_names_group = SOV_GAR_01
 				is_locked = yes
 				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 1 y = 2 }
-					infantry = { x = 2 y = 0 }
-					infantry = { x = 2 y = 1 }
-					infantry = { x = 2 y = 2 }
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
 				}
+			}
+			custom_effect_tooltip = irregular_infantry_tech_effect
+			hidden_effect = {
+				set_technology = { expanded_engineer_corps_tech = 1 }
 			}
 			random_owned_controlled_state = {
 				prioritize = { 195 }
@@ -10388,6 +10392,24 @@ focus = {
 				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
+			}
+			if = {
+				limit = { has_template = "Krasnaya Gvardiya" }
+				delete_unit_template_and_units = { division_template = "Krasnaya Gvardiya" disband = yes }
+			}
+			if = {
+				limit = { russian_civil_war = no }
+				if = {
+					limit = { has_template = "Gorodskaya Militsiya" }
+					delete_unit_template_and_units = { division_template = "Gorodskaya Militsiya" disband = yes }
+				}
+				if = {
+					limit = { has_template = "Krasnogvardeitsy" }
+					delete_unit_template_and_units = { division_template = "Krasnogvardeitsy" disband = yes }
+				}			
+			}
+			else = {
+				custom_effect_tooltip = RUS_Rebuild_The_Red_Army_tt
 			}
 		}
 	}
@@ -11258,6 +11280,10 @@ focus = {
 				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
+			}
+			random_unit_leader = {
+				limit = { has_id = 17894 }
+				promote_leader = yes
 			}
 		}
 	}
