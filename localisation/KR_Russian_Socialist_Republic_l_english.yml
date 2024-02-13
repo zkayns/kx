@@ -2762,7 +2762,7 @@ RUS_Revolutionary_Indoctrination: "Revolutionary Indoctrination"
 RUS_Revolutionary_Indoctrination_desc: "We must establish ideological education programs to ensure our military forces are not only physically strong but also deeply committed to the socialist cause. Strengthen the revolutionary spirit within our ranks."
 RUS_Local_Defense_Militias: "Local Defense Militias"
 RUS_Local_Defense_Militias_desc: "Empower local communities to form their own defense militias, adding a layer of decentralized defense. While effective in localized threats, this approach hampers overall strategic coordination."
-RUS_Local_Defense_Militias_tt: "Raise Militia Units in [THIS.GetName]"
+RUS_Local_Defense_Militias_tt: "Raise Militia Units in §H[THIS.GetName]§!"
 
 RUS_Embolden_Local_Commanders: "Embolden Local Commanders"
 RUS_Embolden_Local_Commanders_desc: "Encourage local commanders to take initiative on the battlefield. This decentralized approach empowers individual leaders but may lead to conflicting strategies and a lack of overall coordination."

@@ -730,7 +730,7 @@ RRF_Military_Council_Reform: "Establish the Supreme Military Council"
 RRF_Military_Council_Reform_desc: "The Revolution is here! The bloody Reds have seized large industrial cities, and while the Vozhd and all supporters of the true people's revolution, have to rule from Tambov, this situation is temporary. We must reclaim all of the Motherland! The first step in this would be the establihsment of the Supreme Military Council structure to ensure efficient decision-making and coordination. A more streamlined command system to enhance the effectiveness of our nascent armed forces is absolutely necessary."
 RRF_Organize_Green_Armies: "Organize Green Armies"
 RRF_Organize_Green_Armies_desc: "We shall mobilize the rural masses into Green Armies, forming a decentralized but motivated force to resist external threats. By establishing training camps and providing basic equipment to these volunteer forces, we will forge the backbone of our defensive might."
-RRF_Organize_Green_Armies_tt: "Raise Militia Units in [THIS.GetName]"
+RRF_Organize_Green_Armies_tt: "Raise Militia Units in §H[THIS.GetName]§!"
 
 RRF_Combat_Squads_Activation: "Activate the Combat Squads"
 RRF_Combat_Squads_Activation_desc: "Empower the Combat Squads, the fierce paramilitary wing of the NRPR, to enforce order and ideological purity. We must utilize their skills in suppressing counter-revolutionary elements and maintaining discipline within the RRF ranks."

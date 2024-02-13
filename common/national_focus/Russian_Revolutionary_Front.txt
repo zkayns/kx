@@ -92,7 +92,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RRF_Organize_Green_Armies"
 			effect_tooltip = {
 				every_owned_state = {
-					custom_effect_tooltip = unlock_decision_tooltip
+					custom_effect_tooltip = unlocks_decision
 					custom_effect_tooltip = RRF_Organize_Green_Armies_tt
 				}
 			}
