@@ -761,16 +761,15 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RVA_Clandestine_Recruitment_Campaign"
-			if = {
-				limit = { has_war_with = RUS } #Moscow
-				add_collaboration = { target = RUS value = 0.05 }
-				219 = {
-					damage_building = {
-						type = infrastructure
-						damage = 0.15
-					}
+			add_collaboration = { target = RUS value = 0.05 }
+			219 = {
+				damage_building = {
+					type = infrastructure
+					damage = 0.15
 				}
 			}
+			RUS = { add_manpower = -20000 }
+			add_manpower = 20000
 			if = {
 				limit = { has_war_with = RRF } #Moscow
 				add_collaboration = { target = RRF value = 0.05 }
@@ -782,6 +781,8 @@ focus_tree = {
 						}
 					}
 				}
+				RRF = { add_manpower = -10000 }
+				add_manpower = 10000
 			}
 			if = {
 				limit = { has_war_with = WRA } #Moscow
@@ -808,14 +809,11 @@ focus_tree = {
 				
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RVA_Partisan_Collaboration"
-			if = {
-				limit = { has_war_with = RUS } #Moscow
-				add_collaboration = { target = RUS value = 0.05 }
-				219 = {
-					damage_building = {
-						type = infrastructure
-						damage = 0.15
-					}
+			add_collaboration = { target = RUS value = 0.05 }
+			219 = {
+				damage_building = {
+					type = infrastructure
+					damage = 0.15
 				}
 			}
 			if = {
@@ -862,6 +860,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RVA_Conscription_Reform"
 			add_ideas = extensive_conscription
 			clr_country_flag = cannot_have_extensive_conscription
+			if = {
+				limit = { has_idea = RVA_voluntary_army }
+				remove_ideas = RVA_voluntary_army
+			}
 			decrease_ruling_party_popularity_by_10 = yes
 		}
 	}
