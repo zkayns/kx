@@ -1011,6 +1011,7 @@ focus_tree = {
 				}
 			}
 		}
+		bypass_if_unavailable = yes
 		prerequisite = {
 			focus = ALO_Dutov_In_Power
 		}
@@ -1038,10 +1039,11 @@ focus_tree = {
 			country_exists = TRM
 			TRM = {
 				is_subject = no
-				NOT = { is_in_faction_with = JAP }
+				is_in_faction = no
 				has_socialist_government = no
 			}
 		}
+		bypass_if_unavailable = yes
 		prerequisite = {
 			focus = ALO_Dutov_In_Power
 		}
@@ -1234,6 +1236,7 @@ focus_tree = {
 			}
 			has_country_flag = DKB_accepted_alliance
 		}
+		bypass_if_unavailable = yes
 		prerequisite = {
 			focus = ALO_Approach_DKB
 		}
@@ -1259,7 +1262,7 @@ focus_tree = {
 			country_exists = TRM
 			TRM = {
 				is_subject = no
-				NOT = { is_in_faction_with = JAP }
+				is_in_faction = no
 				OR = {
 					TRM_kolchak_in_power = yes
 					TRM_do_rovs_in_power = yes
@@ -1269,6 +1272,7 @@ focus_tree = {
 			}
 			has_country_flag = TRM_accepted_alliance
 		}
+		bypass_if_unavailable = yes
 		prerequisite = {
 			focus = ALO_Recognize_TRM_Regime
 		}
