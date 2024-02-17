@@ -1709,7 +1709,7 @@ bolsheviks.47.t: "Centralization of Power"
 bolsheviks.47.d: "Despite the assurances that the Bolshevik party is democratic to the core, Grigory Zinoviev declared the centralization of power in the hands of authorized Soviets. He says that this measure is temporary and certainly forced because society is unstable. In the future, when the country is sufficiently developed, the power will be decentralized. This decision, however, was received ambiguously by some of the more right-wing members of the party. They were outraged by Zinoviev's decision to centralize power, as this contradicts Marxism. However, Zinoviev, our leader, was able to quickly convince this bunch of unrighteous Bolsheviks of their wrongness"
 bolsheviks.47.a: "Long live the Council of People's Commissars!"
 
-bolsheviks.48.t: "Dissatisfaction With The Collectivization"
+bolsheviks.48.t: "Dissatisfaction With the Collectivization"
 bolsheviks.48.d: "To our surprise, many peasants were dissatisfied with the collectivization. They were dissatisfied with the socialization of the land, the good that socialism brought them. They are in revolt, demanding the return of their crops, their livestock, and, worst of all, their property. This month, about 3,000 peasant riots have already been suppressed, and a terrible famine has broken out in some regions. The peasants flee to the cities and become workers, because they think that the life of the worker is much better. They are right only in one thing - it is a state for workers, built by workers. While they are rioting, we have achieved results that Kerensky could only dream of. We must bear this burden of collectivization until the end of time, for all power comes from the people, and we are their representatives."
 bolsheviks.48.a: "They will obey."
 
@@ -1793,7 +1793,7 @@ bolsheviks.66.b: "Focus on economic development."
 bolsheviks.66.c: "Focus on internal security."
 bolsheviks.66.e: "Focus on the Enlightenment."
 
-bolsheviks.67.t: "[SOV.GetLeader] Becomes A New Chairman"
+bolsheviks.67.t: "[SOV.GetLeader] Becomes a New Chairman"
 bolsheviks.67.d: "As a result of the internal party struggle for power somewhere deep inside the Central Committee of the Russian Communist Party, [SOV.GetLeader] was elected the new chairman of the party and the Council of People's Commissars of the Russian Socialist Republic.\n\nRed banners depicting Vladimir Lenin and [SOV.GetLeader] - two leaders of the Russian proletariat are now appearing on the streets of Moscow. Under the new chairman, life in Russia promises to be better, freer and fairer."
 bolsheviks.67.a: "We congratulate the new Chairman!"
 bolsheviks.67.b: "Another Soviet Dictator..."
