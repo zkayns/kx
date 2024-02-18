@@ -34842,6 +34842,9 @@ country_event = { #Russian demands GEO
 				freedom_level = 0.75
 			}
 		}
+		hidden_effect = {
+			GEO = { drop_cosmetic_tag = yes }
+		}
 	}
 	option = {
 		name = rusfor.10251.b
@@ -34921,6 +34924,9 @@ country_event = { #Georgia submits
 		name = rusfor.1027.a #Hooray
 		add_stability = -0.04
 		puppet = FROM
+		hidden_effect = {
+			GEO = { drop_cosmetic_tag = yes }
+		}
 	}
 }
 
@@ -34992,6 +34998,9 @@ country_event = { #Georgia falls
 	option = {
 		name = rusfor.1030.b #take control of the new governement
 		puppet = FROM
+		hidden_effect = {
+			GEO = { drop_cosmetic_tag = yes }
+		}
 	}
 }
 
@@ -37229,6 +37238,7 @@ country_event = { #Russia demands northern Mongolia
 			effect_tooltip = { 
 				transfer_state = 654 
 				transfer_state = 811
+				transfer_state = 1293
 			}
 			country_event = {
 				id = rusfor.1114
@@ -37305,6 +37315,11 @@ country_event = { #Russia demands northern Mongolia
 				limit = { owns_state = 811 } 
 				transfer_state = 811
 				add_state_core = 811
+			}	
+			if = {
+				limit = { owns_state = 1293 } 
+				transfer_state = 1293
+				add_state_core = 1293
 			}	
 			country_event = {
 				id = rusfor.1114
