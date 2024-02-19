@@ -2804,7 +2804,6 @@ country_event = {
 						is_core_of = TRM
 						state = 565
 						state = 566
-						state = 575
 						state = 564
 						state = 563
 					}
