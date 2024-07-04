@@ -18,6 +18,7 @@ CAN_introduce_bill_c7_effects = {
 	if = {
 		limit = { has_country_flag = CAN_C7_training_no_cons }
 		add_ideas = CAN_expanded_training
+		set_country_flag = CAN_C7_training_no_cons_flag
 	}
 	if = {
 		limit = { has_country_flag = CAN_C7_better_conditions }
@@ -1403,42 +1404,42 @@ CAN_create_monarchy = {
 			name = "George V"
 			desc = "POLITICS_GEORGE_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_George.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "George V"
 			desc = "POLITICS_GEORGE_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_George.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "George V"
 			desc = "POLITICS_GEORGE_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_George.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "George V"
 			desc = "POLITICS_GEORGE_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_George.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "George V"
 			desc = "POLITICS_GEORGE_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_George.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "George V"
 			desc = "POLITICS_GEORGE_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_George.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 		}
 	}
@@ -1448,7 +1449,7 @@ CAN_create_monarchy = {
 			name = "Edward VIII"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII.png"
 			desc = "POLITICS_EDWARD_DESC"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			traits = {
 				CAN_autocratic_tendencies
@@ -1458,7 +1459,7 @@ CAN_create_monarchy = {
 			name = "Edward VIII"
 			desc = "POLITICS_EDWARD_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			traits = {
 				CAN_autocratic_tendencies
@@ -1468,7 +1469,7 @@ CAN_create_monarchy = {
 			name = "Edward VIII"
 			desc = "POLITICS_EDWARD_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			traits = {
 				CAN_autocratic_tendencies
@@ -1478,7 +1479,7 @@ CAN_create_monarchy = {
 			name = "Edward VIII"
 			desc = "POLITICS_EDWARD_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII_SocCon.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			traits = {
 				CAN_autocratic_tendencies
@@ -1488,7 +1489,7 @@ CAN_create_monarchy = {
 			name = "Edward VIII"
 			desc = "POLITICS_EDWARD_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII_SocCon.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			traits = {
 				CAN_autocratic_tendencies
@@ -1498,7 +1499,7 @@ CAN_create_monarchy = {
 			name = "Edward VIII"
 			desc = "POLITICS_EDWARD_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			traits = {
 				CAN_autocratic_tendencies
@@ -1508,7 +1509,7 @@ CAN_create_monarchy = {
 			name = "Edward VIII"
 			desc = "POLITICS_EDWARD_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Edward_VIII.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = legionarism_subtype
 			traits = {
 				CAN_autocratic_tendencies
@@ -1521,7 +1522,7 @@ CAN_create_monarchy = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -1531,7 +1532,7 @@ CAN_create_monarchy = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -1541,7 +1542,7 @@ CAN_create_monarchy = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -1551,7 +1552,7 @@ CAN_create_monarchy = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -1561,7 +1562,7 @@ CAN_create_monarchy = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -1571,7 +1572,7 @@ CAN_create_monarchy = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -1581,10 +1582,21 @@ CAN_create_monarchy = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = legionarism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = entente.732
+				days = 420
+				random_days = 23
+			}
+			if = {
+				limit = { has_country_flag = CAN_lionel_logue_flag }
+				country_event = { id = entente.356 days = 30 random_days = 90 }
 			}
 		}
 	}
@@ -1594,7 +1606,7 @@ CAN_create_monarchy = {
 			name = "Elizabeth II"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			female = yes
 			traits = {
@@ -1605,7 +1617,7 @@ CAN_create_monarchy = {
 			name = "Elizabeth II"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			female = yes
 			traits = {
@@ -1616,7 +1628,7 @@ CAN_create_monarchy = {
 			name = "Elizabeth II"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			female = yes
 			traits = {
@@ -1627,7 +1639,7 @@ CAN_create_monarchy = {
 			name = "Elizabeth II"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			female = yes
 			traits = {
@@ -1638,7 +1650,7 @@ CAN_create_monarchy = {
 			name = "Elizabeth II"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			female = yes
 			traits = {
@@ -1649,7 +1661,7 @@ CAN_create_monarchy = {
 			name = "Elizabeth II"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			female = yes
 			traits = {
@@ -1660,7 +1672,7 @@ CAN_create_monarchy = {
 			name = "Elizabeth II"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = legionarism_subtype
 			female = yes
 			traits = {
@@ -1673,7 +1685,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "Henry IX"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Henry.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			traits = {
 				CAN_biddable CAN_army_experience
@@ -1682,7 +1694,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "Henry IX"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Henry.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			traits = {
 				CAN_biddable CAN_army_experience
@@ -1691,7 +1703,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "Henry IX"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Henry.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			traits = {
 				CAN_biddable CAN_army_experience
@@ -1700,7 +1712,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "Henry IX"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Henry.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			traits = {
 				CAN_biddable CAN_army_experience
@@ -1709,7 +1721,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "Henry IX"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Henry.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			traits = {
 				CAN_biddable CAN_army_experience
@@ -1718,7 +1730,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "Henry IX"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Henry.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			traits = {
 				CAN_biddable CAN_army_experience
@@ -1727,7 +1739,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "Henry IX"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Henry.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = legionarism_subtype
 			traits = {
 				CAN_biddable CAN_army_experience
@@ -1739,7 +1751,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "George VI"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_GeorgeVI.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			traits = {
 				CAN_smooth_talking_charmer CAN_hedonist
@@ -1748,7 +1760,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "George VI"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_GeorgeVI.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			traits = {
 				CAN_smooth_talking_charmer CAN_hedonist
@@ -1757,7 +1769,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "George VI"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_GeorgeVI.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			traits = {
 				CAN_smooth_talking_charmer CAN_hedonist
@@ -1766,7 +1778,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "George VI"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_GeorgeVI.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			traits = {
 				CAN_smooth_talking_charmer CAN_hedonist
@@ -1775,7 +1787,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "George VI"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_GeorgeVI.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			traits = {
 				CAN_smooth_talking_charmer CAN_hedonist
@@ -1784,7 +1796,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "George VI"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_GeorgeVI.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			traits = {
 				CAN_smooth_talking_charmer CAN_hedonist
@@ -1793,7 +1805,7 @@ CAN_create_monarchy = {
 		create_country_leader = {
 			name = "George VI"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_GeorgeVI.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = legionarism_subtype
 			traits = {
 				CAN_smooth_talking_charmer CAN_hedonist
@@ -1817,7 +1829,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Major James Coldwell"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Major_James_Coldwell.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 	}
@@ -1826,7 +1838,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Tommy Douglas"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Tommy_Douglas.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 	}
@@ -1835,7 +1847,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Hazen Argue"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Hazen_Argue.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 	}
@@ -1843,7 +1855,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "J.S. Woodsworth"
 			picture = "gfx/leaders/CAN/Portrait_Canada_JS_Woodsworth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 	}
@@ -1852,7 +1864,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Louis St. Laurent"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Louis_St_Laurent.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_liberalism_subtype
 		}
 	}
@@ -1861,7 +1873,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Lester B. Pearson"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Lester_B_Pearson.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_liberalism_subtype
 		}
 	}
@@ -1875,7 +1887,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Charles Gavan Power"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Charles_Gavan_Power.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_national_liberalism_subtype
 		}
 	}
@@ -1883,13 +1895,13 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "William Lyon Mackenzie King"
 			picture = "gfx/leaders/CAN/Portrait_Canada_William_Lyon_Mackenzie_King.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "William Lyon Mackenzie King"
 			picture = "gfx/leaders/CAN/Portrait_Canada_William_Lyon_Mackenzie_King.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_national_liberalism_subtype
 		}
 	}
@@ -1898,7 +1910,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "John Bracken"
 			picture = "gfx/leaders/CAN/Portrait_Canada_John_Bracken.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = progressive_conservatism_subtype
 		}
 	}
@@ -1907,7 +1919,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Robert Manion"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Robert_Manion.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = moderate_authoritarianism_subtype
 		}
 	}
@@ -1916,7 +1928,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Arthur Meighen"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Arthur_Meighen.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = moderate_authoritarianism_subtype
 		}
 	}
@@ -1925,7 +1937,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "George A. Drew"
 			picture = "gfx/leaders/CAN/Portrait_Canada_George_A_Drew.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = progressive_conservatism_subtype
 		}
 	}
@@ -1934,7 +1946,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "John Diefenbaker"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Robert_Manion.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = progressive_conservatism_subtype
 		}
 	}
@@ -1943,7 +1955,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Ernest Manning"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Ernest_Manning.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = moderate_authoritarianism_subtype
 		}
 	}
@@ -1952,7 +1964,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Henry Herbert Stevens"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Henry_Herbert_Stevens.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_conservative_subtype
 		}
 	}
@@ -1960,7 +1972,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "R.B. Bennett"
 			picture = "gfx/leaders/CAN/Portrait_Canada_RB_Bennett.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 	}
@@ -1972,7 +1984,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "John Horne Blackmore"
 			picture = "gfx/leaders/CAN/Portrait_Canada_JH_Blackmore.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_social_credit_subtype
 		}
 	}
@@ -1984,7 +1996,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Réal Caouette"
 			picture = "gfx/leaders/QUE/Portrait_Quebec_Real_Caouette.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_credit_subtype
 		}
 	}
@@ -1996,7 +2008,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "C. H. Douglas"
 			picture = "gfx/leaders/CAN/Portrait_Britain_Clifford_Hugh_Douglas.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_social_credit_subtype
 		}
 	}
@@ -2008,7 +2020,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "John Hargrave"
 			picture = "gfx/leaders/CAN/Portrait_Britain_John_Hargrave.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_social_credit_subtype
 		}
 	}
@@ -2020,7 +2032,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "William Aberhart"
 			picture = "gfx/leaders/CAN/Portrait_Canada_William_Aberhart.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_social_credit_subtype
 		}
 	}
@@ -2032,7 +2044,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Ernest Manning"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Ernest_Manning.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_social_credit_subtype
 		}
 	}
@@ -2044,7 +2056,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "W.A.C. Bennett"
 			picture = "gfx/leaders/CAN/Portrait_Canada_W_A_C_Bennett.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_social_credit_subtype
 		}
 	}
@@ -2056,7 +2068,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "William Duncan Herridge"
 			picture = "gfx/leaders/CAN/Portrait_Canada_William_Duncan_Herridge.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_social_credit_subtype
 		}
 	}
@@ -2068,7 +2080,7 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Solon Earl Low"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Solon_Earl_Low.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_social_credit_subtype
 		}
 	}
@@ -2076,20 +2088,20 @@ CAN_create_republic = {
 		create_country_leader = {
 			name = "Arthur Meighen"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Arthur_Meighen.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 	}
 	create_country_leader = {
 		name = "Harry Crerar"
 		picture = "gfx/leaders/CAN/Portrait_Canada_Harry_Crerar.png"
-		expire = "1965.1.1"
+		expire = "1.1.1"
 		ideology = junta_subtype
 	}
 	create_country_leader = {
 		name = "Adrien Arcand"
 		picture = "gfx/leaders/CAN/Portrait_Canada_Adrien_Arcand_Suit.png"
-		expire = "1965.1.1"
+		expire = "1.1.1"
 		ideology = legionarism_subtype
 	}
 	if = {
@@ -2109,7 +2121,7 @@ CAN_set_king_albert = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -2119,7 +2131,7 @@ CAN_set_king_albert = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -2129,7 +2141,7 @@ CAN_set_king_albert = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -2139,7 +2151,7 @@ CAN_set_king_albert = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -2149,7 +2161,7 @@ CAN_set_king_albert = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -2159,7 +2171,7 @@ CAN_set_king_albert = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -2169,7 +2181,7 @@ CAN_set_king_albert = {
 			name = "Albert I"
 			desc = "POLITICS_ALBERT_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_King_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = legionarism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_humble
@@ -2197,7 +2209,7 @@ CAN_set_queen_elizabeth = {
 			name = "Elizabeth I"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			traits = {
 				CAN_popular_figurehead CAN_the_queen
@@ -2207,7 +2219,7 @@ CAN_set_queen_elizabeth = {
 			name = "Elizabeth I"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_the_queen
@@ -2217,7 +2229,7 @@ CAN_set_queen_elizabeth = {
 			name = "Elizabeth I"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_the_queen
@@ -2227,7 +2239,7 @@ CAN_set_queen_elizabeth = {
 			name = "Elizabeth I"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_the_queen
@@ -2237,7 +2249,7 @@ CAN_set_queen_elizabeth = {
 			name = "Elizabeth I"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_the_queen
@@ -2247,7 +2259,7 @@ CAN_set_queen_elizabeth = {
 			name = "Elizabeth I"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			traits = {
 				CAN_popular_figurehead CAN_the_queen
@@ -2257,7 +2269,7 @@ CAN_set_queen_elizabeth = {
 			name = "Elizabeth I"
 			desc = "POLITICS_ELIZABETH_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = legionarism_subtype
 			traits = {
 				CAN_popular_figurehead CAN_the_queen
@@ -2279,49 +2291,49 @@ CAN_setup_transitional_committee = {
 		create_country_leader = {
 			name = "Transitional Committee"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			
 		}
 		create_country_leader = {
 			name = "Transitional Committee"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			
 		}
 		create_country_leader = {
 			name = "Transitional Committee"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			
 		}
 		create_country_leader = {
 			name = "Transitional Committee"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			
 		}
 		create_country_leader = {
 			name = "Transitional Committee"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			
 		}
 		create_country_leader = {
 			name = "Transitional Committee"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			
 		}
 		create_country_leader = {
 			name = "Transitional Committee"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = legionarism_subtype
 			
 		}
@@ -2341,43 +2353,43 @@ CAN_setup_GG_massey = {
 		create_country_leader = {
 			name = "Vincent Massey"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vincent_Massey.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "Vincent Massey"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vincent_Massey.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Vincent Massey"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vincent_Massey.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Vincent Massey"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vincent_Massey.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "Vincent Massey"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vincent_Massey.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "Vincent Massey"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vincent_Massey.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 		}
 		create_country_leader = {
 			name = "Vincent Massey"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Vincent_Massey.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 		if = {
@@ -2408,43 +2420,43 @@ CAN_setup_GG_vanier = {
 		create_country_leader = {
 			name = "Georges Vanier"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "Georges Vanier"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Georges Vanier"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Georges Vanier"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "Georges Vanier"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "Georges Vanier"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 		}
 		create_country_leader = {
 			name = "Georges Vanier"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 		if = {
@@ -2475,43 +2487,43 @@ CAN_setup_GG_mcnaughton = {
 		create_country_leader = {
 			name = "Andrew McNaughton"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "Andrew McNaughton"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Andrew McNaughton"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Andrew McNaughton"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "Andrew McNaughton"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "Andrew McNaughton"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 		}
 		create_country_leader = {
 			name = "Andrew McNaughton"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 		if = {
@@ -2535,43 +2547,43 @@ CAN_setup_GG_banting = {
 		create_country_leader = {
 			name = "Frederick Banting"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "Frederick Banting"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Frederick Banting"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Frederick Banting"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "Frederick Banting"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "Frederick Banting"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 		}
 		create_country_leader = {
 			name = "Frederick Banting"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 		if = {
@@ -2601,49 +2613,49 @@ CAN_setup_GG_albert = {
 			name = "Prince Albert"
 			desc = "POLITICS_ALBERT_WINDSOR_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "Prince Albert"
 			desc = "POLITICS_ALBERT_WINDSOR_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Prince Albert"
 			desc = "POLITICS_ALBERT_WINDSOR_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Prince Albert"
 			desc = "POLITICS_ALBERT_WINDSOR_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "Prince Albert"
 			desc = "POLITICS_ALBERT_WINDSOR_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "Prince Albert"
 			desc = "POLITICS_ALBERT_WINDSOR_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 		}
 		create_country_leader = {
 			name = "Prince Albert"
 			desc = "POLITICS_ALBERT_WINDSOR_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 		if = {
@@ -2674,7 +2686,7 @@ CAN_setup_GG_elizabeth = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_CAN_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			female = yes
 		}
@@ -2682,7 +2694,7 @@ CAN_setup_GG_elizabeth = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_CAN_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 			female = yes
 		}
@@ -2690,7 +2702,7 @@ CAN_setup_GG_elizabeth = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_CAN_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 			female = yes
 		}
@@ -2698,7 +2710,7 @@ CAN_setup_GG_elizabeth = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_CAN_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 			female = yes
 		}
@@ -2706,7 +2718,7 @@ CAN_setup_GG_elizabeth = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_CAN_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 			female = yes
 		}
@@ -2714,7 +2726,7 @@ CAN_setup_GG_elizabeth = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_CAN_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 			female = yes
 		}
@@ -2722,7 +2734,7 @@ CAN_setup_GG_elizabeth = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_CAN_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 			female = yes
 		}
@@ -2751,43 +2763,43 @@ CAN_setup_GG_alexander = {
 		create_country_leader = {
 			name = "Harold Alexander"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "Harold Alexander"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Harold Alexander"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Harold Alexander"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "Harold Alexander"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "Harold Alexander"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 		}
 		create_country_leader = {
 			name = "Harold Alexander"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 		if = {
@@ -2811,43 +2823,43 @@ CAN_setup_GG_buchan = {
 		create_country_leader = {
 			name = "John Buchan"
 			picture = "gfx/leaders/CAN/Portrait_Canada_John_Buchan.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "John Buchan"
 			picture = "gfx/leaders/CAN/Portrait_Canada_John_Buchan.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "John Buchan"
 			picture = "gfx/leaders/CAN/Portrait_Canada_John_Buchan.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "John Buchan"
 			picture = "gfx/leaders/CAN/Portrait_Canada_John_Buchan.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "John Buchan"
 			picture = "gfx/leaders/CAN/Portrait_Canada_John_Buchan.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "John Buchan"
 			picture = "gfx/leaders/CAN/Portrait_Canada_John_Buchan.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 		}
 		create_country_leader = {
 			name = "John Buchan"
 			picture = "gfx/leaders/CAN/Portrait_Canada_John_Buchan.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 		if = {
@@ -2878,43 +2890,43 @@ CAN_setup_GG_cambridge = {
 		create_country_leader = {
 			name = "Alexander Cambridge"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Alexander_Cambridge_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 		}
 		create_country_leader = {
 			name = "Alexander Cambridge"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Alexander_Cambridge_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Alexander Cambridge"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Alexander_Cambridge_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_classical_liberalism_subtype
 		}
 		create_country_leader = {
 			name = "Alexander Cambridge"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Alexander_Cambridge_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = toryism_subtype
 		}
 		create_country_leader = {
 			name = "Alexander Cambridge"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Alexander_Cambridge_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_toryism_subtype
 		}
 		create_country_leader = {
 			name = "Alexander Cambridge"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Alexander_Cambridge_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = paternal_autocrat_subtype
 		}
 		create_country_leader = {
 			name = "Alexander Cambridge"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Alexander_Cambridge_GG.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 		if = {
@@ -3247,18 +3259,46 @@ CAN_fuck_up_US = {
 		CAN = {
 			puppet = NEE
 			add_to_faction = NEE
+			set_autonomy = {
+				target = NEE
+				autonomous_state = kx_colored_puppet
+			}
 			puppet = CGL
 			add_to_faction = CGL
+			set_autonomy = {
+				target = CGL
+				autonomous_state = kx_colored_puppet
+			}
 			puppet = FSA
 			add_to_faction = FSA
+			set_autonomy = {
+				target = FSA
+				autonomous_state = kx_colored_puppet
+			}
 			puppet = CAL
 			add_to_faction = CAL
+			set_autonomy = {
+				target = CAL
+				autonomous_state = kx_colored_puppet
+			}
 			puppet = TXS
 			add_to_faction = TXS
+			set_autonomy = {
+				target = TXS
+				autonomous_state = kx_colored_puppet
+			}
 			puppet = DSR
 			add_to_faction = DSR
+			set_autonomy = {
+				target = DSR
+				autonomous_state = kx_colored_puppet
+			}
 			puppet = AML
 			add_to_faction = AML
+			set_autonomy = {
+				target = AML
+				autonomous_state = kx_colored_puppet
+			}
 			puppet = USA
 			add_to_faction = USA
 			transfer_state = 386
@@ -3318,7 +3358,7 @@ CAN_fuck_up_US = {
 				name = "Harold Alexander"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
@@ -3326,7 +3366,7 @@ CAN_fuck_up_US = {
 				name = "Harold Alexander"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -3334,7 +3374,7 @@ CAN_fuck_up_US = {
 				name = "Harold Alexander"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Harold_Alexander.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -3374,7 +3414,7 @@ CAN_fuck_up_US = {
 				name = "Harry Crerar"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Harry_Crerar.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
@@ -3382,7 +3422,7 @@ CAN_fuck_up_US = {
 				name = "Harry Crerar"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Harry_Crerar.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -3390,7 +3430,7 @@ CAN_fuck_up_US = {
 				name = "Harry Crerar"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Harry_Crerar.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -3430,7 +3470,7 @@ CAN_fuck_up_US = {
 				name = "Bernard Montgomery"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Texas_Bernard_Montgomery.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
@@ -3438,7 +3478,7 @@ CAN_fuck_up_US = {
 				name = "Bernard Montgomery"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Texas_Bernard_Montgomery.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -3446,7 +3486,7 @@ CAN_fuck_up_US = {
 				name = "Bernard Montgomery"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Texas_Bernard_Montgomery.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -3488,7 +3528,7 @@ CAN_fuck_up_US = {
 				name = "Andrew McNaughton"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
@@ -3496,7 +3536,7 @@ CAN_fuck_up_US = {
 				name = "Andrew McNaughton"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -3504,7 +3544,7 @@ CAN_fuck_up_US = {
 				name = "Andrew McNaughton"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -3579,7 +3619,7 @@ CAN_fuck_up_US = {
 				name = "J.F.C Fuller"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_JFC_Fuller.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
@@ -3587,7 +3627,7 @@ CAN_fuck_up_US = {
 				name = "J.F.C Fuller"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_JFC_Fuller.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -3595,7 +3635,7 @@ CAN_fuck_up_US = {
 				name = "J.F.C Fuller"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_JFC_Fuller.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -3649,7 +3689,7 @@ CAN_fuck_up_US = {
 				name = "Orde Wingate"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Orde_Wingate.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 				}
@@ -3657,7 +3697,7 @@ CAN_fuck_up_US = {
 				name = "Orde Wingate"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Orde_Wingate.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 				}
@@ -3665,7 +3705,7 @@ CAN_fuck_up_US = {
 				name = "Orde Wingate"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Orde_Wingate.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -3710,7 +3750,7 @@ CAN_fuck_up_US = {
 				name = "Georges Vanier"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
@@ -3718,7 +3758,7 @@ CAN_fuck_up_US = {
 				name = "Georges Vanier"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -3726,7 +3766,7 @@ CAN_fuck_up_US = {
 				name = "Georges Vanier"
 				desc = ""
 				picture = "gfx/leaders/CAN/Portrait_Canada_Georges_Vanier.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -3765,7 +3805,7 @@ CAN_fuck_up_US = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
@@ -3773,7 +3813,7 @@ CAN_fuck_up_US = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -3781,7 +3821,7 @@ CAN_fuck_up_US = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -3903,7 +3943,7 @@ CAN_form_US_puppet = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = {}
 			}
@@ -3911,7 +3951,7 @@ CAN_form_US_puppet = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -3919,7 +3959,7 @@ CAN_form_US_puppet = {
 				name = "Joseph Kennedy Sr."
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 				traits = {}
 			}
@@ -4046,50 +4086,50 @@ CAN_setup_miskito_protectorate = {
 			
 		### Leader
 		create_country_leader = {
-			name = "Norton Cuthbert Clarence"
-			picture = "gfx/leaders/NIC/Portrait_NIC_Norton_Cuthbert_Clarence.png"
-			expire = "1965.1.1"
+			name = "Herbert Henry Clarence"
+			picture = "gfx/leaders/NIC/Portrait_NIC_Herbert_Henry_Clarence.png"
+			expire = "1.1.1"
 			ideology = radsoc_indigenous_communitarianism_subtype
 			traits = {}
 		}
 
 		create_country_leader = {
-			name = "Norton Cuthbert Clarence"
-			picture = "gfx/leaders/NIC/Portrait_NIC_Norton_Cuthbert_Clarence.png"
-			expire = "1965.1.1"
+			name = "Herbert Henry Clarence"
+			picture = "gfx/leaders/NIC/Portrait_NIC_Herbert_Henry_Clarence.png"
+			expire = "1.1.1"
 			ideology = indigenous_communitarianism_subtype
 			traits = {}
 		}
 
 		create_country_leader = {
-			name = "Norton Cuthbert Clarence"
-			picture = "gfx/leaders/NIC/Portrait_NIC_Norton_Cuthbert_Clarence.png"
-			expire = "1965.1.1"
+			name = "Herbert Henry Clarence"
+			picture = "gfx/leaders/NIC/Portrait_NIC_Herbert_Henry_Clarence.png"
+			expire = "1.1.1"
 			ideology = soclib_indigenous_communitarianism_subtype
 			traits = {}
 		}
 
 		create_country_leader = {
-			name = "Norton Cuthbert Clarence"
-			picture = "gfx/leaders/NIC/Portrait_NIC_Norton_Cuthbert_Clarence.png"
-			expire = "1965.1.1"
+			name = "Herbert Henry Clarence"
+			picture = "gfx/leaders/NIC/Portrait_NIC_Herbert_Henry_Clarence.png"
+			expire = "1.1.1"
 			ideology = autocratic_colonial_govt_subtype
 			traits = {}
 		}
 
 		create_country_leader = {
-			name = "Norton Cuthbert Clarence"
-			picture = "gfx/leaders/NIC/Portrait_NIC_Norton_Cuthbert_Clarence.png"
-			expire = "1965.1.1"
+			name = "Herbert Henry Clarence"
+			picture = "gfx/leaders/NIC/Portrait_NIC_Herbert_Henry_Clarence.png"
+			expire = "1.1.1"
 			ideology = natpop_tribal_chiefdom_subtype
 			traits = { }
 		}
 
 		### Field Marshals ###
 		create_field_marshal = {
-			name = "Norton Cuthbert Clarence"
+			name = "Herbert Henry Clarence"
 			desc = ""
-			portrait_path = "gfx/leaders/NIC/Portrait_NIC_Norton_Cuthbert_Clarence.png"
+			portrait_path = "gfx/leaders/NIC/Portrait_NIC_Herbert_Henry_Clarence.png"
 			traits = {
 				commando
 				inspirational_leader
@@ -4175,7 +4215,6 @@ CAN_setup_miskito_protectorate = {
 		division_template = {
 			name = "Protectorate Guard"
 			division_names_group = SAU_CAV_01
-			is_locked = no
 			regiments = {
 				cavalry = { x = 0 y = 0 }
 				cavalry = { x = 0 y = 1 }

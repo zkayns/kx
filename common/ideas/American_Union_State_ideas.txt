@@ -9,7 +9,7 @@ ideas = {
 			allowed = { always = no }
 			picture = TEX_blessed_are_peacebois
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.35
 				defence	= 0.20
 				dig_in_speed_factor = 0.30
 			}
@@ -27,7 +27,7 @@ ideas = {
 		TEX_catharmyfirst = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_catharmyfirst"}
 			allowed = { always = no }
-			picture = citizen_army_idea
+			picture = BBR_citizen_army_idea
 			modifier = {
 				non_core_manpower = 0.05
 				out_of_supply_factor = 0.1
@@ -74,6 +74,58 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
+		TEX_american_noblity = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TEX_american_noblity"}
+			allowed = { always = no }
+			picture = every_man_a_king
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		TEX_conversions = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TEX_american_noblity"}
+			allowed = { always = no }
+			picture = BBR_interracial_faith
+			modifier = {
+				stability_factor = -0.15
+				weekly_manpower = -2000
+				consumer_goods_factor = 0.05
+			}
+		}
+		TEX_starting_integralism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_starting_integralism"}
+			allowed = { always = no }
+            modifier = { 
+				industrial_capacity_factory = 0.04
+				political_power_cost = -0.05
+				stability_factor = 0.05
+			}
+			picture = generic_catholic_corporatism_spirit
+		}
+		TEX_commonman_integralism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_starting_integralism"}
+			allowed = { always = no }
+            modifier = { 
+				conscription = 0.010 
+				army_morale_factor = 0.05 
+				production_speed_buildings_factor = 0.02
+				industrial_capacity_factory = 0.04
+				political_power_cost = -0.05
+				stability_factor = 0.05
+			}
+			picture = TEX_popular_integralism
+		}
+		TEX_gudalopism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_starting_integralism"}
+			allowed = { always = no }
+            modifier = { 
+				production_factory_efficiency_gain_factor = 0.09
+				global_building_slots_factor = 0.11
+				political_power_cost = -0.15
+			}
+			picture = MEX_christero_war_idea
+		}
 		TEX_we_live_in_a_federal_society = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_we_live_in_a_federal_society"}
 			allowed = { always = no }
@@ -91,7 +143,7 @@ ideas = {
 			modifier = {
 				monthly_population = 0.10
 				stability_factor = 0.10
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.30
 				
 			}
 		}
@@ -628,9 +680,9 @@ ideas = {
 			removal_cost = -1
 			picture = generic_fighter_production_diverted
 			modifier = {
-				air_air_superiority_attack_factor = 0.05
-				air_air_superiority_defence_factor = 0.05
-				air_close_air_support_attack_factor = 0.10
+				army_bonus_air_superiority_factor = 0.05
+				enemy_army_bonus_air_superiority_factor = -0.05
+				ground_attack_factor = 0.10
 			}
 			equipment_bonus = {
 				small_plane_airframe = {
@@ -653,9 +705,9 @@ ideas = {
 			removal_cost = -1
 			picture = generic_fighter_production_diverted
 			modifier = {
-				air_air_superiority_defence_factor = 0.10
-				air_interception_defence_factor = 0.10
-				air_close_air_support_attack_factor = 0.20
+				enemy_army_bonus_air_superiority_factor = -0.10
+				air_interception_detect_factor = 0.10
+				ground_attack_factor = 0.20
 			}
 			equipment_bonus = {
 				small_plane_airframe = {
@@ -678,8 +730,8 @@ ideas = {
 			removal_cost = -1
 			picture = generic_air_research
 			modifier = {
-				air_air_superiority_attack_factor = 0.05
-				air_interception_attack_factor = 0.05
+				army_bonus_air_superiority_factor = 0.05
+				air_intercept_efficiency = 0.05
 				air_strategic_bomber_bombing_factor = 0.10
 			}
 			equipment_bonus = {
@@ -699,8 +751,8 @@ ideas = {
 			removal_cost = -1
 			picture = generic_air_research
 			modifier = {
-				air_air_superiority_attack_factor = 0.10
-				air_interception_attack_factor = 0.10
+				army_bonus_air_superiority_factor = 0.10
+				air_intercept_efficiency = 0.10
 				air_strategic_bomber_bombing_factor = 0.20
 			}
 			equipment_bonus = {
@@ -730,9 +782,9 @@ ideas = {
 			removal_cost = -1
 			picture = usa_airborne_divisions
 			modifier = {
-				air_paradrop_attack_factor = 0.10
-				air_paradrop_defence_factor = 0.10
-				air_paradrop_agility_factor = 0.10
+				paradrop_organization_factor = 0.10
+				paratrooper_aa_defense = 0.10
+				paratrooper_weight_factor = 0.10
 			}
 		}
 		### Civil war stuff ###
@@ -838,7 +890,7 @@ ideas = {
 				political_power_factor = 0.02
 				stability_factor = 0.01
 				army_morale_factor = 0.03
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.11
 			}
 		}
 		TEX_bingham_support_idea = {
@@ -912,7 +964,7 @@ ideas = {
 				monthly_population = 0.10
 				land_reinforce_rate = 0.03
 				production_factory_efficiency_gain_factor = -0.04
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.14
 			}
 		}
 		TEX_production_for_use_idea = {
@@ -966,7 +1018,7 @@ ideas = {
 			picture = decentralized_planning
 			modifier = {
 				political_power_gain = 0.02
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.06
 				conscription = 0.03
 				war_support_factor = 0.05
 				surrender_limit = 0.05
@@ -980,7 +1032,7 @@ ideas = {
 			picture = decentralized_planning
 			modifier = {
 				political_power_gain = 0.03
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.14
 				conscription = 0.03
 				war_support_factor = 0.10
 				surrender_limit = 0.10
@@ -996,7 +1048,7 @@ ideas = {
 			picture = decentralized_planning
 			modifier = {
 				political_power_gain = 0.04
-				consumer_goods_factor = -0.06
+				consumer_goods_factor = -0.16
 				conscription = 0.03
 				war_support_factor = 0.15
 				surrender_limit = 0.15
@@ -1073,7 +1125,7 @@ ideas = {
 			picture = massrelief
 			modifier = {
 				monthly_population = 0.10
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.1
 				party_popularity_stability_factor = 0.05
 				conscription_factor = 0.02
 			}
@@ -1102,7 +1154,7 @@ ideas = {
 				monthly_population = 0.02
 				production_factory_max_efficiency_factor = 0.05
 				local_resources = 0.05
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				party_popularity_stability_factor = 0.1
 				supply_consumption_factor = -0.03
 			}
@@ -1130,7 +1182,7 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				line_change_production_efficiency_factor = 0.02
 				stability_factor = 0.03
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.1
 				production_factory_efficiency_gain_factor = -0.02
 			}
 		}
@@ -1187,7 +1239,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.02
 				industrial_capacity_factory = 0.05
 				production_speed_buildings_factor = 0.05
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.11
 				min_export = -0.05
 			}
 		}
@@ -1285,7 +1337,7 @@ ideas = {
 			modifier = { 
 				research_speed_factor = 0.02
 				production_factory_efficiency_gain_factor = -0.03
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				local_resources = 0.02
 			}
 		}
@@ -1328,7 +1380,7 @@ ideas = {
 				surrender_limit = 0.05
 				army_org_regain = -0.02
 				army_morale_factor = 0.04
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.13
 				industrial_capacity_factory = 0.04
 			}
 		}
@@ -1343,7 +1395,7 @@ ideas = {
 				surrender_limit = 0.10
 				army_org_regain = -0.02
 				army_morale_factor = 0.08
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				industrial_capacity_factory = 0.05
 			}
 		}
@@ -1373,7 +1425,7 @@ ideas = {
 				surrender_limit = 0.10
 				army_org_regain = 0.02
 				army_morale_factor = 0.04
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.1
 				industrial_capacity_factory = 0.05
 				monthly_population = 0.05
 				production_factory_max_efficiency_factor = -0.04
@@ -1390,7 +1442,7 @@ ideas = {
 				surrender_limit = 0.15
 				army_org_regain = 0.04
 				army_morale_factor = 0.04
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				industrial_capacity_factory = 0.08
 				monthly_population = 0.10
 				production_factory_max_efficiency_factor = -0.04
@@ -1407,7 +1459,7 @@ ideas = {
 				surrender_limit = 0.15
 				army_org_regain = 0.05
 				army_morale_factor = 0.05
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				industrial_capacity_factory = 0.10
 				monthly_population = 0.15
 				production_factory_max_efficiency_factor = -0.04
@@ -1447,7 +1499,7 @@ ideas = {
 			modifier = { 
 				political_power_gain = 0.01
 				party_popularity_stability_factor = 0.05
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.03
 				production_factory_start_efficiency_factor = -0.02
 				production_speed_buildings_factor = 0.05
@@ -1463,7 +1515,7 @@ ideas = {
 				political_power_gain = 0.03
 				party_popularity_stability_factor = 0.10
 				stability_factor = 0.04
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.03
 				production_factory_start_efficiency_factor = -0.02
 				production_speed_buildings_factor = 0.05
@@ -1480,7 +1532,7 @@ ideas = {
 				political_power_gain = 0.03
 				party_popularity_stability_factor = 0.10
 				stability_factor = 0.04
-				consumer_goods_factor = -0.07
+				consumer_goods_factor = -0.17
 				production_factory_max_efficiency_factor = 0.05
 				production_factory_start_efficiency_factor = 0.02
 				production_speed_buildings_factor = 0.05
@@ -1498,7 +1550,7 @@ ideas = {
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.10
 				stability_factor = 0.05
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.30
 				production_factory_max_efficiency_factor = 0.05
 				production_factory_start_efficiency_factor = 0.02
 				production_speed_buildings_factor = 0.10
@@ -1542,7 +1594,7 @@ ideas = {
 			modifier = { 
 				industrial_capacity_factory = 0.05
 				production_factory_efficiency_gain_factor = 0.02
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.06
 				production_factory_start_efficiency_factor = 0.04
 			}
 		}
@@ -1554,7 +1606,7 @@ ideas = {
 			modifier = { 
 				industrial_capacity_factory = 0.05
 				production_speed_buildings_factor = 0.10
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.07
 				production_factory_start_efficiency_factor = -0.02
 				line_change_production_efficiency_factor = 0.03
 				production_factory_max_efficiency_factor = 0.03
@@ -1809,7 +1861,7 @@ ideas = {
 				monthly_population = 0.05
 				supply_consumption_factor = -0.06
 				land_reinforce_rate = 0.05
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.13
 				army_morale_factor = 0.03
 				attrition = -0.05
 				production_factory_start_efficiency_factor = 0.02
@@ -1848,7 +1900,7 @@ ideas = {
 				local_supplies = 0.05
 				industry_free_repair_factor = 0.04
 				political_power_gain = -0.02
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.13
 			}
 		}
 		TEX_finance_industry_idea = {
@@ -1988,7 +2040,7 @@ ideas = {
 			picture = afp_machine
 			modifier = {
 				political_power_gain = 0.02
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.11
 				party_popularity_stability_factor = 0.05
 			}
 		}
@@ -2003,7 +2055,7 @@ ideas = {
 				max_command_power = 10
 				recruitable_population = 0.02
 				party_popularity_stability_factor = 0.1
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.11
 			}
 		}
 		TEX_national_political_machine_idea = { #National Political machine
@@ -2018,7 +2070,7 @@ ideas = {
 				recruitable_population = 0.02
 				party_popularity_stability_factor = 0.15
 				stability_weekly = 0.01
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.07
 			}
 		}
 		TEX_wealth_cap = { # Wealth Cap
@@ -2028,7 +2080,7 @@ ideas = {
 			removal_cost = -1
 			picture = wealth_cap
 			modifier = {
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.06
 				political_power_gain = 0.05
 				production_factory_efficiency_gain_factor = -0.06
 				production_factory_max_efficiency_factor = -0.08
@@ -2043,7 +2095,7 @@ ideas = {
 			removal_cost = -1
 			picture = townsend_plan
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				party_popularity_stability_factor = 0.1
 				monthly_population = 0.05
 				political_power_gain = 0.05
@@ -2060,7 +2112,7 @@ ideas = {
 			removal_cost = -1
 			picture = citizen_dignities
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.3
 				party_popularity_stability_factor = 0.15
 				monthly_population = 0.07
 				surrender_limit = 0.1
@@ -2079,7 +2131,7 @@ ideas = {
 			removal_cost = -1
 			picture = every_man_a_king
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.35
 				party_popularity_stability_factor = 0.25
 				monthly_population = 0.1
 				local_manpower = 0.05
@@ -2099,7 +2151,7 @@ ideas = {
 			removal_cost = -1
 			picture = mixed_econ
 			modifier = {
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.06
 				production_factory_efficiency_gain_factor = 0.02
 				party_popularity_stability_factor = 0.03
 			}
@@ -2110,7 +2162,7 @@ ideas = {
 			removal_cost = -1
 			picture = mixed_econ
 			modifier = {
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.14
 				monthly_population = 0.01
 				production_factory_efficiency_gain_factor = 0.05
 				production_speed_buildings_factor = 0.05
@@ -2123,7 +2175,7 @@ ideas = {
 			removal_cost = -1
 			picture = keynesian_econ
 			modifier = {
-				consumer_goods_factor = -0.08
+				consumer_goods_factor = -0.18
 				monthly_population = 0.02
 				industrial_capacity_factory	= 0.05
 				production_factory_efficiency_gain_factor = 0.05
@@ -2152,7 +2204,7 @@ ideas = {
 			removal_cost = -1
 			picture = partially_planned
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.1
 				local_resources = 0.05
 				monthly_population = 0.01
 				production_factory_max_efficiency_factor = 0.03
@@ -2168,7 +2220,7 @@ ideas = {
 			removal_cost = -1
 			picture = labor_econ
 			modifier = {
-				consumer_goods_factor = -0.06
+				consumer_goods_factor = -0.16
 				local_resources = 0.08
 				monthly_population = 0.01
 				production_factory_max_efficiency_factor = 0.03
@@ -2186,7 +2238,7 @@ ideas = {
 			removal_cost = -1
 			picture = share_the_wealt
 			modifier = {
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.06
 				political_power_gain = 0.03
 			}
 		}
@@ -2197,7 +2249,7 @@ ideas = {
 			removal_cost = -1
 			picture = f_l_bill
 			modifier = { 
-			consumer_goods_factor = -0.03
+			consumer_goods_factor = -0.1
 			stability_weekly = 0.001
 			production_factory_start_efficiency_factor = 0.05
 			production_factory_efficiency_gain_factor = -0.03
@@ -2209,7 +2261,7 @@ ideas = {
 			removal_cost = -1
 			picture = f_l_pacifism
 			modifier = { 
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			stability_weekly = 0.002
 			monthly_population = 0.02
 			production_factory_start_efficiency_factor = 0.08 
@@ -2236,7 +2288,7 @@ ideas = {
 			removal_cost = -1
 			picture = farmer_labor_alliance
 			modifier = { 
-			consumer_goods_factor = -0.08
+			consumer_goods_factor = -0.18
 			stability_weekly = 0.005
 			monthly_population = 0.05
 			production_factory_start_efficiency_factor = 0.08 
@@ -2253,7 +2305,7 @@ ideas = {
 			removal_cost = -1
 			picture = modern_farms
 			modifier = { 
-			consumer_goods_factor = -0.12
+			consumer_goods_factor = -0.32
 			stability_weekly = 0.008
 			monthly_population = 0.1
 			local_resources = 0.05
@@ -2295,7 +2347,7 @@ ideas = {
 			picture = american_democracy
 			modifier = { 
 			stability_weekly = 0.01
-			consumer_goods_factor = -0.02
+			consumer_goods_factor = -0.06
 			local_manpower = 0.02
 			conscription_factor = 0.01
 			forced_surrender_limit = 0.1
@@ -2315,7 +2367,7 @@ ideas = {
 			monthly_population = 0.02
 			production_factory_max_efficiency_factor = 0.05
 			local_resources = 0.05
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			party_popularity_stability_factor = 0.1
 			resistance_activity	= -0.05
 			}
@@ -2437,7 +2489,7 @@ ideas = {
 				political_power_gain = 0.02
 				stability_weekly = 0.003
 				local_manpower = 0.03
-				consumer_goods_factor = -0.06
+				consumer_goods_factor = -0.16
 				production_factory_start_efficiency_factor = 0.03
 				production_factory_efficiency_gain_factor = -0.05
 				production_speed_buildings_factor = 0.03
@@ -2454,7 +2506,7 @@ ideas = {
 				political_power_gain = 0.02
 				stability_weekly = 0.008
 				local_manpower = 0.05
-				consumer_goods_factor = -0.12
+				consumer_goods_factor = -0.32
 				party_popularity_stability_factor = 0.1
 				production_factory_start_efficiency_factor = 0.03
 				production_factory_efficiency_gain_factor = -0.03
@@ -2473,7 +2525,7 @@ ideas = {
 				political_power_gain = 0.04
 				stability_weekly = 0.01
 				local_manpower = 0.1
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.35
 				party_popularity_stability_factor = 0.15
 				production_factory_start_efficiency_factor = 0.08
 				production_factory_efficiency_gain_factor = -0.02
@@ -2516,7 +2568,7 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.001
 				party_popularity_stability_factor = 0.05
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.06
 				resistance_growth = -0.1
 				surrender_limit = 0.1
 			}
@@ -2733,7 +2785,7 @@ ideas = {
 			picture = TEX_pendergast_emperor
 			modifier = {
 				stability_factor = 0.04
-								consumer_goods_factor = -0.06
+								consumer_goods_factor = -0.16
 			}
 		}
 
@@ -2745,7 +2797,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.05
 				stability_factor = 0.06
-				consumer_goods_factor = -0.12
+				consumer_goods_factor = -0.32
 								army_core_attack_factor = 0.1
 			}
 		}
@@ -2760,7 +2812,7 @@ ideas = {
 				production_factory_start_efficiency_factor = -0.25
 				production_factory_max_efficiency_factor = -0.2
 				local_resources = -0.25
-				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.45
 				industry_free_repair_factor = -0.2
 				industrial_capacity_factory = -0.10
 				production_speed_buildings_factor = -0.10
@@ -2775,7 +2827,7 @@ ideas = {
 				production_factory_start_efficiency_factor = -0.2
 				production_factory_max_efficiency_factor = -0.15
 				local_resources = -0.2
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.4
 				industry_free_repair_factor = -0.15
 				industrial_capacity_factory = -0.08
 				production_speed_buildings_factor = -0.08
@@ -2790,7 +2842,7 @@ ideas = {
 				production_factory_start_efficiency_factor = -0.15
 				production_factory_max_efficiency_factor = -0.1
 				local_resources = -0.15
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.3
 				industry_free_repair_factor = -0.1
 				industrial_capacity_factory = -0.06
 				production_speed_buildings_factor = -0.06
@@ -2805,7 +2857,7 @@ ideas = {
 				production_factory_start_efficiency_factor = -0.1
 				production_factory_max_efficiency_factor = -0.05
 				local_resources = -0.1
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				industry_free_repair_factor = -0.05
 				industrial_capacity_factory = -0.03
 				production_speed_buildings_factor = -0.03
@@ -2819,7 +2871,7 @@ ideas = {
 			modifier = {
 				production_factory_start_efficiency_factor = -0.05
 				local_resources = -0.05
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 			}
 		}
 		TEX_national_recovery_idea6 = { #National Recovery Administration
@@ -2830,7 +2882,7 @@ ideas = {
 			modifier = {
 				production_factory_start_efficiency_factor = -0.02
 				local_resources = -0.02
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.13
 			}
 		}
 		TEX_political_instability_1 = { #Political Instability
@@ -2997,7 +3049,7 @@ ideas = {
 				production_speed_arms_factory_factor = -0.1
 				mobilization_speed = -0.05
 				political_power_cost = -0.2
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.07
 				monthly_population = 0.02
 			}
 		}
@@ -3012,7 +3064,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				mobilization_speed = 0.05
 				political_power_cost = -0.1
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.06
 			}
 		}
 		TEX_trade_deals = {
@@ -3099,7 +3151,7 @@ ideas = {
 			picture = saf_history_of_segregation
 			modifier = {
 				conscription_factor = -0.05
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				war_support_factor = -0.10
 				stability_factor = -0.10
 						army_org_Factor = -0.10
@@ -3150,7 +3202,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				political_power_gain = 0.10
 			}
 		}
@@ -3192,7 +3244,7 @@ ideas = {
 				ai_focus_aggressive_factor = 0.25
 				political_power_factor = 0.10
 				army_morale_factor = 0.10
-				non_core_manpower = 0.56
+				non_core_manpower = 0.15
 			}
 		}
 		#Marland
@@ -3203,7 +3255,7 @@ ideas = {
 			removal_cost = -1
 			picture = TEX_start_economic_revival
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.13
 				production_factory_start_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = -0.02
@@ -3217,7 +3269,7 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.003
 				monthly_population = 0.08
-				consumer_goods_factor = -0.06
+				consumer_goods_factor = -0.16
 				local_resources = 0.05
 				production_factory_start_efficiency_factor = 0.06
 				production_factory_efficiency_gain_factor = 0.07
@@ -3253,7 +3305,7 @@ ideas = {
 			allowed = { always = no }
 			picture = TEX_protect_pioneer_women
 			modifier = { 
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.14
 				stability_weekly = 0.003
 				production_factory_max_efficiency_factor = 0.03
 				monthly_population = 0.05
@@ -3265,7 +3317,7 @@ ideas = {
 			allowed = { always = no }
 			picture = TEX_little_new_deal
 			modifier = { 
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.07
 				production_factory_start_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = -0.03
 				party_popularity_stability_factor = 0.10
@@ -3277,7 +3329,7 @@ ideas = {
 			allowed = { always = no }
 			picture = TEX_little_new_deal
 			modifier = { 
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.13
 				stability_weekly = 0.004
 				production_factory_start_efficiency_factor = 0.07
 				production_factory_efficiency_gain_factor = 0.06
@@ -3293,7 +3345,7 @@ ideas = {
 			modifier = { 
 					resistance_growth = -0.05
 					production_factory_start_efficiency_factor = 0.08
-					consumer_goods_factor = 0.02
+					consumer_goods_factor = 0.07
 				production_speed_infrastructure_factor = 0.07
 				production_speed_buildings_factor = 0.05
 				political_power_gain = 0.07
@@ -3307,7 +3359,7 @@ ideas = {
 			modifier = { 
 				production_factory_efficiency_gain_factor = 0.1
 				production_factory_max_efficiency_factor = 0.08
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.14
 				stability_weekly = 0.01
 				political_power_gain = 0.06
 				party_popularity_stability_factor = 0.1
@@ -3348,15 +3400,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Marland_Oil_Company"}
 			allowed = { is_american_tag = yes }
 			available = { owns_state = 374 }
-			visible = {
-				if = {
-					limit = { NOT = { tag = TEX } }
-					OR = {
-						has_country_flag = USA_industrial_companies_allowed
-						NOT = { has_global_flag = USA_civil_war_begun_flag }
-					}
-				}
-			}
 			traits = { chemical_producer }
 			modifier = { production_speed_synthetic_refinery_factor = 0.3 }
 			research_bonus = { synth_resources = 0.1 }
@@ -3365,21 +3408,12 @@ ideas = {
 	}
 
 	### Weapons Manufacturers ###
-	weapons_manufacturer = {
+	materiel_manufacturer = {
 		designer = yes
 		St_Louis_Arsenal = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea St_Louis_Arsenal"}
 			allowed = { is_american_tag = yes }
-			available = { owns_state = 1163 }
-			visible = {
-				if = {
-					limit = { NOT = { tag = TEX } }
-					OR = {
-						has_country_flag = USA_weapon_companies_allowed
-						NOT = { has_global_flag = USA_civil_war_begun_flag }
-					}
-				}
-			}
+			available = { owns_state = 373 }
 			traits = { infantry_equipment_producer_offense_2 }
 			research_bonus = { infantry_weapons = 0.1 }
 		}
@@ -3388,15 +3422,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Camp_Claiborne"}
 			allowed = { is_american_tag = yes }
 			available = { owns_state = 371 }
-			visible = {
-				if = {
-					limit = { NOT = { tag = TEX } }
-					OR = {
-						has_country_flag = USA_weapon_companies_allowed
-						NOT = { has_global_flag = USA_civil_war_begun_flag }
-					}
-				}
-			}
 			traits = { motorised_equipment_producer_mass_1 }
 			research_bonus = { infantry_weapons = 0.1 }
 		}
@@ -3405,15 +3430,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea jefferson_barracks"}
 			allowed = { is_american_tag = yes }
 			available = { owns_state = 371 }
-			visible = {
-				if = {
-					limit = { NOT = { tag = TEX } }
-					OR = {
-						has_country_flag = USA_weapon_companies_allowed
-						NOT = { has_global_flag = USA_civil_war_begun_flag }
-					}
-				}
-			}
 			traits = { motorised_equipment_producer_mass_1 }
 			research_bonus = { infantry_weapons = 0.1 }
 		}
@@ -3433,15 +3449,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea mississippi_shipping_co"}
 			allowed = { is_american_tag = yes }
 			available = { owns_state = 371 }
-			visible = {
-				if = {
-					limit = { NOT = { tag = TEX } }
-					OR = {
-						has_country_flag = USA_naval_companies_allowed
-						NOT = { has_global_flag = USA_civil_war_begun_flag }
-					}
-				}
-			}
 			traits = { capital_ship_producer_mass_1 }
 			research_bonus = { naval_equipment = 0.1 }
 		}
@@ -3455,15 +3462,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Stearman"}
 			allowed = { is_american_tag = yes }
 			available = { owns_state = 384 }
-			visible = {
-				if = {
-					limit = { NOT = { tag = TEX } }
-					OR = {
-						has_country_flag = USA_aviation_companies_allowed
-						NOT = { has_global_flag = USA_civil_war_begun_flag }
-					}
-				}
-			}
 			traits = { bomber_producer_offense_2 }
 			research_bonus = { air_equipment = 0.05 }
 		}
@@ -3472,15 +3470,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea spartan_aircraft"}
 			allowed = { is_american_tag = yes }
 			available = { owns_state = 384 }
-			visible = {
-				if = {
-					limit = { NOT = { tag = TEX } }
-					OR = {
-						has_country_flag = USA_aviation_companies_allowed
-						NOT = { has_global_flag = USA_civil_war_begun_flag }
-					}
-				}
-			}
 			traits = { fighter_producer_offense_2 }
 			research_bonus = { air_equipment = 0.05 }
 		}
@@ -3489,15 +3478,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Wedell_Williams"}
 			allowed = { is_american_tag = yes }
 			available = { owns_state = 384 }
-			visible = {
-				if = {
-					limit = { NOT = { tag = TEX } }
-					OR = {
-						has_country_flag = USA_aviation_companies_allowed
-						NOT = { has_global_flag = USA_civil_war_begun_flag }
-					}
-				}
-			}
 			traits = { fighter_producer_defense_1 }
 			research_bonus = { air_equipment = 0.05 }
 		}

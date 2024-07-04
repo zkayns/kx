@@ -104,13 +104,25 @@ NFA_has_president = {
 			name = "Jacques Bainville"
 			ruling_only = yes
 		}
+		has_country_leader = {
+			name = "Charles Vallin"
+			ruling_only = yes
+		}
+		has_country_leader = {
+			name = "François Coty"
+			ruling_only = yes
+		}
+		has_country_leader = {
+			name = "François Mitterand"
+			ruling_only = yes
+		}
 	}
 }
 
 NFA_is_possible_revolter = {
 	OR = {
 		tag = WAD
-		tag = NGR
+		tag = NER
 		tag = BFA
 		tag = MLI
 		tag = GNA
@@ -124,7 +136,7 @@ NFA_can_cross_sahara = {
 		tag = ALG
 		tag = TUN
 		tag = MOR
-		tag = NGR
+		tag = NER
 		tag = WAD
 		tag = MLI
 		tag = BFA

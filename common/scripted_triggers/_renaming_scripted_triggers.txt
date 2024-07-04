@@ -153,6 +153,16 @@ is_chinese_tag = {
 		}
 	}
 }
+is_tag_in_china_area = {
+	OR = {
+		is_chinese_tag = yes
+		original_tag = MON
+		original_tag = KUM
+		original_tag = TIB
+		original_tag = ETS
+		original_tag = LEC
+	}
+}
 is_dutch_tag = {
 	custom_trigger_tooltip = {
 		tooltip = is_dutch_tag
@@ -286,7 +296,7 @@ is_french_speaking_tag = {
 	custom_trigger_tooltip = {
 		tooltip = is_french_speaking_tag
 		OR = {
-			is_french_tag = YES
+			is_french_tag = yes
 			is_french_africa_tag = yes
 			tag = QUE
 			tag = WLL
@@ -302,10 +312,13 @@ is_german_tag = {
 			tag = AUS
 			tag = GRU
 			tag = WGR
+			original_tag = EPR
 			tag = NGF
 			tag = DDR
 			tag = BAY
 			tag = GEX
+			tag = MAF
+			tag = GEA
 			AND = {
 				original_tag = BAT
 				has_socialist_government = no
@@ -318,8 +331,6 @@ is_german_tag = {
 				original_tag = DKB
 				has_country_flag = DKB_germanization
 			}
-			tag = MAF
-			tag = GEA
 		}
 	}
 }
@@ -334,6 +345,7 @@ is_germany_or_splinter_tag = {
 			tag = BAY
 			tag = NGF
 			tag = DDR
+			original_tag = EPR
 		}
 	}
 }
@@ -432,9 +444,14 @@ is_russian_tag_that_can_integrate = {
 		AND = {
 			tag = MON
 			OR = {
-				has_global_flag = MON_Sternberg_russian_empire
+				has_country_flag = MON_Sternberg_russian_empire
 				owns_state = 219
 			}
+		}
+		AND = {
+			has_event_target = soviet_russia
+			has_country_flag = soviet_russia_restored
+			owns_state = 219
 		}
 	}
 }
@@ -467,7 +484,6 @@ is_turkic_tag = {
 			is_oghuz_turkic_tag = yes
 			is_kipchak_turkic_tag = yes
 			is_karluk_turkic_tag = yes
-			tag = SIK
 			tag = YAK
 		}
 	}
@@ -515,7 +531,7 @@ is_kipchak_turkic_tag = {
 			}
 			tag = MTR
 			tag = TTR
-			tag = BKN 
+			tag = BKN
 		}
 	}
 }
@@ -663,7 +679,7 @@ is_yiddish_tag = { #has a large yiddish population
 		tag = LAT
 		tag = BAT
 		tag = WHR
-		tag = UKR
+		original_tag = UKR
 		tag = GAL
 		tag = HUN
 		tag = CZE
@@ -780,7 +796,6 @@ is_romanian_tag = {
 		OR = {
 			tag = ROM
 			tag = TRS
-			tag = RRM
 			tag = BAN
 			tag = MOL
 		}
@@ -850,6 +865,16 @@ is_celtic_tag = {
 			tag = SCT
 			tag = BRI
 			tag = GLC
+		}
+	}
+}
+
+is_maori_tag = {
+	custom_trigger_tooltip = {
+		tooltip = is_maori_tag
+		OR = {
+			tag = NZL
+			tag= AST
 		}
 	}
 }

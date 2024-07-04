@@ -7,7 +7,9 @@ EMI = {
 			"GFX_Portrait_Italy_Generic_land_grey_2"
 			"GFX_Portrait_Italy_Generic_land_grey_3"
 			"GFX_Portrait_Italy_Generic_land_grey_4"
-			"GFX_Portrait_Italy_Generic_land_grey_5"
+			"GFX_Portrait_Italy_Generic_land_grey_6"
+			"GFX_Portrait_Italy_Generic_land_grey_7"
+			"GFX_Portrait_Italy_Generic_land_grey_8"
 		}
 	}
 
@@ -15,7 +17,6 @@ EMI = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
@@ -27,7 +28,9 @@ ITA = {
 			"GFX_Portrait_Italy_Generic_land_grey_2"
 			"GFX_Portrait_Italy_Generic_land_grey_3"
 			"GFX_Portrait_Italy_Generic_land_grey_4"
-			"GFX_Portrait_Italy_Generic_land_grey_5"
+			"GFX_Portrait_Italy_Generic_land_grey_6"
+			"GFX_Portrait_Italy_Generic_land_grey_7"
+			"GFX_Portrait_Italy_Generic_land_grey_8"
 		}
 	}
 
@@ -35,7 +38,6 @@ ITA = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
@@ -47,7 +49,9 @@ LOM = {
 			"GFX_Portrait_Italy_Generic_land_grey_2"
 			"GFX_Portrait_Italy_Generic_land_grey_3"
 			"GFX_Portrait_Italy_Generic_land_grey_4"
-			"GFX_Portrait_Italy_Generic_land_grey_5"
+			"GFX_Portrait_Italy_Generic_land_grey_6"
+			"GFX_Portrait_Italy_Generic_land_grey_7"
+			"GFX_Portrait_Italy_Generic_land_grey_8"
 		}
 	}
 
@@ -55,7 +59,6 @@ LOM = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
@@ -67,7 +70,9 @@ PAP = {
 			"GFX_Portrait_Italy_Generic_land_green_2"
 			"GFX_Portrait_Italy_Generic_land_green_3"
 			"GFX_Portrait_Italy_Generic_land_green_4"
-			"GFX_Portrait_Italy_Generic_land_green_5"
+			"GFX_Portrait_Italy_Generic_land_green_6"
+			"GFX_Portrait_Italy_Generic_land_green_7"
+			"GFX_Portrait_Italy_Generic_land_green_8"
 		}
 	}
 
@@ -75,7 +80,6 @@ PAP = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
@@ -87,7 +91,9 @@ SIC = {
 			"GFX_Portrait_Italy_Generic_land_green_2"
 			"GFX_Portrait_Italy_Generic_land_green_3"
 			"GFX_Portrait_Italy_Generic_land_green_4"
-			"GFX_Portrait_Italy_Generic_land_green_5"
+			"GFX_Portrait_Italy_Generic_land_green_6"
+			"GFX_Portrait_Italy_Generic_land_green_7"
+			"GFX_Portrait_Italy_Generic_land_green_8"
 		}
 	}
 
@@ -95,7 +101,6 @@ SIC = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
@@ -107,7 +112,9 @@ SRD = {
 			"GFX_Portrait_Italy_Generic_land_grey_2"
 			"GFX_Portrait_Italy_Generic_land_grey_3"
 			"GFX_Portrait_Italy_Generic_land_grey_4"
-			"GFX_Portrait_Italy_Generic_land_grey_5"
+			"GFX_Portrait_Italy_Generic_land_grey_6"
+			"GFX_Portrait_Italy_Generic_land_grey_7"
+			"GFX_Portrait_Italy_Generic_land_grey_8"
 		}
 	}
 
@@ -115,7 +122,6 @@ SRD = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
@@ -127,7 +133,9 @@ SRI = {
 			"GFX_Portrait_Italy_Generic_land_green_2"
 			"GFX_Portrait_Italy_Generic_land_green_3"
 			"GFX_Portrait_Italy_Generic_land_green_4"
-			"GFX_Portrait_Italy_Generic_land_green_5"
+			"GFX_Portrait_Italy_Generic_land_green_6"
+			"GFX_Portrait_Italy_Generic_land_green_7"
+			"GFX_Portrait_Italy_Generic_land_green_8"
 		}
 	}
 
@@ -135,7 +143,6 @@ SRI = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
@@ -147,7 +154,9 @@ TUS = {
 			"GFX_Portrait_Italy_Generic_land_green_2"
 			"GFX_Portrait_Italy_Generic_land_green_3"
 			"GFX_Portrait_Italy_Generic_land_green_4"
-			"GFX_Portrait_Italy_Generic_land_green_5"
+			"GFX_Portrait_Italy_Generic_land_green_6"
+			"GFX_Portrait_Italy_Generic_land_green_7"
+			"GFX_Portrait_Italy_Generic_land_green_8"
 		}
 	}
 
@@ -155,7 +164,6 @@ TUS = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
@@ -167,7 +175,9 @@ VNC = {
 			"GFX_Portrait_Italy_Generic_land_green_2"
 			"GFX_Portrait_Italy_Generic_land_green_3"
 			"GFX_Portrait_Italy_Generic_land_green_4"
-			"GFX_Portrait_Italy_Generic_land_green_5"
+			"GFX_Portrait_Italy_Generic_land_green_6"
+			"GFX_Portrait_Italy_Generic_land_green_7"
+			"GFX_Portrait_Italy_Generic_land_green_8"
 		}
 	}
 
@@ -175,8 +185,6 @@ VNC = {
 		male = {
 			"GFX_Portrait_Italy_Generic_navy_1"
 			"GFX_Portrait_Italy_Generic_navy_2"
-			"GFX_Portrait_Italy_Generic_navy_3"
 		}
 	}
 }
-

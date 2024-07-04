@@ -295,7 +295,7 @@ MAF_sell_crops = {
 		clr_country_flag = MAF_is_dealing_with_debt
 		add_timed_idea = {
 			idea = MAF_disgruntled_farmers
-			days = 30
+			days = 120
 		}
 	}	
 	days_remove = 45
@@ -329,7 +329,7 @@ MAF_layoffs = {
 	remove_effect = {
 		add_timed_idea = {
 			idea = MAF_power_vacuum
-			days = 30
+			days = 100
 		}
 		add_political_power = 60
 		add_manpower = -2000
@@ -374,6 +374,7 @@ MAF_export_weapons = {
 			amount = 2000
 		}
 		add_political_power = 70
+		clr_country_flag = MAF_is_dealing_with_debt
 	}
 	days_remove = 5
 	days_re_enable = 70
@@ -406,7 +407,7 @@ MAF_press_natives = {
 	remove_effect = {
 		add_timed_idea = {
 			idea = MAF_disgruntled_natives
-			days = 60
+			days = 120
 		}
 		add_political_power = 80
 		clr_country_flag = MAF_is_dealing_with_debt
@@ -442,7 +443,7 @@ MAF_sell_plantations = {
 	remove_effect = {
 		add_timed_idea = {
 			idea = MAF_corporate_blues
-			days = 50
+			days = 130
 		}
 		add_political_power = 60
 		clr_country_flag = MAF_is_dealing_with_debt
@@ -2303,6 +2304,9 @@ MAF_westafrika_centralization_actions = {
 			}
 			CIV = {
 				every_unit_leader = { set_nationality = MAF }
+				every_owned_state = {
+					MAF = { add_state_core = PREV }
+				}
 			}
 			add_to_variable = { MAF_collapse_var = 2 }
 			custom_effect_tooltip = MAF_increase_collapse_2_tt
@@ -2539,6 +2543,9 @@ MAF_madagascar_centralization_actions = {
 			}
 			MAG = {
 				every_unit_leader = { set_nationality = MAF }
+				every_owned_state = {
+					MAF = { add_state_core = PREV }
+				}
 			}
 			add_to_variable = { MAF_collapse_var = 2 }
 			custom_effect_tooltip = MAF_increase_collapse_2_tt
@@ -2950,6 +2957,9 @@ MAF_kenya_uganda_centralization_actions = {
 			}
 			KEN = {
 				every_unit_leader = { set_nationality = MAF }
+				every_owned_state = {
+					MAF = { add_state_core = PREV }
+				}
 			}
 			add_to_variable = { MAF_collapse_var = 2 }
 			custom_effect_tooltip = MAF_increase_collapse_2_tt
@@ -3246,7 +3256,7 @@ MAF_nigeria_centralization_actions = {
 						name = "Josef Terboven"
 						desc = "POLITICS_TERBOVEN_DESC"
 						picture = "gfx/leaders/NGR/Portrait_NGR_Josef_Terboven.png"
-						expire = "1965.1.1"
+						expire = "1.1.1"
 						ideology = colonial_govt_subtype
 						traits = {}
 					}
@@ -3292,6 +3302,9 @@ MAF_nigeria_centralization_actions = {
 			}
 			NGR = {
 				every_unit_leader = { set_nationality = MAF }
+				every_owned_state = {
+					MAF = { add_state_core = PREV }
+				}
 			}
 			add_to_variable = { MAF_collapse_var = 2 }
 			custom_effect_tooltip = MAF_increase_collapse_2_tt
@@ -3580,6 +3593,9 @@ MAF_congo_centralization_actions = {
 			}
 			COG = {
 				every_unit_leader = { set_nationality = MAF }
+				every_owned_state = {
+					MAF = { add_state_core = PREV }
+				}
 			}
 			add_to_variable = { MAF_collapse_var = 2 }
 			custom_effect_tooltip = MAF_increase_collapse_2_tt
@@ -3826,6 +3842,9 @@ MAF_nordrhodesia_actions = {
 			}
 			ZAM = {
 				every_unit_leader = { set_nationality = MAF }
+				every_owned_state = {
+					MAF = { add_state_core = PREV }
+				}
 			}
 			add_to_variable = { MAF_collapse_var = 2 }
 			custom_effect_tooltip = MAF_increase_collapse_2_tt

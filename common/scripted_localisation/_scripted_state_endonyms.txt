@@ -645,7 +645,7 @@ defined_text = {
 		trigger = {
 			original_tag = BUL
 			has_country_leader = {
-				name = "Gajaz Ishaki"
+				name = "N.S. Derzhavin"
 				ruling_only = yes
 			}
 			48 = { has_state_flag = renamed_state_new_phanagoria }
@@ -1818,12 +1818,17 @@ defined_text = {
 defined_text = {
 	name = GetStateName_113
 	text = {
-		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
-		localization_key = STATE_113
+		trigger = { 
+			OR = {
+			is_celtic_tag = yes 
+			113 = { has_state_flag = renamed_state_celtic }
+			}
+		}
+		localization_key = STATE_113_CELTIC #Laighin
 	}
 	text = {
-		trigger = { is_celtic_tag = yes }
-		localization_key = STATE_113_CELTIC #Laighin
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_113
 	}
 	text = {
 		localization_key = STATE_113 #Leinster
@@ -1878,16 +1883,21 @@ defined_text = {
 defined_text = {
 	name = GetStateName_119
 	text = {
+		trigger = { 
+			OR = {
+			is_celtic_tag = yes 
+			119 = { has_state_flag = renamed_state_celtic }
+			}
+		}
+		localization_key = STATE_119_CELTIC #Ulaidh
+	}
+	text = {
 		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
 		localization_key = STATE_119 #Northern Ireland
 	}
 	text = {
 		trigger = { is_british_tag = yes }
 		localization_key = STATE_119_BRITISH #Northern Ireland
-	}
-	text = {
-		trigger = { is_celtic_tag = yes }
-		localization_key = STATE_119_CELTIC #Ulaidh
 	}
 	text = {
 		localization_key = STATE_119 #Northern Ireland
@@ -2044,12 +2054,17 @@ defined_text = {
 defined_text = {
 	name = GetStateName_134
 	text = {
-		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
-		localization_key = STATE_134
+		trigger = { 
+			OR = {
+			is_celtic_tag = yes 
+			134 = { has_state_flag = renamed_state_celtic }
+			}
+		}
+		localization_key = STATE_134_CELTIC #Connachta
 	}
 	text = {
-		trigger = { is_celtic_tag = yes }
-		localization_key = STATE_134_CELTIC #Connachta
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_134
 	}
 	text = {
 		localization_key = STATE_134 #Connacht
@@ -2058,12 +2073,17 @@ defined_text = {
 defined_text = {
 	name = GetStateName_135
 	text = {
-		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
-		localization_key = STATE_135
+		trigger = { 
+			OR = {
+			is_celtic_tag = yes 
+			135 = { has_state_flag = renamed_state_celtic }
+			}
+		}
+		localization_key = STATE_135_CELTIC #An Mhumhain
 	}
 	text = {
-		trigger = { is_celtic_tag = yes }
-		localization_key = STATE_135_CELTIC #An Mhumhain
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_135
 	}
 	text = {
 		localization_key = STATE_135 #Munster
@@ -2115,7 +2135,7 @@ defined_text = {
 		localization_key = STATE_137_UKRAINIAN #Krym
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_137_KIPCHAK
 	}
 	text = {
@@ -2298,7 +2318,7 @@ defined_text = {
 	}
 	text = {
 		trigger = { is_finnish_tag = yes }
-		localization_key = STATE_150 #
+		localization_key = STATE_150_FINNISH #
 	}
 	text = {
 		localization_key = STATE_150 #
@@ -2829,14 +2849,6 @@ defined_text = {
 		localization_key = STATE_188_POLISH #Kłajpeda
 	}
 	text = {
-		trigger = { original_tag = LAT }
-		localization_key = STATE_188_LATVIAN
-	}
-	text = {
-		trigger = { is_russian_speaking_tag = yes }
-		localization_key = STATE_188_RUSSIAN
-	}
-	text = {
 		localization_key = STATE_188 #Memel
 	}
 }
@@ -2938,7 +2950,7 @@ defined_text = {
 		localization_key = STATE_192_GERMAN
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_192_KIPCHAK
 	}
 	text = {
@@ -3022,6 +3034,10 @@ defined_text = {
 		localization_key = STATE_195_GERMAN
 	}
 	text = {
+		trigger = { is_finnish_tag = yes }
+		localization_key = STATE_195_FINNISH
+	}
+	text = {
 		trigger = { 
 			195 = { has_state_flag = renamed_state_imperial }
 		}
@@ -3078,7 +3094,7 @@ defined_text = {
 		localization_key = STATE_196_RUSSIAN
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_196_KIPCHAK
 	}
 	text = {
@@ -3092,7 +3108,7 @@ defined_text = {
 		localization_key = STATE_197 #Kherson
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_197_KIPCHAK
 	}
 	text = {
@@ -3195,7 +3211,7 @@ defined_text = {
 		localization_key = STATE_200_GERMAN
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_200_KIPCHAK
 	}
 	text = {
@@ -3334,6 +3350,14 @@ defined_text = {
 }
 defined_text = {
 	name = GetStateName_208
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_208 #Luga
+	}
+	text = {
+		trigger = { is_finnish_tag = yes }
+		localization_key = STATE_208_FINNISH
+	}
 	text = {
 		localization_key = STATE_208 #Luga
 	}
@@ -3612,8 +3636,40 @@ defined_text = {
 		localization_key = STATE_226_REFORMED_UKRAINIAN #
 	}
 	text = {
+		trigger = { 
+			is_ukrainian_tag = yes
+			has_global_flag = renamed_katerynoslav_to_dnipro
+		}
+		localization_key = STATE_226_DNIPRO
+	}	
+	text = {
+		trigger = { 
+			is_ukrainian_tag = yes
+			has_global_flag = renamed_katerynoslav_to_dniproslav
+		}
+		localization_key = STATE_226_DNIPROSLAV
+	}	
+	text = {
+		trigger = { 
+			is_ukrainian_tag = yes
+			has_global_flag = renamed_katerynoslav_to_sicheslav
+		}
+		localization_key = STATE_226_SICHESLAV
+	}	
+	text = {
+		trigger = { 
+			is_ukrainian_tag = yes
+			has_global_flag = renamed_katerynoslav_to_krasnodniprovsk
+		}
+		localization_key = STATE_226_KRASNODNIPROVSK
+	}	
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_226 #
+	}
+	text = {
 		trigger = { is_russian_speaking_tag = yes }
-		localization_key = STATE_226_RUSSIAN #Yekaterinoslav
+		localization_key = STATE_226_RUSSIAN
 	}
 	text = {
 		trigger = { 
@@ -3625,7 +3681,7 @@ defined_text = {
 		localization_key = STATE_226_GERMAN
 	}
 	text = {
-		localization_key = STATE_226 #Ekaterinoslav
+		localization_key = STATE_226 #
 	}
 }
 defined_text = {
@@ -3712,7 +3768,7 @@ defined_text = {
 		localization_key = STATE_228_RUSSIAN #
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_228_KIPCHAK
 	}
 	text = {
@@ -3793,7 +3849,7 @@ defined_text = {
 	}
 	text = {
 		trigger = { original_tag = MTR }
-		localization_key = STATE_233_MOUNTAIN
+		localization_key = STATE_232_MOUNTAIN
 	}
 	text = {
 		localization_key = STATE_232 #Dagestan
@@ -3840,7 +3896,7 @@ defined_text = {
 		localization_key = STATE_234_UKRAINIAN #Katerynodar
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_234_KIPCHAK
 	}
 	text = {
@@ -4035,7 +4091,7 @@ defined_text = {
 		trigger = {
 			original_tag = BUL
 			has_country_leader = {
-				name = "Gajaz Ishaki"
+				name = "N.S. Derzhavin"
 				ruling_only = yes
 			}
 			249 = { has_state_flag = renamed_state_bolghar }
@@ -4047,7 +4103,7 @@ defined_text = {
 		localization_key = STATE_249 #
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_249_KIPCHAK
 	}
 	text = {
@@ -4406,6 +4462,14 @@ defined_text = {
 }
 defined_text = {
 	name = GetStateName_284
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_284 #North Island
+	}
+	text = {
+		trigger = { is_maori_tag = yes }
+		localization_key = STATE_284_MAORI #Te Ika-a-Maui
+	}
 	text = {
 		localization_key = STATE_284 #North Island
 	}
@@ -5653,12 +5717,12 @@ defined_text = {
 		localization_key = STATE_402_RUSSIAN
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
-		localization_key = STATE_402_KIPCHAK
-	}
-	text = {
 		trigger = { is_karluk_turkic_tag = yes }
 		localization_key = STATE_402_KARLUK
+	}
+	text = {
+		trigger = { is_turkic_tag = yes }
+		localization_key = STATE_402_KIPCHAK
 	}
 	text = {
 		localization_key = STATE_402 #Turgay
@@ -7806,13 +7870,7 @@ defined_text = {
 		localization_key = STATE_588
 	}
 	text = {
-		trigger = { 
-			OR = {
-				is_kipchak_turkic_tag = yes
-				is_oghuz_turkic_tag = yes
-				is_karluk_turkic_tag = yes
-			}
-		}
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_588_KIPCHAK
 	}
 	text = {
@@ -8653,7 +8711,7 @@ defined_text = {
 		localization_key = STATE_651 #
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_651_KIPCHAK
 	}
 	text = {
@@ -8712,19 +8770,15 @@ defined_text = {
 	}
 	text = {
 		trigger = { is_german_tag = yes }
-		localization_key = STATE_655_GERMAN #Suwalken
+		localization_key = STATE_655_GERMAN #Sudauen
 	}
 	text = {
 		trigger = { is_polish_tag = yes }
-		localization_key = STATE_655_POLISH #Suwałki
+		localization_key = STATE_655_POLISH #Sudawia
 	}
 	text = {
 		trigger = { original_tag = LAT }
 		localization_key = STATE_655_LATVIAN #Sudava
-	}
-	text = {
-		trigger = { is_russian_speaking_tag = yes }
-		localization_key = STATE_655_RUSSIAN #Suvalki
 	}
 	text = {
 		localization_key = STATE_655 #Sudovia
@@ -9504,12 +9558,12 @@ defined_text = {
 		localization_key = STATE_712 #Kyzylkum
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
-		localization_key = STATE_712_KIPCHAK
-	}
-	text = {
 		trigger = { is_oghuz_turkic_tag = yes }
 		localization_key = STATE_712_OGHUZ
+	}
+	text = {
+		trigger = { is_turkic_tag = yes }
+		localization_key = STATE_712_KIPCHAK
 	}
 	text = {
 		trigger = { is_russian_speaking_tag = yes }
@@ -9700,6 +9754,14 @@ defined_text = {
 }
 defined_text = {
 	name = GetStateName_723
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_723 #South Island
+	}
+	text = {
+		trigger = { is_maori_tag = yes }
+		localization_key = STATE_723_MAORI #Te Waipounamu
+	}
 	text = {
 		localization_key = STATE_723 #South Island
 	}
@@ -11004,13 +11066,10 @@ defined_text = {
 	}
 	text = {
 		trigger = { 
-			OR = {
-				is_karluk_turkic_tag = yes
-				is_kipchak_turkic_tag = yes
-				is_oghuz_turkic_tag = yes
-			}
+			is_russian_speaking_tag = yes 
+			NOT = { original_tag = ALO }
 		}
-		localization_key = STATE_810_CENTRAL_ASIAN #Alash-Qala
+		localization_key = STATE_810_RUSSIAN
 	}
 	text = {
 		localization_key = STATE_810 #Semipalatinsk
@@ -11634,17 +11693,12 @@ defined_text = {
 		localization_key = STATE_861 #Khorezm
 	}
 	text = {
-		trigger = { 
-			OR = {
-				is_kipchak_turkic_tag = yes 
-				is_oghuz_turkic_tag = yes 
-			}
-		}
-		localization_key = STATE_861_KIPCHAK
-	}
-	text = {
 		trigger = { is_karluk_turkic_tag = yes }
 		localization_key = STATE_861_KARLUK
+		}
+	text = {
+		trigger = { is_turkic_tag = yes }
+		localization_key = STATE_861_KIPCHAK
 	}
 	text = {
 		localization_key = STATE_861 #Khorezm
@@ -14048,14 +14102,6 @@ defined_text = {
 defined_text = {
 	name = GetStateName_1042
 	text = {
-		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
-		localization_key = STATE_1042 #Badakshan
-	}
-	text = {
-		trigger = { is_central_asian_tag = yes }
-		localization_key = STATE_1042_CENTRAL_ASIAN #Badakhshān
-	}
-	text = {
 		localization_key = STATE_1042 #Badakshan
 	}
 }
@@ -15906,7 +15952,7 @@ defined_text = {
 		localization_key = STATE_1194
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1194_KIPCHAK
 	}
 	text = {
@@ -15920,7 +15966,7 @@ defined_text = {
 		localization_key = STATE_1195
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1195_KIPCHAK
 	}
 	text = {
@@ -15938,8 +15984,8 @@ defined_text = {
 		localization_key = STATE_1196
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
-		localization_key = STATE_1196_KIPCHAK
+		trigger = { is_russian_speaking_tag = yes }
+		localization_key = STATE_1196_RUSSIAN
 	}
 	text = {
 		localization_key = STATE_1196
@@ -15952,7 +15998,7 @@ defined_text = {
 		localization_key = STATE_1197
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1197_KIPCHAK
 	}
 	text = {
@@ -15966,7 +16012,7 @@ defined_text = {
 		localization_key = STATE_1198
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1198_KIPCHAK
 	}
 	text = {
@@ -15980,7 +16026,7 @@ defined_text = {
 		localization_key = STATE_1199
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1199_KIPCHAK
 	}
 	text = {
@@ -16024,12 +16070,7 @@ defined_text = {
 		localization_key = STATE_1203_KARLUK
 	}
 	text = {
-		trigger = { 
-			OR = {
-				is_kipchak_turkic_tag = yes 
-				is_oghuz_turkic_tag = yes
-			}
-		}
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1203_KIPCHAK
 	}
 	text = {
@@ -16083,7 +16124,7 @@ defined_text = {
 		localization_key = STATE_1208
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1208_KIPCHAK
 	}
 	text = {
@@ -16123,13 +16164,7 @@ defined_text = {
 		localization_key = STATE_1210_RUSSIAN
 	}
 	text = {
-		trigger = {
-			OR = {
-				is_karluk_turkic_tag = yes
-				is_kipchak_turkic_tag = yes
-				is_oghuz_turkic_tag = yes
-			}
-		}
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1210_KARLUK
 	}
 	text = {
@@ -16147,13 +16182,7 @@ defined_text = {
 		localization_key = STATE_1211_RUSSIAN
 	}
 	text = {
-		trigger = {
-			OR = {
-				is_karluk_turkic_tag = yes
-				is_kipchak_turkic_tag = yes
-				is_oghuz_turkic_tag = yes
-			}
-		}
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1211_KARLUK
 	}
 	text = {
@@ -16167,16 +16196,7 @@ defined_text = {
 		localization_key = STATE_1212
 	}
 	text = {
-		trigger = { is_karluk_turkic_tag = yes }
-		localization_key = STATE_1212_KARLUK
-	}
-	text = {
-		trigger = {
-			OR = {
-				is_kipchak_turkic_tag = yes
-				is_oghuz_turkic_tag = yes
-			}
-		}
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1212_KIPCHAK
 	}
 	text = {
@@ -16248,7 +16268,7 @@ defined_text = {
 		localization_key = STATE_1220
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1220_KIPCHAK
 	}
 	text = {
@@ -16278,7 +16298,7 @@ defined_text = {
 		localization_key = STATE_1221_RUSSIAN
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1221_KIPCHAK
 	}
 	text = {
@@ -16313,7 +16333,7 @@ defined_text = {
 		localization_key = STATE_1222_GERMAN
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1222_KIPCHAK
 	}
 	text = {
@@ -16541,7 +16561,7 @@ defined_text = {
 		localization_key = STATE_1232_GERMAN
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1232_KIPCHAK
 	}
 	text = {
@@ -17009,7 +17029,7 @@ defined_text = {
 		localization_key = STATE_1263_RUSSIAN
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
+		trigger = { is_turkic_tag = yes }
 		localization_key = STATE_1263_KIPCHAK
 	}
 	text = {
@@ -17215,12 +17235,12 @@ defined_text = {
 		localization_key = STATE_1278
 	}
 	text = {
-		trigger = { is_kipchak_turkic_tag = yes }
-		localization_key = STATE_1278_KIPCHAK
-	}
-	text = {
 		trigger = { is_oghuz_turkic_tag = yes }
 		localization_key = STATE_1278_OGHUZ
+	}
+	text = {
+		trigger = { is_turkic_tag = yes }
+		localization_key = STATE_1278_KIPCHAK
 	}
 	text = {
 		localization_key = STATE_1278
@@ -17489,8 +17509,8 @@ defined_text = {
 		localization_key = STATE_1293
 	}
 	text = {
-		trigger = { original_tag = WHR }
-		localization_key = STATE_1293_BELARUSIAN
+		trigger = { is_mongolian_tag = yes }
+		localization_key = STATE_1293_MONGOLIAN
 	}
 	text = {
 		localization_key = STATE_1293
@@ -17845,5 +17865,196 @@ defined_text = {
 	}
 	text = {
 		localization_key = STATE_1320
+	}
+}
+
+defined_text = {
+	name = GetStateName_1321
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1321 
+	}
+	text = {
+		trigger = { is_german_tag = yes }
+		localization_key = STATE_1321_GERMAN 
+	}
+	text = {
+		localization_key = STATE_1321
+	}
+}
+defined_text = {
+	name = GetStateName_1322
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1322
+	}
+	text = {
+		trigger = { is_german_tag = yes }
+		localization_key = STATE_1322_GERMAN 
+	}
+	text = {
+		localization_key = STATE_1322
+	}
+}
+defined_text = {
+	name = GetStateName_1323
+	text = {
+		localization_key = STATE_1323
+	}
+}
+
+defined_text = {
+	name = GetStateName_1324
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1324
+	}
+	text = {
+		trigger = { is_russian_speaking_tag = yes }
+		localization_key = STATE_1324_RUSSIAN #
+	}
+	text = {
+		trigger = { is_scandinavian_tag = yes }
+		localization_key = STATE_1324_SWEDISH #
+	}
+	text = {
+		localization_key = STATE_1324 #
+	}
+}
+defined_text = {
+	name = GetStateName_1325
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1325
+	}
+	text = {
+		trigger = { is_russian_speaking_tag = yes }
+		localization_key = STATE_1325_RUSSIAN #
+	}
+	text = {
+		trigger = { is_scandinavian_tag = yes }
+		localization_key = STATE_1325_SWEDISH #
+	}
+	text = {
+		localization_key = STATE_1325 #
+	}
+}
+defined_text = {
+	name = GetStateName_1326
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1326
+	}
+	text = {
+		trigger = { is_russian_speaking_tag = yes }
+		localization_key = STATE_1326_RUSSIAN #
+	}
+	text = {
+		localization_key = STATE_1326 #
+	}
+}
+defined_text = {
+	name = GetStateName_1327
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1327
+	}
+	text = {
+		trigger = { original_tag = SCA }
+		localization_key = STATE_1327_FINNISH
+	}
+	text = {
+		trigger = { is_finnish_tag = yes }
+		localization_key = STATE_1327_FINNISH
+	}
+	text = {
+		localization_key = STATE_1327 #
+	}
+}
+defined_text = {
+	name = GetStateName_1328
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1328
+	}
+	text = {
+		trigger = { original_tag = SCA }
+		localization_key = STATE_1328_FINNISH
+	}
+	text = {
+		trigger = { is_finnish_tag = yes }
+		localization_key = STATE_1328_FINNISH
+	}
+	text = {
+		localization_key = STATE_1328 #
+	}
+}
+
+defined_text = {
+	name = GetStateName_1329
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1329 #Suwalki
+	}
+	text = {
+		trigger = { original_tag = LIT }
+		localization_key = STATE_1329_LITHUANIAN #Suvalkai
+	}
+	text = {
+		trigger = { is_german_tag = yes }
+		localization_key = STATE_1329_GERMAN #Suwalken
+	}
+	text = {
+		trigger = { is_polish_tag = yes }
+		localization_key = STATE_1329_POLISH #Suwałki
+	}
+	text = {
+		trigger = { 
+			OR = {
+				is_russian_speaking_tag = yes 
+				original_tag = LAT
+			}
+		}
+		localization_key = STATE_1329_RUSSIAN #Suvalki
+	}
+	text = {
+		localization_key = STATE_1329 #Suwalki
+	}
+}
+
+defined_text = {
+	name = GetStateName_1330
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1330 #Cape Breton Island
+	}
+	text = {
+		trigger = { 1330 = { has_state_flag = renamed_state_mikmaq } }
+		localization_key = STATE_1330_MIKMAQ #Unamaꞌki
+	}
+	text = {
+		localization_key = STATE_1330 #Cape Breton Island
+	}
+}
+
+defined_text = {
+	name = GetStateName_1331
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_1331 #Prince Edward Island
+	}
+	text = {
+		trigger = { 1331 = { has_state_flag = renamed_state_mikmaq } }
+		localization_key = STATE_1331_MIKMAQ #Epekwitk
+	}
+	text = {
+		localization_key = STATE_1331 #Cape Breton Island
+	}
+}
+
+defined_text = {
+	name = GetStateName_1332
+	text = {
+		localization_key = STATE_1332
 	}
 }

@@ -724,7 +724,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CAN_kings_speech
 		}
-		cost = 6
+		cost = 5
 		x = 10
 		y = 1
 
@@ -883,6 +883,7 @@ focus_tree = {
 						state = 469 #Saskatchewan
 						state = 470 #Alberta
 						state = 473 #British Columbia
+						state = 1332 #Haida Gwaii
 					}
 				}
 				add_building_construction = {
@@ -1117,7 +1118,7 @@ focus_tree = {
 	focus = {
 		id = CAN_national_housing_act
 		icon = GFX_goal_CAN_National_Housing_Act
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_economic_recovery
 		}
@@ -1154,6 +1155,7 @@ focus_tree = {
 						state = 469 #Saskatchewan
 						state = 470 #Alberta
 						state = 473 #British Columbia
+						state = 1332 #Haida Gwaii
 						state = 739 #Ottawa
 						state = 832 #Montreal
 					}
@@ -1371,7 +1373,7 @@ focus_tree = {
 	focus = {
 		id = CAN_we_need_industry
 		icon = GFX_goal_CAN_We_Need_Industry
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_explore_the_north
 		}
@@ -1454,7 +1456,7 @@ focus_tree = {
 	focus = {
 		id = CAN_we_need_munitions
 		icon = GFX_goal_CAN_We_Need_Armaments
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_explore_the_north
 		}
@@ -1541,7 +1543,7 @@ focus_tree = {
 	focus = {
 		id = CAN_we_need_ships
 		icon = GFX_goal_CAN_We_Need_Ships
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_explore_the_north
 		}
@@ -1634,7 +1636,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CAN_kings_speech
 		}
-		cost = 6
+		cost = 5
 		x = 16
 		y = 1
 
@@ -2099,7 +2101,7 @@ focus_tree = {
 	focus = {
 		id = CAN_jet_propulsion
 		icon = GFX_goal_CAN_Jet_Propulsion_Initiative
-		cost = 7
+		cost = 6
 		prerequisite = {
 			focus = CAN_fighter_programme
 		}
@@ -2140,7 +2142,7 @@ focus_tree = {
 	focus = {
 		id = CAN_chalk_river_labs
 		icon = GFX_goal_CAN_Chalk_River_Labs
-		cost = 8
+		cost = 7
 		prerequisite = {
 			focus = CAN_fighter_programme
 		}
@@ -2185,7 +2187,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CAN_kings_speech
 		}
-		cost = 6
+		cost = 5
 		x = 21
 		y = 1
 
@@ -2244,7 +2246,7 @@ focus_tree = {
 	focus = {
 		id = CAN_state_of_british_fleet
 		icon = GFX_goal_CAN_State_British_Fleet
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_overhaul_navy
 		}
@@ -2556,7 +2558,7 @@ focus_tree = {
 	focus = {
 		id = CAN_upgrade_fleet
 		icon = GFX_goal_CAN_Upgrade_Fleet
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_davie_shipbuilding
 		}
@@ -2583,7 +2585,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_upgrade_fleet"
-			custom_effect_tooltip = unlock_yarrow_tt
+			if = {
+				limit = { has_dlc_aat = yes }
+				custom_effect_tooltip = tooltip_white_line
+				mio:CAN_yarrow_shipbuilders_organisation = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.1
+					add_mio_design_team_assign_cost = -0.2
+				}
+			}
+			else = {
+				custom_effect_tooltip = unlock_yarrow_tt
+			}
 			navy_experience = 50
 			swap_ideas = {
 				remove_idea = CAN_shipbuilding_plan_1
@@ -2739,7 +2753,7 @@ focus_tree = {
 	focus = {
 		id = CAN_focus_on_rcn
 		icon = GFX_goal_CAN_Focus_RCN
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_upgrade_fleet
 		}
@@ -2802,7 +2816,7 @@ focus_tree = {
 		available = {
 			has_country_flag = CAN_currie_dead
 		}
-		cost = 6
+		cost = 5
 		x = 28
 		y = 1
 
@@ -2871,7 +2885,7 @@ focus_tree = {
 	focus = {
 		id = CAN_fuller_plan
 		icon = GFX_goal_CAN_fuller_plan
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_address_army
 		}
@@ -2910,6 +2924,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_fuller_plan"
+			add_ideas = CAN_fuller_plan_idea
 			if = {
 				limit = { already_has_other_doctrine_MW = yes }
 				add_doctrine_cost_reduction = {
@@ -2924,7 +2939,7 @@ focus_tree = {
 					name = land_doc_bonus
 					cost_reduction = 0.5
 					uses = 1
-					category = cat_mobile_warfare
+					category = land_doctrine
 				}
 			}
 		}
@@ -2958,6 +2973,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_infantry_motorization"
+			swap_ideas = {
+				remove_idea = CAN_fuller_plan_idea
+				add_idea = CAN_fuller_plan_idea_2
+			}
 			add_tech_bonus = {
 				name = CAN_infantry_motorization
 				bonus = 1
@@ -2995,6 +3014,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_bring_on_valentine"
+			swap_ideas = {
+				remove_idea = CAN_fuller_plan_idea_2
+				add_idea = CAN_fuller_plan_idea_3
+			}
 			add_tech_bonus = {
 				name = CAN_bring_on_valentine
 				bonus = 1
@@ -3043,7 +3066,7 @@ focus_tree = {
 	focus = {
 		id = CAN_vanier_plan
 		icon = GFX_goal_CAN_vanier_plan
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_address_army
 		}
@@ -3096,7 +3119,7 @@ focus_tree = {
 					name = land_doc_bonus
 					cost_reduction = 0.5
 					uses = 1
-					category = cat_superior_firepower
+					category = land_doctrine
 				}
 			}
 		}
@@ -3231,7 +3254,7 @@ focus_tree = {
 	focus = {
 		id = CAN_focus_on_army
 		icon = GFX_goal_CAN_Focus_Army
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_better_guns
 			focus = CAN_motor_industry
@@ -3708,6 +3731,7 @@ focus_tree = {
 			add_ideas = CAN_preparations_for_war
 			hidden_effect = {
 				country_event = { id = canada.39 days = 30 }
+				country_event = { id = canada.455 days = 160 random_days = 45 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
@@ -3808,6 +3832,21 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = CAN_preparations_for_war
 				add_idea = CAN_invasion_plans_1
+			}
+			create_corps_commander = { # Rod Keller
+				name = "Rod Keller"
+				portrait_path = "gfx/leaders/CAN/Portrait_Canada_Rod_Keller.png"
+				traits = {
+					infantry_officer
+					brilliant_strategist
+					career_officer
+					naval_invader
+				}
+				skill = 2
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 3
 			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_ARMY_BONUS }
@@ -4492,7 +4531,7 @@ focus_tree = {
 		  }
 		}
 		bypass = {
-			OR = {
+			AND = {
 			NOT = {
 				ENG = { owns_state = 938 }
 			}
@@ -5045,6 +5084,7 @@ focus_tree = {
 		icon = GFX_goal_CAN_falklands
 		cost = 3.00
 		available = {
+			OR = {
 			ARG = {
 				AND = {
 					NOT = {
@@ -5053,6 +5093,11 @@ focus_tree = {
 					owns_state = 299
 				}
 			}
+			AND = {
+			FOP = { owns_state = 299 }
+			ARG = { exists = no }
+		    }
+		    }
 		}
 		bypass = {
 			owns_state = 299
@@ -5087,6 +5132,7 @@ focus_tree = {
 					target = 299.owner
 				}
 				add_state_core = 299
+				add_state_core = 720
 			}
 		}
 	}
@@ -5983,6 +6029,7 @@ focus_tree = {
 			NEE = {
 				has_government = paternal_autocrat
 				has_completed_focus = NEE_kings_new_england
+				exists = yes
 			}
 		}
 
@@ -6177,7 +6224,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_oregon_territory
-		icon = GFX_goal_goal_CAN_oregon
+		icon = GFX_goal_CAN_oregon
 		cost = 5
 		prerequisite = {
 			focus = CAN_americans_at_war
@@ -6218,7 +6265,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_province_maine
-		icon = GFX_goal_goal_CAN_maine
+		icon = GFX_goal_CAN_maine
 		cost = 5
 		prerequisite = {
 			focus = CAN_americans_at_war
@@ -6559,7 +6606,7 @@ focus_tree = {
 		icon = GFX_goal_CAN_Elections
 		x = -6
 		y = 1
-		cost = 6
+		cost = 3
 		prerequisite = {
 			focus = CAN_kings_speech
 		}
@@ -6650,6 +6697,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_liberals_elected
@@ -6683,6 +6735,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_liberals_elected
@@ -6765,6 +6822,11 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = CAN_lib_ccf_coalition
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_rural_subsidies
@@ -6809,6 +6871,11 @@ focus_tree = {
 			NOT = {
 				has_country_flag = CAN_lib_ccf_coalition
 			}
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_rural_subsidies
@@ -6850,6 +6917,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_curb_senate
@@ -6884,6 +6956,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_ccf_coalition
@@ -6944,6 +7021,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_liberals_alone
@@ -6994,6 +7076,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_kings_new_deal
@@ -7022,6 +7109,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_kings_new_deal
@@ -7050,6 +7142,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_progressive_social_policy
@@ -7102,6 +7199,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_workers_rights
@@ -7123,6 +7225,11 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_entente_trade
@@ -7165,11 +7272,16 @@ focus_tree = {
 		relative_position_id = CAN_liberals_elected
 		x = 0
 		y = 6
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+			}
 		}
 		prerequisite = {
 			focus = CAN_universal_healthcare
@@ -7257,6 +7369,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_tories_elected
@@ -7282,6 +7401,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_empower_senate
@@ -7337,6 +7463,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_enshrine_private_property
@@ -7406,6 +7539,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_empower_senate
@@ -7434,6 +7574,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_exiles_first
@@ -7456,6 +7603,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_enshrine_private_property
@@ -7487,9 +7641,26 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = CAN_conservative_economic_interventionism
-			custom_trigger_tooltip = {
-				tooltip = CAN_bennett_is_PM
-				has_idea = CAN_RB_Bennett_hog_sco
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = CAN_bennett_is_PM
+					has_idea = CAN_RB_Bennett_hog_sco
+				}
+				custom_trigger_tooltip = {
+					tooltip = CAN_meighen_is_PM
+					has_idea = CAN_Arthur_Meighen_hog_sco
+				}
+				custom_trigger_tooltip = {
+					tooltip = CAN_manion_is_PM
+					has_idea = CAN_Robert_Manion_hog_sco
+				}
+			}
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
 			}
 		}
 		mutually_exclusive = {
@@ -7529,6 +7700,13 @@ focus_tree = {
 					has_idea = CAN_Henry_Herbert_Stevens_eco_sco
 				}
 			}
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		mutually_exclusive = {
 			focus = CAN_bennett_new_deal
@@ -7556,6 +7734,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_protect_enterprise
@@ -7653,6 +7838,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_church_of_canada
@@ -7675,11 +7867,18 @@ focus_tree = {
 		relative_position_id = CAN_tories_elected
 		x = 0
 		y = 6
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_support_industrialists
@@ -7722,7 +7921,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_constitutional_monarchy
-		icon = GFX_goal_goal_CAN_constitutional_monarchy
+		icon = GFX_goal_CAN_constitutional_monarchy
 		relative_position_id = CAN_strong_and_free
 		x = 0
 		y = 2
@@ -7731,6 +7930,16 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		bypass = {
 			has_country_flag = CAN_is_republic
@@ -7759,7 +7968,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_empower_parliment
-		icon = GFX_goal_goal_CAN_protect_parliment
+		icon = GFX_goal_CAN_protect_parliment
 		relative_position_id = CAN_strong_and_free
 		x = 0
 		y = 3
@@ -7768,6 +7977,16 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_constitutional_monarchy
@@ -7782,7 +8001,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_dealing_with_nationalists
-		icon = GFX_goal_goal_CAN_dealing_with_nationalists
+		icon = GFX_goal_CAN_dealing_with_nationalists
 		relative_position_id = CAN_strong_and_free
 		x = 0
 		y = 5
@@ -7791,6 +8010,16 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			OR = {	
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_empower_parliment
@@ -7803,7 +8032,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_defense_of_canada_regulations
-		icon = GFX_goal_goal_CAN_defense_of_canada_regulations
+		icon = GFX_goal_CAN_defense_of_canada_regulations
 		relative_position_id = CAN_strong_and_free
 		x = 0
 		y = 7
@@ -7813,6 +8042,16 @@ focus_tree = {
 		}
 		available = {
 			has_war = yes
+			OR = {	
+				has_government = market_liberal
+				has_government = social_liberal
+				has_government = social_democrat
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+			}
+			hidden_trigger = {
+				CAN_has_soccred_government = no
+			}
 		}
 		prerequisite = {
 			focus = CAN_dealing_with_nationalists
@@ -7863,7 +8102,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_kingly_prerogative
-		icon = GFX_goal_goal_CAN_royal_perogative
+		icon = GFX_goal_CAN_royal_perogative
 		x = -24
 		y = 1
 		cost = 3
@@ -7901,7 +8140,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_new_empire
-		icon = GFX_goal_goal_CAN_royalist
+		icon = GFX_goal_CAN_royalist
 		x = -7
 		y = 1
 		relative_position_id = CAN_kingly_prerogative
@@ -7960,6 +8199,10 @@ focus_tree = {
 				add_ideas = CAN_King_Albert_I_hog_pau
 			}
 			if = {
+				limit = { has_global_flag = CAN_queen_elizabeth_II }
+				add_ideas = CAN_Queen_Elizabeth_II_hog_pau
+			}
+			if = {
 				limit = { has_global_flag = CAN_king_henry_IX }
 				add_ideas = CAN_King_Henry_IX_hog_pau
 			}
@@ -7985,12 +8228,13 @@ focus_tree = {
 	
 	focus = {# Purge Disloyal Opposition
 		id = CAN_purge_opposition
-		icon = GFX_goal_goal_CAN_disloyal_opposition
+		icon = GFX_goal_CAN_disloyal_opposition
 		cost = 5.00
 		prerequisite = {
 			focus = CAN_disband_house_of_commons
 		}
 		available = {
+			has_government = paternal_autocrat
 			NOT = { is_subject = yes }
 		}
 		relative_position_id = CAN_new_empire
@@ -8024,16 +8268,18 @@ focus_tree = {
 				popularity = -0.10
 			}
 			CAN_improve_exile_influence_small_bop = yes
+			add_stability = 0.05
 		}
 	}
 	focus = {# Military Youth
 		id = CAN_military_youth
-		icon = GFX_goal_goal_CAN_cadet_corps
+		icon = GFX_goal_CAN_cadet_corps
 		cost = 5.00
 		prerequisite = {
 			focus = CAN_disband_house_of_commons
 		}
 		available = {
+			has_government = paternal_autocrat
 			NOT = { is_subject = yes }
 		}
 		relative_position_id = CAN_new_empire
@@ -8073,6 +8319,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_military_youth
@@ -8117,6 +8365,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_military_youth
@@ -8145,6 +8395,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_military_youth
@@ -8167,6 +8419,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_titles_nobility
@@ -8204,6 +8458,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_collab_with_socreds
@@ -8232,6 +8488,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_royal_new_deal
@@ -8291,6 +8549,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			swap_ideas = {
+				remove_idea = CAN_state_capitalism
+				add_idea = CAN_state_capitalism_2
+			}
 		}
 	}
 	
@@ -8305,6 +8567,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_imperial_industry
@@ -8456,7 +8720,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_empower_mounties
@@ -8502,6 +8767,8 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_imperial_industry
@@ -8526,11 +8793,13 @@ focus_tree = {
 		relative_position_id = CAN_disband_house_of_commons
 		x = 0
 		y = 6
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = paternal_autocrat
+			NOT = { is_subject = yes }
 		}
 		prerequisite = {
 			focus = CAN_prepare_for_homecoming
@@ -8545,7 +8814,7 @@ focus_tree = {
 				ideology = paternal_autocrat
 				popularity = 0.1
 			}
-			add_stability = 0.07
+			add_stability = 0.1
 			add_country_leader_trait = CAN_king_emperor
 			if = {
 				limit = {
@@ -8563,11 +8832,11 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_soccred_victory
-		icon = GFX_goal_goal_CAN_soccreds
+		icon = GFX_goal_CAN_soccreds
 		x = 0
 		y = 1
 		relative_position_id = CAN_kingly_prerogative
-		cost = 3
+		cost = 2
 		ai_will_do = {
 			factor = 100
 		}
@@ -8592,7 +8861,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_prime_minister_manning
-		icon = GFX_goal_goal_CAN_manning
+		icon = GFX_goal_CAN_manning
 		relative_position_id = CAN_soccred_victory
 		x = -3
 		y = 1
@@ -8623,15 +8892,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_social_dividens
-		icon = GFX_goal_goal_CAN_dividens
+		icon = GFX_goal_CAN_dividens
 		relative_position_id = CAN_soccred_victory
 		x = -4
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_prime_minister_manning
@@ -8663,15 +8938,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_reconsider_social_credit
-		icon = GFX_goal_goal_CAN_reconsider_social_credit
+		icon = GFX_goal_CAN_reconsider_social_credit
 		relative_position_id = CAN_soccred_victory
 		x = -2
 		y = 3
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_social_dividens
@@ -8701,15 +8982,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_new_social_conservatism
-		icon = GFX_goal_goal_CAN_soccred_conservatism
+		icon = GFX_goal_CAN_soccred_conservatism
 		relative_position_id = CAN_soccred_victory
 		x = -1
 		y = 4
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_social_dividens
@@ -8736,15 +9023,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_cautious_social_reform
-		icon = GFX_goal_goal_CAN_reformism
+		icon = GFX_goal_CAN_reformism
 		relative_position_id = CAN_soccred_victory
 		x = -3
 		y = 4
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_social_dividens
@@ -8797,15 +9090,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_humanitarian_concerns
-		icon = GFX_goal_goal_CAN_humanitarianism
+		icon = GFX_goal_CAN_humanitarianism
 		relative_position_id = CAN_soccred_victory
 		x = -2
 		y = 5
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_cautious_social_reform
@@ -8826,7 +9125,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_prime_minister_aberhart
-		icon = GFX_goal_goal_CAN_aberhart
+		icon = GFX_goal_CAN_aberhart
 		relative_position_id = CAN_soccred_victory
 		x = 3
 		y = 1
@@ -8857,15 +9156,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_bible_bill
-		icon = GFX_goal_goal_CAN_bible_bill
+		icon = GFX_goal_CAN_bible_bill
 		relative_position_id = CAN_soccred_victory
 		x = 4
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_prime_minister_aberhart
@@ -8890,15 +9195,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_abolish_state_credit
-		icon = GFX_goal_goal_CAN_abolish_state_credit
+		icon = GFX_goal_CAN_abolish_state_credit
 		relative_position_id = CAN_soccred_victory
 		x = 2
 		y = 3
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_bible_bill
@@ -8940,15 +9251,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_tax_nonconformists
-		icon = GFX_goal_goal_CAN_citizenship
+		icon = GFX_goal_CAN_citizenship
 		relative_position_id = CAN_soccred_victory
 		x = 1
 		y = 4
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_bible_bill
@@ -8973,15 +9290,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_registration_covenant
-		icon = GFX_goal_goal_CAN_sweep_away_opposition
+		icon = GFX_goal_CAN_sweep_away_opposition
 		relative_position_id = CAN_soccred_victory
 		x = 3
 		y = 4
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_bible_bill
@@ -9008,15 +9331,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_spreading_our_theories
-		icon = GFX_goal_goal_CAN_spreading_social_credit
+		icon = GFX_goal_CAN_spreading_social_credit
 		relative_position_id = CAN_soccred_victory
 		x = 2
 		y = 5
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_registration_covenant
@@ -9064,15 +9393,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_albertan_model
-		icon = GFX_goal_goal_CAN_albertan_model
+		icon = GFX_goal_CAN_albertan_model
 		relative_position_id = CAN_soccred_victory
 		x = 0
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_prime_minister_aberhart
@@ -9091,15 +9426,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_implementing_social_credit
-		icon = GFX_goal_goal_CAN_implement_social_credit
+		icon = GFX_goal_CAN_implement_social_credit
 		relative_position_id = CAN_soccred_victory
 		x = -2
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_prime_minister_aberhart
@@ -9113,15 +9454,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_control_the_press
-		icon = GFX_goal_goal_CAN_regulate_newspapers
+		icon = GFX_goal_CAN_regulate_newspapers
 		relative_position_id = CAN_soccred_victory
 		x = 2
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_prime_minister_aberhart
@@ -9155,21 +9502,24 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_british_soccred_ties
-		icon = GFX_goal_goal_CAN_greenshirts
+		icon = GFX_goal_CAN_greenshirts
 		relative_position_id = CAN_soccred_victory
 		x = 0
 		y = 3
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_albertan_model
-		}
-		prerequisite = {
-			focus = CAN_implementing_social_credit
 		}
 		prerequisite = {
 			focus = CAN_implementing_social_credit
@@ -9209,15 +9559,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_soccred_police
-		icon = GFX_goal_goal_CAN_soccred_police
+		icon = GFX_goal_CAN_soccred_police
 		relative_position_id = CAN_soccred_victory
 		x = 0
 		y = 5
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_british_soccred_ties
@@ -9233,15 +9589,21 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_social_credit_realized
-		icon = GFX_goal_goal_CAN_douglas_dream_realized
+		icon = GFX_goal_CAN_douglas_dream_realized
 		relative_position_id = CAN_soccred_victory
 		x = 0
 		y = 6
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_leader_ideology = authdem_social_credit_subtype
+					has_country_leader_ideology = social_credit_subtype
+				}
+			}
 		}
 		prerequisite = {
 			focus = CAN_soccred_police
@@ -9269,6 +9631,7 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
+						has_country_flag = CAN_kibbo_kift
 						NOT = {
 							has_country_flag = CAN_Hargrave_GB_PM
 						}
@@ -9286,7 +9649,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_ultranat_govt
-		icon = GFX_goal_goal_CAN_ultranationalists
+		icon = GFX_goal_CAN_ultranationalists
 		x = 8
 		y = 1
 		relative_position_id = CAN_kingly_prerogative
@@ -9313,15 +9676,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_empower_fuller
-		icon = GFX_goal_goal_CAN_empower_fuller
+		icon = GFX_goal_CAN_empower_fuller
 		relative_position_id = CAN_ultranat_govt
 		x = -1
 		y = 1
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_ultranat_govt
@@ -9359,15 +9723,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_the_king_commands
-		icon = GFX_goal_goal_CAN_king_commands
+		icon = GFX_goal_CAN_king_commands
 		relative_position_id = CAN_ultranat_govt
 		x = 1
 		y = 1
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_ultranat_govt
@@ -9422,15 +9787,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_allies_in_the_mistery
-		icon = GFX_goal_goal_CAN_men_in_the_mistery
+		icon = GFX_goal_CAN_men_in_the_mistery
 		relative_position_id = CAN_ultranat_govt
 		x = 0
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_empower_fuller
@@ -9463,15 +9829,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_imperial_revanchism
-		icon = GFX_goal_goal_CAN_revanchism
+		icon = GFX_goal_CAN_revanchism
 		relative_position_id = CAN_ultranat_govt
 		x = -3
 		y = 1
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_ultranat_govt
@@ -9493,15 +9860,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_aristocratic_connections
-		icon = GFX_goal_goal_CAN_aristocratic_connections
+		icon = GFX_goal_CAN_aristocratic_connections
 		relative_position_id = CAN_ultranat_govt
 		x = -2
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_imperial_revanchism
@@ -9518,15 +9886,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_two_nations_pact
-		icon = GFX_goal_goal_CAN_arcand
+		icon = GFX_goal_CAN_arcand
 		relative_position_id = CAN_ultranat_govt
 		x = 3
 		y = 1
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_ultranat_govt
@@ -9543,15 +9912,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_curtail_quebec_seperatism
-		icon = GFX_goal_goal_CAN_curtail_quebec
+		icon = GFX_goal_CAN_curtail_quebec
 		relative_position_id = CAN_ultranat_govt
 		x = 2
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_two_nations_pact
@@ -9578,16 +9948,17 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_friends_in_the_south
-		icon = GFX_goal_goal_CAN_car_question
+		icon = GFX_goal_CAN_car_question
 		relative_position_id = CAN_ultranat_govt
 		x = 0
 		y = 3
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
 			country_exists = COR
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_curtail_quebec_seperatism
@@ -9606,19 +9977,20 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_anti_americanism
-		icon = GFX_goal_goal_CAN_anti_americanism
+		icon = GFX_goal_CAN_anti_americanism
 		relative_position_id = CAN_ultranat_govt
 		x = -1
 		y = 4
 		mutually_exclusive = {
 			focus = CAN_use_canadian_KKK
 		}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
 			has_country_flag = CAN_anti_american_flag
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_friends_in_the_south
@@ -9631,19 +10003,20 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_use_canadian_KKK
-		icon = GFX_goal_goal_CAN_canadian_KKK
+		icon = GFX_goal_CAN_canadian_KKK
 		relative_position_id = CAN_ultranat_govt
 		x = 1
 		y = 4
 		mutually_exclusive = {
 			focus = CAN_anti_americanism
 		}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
 			has_country_flag = CAN_supports_COR
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_friends_in_the_south
@@ -9656,15 +10029,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_aristocratic_revivalism
-		icon = GFX_goal_goal_CAN_aristocratic_revival
+		icon = GFX_goal_CAN_aristocratic_revival
 		relative_position_id = CAN_ultranat_govt
 		x = -2
 		y = 3
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_curtail_quebec_seperatism
@@ -9692,15 +10066,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_united_empire_leauge
-		icon = GFX_goal_goal_CAN_united_empire_leauge
+		icon = GFX_goal_CAN_united_empire_leauge
 		relative_position_id = CAN_ultranat_govt
 		x = -3
 		y = 4
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_aristocratic_revivalism
@@ -9718,15 +10093,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_ultranationalist_monarchism
-		icon = GFX_goal_goal_CAN_ultraroyalist
+		icon = GFX_goal_CAN_ultraroyalist
 		relative_position_id = CAN_ultranat_govt
 		x = -2
 		y = 5
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_united_empire_leauge
@@ -9754,15 +10130,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_nationalist_coalition
-		icon = GFX_goal_goal_CAN_broad_coalition
+		icon = GFX_goal_CAN_broad_coalition
 		relative_position_id = CAN_ultranat_govt
 		x = 0
 		y = 5
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_united_empire_leauge
@@ -9795,15 +10172,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_militaristic_awakening
-		icon = GFX_goal_goal_CAN_militarism
+		icon = GFX_goal_CAN_militarism
 		relative_position_id = CAN_ultranat_govt
 		x = 2
 		y = 3
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_curtail_quebec_seperatism
@@ -9850,15 +10228,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_RCMP_secret_police
-		icon = GFX_goal_goal_CAN_new_RCMP
+		icon = GFX_goal_CAN_new_RCMP
 		relative_position_id = CAN_ultranat_govt
 		x = 3
 		y = 4
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_militaristic_awakening
@@ -9872,15 +10251,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_new_mysticism
-		icon = GFX_goal_goal_CAN_mystic
+		icon = GFX_goal_CAN_mystic
 		relative_position_id = CAN_ultranat_govt
 		x = 2
 		y = 5
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_RCMP_secret_police
@@ -9894,15 +10274,16 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_god_save_the_king_god_protect_the_empire
-		icon = GFX_goal_goal_CAN_god_king_empire
+		icon = GFX_goal_CAN_god_king_empire
 		relative_position_id = CAN_ultranat_govt
 		x = 0
 		y = 6
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		available = {
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = CAN_new_mysticism
@@ -10003,7 +10384,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_from_london_to_ottawa
-		icon = GFX_goal_goal_CAN_london_to_ottawa
+		icon = GFX_goal_CAN_london_to_ottawa
 		cost = 6
 		prerequisite = {
 			focus = CAN_return_of_the_king
@@ -10055,8 +10436,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_trial_of_syndicalists
-		icon = GFX_goal_goal_CAN_try_syndicalists
-		cost = 6
+		icon = GFX_goal_CAN_try_syndicalists
+		cost = 5
 		prerequisite = {
 			focus = CAN_from_london_to_ottawa
 		}
@@ -10083,8 +10464,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_cleanse_syndicalist_parasites
-		icon = GFX_goal_goal_CAN_cleanse_red_parasites
-		cost = 6
+		icon = GFX_goal_CAN_cleanse_red_parasites
+		cost = 5
 		prerequisite = {
 			focus = CAN_trial_of_syndicalists
 		}
@@ -10126,13 +10507,14 @@ focus_tree = {
 				ideology = totalist
 				popularity = -0.05
 			}
+			add_political_power = 100
 		}
 	}
 	
 	focus = {
 		id = CAN_failed_liberalism
-		icon = GFX_goal_goal_CAN_king_guide
-		cost = 6
+		icon = GFX_goal_CAN_king_guide
+		cost = 5
 		prerequisite = {
 			focus = CAN_from_london_to_ottawa
 		}
@@ -10179,8 +10561,8 @@ focus_tree = {
 
 	focus = {
 		id = CAN_abolish_parliment
-		icon = GFX_goal_goal_CAN_abolish_parlaiment
-		cost = 6
+		icon = GFX_goal_CAN_abolish_parlaiment
+		cost = 5
 		prerequisite = {
 			focus = CAN_failed_liberalism
 		}
@@ -10226,13 +10608,14 @@ focus_tree = {
 				popularity = -0.05
 			}
 			add_ideas = CAN_abolished_parliment_idea
+			add_political_power = 100
 		}
 	}
 	
 	focus = {
 		id = CAN_the_returning_aristocracy
-		icon = GFX_goal_goal_CAN_returning_aristocracy
-		cost = 6
+		icon = GFX_goal_CAN_returning_aristocracy
+		cost = 5
 		prerequisite = {
 			focus = CAN_from_london_to_ottawa
 		}
@@ -10254,13 +10637,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_the_returning_aristocracy"
 			country_event = uk.31
+			add_political_power = 50
 		}
 	}
 	
 	focus = {
 		id = CAN_a_united_empire
-		icon = GFX_goal_goal_CAN_imperial_integration
-		cost = 6
+		icon = GFX_goal_CAN_imperial_integration
+		cost = 5
 		prerequisite = {
 			focus = CAN_the_returning_aristocracy
 		}
@@ -10284,12 +10668,13 @@ focus_tree = {
 			add_stability = 0.06
 			add_war_support = 0.06
 			remove_ideas = CAN_canadian_resistance2
+			add_political_power = 100
 		}
 	}
 	
 	focus = {
 		id = CAN_britannia_rules_again
-		icon = GFX_goal_goal_CAN_britannia_rules_again
+		icon = GFX_goal_CAN_britannia_rules_again
 		cost = 6
 		prerequisite = {
 			focus = CAN_a_united_empire
@@ -10320,15 +10705,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_britannia_rules_again"
-			add_political_power = 100
+			add_political_power = 200
 			remove_ideas = GBR_military_chaos_1
 		}
 	}
 	
 	focus = {
 		id = CAN_anglosphere_connections
-		icon = GFX_goal_goal_CAN_our_anglosphere_brethren
-		cost = 6
+		icon = GFX_goal_CAN_our_anglosphere_brethren
+		cost = 5
 		prerequisite = {
 			focus = CAN_britannia_rules_again
 		}
@@ -10402,8 +10787,8 @@ focus_tree = {
 	}
 	focus = {
 		id = CAN_irish_fate
-		icon = GFX_goal_goal_CAN_fate_of_ireland
-		cost = 6
+		icon = GFX_goal_CAN_fate_of_ireland
+		cost = 5
 		prerequisite = {
 			focus = CAN_anglosphere_connections
 		}
@@ -10434,8 +10819,8 @@ focus_tree = {
 
 	focus = {
 		id = CAN_securing_the_jewel
-		icon = GFX_goal_goal_CAN_securing_our_jewel
-		cost = 6
+		icon = GFX_goal_CAN_securing_our_jewel
+		cost = 5
 		prerequisite = {
 			focus = CAN_britannia_rules_again
 		}
@@ -10489,8 +10874,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_secure_british_africa
-		icon = GFX_goal_goal_CAN_safeguard_british_africa
-		cost = 6
+		icon = GFX_goal_CAN_safeguard_british_africa
+		cost = 5
 		prerequisite = {
 			focus = CAN_securing_the_jewel
 		}
@@ -10667,8 +11052,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_our_foremost_enemy
-		icon = GFX_goal_goal_CAN_our_oldest_foe
-		cost = 6
+		icon = GFX_goal_CAN_our_oldest_foe
+		cost = 5
 		prerequisite = {
 			focus = CAN_britannia_rules_again
 		}
@@ -10698,8 +11083,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_liberate_eastern_europe
-		icon = GFX_goal_goal_CAN_liberate_eastern_europe
-		cost = 6
+		icon = GFX_goal_CAN_liberate_eastern_europe
+		cost = 5
 		prerequisite = {
 			focus = CAN_our_foremost_enemy
 		}
@@ -10729,8 +11114,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_the_last_central_power
-		icon = GFX_goal_goal_CAN_final_central_power
-		cost = 6
+		icon = GFX_goal_CAN_final_central_power
+		cost = 5
 		prerequisite = {
 			focus = CAN_liberate_eastern_europe
 		}
@@ -10760,8 +11145,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_decapitate_the_american_eagle
-		icon = GFX_goal_goal_CAN_decapitate_american_eagle
-		cost = 6
+		icon = GFX_goal_CAN_decapitate_american_eagle
+		cost = 5
 		prerequisite = {
 			focus = CAN_britannia_rules_again
 		}
@@ -10771,7 +11156,20 @@ focus_tree = {
 		y = 1
 
 		available = {
-			
+		}
+		
+		bypass = {
+		NOT = {
+		country_exists = USA
+		country_exists = CAL
+		country_exists = COR
+		country_exists = TEX
+		country_exists = CSA
+		country_exists = WCC
+		country_exists = TXS
+		country_exists = NYC
+		country_exists = NEE
+			}
 		}
 
 		ai_will_do = {
@@ -10832,8 +11230,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_pacifying_the_americans
-		icon = GFX_goal_goal_CAN_pacifying_yankees
-		cost = 15
+		icon = GFX_goal_CAN_pacifying_yankees
+		cost = 10
 		prerequisite = {
 			focus = CAN_decapitate_the_american_eagle
 		}
@@ -10859,12 +11257,13 @@ focus_tree = {
 				add_idea = CAN_american_resistance_idea2
 			}
 			add_stability = 0.10
+			add_political_power = 300
 		}
 	}
 	
 	focus = {
 		id = CAN_the_failed_experiment
-		icon = GFX_goal_goal_CAN_failed_experiment
+		icon = GFX_goal_CAN_failed_experiment
 		cost = 15
 		prerequisite = {
 			focus = CAN_pacifying_the_americans
@@ -10895,7 +11294,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_towards_imperial_federation
-		icon = GFX_goal_goal_CAN_towards_imperial_federation
+		icon = GFX_goal_CAN_towards_imperial_federation
 		cost = 6
 		prerequisite = {
 			focus = CAN_britannia_rules_again
@@ -10944,8 +11343,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_threat_of_the_rising_sun
-		icon = GFX_goal_goal_CAN_rising_sun_burns_our_empire
-		cost = 6
+		icon = GFX_goal_CAN_rising_sun_burns_our_empire
+		cost = 5
 		prerequisite = {
 			focus = CAN_the_failed_experiment
 			focus = CAN_the_last_central_power
@@ -10978,8 +11377,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_remember_the_old_alliance
-		icon = GFX_goal_goal_CAN_remembering_old_alliances
-		cost = 6
+		icon = GFX_goal_CAN_remembering_old_alliances
+		cost = 5
 		prerequisite = {
 			focus = CAN_threat_of_the_rising_sun
 		}
@@ -11017,8 +11416,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_rising_sun_never_sets
-		icon = GFX_goal_goal_CAN_rising_sun_never_sets
-		cost = 6
+		icon = GFX_goal_CAN_rising_sun_never_sets
+		cost = 5
 		prerequisite = {
 			focus = CAN_remember_the_old_alliance
 		}
@@ -11049,8 +11448,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_the_lion_eats_the_sun
-		icon = GFX_goal_goal_CAN_tear_down_rising_sun
-		cost = 6
+		icon = GFX_goal_CAN_tear_down_rising_sun
+		cost = 5
 		prerequisite = {
 			focus = CAN_threat_of_the_rising_sun
 		}
@@ -11089,8 +11488,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_chinese_dominance_restored
-		icon = GFX_goal_goal_CAN_chinese_sphere_of_influence
-		cost = 6
+		icon = GFX_goal_CAN_chinese_sphere_of_influence
+		cost = 5
 		prerequisite = {
 			focus = CAN_the_lion_eats_the_sun
 		}
@@ -11141,7 +11540,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_canadian_century
-		icon = GFX_goal_goal_CAN_canadian_century
+		icon = GFX_goal_CAN_canadian_century
 		cost = 6
 		prerequisite = {
 			focus = CAN_return_of_the_king
@@ -11187,7 +11586,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_accept_GB_leadership
-		icon = GFX_goal_goal_CAN_return_to_british_leadership
+		icon = GFX_goal_CAN_return_to_british_leadership
 		cost = 6
 		prerequisite = {
 			focus = CAN_canadian_century
@@ -11230,8 +11629,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_loyalty_to_the_empire
-		icon = GFX_goal_goal_CAN_loyalty_to_empire
-		cost = 6
+		icon = GFX_goal_CAN_loyalty_to_empire
+		cost = 5
 		prerequisite = {
 			focus = CAN_accept_GB_leadership
 		}
@@ -11269,8 +11668,8 @@ focus_tree = {
 
 	focus = {
 		id = CAN_british_investments
-		icon = GFX_goal_goal_CAN_british_investments
-		cost = 6
+		icon = GFX_goal_CAN_british_investments
+		cost = 5
 		prerequisite = {
 			focus = CAN_loyalty_to_the_empire
 		}
@@ -11302,8 +11701,8 @@ focus_tree = {
 
 	focus = {
 		id = CAN_god_save_canada
-		icon = GFX_goal_goal_CAN_god_save_canada
-		cost = 6
+		icon = GFX_goal_CAN_god_save_canada
+		cost = 5
 		prerequisite = {
 			focus = CAN_british_investments
 		}
@@ -11412,6 +11811,7 @@ focus_tree = {
 				}
 			}
 			CAN_remove_from_iedc = yes
+			remove_from_tech_sharing_group = entente_research
 			hidden_effect = {
 				news_event = canada.323
 			}
@@ -11441,7 +11841,7 @@ focus_tree = {
 	focus = {
 		id = CAN_our_own_alliance
 		icon = GFX_goal_CAN_Canadian_Sphere
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_canada_on_its_own
 		}
@@ -11491,7 +11891,7 @@ focus_tree = {
 	focus = {
 		id = CAN_stabilize_america
 		icon = GFX_goal_CAN_Stabilize_America
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_our_own_alliance
 		}
@@ -11597,7 +11997,7 @@ focus_tree = {
 	focus = {
 		id = CAN_new_path
 		icon = GFX_goal_CAN_Forging_New_Path
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_stabilize_america
 		}
@@ -11628,7 +12028,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_lead_the_entente
-		icon = GFX_goal_goal_CAN_lead_entente
+		icon = GFX_goal_CAN_lead_entente
 		cost = 6
 		prerequisite = {
 			focus = CAN_canadian_century
@@ -11679,7 +12079,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_path_to_eternal_peace
-		icon = GFX_goal_goal_CAN_path_to_eternal_peace
+		icon = GFX_goal_CAN_path_to_eternal_peace
 		cost = 6
 		prerequisite = {
 			focus = CAN_lead_the_entente
@@ -11711,7 +12111,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_olive_branch_to_reichpakt
-		icon = GFX_goal_goal_CAN_forget_old_hostilities
+		icon = GFX_goal_CAN_forget_old_hostilities
 		cost = 3
 		prerequisite = {
 			focus = CAN_path_to_eternal_peace
@@ -11751,8 +12151,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_negotiate_american_peace
-		icon = GFX_goal_goal_CAN_negotiate_american_peace
-		cost = 6
+		icon = GFX_goal_CAN_negotiate_american_peace
+		cost = 5
 		prerequisite = {
 			focus = CAN_path_to_eternal_peace
 		}
@@ -11787,7 +12187,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_austrian_connection
-		icon = GFX_goal_goal_CAN_burying_hatchet
+		icon = GFX_goal_CAN_burying_hatchet
 		cost = 3
 		prerequisite = {
 			focus = CAN_negotiate_american_peace
@@ -11828,7 +12228,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_meet_with_japan
-		icon = GFX_goal_goal_CAN_tokyo_conference
+		icon = GFX_goal_CAN_tokyo_conference
 		cost = 3
 		prerequisite = {
 			focus = CAN_austrian_connection
@@ -11872,7 +12272,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_eastern_europe_peace
-		icon = GFX_goal_goal_CAN_tame_russian_bear
+		icon = GFX_goal_CAN_tame_russian_bear
 		cost = 3
 		prerequisite = {
 			focus = CAN_austrian_connection
@@ -11916,8 +12316,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_form_leauge_of_nations
-		icon = GFX_goal_goal_CAN_form_league_of_nations
-		cost = 6
+		icon = GFX_goal_CAN_form_league_of_nations
+		cost = 5
 		prerequisite = {
 			focus = CAN_meet_with_japan
 			focus = CAN_eastern_europe_peace
@@ -12052,7 +12452,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_new_interventionism
-		icon = GFX_goal_goal_CAN_new_interventionism
+		icon = GFX_goal_CAN_new_interventionism
 		cost = 6
 		prerequisite = {
 			focus = CAN_lead_the_entente
@@ -12101,8 +12501,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_south_american_interests
-		icon = GFX_goal_goal_CAN_latin_american_interests
-		cost = 6
+		icon = GFX_goal_CAN_latin_american_interests
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_interventionism
 		}
@@ -12129,8 +12529,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_end_american_conflict
-		icon = GFX_goal_goal_CAN_end_american_conflict
-		cost = 6
+		icon = GFX_goal_CAN_end_american_conflict
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_interventionism
 		}
@@ -12166,8 +12566,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_intrests_in_africa
-		icon = GFX_goal_goal_CAN_intervene_in_africa
-		cost = 6
+		icon = GFX_goal_CAN_intervene_in_africa
+		cost = 5
 		prerequisite = {
 			focus = CAN_end_american_conflict
 			focus = CAN_south_american_interests
@@ -12225,8 +12625,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_stop_japanese_imperialism
-		icon = GFX_goal_goal_CAN_stop_japanese_imperialism
-		cost = 6
+		icon = GFX_goal_CAN_stop_japanese_imperialism
+		cost = 5
 		prerequisite = {
 			focus = CAN_intrests_in_africa
 		}
@@ -12260,8 +12660,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_end_german_hegemony
-		icon = GFX_goal_goal_CAN_remembering_bad_blood
-		cost = 6
+		icon = GFX_goal_CAN_remembering_bad_blood
+		cost = 5
 		prerequisite = {
 			focus = CAN_intrests_in_africa
 		}
@@ -12297,8 +12697,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_invade_russia
-		icon = GFX_goal_goal_CAN_pacify_russia
-		cost = 6
+		icon = GFX_goal_CAN_pacify_russia
+		cost = 5
 		prerequisite = {
 			focus = CAN_stop_japanese_imperialism
 			focus = CAN_end_german_hegemony
@@ -12333,7 +12733,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_world_safe_for_democracy
-		icon = GFX_goal_goal_CAN_world_safe_for_democracy
+		icon = GFX_goal_CAN_world_safe_for_democracy
 		cost = 6
 		prerequisite = {
 			focus = CAN_invade_russia
@@ -12416,8 +12816,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_post_war_liberals
-		icon = GFX_goal_goal_CAN_liberals
-		cost = 6
+		icon = GFX_goal_CAN_liberals
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_election
 		}
@@ -12456,8 +12856,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_new_social_programs
-		icon = GFX_goal_goal_CAN_united_canada
-		cost = 6
+		icon = GFX_goal_CAN_united_canada
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_liberals
 		}
@@ -12493,8 +12893,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_empower_courts
-		icon = GFX_goal_goal_CAN_supreme_court
-		cost = 6
+		icon = GFX_goal_CAN_supreme_court
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_social_programs
 		}
@@ -12536,8 +12936,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_post_war_conservative
-		icon = GFX_goal_goal_CAN_progressive_conservatives
-		cost = 6
+		icon = GFX_goal_CAN_progressive_conservatives
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_election
 		}
@@ -12569,8 +12969,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_our_anglo_roots
-		icon = GFX_goal_goal_CAN_our_british_roots
-		cost = 6
+		icon = GFX_goal_CAN_our_british_roots
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_conservative
 		}
@@ -12603,8 +13003,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_encourage_exiles_to_stay
-		icon = GFX_goal_goal_CAN_exile_repatriating_program
-		cost = 6
+		icon = GFX_goal_CAN_exile_repatriating_program
+		cost = 5
 		prerequisite = {
 			focus = CAN_our_anglo_roots
 		}
@@ -12635,8 +13035,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_post_war_soccred
-		icon = GFX_goal_goal_CAN_democratic_soccreds
-		cost = 6
+		icon = GFX_goal_CAN_democratic_soccreds
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_election
 		}
@@ -12671,8 +13071,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_remedy_crediste_split
-		icon = GFX_goal_goal_CAN_integrate_creditiste
-		cost = 6
+		icon = GFX_goal_CAN_integrate_creditiste
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_soccred
 		}
@@ -12708,8 +13108,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_conservative_welfare_state
-		icon = GFX_goal_goal_CAN_right_welfare_state
-		cost = 6
+		icon = GFX_goal_CAN_right_welfare_state
+		cost = 5
 		prerequisite = {
 			focus = CAN_remedy_crediste_split
 		}
@@ -12742,8 +13142,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_post_war_ccf
-		icon = GFX_goal_goal_CAN_ccf
-		cost = 6
+		icon = GFX_goal_CAN_ccf
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_election
 		}
@@ -12775,8 +13175,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_shift_to_democratic_socialism
-		icon = GFX_goal_goal_CAN_towards_demsoc
-		cost = 6
+		icon = GFX_goal_CAN_towards_demsoc
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_ccf
 		}
@@ -12817,8 +13217,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_guided_socialist_economy
-		icon = GFX_goal_goal_CAN_agrarian_heritage
-		cost = 6
+		icon = GFX_goal_CAN_agrarian_heritage
+		cost = 5
 		prerequisite = {
 			focus = CAN_shift_to_democratic_socialism
 		}
@@ -12855,12 +13255,13 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_new_public_services
-		icon = GFX_goal_goal_CAN_new_public_services
-		cost = 6
+		icon = GFX_goal_CAN_new_public_services
+		cost = 5
 		prerequisite = {
-			focus = CAN_guided_socialist_economy
+			focus = CAN_encourage_exiles_to_stay
 			focus = CAN_empower_courts
 			focus = CAN_conservative_welfare_state
+			focus = CAN_guided_socialist_economy
 		}
 		relative_position_id = CAN_post_war_election
 		x = 0
@@ -12900,12 +13301,13 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_canadian_welfare_state
-		icon = GFX_goal_goal_CAN_build_canadian_welfare_state
-		cost = 6
+		icon = GFX_goal_CAN_build_canadian_welfare_state
+		cost = 5
 		prerequisite = {
-			focus = CAN_guided_socialist_economy
+			focus = CAN_encourage_exiles_to_stay
 			focus = CAN_empower_courts
 			focus = CAN_conservative_welfare_state
+			focus = CAN_guided_socialist_economy
 		}
 		
 		relative_position_id = CAN_post_war_election
@@ -12971,8 +13373,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_support_britain
-		icon = GFX_goal_goal_CAN_supporting_britain
-		cost = 6
+		icon = GFX_goal_CAN_supporting_britain
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_ccf
 			focus = CAN_post_war_liberals
@@ -13007,8 +13409,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_canadian_citizenship
-		icon = GFX_goal_goal_CAN_canadian_citizenship_act
-		cost = 6
+		icon = GFX_goal_CAN_canadian_citizenship_act
+		cost = 5
 		prerequisite = {
 			focus = CAN_encourage_exiles_to_stay
 			focus = CAN_empower_courts
@@ -13033,6 +13435,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_canadian_citizenship"
+			add_ideas = CAN_canadian_citizenship
+			add_political_power = 20
+			add_stability = 0.06
+			add_war_support = 0.12
 			every_owned_state = {
 				add_state_modifier = {
 					modifier = {
@@ -13047,16 +13453,12 @@ focus_tree = {
 					random_days = 81
 				}
 			}
-			add_ideas = CAN_canadian_citizenship
-			add_political_power = 20
-			add_stability = 0.06
-			add_war_support = 0.12
 		}
 	}
 	
 	focus = {
 		id = CAN_canadian_constitution
-		icon = GFX_goal_goal_CAN_canadian_constitution
+		icon = GFX_goal_CAN_canadian_constitution
 		cost = 6
 		prerequisite = {
 			focus = CAN_canadian_citizenship
@@ -13087,8 +13489,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_canada_for_all_canadians
-		icon = GFX_goal_goal_CAN_Canada_For_All_Canadians
-		cost = 6
+		icon = GFX_goal_CAN_Canada_For_All_Canadians
+		cost = 5
 		prerequisite = {
 			focus = CAN_canadian_constitution
 		}
@@ -13122,8 +13524,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_leader_of_the_free_world
-		icon = GFX_goal_goal_CAN_Leader_Free_World
-		cost = 6
+		icon = GFX_goal_CAN_Leader_Free_World
+		cost = 5
 		prerequisite = {
 			focus = CAN_canadian_constitution
 		}
@@ -13153,8 +13555,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_true_north
-		icon = GFX_goal_goal_CAN_True_North
-		cost = 6
+		icon = GFX_goal_CAN_True_North
+		cost = 5
 		prerequisite = {
 			focus = CAN_leader_of_the_free_world
 			focus = CAN_canada_for_all_canadians
@@ -13265,7 +13667,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_canadian_day
-		icon = GFX_goal_goal_CAN_Canada_Day
+		icon = GFX_goal_CAN_Canada_Day
 		cost = 6
 		prerequisite = {
 			focus = CAN_true_north
@@ -13298,7 +13700,7 @@ focus_tree = {
 	focus = {
 		id = CAN_post_war_military
 		icon = GFX_goal_CAN_Re_Examine_Military
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_return_of_the_king
 		}
@@ -13329,7 +13731,7 @@ focus_tree = {
 	focus = {
 		id = CAN_post_war_air_force
 		icon = GFX_goal_CAN_Reform_Air_Force
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_military
 		}
@@ -13363,8 +13765,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_create_NORAD
-		icon = GFX_goal_goal_CAN_NORAD
-		cost = 6
+		icon = GFX_goal_CAN_NORAD
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_air_force
 		}
@@ -13400,7 +13802,7 @@ focus_tree = {
 	focus = {
 		id = CAN_orendo_engines
 		icon = GFX_goal_CAN_avro_orendo
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_create_NORAD
 		}
@@ -13442,7 +13844,7 @@ focus_tree = {
 	focus = {
 		id = CAN_canadian_rockets
 		icon = GFX_goal_CAN_Canadian_Rocketry
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_orendo_engines
 		}
@@ -13478,7 +13880,7 @@ focus_tree = {
 	focus = {
 		id = CAN_post_war_army
 		icon = GFX_goal_CAN_Reform_Army
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_military
 		}
@@ -13508,7 +13910,7 @@ focus_tree = {
 	focus = {
 		id = CAN_transition_to_peacetime_military
 		icon = GFX_goal_CAN_Transition_To_Peactime_Military
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_army
 		}
@@ -13542,8 +13944,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_mcnaughtons_modern_warfare
-		icon = GFX_goal_CAN_mcnaughton_plan
-		cost = 6
+		icon = GFX_goal_CAN_mcnaughtons_modern_warfare
+		cost = 5
 		prerequisite = {
 			focus = CAN_transition_to_peacetime_military
 		}
@@ -13574,7 +13976,7 @@ focus_tree = {
 					name = land_doc_bonus
 					cost_reduction = 0.5
 					uses = 1
-					category = cat_mobile_warfare
+					category = land_doctrine
 				}
 			}
 			else = {
@@ -13582,7 +13984,7 @@ focus_tree = {
 					name = land_doc_bonus
 					cost_reduction = 0.5
 					uses = 1
-					category = cat_grand_battle_plan
+					category = land_doctrine
 				}
 			}
 			add_tech_bonus = {
@@ -13597,7 +13999,7 @@ focus_tree = {
 	focus = {
 		id = CAN_stick_to_curries_strategy
 		icon = GFX_goal_CAN_currie_plan
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_transition_to_peacetime_military
 		}
@@ -13636,7 +14038,7 @@ focus_tree = {
 					name = land_doc_bonus
 					cost_reduction = 0.5
 					uses = 1
-					category = cat_superior_firepower
+					category = land_doctrine
 				}
 			}
 			add_tech_bonus = {
@@ -13651,7 +14053,7 @@ focus_tree = {
 	focus = {
 		id = CAN_new_canadian_officers
 		icon = GFX_goal_CAN_New_Canadian_Officers
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_stick_to_curries_strategy
 			focus = CAN_mcnaughtons_modern_warfare
@@ -13684,7 +14086,7 @@ focus_tree = {
 	focus = {
 		id = CAN_post_war_navy
 		icon = GFX_goal_CAN_Reform_Navy
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_military
 		}
@@ -13719,7 +14121,7 @@ focus_tree = {
 	focus = {
 		id = CAN_our_cut_of_the_fleet
 		icon = GFX_goal_CAN_Split_British_Navy
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_post_war_navy
 		}
@@ -13798,7 +14200,7 @@ focus_tree = {
 	focus = {
 		id = CAN_merchant_marine
 		icon = GFX_goal_CAN_merchant_marine
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_our_cut_of_the_fleet
 		}
@@ -13828,7 +14230,7 @@ focus_tree = {
 	focus = {
 		id = CAN_new_navy
 		icon = GFX_goal_CAN_Modernize_Naval_Force
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_merchant_marine
 		}
@@ -13863,7 +14265,7 @@ focus_tree = {
 	focus = {
 		id = CAN_filling_the_void
 		icon = GFX_goal_CAN_Fill_Void
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_navy
 			focus = CAN_canadian_rockets
@@ -13897,8 +14299,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_lessons_of_liberation
-		icon = GFX_goal_goal_CAN_study_liberation
-		cost = 6
+		icon = GFX_goal_CAN_study_liberation
+		cost = 5
 		prerequisite = {
 			focus = CAN_filling_the_void
 		}
@@ -13933,7 +14335,7 @@ focus_tree = {
 	focus = {
 		id = CAN_allied_intelligence_sharing
 		icon = GFX_goal_CAN_Allied_Intelligence_Sharing
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_filling_the_void
 		}
@@ -14005,7 +14407,7 @@ focus_tree = {
 	focus = {
 		id = CAN_hiring_experts
 		icon = GFX_goal_CAN_Hiring_Contractors
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_filling_the_void
 		}
@@ -14085,7 +14487,7 @@ focus_tree = {
 	focus = {
 		id = CAN_new_economy
 		icon = GFX_goal_CAN_Transition_Away_From_War_Economy
-		cost = 6
+		cost = 5
 		prerequisite = {
  			focus = CAN_return_of_the_king
 		}
@@ -14121,7 +14523,7 @@ focus_tree = {
 	focus = {
 		id = CAN_aid_british_reconstruction
 		icon = GFX_goal_CAN_Aid_Britain_Reconstruction
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_economy
 		}
@@ -14130,8 +14532,8 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		available = {
-			
+		bypass = {
+			NOT = { country_exists = GBR }
 		}
 
 		ai_will_do = {
@@ -14152,8 +14554,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_mcnaughton_plan
-		icon = GFX_goal_goal_CAN_mcnaughton_plan
-		cost = 6
+		icon = GFX_goal_CAN_mcnaughton_plan
+		cost = 5
 		prerequisite = {
 			focus = CAN_aid_british_reconstruction
 		}
@@ -14189,7 +14591,7 @@ focus_tree = {
 	focus = {
 		id = CAN_return_on_our_investments
 		icon = GFX_goal_CAN_Return_On_Our_Investments
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_mcnaughton_plan
 		}
@@ -14221,7 +14623,7 @@ focus_tree = {
 	focus = {
 		id = CAN_canadian_industrial_belt
 		icon = GFX_goal_CAN_Canadian_Industrial_Belt
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_economy
 		}
@@ -14287,8 +14689,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_new_infrastructure
-		icon = GFX_goal_goal_CAN_trans_canada_highway
-		cost = 6
+		icon = GFX_goal_CAN_trans_canada_highway
+		cost = 5
 		prerequisite = {
 			focus = CAN_canadian_industrial_belt
 		}
@@ -14357,7 +14759,7 @@ focus_tree = {
 	focus = {
 		id = CAN_new_trade
 		icon = GFX_goal_CAN_Trade_Prowess
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_infrastructure
 		}
@@ -14384,8 +14786,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_reform_IEDC
-		icon = GFX_goal_goal_CAN_commonwealth_zone
-		cost = 6
+		icon = GFX_goal_CAN_commonwealth_zone
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_economy
 		}
@@ -14421,8 +14823,8 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_one_currency_for_entente
-		icon = GFX_goal_goal_CAN_one_currency_entente
-		cost = 6
+		icon = GFX_goal_CAN_one_currency_entente
+		cost = 5
 		prerequisite = {
 			focus = CAN_new_trade
 		}
@@ -14470,7 +14872,7 @@ focus_tree = {
 	focus = {
 		id = CAN_unfied_broadcasting_system
 		icon = GFX_goal_CAN_Unified_Broadcasting_System
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_one_currency_for_entente
 		}
@@ -14518,7 +14920,7 @@ focus_tree = {
 	focus = {
 		id = CAN_standardized_industry
 		icon = GFX_goal_CAN_Standardized_Industrial_Codes
-		cost = 6
+		cost = 5
 		prerequisite = {
 			focus = CAN_one_currency_for_entente
 		}

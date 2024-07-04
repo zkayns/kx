@@ -126,6 +126,22 @@ spriteTypes = {
 		name = "GFX_report_event_KIV_lumumba"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_lumumba.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_KIV_congolese_32"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_congolese_32.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_KIV_mpoyi"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_mpoyi.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_KIV_football"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_football.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_KIV_nlandu"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_nlandu.png"
+	}
 	##UMHK##
 	spriteType = {
 		name = "GFX_report_event_UMN_mwami_chief"
@@ -217,6 +233,42 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_COG_snake"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_snake.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_bobozos_pride"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_bobozos_pride.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_division_speciale"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_division_speciale.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_gecamines"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_gecamines.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_mixed_aristocracy"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_mixed_aristocracy.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_frank"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_frank.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_friendship_university"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_friendship_university.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_lecho_de_katange"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_lecho_de_katange.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_advertisement"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_advertisement.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_la_sape"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_la_sape.png"
 	}
 	
 	##Leopoldville##
@@ -329,6 +381,14 @@ spriteTypes = {
 		name = "GFX_report_event_KSV_nest"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_NM.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_KSV_massau_flag"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_massau_flag.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_KSV_rosen_flag"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_rosen_flag.png"
+	}
 	
 	##Gabon##
 	spriteType = {
@@ -394,6 +454,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_GAB_mokele_mbembe"
 		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_mokele_mbembe.png"
+	}	
+	spriteType = {
+		name = "GFX_report_event_GAB_sketchy_past_spirituality"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_sketchy_past_spirituality.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_epigenesis_allies"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_epigenesis_allies.png"
 	}	
 	
 	## Central Africa ##
@@ -732,6 +800,11 @@ spriteTypes = {
 		name = "GFX_report_event_CEA_sultanate_flag"
 		texturefile = "gfx/event_pictures/Africa/Central_Africa/report_event_CEA_sultanate_flag.png"
 	}	
+
+	spriteType = {
+		name = "GFX_report_event_CEA_vialle"
+		texturefile = "gfx/event_pictures/Africa/Central_Africa/report_event_CEA_vialle.png"
+	}
 	
 	##Mittelafrika##
 	spriteType = {
@@ -757,10 +830,29 @@ spriteTypes = {
 		name = "GFX_report_event_MAF_vorbeck"
 		texturefile = "gfx/event_pictures/Africa/Mittelafrika/report_event_MAF_vorbeck.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_MAF_hansalbert"
+		texturefile = "gfx/event_pictures/Africa/Mittelafrika/report_event_MAF_hansalbert.png"
+	}
 		
 	spriteType = {
 		name = "GFX_report_event_MAF_sabac"
 		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_sabac.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MAF_zanzibar"
+		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_zanzibar.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MAF_ritter"
+		texturefile = "gfx/event_pictures/Africa/Mittelafrika/report_event_MAF_ritter.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MAF_kolbe"
+		texturefile = "gfx/event_pictures/Africa/Mittelafrika/report_event_MAF_kolbe.png"
 	}
 		
 	###Liberia###
@@ -813,6 +905,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_KIK_maumau_4"
 		texturefile = "gfx/event_pictures/Africa/Mau_Mau/report_event_KIK_maumau_4.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_maasai"
+		texturefile = "gfx/event_pictures/Africa/Mau_Mau/report_event_maasai.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_african_diaspora"
+		texturefile = "gfx/event_pictures/Africa/Mau_Mau/report_event_african_diaspora.png"
 	}
 	
 	###Westafrika###
@@ -906,6 +1006,17 @@ spriteTypes = {
 		name = "GFX_report_event_MAG_aron"
 		texturefile = "gfx/event_pictures/Africa/Madagascar/report_event_MAG_aron.png"
 	}
+
+	spriteType = {
+		name = "GFX_report_event_MAG_abraham_schrameck"
+		texturefile = "gfx/event_pictures/Africa/Madagascar/report_event_MAG_abraham_schrameck.png"
+	}
+
+	###Uganda###
+	spriteType = {
+		name = "GFX_report_event_UGA_cohen_mutesa"
+		texturefile = "gfx/event_pictures/Africa/Uganda/report_event_UGA_cohen_mutesa.png"
+	}
 	
 	###Zambia###
 	spriteType = {
@@ -933,6 +1044,30 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_MAF_goering_castle_eventpic"
 		texturefile = "gfx/event_pictures/Africa/Goeringia/MAF_goering_castle_eventpic.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_werner"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_werner.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_schmitt"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_schmitt.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_goering_plane"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_goering_plane.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_reichsjagermeister"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_reichsjagermeister.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_olympic_stadium"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_olympic_stadium.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_reemtsma"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_reemtsma.png"
 	}
 	
 	###Kenya-Uganda###
@@ -974,6 +1109,10 @@ spriteTypes = {
 		name = "GFX_report_event_GEA_dogs"
 		texturefile = "gfx/event_pictures/Asia/German_East_Asia/report_event_GEA_dogs.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_GEA_pacific"
+		texturefile = "gfx/event_pictures/Asia/German_East_Asia/report_event_GEA_pacific.png"
+	}
 	
 	###Rhodesia###
 	spriteType = {
@@ -983,28 +1122,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_ZIM_Harris"
 		texturefile = "gfx/event_pictures/Africa/Rhodesia/report_event_ZIM_Harris.png"
-	}
-	
-	###Misc. memes###
-	spriteType = {
-		name = "GFX_report_event_HOL_foppe"
-		texturefile = "gfx/event_pictures/Europe/Netherlands/HOL_foppe.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_HOL_sinterklaas"
-		texturefile = "gfx/event_pictures/Europe/Netherlands/HOL_sinterklaas.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_AUS_joker"
-		texturefile = "gfx/event_pictures/North America/American Union State/AUS_joker.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_AUS_joker2"
-		texturefile = "gfx/event_pictures/North America/American Union State/AUS_joker2.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_promised_land"
-		texturefile = "gfx/event_pictures/North America/American Union State/promised_land.png"
 	}
 }
 

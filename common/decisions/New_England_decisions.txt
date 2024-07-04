@@ -485,6 +485,12 @@ NEE_leftist_decisions = {
 			464 = {
 				add_claim_by = NEE
 			}
+			1330 = {
+				add_claim_by = NEE
+			}
+			1331 = {
+				add_claim_by = NEE
+			}
 			465 = {
 				add_claim_by = NEE
 			}
@@ -603,7 +609,10 @@ NEE_leftist_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
+				OR = {
+					has_war = yes
+					is_in_faction_with = FRA
+				}
 			}
 		}
 
@@ -767,8 +776,8 @@ NEE_reclaiming_america = {
 				is_subject = no
 				controls_all_owned_states = yes
 				custom_trigger_tooltip = {
-					tooltip = "Legitimacy greater than 40"
-					check_variable = { NEE_legitimacy > 40 }
+					tooltip = "Legitimacy greater than 25"
+					check_variable = { NEE_legitimacy > 25 }
 				}
 			}
 			OR = {
@@ -822,8 +831,8 @@ NEE_reclaiming_america = {
 			can_declare_war_on = FROM
 			NOT = { has_wargoal_against = FROM }
 			custom_trigger_tooltip = {
-				tooltip = "Legitimacy greater than 60"
-				check_variable = { NEE_legitimacy > 60 }
+				tooltip = "Legitimacy greater than 35"
+				check_variable = { NEE_legitimacy > 35 }
 			}
 		}
 
@@ -976,8 +985,8 @@ NEE_power_of_business = {
 			is_subject = no
 			controls_all_owned_states = yes
 			custom_trigger_tooltip = {
-				tooltip = "Legitimacy greater than 60"
-				check_variable = { NEE_legitimacy > 60 }
+				tooltip = "Legitimacy greater than 35"
+				check_variable = { NEE_legitimacy > 35 }
 			}
 		}
 

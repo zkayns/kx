@@ -160,6 +160,7 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			modifier = {
 				local_resources_factor = 0.15
+				trade_opinion_factor = -1
 			}
 		}
 		
@@ -332,6 +333,79 @@ ideas = {
 		}
 	}
 	
+	# Decoster 
+	
+	COG_south_african_model_idea = {
+		picture = SAF_apartheid_idea
+                allowed = { always = no }
+		modifier = {
+			conscription_factor = -0.3
+			consumer_goods_factor = -0.05
+			production_factory_max_efficiency_factor = 0.05
+			production_speed_buildings_factor = 0.05
+			industrial_capacity_factory = 0.05
+		}
+	}
+	
+	COG_south_african_model_2_idea = {
+		picture = SAF_apartheid_idea
+		name = COG_south_african_model_idea
+                allowed = { always = no }
+		modifier = {
+			conscription_factor = -0.50
+			consumer_goods_factor = -0.075
+			production_factory_max_efficiency_factor = 0.075
+			production_speed_buildings_factor = 0.075
+			industrial_capacity_factory = 0.075
+		}
+	}
+	
+	COG_south_african_model_3_idea = {
+		picture = SAF_apartheid_idea
+		name = COG_south_african_model_idea
+                allowed = { always = no }
+		modifier = {
+			conscription_factor = -0.15
+			consumer_goods_factor = -0.03
+			production_factory_max_efficiency_factor = 0.03
+			production_speed_buildings_factor = 0.03
+			industrial_capacity_factory = 0.03
+		}
+	}
+	
+	COG_european_approach_pan_africanism_idea = {
+		picture = LPD_towards_a_new_tommorow_idea
+                allowed = { always = no }
+		modifier = {
+			research_speed_factor = 0.04
+			production_speed_infrastructure_factor = 0.05
+			production_speed_buildings_factor = 0.05
+		}
+	}
+	
+	COG_echoes_africa_new_order_idea = {
+		picture = LPD_towards_a_new_tommorow_idea
+                allowed = { always = no }
+		modifier = {
+			research_speed_factor = 0.08
+			production_speed_infrastructure_factor = 0.1
+			production_factory_max_efficiency_factor = 0.075
+			production_speed_buildings_factor = 0.075
+		}
+	}
+	
+	COG_white_settlers_idea = {
+		picture = immigration_influx
+                allowed = { always = no }
+		modifier = {
+			monthly_population = 0.50
+			totalist_drift = 0.01
+			syndicalist_drift = 0.01
+			radical_socialist_drift = 0.01
+			social_democrat_drift = 0.01
+		}
+	}
+	
 	# Epp
 	COG_catholic_support = {
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea COG_christian_allies"}
@@ -373,7 +447,7 @@ ideas = {
 	COG_reach_out_to_germans = {
 		on_add = { log = "[GetDateText]: [Root.GetName]: add idea COG_reach_out_to_germans"}
 			allowed = { always = no }
-		picture = GER_imperial_pride
+		picture = GER_imperial_pride_guns
 		modifier = {
 			political_power_gain = 0.15
 			stability_factor = -0.15
@@ -576,6 +650,12 @@ ideas = {
 			picture = generic_central_management
 			modifier = {
 				political_power_gain = 0.1
+				stability_factor = 0.05
+				party_popularity_stability_factor = 0.06
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.02
+				industrial_capacity_factory = 0.03
+				local_resources_factor = 0.1
 			}
 		}
 
@@ -585,6 +665,9 @@ ideas = {
 			picture = generic_agrarian_society
 			modifier = {
 				conscription_factor = 0.02
+				production_speed_buildings_factor = 0.02
+				industry_repair_factor = 0.07
+				monthly_population = 0.05
 			}
 		}
 
@@ -594,7 +677,11 @@ ideas = {
 			picture = generic_agrarian_reform
 			modifier = {
 				conscription_factor = 0.05
-				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.04
+				industry_repair_factor = 0.15
+				consumer_goods_factor = -0.1
+				line_change_production_efficiency_factor = 0.1
+				monthly_population = 0.10
 			}
 		}
 
@@ -603,7 +690,9 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_taxation
 			modifier = {
-				consumer_goods_factor = 0.10
+				political_power_gain = 0.25
+				stability_factor = 0.25
+				consumer_goods_factor = 0.20
 			}
 		}
 
@@ -612,7 +701,9 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_goods_red_bonus #to change
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
+				stability_weekly_factor = 0.003
+				research_speed_factor = 0.06
 			}
 		}
 
@@ -643,7 +734,9 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_war_preparation
 			modifier = {
-				land_doctrine_cost_factor = -0.1			
+				land_doctrine_cost_factor = -0.1
+				army_org_factor = 0.03
+				resistance_damage_to_garrison = -0.2
 			}
 		}
 
@@ -653,6 +746,9 @@ ideas = {
 			picture = generic_fortify_the_borders
 			modifier = {
 				conscription = 0.02
+				war_support_factor = 0.10
+				army_defence_factor = 0.08
+				surrender_limit = 0.07
 			}
 		}
 
@@ -704,7 +800,7 @@ ideas = {
 			allowed = { always = no }
 			picture = SAF_native_service
 			modifier = {
-				army_infantry_attack_factor = 0.05
+				army_infantry_attack_factor = 0.1
 				army_infantry_defence_factor = 0.1
 				supply_consumption_factor = -0.05
 				attrition = -0.05
@@ -718,6 +814,8 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.15
 				stability_factor = 0.05
+				stability_weekly_factor = 0.002
+				compliance_growth = 0.05
 			}
 		}
 
@@ -727,6 +825,10 @@ ideas = {
 			picture = generic_morale_bonus
 			modifier = {
 				political_power_gain = 0.30
+				surrender_limit = 0.05
+				encryption_factor = 0.05
+				decryption_factor = 0.05
+				resistance_target = -0.05
 			}
 		}
 
@@ -736,8 +838,9 @@ ideas = {
 			picture = state_economy
 			modifier = {
 				political_power_gain = 0.10
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -748,7 +851,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_coastal_navy
 			modifier = {
-				consumer_goods_factor = 0.50
+				consumer_goods_factor = 0.40
 			}
 		}
 
@@ -757,7 +860,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_coastal_navy
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -768,7 +871,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_coastal_navy
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.1
 				production_speed_infrastructure_factor = 0.1
 			}
 		}
@@ -789,7 +892,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_coastal_navy
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				production_speed_infrastructure_factor = 0.1
 			}
 		}
@@ -841,10 +944,24 @@ ideas = {
 				industry = 0.1
 			}
 		}
+
+		gecamines = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea gecamines"}
+			allowed = { tag = KIV }
+			available = { has_country_flag = KIV_created_gecamines }
+			traits = { industrial_manufacturer }
+			modifier = {
+				production_speed_radar_station_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+			}
+			research_bonus = {
+				industry = 0.2
+			}
+		}
 	}
 
 #### Weapons ####
-	weapons_manufacturer = {
+	materiel_manufacturer = {
 		designer = yes
 
 		fabrique_nationale_ktg = {

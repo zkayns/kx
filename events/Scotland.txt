@@ -355,7 +355,7 @@ country_event = { # Canada "Asks" For A Restoration
 				name = "Bernard Montgomery"
 				desc = "SCT_MONTGOMERY_DESC"
 				picture = "gfx/leaders/SCT/Portrait_England_Bernard_Montgomery.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -440,7 +440,7 @@ country_event = { # Canada Does It Anyway
 				name = "Bernard Montgomery"
 				desc = "SCT_MONTGOMERY_DESC"
 				picture = "gfx/leaders/SCT/Portrait_England_Bernard_Montgomery.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = {}
 			}
@@ -526,8 +526,8 @@ country_event = { # Provisional Government
 			name = "Scottish Provisional Government"
 			desc = "SCT_PROVISIONAL_DESC"
 			picture = "gfx/leaders/SCT/Portrait_Provisional_Government.png"
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
+			expire = "1.1.1"
+			ideology = centrist_subtype
 			traits = {}
 		}
 		
@@ -1982,7 +1982,7 @@ country_event = { # Crackdown Over
 			name = "No Central Authority"
 			desc = "SCT_AUTHORITY_TOTALIST_DESC"
 			picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = syndicalist_subtype
 			traits = {}
 		}
@@ -1990,8 +1990,8 @@ country_event = { # Crackdown Over
 			name = "No Central Authority"
 			desc = "SCT_AUTHORITY_TOTALIST_DESC"
 			picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-			expire = "1965.1.1"
-			ideology = radical_socialist_subtype
+			expire = "1.1.1"
+			ideology = moderate_socialist_subtype
 			traits = {}
 		}
 		remove_ideas = SCT_socialist_issues
@@ -2615,8 +2615,8 @@ country_event = { # Proroguing Parliament
 			name = "John MacCormick"
 			desc = "SCT_MACCORKMICK_DESC"
 			picture = "gfx/leaders/SCT/Portrait_John_MacCormick.png"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
+			expire = "1.1.1"
+			ideology = pataut_national_conservative_subtype
 			traits = {}
 		}
 	}
@@ -2666,7 +2666,7 @@ country_event = { # The Restoration of Democracy
 			name = "John MacCormick"
 			desc = "SCT_MACCORKMICK_DESC"
 			picture = "gfx/leaders/SCT/Portrait_John_MacCormick.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_conservative_subtype
 			traits = {}
 		}
@@ -2674,8 +2674,8 @@ country_event = { # The Restoration of Democracy
 			name = "Interim Administration"
 			desc = "SCT_INTERIM_DESC"
 			picture = "gfx/leaders/SCT/Portrait_Interim_Government.png"
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
+			expire = "1.1.1"
+			ideology = centrist_subtype
 			traits = {}
 		}
 		
@@ -2730,8 +2730,8 @@ country_event = { # The Election Results come in!
 				name = "Jean Mann"
 				desc = "SCT_MANN_DESC"
 				picture = "gfx/leaders/SCT/Portrait_Jean_Mann.png"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				expire = "1.1.1"
+				ideology = soclib_progressive_democracy_subtype
 				traits = {}
 			}
 			set_party_name = { 
@@ -2769,8 +2769,8 @@ country_event = { # The Election Results come in!
 				name = "Jean Mann"
 				desc = "SCT_MANN_DESC"
 				picture = "gfx/leaders/SCT/Portrait_Jean_Mann.png"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				expire = "1.1.1"
+				ideology = soclib_progressive_democracy_subtype
 				traits = {}
 			}
 			set_party_name = { 
@@ -2808,8 +2808,8 @@ country_event = { # The Election Results come in!
 				name = "Jean Mann"
 				desc = "SCT_MANN_DESC"
 				picture = "gfx/leaders/SCT/Portrait_Jean_Mann.png"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				expire = "1.1.1"
+				ideology = soclib_progressive_democracy_subtype
 				traits = {}
 			}
 			set_party_name = { 
@@ -2847,8 +2847,8 @@ country_event = { # The Election Results come in!
 				name = "Jean Mann"
 				desc = "SCT_MANN_DESC"
 				picture = "gfx/leaders/SCT/Portrait_Jean_Mann.png"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				expire = "1.1.1"
+				ideology = soclib_progressive_democracy_subtype
 				traits = {}
 			}
 			set_party_name = { 
@@ -3104,8 +3104,8 @@ country_event = { # The Governor's Powers
 			name = "Executive Committee"
 			desc = "SCT_EXECUTIVE_DESC"
 			picture = "gfx/leaders/SCT/Portrait_Provisional_Government.png"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			expire = "1.1.1"
+			ideology = oligarchy_subtype
 			traits = {}
 		}
 	}
@@ -3172,7 +3172,7 @@ country_event = { # The Invasion #1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.77"}
 	title = scotland.77.t
 	desc = scotland.77.d
-	picture = UK_country_parliament
+	picture = GFX_report_event_GBR_country_parliament
 	
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4696,7 +4696,7 @@ country_event = { # Picking A King
 				name = "Heinrich I"
 				desc = "SCT_HEINRICH_DESC"
 				picture = "gfx/leaders/SCT/Portrait_Prince_Heinrich.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = absolute_monarchy_subtype
 				traits = {}
 			}
@@ -4814,6 +4814,7 @@ country_event = { # Devolved Administration
 			SCT_Malcolm_MacDonald_sec_rso
 			SCT_Donald_Cardross_Erskine_for_rso
 		}
+		add_popularity = { ideology = radical_socialist popularity = 0.1 }
 	}
 	option = {
 		name = scotland.134.b
@@ -4828,6 +4829,7 @@ country_event = { # Devolved Administration
 			SCT_Agnes_Dollan_eco_syn
 			SCT_Tom_Johnston_sec_syn
 		}
+		add_popularity = { ideology = syndicalist popularity = 0.2 }
 	}
 }
 
@@ -5110,10 +5112,7 @@ country_event = { # Scotland Petitions France
 			add_to_faction = SCT
 		}
 		ENG = {
-			country_event = {
-				id = sctrevolt.8
-				days = 0
-			}
+			country_event = sctrevolt.8
 		} 
 	}
 
@@ -5121,7 +5120,7 @@ country_event = { # Scotland Petitions France
 		name = sctrevolt.6.b
 		trigger = {
 			SCT = {
-				is_ai = Yes
+				is_ai = yes
 			}
 		}
 		ai_chance = {
@@ -5303,7 +5302,7 @@ country_event = { # Just Aid
 		name = sctrevolt.10.b
 		trigger = {
 			SCT = {
-				is_ai = Yes
+				is_ai = yes
 			}
 		}
 		
@@ -5364,7 +5363,7 @@ country_event = { # Volunteers Too
 		name = sctrevolt.10.b
 		trigger = {
 			SCT = {
-				is_ai = Yes
+				is_ai = yes
 			}
 		}
 		
@@ -5412,17 +5411,14 @@ country_event = { # Expeditionary Force
 		}
 		
 		ENG = {
-			country_event = {
-				id = sctrevolt.13
-				days = 0
-			}
+			country_event = sctrevolt.13
 		}
 	}
 	option = {
 		name = sctrevolt.10.b
 		trigger = {
 			SCT = {
-				is_ai = Yes
+				is_ai = yes
 			}
 		}
 		
@@ -5579,7 +5575,7 @@ country_event = { # Just Aid
 		name = sctrevolt.10.b
 		trigger = {
 			SCT = {
-				is_ai = Yes
+				is_ai = yes
 			}
 		}
 		
@@ -5641,7 +5637,7 @@ country_event = { # Volunteers Too
 		name = sctrevolt.10.b
 		trigger = {
 			SCT = {
-				is_ai = Yes
+				is_ai = yes
 			}
 		}
 		
@@ -5689,17 +5685,14 @@ country_event = { # Expeditionary Force
 		}
 		
 		ENG = {
-			country_event = {
-				id = sctrevolt.18
-				days = 0
-			}
+			country_event = sctrevolt.18
 		}
 	}
 	option = {
 		name = sctrevolt.10.b
 		trigger = {
 			SCT = {
-				is_ai = Yes
+				is_ai = yes
 			}
 		}
 		

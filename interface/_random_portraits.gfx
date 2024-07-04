@@ -190,6 +190,10 @@ spriteTypes = {
 		name = "GFX_Portrait_Asia_Generic_new_7"
 		texturefile = "gfx/leaders/Generic/Portrait_Asia_Generic_new_7.png"
 	}
+	spriteType = {
+		name = "GFX_Portrait_Asia_Generic_new_8"
+		texturefile = "gfx/leaders/Generic/Portrait_Asia_Generic_new_8.png"
+	}
 
 	spriteType = {
 		name = "GFX_Portrait_Asia_Generic_land_new_1"
@@ -261,6 +265,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Asia_Generic_land_new_8_small"
 		texturefile = "gfx/interface/ministers/Generic/Portrait_Asia_Generic_land_new_8.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Asia_Generic_land_new_9"
+		texturefile = "gfx/leaders/Generic/Portrait_Asia_Generic_land_new_9.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Asia_Generic_land_new_9_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Asia_Generic_land_new_9.png"
 	}
 
 	spriteType = {
@@ -447,6 +460,14 @@ spriteTypes = {
 		name = "GFX_Portrait_Europe_Generic_new_39"
 		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_new_39.png"
 	}
+	spriteType = {
+		name = "GFX_Portrait_Europe_Generic_new_40"
+		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_new_40.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Europe_Generic_new_41"
+		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_new_41.png"
+	}
 
 	spriteType = {
 		name = "GFX_Portrait_Europe_Generic_land_new_1"
@@ -566,15 +587,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Portrait_Europe_Generic_land_new_14"
-		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_14.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Europe_Generic_land_new_14_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Europe_Generic_land_new_14.png"
-	}
-
-	spriteType = {
 		name = "GFX_Portrait_Europe_Generic_navy_new_1"
 		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_1.png"
 	}
@@ -582,26 +594,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Europe_Generic_navy_new_2"
 		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_2.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Europe_Generic_navy_new_3"
-		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_3.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Europe_Generic_navy_new_4"
-		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_4.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Europe_Generic_navy_new_5"
-		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_5.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Europe_Generic_navy_new_6"
-		texturefile = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_6.png"
 	}
 
 	#####################
@@ -642,10 +634,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_South_America_Generic_new_9"
 		texturefile = "gfx/leaders/Generic/Portrait_South_America_Generic_new_9.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_South_America_Generic_new_10"
-		texturefile = "gfx/leaders/Generic/Portrait_South_America_Generic_new_10.png"
 	}
 
 	spriteType = {
@@ -730,15 +718,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Portrait_South_America_Generic_land_new_10"
-		texturefile = "gfx/leaders/Generic/Portrait_South_America_Generic_land_new_10.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_South_America_Generic_land_new_10_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_South_America_Generic_land_new_10.png"
-	}
-
-	spriteType = {
 		name = "GFX_Portrait_South_America_Generic_navy_new_1"
 		texturefile = "gfx/leaders/Generic/Portrait_South_America_Generic_navy_new_1.png"
 	}
@@ -746,11 +725,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_South_America_Generic_navy_new_2"
 		texturefile = "gfx/leaders/Generic/Portrait_South_America_Generic_navy_new_2.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_South_America_Generic_navy_new_3"
-		texturefile = "gfx/leaders/Generic/Portrait_South_America_Generic_navy_new_3.png"
 	}
 
 	spriteType = {
@@ -896,7 +870,16 @@ spriteTypes = {
 		name = "GFX_Portrait_America_Generic_land_12_small"
 		texturefile = "gfx/interface/ministers/Generic/Portrait_America_Generic_land_12.png"
 	}
-
+	
+	spriteType = {
+		name = "GFX_Portrait_America_Generic_land_13"
+		texturefile = "gfx/leaders/Generic/Portrait_America_Generic_land_13.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_America_Generic_land_13_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_America_Generic_land_13.png"
+	}
+	
 	spriteType = {
 		name = "GFX_Portrait_America_Generic_navy_1"
 		texturefile = "gfx/leaders/Generic/Portrait_America_Generic_navy_1.png"
@@ -916,13 +899,7 @@ spriteTypes = {
 		name = "GFX_Portrait_America_Generic_navy_4"
 		texturefile = "gfx/leaders/Generic/Portrait_America_Generic_navy_4.png"
 	}
-	
-	spriteType = {
-		name = "GFX_Portrait_America_Generic_navy_5"
-		texturefile = "gfx/leaders/Generic/Portrait_America_Generic_navy_5.png"
-	}
-	
-	
+
 	##############
 	### ARABIA ###
 	##############
@@ -981,6 +958,24 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_Portrait_Arabia_Generic_land_new_7"
+		texturefile = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_7.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Arabia_Generic_land_new_7_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Arabia_Generic_land_new_7.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Arabia_Generic_land_new_8"
+		texturefile = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_8.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Arabia_Generic_land_new_8_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Arabia_Generic_land_new_8.png"
+	}
+
+	spriteType = {
 		name = "GFX_Portrait_Arabia_Generic_navy_new_1"
 		texturefile = "gfx/leaders/Generic/Portrait_Arabia_Generic_navy_new_1.png"
 	}
@@ -1033,6 +1028,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Arabia_Generic_new_9"
 		texturefile = "gfx/leaders/Generic/Portrait_Arabia_Generic_new_9.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Arabia_Generic_new_10"
+		texturefile = "gfx/leaders/Generic/Portrait_Arabia_Generic_new_10.png"
 	}
 
 	#################
@@ -1207,6 +1207,69 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_12"
+		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_land_12.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_12_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_12.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_13"
+		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_land_13.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_13_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_13.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_14"
+		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_land_14.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_14_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_14.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_15"
+		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_land_15.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_15_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_15.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_16"
+		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_land_16.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_16_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_16.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_17"
+		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_land_17.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_17_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_17.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_18"
+		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_land_18.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Britain_Generic_land_18_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Britain_Generic_land_18.png"
+	}
+
+	spriteType = {
 		name = "GFX_Portrait_Britain_Generic_navy_1"
 		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_navy_1.png"
 	}
@@ -1214,11 +1277,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Britain_Generic_navy_2"
 		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_navy_2.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Britain_Generic_navy_3"
-		texturefile = "gfx/leaders/Generic/Portrait_Britain_Generic_navy_3.png"
 	}
 
 	####################
@@ -1373,24 +1431,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/Generic/Portrait_Danubia_Generic_land_7.png"
 	}
 
-	spriteType = {
-		name = "GFX_Portrait_Danubia_Generic_land_8"
-		texturefile = "gfx/leaders/Generic/Portrait_Danubia_Generic_land_8.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Danubia_Generic_land_8_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Danubia_Generic_land_8.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Danubia_Generic_land_9"
-		texturefile = "gfx/leaders/Generic/Portrait_Danubia_Generic_land_9.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Danubia_Generic_land_9_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Danubia_Generic_land_9.png"
-	}
-
 	##############
 	### FRANCE ###
 	##############
@@ -1449,18 +1489,44 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_Portrait_France_Generic_land_7"
+		texturefile = "gfx/leaders/Generic/Portrait_France_Generic_land_7.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_France_Generic_land_7_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_France_Generic_land_7.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_France_Generic_land_8"
+		texturefile = "gfx/leaders/Generic/Portrait_France_Generic_land_8.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_France_Generic_land_8_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_France_Generic_land_8.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_France_Generic_land_9"
+		texturefile = "gfx/leaders/Generic/Portrait_France_Generic_land_9.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_France_Generic_land_9_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_France_Generic_land_9.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_France_Generic_land_10"
+		texturefile = "gfx/leaders/Generic/Portrait_France_Generic_land_10.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_France_Generic_land_10_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_France_Generic_land_10.png"
+	}
+
+	spriteType = {
 		name = "GFX_Portrait_France_Generic_navy_1"
 		texturefile = "gfx/leaders/Generic/Portrait_France_Generic_navy_1.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_France_Generic_navy_2"
-		texturefile = "gfx/leaders/Generic/Portrait_France_Generic_navy_2.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_France_Generic_navy_3"
-		texturefile = "gfx/leaders/Generic/Portrait_France_Generic_navy_3.png"
 	}
 
 	###############
@@ -1548,6 +1614,15 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_Portrait_Germany_Generic_land_10"
+		texturefile = "gfx/leaders/Generic/Portrait_Germany_Generic_land_10.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Germany_Generic_land_10_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Germany_Generic_land_10.png"
+	}
+
+	spriteType = {
 		name = "GFX_Portrait_Germany_Generic_navy_1"
 		texturefile = "gfx/leaders/Generic/Portrait_Germany_Generic_navy_1.png"
 	}
@@ -1555,11 +1630,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Germany_Generic_navy_2"
 		texturefile = "gfx/leaders/Generic/Portrait_Germany_Generic_navy_2.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Germany_Generic_navy_3"
-		texturefile = "gfx/leaders/Generic/Portrait_Germany_Generic_navy_3.png"
 	}
 
 	#####################
@@ -1829,6 +1899,33 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_green_6"
+		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_land_green_6.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_green_6_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_land_green_6.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_green_7"
+		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_land_green_7.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_green_7_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_land_green_7.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_green_8"
+		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_land_green_8.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_green_8_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_land_green_8.png"
+	}
+
+	spriteType = {
 		name = "GFX_Portrait_Italy_Generic_land_grey_1"
 		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_land_grey_1.png"
 	}
@@ -1874,30 +1971,40 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Portrait_Italy_Generic_navy_1"
-		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_navy_1.png"
+		name = "GFX_Portrait_Italy_Generic_land_grey_6"
+		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_land_grey_6.png"
 	}
 	spriteType = {
-		name = "GFX_Portrait_Italy_Generic_navy_1_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_navy_1.png"
+		name = "GFX_Portrait_Italy_Generic_land_grey_6_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_land_grey_6.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_grey_7"
+		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_land_grey_7.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_grey_7_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_land_grey_7.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_grey_8"
+		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_land_grey_8.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_land_grey_8_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_land_grey_8.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Italy_Generic_navy_1"
+		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_navy_1.png"
 	}
 
 	spriteType = {
 		name = "GFX_Portrait_Italy_Generic_navy_2"
 		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_navy_2.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Italy_Generic_navy_2_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_navy_2.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Italy_Generic_navy_3"
-		texturefile = "gfx/leaders/Generic/Portrait_Italy_Generic_navy_3.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Italy_Generic_navy_3_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Italy_Generic_navy_3.png"
 	}
 
 	#############
@@ -1922,66 +2029,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_land_3"
-		texturefile = "gfx/leaders/Generic/Portrait_Japan_Generic_land_3.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_land_3_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Japan_Generic_land_3.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_land_4"
-		texturefile = "gfx/leaders/Generic/Portrait_Japan_Generic_land_4.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_land_4_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Japan_Generic_land_4.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_land_5"
-		texturefile = "gfx/leaders/Generic/Portrait_Japan_Generic_land_5.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_land_5_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Japan_Generic_land_5.png"
-	}
-
-	spriteType = {
 		name = "GFX_Portrait_Japan_Generic_navy_1"
 		texturefile = "gfx/leaders/Generic/Portrait_Japan_Generic_navy_1.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_navy_1_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Japan_Generic_navy_1.png"
 	}
 
 	spriteType = {
 		name = "GFX_Portrait_Japan_Generic_navy_2"
 		texturefile = "gfx/leaders/Generic/Portrait_Japan_Generic_navy_2.png"
 	}
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_navy_2_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Japan_Generic_navy_2.png"
-	}
 
 	spriteType = {
 		name = "GFX_Portrait_Japan_Generic_navy_3"
 		texturefile = "gfx/leaders/Generic/Portrait_Japan_Generic_navy_3.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_navy_3_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Japan_Generic_navy_3.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_navy_4"
-		texturefile = "gfx/leaders/Generic/Portrait_Japan_Generic_navy_4.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Japan_Generic_navy_4_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Japan_Generic_navy_4.png"
 	}
 
 	##############
@@ -2024,77 +2083,10 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_land_5"
-		texturefile = "gfx/leaders/Generic/Portrait_Russia_Generic_land_5.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_land_5_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_land_5.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_land_6"
-		texturefile = "gfx/leaders/Generic/Portrait_Russia_Generic_land_6.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_land_6_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_land_6.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_land_7"
-		texturefile = "gfx/leaders/Generic/Portrait_Russia_Generic_land_7.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_land_7_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_land_7.png"
-	}
-
-	spriteType = {
 		name = "GFX_Portrait_Russia_Generic_navy_1"
 		texturefile = "gfx/leaders/Generic/Portrait_Russia_Generic_navy_1.png"
 	}
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_1_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_navy_1.png"
-	}
 
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_2"
-		texturefile = "gfx/leaders/Generic/Portrait_Russia_Generic_navy_2.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_2_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_navy_2.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_3"
-		texturefile = "gfx/leaders/Generic/Portrait_Russia_Generic_navy_3.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_3_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_navy_3.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_4"
-		texturefile = "gfx/leaders/Generic/Portrait_Russia_Generic_navy_4.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_4_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_navy_4.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_5"
-		texturefile = "gfx/leaders/Generic/Portrait_Russia_Generic_navy_5.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Russia_Generic_navy_5_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Russia_Generic_navy_5.png"
-	}
-	
 	###############
 	### Cossack ###
 	###############
@@ -2136,15 +2128,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Turkey_Generic_land_3_small"
 		texturefile = "gfx/interface/ministers/Generic/Portrait_Turkey_Generic_land_3.png"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Turkey_Generic_land_4"
-		texturefile = "gfx/leaders/Generic/Portrait_Turkey_Generic_land_4.png"
-	}
-	spriteType = {
-		name = "GFX_Portrait_Turkey_Generic_land_4_small"
-		texturefile = "gfx/interface/ministers/Generic/Portrait_Turkey_Generic_land_4.png"
 	}
 	
 	################
@@ -2243,6 +2226,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TXS_generic_general_8_small"
 		texturefile = "gfx/interface/ministers/Generic/TXS_generic_general_8.png"
+	}
+
+	spriteType = {
+		name = "GFX_TXS_generic_general_9"
+		texturefile = "gfx/leaders/Generic/TXS_generic_general_9.png"
+	}
+	spriteType = {
+		name = "GFX_TXS_generic_general_9_small"
+		texturefile = "gfx/interface/ministers/Generic/TXS_generic_general_9.png"
 	}
 	
 	#############
@@ -2520,77 +2512,77 @@ spriteTypes = {
 	##################
 	
 	spriteType = {
-		name = "GFX_ANT_generic_leader_1"
-		texturefile = "gfx/leaders/AAR/ANT_generic_leader_1.png"
+		name = "GFX_Portrait_ANT_generic_leader_1"
+		texturefile = "gfx/leaders/AAR/Portrait_ANT_generic_leader_1.png"
 	}
 	spriteType = {
-		name = "GFX_ANT_generic_leader_1_small"
-		texturefile = "gfx/interface/ministers/Generic/ANT_generic_leader_1.png"
-	}
-	
-	spriteType = {
-		name = "GFX_ANT_generic_leader_2"
-		texturefile = "gfx/leaders/AAR/ANT_generic_leader_2.png"
-	}
-	spriteType = {
-		name = "GFX_ANT_generic_leader_2_small"
-		texturefile = "gfx/interface/ministers/Generic/ANT_generic_leader_2.png"
-	}
-
-	spriteType = {
-		name = "GFX_ANT_generic_leader_3"
-		texturefile = "gfx/leaders/AAR/ANT_generic_leader_3.png"
-	}
-	spriteType = {
-		name = "GFX_ANT_generic_leader_3_small"
-		texturefile = "gfx/interface/ministers/Generic/ANT_generic_leader_3.png"
+		name = "GFX_Portrait_ANT_generic_leader_1_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_ANT_generic_leader_1.png"
 	}
 	
 	spriteType = {
-		name = "GFX_ANT_generic_leader_4"
-		texturefile = "gfx/leaders/AAR/ANT_generic_leader_4.png"
+		name = "GFX_Portrait_ANT_generic_leader_2"
+		texturefile = "gfx/leaders/AAR/Portrait_ANT_generic_leader_2.png"
 	}
 	spriteType = {
-		name = "GFX_ANT_generic_leader_4_small"
-		texturefile = "gfx/interface/ministers/Generic/ANT_generic_leader_4.png"
-	}
-
-	spriteType = {
-		name = "GFX_ANT_generic_leader_5"
-		texturefile = "gfx/leaders/AAR/ANT_generic_leader_5.png"
-	}
-	spriteType = {
-		name = "GFX_ANT_generic_leader_5_small"
-		texturefile = "gfx/interface/ministers/Generic/ANT_generic_leader_5.png"
-	}
-
-
-	spriteType = {
-		name = "GFX_ANT_generic_leader_6"
-		texturefile = "gfx/leaders/AAR/ANT_generic_leader_6.png"
-	}
-	spriteType = {
-		name = "GFX_ANT_generic_leader_6_small"
-		texturefile = "gfx/interface/ministers/Generic/ANT_generic_leader_6.png"
-	}
-
-
-	spriteType = {
-		name = "GFX_ANT_generic_leader_7"
-		texturefile = "gfx/leaders/AAR/ANT_generic_leader_7.png"
-	}
-	spriteType = {
-		name = "GFX_ANT_generic_leader_7_small"
-		texturefile = "gfx/interface/ministers/Generic/ANT_generic_leader_7.png"
+		name = "GFX_Portrait_ANT_generic_leader_2_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_ANT_generic_leader_2.png"
 	}
 
 	spriteType = {
-		name = "GFX_ANT_generic_leader_8"
-		texturefile = "gfx/leaders/AAR/ANT_generic_leader_8.png"
+		name = "GFX_Portrait_ANT_generic_leader_3"
+		texturefile = "gfx/leaders/AAR/Portrait_ANT_generic_leader_3.png"
 	}
 	spriteType = {
-		name = "GFX_ANT_generic_leader_8_small"
-		texturefile = "gfx/interface/ministers/Generic/ANT_generic_leader_8.png"
+		name = "GFX_Portrait_ANT_generic_leader_3_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_ANT_generic_leader_3.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_4"
+		texturefile = "gfx/leaders/AAR/Portrait_ANT_generic_leader_4.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_4_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_ANT_generic_leader_4.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_5"
+		texturefile = "gfx/leaders/AAR/Portrait_ANT_generic_leader_5.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_5_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_ANT_generic_leader_5.png"
+	}
+
+
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_6"
+		texturefile = "gfx/leaders/AAR/Portrait_ANT_generic_leader_6.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_6_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_ANT_generic_leader_6.png"
+	}
+
+
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_7"
+		texturefile = "gfx/leaders/AAR/Portrait_ANT_generic_leader_7.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_7_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_ANT_generic_leader_7.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_8"
+		texturefile = "gfx/leaders/AAR/Portrait_ANT_generic_leader_8.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ANT_generic_leader_8_small"
+		texturefile = "gfx/interface/ministers/Generic/Portrait_ANT_generic_leader_8.png"
 	}
 	
 	#####################

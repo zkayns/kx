@@ -10,6 +10,8 @@ focus_tree = {
 		}
 	}
 	
+	shared_focus = AMERICA_back_in_business
+	
 	focus = {
 		id = ARZ_to_arms
 		icon = GFX_BRY_Every_Hand_A_Rifle
@@ -155,7 +157,7 @@ focus_tree = {
 				
 			create_corps_commander = {# DeWitt Clinton Ramsey
 				name = "DeWitt Clinton Ramsey"
-				portrait_path = "gfx/leaders/DSR/DeWitt_Clinton_Ramsey.png"
+				portrait_path = "gfx/leaders/DSR/Portrait_DSR_DeWitt_Clinton_Ramsey.png"
 				traits = {
 				}
 				skill = 1
@@ -920,31 +922,31 @@ focus_tree = {
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = market_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = paternal_autocrat_subtype
 			}
 		}
@@ -2013,6 +2015,7 @@ focus_tree = {
 			add_state_core = 1273
 			add_state_core = 740
 			add_state_core = 473
+			add_state_core = 1332
 			add_state_core = 483
 			add_state_core = 484
 			

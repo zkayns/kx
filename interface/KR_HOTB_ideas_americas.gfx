@@ -371,7 +371,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_Texaco"
-		texturefile = "gfx/interface/ideas/ideas/AUS/Texaco.png"
+		texturefile = "gfx/interface/ideas/TXS/idea_TXS_Texaco.png"
 	}
 	spriteType = {
 		name = "GFX_idea_texasvalues"
@@ -1368,6 +1368,94 @@ spriteTypes = {
 		name = "GFX_idea_COR_fighting_for_america"
 		texturefile = "gfx/interface/ideas/ideas/COR_fighting_for_america.png"
 	}
+	spriteType = {
+		name = "GFX_idea_COR_progressive_reconstruction"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_progressive_reconstruction.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_by_people_for_people"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_by_people_for_people.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_champion_southern_suffrage"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_champion_southern_suffrage.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_illinois_rail_splitter_mississippis_fire_eater"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_illinois_rail_splitter_mississippis_fire_eater.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_protected_not_equal"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_protected_not_equal.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_safeguard_jewish_communities"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_safeguard_jewish_communities.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_support_from_rednecks"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_support_from_rednecks.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_world_set_free"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_world_set_free.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_jewish_segregation"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_jewish_segregation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_knights_white"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_knights_white.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_fitzhugh_primacy"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_fitzhugh_primacy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_de_bow_primacy"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_de_bow_primacy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_hughes_primacy"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_hughes_primacy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_fire_eaters"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_fire_eaters.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_adapting_armstrongs_apparatus"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_adapting_armstrongs_apparatus.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_economic_crusade"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_economic_crusade.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_fitzhughist_welfare_state"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_fitzhughist_welfare_state.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_free_market_approach"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_free_market_approach.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_serving_only_state"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_serving_only_state.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_truly_christian_return"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_truly_christian_return.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_universal_slavery"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_universal_slavery.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_southern_ingenuity"
+		texturefile = "gfx/interface/ideas/ideas/CAR/COR_southern_ingenuity.png"
+	}
 
 	##CSA##
 	spriteType = {
@@ -1777,6 +1865,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CSA_way_it_will_be"
 		texturefile = "gfx/interface/ideas/ideas/CSA/CSA_way_it_will_be.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CSA_trotsky"
+		texturefile = "gfx/interface/ideas/ideas/CSA/CSA_trotsky.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CSA_fighting_for_america"
+		texturefile = "gfx/interface/ideas/ideas/CSA/CSA_fighting_for_america.png"
 	}
 	##NEE##
 	spriteType = {
@@ -2236,5 +2332,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_USA_leahy_spirit"
 		texturefile = "gfx/interface/ideas/USA/USA_leahy_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_political_crisis"
+		texturefile = "gfx/interface/ideas/ideas/USA/USA_political_crisis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_mexican_resistance"
+		texturefile = "gfx/interface/ideas/ideas/USA/USA_mexican_resistance.png"
 	}
 }

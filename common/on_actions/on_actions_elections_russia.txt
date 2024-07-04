@@ -7,6 +7,10 @@ on_actions = {
 				country_event = aze.1
 			}
 			if = {
+				limit = { tag = TRM }
+				country_event = tram.86
+			}
+			if = {
 				limit = {
 					tag = RUS
 					has_country_flag = soviet_russia_restored
@@ -19,6 +23,13 @@ on_actions = {
 					}
 				}
 				country_event = russoc.40
+			}
+			else_if = {
+				limit = { 
+					tag = RUS
+					has_country_flag = snap_elections
+				}
+				country_event = rusdem.2
 			}
 			else_if = {
 				limit = { 

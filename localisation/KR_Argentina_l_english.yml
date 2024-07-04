@@ -6,16 +6,16 @@ KR_Argentina_Democratic:0 "Argentina Democratic Focus Tree"
 ### Parties ###
 ARG_national_populist_party:0 "LP"
 ARG_national_populist_party_long:0 "Liga Patriótica Argentina\n§gA far-right paramilitary group similar to the Romanian Iron Guard, the Liga Patriótica Argentina has become the most influential political organization within Argentina since the Chistmas Coup.\n\nLiga was found in 1919, when Carlés was appointed as a commander of the paramilitary volunteers that were sent in to end protests of the workers on English-owned plant. 'Liga Patriótica Argentina', as they called themselves, were responsible for the murder of hundreds of striking workers. In 1921 and 1922, during the rebellion in Patagonia, LPA forces caused gruesome acts of violence against strikers both in Patagonia and during a general strike in Buenos Aires.\n\nIn 1930 Liga participated in Uriburu's coup, who, with the support of the army and the LPA, ousted the government and installed a corporatist, ultranationalist military dictatorship. In 1932, the military regime collapsed after Uriburu's death. After a power struggle, UCR member Julio Roca became the new head of state. Roca began to seek a peace settlement with the Patagonians. Carlés took advantage of the popular outrage and launched a coup d'état on the 24th of December 1935 when Liga with the support of navy and parts of the military captured the capital.\n\nThe LPA sees the salvation of Argentina, the return to former greatness and the removal of all hostile elements as their primary goal; they act extremely populist on the outside, claiming to serve the Argentinian people for a greater good.\n\nFounded: §Y1919§!\nIdeology:\n- National populism\n- Corporatist capitalism\n- Nationalism§!\n"
-ARG_authoritarian_democrat_party:0 "LdJ (GOU)"
-ARG_authoritarian_democrat_party_long:0 "Libertadores de Junio (Grupo de Oficiales Unidos)\n§gIt is a secret club that reflects and comprises 'the heart and soul of the military leadership.' It is also known as the Group of United Officers (GOU). Created during Julio Argentino Pascual Roca presidency in 1933 due to military opposition to possible peace treaty with Patagonian socialists.\n\nAlthough they oppose ex-President Roca's conciliatory stance with the FOP's 'godless socialists,' they are disillusioned of Carlés policies, viewing him as a 'dangerous radical,' and would prefer a firmer hand, one that has the backing of the Argentine people behind it...\n\nThis group has strong nationalist and Catholic ideas, as well as a strict neutrality approach to foreign policy, believing that Argentina should avoid wars with both regional powers such as Brazil and global players, be it Reichspakt, Entente, or even Internationale. Patagonia and socialist Chile are exceptions; reunification of the nation is one of their key goals, and failure to achieve it by the government might have catastrophic implications.\n\nFounded: §Y1933§!\nIdeology:\n- Militarism\n- Corporatist capitalism\n- Catholic conservatism§!\n"
-ARG_paternal_autocrat_party:0 "PJ"
-ARG_paternal_autocrat_party_long:0 "Partido Justicialista\n§gAlthough not a party they are an important group, they comprise Juan Domingo Perón's political network who themselves are only a few radical Argentine officers and some trade union leaders. Perón espouses a concept of a party in service of a strong and just leader who would unify the population into bringing about social justice, these ideas however marginal, hold great appeal to a population tired of political squabbling and sterile dictatorships. It remains to be seen whenether Perón's group hold any sway in the new Argentinian political climate.\n\nFounded: §Y1930s§!\nIdeology:\n- Populism\n- Corporatist capitalism\n- Personality Cult\n- Reformism§!\n"
+ARG_paternal_autocrat_party:0 "LdJ (GOU)"
+ARG_paternal_autocrat_party_long:0 "Libertadores de Junio (Grupo de Oficiales Unidos)\n§gIt is a secret club that reflects and comprises 'the heart and soul of the military leadership.' It is also known as the Group of United Officers (GOU). Created during Julio Argentino Pascual Roca presidency in 1933 due to military opposition to possible peace treaty with Patagonian socialists.\n\nAlthough they oppose ex-President Roca's conciliatory stance with the FOP's 'godless socialists,' they are disillusioned of Carlés policies, viewing him as a 'dangerous radical,' and would prefer a firmer hand, one that has the backing of the Argentine people behind it...\n\nThis group has strong nationalist and Catholic ideas, as well as a strict neutrality approach to foreign policy, believing that Argentina should avoid wars with both regional powers such as Brazil and global players, be it Reichspakt, Entente, or even Internationale. Patagonia and socialist Chile are exceptions; reunification of the nation is one of their key goals, and failure to achieve it by the government might have catastrophic implications.\n\nFounded: §Y1933§!\nIdeology:\n- Militarism\n- Corporatist capitalism\n- Catholic conservatism§!\n"
+ARG_authoritarian_democrat_party:0 "PJ"
+ARG_authoritarian_democrat_party_long:0 "Partido Justicialista\n§gAlthough not a party they are an important group, they comprise Juan Domingo Perón's political network who themselves are only a few radical Argentine officers and some trade union leaders. Perón espouses a concept of a party in service of a strong and just leader who would unify the population into bringing about social justice, these ideas however marginal, hold great appeal to a population tired of political squabbling and sterile dictatorships. It remains to be seen whenether Perón's group hold any sway in the new Argentinian political climate.\n\nFounded: §Y1930s§!\nIdeology:\n- Populism\n- Corporatist capitalism\n- Personality Cult\n- Reformism§!\n"
 ARG_social_conservative_party:0 "UCRA"
 ARG_social_conservative_party_long:0 "Unión Cívica Radical Antipersonalista\n§gThe UCRA was part of a broad movement calling itself 'anti-personalist', which questioned the figure of Hipólito Yrigoyen (president from 1916-1922 / 1928-1930), whom they accused of being 'personalist' and undemocratic. Created in 1924 from a rupture within the UCR, In the 1928 elections, it presented the candidacy of Leopoldo Melo, who lost to Hipólito Yrigoyen, candidate of the UCR. Starting in 1932, it joined the coalition called the Concordancia that won the 1932 elections with Julio Argentino Pascual Roca becoming a president.\n\nFounded: §Y1924§!\nIdeology:\n- Conservatism\n- Capitalism\n- Democracy§!\n"
 ARG_social_democrat_party:0 "PDP"
 ARG_social_democrat_party_long:0 "Partido Demócrata Progresista\n§gAfter its creation in 1914, it gained some popularity and gained over 100,000 votes in the 1916 general elections. It became Argentina's third-most important party after the popular Radical Civic Union and the National Autonomist Party, battling the spot with the Socialist Party. After Uriburu's coup, the Democratic Progressive Party regained some popularity.\n\nFounded: §Y1914§!\nIdeology:\n- Social Democracy\n- Protectionism\n- Federalism§!\n"
 ARG_social_liberal_party:0 "UCR"
-ARG_social_liberal_party_long:0 "Unión Cívica Radical\n§gFounded on June 26th, 1891, the party quickly became influential over Argentine politics, causing the 1893 Radical Revolution and the 1905 Radical Revolution, which later led to reform in terms of election fraud. Two presidents of Argentina to be part of the Radical Civic Union were §YHipólito Yrigoyen§! and §YMarcelo Torcuato de Alvear§!.\n\nIn 1916 the Argentine General Election took place, being the first where the Roque Sáenz Peña Law was implemented, establishing universal, secret and compulsory male suffrage. Yrigoyen, candidate of the UCR, ended up winning the elections.\n\nHis tumultous presidency between 1916 - 1922, with the secession of Patagonia, had Marcelo Torcuato de Alvear replace him as the UCR candidate for the 1922 elections, which he won. Argentina saw slight economic improvement right until the British Revolution occurred, which led to the crash of April 1925. Despite this, Alvear ordered the navy to capture the Falkland Islands and South Georgia. This increased morale and trust in the government, but led to the radicalisation of the military which had been previously humiliated by the Patagonian Rebellion, and now stood in the shadow of the popular navy.\n\nIn 1928, Yrigoyen was surprisingly appointed as the Radical Civic's Union candidate for the general elections instead of the current and relatively popular Marcelo Alvear. Despite this, Yrigoyen won by a large margin, which led many to speculate that it was due to election fraud.\n\nYrigoyen's most important opposition was the military, which started planning a coup against him. This eventually happened on September 6th, 1930, as Uriburu, with support from Carlés and the LPA, took over and proclaimed himself president of Argentina, banning political parties, arresting democratic politicians and suspending the 1853 Constitution. Yrigoyen's supporters, called Yrigoyenists, were tortured alongside other political opponents of his regime. Yrigoyen himself was held under arrest at the Martín García Island.\n\nUriburu eventually died in early 1932, and Argentina went back to democracy under conservative politician Julio Argentino Pascual Roca. Yrigoyen died in 1933, and now Marcelo Torcuato de Alvear is leading the party.\n\nFounded: §Y1891§!\nIdeology:\n- Liberalism\n- Radicalism\n- Democracy§!\n"
+ARG_social_liberal_party_long:0 "Unión Cívica Radical\n§gFounded on June 26th, 1891, the party quickly became influential over Argentine politics, causing the 1893 Radical Revolution and the 1905 Radical Revolution, which later led to reform in terms of election fraud. Two presidents of Argentina to be part of the Radical Civic Union were §YHipólito Yrigoyen§! and §YMarcelo Torcuato de Alvear§!.\n\nIn 1916 the Argentine General Election took place, being the first where the Roque Sáenz Peña Law was implemented, establishing universal, secret and compulsory male suffrage. Yrigoyen, candidate of the UCR, ended up winning the elections.\n\nHis tumultous presidency between 1916 - 1922, with the secession of Patagonia, had de Alvear replace him as the UCR candidate for the 1922 elections, which he won. Argentina saw slight economic improvement right until the British Revolution occurred, which led to the crash of April 1925. Despite this, de Alvear ordered the navy to capture the Falkland Islands and South Georgia. This increased morale and trust in the government, but led to the radicalisation of the military which had been previously humiliated by the Patagonian Rebellion, and now stood in the shadow of the popular navy.\n\nIn 1928, Yrigoyen was surprisingly appointed as the Radical Civic's Union candidate for the general elections instead of the current and relatively popular Marcelo Torcuato de Alvear. Despite this, Yrigoyen won by a large margin, which led many to speculate that it was due to election fraud.\n\nYrigoyen's most important opposition was the military, which started planning a coup against him. This eventually happened on September 6th, 1930, as Uriburu, with support from Carlés and the LPA, took over and proclaimed himself president of Argentina, banning political parties, arresting democratic politicians and suspending the 1853 Constitution. Yrigoyen's supporters, called Yrigoyenists, were tortured alongside other political opponents of his regime. Yrigoyen himself was held under arrest at the Martín García Island.\n\nUriburu eventually died in early 1932, and Argentina went back to democracy under conservative politician Julio Argentino Pascual Roca. Yrigoyen died in 1933, and now de Alvear is leading the party.\n\nFounded: §Y1891§!\nIdeology:\n- Liberalism\n- Radicalism\n- Democracy§!\n"
 ARG_totalist_party:0 "TTT"
 ARG_totalist_party_long:0 "Totalismo, Trabajo, Templanza\n§gVery little is known about this party, it's mainly a satellite organization of Patagonia that has various strong ties with trade unions in Buenos Aires.§!\n"
 ARG_syndicalist_party:0 "La Internacional"
@@ -46,8 +46,8 @@ POLITICS_MIGUEL_DE_ANDREA_DESC:0 "Miguel de Andrea began his career after being 
 ### Tooltips ###
 RG_GER_trade_treaty_default_tt: "§GWe will get the full effects of the treaty after it's ratified in Buenos Aires§!"
  ARG_GER_trade_treaty_harsh_tt: "§RBuenos Aires may decide to shift its interests elsewhere but if they agree the bonus will be substantial§!"
- ARG_CAN_trade_deal: "§cArgentine-Canadian Trade Agreement§!"
- ARG_GER_trade_deal: "§gArgentine-German Trade Agreement§!"
+ ARG_CAN_DEAL: "§cArgentine-Canadian Trade Agreement§!"
+ ARG_GER_DEAL: "§gArgentine-German Trade Agreement§!"
  ARG_unlock_ideas_tt: "§gUnlocks the following idea:§!"
  ARG_deisions_grant_railways_tooltip: "§gUnlocks decisions to expand our §GRailways§!§!"
  ARG_deisions_grant_steel_tooltip: "§6Unlocks decisions to increase our £GFX_steel_texticon §GSteel§! and £GFX_tungsten_texticon §GTungsten§! production§!"
@@ -64,11 +64,11 @@ RG_GER_trade_treaty_default_tt: "§GWe will get the full effects of the treaty a
  ARG_jujuy_rail_finished: "Project Jujuy has finished"
  ARG_Mendoza_Rail_finished: "Project Mendoza has finished"
  ARG_has_black_monday_tt: "Black Monday no longer plagues our nation"
+ ARG_rio_negro_FOP: "northern government now demands"
+ ARG_rio_negro_ARG: "southern rebels and their Chilean backers now demand"
  
 ARG_GER_Treaty:0 "§GWe will get the full effects of the treaty after it's ratified in Buenos Aires§!"
 ARG_GER_Treaty_Tough_Boy:0 "§RBuenos Aires may decide to shift its interests elsewhere but if they agree the bonus will be substantial§!"
-ARG_CAN_DEAL:0 "Argentinean-Canadian Trade Agreement"
-ARG_GER_DEAL:0 "Argentinean-German Trade Agreement"
 ARG_BORDER_CONFLICT:0 "Triggers a §YBorder Conflict§! with the §RFOP§!\n"
 ARG_INFRA:0 "Unlocks §YDecisions§! to expand our §GInfrastructure§!"
 ARG_STEEL:0 "Unlocks §YDecisions§! to reduce our reliance on foreign §GSteel§! production"
@@ -76,8 +76,6 @@ ARG_WEAP:0 "Unlocks §YDecisions§! to purchase foreign equipment"
 ROS_TAKEN:0 "§YRosario has fallen§!"
 COAL_SUCCES:0 "Preliminary studies have proven successful"
 COAL_SUCCES2:0 "Coal mining has started"
-ARG_Failure_Five_Year_Plan:0 "§RFailing to achieve the goals of the 5 Year Plan will be seen as a sign of weakness by the opposition§!\n\n"
-ARG_Succes_Five_Year_Plan:0 "§GBy completing the 5 Year Plan successfully, we are showing the world that Argentina should not be trifled with and prove our industrial prowess§!\n\n"
 TUC_RAIL:0 "Project Tucuman has finished"
 SAN_RAIL:0 "Project Santiago has finished"
 JUJ_RAIL:0 "Project Jujuy has finished"
@@ -170,9 +168,6 @@ ARG_Armada:0 "Armada Argentina"
 
 ARG_Safeguarding_Democracy:0 "Safeguarding Democracy"
 argentina_dwm:0 "DWM Argentina"
-
- argentina_krupp: "Krupp Argentina"
- argentina_focke_wulf: "Focke-Wulf Argentina"
 
  ARG_cheaper_guns_against_fop: "Emergency Rifles Production"
  ARG_upgrade_current_army_idea: "Upgrade current army idea:"
@@ -523,7 +518,7 @@ ARG_Comando_de_Infanteria_de_Marina:0 "Comando de Infanteria de Marina"
 ARG_Comando_de_Infanteria_de_Marina_desc:0 "While the Argentinean Marines haven't had many chances to prove their worth, the exploits of Captain Hipólito Bouchard back in the day have proven the value of a landing force. If we ever hope to match and surpass other modern marine forces, we need to expand our separate command for our Marines, the 'Comando de la Infanteria de Marina'"
 ARG_Oficina_Central_de_Hidrografia:0 "Oficina Central de Hidrografía"
 ARG_Oficina_Central_de_Hidrografia_desc:0 "In naval warfare, it's not just about having better ships and officers. We need to expand the Oficina Central de Hidrografía (Central Office of Hydrography) in order to better analyse weather, naval geology, oceanography and nautical cartography not just of our home waters but also those of our enemies. Our enemies will find we're at home wherever we may encounter them."
-ARG_Rule_Britannia_Britannia_Rules_the_Waves:0 "Irse a Pique Antes que Rendir el Pabellón!"
+ARG_Rule_Britannia_Britannia_Rules_the_Waves:0 "¡Irse a Pique Antes que Rendir el Pabellón!"
 ARG_Rule_Britannia_Britannia_Rules_the_Waves_desc:0 "'We'll go to the bottom before surrendering our ensign!' was the battle cry Admiral Guillermo Brown gave before going into the fray at the battle of Quilmes in 1826 against the Brazilian navy. Our navy shall reflect his patriotic spirit, and every crew will give everything they got before surrendering our country to the enemy!"
 
 #Decisions
@@ -541,10 +536,7 @@ ARG_La_Mesopotamia_Rail: "Project La Mesopotamia"
 
 ARG_Tucuman_Rail:0 "Project Tucuman"
 ARG_Santiago_Rail:0 "Project Santiago"
-ARG_jujuy_Rail:0 "Project Jujuy"
 ARG_la_rioja_Rail:0 "Project La Rioja"
-ARG_Five_Year_mission:0 "Completion of the Five-Year Plan"
-ARG_Vina_Dam_mission:0 "La Viña Dam construction project"
 
 ARG_immigration_decisions:0 "European Immigration"
 ARG_immigration_decisions_desc:0 "The collapse of nations all over Europe after the Weltkrieg and the rising tensions between the socialist block of the Internationale and the rest of Europe have given rise to an increased level of immigration towards our great nation. Further crises throughout the continent could even further boost these numbers and could prove an opportunity to further boost our population.\n\nProjected Immigration Report for [GetYear] : §G[?ARG.arg_im_factor]%§!"
@@ -579,8 +571,6 @@ ARG_autarky_decisions_desc:0 "While the agricultural power of our nation goes wi
 
 ARG_Universidad_Tecnologica_Nacional:0 "Found the Universidad Tecnológica Nacional"
 ARG_Preliminary_excavation_studies:0 "Preliminary excavation studies"
-ARG_Coal_Mining:0 "Expand Coal Mining"
-ARG_Found_Acindar:0 "Found Acindar"
 ARG_Purchase_German_Railways:0 "Purchase German Railway Companies"
 ARG_Purchase_Canadian_Railways:0 "Purchase Canadian Railway Companies"
 ARG_Seize_Canadian_Railways:0 "Seize Canadian Railway Companies"
@@ -601,12 +591,6 @@ ARG_Takeover_Buenos_Aires_Transportation_Company:0 "Takeover of the CTCBA"
 
 ARG_diplomacy_decisions:0 "Foreign Policy"
 
-ARG_Pressuring_Uruguay:0 "Pressure Uruguay"
-ARG_Pressuring_Uruguay_desc:0 "As the Brazilian grip on the region has suddenly become ideologically opposed to that of Uruguay, we should offer them our protection to deter any possible Brazilian escapades."
-ARG_Joining_the_Reichspakt:0 "Apply for the Reichspakt"
-ARG_Joining_the_Entente:0 "Apply for the Entente"
-
-ARG_companies_decisions:0 "Import Foreign Equipment"
 
 ARG_Belgian_Artillery:0 "Import FRC Artillery"
 ARG_German_Guns:0 "Import Mauser Machine Guns"
@@ -682,6 +666,8 @@ ARG_Fokker:0 "Has completed decision £decision_icon_small §HImport Fokker Plan
  ARG_secure_central_america_tt: "Enable decisions to topple socialist regimes in §YCentral America§!."
  ARG_south_america_under_control_tt: "All countries in §YSouth America§!:\n   Is in faction with §YArgentina§!"
 ARG_wargoals_america_tt:0 "Gains §GWargoals§! on all [USA.GetNameWithFlag] §YAmerican States§!"
+argentinian_sphere_faction: "Argentinian Sphere"
+ARG_ties_with_peru_effect_tt: "§7We will ask Peru to turn the §YPact of Lima§! into a military alliance or will create our own faction if Peru can't or won't join our faction.§!"
 
 #Events
 ## Military ##
@@ -701,7 +687,7 @@ argmil.13.t:0 "Fighting in Buenos Aires"
 argmil.13.d:0 "Increasing aversion between the military branches of our army came to blows last night in Buenos Aires when a group of drunk ARA sailors encountered a military patrol. Arguments surrounding the recent budget cuts for the navy led to a fistfight between the two parties and was quickly followed up by further soldiers joining in. Gendarmería eventually broke up the fights and placed the perpetrators in custody but all help came too late for one of the sailors who died of his injuries 3 hours later in the hospital."
 argmil.13.a:0 "Troubling."
 
-argmil.20.t:0 "Lack of funding in the Army"
+argmil.20.t:0 "Lack of Funding in the Army"
 argmil.20.d:0 "Recent government adjustments to the military budget have brought our Army spending down to dangerous levels. While this has greatly empowered the ARA and the development of new warships, officers from the Army have warned us that further pulling down the budget could have dangerous consequences on the prowess of our land forces and could open us up to foreign invasions."
 argmil.20.a:0 "Troubling."
 
@@ -722,7 +708,7 @@ argmil.24.d:0 "In a general staff meeting at El Palomar military base, General J
 argmil.24.a:0 "Let's hope this doesn't become a common occurrence."
 
 ## War in the Southern Cone ##
-southern.4.t:0 "Intervention in the Argentinean-Chilean war?"
+southern.4.t:0 "Intervention in the Argentinean-Chilean War?"
 southern.4.d:0 "Argentina has kicked off the Argentinean-Chilean war by invading the FOP rebels in Patagonia. Being occupied in the South with the insurgents, this has presented us with the perfect opportunity to retake the Chaco Austral!"
 southern.4.a:0 "Attack!"
 southern.4.b:0 "We would rather not anger Argentina."
@@ -731,13 +717,13 @@ southern.5.t:0 "Paraguay Invades!"
 southern.5.d:0 "The filthy Paraguayan dogs have smelled their chance and decided to invade us in the back to retake the Chaco Austral!"
 southern.5.a:0 "Jackals!"
 
-southern.6.t:0 "Intervention in the Argentinean-Paraguayan war?"
+southern.6.t:0 "Intervention in the Argentinean-Paraguayan War?"
 southern.6.d:0 "Argentina has kicked off the Argentinean-Chilean war by invading the FOP rebels in Patagonia which was promptly followed by a declaration of war by the Paraguayans. Since they are aware that we hold claims on various territories of Paraguay and Chile, they have requested us to support them in the fight and be rewarded with our claims should our alliance win."
 southern.6.a:0 "Attack Paraguay!"
 southern.6.b:0 "We shall attack Paraguay AND Chile!"
 southern.6.c:0 "We seek no conflict."
 
-southern.7.t:0 "Bolivia Joins on Our side!"
+southern.7.t:0 "Bolivia Joins on Our Side!"
 southern.7.d:0 "To support us in the fight against the despicable syndicalists and their red cronies in Chile, Bolivia has also declared war on [BOL.BOL_enemies_text], pledging their full support for our cause."
 southern.7.a:0 "Hurray!"
 
@@ -760,7 +746,7 @@ southern.10.d:0 "As the last defenders are driven out of Asunción, the Paraguay
 southern.10.a:0 "Cede the Chaco Boreal to Bolivia."
 southern.10.b:0 "All of Paraguay belongs to us!"
 
-southern.11.t:0 "Argentina refuses to cede Chaco Boreal"
+southern.11.t:0 "Argentina Refuses to Cede Chaco Boreal"
 southern.11.d:0 "Even though we carried their pathetic force through the bloody war, the Argentinians have the guts to refuse to return the Chaco Boreal to its rightful owner. Our populace is rightfully furious and is clamouring the government to press our claims, by war if necessary."
 southern.11.a:0 "Death to Argentina!"
 southern.11.b:0 "They do have a bigger army..."
@@ -876,6 +862,11 @@ argfor.16.a:0 "Oh no!"
 argfor.17.t:0 "Uruguay Accepts Our 'Protection'"
 argfor.17.d:0 "Likely feeling threathened by our military might, the regime in Montevideo has wisely decided to fold their cards and accept our protection. Once more the Republic achieves a massive victory!"
 argfor.17.a:0 "Huzzah!"
+
+argfor.400.t:0 "[ARG.GetNameDefCap] Demands Us To Join Their Faction"
+argfor.400.d:0 "With Brazil being subjugated by [ARG.GetNameDefCap], the balance of power in South America has radically changed. They are the strongest power on the continent now, and they abuse this status, demanding us to join their faction. This can provide us protection from possible threats, but this will mean aligning with ultra-nationalist Argentinian regime. They made their demands clear, and if we refuse, the invasion is imminent. What should we do?"
+argfor.400.a:0 "We are in no position to contest Argentina."
+argfor.400.b:0 "'Let them come.'"
 
 ## Immigration ##
 argim.1.t:0 "Immigration Report 1936"
@@ -1185,7 +1176,7 @@ argcar.39.d:0 "Pressure from Germany is increasing by the day forcing us to take
 argcar.39.a:0 "Germany needs our assistance."
 argcar.39.b:0 "We have to remain neutral."
 
-argcar.40.t:0 "GOU Pressures Ramírez to not Intervene"
+argcar.40.t:0 "GOU Pressures Ramírez to Not Intervene"
 argcar.40.d:0 "Unwilling to join the war and risk a possible renewed friction with Entente relations, the GOU who had sworn to support the president at all times has dissolved ... and the next day recreated without the oath to pressure Ramirez in remaining neutral or risk being forced to resign. Ramírez, unwilling to back down now and risk the anger of German diplomats has not yet taken a decision but must do so quickly if he wishes to remain in power. His own vice-president, Edelmiro Farrell has expressed his desire to stay neutral and could provide a thorn in our side, should we join the Germans in their war."
 argcar.40.a:0 "Give in to the new GOU."
 argcar.40.b:0 "Demand the resignation of Farrell."
@@ -1199,7 +1190,7 @@ argcar.41.d:0 "In response to Ramirez's demand for his resignation, Farrell has 
 argcar.41.a:0 "General Eduardo Ávalos frees Ramírez."
 argcar.41.b:0 "Ramírez resigns."
 
-argcar.42.t:0 "Middle Class Protests against Farrell"
+argcar.42.t:0 "Middle Class Protests Against Farrell"
 argcar.42.d:0 "Disgusted by the reforms pushed through by Farrell and his new Vice President Peron, the largest protest march in the history of Argentina was held today. The March for Freedom and the Constitution, which marched from Congress to the Recoleta neighbourhood in Buenos Aires consisted of over 200.000 opponents of the Farrell/Peron duo, mostly members of the middle and upper class who were discontented with the rise of the new working class through the so-called Peronist reforms.\n\nFor the first time, however, multiple sides of the social and political spectrum united with a common purpose and marched for the reinstatement of democracy and the abolition of the military dictatorship. A heavy blow to the legitimacy of Farrell, many fear that the slumbering military cells opposed to the new direction of the government could wake up and attempt to overthrow the president."
 argcar.42.a:0 "Will the government fall yet again?"
 

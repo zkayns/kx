@@ -201,6 +201,10 @@ spriteTypes = {
 	### Generic Ideas ###
 
 	spriteType = {
+		name = "GFX_idea_advisors_CHI"
+		texturefile = "gfx/interface/ideas/ideas/advisors_CHI.png"
+	}
+	spriteType = {
 		name = "GFX_idea_advisors_BAT"
 		texturefile = "gfx/interface/ideas/ideas/advisors_BAT.png"
 	}
@@ -361,6 +365,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ideas/advisors_ireland.png"
 	}
 	spriteType = {
+		name = "GFX_idea_advisors_ireland_monarchist"
+		texturefile = "gfx/interface/ideas/ideas/advisors_ireland_monarchist.png"
+	}
+	spriteType = {
 		name = "GFX_idea_advisors_albania"
 		texturefile = "gfx/interface/ideas/ideas/advisors_albania.png"
 	}
@@ -395,6 +403,42 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_IRE_advisors"
 		texturefile = "gfx/interface/ideas/ideas/IRE_advisors.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_australasia"
+		texturefile = "gfx/interface/ideas/advisors_australasia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_australia"
+		texturefile = "gfx/interface/ideas/advisors_australia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_new_zealand"
+		texturefile = "gfx/interface/ideas/advisors_new_zealand.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_tibet"
+		texturefile = "gfx/interface/ideas/advisors_tibet.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_china_beiyang"
+		texturefile = "gfx/interface/ideas/ideas/advisors_china_beiyang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_china_qing"
+		texturefile = "gfx/interface/ideas/ideas/advisors_china_qing.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_china_beiyang_zhili"
+		texturefile = "gfx/interface/ideas/ideas/advisors_china_beiyang_zhili.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_china_league"
+		texturefile = "gfx/interface/ideas/ideas/advisors_china_league.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_china_zhili"
+		texturefile = "gfx/interface/ideas/ideas/advisors_china_zhili.png"
 	}
 	spriteType = {
 		name = "GFX_idea_death_men"
@@ -563,5 +607,25 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_broken_champagne"
 		texturefile = "gfx/interface/ideas/ideas/generic_broken_champagne.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_enigma_machine"
+		texturefile = "gfx/interface/ideas/ideas/generic_enigma_machine.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_government_reconciliation"
+		texturefile = "gfx/interface/ideas/ideas/generic_government_reconciliation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_high_literacy"
+		texturefile = "gfx/interface/ideas/ideas/generic_high_literacy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_low_literacy"
+		texturefile = "gfx/interface/ideas/ideas/generic_low_literacy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_shackles"
+		texturefile = "gfx/interface/ideas/ideas/generic_shackles.png"
 	}
 }

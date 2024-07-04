@@ -410,10 +410,6 @@ focus_tree = {
 			factor = 75
 		}
 		
-		available = {
-			has_global_flag = balkan_war_ended
-		}
-		
 		prerequisite = {
 			focus = BUL_rifles_for_civilians
 			focus = BUL_reopen_closed_civilian_industry
@@ -457,11 +453,6 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 75
-		}
-		
-		#Bulgaria has lots of biodiversity.
-		available = {
-			has_global_flag = balkan_war_ended
 		}
 		
 		prerequisite = {
@@ -3519,8 +3510,8 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				soviets_exist = yes
 				RUS = { 
+					has_country_flag = soviet_russia_restored
 					NOT = { is_in_faction_with = INT }
 				}
 			}
@@ -3540,9 +3531,9 @@ focus_tree = {
 		available = {
 			BUL_has_socialist_rule = yes
 			is_subject = no
-			soviets_exist = yes
 			country_exists = RUS
 			RUS = { 
+				has_country_flag = soviet_russia_restored
 				NOT = { is_in_faction_with = INT }
 			}
 		}
@@ -4507,9 +4498,9 @@ focus_tree = {
 			add_political_power = 50
 			custom_effect_tooltip = BUL_unlock_reconciliation_dec
 			hidden_effect = {
-				remove_opinion_modifier = { target = ROM modifier = embargo }
-				remove_opinion_modifier = { target = SER modifier = embargo }
-				remove_opinion_modifier = { target = GRE modifier = embargo }
+				ROM = { clear_embargo_PREV = yes }
+				SER = { clear_embargo_PREV = yes }
+				GRE = { clear_embargo_PREV = yes }
 			}
 		}
 	}
@@ -5546,7 +5537,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_ideas = BUL_zveno_corporatism_idea
-			
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
 		}
 	}
 
@@ -5593,7 +5589,7 @@ focus_tree = {
 			ideology = market_liberal
 			popularity = -0.1 
 			}
-			
+			add_stability = 0.06
 		}
 	}
 
@@ -5678,6 +5674,21 @@ focus_tree = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state ={
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -5787,7 +5798,7 @@ focus_tree = {
 	#Full Militarization of Society
 	focus = {
 		id = BUL_full_militarization_of_society
-		icon = GFX_goal_BUL_valor_and_honor
+		icon = GFX_goal_NIC_Military_Industry
 		cost = 5
 		prerequisite = { focus = BUL_the_bulgarian_race }
 		available = {
@@ -5991,6 +6002,21 @@ focus_tree = {
 		y = 1
 		available = {
 			is_subject = no
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				TUR = { dont_start_major_faction_wars = yes }
+			}
+			modifier = {
+				factor = 0
+				TUR = { default_attack_AI_trigger_FROM = yes }
+			}
 		}
 		completion_reward = {
 			create_wargoal = { 
@@ -6625,7 +6651,7 @@ focus_tree = {
 	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_a_khan_reborn"
-			declare_war_on = {
+			create_wargoal = {
 				target = SER
 				type = annex_everything
 			}
@@ -7030,7 +7056,7 @@ focus_tree = {
 					}
 				}
 				BUL = {
-					declare_war_on = {
+					create_wargoal = {
 						target = PREV
 						type = annex_everything
 					}
@@ -7046,7 +7072,7 @@ focus_tree = {
 						}
 					}
 				}
-				declare_war_on = {
+				create_wargoal = {
 					target = MTR
 					type = annex_everything
 				}
@@ -7061,7 +7087,7 @@ focus_tree = {
 						}
 					}
 				}
-				declare_war_on = {
+				create_wargoal = {
 					target = KLY
 					type = annex_everything
 				}
@@ -7076,7 +7102,7 @@ focus_tree = {
 						}
 					}
 				}
-				declare_war_on = {
+				create_wargoal = {
 					target = KUB
 					type = annex_everything
 				}
@@ -7113,7 +7139,8 @@ focus_tree = {
 		}
 		
 		available = {
-			NOT = {
+			OR = {
+				NOT = {
 				owns_state = 234
 				owns_state = 137
 				owns_state = 1220
@@ -7121,6 +7148,7 @@ focus_tree = {
 				owns_state = 203
 				owns_state = 227
 				owns_state = 218
+				}
 			}
 			is_subject = no
 			has_government = national_populist
@@ -7145,7 +7173,7 @@ focus_tree = {
 					}
 				}
 				BUL = {
-					declare_war_on = {
+					create_wargoal = {
 						target = PREV
 						type = annex_everything
 					}
@@ -7467,10 +7495,9 @@ focus_tree = {
 				}
 				
 				create_country_leader = {
-					name = "Gajaz Ishaki"
-					desc = "POLITICS_ISHAKI_DESC"
-					picture = "gfx/leaders/BUL/BUL_Gajaz_Ishaki.png"
-					expire = "1965.1.1"
+					name = "Ayaz İshaki"
+					picture = "gfx/leaders/TTR/Portrait_TTR_Ayaz_Ishaki.png"
+					expire = "1.1.1"
 					ideology = natpop_neo_feudalism_subtype
 				}
 			}
@@ -7500,7 +7527,7 @@ focus_tree = {
 		bypass = {
 			NOT = {
 				country_exists = RUS
-				soviets_exist = yes
+				RUS = { has_country_flag = soviet_russia_restored }
 			}
 		}
 		available = {
@@ -7532,7 +7559,7 @@ focus_tree = {
 					}
 				}
 				BUL = {
-					declare_war_on = {
+					create_wargoal = {
 						target = PREV
 						type = annex_everything
 					}
@@ -7600,9 +7627,8 @@ focus_tree = {
 			hidden_effect = {
 				create_country_leader = {
 					name = "Khan Kubrat II"
-					desc = "POLITICS_ISHAKI_DESC"
-					picture = "gfx/leaders/BUL/BUL_Gajaz_Ishaki.png"
-					expire = "1965.1.1"
+					picture = "gfx/leaders/BUL/Portrait_BUL_NS_Derzhavin.png"
+					expire = "1.1.1"
 					ideology = natpop_neo_feudalism_subtype
 					traits = {
 						
@@ -7628,848 +7654,4 @@ focus_tree = {
 			}
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	#focus = {
-	#	id = BUL_bulgarist_liberators
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 16
-	#	y = 8
-	#	cost = 5
-	#	
-	#	mutually_exclusive = {
-	#		focus = BUL_ideals_of_bulgarism
-	#	}
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		add_ideas = BUL_bulgarian_destiny
-	#		create_country_leader = {
-	#			name = "Gajaz Ishaki"
-	#			desc = "POLITICS_ISHAKI_DESC"
-	#			picture = "gfx/leaders/BUL/BUL_Gajaz_Ishaki.png"
-	#			expire = "1965.1.1"
-	#			ideology = authoritarian_democrat_subtype
-	#		}
-	#		set_party_name = { 
-	#			ideology = authoritarian_democrat
-	#			long_name = bulgarist_party_long 
-	#			name = bulgarist_party 
-	#		}
-	#		set_politics = {
-	#			ruling_party = authoritarian_democrat
-	#		}
-	#		add_popularity = {
-	#			ideology = authoritarian_democrat
-	#			popularity = 0.25
-	#		}
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_new_tatar_homeland
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 18
-	#	y = 9
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_bulgarist_liberators
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		add_political_power = 100
-	#		add_ideas = BUL_tatar_homes
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_tatarstan
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 17
-	#	y = 10
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_convince_bulgarians
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_new_tatar_homeland
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		set_cosmetic_tag = BUL_new_tatarstan
-	#		add_political_power = 50
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_mobilize_tatarstan
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 17
-	#	y = 11
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_tatarstan
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		add_ideas = BUL_tatar_mobilization
-	#		
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = arms_factory
-	#				level = 2
-	#				instant_build = yes
-	#			}
-	#			add_extra_state_shared_building_slots = 2
-	#		}
-	#		
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = arms_factory
-	#				level = 2
-	#				instant_build = yes
-	#			}
-	#			add_extra_state_shared_building_slots = 2
-	#		}
-	#	}
-	#}
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#focus = {
-	#	id = BUL_convince_bulgarians
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 14
-	#	y = 9
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_bulgarist_liberators
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		add_stability = 0.1
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = infrastructure
-	#				level = 2
-	#				instant_build = yes
-	#			}
-	#		}
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = infrastructure
-	#				level = 2
-	#				instant_build = yes
-	#			}
-	#		}
-	#		hidden_effect = {
-	#			country_event = kxbul.19
-	#		}
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_assure_bulgarian_culture
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 14
-	#	y = 10
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_convince_bulgarians
-	#	}
-	#	prerequisite = {
-	#		focus = BUL_new_tatar_homeland
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		add_stability = 0.05
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = industrial_complex
-	#				level = 1
-	#				instant_build = yes
-	#			}
-	#			add_extra_state_shared_building_slots = 1
-	#		}
-	#		
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = industrial_complex
-	#				level = 1
-	#				instant_build = yes
-	#			}
-	#			add_extra_state_shared_building_slots = 1
-	#		}
-	#		
-	#		add_popularity = {
-	#			ideology = authoritarian_democrat
-	#			popularity = 0.1
-	#		}
-	#		
-	#		add_state_core = 106
-	#		add_state_core = 841
-	#		add_state_core = 77
-	#		add_state_core = 772
-	#		add_state_core = 731
-	#		
-	#		if = {
-	#			limit = {
-	#				NOT = {
-	#					owns_state = 769
-	#				}
-	#			}
-	#			add_state_core = 769
-	#		}
-	#		
-	#		if = {
-	#			limit = {
-	#				NOT = {
-	#					owns_state = 1089
-	#				}
-	#			}
-	#			add_state_core = 1089
-	#		}
-	#		
-	#		if = {
-	#			limit = {
-	#				NOT = {
-	#					owns_state = 184
-	#				}
-	#			}
-	#			add_state_core = 184
-	#		}
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_show_serbia_boss
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 13
-	#	y = 11
-	#	cost = 5
-	#	
-	#	will_lead_to_war_with = SER
-	#	
-	#	bypass = {
-	#		NOT = {
-	#			country_exists = SER
-	#		}
-	#	}
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_assure_bulgarian_culture
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		declare_war_on = {
-	#			target = SER
-	#			type = annex_everything
-	#		}
-	#		add_war_support = 0.15
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_whap_romania
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 12
-	#	y = 12
-	#	cost = 5
-	#	
-	#	will_lead_to_war_with = ROM
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_show_serbia_boss
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		declare_war_on = {
-	#			target = ROM
-	#			type = annex_everything
-	#		}
-	#		add_war_support = 0.1
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_thwap_greece
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 14
-	#	y = 12
-	#	cost = 5
-	#	
-	#	will_lead_to_war_with = GRE
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_show_serbia_boss
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		declare_war_on = {
-	#			target = GRE
-	#			type = annex_everything
-	#		}
-	#		add_war_support = 0.1
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_turk_homeland
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 13
-	#	y = 13
-	#	cost = 5
-	#	
-	#	will_lead_to_war_with = TUR
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#		OR = {
-	#			NOT = {
-	#				country_exists = SER
-	#			}
-	#			SER = {
-	#				is_puppet_of = BUL
-	#			}
-	#		}
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_show_serbia_boss
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_prove_our_worth
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		if = {
-	#			limit = {
-	#				country_exists = TUR
-	#			}
-	#			declare_war_on = {
-	#				target = TUR
-	#				type = annex_everything
-	#			}
-	#		}
-	#		
-	#		if = {
-	#			limit = {
-	#				country_exists = TUR
-	#			}
-	#			declare_war_on = {
-	#				target = TUR
-	#				type = annex_everything
-	#			}
-	#		}
-	#		add_war_support = 0.1
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_other_turks
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 13
-	#	y = 14
-	#	cost = 5
-	#	
-	#	will_lead_to_war_with = TRK
-	#	will_lead_to_war_with = ALO
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#		NOT = {
-	#			country_exists = TUR
-	#			country_exists = TUR
-	#		}
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_turk_homeland
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		if = {
-	#			limit = {
-	#				country_exists = ALO
-	#				ALO = {
-	#					is_puppet = no
-	#				}
-	#			}
-	#			declare_war_on = {
-	#				target = ALO
-	#				type = annex_everything
-	#			}
-	#		}
-	#		
-	#		if = {
-	#			limit = {
-	#				country_exists = TRK
-	#			}
-	#			declare_war_on = {
-	#				target = TRK
-	#				type = annex_everything
-	#			}
-	#		}
-	#		add_war_support = 0.1
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_prussia_of_the_balkans
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 15
-	#	y = 11
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_assure_bulgarian_culture
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		add_ideas = BUL_prussia_of_the_balkans_idea
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_prove_our_worth
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 16
-	#	y = 12
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_prussia_of_the_balkans
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_mobilize_tatarstan
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		remove_ideas = BUL_mobilize_tatarstan
-	#		swap_ideas = {
-	#			add_idea = BUL_tatar_prussians
-	#			remove_idea = BUL_prussia_of_the_balkans_idea
-	#		}
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_prosperity_for_tatarstan
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 16
-	#	y = 14
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_prove_our_worth
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = infrastructure
-	#				level = 3
-	#				instant_build = yes
-	#			}
-	#			add_extra_state_shared_building_slots = 2
-	#		}
-	#		
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = infrastructure
-	#				level = 3
-	#				instant_build = yes
-	#			}
-	#			add_extra_state_shared_building_slots = 2
-	#		}
-	#		
-	#		random_owned_state = {
-	#			add_building_construction = {
-	#				type = infrastructure
-	#				level = 3
-	#				instant_build = yes
-	#			}
-	#			add_extra_state_shared_building_slots = 2
-	#		}
-	#		
-	#		random_owned_state = {
-	#			add_resource = {
-	#				type = steel
-	#				amount = 10
-	#			}
-	#		}
-	#		
-	#		random_owned_state = {
-	#			add_resource = {
-	#				type = tungsten
-	#				amount = 10
-	#			}
-	#		}
-	#		
-	#		country_event = kxbul.18
-	#		add_ideas = BUL_tatar_bulgarian_unity_idea
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_buy_equipment
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 15
-	#	y = 16
-	#	cost = 5
-	#	
-	#	bypass = {
-	#		has_completed_focus = BUL_join_austria
-	#		has_completed_focus = BUL_join_germany
-	#		is_in_faction = no
-	#	}
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#		has_political_power > 150
-	#		is_in_faction = yes
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_prosperity_for_tatarstan
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		if = {
-	#			limit = {
-	#				is_in_faction_with = AUS
-	#			}
-	#			add_equipment_to_stockpile = {
-	#				type = small_plane_airframe
-	#				amount = 100
-	#				producer = AUS
-	#			}
-	#			
-	#			add_equipment_to_stockpile = {
-	#				type = small_plane_cas_airframe
-	#				amount = 100
-	#				producer = AUS
-	#			}
-	#			
-	#			add_equipment_to_stockpile = {
-	#				type = light_tank_equipment
-	#				amount = 250
-	#				producer = AUS
-	#			}
-	#		}
-	#		
-	#		if = {
-	#			limit = {
-	#				is_in_faction_with = GER
-	#			}
-	#			add_equipment_to_stockpile = {
-	#				type = small_plane_airframe
-	#				amount = 100
-	#				producer = GER
-	#			}
-	#			
-	#			add_equipment_to_stockpile = {
-	#				type = small_plane_cas_airframe
-	#				amount = 100
-	#				producer = GER
-	#			}
-	#			
-	#			add_equipment_to_stockpile = {
-	#				type = light_tank_equipment
-	#				amount = 250
-	#				producer = GER
-	#			}
-	#		}
-	#		
-	#		if = {
-	#			limit = {
-	#				is_in_faction = no
-	#			}
-	#			add_equipment_to_stockpile = {
-	#				type = small_plane_airframe
-	#				amount = 100
-	#				producer = BUL
-	#			}
-	#			
-	#			add_equipment_to_stockpile = {
-	#				type = small_plane_cas_airframe
-	#				amount = 100
-	#				producer = BUL
-	#			}
-	#			
-	#			add_equipment_to_stockpile = {
-	#				type = light_tank_equipment
-	#				amount = 250
-	#				producer = BUL
-	#			}
-	#		}
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_defend_tatarstan
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 17
-	#	y = 16
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_war = yes
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_prosperity_for_tatarstan
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		add_ideas = BUL_defense_of_tatarstan
-	#	}
-	#}
-	#
-	#
-	#
-	#focus = {
-	#	id = BUL_join_germany
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 15
-	#	y = 13
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#		GER = {
-	#			is_faction_leader = yes
-	#		}
-	#		is_in_faction = no
-	#	}
-	#	
-	#	mutually_exclusive = {
-	#		focus = BUL_join_austria
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_prussia_of_the_balkans
-	#		focus = BUL_mobilize_tatarstan
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		GER = {
-	#			country_event = {
-	#				id = kxbul.16
-	#				days = 3
-	#			}
-	#		}
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_join_austria
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 17
-	#	y = 13
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#		AUS = {
-	#			is_faction_leader = yes
-	#		}
-	#		is_in_faction = no
-	#	}
-	#	
-	#	mutually_exclusive = {
-	#		focus = BUL_join_germany
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_prussia_of_the_balkans
-	#		focus = BUL_mobilize_tatarstan
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		AUS = {
-	#			country_event = {
-	#				id = kxbul.16
-	#				days = 3
-	#			}
-	#		}
-	#	}
-	#}
-	#
-	#focus = {
-	#	id = BUL_final_boss
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 13
-	#	y = 15
-	#	cost = 5
-	#	
-	#	available = {
-	#		has_country_flag = BUL_still_based_path
-	#		OR = {
-	#			country_exists = RUS
-	#			soviets_exist = yes
-	#		}
-	#	}
-	#	
-	#	ai_will_do = {
-	#		factor = 0
-	#	}
-	#	
-	#	prerequisite = {
-	#		focus = BUL_other_turks
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		if = {
-	#			limit = {
-	#				country_exists = RUS
-	#			}
-	#			declare_war_on = {
-	#				target = RUS
-	#				type = annex_everything
-	#			}
-	#		}
-	#		
-	#		if = {
-	#			limit = {
-	#				soviets_exist = yes
-	#			}
-	#			declare_war_on = {
-	#				target = SOV
-	#				type = annex_everything
-	#			}
-	#		}
-	#	}
-	#}
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#focus = {
-	#	id = BUL_tatarstan_invicta
-	#	icon = GFX_goal_BUL_restore_volga_bulgaria
-	#	x = 16
-	#	y = 15
-	#	cost = 5
-	#	
-	#	prerequisite = {
-	#		focus = BUL_prosperity_for_tatarstan
-	#	}
-	#
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
-	#		add_political_power = 200
-	#		add_popularity = {
-	#			ideology = authoritarian_democrat
-	#			popularity = 0.3
-	#		}
-	#		army_experience = 50
-	#	}
-	#}
 }
-

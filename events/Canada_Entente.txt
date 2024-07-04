@@ -4494,7 +4494,7 @@ country_event = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_AST_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authoritarian_democrat_subtype
 			female = yes
 		}
@@ -4502,7 +4502,7 @@ country_event = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_AST_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			female = yes
 		}
@@ -4510,7 +4510,7 @@ country_event = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_AST_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_liberal_subtype
 			female = yes
 		}
@@ -4518,7 +4518,7 @@ country_event = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_AST_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = market_liberal_subtype
 			female = yes
 		}
@@ -4526,7 +4526,7 @@ country_event = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_AST_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_conservative_subtype
 			female = yes
 		}
@@ -4534,7 +4534,7 @@ country_event = {
 			name = "Princess Elizabeth"
 			desc = "POLITICS_LIZZY_GG_AST_DESC"
 			picture = "gfx/leaders/CAN/Portrait_Canada_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 			female = yes
 		}
@@ -4552,7 +4552,7 @@ country_event = {
 			name = "Elizabeth Windsor"
 			desc = "NEE_ELIZABETH_DESC"
 			picture = "gfx/leaders/NEE/Portrait_NEE_Princess_Elizabeth.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			traits = {  }
 		}
@@ -4610,21 +4610,53 @@ country_event = {
 		}
 		if = {
 			limit = {
+				GBR = { has_country_leader = { name = "Albert I" ruling_only = yes } }
+			}
+			GBR = { GBR_create_monarchy = yes }
+		}
+		if = {
+			limit = {
 				SCT = { has_country_leader = { name = "Albert I" ruling_only = yes } }
 			}
 			SCT = { create_windsor_scottish_monarchy = yes }
 		}
 		if = {
 			limit = {
-				ICE = { has_country_leader = { name = "Albert I" ruling_only = yes } }
+				ICE = { has_country_leader = { name = "Adalbert I" ruling_only = yes } }
 			}
-			ICE = { CAN_create_monarchy = yes }
+			ICE = { ICE_create_british_monarchy = yes }
 		}
 		if = {
 			limit = { has_unit_leader = 9238 }
 			random_unit_leader = {
 				limit = { has_id = 9238 }
 				remove_unit_leader = yes
+			}
+			create_field_marshal = {# Lizzy
+				name = "Elizabeth II "
+				portrait_path = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_General.png"
+				traits = { 
+					politically_connected 
+					GBR_british_exile_trait
+					media_personality
+					trait_engineer
+					combined_arms_expert
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+				id = 9249
+			}
+		}
+		if = {
+			limit = {
+				has_idea = CAN_King_Albert_I_hog_pau
+			}
+			swap_ideas = {
+			remove_idea = CAN_King_Albert_I_hog_pau
+			add_idea = CAN_Queen_Elizabeth_II_hog_pau
 			}
 		}
 	}
@@ -4870,21 +4902,53 @@ country_event = {
 		}
 		if = {
 			limit = {
+				GBR = { has_country_leader = { name = "Albert I" ruling_only = yes } }
+			}
+			GBR = { CAN_create_monarchy = yes }
+		}
+		if = {
+			limit = {
 				SCT = { has_country_leader = { name = "Albert I" ruling_only = yes } }
 			}
 			SCT = { create_windsor_scottish_monarchy = yes }
 		}
 		if = {
 			limit = {
-				ICE = { has_country_leader = { name = "Albert I" ruling_only = yes } }
+				ICE = { has_country_leader = { name = "Adalbert I" ruling_only = yes } }
 			}
-			ICE = { CAN_create_monarchy = yes }
+			ICE = { ICE_create_british_monarchy = yes }
 		}
 		if = {
 			limit = { has_unit_leader = 9238 }
 			random_unit_leader = {
 				limit = { has_id = 9238 }
 				remove_unit_leader = yes
+			}
+			create_field_marshal = {# Lizzy
+				name = "Elizabeth II "
+				portrait_path = "gfx/leaders/CAN/Portrait_Canada_Elizabeth_General.png"
+				traits = { 
+					politically_connected 
+					GBR_british_exile_trait
+					media_personality
+					trait_engineer
+					combined_arms_expert
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+				id = 9249
+			}
+		}
+		if = {
+			limit = {
+				has_idea = CAN_King_Albert_I_hog_pau
+			}
+			swap_ideas = {
+				remove_idea = CAN_King_Albert_I_hog_pau
+				add_idea = CAN_Queen_Elizabeth_II_hog_pau
 			}
 		}
 	}
@@ -4903,6 +4967,136 @@ country_event = {
 			has_global_flag = CAN_canadian_gg_albert
 		}
 		CAN_setup_GG_elizabeth = yes
+	}
+}
+
+###Speech Therapy Events
+country_event = { #The Duke's Speech
+	id = entente.352
+	title = entente.352.t
+	desc = entente.352.d
+	picture = GFX_report_event_CAN_albert
+
+	is_triggered_only = yes
+
+	trigger = {
+		CAN_has_king = yes
+	}
+
+	option = { #British Doctors for a British Prince
+		log = "[GetLogInfo]: event entente.352 option entente.352.a"
+		name = entente.352.a
+		hidden_effect = {
+			country_event = { id = entente.353 days = 90 }
+		}
+	}
+	option = { #Help from Toronto
+		log = "[GetLogInfo]: event entente.352 option entente.352.b"
+		name = entente.352.b
+		hidden_effect = {
+			country_event = { id = entente.355 days = 90 }
+		}
+	}
+	option = { #Lionel Logue
+		log = "[GetLogInfo]: event entente.352 option entente.352.c"
+		name = entente.352.c
+		hidden_effect = {
+			country_event = { id = entente.354 days = 90 }
+		}
+	}
+}
+
+country_event = { #Speech therapy with Brits
+	id = entente.353
+	title = entente.353.t
+	desc = entente.353.d
+	picture = GFX_report_event_generic_map_brit
+
+	trigger = {
+		CAN_has_king = yes
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event entente.353 option entente.353.a"
+		name = entente.353.a
+		add_political_power = 5
+		if = {
+			limit = { check_variable = { king_influence < 5 } }
+			custom_effect_tooltip = CAN_exile_influence_increase
+			add_to_variable = { king_influence = 1 }
+			CAN_calc_exile_influence_effects = yes
+		}
+	}
+}
+
+country_event = { #Therapy with Mr Logue
+	id = entente.354
+	title = entente.354.t
+	desc = entente.354.d
+	picture = GFX_report_event_CAN_Lionel_Logue
+
+	trigger = {
+		CAN_has_king = yes
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event entente.354 option entente.354.a"
+		name = entente.354.a
+		add_political_power = 30
+		custom_effect_tooltip = entente.354.a.tt
+		set_country_flag = CAN_lionel_logue_flag
+	}
+}
+
+country_event = { #Canadian Specialists
+	id = entente.355
+	title = entente.355.t
+	desc = entente.355.d
+	picture = GFX_report_event_CAN_toronto
+
+	trigger = {
+		CAN_has_albert = yes
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event entente.355 option entente.355.a"
+		name = entente.355.a
+		add_political_power = -30
+		if = {
+			limit = { check_variable = { king_influence > 0 } }
+			custom_effect_tooltip = CAN_exile_influence_decrease
+			subtract_from_variable = { king_influence = 1 }
+			CAN_calc_exile_influence_effects = yes
+		}
+	}
+}
+
+country_event = { #Albert improves
+	id = entente.356
+	title = entente.356.t
+	desc = entente.356.d
+	picture = GFX_report_event_CAN_microphone
+
+	trigger = {
+		CAN_has_albert = yes
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event entente.356 option entente.356.a"
+		name = entente.356.a
+		add_political_power = 30
+		swap_ruler_traits = {
+			remove = CAN_humble
+			add = CAN_humble_improved
+		}
 	}
 }
 
@@ -5928,9 +6122,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					ICE = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
+					ICE = { has_country_leader = { name = "Játvarðr VIII" ruling_only = yes } }
 				}
-				ICE = { CAN_create_monarchy = yes }
+				ICE = { ICE_create_british_monarchy = yes }
 			}
 
 			news_event = { id = entente.111 days = 1 }
@@ -6024,9 +6218,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					ICE = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
+					ICE = { has_country_leader = { name = "Játvarðr VIII" ruling_only = yes } }
 				}
-				ICE = { CAN_create_monarchy = yes }
+				ICE = { ICE_create_british_monarchy = yes }
 			}
 
 			news_event = { id = entente.111 days = 1 }
@@ -6093,9 +6287,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					ICE = { has_country_leader = { name = "Edward VIII" ruling_only = yes } }
+					ICE = { has_country_leader = { name = "Játvarðr VIII" ruling_only = yes } }
 				}
-				ICE = { CAN_create_monarchy = yes }
+				ICE = { ICE_create_british_monarchy = yes }
 			}
 
 			news_event = { id = entente.111 days = 1 }
@@ -6269,37 +6463,37 @@ country_event = {
 			create_country_leader = {
 				name = "Isaac Isaacs"
 				picture = "gfx/leaders/AST/Portrait_AST_Isaac_Isaacs.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Isaac Isaacs"
 				picture = "gfx/leaders/AST/Portrait_AST_Isaac_Isaacs.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Isaac Isaacs"
 				picture = "gfx/leaders/AST/Portrait_AST_Isaac_Isaacs.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Isaac Isaacs"
 				picture = "gfx/leaders/AST/Portrait_AST_Isaac_Isaacs.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = market_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Isaac Isaacs"
 				picture = "gfx/leaders/AST/Portrait_AST_Isaac_Isaacs.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Isaac Isaacs"
 				picture = "gfx/leaders/AST/Portrait_AST_Isaac_Isaacs.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = national_populist_subtype
 			}
 		}
@@ -7358,6 +7552,30 @@ country_event = {
 		name = entente.2511.a
 		FROM = {
 			white_peace_with_ROOT = yes
+		}
+		if = {
+			limit = {
+				NEE = {
+					is_in_faction_with = ENT
+				}
+			}
+			FROM = {
+				annex_country = {
+					target = NEE
+				}
+			}
+		}
+		if = {
+			limit = {
+				ALA = {
+					is_in_faction_with = ENT
+				}
+			}
+			FROM = {
+				annex_country = {
+					target = ALA
+				}
+			}
 		}
 	}
 	option = {
@@ -9333,7 +9551,7 @@ news_event = {
 			}
 			every_country = {
 				limit = { is_in_faction_with = GER }
-				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 				if = {
 					limit = {
 						NOT = { gives_military_access_to = ROOT }
@@ -9356,7 +9574,7 @@ news_event = {
 			}
 			every_country = {
 				limit = { is_in_faction_with = ENT }
-				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 				if = {
 					limit = {
 						NOT = { gives_military_access_to = ROOT }
@@ -9386,7 +9604,7 @@ news_event = {
 			}
 			every_country = {
 				limit = { is_in_faction_with = GER }
-				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 				if = {
 					limit = {
 						NOT = { gives_military_access_to = ROOT }
@@ -9416,7 +9634,7 @@ news_event = {
 			}
 			every_country = {
 				limit = { is_in_faction_with = ENT }
-				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 				if = {
 					limit = {
 						NOT = { gives_military_access_to = ROOT }
@@ -9799,9 +10017,9 @@ country_event = {
 		name = entente.324.a
 		every_country = {
 			limit = { is_in_faction_with = FROM }
-			remove_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+			remove_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 			ROOT = {
-				remove_opinion_modifier = { target = PREV modifier = CAN_halifax_conference }
+				remove_opinion_modifier = { target = PREV modifier = CAN_halifax_conference_op }
 			}
 			if = {
 				limit = { ROOT = { gives_military_access_to = PREV } }
@@ -9862,7 +10080,7 @@ country_event = {
 		}
 		every_country = {
 			limit = { is_in_faction_with = GER }
-			add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+			add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 			if = {
 				limit = {
 					NOT = { gives_military_access_to = ROOT }
@@ -9893,7 +10111,7 @@ country_event = {
 		set_global_flag = GER_stay_out_france_uk
 		every_country = {
 			limit = { is_in_faction_with = ENT }
-			add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+			add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 			if = {
 				limit = {
 					NOT = { gives_military_access_to = ROOT }
@@ -9918,7 +10136,7 @@ country_event = {
 			limit = { is_in_faction_with = ENT }
 			every_country = {
 				limit = { is_in_faction_with = GER }
-				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 				if = {
 					limit = {
 						NOT = { gives_military_access_to = ROOT }
@@ -9936,7 +10154,7 @@ country_event = {
 			limit = { is_in_faction_with = GER }
 			every_country = {
 				limit = { is_in_faction_with = ENT }
-				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
 				if = {
 					limit = {
 						NOT = { gives_military_access_to = ROOT }
@@ -9981,11 +10199,7 @@ country_event = {
 	desc = entente.5000.d
 	picture = GFX_report_event_KSV_helicopters
 
-	trigger = {
-		tag = CAN
-		has_global_flag = heli_time_worldwide
-	}
-	
+	is_triggered_only = yes
 	fire_only_once = yes	
 
 	option = {
@@ -9998,6 +10212,7 @@ country_event = {
 			every_country = {
 				limit = {
 					is_in_faction_with = CAN
+					NOT = { tag = ROOT }
 				}
 			}
 			country_event = {
@@ -10176,6 +10391,11 @@ country_event = {
 
 	option = { #Take Command
 		name = entente.400.a
+		trigger = {
+			NOT = {
+				has_country_flag = CAN_entente_leadership_unavailable
+			}
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -10188,11 +10408,6 @@ country_event = {
 	
 	option = { #Accept British Leadership
 		name = entente.400.b
-		trigger = {
-			NOT = {
-				has_country_flag = CAN_entente_leadership_unavailable
-			}
-		}
 		ai_chance = {
 			factor = 50
 		}
@@ -10215,9 +10430,12 @@ country_event = {
 			set_country_flag = CAN_allowed_us_to_take_over
 		}
 		hidden_effect = {
-			country_event = {
-				id = canada.304
-				days = 20
+			if = {
+				limit = { NOT = { has_country_flag = CAN_is_republic } }
+				country_event = {
+					id = canada.304
+					days = 20
+				}
 			}
 		}
 	}
@@ -10365,14 +10583,14 @@ country_event = {
 			BEL = {
 				set_party_name = {
 					ideology = authoritarian_democrat
-					long_name = Interim_Governement
-					name = Interim_Governement
+					long_name = BEL_Interim_Governement_party_long
+					name = BEL_Interim_Governement_party
 				}
 				create_country_leader = {
 					name = "Belgian Parliament"
 					desc = "POLITICS_BELGIAN_PARLIMENT_DESC"
 					picture = "gfx/leaders/BEL/Portrait_Belgium_Parliament.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = authoritarian_democrat_subtype
 				}
 				remove_all_ministers = yes
@@ -10905,7 +11123,7 @@ country_event = {
 					name = "Daniel François Malan"
 					desc = "POLITICS_DANIEL_MALAN_DESC"
 					picture = "gfx/leaders/SAF/SAF_Daniel_Francois_Malan.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = pataut_boer_nationalism_subtype
 				}
 			}
@@ -11036,18 +11254,20 @@ country_event = { #Join the Fed?
 	}
 	
 	option = { #We've changed our mind...
-		name = imp_fed.6.a
+		name = imp_fed.6.b
 		ai_chance = {
 			factor = 20
 		}
 		trigger = {
 			NOT = {
-				is_subject_of = From
+				is_subject_of = FROM
 			}
 		}
 		ENT = {
 			country_event = imp_fed.7
 		}
+		leave_faction = yes
+		separate_peace_all_wars = yes
 	}
 }
 

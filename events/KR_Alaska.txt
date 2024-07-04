@@ -717,7 +717,7 @@ country_event = { # The Head of State
 			name = "Stephen Birch"
 			desc = "POLITICS_BIRCH_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Stephen_Birch.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = {  }
 		}
@@ -731,7 +731,7 @@ country_event = { # The Head of State
 			name = "John Pierpont Morgan Jr."
 			desc = "POLITICS_JP_MORGAN_JR_DESC"
 			picture = "gfx/leaders/NEE/Portrait_NEE_JP_Morgan_JR.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = {  }
 		}
@@ -787,7 +787,7 @@ country_event = { # The Death of Wickersham
 			name = "Rex Beach"
 			desc = "POLITICS_BEACH_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Rex_Beach.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = frontier_socialism_subtype
 			traits = {  }
 		}
@@ -926,7 +926,7 @@ country_event = { # The Election
 				name = "Bob Bartlett"
 				desc = "POLITICS_BOB_BARTLETT_DESC"
 				picture = "gfx/leaders/ALA/Portrait_Alaska_Bob_Bartlett.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centrist_subtype
 				traits = {}
 			}
@@ -1919,7 +1919,10 @@ country_event = { # PSA Declined (y tho)
 					autonomy_state = kr_nominal_puppet
 				}
 			}
-			ALA = { restore_previous_government_type = yes }
+			ALA = { 
+			restore_previous_government_type = yes 
+			set_cosmetic_tag = ALA_CAN
+		    }
 			news_event = {
 				id = Alaska.209
 				days = 1
@@ -2481,7 +2484,7 @@ country_event = { #Guggenheim Dead
 			name = "Stephen Birch"
 			desc = "POLITICS_BIRCH_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Stephen_Birch.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = {  }
 		}
@@ -2508,7 +2511,7 @@ country_event = { #Morgan Dead
 			name = "Junius Spencer Morgan III"
 			desc = "POLITICS_JS_MORGAN_III_DESC"
 			picture = "gfx/leaders/NEE/Portrait_NEE_Junius_Spencer_Morgan_III.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = {  }
 		}
@@ -2520,7 +2523,7 @@ country_event = { #Morgan Dead
 			name = "Henry Sturgis Morgan"
 			desc = "POLITICS_HENRY_MORGAN_DESC"
 			picture = "gfx/leaders/NEE/Portrait_NEE_Henry_S_Morgan.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = {  }
 		}
@@ -2588,7 +2591,7 @@ country_event = { # Rise of Bob Marshall
 			name = "Bob Marshall"
 			desc = "POLITICS_BOB_MARSHALL_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Bob_Marshall.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = eco_socialism_subtype
 			traits = {  }
 		}
@@ -2633,7 +2636,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 			traits = {  }
 		}
@@ -2641,7 +2644,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = autocratic_colonial_govt_subtype
 			traits = {  }
 		}
@@ -2649,7 +2652,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = colonial_govt_subtype
 			traits = {  }
 		}
@@ -2657,7 +2660,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_conservative_subtype
 			traits = {  }
 		}
@@ -2665,7 +2668,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = market_liberal_subtype
 			traits = {  }
 		}
@@ -2673,7 +2676,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_liberal_subtype
 			traits = {  }
 		}
@@ -2681,7 +2684,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_democrat_subtype
 			traits = {  }
 		}
@@ -2689,7 +2692,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = radical_socialist_subtype
 			traits = {  }
 		}
@@ -2697,7 +2700,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = syndicalist_subtype
 			traits = {  }
 		}
@@ -2705,7 +2708,7 @@ country_event = { # Event for Russia
 			name = "Russian Administration"
 			desc = "POLITICS_RUSSIAN_ADMIN_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Russian_Administration.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = totalist_subtype
 			traits = {  }
 		}
@@ -2735,10 +2738,13 @@ country_event = { # the Coup
 			name = "Elwood Towner"
 			desc = "POLITICS_TOWNER_DESC"
 			picture = "gfx/leaders/AIF/Portrait_AIF_Elwood_Towner.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = townerism_subtype
 			traits = {  }
 		}	
+		hidden_effect = {
+			remove_power_balance = { id = ALA_two_influences_balance }
+		}
 		remove_all_ministers = yes
 		remove_ideas = ALA_baron_consession
 		add_ideas = {
@@ -2799,7 +2805,7 @@ country_event = { # the Coup
 				logistics_skill = 2
 			}
 			create_corps_commander = {# 
-				name = "Woody J Cochran"
+				name = "Woody J. Cochran"
 				desc = ""
 				portrait_path = "gfx/leaders/AIF/Portrait_AIF_Woody_Cochran.png"
 				traits = {
@@ -2884,7 +2890,7 @@ country_event = { # Masterplan
 			
 	option = { 
 		name = Alaska.44.a
-		load_oob = NATIVEBEASTS
+		hidden_effect = { load_oob = ALA_native }
 		set_province_name = { id = 13203 name = "Dzánti K'ihéeni"}
 		set_province_name = { id = 13091 name = "Dgheyay Kaq'"}
 		set_province_name = { id = 7884 name = "Sun'aq"}
@@ -3050,7 +3056,7 @@ country_event = { #Red Man's Burden
 		name = Alaska.51.a
 		add_political_power = 100
 		add_ideas = ALA_Red_Mans_Burden
-		set_cosmetic_tag = ALA_REDMANCANADA_national_populist
+		set_cosmetic_tag = ALA_REDMANCANADA
 		create_wargoal = {
 			type = annex_everything target = CAN
 		}
@@ -3095,12 +3101,13 @@ country_event = { #Ayn Rand Invite?
 				id = Alaska.520
 				days = 20
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		create_country_leader = {
 			name = "Alisa Rosenbaum"
 			desc = "POLITICS_RAND_DESC"
 			picture = "gfx/leaders/ALA/Portrait_ALA_Ayn_Rand.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = objectivism_subtype
 			traits = {  }
 		}
@@ -3129,10 +3136,10 @@ country_event = { #Should Rand keep her Scalp?
 
 	is_triggered_only = yes
 
-	option = { ##Yes
+	option = { ##hELL nO
 		name = Alaska.520.a
 		ai_chance = {
-			factor = 50
+			factor = 15
 			modifier = {
 				factor = 0
 				OR = {
@@ -3156,10 +3163,10 @@ country_event = { #Should Rand keep her Scalp?
 		}
 	}
 	
-	option = { ##hELL nO
+	option = { ##yes
 		name = Alaska.520.b
 		ai_chance = {
-			factor = 50
+			factor = 85
 			modifier = {
 				factor = 0
 				OR = {
@@ -3375,6 +3382,7 @@ country_event = { # Indianizing Canada
 		name = Alaska.57.a
 		ALA = {
 			add_state_core = 473
+			add_state_core = 1332
 			add_state_core = 470
 			add_state_core = 740
 			add_state_core = 469
@@ -3384,6 +3392,8 @@ country_event = { # Indianizing Canada
 			add_state_core = 331
 			add_state_core = 332
 			add_state_core = 464
+			add_state_core = 1330
+			add_state_core = 1331
 			add_state_core = 465
 			add_state_core = 683
 			add_state_core = 468
@@ -3416,6 +3426,8 @@ country_event = { # Indianizing Canada
 		set_province_name = { id = 4360 name = "Skmaqn"}
 		set_province_name = { id = 373 name = "Wen'juikjikan Senpir-Miquelon"}
 		set_province_name = { id = 4720 name = "Putlavak"}
+		set_province_name = { id = 12582 name = "Baawitigong"}
+		set_province_name = { id = 1872 name = "Chuu Gaii Han"}
 	}
 }
 
@@ -3452,7 +3464,7 @@ country_event = { # Indianizing New England
 		set_province_name = { id = 3733 name = "Irondequoit"}
 		set_province_name = { id = 9850 name = "Saukiog"} 
 		set_province_name = { id = 6732 name = "Chickatawbut"}
-		set_province_name = { id = 4445 name = "ndakinna"} 
+		set_province_name = { id = 4445 name = "Ndakinna"} 
 		set_province_name = { id = 733 name = "Musketaquid"} 
 		set_province_name = { id = 9832 name = "Shawmut"}
         set_province_name = { id = 7629 name = "Tomifobia"}
@@ -3496,7 +3508,7 @@ country_event = { # How is this Nation gonna run?
 			factor = 50
 		}
 		add_political_power = 50
-		set_cosmetic_tag = ALA_REDMANMONARCHY_national_populist
+		set_cosmetic_tag = ALA_REDMANMONARCHY
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.5
@@ -4271,7 +4283,7 @@ country_event = { # yo should we just buy alaska
 	option = { #no 
 		name = Alaska.110.a
 		ai_chance = {
-			factor = 50
+			factor = 80
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -4291,7 +4303,7 @@ country_event = { # yo should we just buy alaska
 			}
 		}
 		ai_chance = {
-			factor = 50
+			factor = 20
 			modifier = {
 				factor = 0
 				OR = {
@@ -4330,20 +4342,25 @@ country_event = { # the crazy sons of bitches did it
 			name = "Franz Joseph II"
 			desc = "POLITICS_FRANZJOSEPH_II_DESC"
 			picture = "gfx/leaders/ALA/Portrait_ALA_Franz_Joseph_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 			traits = {  }
 		}
 		set_cosmetic_tag = ALA_LIC
-		get_current_government_type = yes
-		transfer_state = 1235
-		add_state_core = 1235
-		AUS = {
-			set_autonomy = {
-				target = ALA
-				autonomy_state = kr_default_puppet
-			}
+		if = {
+			limit = { is_ai = yes }
+			add_ideas = ALA_clueless_austrians
 		}
+		get_current_government_type = yes
+		if = {
+			limit = { is_ai = no }
+			transfer_state = 1235
+		    add_state_core = 1235
+			transfer_state = 1235
+		    add_state_core = 1235
+		}
+		AUS = { add_to_faction = ALA }
+		set_country_flag = ALA_purchase_liechtenstein
 		restore_previous_government_type = yes
 	}
 }
@@ -4496,7 +4513,7 @@ country_event = { # flavour event about jewish settlement pt.3
 				}
 			}
 		}
-		set_cosmetic_tag = ALA_JEW
+		set_cosmetic_tag = ALA_ZION
 		hidden_effect = {
 			country_event = {
 				id = Alaska.135
@@ -4569,8 +4586,11 @@ country_event = { # AUS said yes!
 	option = { # epic
 		name = Alaska.120.a
 		ALA = {
-			add_state_core = 942
-			transfer_state = 942
+			if = { 
+				limit = { is_ai = no }
+				add_state_core = 942
+			    transfer_state = 942
+			}
 		}
 		
 	}
@@ -4824,7 +4844,7 @@ country_event = { # Lathrop Dead
 			name = "Joseph E. Vogler"
 			desc = "POLITICS_VOLGER_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Joseph_Vogler.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = libertarian_subtype
 			traits = {}
 		}
@@ -4833,7 +4853,7 @@ country_event = { # Lathrop Dead
 			long_name = "Alaska Independence Party"
 			ideology = market_liberal
 		}
-		remove_ideas = ALA_Joseph_E_Vogler_hog_mli
+		remove_ideas = ALA_Austin_E_Lathrop_hog_mli
 		add_ideas = ALA_Joseph_E_Vogler_hog_mli
 	}
 }
@@ -4852,6 +4872,13 @@ country_event = { # Alaskan Identity
 	option = { # Get Fucked America
 		name = Alaska.132.a
 		add_political_power = 20
+		hidden_effect = {
+			country_event = {
+				id = Alaska.211
+				days = 45
+				random_days = 60
+			}
+		}
 	}
 }
 
@@ -4930,8 +4957,8 @@ country_event = { # LOUDER WITH BROWDER
 		create_country_leader = { 
 			name = "Earl Browder"
 			desc = "POLITICS_EARL_BROWDER_DESC"
-			picture = "gfx/leaders/CSA/Portrait_CSA_Earl_Bowder.png"
-			expire = "1965.1.1"
+			picture = "gfx/leaders/CSA/Portrait_CSA_Earl_Browder_Hat.png"
+			expire = "1.1.1"
 			ideology = popcom_subtype
 			traits = { }
 		}
@@ -4939,7 +4966,119 @@ country_event = { # LOUDER WITH BROWDER
 	
 	option = { # Quieter with Jurich
 		name = Alaska.134.b
-		
+		hidden_effect = {
+			country_event = {
+				id = Alaska.1340
+				days = 45
+			}
+		}
+	}
+}
+
+country_event = { # Trotsky Kid tries takeover
+	id = Alaska.1340
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Alaska.1340"}
+	title = Alaska.1340.t
+	desc = Alaska.1340.d
+	picture = GFX_report_event_ALA_sedov
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_unit_leader = 15153
+	}
+
+	option = { # Trotsky Kid
+		name = Alaska.1340.a
+		create_country_leader = { 
+			name = "Lev Sedov"
+			desc = "POLITICS_LEV_SEDOV_DESC"
+			picture = "gfx/leaders/SOV/Portrait_SOV_Lev_Sedov_Civilian.png"
+			expire = "1.1.1"
+			ideology = internationalism_subtype
+			traits = { }
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			CSA_James_P_Cannon_hog_tot
+			CSA_Max_Shachtman_for_tot
+			CSA_Vincent_R_Dunne_eco_tot
+			CSA_Martin Abern_sec_tot
+		}
+		add_stability = -0.10
+		add_political_power = 80
+		hidden_effect = {
+			country_event = {
+				id = Alaska.1341
+				days = 23
+			}
+		}
+		set_cosmetic_tag = ALA_TRAUTMANN
+	}
+	
+	option = { # Quieter with Jurich
+		name = Alaska.1340.b
+		add_stability = 0.10
+	}
+	
+	option = { # Kill Trotsky Kid
+		name = Alaska.1340.c
+		random_unit_leader = {
+			limit = { has_id = 15153 }
+			remove_unit_leader = yes
+		}
+		add_stability = -0.05
+		add_political_power = 80
+	}
+}
+
+country_event = { # 
+	id = Alaska.1341
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Alaska.1341" }
+	title = Alaska.1341.t
+	desc = Alaska.1341.d
+	picture = GFX_report_event_CSA_cannon_trots
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Alaska.1341.a
+        ai_chance = { factor = 100 }
+		add_stability = 0.01
+	}
+	option = {
+		name = Alaska.1341.b
+		ai_chance = { factor = 0 }
+		add_ideas = CSA_trotskyism_reborn
+		every_country = {
+			limit = { 
+				NOT = { tag = ALA } 
+                OR = { is_in_north_america = yes is_in_south_america = yes }
+		    }
+			ALA = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
+	}
+	option = {
+		name = Alaska.1341.c
+		ai_chance = { factor = 0 }
+		add_ideas = CSA_trotskyism_reborn
+		every_country = {
+			limit = { NOT = { tag = ALA } }
+			ALA = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
 	}
 }
 
@@ -4965,7 +5104,7 @@ country_event = { # Yisrael leader Picker
 			name = "Simon Guggenheim"
 			desc = "POLITICS_GUGGENHEIM_DESC"
 			picture = "gfx/leaders/ALA/Portrait_Alaska_Simon_Guggenheim.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = free_market_capitalist_subtype
 			traits = {  }
 		}
@@ -4984,7 +5123,7 @@ country_event = { # Yisrael leader Picker
 		create_country_leader = {
 			name = "Yechezkel Shragei Kahane"
 			picture = "gfx/leaders/NYC/Portrait_NYC_Shragei_Kahane.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = fundementalism_subtype
 		}
 		set_politics = {
@@ -5007,7 +5146,7 @@ country_event = { # Yisrael leader Picker
 		create_country_leader = {
 			name = "Nachman Syrkin"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nachman_Syrkin.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = socdem_agrarianism_subtype
 		}
 		set_party_name = {
@@ -5037,12 +5176,12 @@ country_event = { # Yisrael leader Picker
 		create_country_leader = {
 			name = "Isaak Shteinberg"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Isaak_Steinberg.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = narodism_subtype
 		}
 		set_party_name = {
-			name = "Labor Zionists of Alaska"
-			long_name = "Labor Zionists of Alaska"
+			name = "Party of Left Socialist-Revolutionaries-Territorialists"
+			long_name = "Party of Left Socialist-Revolutionaries-Territorialists"
 			ideology = radical_socialist
 		}
 		set_politics = {
@@ -5397,6 +5536,72 @@ country_event = {# Alaska Joins Entente
 	}
 }
 
+country_event = {# Welcome to Alaska, here's a thousand dollars
+	id = Alaska.145
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Alaska.145"}
+	title = Alaska.145.t
+	desc = Alaska.145.d
+	picture = GFX_report_event_ALA_pfd
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #War
+		name = Alaska.145.a
+		add_stability = 0.05
+		463 = {
+			add_manpower = 2400
+			add_state_modifier = {
+				modifier = {
+					local_manpower = 0.02
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Capital?
+	id = Alaska.146
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Alaska.146"}
+	title = Alaska.146.t
+	desc = Alaska.146.d
+	picture = GFX_report_event_ALA_legislature_building
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #DC
+		name = Alaska.146.a
+		set_capital = { state = 361 }
+	}
+	option = { #Seattle
+		name = Alaska.146.b
+		set_capital = { state = 386 }
+	}
+	option = { #SanFran
+		name = Alaska.146.c
+		set_capital = { state = 797 }
+	}
+	option = { #St Louis
+		name = Alaska.146.e
+		set_capital = { state = 373 }
+	}
+	option = { #NYC
+		name = Alaska.146.f
+		set_capital = { state = 358 }
+	}
+	option = { #Miami
+		name = Alaska.146.g
+		set_capital = { state = 366 }
+	}
+	option = { #Juneau
+		name = Alaska.146.h
+		add_political_power = 10
+	}
+}
+
 country_event = { # Progressive Comeback
 	id = Alaska.201
 	immediate = {log = "[GetDateText]: [Root.GetName]: event Alaska.201"}
@@ -5467,6 +5672,10 @@ country_event = { # 1944 Election
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	trigger = {
+	NOT = { has_global_flag = ALA_NATIVEGANG }
+	is_subject = no
+	}
 		
 	immediate = {
 		hidden_effect = {
@@ -5480,7 +5689,7 @@ country_event = { # 1944 Election
 					name = "Joseph E. Vogler"
 					desc = "POLITICS_VOLGER_DESC"
 					picture = "gfx/leaders/ALA/Portrait_Alaska_Joseph_Vogler.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = libertarian_subtype
 					traits = {}
 				}
@@ -5495,7 +5704,7 @@ country_event = { # 1944 Election
 				create_country_leader = {
 					name = "Wally Hickel"
 					picture = "gfx/leaders/ALA/Portrait_Alaska_Wally_Hickel.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = libertarian_subtype
 					traits = {}
 				}
@@ -5514,7 +5723,7 @@ country_event = { # 1944 Election
 				create_country_leader = {
 					name = "Waino Hendrickson"
 					picture = "gfx/leaders/ALA/Portrait_Alaska_Waino_Hendrickson.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {}
 				}
@@ -5522,14 +5731,14 @@ country_event = { # 1944 Election
 			create_country_leader = {
 				name = "B. Frank Heintzleman"
 				picture = "gfx/leaders/ALA/Portrait_Alaska_Benjamin_Franklin_Heintzleman.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_agrarianism_subtype
 				traits = {}
 			}
 			create_country_leader = {
 				name = "Ralph Julian Rivers"
 				picture = "gfx/leaders/ALA/Portrait_Alaska_Ralph_Julian_Rivers.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = national_conservative_subtype
 				traits = {}
 			}
@@ -5684,6 +5893,10 @@ country_event = { # 1951 Election
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	trigger = {
+	NOT = { has_global_flag = ALA_NATIVEGANG }
+	is_subject = no
+	}
 		
 	immediate = {
 		hidden_effect = {
@@ -5697,7 +5910,7 @@ country_event = { # 1951 Election
 					name = "Jack Coghill"
 					desc = "POLITICS_VOLGER_DESC"
 					picture = "gfx/leaders/ALA/Portrait_Alaska_Jack_Coghill.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = libertarian_subtype
 					traits = {}
 				}
@@ -5712,7 +5925,7 @@ country_event = { # 1951 Election
 				create_country_leader = {
 					name = "Wally Hickel"
 					picture = "gfx/leaders/ALA/Portrait_Alaska_Wally_Hickel.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = libertarian_subtype
 					traits = {}
 				}
@@ -5726,7 +5939,7 @@ country_event = { # 1951 Election
 					name = "Ernest Gruening"
 					desc = "POLITICS_ERNEST_GRUENING_DESC"
 					picture = "gfx/leaders/ALA/Portrait_Alaska_Ernest_Greuning.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {}
 				}
@@ -5738,7 +5951,7 @@ country_event = { # 1951 Election
 				create_country_leader = {
 					name = "William Egan"
 					picture = "gfx/leaders/ALA/Portrait_Alaska_William_A_Egan.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {}
 				}
@@ -5750,7 +5963,7 @@ country_event = { # 1951 Election
 				create_country_leader = {
 					name = "Mike Stepovich"
 					picture = "gfx/leaders/ALA/Portrait_Alaska_Mike_Stepovich.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {}
 				}
@@ -5758,14 +5971,14 @@ country_event = { # 1951 Election
 			create_country_leader = {
 				name = "John H. Dimond"
 				picture = "gfx/leaders/ALA/Portrait_Alaska_John_Dimond.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_christian_socialism_subtype
 				traits = {}
 			}
 			create_country_leader = {
 				name = "Howard Wallace Pollock"
 				picture = "gfx/leaders/ALA/Portrait_Alaska_Howard_Wallace_Pollock.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = national_conservative_subtype
 				traits = {}
 			}
@@ -6150,6 +6363,7 @@ country_event = { # Alaskan Ambitions
 			factor = 0
 		}
 		add_state_core = 637
+		add_state_core = 1332
 		add_state_core = 473
 		add_state_core = 471
 		add_state_core = 472
@@ -6175,6 +6389,63 @@ country_event = { # Alaskan Ambitions
 		}
 		add_political_power = 60
 		add_stability = 0.06
+	}
+}
+
+country_event = {# Benny Benson
+	id = Alaska.211
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Alaska.211"}
+	title = Alaska.211.t
+	desc = Alaska.211.d
+	picture = GFX_report_event_ALA_benny_benson
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #War
+		name = Alaska.211.a
+		add_stability = 0.02
+	}
+}
+
+country_event = { # Fix Dominion Cosmetic Hidden Event
+	id = Alaska.2100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Alaska.2100"}
+	title = Alaska.2100.t
+	desc = Alaska.2100.d
+	picture = GFX_report_event_ALA_map
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = ALA
+		has_country_leader = { ruling_only = yes name = "Lord George Pearkes" }
+		has_war = no
+		NOT = { has_cosmetic_tag = ALA_CAN }
+	}
+	option = { # fix this shit
+		name = Alaska.2100.a
+		set_cosmetic_tag = ALA_CAN
+	}
+}
+
+country_event = { # Fix Jap Cosmetic Hidden Event
+	id = Alaska.2101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Alaska.2101"}
+	title = Alaska.2101.t
+	desc = Alaska.2101.d
+	picture = GFX_report_event_ALA_map
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = ALA
+		has_country_leader = { ruling_only = yes name = "Yasuyo Yamasaki" }
+		has_war = no
+		NOT = { has_cosmetic_tag = ALA_JAP }
+	}
+	option = { # fix this shit
+		name = Alaska.2101.a
+		set_cosmetic_tag = ALA_JAP
 	}
 }
 
@@ -6226,7 +6497,7 @@ country_event = { # the Coup
 			name = "Thomas Dixon"
 			desc = "POLITICS_TDIXON_DESC"
 			picture = "gfx/leaders/ALA/Portrait_AIF_Thomas_Dixon.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = left_townerism_subtype
 			traits = {  }
 		}	
@@ -6238,7 +6509,7 @@ country_event = { # the Coup
 			ALA_Alice_Lee_Jemison_sec_npo
 		}
 		ALA = {
-			set_cosmetic_tag = ALA_REDMANWARRIOR_totalist
+			set_cosmetic_tag = ALA_REDMANWARRIOR
 			set_politics = {
 				ruling_party = totalist
 				last_election = "1935.11.14"
@@ -6275,7 +6546,7 @@ country_event = { # the Coup
 	}
 }
 
-country_event = { #Who is Medicine Crow?
+country_event = {
 	id = REDAlaska.2
 	immediate = { log = "[GetDateText]: [Root.GetName]: event REDAlaska.2" }
 	title = REDAlaska.2.t
@@ -6316,19 +6587,23 @@ country_event = { #Red Man's Internationale
 	
 	picture = GFX_report_event_USA_indians
 
-	trigger = {
-		ALA = {
-			exists = yes
-		}
-	}
-
 	is_triggered_only = yes
 
 	option = { ###Kinda fail
-		name = REDAlaska.6.a
-		FRA = {
-			add_to_faction = ALA
+		name = REDAlaska.4.a
+		trigger = {
+			PRU = { has_socialist_government = yes }
 		}
+		ai_chance = { factor = 0 }
+		create_faction = "Amerindian Internationale"
+		ALA = {
+			add_to_faction = PRU
+		}
+	}
+	option = { ###Kinda fail
+		name = REDAlaska.4.b
+		ai_chance = { factor = 100 }
+		create_faction = "Amerindian Internationale"
 	}
 }
 
@@ -6349,7 +6624,7 @@ country_event = { #Indian Totalism
 	}
 }
 
-country_event = { #Killing Fields
+country_event = {
 	id = REDAlaska.6
 	immediate = { log = "[GetDateText]: [Root.GetName]: event REDAlaska.6" }
 	title = REDAlaska.6.t
@@ -6365,7 +6640,7 @@ country_event = { #Killing Fields
 	}
 }
 
-country_event = { #Scalping da whity
+country_event = {
 	id = REDAlaska.7
 	immediate = { log = "[GetDateText]: [Root.GetName]: event REDAlaska.7" }
 	title = REDAlaska.7.t
@@ -6382,24 +6657,7 @@ country_event = { #Scalping da whity
 	}
 }
 
-country_event = { #White Genocide
-	id = REDAlaska.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event REDAlaska.8" }
-	title = REDAlaska.8.t
-	desc = REDAlaska.8.d
-	
-	picture = GFX_report_event_USA_indians
-
-	is_triggered_only = yes
-
-	option = {
-		name = REDAlaska.8.a
-		add_political_power = 100
-		add_ideas = ALA_even_crazyer_buff_then_the_last
-	}
-}
-
-country_event = { #Red Man's Burden
+country_event = {
 	id = REDAlaska.9
 	immediate = { log = "[GetDateText]: [Root.GetName]: event REDAlaska.9" }
 	title = REDAlaska.9.t
@@ -6412,7 +6670,7 @@ country_event = { #Red Man's Burden
 	option = {
 		name = REDAlaska.9.a
 		add_political_power = 100
-		load_oob = INDIANWARRIORS
+		hidden_effect = { load_oob = ALA_warriors }
 		create_wargoal = {
 			type = annex_everything target = CAN
 		}
@@ -6640,7 +6898,7 @@ country_event = { # Flag picker
 	}
 }
 
-country_event = { # Indianizing Canada
+country_event = { # Indianizing America
 	id = REDAlaska.100
 	immediate = {log = "[GetDateText]: [Root.GetName]: event REDAlaska.100"}
 	title = REDAlaska.100.t
@@ -6655,7 +6913,11 @@ country_event = { # Indianizing Canada
 		owns_state = 739 #Ottowa
 		owns_state = 361 #Washington
 		owns_state = 484 #Baja
-		owns_state = 277 
+		owns_state = 277
+		OR = {
+		has_country_leader = { ruling_only = yes name = "Elwood Towner" }
+		has_country_leader = { ruling_only = yes name = "Thomas Dixon" }
+		}
 	}
 			
 	option = { 
@@ -6727,13 +6989,14 @@ country_event = { # Indianizing Canada
 		set_province_name = { id = 12456 name = "Taychopera"}
 		set_province_name = { id = 1760 name = "Ojibwa"}
 		set_province_name = { id = 9450 name = "Shikaakwa"}
-		set_province_name = { id = 12497 name = "Akawaham"}
+		set_province_name = { id = 12697 name = "Akawaham"}
 		set_province_name = { id = 1734 name = "Onigamiising"}
 		set_province_name = { id = 1719 name = "Imnizaska"}
 		set_province_name = { id = 1866 name = "Bdóte"}
 		set_province_name = { id = 1770 name = "Moingona"}
 		set_province_name = { id = 12361 name = "U-Kon-Ska"}
 		set_province_name = { id = 10717 name = "Wyandot City"}
+		set_province_name = { id = 7834 name = "Wyandot City"}
 		set_province_name = { id = 4569 name = "Cahokia"}
 		set_province_name = { id = 4625 name = "Quapaw"}
 		set_province_name = { id = 12489 name = "Akansea"}
@@ -6754,7 +7017,7 @@ country_event = { # Indianizing Canada
 		set_province_name = { id = 10740 name = "Tlaloclan"}
 		set_province_name = { id = 7760 name = "Ammalapáshkuua"}
 		set_province_name = { id = 7779 name = "Tomah"}
-		set_province_name = { id = 7688 name = "Tséchʼízhí"}
+		set_province_name = { id = 7688 name = "Tséch'ízhí"}
 		set_province_name = { id = 4723 name = "Tsitsistas"}
 		set_province_name = { id = 1827 name = "Arapaho"}
 		set_province_name = { id = 1658 name = "Ute"}
@@ -6779,7 +7042,6 @@ country_event = { # Indianizing Canada
 		set_province_name = { id = 13493 name = "Tiwan"}
 		set_province_name = { id = 10848 name = "Yécora"}
 		set_province_name = { id = 2037 name = "Tarahumara"}
-		set_province_name = { id = 5230 name = "Laja"}
 		set_province_name = { id = 12804 name = "Tēpēhuanih"}
 		set_province_name = { id = 12835 name = "Azalapas"}
 		set_province_name = { id = 4956 name = "Tamtok"}
@@ -6809,13 +7071,65 @@ country_event = { # Indianizing Canada
 		set_province_name = { id = 12304 name = "Xaymaca"}
 		set_province_name = { id = 4598 name = "Maguá"}
 		set_province_name = { id = 4641 name = "Ha-yi-ti"}
+		set_province_name = { id = 1330 name = "Unamaꞌki"}
+		set_province_name = { id = 1331 name = "Epekwitk"}
 		set_province_name = { id = 7660 name = "Higüey"}
-		set_province_name = { id = 13501 name = "Borikén"}
+		set_province_name = { id = 1440 name = "Borikén"}
 		set_province_name = { id = 3284 name = "Cumucurapo"}
-		set_province_name = { id = 153 name = "Curaçao"}
 		set_province_name = { id = 12823 name = "Cuscatlan"}
 		set_province_name = { id = 13697 name = "Izcuinapan"}
 		set_province_name = { id = 4982 name = "Guiana"}
+		set_province_name = { id = 6897 name = "Tségháhoodzání"}
+		set_province_name = { id = 12381 name = "Ossachite"}
+		set_province_name = { id = 4507 name = "Chahkanina"}
+		set_province_name = { id = 12401 name = "Yáttasih"}
+		set_province_name = { id = 6887 name = "Uncompahgre"}
+		set_province_name = { id = 12627 name = "Ouray"}
+		set_province_name = { id = 12624 name = "Beaver River"}
+		set_province_name = { id = 4586 name = "Vóóhéhéve"}
+		set_province_name = { id = 12024 name = "Cheyenne"}
+		set_province_name = { id = 7904 name = "Chína Uhánndhe"}
+		set_province_name = { id = 4826 name = "Wadatika"}
+		set_province_name = { id = 4347 name = "Iwauna"}
+		set_province_name = { id = 610 name = "Jaroujiji"}
+		set_province_name = { id = 4166 name = "Ho-Chunk"}
+		set_province_name = { id = 1440 name = "Guaynabo-Haimanio"}
+		set_province_name = { id = 14801 name = "Cibuquiera Ay Ay"}
+		set_province_name = { id = 4155 name = "Ciboney"}
+		set_province_name = { id = 177 name = "Jouanacaëra"}
+		set_province_name = { id = 10730 name = "Aca-pōl-co"}
+		set_province_name = { id = 13462 name = "Ti'ho"}
+		set_province_name = { id = 12867 name = "Tabscoob"}
+		set_province_name = { id = 5015 name = "Esto’k G’na"}
+		set_province_name = { id = 10746 name = "Cotoname"}
+		set_province_name = { id = 7973 name = "Irritilas"}
+		set_province_name = { id = 13469 name = "Pericú"}
+		set_province_name = { id = 10848 name = "Seri"}
+		set_province_name = { id = 8012 name = "Opata-Lipan"}
+		set_province_name = { id = 10830 name = "Ja-elaya"}
+		set_province_name = { id = 8097 name = "Tsé Táhú'ayá"}
+		set_province_name = { id = 14645 name = "Nojpetén"}
+		set_province_name = { id = 14677 name = "Maika-Calpul"}
+		set_province_name = { id = 13085 name = "Garifunia"}
+		set_province_name = { id = 2031 name = "Yaaxche"}
+		set_province_name = { id = 13443 name = "Pech"}
+		set_province_name = { id = 14612 name = "Bilwi"}
+		set_province_name = { id = 14613 name = "Miskitia"}
+		set_province_name = { id = 14674 name = "Pipil"}
+		set_province_name = { id = 13092 name = "'Huanacaxtle"}
+		set_province_name = { id = 13700 name = "Cuzcatlan"}
+		set_province_name = { id = 13698 name = "Ulua"}
+		set_province_name = { id = 13208 name = "Eramani-Lentercala"}
+		set_province_name = { id = 13678 name = "Huetar"}
+		set_province_name = { id = 14633 name = "Garabito"}
+		set_province_name = { id = 1633 name = "Bokota"}
+		set_province_name = { id = 7617 name = "Buabïti"}
+		set_province_name = { id = 14619 name = "Akua Yala"}
+		set_province_name = { id = 14618 name = "Gaigirgordub"}
+		set_province_name = { id = 5205 name = "Hahatunwan"}
+		set_province_name = { id = 12341 name = "Nabasoto"}
+		set_province_name = { id = 11685 name = "O-wash-ta-nong"}
+		set_province_name = { id = 7420 name = "Kitchiwikwedongsing"}
 	}
 }
 
@@ -6831,6 +7145,7 @@ country_event = { #Baste Huwhite Reseravtions
 	trigger = {
 		tag = ALA
 		has_government = national_populist
+		has_country_flag = ALA_based_thing
 		owns_state = 932 #mass
 		owns_state = 739 #Ottowa
 	}
@@ -6860,8 +7175,8 @@ country_event = { #Baste Huwhite Reseravtions
 				create_country_leader = {
 					name = "Alastair of the Anglos"
 					desc = "POLITICS_CUCKEDBRIT_DESC"
-					picture = "gfx/leaders/AIF/AIF_Alastair.png"
-					expire = "1965.1.1"
+					picture = "gfx/leaders/AIF/Portrait_AIF_Alastair_Windsor.png"
+					expire = "1.1.1"
 					ideology = national_populist_subtype
 					traits = {}
 				}
@@ -6936,8 +7251,8 @@ country_event = { #Baste Huwhite Reseravtions
 				create_country_leader = {
 					name = "Conseil Souverain"
 					desc = "POLITICS_CONSEIL_SOUVERAIN_DESC"
-					picture = "gfx/leaders/AIF/AIF_Conseil_Souverain.png"
-					expire = "1965.1.1"
+					picture = "gfx/leaders/AIF/Portrait_AIF_Conseil_Souverain.png"
+					expire = "1.1.1"
 					ideology = maurrassism_subtype
 					traits = {}
 				}
@@ -7012,8 +7327,8 @@ country_event = { #Baste Huwhite Reseravtions
 				create_country_leader = {
 					name = "Sir Mather"
 					desc = "POLITICS_MATHER_DESC"
-					picture = "gfx/leaders/AIF/AIF_Mather.png"
-					expire = "1965.1.1"
+					picture = "gfx/leaders/AIF/Portrait_AIF_Alonzo_Mather.png"
+					expire = "1.1.1"
 					ideology = national_populist_subtype
 					traits = {}
 				}
@@ -7111,14 +7426,17 @@ country_event = { #Puppet Event
 country_event = { #Iroquois 
 	id = REDAlaska.103
 	title = REDAlaska.103.t
-		desc = REDAlaska.103.d
+	desc = REDAlaska.103.d
 	picture = GFX_report_event_generic_trial_big
 
 	is_triggered_only = no
 	
 	trigger = {
 		tag = ALA
-		has_government = national_populist
+		has_country_leader = {
+			ruling_only = yes
+			name = "Elwood Towner"
+		}
 		owns_state = 932 #mass
 		owns_state = 739 #Ottowa
 	}
@@ -7139,7 +7457,7 @@ country_event = { #Iroquois
 		}
 		set_country_flag = iqr_independent
 		hidden_effect = {
-			if = {
+			IQR = {
 				country_event = {
 					id = IQR.1
 					days = 9
@@ -7161,7 +7479,7 @@ country_event = { #Iroquois
 		set_country_flag = iqr_independent
 		IQR = { change_tag_from = ALA }
 		hidden_effect = {
-			if = {
+			IQR = {
 				country_event = {
 					id = IQR.1
 					days = 9
@@ -7173,14 +7491,17 @@ country_event = { #Iroquois
 country_event = { #Wabanakia and Iroquois 
 	id = REDAlaska.104
 	title = REDAlaska.104.t
-		desc = REDAlaska.104.d
+	desc = REDAlaska.104.d
 	picture = GFX_report_event_generic_trial_big
 
 	is_triggered_only = no
 	
 	trigger = {
 		tag = ALA
-		has_government = national_populist
+		has_country_leader = {
+			ruling_only = yes
+			name = "Elwood Towner"
+		}
 		owns_state = 932 #mass
 		owns_state = 739 #Ottowa
 	}
@@ -7204,11 +7525,14 @@ country_event = { #Wabanakia and Iroquois
 			transfer_state = 934
 			transfer_state = 468
 			transfer_state = 465
-			transfer_state = 464
+			transfer_state = 1330
+			transfer_state = 1331
+			add_state_core = 1330
+			add_state_core = 1331
 		}
 		set_country_flag = wab_independent
 		hidden_effect = {
-			if = {
+			WAB = {
 				country_event = {
 					id = WAB.1
 					days = 9
@@ -7237,12 +7561,161 @@ country_event = { #Wabanakia and Iroquois
 		set_country_flag = wab_independent
 		WAB = { change_tag_from = ALA }
 		hidden_effect = {
-			if = {
+			WAB = {
 				country_event = {
 					id = WAB.1
 					days = 9
 				}
 			}
 		}
+	}
+}
+
+country_event = { # Indianizing South America
+	id = REDAlaska.105
+	immediate = {log = "[GetDateText]: [Root.GetName]: event REDAlaska.105"}
+	title = REDAlaska.105.t
+	desc = REDAlaska.105.d
+	
+	picture = GFX_report_event_USA_indians
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ALA
+		owns_state = 306 #Bogota
+		owns_state = 303 #Lima
+		owns_state = 849 #Caracas
+		owns_state = 498
+		OR = {
+		has_country_leader = { ruling_only = yes name = "Elwood Towner" }
+		has_country_leader = { ruling_only = yes name = "Thomas Dixon" }
+		}
+	}
+			
+	option = { 
+		name = REDAlaska.105.a
+		set_province_name = { id = 12790 name = "Karakalí"}
+		set_province_name = { id = 12845 name = "Kukutá"}
+		set_province_name = { id = 13433 name = "Bucar Manga"}
+		set_province_name = { id = 2023 name = "Aburrá"}
+		set_province_name = { id = 10747 name = "Bacatá"}
+		set_province_name = { id = 1887 name = "Guayabetal"}
+		set_province_name = { id = 7936 name = "Anchicayá"}
+		set_province_name = { id = 13391 name = "Quyecá"}
+		set_province_name = { id = 8047 name = "Inca-Caranqui"}
+		set_province_name = { id = 12798 name = "Cara-Quitu-Ilaló"}
+		set_province_name = { id = 8252 name = "Guayaquile"}
+		set_province_name = { id = 5120 name = "Cuxibamba"}
+		set_province_name = { id = 8149 name = "Iquito-Napeano"}
+		set_province_name = { id = 1944 name = "Maara-iwo"}
+		set_province_name = { id = 153 name = "Curasaore"}
+		set_province_name = { id = 4526 name = "Caiquetia"}
+		set_province_name = { id = 10855 name = "Variquicimeto"}
+		set_province_name = { id = 1997 name = "Zumba"}
+		set_province_name = { id = 4892 name = "Apur"}
+		set_province_name = { id = 8113 name = "Caraca-Tarama"}
+		set_province_name = { id = 10912 name = "Cumanagoto"}
+		set_province_name = { id = 1981 name = "Guiri-Noko"}
+		set_province_name = { id = 2156 name = "Cerro Vicús"}
+		set_province_name = { id = 13537 name = "Taraputus-Ancohallo"}
+		set_province_name = { id = 8199 name = "Chan-Chan"}
+		set_province_name = { id = 13209 name = "Kashamarka"}
+		set_province_name = { id = 12983 name = "Chimputi"}
+		set_province_name = { id = 13299 name = "Wanuku"}
+		set_province_name = { id = 12997 name = "Limaq-Itchyma"}
+		set_province_name = { id = 5166 name = "Qusqu"}
+		set_province_name = { id = 2182 name = "Punu-Titiqaqa"}
+		set_province_name = { id = 13674 name = "Ariqipa"}
+		set_province_name = { id = 5229 name = "Mitimaes"}
+		set_province_name = { id = 13520 name = "Pamahuayá"}
+		set_province_name = { id = 13511 name = "Uru Uru"}
+		set_province_name = { id = 8157 name = "Quchapampa"}
+		set_province_name = { id = 5230 name = "Chuqi-Yapu Marka"}
+		set_province_name = { id = 12930 name = "Chuquisaca"}
+		set_province_name = { id = 10987 name = "Putusi"}
+		set_province_name = { id = 10924 name = "Chané"}
+		set_province_name = { id = 13086 name = "Takana"}
+		set_province_name = { id = 13510 name = "Chango"}
+		set_province_name = { id = 13508 name = "Ckara-ama"}
+		set_province_name = { id = 12994 name = "Antapakay"}
+		set_province_name = { id = 5228 name = "Paitanas"}
+		set_province_name = { id = 13502 name = "Vilumanque"}
+		set_province_name = { id = 650 name = "Chena Pukara"}
+		set_province_name = { id = 13499 name = "Quillotanes"}
+		set_province_name = { id = 8229 name = "Mapochoes"}
+		set_province_name = { id = 12984 name = "Biobío"}
+		set_province_name = { id = 5169 name = "Meli Pulli"}
+		set_province_name = { id = 5201 name = "Karukinka"}
+		set_province_name = { id = 2152 name = "Paraguay"}
+		set_province_name = { id = 13247 name = "Tupârahava-Abá"}
+		set_province_name = { id = 10973 name = "Kaskihá"}
+		set_province_name = { id = 2195 name = "Lengua"}
+		set_province_name = { id = 10362 name = "Huok-Charrúa"}
+		set_province_name = { id = 12440 name = "Güenoa"}
+		set_province_name = { id = 1641 name = "Bohán"}
+		set_province_name = { id = 10944 name = "Wichí"}
+		set_province_name = { id = 11001 name = "Llullaillaco"}
+		set_province_name = { id = 8216 name = "Yucumán"}
+		set_province_name = { id = 5143 name = "Urin-Quechua"}
+		set_province_name = { id = 13501 name = "Huarpe"}
+		set_province_name = { id = 12970 name = "Cuyo"}
+		set_province_name = { id = 5918 name = "Comechingón"}
+		set_province_name = { id = 12964 name = "Taragüí"}
+		set_province_name = { id = 10943 name = "Caranday"}
+		set_province_name = { id = 12453 name = "Bohanes"}
+		set_province_name = { id = 7500 name = "Qom"}
+		set_province_name = { id = 11007 name = "Paraná"}
+		set_province_name = { id = 8215 name = "Huentota"}
+		set_province_name = { id = 12364 name = "Dioi-Charrúa"}
+		set_province_name = { id = 1639 name = "Napostá"}
+		set_province_name = { id = 12960 name = "Fuegia"}
+		set_province_name = { id = 12952 name = "Puerto Tehuelche"}
+		set_province_name = { id = 13219 name = "Aónikenkia"}
+		set_province_name = { id = 10953 name = "Gnechen Peñi Mapu"}
+		set_province_name = { id = 12351 name = "Guenona-Minuanes"}
+		set_province_name = { id = 10960 name = "Wapixana"}
+		set_province_name = { id = 12939 name = "Karitiana"}
+		set_province_name = { id = 7638 name = "Kunturillu"}
+		set_province_name = { id = 4589 name = "Minuano-Tapes"}
+		set_province_name = { id = 4436 name = "Kaingang"}
+		set_province_name = { id = 4575 name = "Guaranía"}
+		set_province_name = { id = 7594 name = "New Dgheyaytnu"}
+		set_province_name = { id = 10405 name = "Pirajubaé"}
+		set_province_name = { id = 5178 name = "Yûasú"}
+		set_province_name = { id = 8181 name = "Kurí Tyba"}
+		set_province_name = { id = 4587 name = "Xetá"}
+		set_province_name = { id = 13251 name = "Terêna"}
+		set_province_name = { id = 5112 name = "Guaiaó"}
+		set_province_name = { id = 10513 name = "Tupiniquimia"}
+		set_province_name = { id = 10360 name = "Katukina Pano"}
+		set_province_name = { id = 10980 name = "Kari' oka"}
+		set_province_name = { id = 8190 name = "Cunhambebe"}
+		set_province_name = { id = 12334 name = "Ka'aguy"}
+		set_province_name = { id = 8210 name = "Kuarepotijui"}
+		set_province_name = { id = 10999 name = "Aimoré"}
+		set_province_name = { id = 7476 name = "Maxakali"}
+		set_province_name = { id = 12977 name = "Xakriabá"}
+		set_province_name = { id = 13268 name = "Xavante"}
+		set_province_name = { id = 13267 name = "Haliti-Paresi"}
+		set_province_name = { id = 11002 name = "Jiripancó"}
+		set_province_name = { id = 10946 name = "Guaibimpara"}
+		set_province_name = { id = 8143 name = "Boime"}
+		set_province_name = { id = 10939 name = "Caeté"}
+		set_province_name = { id = 5168 name = "Tabajara"}
+		set_province_name = { id = 2227 name = "Poti"}
+		set_province_name = { id = 7561 name = "Kiriri"}
+		set_province_name = { id = 5107 name = "Potiguara"}
+		set_province_name = { id = 13345 name = "Parnaíba"}
+		set_province_name = { id = 13335 name = "Tuka-Tï"}
+		set_province_name = { id = 12933 name = "Guaxenduba"}
+		set_province_name = { id = 13354 name = "Tucuruí Igarapé"}
+		set_province_name = { id = 12853 name = "Guaçu Paraná"}
+		set_province_name = { id = 13357 name = "Tapajós-Tupuliçus"}
+		set_province_name = { id = 13379 name = "Macapaba"}
+		set_province_name = { id = 10934 name = "Cabanagia"}
+		set_province_name = { id = 7621 name = "Hué-Charrú"}
+		set_province_name = { id = 12379 name = "Guidai-Charrúa"}
+		set_province_name = { id = 10447 name = "Gaúcho"}
 	}
 }

@@ -34,6 +34,7 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
+	tech_trucks = 1
 	motorised_infantry = 1
 	gw_artillery = 1
 	marines = 1
@@ -54,6 +55,7 @@ if = {
 		iw_large_airframe = 1
 		basic_small_airframe = 1
 		basic_medium_airframe = 1
+		air_torpedoe_1 = 1
 	}
 	COR_BBA_air_variants = yes
 }
@@ -188,19 +190,16 @@ country_event = { id = constate.2 days = 60 }
 country_event = { id = constate.302 days = 2 }
 country_event = { id = constate.7000 days = 15 }
 country_event = { id = constate.68 days = 150 }
+country_event = { id = constate.11094 days = 250 } #Coca-Cola
+country_event = { id = constate.11094 days = 450 } #VVIZARD VVEED
 
 country_event = { id = constate.4091 days = 4114  }
 country_event = { id = constate.4092 days = 4114  }
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 80
 set_stability = 0.5
 set_war_support = 0.5
-
-add_opinion_modifier = { target = CAL modifier = embargo }
-add_opinion_modifier = { target = CSA modifier = embargo }
-add_opinion_modifier = { target = USA modifier = embargo }
-add_opinion_modifier = { target = NEE modifier = embargo }
 
 COR = {
 	add_ideas = COR_jim_crow_idea
@@ -229,32 +228,32 @@ set_politics = {
 create_country_leader = {
 	name = "William H. Murray"
 	desc = "POLITICS_WILLIAM_H_MURRAY_DESC"
-	picture = "GFX_Portrait_William_H_Murray_animated"
-	expire = "1965.1.1"
+	picture = "GFX_Portrait_COR_William_H_Murray_animated"
+	expire = "1.1.1"
 	ideology = jacksonianism_subtype
 	traits = { alfalfa_bill }
 }
 create_country_leader = {
 	name = "William Joseph Simmons"
 	desc = "POLITICS_WILLIAM_JOSEPH_SIMMONS"
-	picture = "gfx/leaders/COR/COR_William_Joseph_Simmons.png"
-	expire = "1965.1.1"
+	picture = "gfx/leaders/COR/Portrait_COR_William_Joseph_Simmons.png"
+	expire = "1.1.1"
 	ideology = klan_nationalism_subtype
 	traits = {}
 }
 create_country_leader = {
 	name = "Richard Russell Jr."
 	desc = "POLITICS_RICHARD_RUSSELL_DESC"
-	picture = "gfx/leaders/COR/COR_Richard_Russell.png"
-	expire = "1965.1.1"
+	picture = "gfx/leaders/COR/Portrait_COR_Richard_Russell_Jr.png"
+	expire = "1.1.1"
 	ideology = dixiecrat_subtype
 	traits = { USA_jim_crows_champion }
 }
 create_country_leader = {
 	name = "David Bibb Graves"
 	desc = "POLITICS_DAVID_BIBB_GRAVES_DESC"
-	picture = "gfx/leaders/COR/Portrait_David_Bibb_Graves.png"
-	expire = "1965.1.1"
+	picture = "gfx/leaders/COR/Portrait_COR_David_Bibb_Graves.png"
+	expire = "1.1.1"
 	ideology = national_liberalism_subtype
 	traits = { COR_klan_ties_traits }
 }
@@ -262,7 +261,7 @@ create_country_leader = {
 	name = "Harry F. Byrd"
 	desc = "POLITICS_HARRY_F_BYRD_DESC"
 	picture = "gfx/leaders/USA/Portrait_USA_Harry_F_Byrd.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = autdem_christian_democracy_subtype
 	traits = { USA_symbol_of_the_old_south }
 }
@@ -270,9 +269,32 @@ create_country_leader = {
 	name = "Rush Limbaugh Sr."
 	desc = "POLITICS_RUSH_LIMBAUGH_SR_DESC"
 	picture = "gfx/leaders/COR/Portrait_COR_Rush_Limbaugh_sr.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = social_democrat_subtype
 	traits = { COR_anchorman_traits }
+}
+create_country_leader = {
+	name = "James K. Vardaman"
+	desc = "POLITICS_VARDAMAN_DESC"
+	picture = "gfx/leaders/COR/Portrait_COR_James_K_Vardaman.png"
+	expire = "1.1.1"
+	ideology = vardamanism_subtype
+	traits = { judgment_honesty_duty }
+}
+create_country_leader = {
+	name = "Walter Francis White"
+	picture = "gfx/leaders/BBR/Portrait_BBR_Walter_Francis_White.png"
+	expire = "1.1.1"
+	ideology = syn_radical_progressivism_subtype
+	traits = { }
+}
+create_country_leader = {
+	name = "George W. Christians"
+	desc = "POLITICS_GEORGE_CHRISTIANS_DESC"
+	picture = "gfx/leaders/FSA/Portrait_FSA_George_W_Christians.png"
+	expire = "1.1.1"
+	ideology = fitzhughism_subtype
+	traits = { }
 }
 
 add_ideas = {
@@ -289,7 +311,7 @@ add_ideas = {
 create_field_marshal = {# Joseph T. McNarney
 	name = "Joseph T. McNarney"
 	desc = "COR_JOSEPH_MCNARNEY_ARMY_DESC"
-	portrait_path = "gfx/leaders/COR/Joe_McNarey_HOI4.png"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Joseph_McNarney.png"
 	traits = {
 		trait_reckless
 		artillery_officer
@@ -323,7 +345,7 @@ create_field_marshal = {# Charles Summerall
 create_corps_commander = {# Wickliffe Draper
 	name = "Wickliffe Draper"
 	desc = "COR_WICKLIFFE_DRAPER_DESC"
-	portrait_path = "gfx/leaders/COR/COR_Draper.png"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Wickliffe_Draper.png"
 	traits = {
 		trickster
 		career_officer
@@ -339,7 +361,7 @@ create_corps_commander = {# Wickliffe Draper
 create_corps_commander = {# Edward Almond
 	name = "Edward Almond"
 	desc = "TEX_EDWARD_ALMOND_ARMY_DESC"
-	portrait_path = "gfx/leaders/COR/COR_Edward_Almond.png"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Edward_Almond.png"
 	traits = {
 		career_officer
 		trait_cautious
@@ -386,7 +408,7 @@ create_corps_commander = {# Carlos Brewer
 create_corps_commander = {# Virgil Effinger
 	name = "Virgil Effinger"
 	desc = "TEX_VIRGIL_EFFFINGER_ARMY_DESC"
-	portrait_path = "gfx/leaders/COR/Portrait_Virgil_Effinger.png"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Virgil_Effinger.png"
 	traits = {
 		harsh_leader
 		trait_reckless
@@ -402,7 +424,7 @@ create_corps_commander = {# Virgil Effinger
 create_corps_commander = {# Samuel Green
 	name = "Samuel Green"
 	desc = "TEX_SAMUEL_GREEN_ARMY_DESC"
-	portrait_path = "gfx/leaders/COR/COR_Sam_Green.png"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Sam_Green.png"
 	traits = {
 		inflexible_strategist
 		COR_NDWL_leader
@@ -415,10 +437,10 @@ create_corps_commander = {# Samuel Green
 	id = 138
 }
 
-create_corps_commander = {# William Shepherd
-	name = "William Shepherd"
-	desc = "TEX_WILLIAM_SHEPHERD_ARMY_DESC"
-	portrait_path = "gfx/leaders/COR/William_Jpshepard.png"
+create_corps_commander = {# William Shephard
+	name = "William Shepard"
+	desc = "TEX_WILLIAM_SHEPHARD_ARMY_DESC"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_William_Shepard.png"
 	traits = {
 		inflexible_strategist
 		harsh_leader
@@ -452,7 +474,6 @@ create_corps_commander = { #Jeb Stuart IV
 #	desc = "TEX_JOHN_HINES_DESC"
 	portrait_path = "gfx/leaders/COR/Portrait_COR_JEB!.png"
 	traits = {
-		hidden_sympathies
 		commando
 		career_officer
 	}
@@ -528,7 +549,7 @@ create_corps_commander = { #Edwin Walker
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 7890096
+	id = 78900
 }
 
 create_corps_commander = { #George Wallace
@@ -551,7 +572,7 @@ create_corps_commander = { #George Wallace
 create_corps_commander = { #Lindy
 	name = "Charles Lindbergh "
 #	desc = "TEX_JOHN_HINES_DESC"
-	portrait_path = "gfx/leaders/COR/COR_lindybeige.png"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Charles_Lindbergh_General.png"
 	traits = {
 		air_commander
 		war_hero
@@ -574,7 +595,6 @@ create_corps_commander = {# Buckner
 		trait_reckless
 		politically_connected
 		winter_expert
-		hidden_sympathies
 	}
 	skill = 3
 	attack_skill = 3
@@ -605,7 +625,6 @@ create_corps_commander = {# Schley
 	traits = {
 		war_hero
 		politically_connected
-		hidden_sympathies
 		adaptable
 		skilled_staffer
 	}
@@ -619,8 +638,8 @@ create_corps_commander = {# Schley
 create_corps_commander = {# Joe McCarthy
 	name = "Joseph McCarthy"
 	portrait_path = "gfx/leaders/COR/Portrait_COR_Joe_McCarthy.png"
-	traits = { trait_reckless naval_invader }
-	skill = 2
+	traits = { trait_reckless air_commander }
+	skill = 1
 	attack_skill = 2
 	defense_skill = 1
 	planning_skill = 1
@@ -655,6 +674,18 @@ create_corps_commander = {#
 	logistics_skill = 3
 }
 create_corps_commander = {# 
+	name = "Francis Preston Blair Lee III"
+	portrait_path = "gfx/leaders/FSA/Portrait_FSA_Francis_Preston_Blair_Lee_III_General.png"
+	traits = {
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {# 
 	name = "Alvin C. York"
 	portrait_path = "gfx/leaders/FSA/Portrait_FSA_Alvin_York.png"
 	traits = {
@@ -680,10 +711,31 @@ create_corps_commander = {# Bossert
 	planning_skill = 2
 	logistics_skill = 1
 }
+create_corps_commander = {# Colescott
+	name = "James A. Colescott"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_James_A_Colescott.png"
+	traits = { COR_NDWL_leader politically_connected }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
 create_corps_commander = {#
 	name = "Louise Thaden"
+	desc = "COR_LOUISE_THADEN_ARMY_DESC"
 	female = yes
 	portrait_path = "gfx/leaders/FSA/Portrait_FSA_Louise_Thaden.png"
+	traits = { media_personality air_commander }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {#
+	name = "William Faulkner"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_William_Faulkner.png"
 	traits = { media_personality air_commander }
 	skill = 1
 	attack_skill = 1
@@ -714,6 +766,16 @@ create_navy_leader = {# Francis L. Garrett
 	maneuvering_skill = 1
 	coordination_skill = 1
 }
+create_navy_leader = {# James K. Vardaman Jr.
+	name = "James K. Vardaman Jr."
+	portrait_path = "gfx/leaders/COR/Portrait_COR_James_K_Vardaman_Jr.png"
+	traits = { navy_career_officer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
 create_navy_leader = {# John G. Crommelin
 	name = "John G. Crommelin"
 	portrait_path = "gfx/leaders/TEX/Portrait_TEX_david_bagley.png"
@@ -726,7 +788,17 @@ create_navy_leader = {# John G. Crommelin
 }
 create_navy_leader = {# Mickey Cochrane
 	name = "Mickey Cochrane"
-	portrait_path = "gfx/leaders/COR/Mickey_Cochrane.png"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_Mickey_Cochrane.png"
+	traits = { COR_NDWL_leader }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {# George Lincoln Rockwell
+	name = "George Lincoln Rockwell"
+	portrait_path = "gfx/leaders/COR/Portrait_COR_George_Lincoln_Rockwell_Admiral.png"
 	traits = { COR_NDWL_leader }
 	skill = 1
 	attack_skill = 1

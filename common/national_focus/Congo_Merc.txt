@@ -2045,7 +2045,7 @@ focus_tree = {
 					name = "Carl Gustav von Rosen"
 					desc = "POLITICS_ROSEN_DESC"
 					picture = "gfx/leaders/MSF/MSF_Carl_Gustav_von_Rosen.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = socdem_mercenary_democracy_subtype
 					traits = {}
 				}
@@ -2053,7 +2053,7 @@ focus_tree = {
 					name = "Carl Gustav von Rosen"
 					desc = "POLITICS_ROSEN_DESC"
 					picture = "gfx/leaders/MSF/MSF_Carl_Gustav_von_Rosen.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = mercenary_democracy_subtype
 					traits = {}
 				}
@@ -2061,7 +2061,7 @@ focus_tree = {
 					name = "Carl Gustav von Rosen"
 					desc = "POLITICS_ROSEN_DESC"
 					picture = "gfx/leaders/MSF/MSF_Carl_Gustav_von_Rosen.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = soccon_mercenary_democracy_subtype
 					traits = {}
 				}
@@ -2272,6 +2272,8 @@ focus_tree = {
 				add_idea = MSF_rule_from_the_sky
 			}
 			remove_ideas = MSF_mercs_not_governors2
+			remove_country_leader_trait = MSF_counsul
+			add_country_leader_trait = MSF_sky_marshall
 		}
 	}
 	

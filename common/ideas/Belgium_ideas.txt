@@ -98,7 +98,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_goods_red_bonus
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -109,7 +109,7 @@ ideas = {
 			picture = generic_coastal_navy
 			modifier = {
 				trade_opinion_factor = 0.2
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.1
 			}
 		}
 
@@ -118,7 +118,7 @@ ideas = {
 			allowed = { always = no }
 			picture = diamond_trade
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.1
 				production_factory_start_efficiency_factor = 0.05
 			}
 		}
@@ -146,7 +146,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_goods_red_bonus
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.1
 			}
 		}
 
@@ -169,7 +169,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			modifier = {
 				production_speed_buildings_factor = 0.05
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 			}
 		}
 
@@ -229,6 +229,7 @@ ideas = {
 			picture = BEL_King_Exile
 			allowed = { always = no }
 			modifier = {
+				political_power_factor = 0.05
 				war_support_factor = -0.10
 			}
 		}
@@ -279,7 +280,10 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.10
-			drift_defence_factor = 0.15
+				drift_defence_factor = 0.15
+				mobilization_speed = 0.09
+				stability_weekly = 0.002
+				command_power_gain_mult = 0.15
 			}
 		}
 
@@ -289,6 +293,8 @@ ideas = {
 			picture = generic_morale_bonus
 			modifier = {
 				conscription_factor = 0.10
+				monthly_population = 0.40
+				surrender_limit = 0.07
 			}
 		}
 
@@ -298,7 +304,10 @@ ideas = {
 			picture = BEL_NIR
 			modifier = {
 				stability_factor = 0.05
-				war_support_factor = 0.02
+				war_support_factor = 0.05
+				decryption_factor = 0.06
+				encryption_factor = 0.06
+				foreign_subversive_activites = -0.07
 			}
 		}
 		BEL_More_Soldiers = {
@@ -307,6 +316,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			modifier = {
 				conscription = 0.01
+				weekly_manpower = 50
 			}
 		}
 
@@ -341,6 +351,8 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.20
+				party_popularity_stability_factor = 0.08
+				global_building_slots_factor = 0.07
 			}
 		}
 
@@ -349,8 +361,10 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_goods_red_bonus
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				army_org_factor = 0.10
+				army_core_defence_factor = 0.07
+				army_core_attack_factor = 0.07
 			}
 		}
 
@@ -360,6 +374,8 @@ ideas = {
 			picture = BEL_Vlaamse_Leeuw
 			modifier = {
 				conscription = 0.03
+				army_org_regain = 0.05
+				army_org_factor = 0.05
 			}
 		}
 
@@ -369,13 +385,15 @@ ideas = {
 			picture = generic_central_management
 			modifier = {
 				local_resources_factor = 0.15
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
 			}
 		}
 
 		BEL_welfare_state = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BEL_welfare_state"}
 			allowed = { always = no }
-			modifier = { production_speed_infrastructure_factor = 0.1 stability_factor = 0.10 political_power_factor = -0.1 }
+			modifier = { production_speed_infrastructure_factor = 0.1 stability_factor = 0.10 political_power_factor = -0.1 monthly_population = 0.06 stability_weekly = 0.01 }
 			picture = generic_welfare_state
 		}
 		BEL_Taxation = {
@@ -383,7 +401,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_taxation
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.12
 			}
 		}
 		BEL_Cat_Science = {
@@ -392,6 +410,7 @@ ideas = {
 			picture = generic_research_bonus
 			modifier = {
 				research_speed_factor = 0.05
+				party_popularity_stability_factor = 0.10
 			}
 		}
 
@@ -418,7 +437,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_destruction
 			modifier = {
-				consumer_goods_factor = 0.20
+				consumer_goods_factor = 0.40
 				industrial_capacity_factory = -0.30
 			}
 		}
@@ -427,7 +446,7 @@ ideas = {
 			allowed = { always = no }
 			picture = economic_control_icon
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.20
 				industrial_capacity_factory = -0.15
 			}
 		}
@@ -451,7 +470,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_foreign_capital
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				line_change_production_efficiency_factor = 0.1
 			}
 		}
@@ -460,7 +479,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_foreign_capital
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				line_change_production_efficiency_factor = 0.1
 			}
 		}
@@ -470,7 +489,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_taxation
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.20
 			}
 		}
 		BEL_Tax_small = {
@@ -478,7 +497,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_taxation
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -516,7 +535,7 @@ ideas = {
 			allowed = { always = no }
 			picture = free_trade
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				production_factory_efficiency_gain_factor = 0.1
 			}
 
@@ -541,7 +560,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_goods_red_bonus
 			modifier = {
-				consumer_goods_factor = 0.20
+				consumer_goods_factor = 0.40
 			}
 		}
 
@@ -551,8 +570,11 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_goods_red_bonus
 			modifier = {
-				industrial_capacity_factory = 0.08
-				stability_factor = 0.05
+				industrial_capacity_factory = 0.11
+				production_lack_of_resource_penalty_factor = -0.07
+				production_speed_industrial_complex_factor = 0.11
+				production_speed_arms_factory_factor = 0.07
+				stability_factor = 0.06
 			}
 		}
 
@@ -562,7 +584,11 @@ ideas = {
 			allowed = { always = no }
 			picture = saf_soviet_advisers
 			modifier = {
-				line_change_production_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.06
+				global_building_slots_factor = 0.1
+				political_power_factor = 0.03
+				production_speed_buildings_factor = 0.07
 			}
 		}
 		BEL_Nationalise_Basic = {
@@ -570,8 +596,9 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_central_management
 			modifier = {
-				production_factory_start_efficiency_factor = 0.05
-				consumer_goods_factor = -0.05
+				production_factory_start_efficiency_factor = 0.07
+				production_speed_industrial_complex_factor = 0.08
+				consumer_goods_factor = -0.15
 			}
 		}
 
@@ -581,7 +608,10 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_goods_red_bonus
 			modifier = {
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.30
+				guarantee_cost = -0.05
+				stability_weekly = 0.002
+				resistance_decay = 0.1
 			}
 		}
 		BEL_Ministries = {
@@ -590,6 +620,11 @@ ideas = {
 			picture = saf_soviet_advisers
 			modifier = {
 				political_power_gain = 0.25
+				stability_factor = 0.05
+				stability_weekly = 0.001
+				resistance_target = -0.03
+				compliance_gain = 0.07
+				mobilization_speed = 0.07
 			}
 		}
 
@@ -602,6 +637,8 @@ ideas = {
 				political_power_gain = -0.10
 				stability_factor = 0.05
 				local_resources_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.08
+				production_speed_buildings_factor = 0.04
 			}
 		}
 		BEL_Corporations = {
@@ -609,7 +646,9 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_goods_red_bonus
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.04
+				industrial_capacity_factory = 0.06
 			}
 		}
 		BEL_Focus_On_Export = {
@@ -617,8 +656,13 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_flexible_foreign_policy2
 			modifier = {
-				consumer_goods_factor = -0.05
-				conscription_factor = -0.05
+				consumer_goods_factor = -0.15
+				conscription_factor = -0.03
+				trade_opinion_factor = 0.12
+				faction_trade_opinion_factor = 0.09
+				opinion_gain_monthly = 0.1
+				enemy_justify_war_goal_time = 0.2
+				min_export = 0.03
 			}
 		}
 		BEL_Lib_Science = {
@@ -637,6 +681,10 @@ ideas = {
 			picture = generic_agrarian_reform
 			modifier = {
 				conscription_factor = 0.03
+				monthly_population = 0.4
+				stability_weekly = 0.002
+				industrial_capacity_factory = 0.05
+				production_factory_start_efficiency_factor = 0.03
 			}
 		}
 		BEL_belgicism = {
@@ -644,7 +692,11 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_army_war_college
 			modifier = {
-				political_power_gain = -0.30
+				political_power_gain = 0.2
+				party_popularity_stability_factor = 0.09
+				surrender_limit = 0.07
+				army_core_attack_factor = 0.04
+				army_core_defence_factor = 0.03
 			}
 		}
 
@@ -655,6 +707,7 @@ ideas = {
 			picture = ast_classify_aliens
 			modifier = {
 				political_power_factor = 0.30
+				stability_weekly = 0.003
 			}
 		}
 		BEL_Expansion = {
@@ -663,6 +716,10 @@ ideas = {
 			picture = generic_intel_bonus
 			modifier = {
 				justify_war_goal_time = -0.5
+				enemy_justify_war_goal_time = 0.2
+				army_morale_factor = 0.06
+				army_attack_factor = 0.07
+				army_defence_factor = 0.04
 			}
 		}
 		BEL_State_Funded_Research = {
@@ -670,7 +727,8 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_research_bonus
 			modifier = {
-				research_speed_factor = 0.03
+				research_speed_factor = 0.06
+				political_power_cost = -0.09
 			}
 		}
 
@@ -682,8 +740,24 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.10
 				conscription = 0.04
+				weekly_manpower = 30
 			}
 		}
+
+###Removable Language Stuff
+BEL_Language_Trouble_2 = {
+	on_add = { log = "[GetDateText]: [Root.GetName]: add idea BEL_Language_Trouble_2"}
+	name = BEL_Language_Trouble
+	picture = general_staff_KR
+	allowed = { always = no }
+	modifier = {
+		stability_factor = -0.03
+		war_support_factor = -0.06
+		political_power_gain = -0.1
+		max_planning = -0.06
+		planning_speed = -0.12
+	}
+}		
 
 ###Military
 
@@ -704,11 +778,11 @@ ideas = {
 			allowed = { always = no }
 			picture = BEL_Vlaamse_Leeuw
 			modifier = {
-				army_core_attack_factor = 0.05
+				army_core_attack_factor = 0.13
 				army_core_defence_factor = 0.2
-				resistance_damage_to_garrison = -0.2
-				max_planning = -0.1
-				planning_speed = -0.2
+				resistance_damage_to_garrison = -0.24
+				max_planning = -0.05
+				planning_speed = -0.05
 			}
 		}
 
@@ -717,11 +791,11 @@ ideas = {
 			picture = general_staff_KR
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.15
+				stability_factor = -0.08
 				political_power_gain = 0.1
 				army_org_factor = 0.15
 				army_morale_factor = 0.10
-				conscription_factor = -0.4
+				conscription_factor = -0.1
 			}
 		}
 
@@ -730,12 +804,12 @@ ideas = {
 			picture = general_staff_KR
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.20
+				stability_factor = -0.12
 				political_power_gain = 0.1
 				army_org_factor = 0.25
 				army_morale_factor = 0.25
 				resistance_damage_to_garrison = -0.35
-				conscription_factor = -0.6
+				conscription_factor = -0.25
 			}
 		}
 
@@ -846,7 +920,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_coastal_navy
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.20
 			}
 			equipment_bonus = {
 				convoy = {
@@ -873,7 +947,7 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_coastal_navy
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.20
 			}
 			equipment_bonus = {
 				convoy = {
@@ -892,7 +966,7 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				heavy_cruiser = {
+				capital_ship = {
 					build_cost_ic = -0.10
 					instant = yes
 				}
@@ -1003,7 +1077,7 @@ ideas = {
 	}
 
 #### Weapons ####
-	weapons_manufacturer = {
+	materiel_manufacturer = {
 		designer = yes
 		mecar_FLN = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea mecar_FLN"}
@@ -1056,7 +1130,6 @@ ideas = {
 					NOT = { country_exists = FLN }
 				}
 			}
-			picture = generic_artillery_manufacturer_3
 			traits = {
 				artillery_producer_offense_0
 			}

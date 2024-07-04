@@ -33,7 +33,7 @@ create_prussia = {
 							name = "Wilhelm III"
 							desc = "GRU_WILHELM_III_PRUS__DESC"
 							picture = "gfx/leaders/GER/Portrait_Germany_Wilhelm_III_field_marshall.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = paternal_autocrat_subtype
 				}
 				set_party_name = {
@@ -284,7 +284,7 @@ create_bavaria = {
 				remove_all_ministers = yes
 				add_ideas = {
 					BAY_Wilhelm_Frick_hog_npo
-					BAY_Gregor_Strasser_for_npo
+					BAY_Dietrich_Eckart_for_pau
 					BAY_Karl_Fiehler_eco_npo
 					BAY_Heinrich_Mueller_sec_npo
 				}
@@ -315,14 +315,37 @@ create_bavaria = {
 				social_liberal = 0
 				market_liberal = 0
 				social_conservative = 6
-				authoritarian_democrat = 4
-				paternal_autocrat = 20
+				authoritarian_democrat = 20
+				paternal_autocrat = 4
 				national_populist = 70
+				}
+				create_country_leader = {
+					name = "Rupprecht"
+					picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
+					expire = "1.1.1"
+					ideology = integralism_subtype
+				}
+				create_country_leader = {
+					name = "Rupprecht"
+					picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
+					expire = "1.1.1"
+					ideology = absolute_monarchy_subtype
+				}
+				create_country_leader = {
+					name = "Rupprecht"
+					picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
+					ideology = prussian_constitutionalism_subtype
+				}
+				create_country_leader = {
+					name = "Rupprecht"
+					picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
+					expire = "1.1.1"
+					ideology = christian_democracy_subtype
 				}
 				
 				create_corps_commander = {
 					name = "Wilhelm Ritter von Leeb"
-					portrait_path = "gfx/leaders/BAY/Portrait_Germany_Wilhelm_Ritter_von_Leeb_kr.png"
+					portrait_path = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Ritter_von_Leeb_kr.png"
 					traits = { skilled_staffer infantry_officer }
 					skill = 3
 					attack_skill = 2
@@ -332,7 +355,7 @@ create_bavaria = {
 				}
 				create_corps_commander = {
 					name = "Albert Kesselring"
-					portrait_path = "gfx/leaders/BAY/Portrait_Germany_Albert_Kesselring_kr.png"
+					portrait_path = "gfx/leaders/GER/Portrait_Germany_Albert_Kesselring_kr.png"
 					traits = { inflexible_strategist infantry_officer }
 					skill = 3
 					attack_skill = 2
@@ -342,7 +365,7 @@ create_bavaria = {
 				}
 				create_corps_commander = {
 					name = "Eduard Dietl"
-					portrait_path = "gfx/leaders/BAY/Portrait_Germany_Eduard_Dietl_kr.png"
+					portrait_path = "gfx/leaders/GER/Portrait_Germany_Eduard_Dietl_kr.png"
 					traits = { winter_specialist commando }
 					skill = 3
 					attack_skill = 2
@@ -352,7 +375,7 @@ create_bavaria = {
 				}
 				create_corps_commander = {
 					name = "Franz Halder"
-					portrait_path = "gfx/leaders/BAY/Portrait_Germany_Franz_Halder_kr.png"
+					portrait_path = "gfx/leaders/GER/Portrait_Germany_Franz_Halder_kr.png"
 					traits = { organizer }
 					skill = 3
 					attack_skill = 2
@@ -362,7 +385,7 @@ create_bavaria = {
 				}
 				create_corps_commander = {
 					name = "Franz von Bayern"
-					portrait_path = "gfx/leaders/BAY/Portrait_Germany_Franz_Bayern_kr.png"
+					portrait_path = "gfx/leaders/GER/Portrait_Germany_Franz_Bayern_kr.png"
 					traits = { trait_engineer fortress_buster hill_fighter }
 					skill = 2
 					attack_skill = 1
@@ -403,9 +426,9 @@ create_rhenish_state = {
 				create_country_leader = {
 							name = "Konrad Adenauer"
 							desc = "GRU_ADENAUER_DESC"
-							picture = "gfx/leaders/GRU/Portrait_Germany_Konrad_Adenauer.png"
-							expire = "1965.1.1"
-							ideology = social_conservative_subtype
+							picture = "gfx/leaders/GER/Portrait_Germany_Konrad_Adenauer_kr.png"
+							expire = "1.1.1"
+							ideology = soccon_paneuropeanism_subtype
 				}
 				set_party_name = {
 						ideology = social_conservative
@@ -497,7 +520,7 @@ create_north_german_state = {
 							name = "Karl Artelt"
 							desc = "GRU_Artelt_DESC"
 							picture = "gfx/leaders/GRU/Portrait_Germany_Karl_Artelt.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = radical_socialist_subtype
 				}
 				set_party_name = {
@@ -634,7 +657,7 @@ north_germany_dies = {
 			name = "Georg I"
 			desc = "POLITICS_Georg_DESC"
 			picture = "gfx/leaders/SAX/SAX_George.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = absolute_monarchy_subtype
 		}
 		set_capital = { state = 65 }
@@ -664,7 +687,7 @@ north_germany_dies = {
 			election_frequency = 48
 			elections_allowed = no
 		}
-		set_party_name = { ideology = national_populist long_name = "National Socialist German League" name = "NSGL" }
+		set_party_name = { ideology = national_populist long_name = "National German League" name = "NGL" }
 		set_popularities = {
 			national_populist = 100
 		}
@@ -673,7 +696,7 @@ north_germany_dies = {
 			name = "Johann Krosigk"
 			desc = "POLITICS_JOHANN_KROSIGK_DESC"
 			picture = "gfx/leaders/POM/POM_JohaanLudwig.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = volkism_subtype
 		}
 		set_capital = { state = 62 }
@@ -707,7 +730,7 @@ north_germany_dies = {
 			name = "Erwin von Witzleben"
 			desc = "POLITICS_Erwin_Witzleben_DESC"
 			picture = "gfx/leaders/GER/Portrait_Germany_Erwin_von_Witzleben_kr.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = junta_subtype
 		}
 		set_capital = { state = 66 }
@@ -739,7 +762,7 @@ north_germany_dies = {
 			name = "Karl Dönitz"
 			desc = "POLITICS_Donitz_DESC"
 			picture = "gfx/leaders/GER/Portrait_Germany_Karl_Donitz_kr.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = junta_subtype
 		}
 		set_capital = { state = 59 }
@@ -774,7 +797,7 @@ north_germany_dies = {
 			name = "Danish Occupational Authority"
 			desc = "POLITICS_denmark_occupation_desc"
 			picture = "gfx/leaders/SCH/SCH_danish_occupation.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authoritarian_democrat_subtype
 		}
 
@@ -810,7 +833,7 @@ setup_muscovy = {
 			name = "Felix Yusupov"
 			desc = "POLITICS_some russian_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Felix_Yusupov.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authoritarian_democrat_subtype
 		}
 
@@ -846,7 +869,7 @@ setup_novosibirsk = {
 			name = "Andrey Vlasov"
 			desc = "POLITICS_some russian_DESC"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Andrey_Vlasov.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_populist_subtype
 		}
 
@@ -854,12 +877,14 @@ setup_novosibirsk = {
 	}
 }
 
-
 claim_mittelafrika = {
 	hidden_effect = {
 		add_state_claim = 807
 		add_state_claim = 963
 		add_state_claim = 274
+		add_state_claim = 1321
+		add_state_claim = 1322
+		add_state_claim = 1323
 		add_state_claim = 876
 		add_state_claim = 877
 		add_state_claim = 973
@@ -917,6 +942,9 @@ claim_mittelafrika = {
 		add_state_claim = 807
 		add_state_claim = 963
 		add_state_claim = 274
+		add_state_claim = 1321
+		add_state_claim = 1322
+		add_state_claim = 1323
 		add_state_claim = 876
 		add_state_claim = 877
 		add_state_claim = 973
@@ -979,7 +1007,6 @@ claim_mittelafrika = {
 	}
 }
 
-
 wargoals_on_mittelafrika = {
 	hidden_effect = {
 		every_country = {
@@ -988,6 +1015,9 @@ wargoals_on_mittelafrika = {
 					owns_state = 807
 					owns_state = 963
 					owns_state = 274
+					owns_state = 1321
+					owns_state = 1322
+					owns_state = 1323
 					owns_state = 876
 					owns_state = 877
 					owns_state = 973
@@ -1045,6 +1075,9 @@ wargoals_on_mittelafrika = {
 					owns_state = 807
 					owns_state = 963
 					owns_state = 274
+					owns_state = 1321
+					owns_state = 1322
+					owns_state = 1323
 					owns_state = 876
 					owns_state = 877
 					owns_state = 973
@@ -1116,3 +1149,132 @@ wargoals_on_mittelafrika = {
 	}
 }
 
+core_mittelafrika = {
+	hidden_effect = {
+		add_state_core = 807
+		add_state_core = 963
+		add_state_core = 274
+		add_state_core = 1321
+		add_state_core = 1322
+		add_state_core = 1323
+		add_state_core = 876
+		add_state_core = 877
+		add_state_core = 973
+		add_state_core = 558
+		add_state_core = 662
+		add_state_core = 878
+		add_state_core = 913 
+		add_state_core = 962
+		add_state_core = 975
+		add_state_core = 660
+		add_state_core = 971
+		add_state_core = 952
+		add_state_core = 927
+		add_state_core = 974
+		add_state_core = 953
+		add_state_core = 539
+		add_state_core = 928
+		add_state_core = 881
+		add_state_core = 538
+		add_state_core = 295
+		add_state_core = 1025 
+		add_state_core = 1180
+		add_state_core = 1185
+		add_state_core = 976
+		add_state_core = 1184
+		add_state_core = 949
+		add_state_core = 1026
+		add_state_core = 718
+		add_state_core = 1181
+		add_state_core = 977
+		add_state_core = 1182
+		add_state_core = 879
+		add_state_core = 1183
+		add_state_core = 548
+		add_state_core = 969
+		add_state_core = 547
+		add_state_core = 970
+		add_state_core = 925
+		add_state_core = 948
+		add_state_core = 869
+		add_state_core = 870
+		add_state_core = 918
+		add_state_core = 1032
+		add_state_core = 546
+		add_state_core = 899
+		add_state_core = 965
+		add_state_core = 871
+		add_state_core = 955
+		add_state_core = 956
+		add_state_core = 813
+		add_state_core = 958
+		add_state_core = 957
+		add_state_core = 964
+		add_state_core = 541
+		add_state_core = 807
+		add_state_core = 963
+		add_state_core = 274
+		add_state_core = 1321
+		add_state_core = 1322
+		add_state_core = 1323
+		add_state_core = 876
+		add_state_core = 877
+		add_state_core = 973
+		add_state_core = 558
+		add_state_core = 662
+		add_state_core = 878
+		add_state_core = 913 
+		add_state_core = 962
+		add_state_core = 975
+		add_state_core = 660
+		add_state_core = 971
+		add_state_core = 952
+		add_state_core = 927
+		add_state_core = 974
+		add_state_core = 953
+		add_state_core = 539
+		add_state_core = 928
+		add_state_core = 881
+		add_state_core = 538
+		add_state_core = 295
+		add_state_core = 1025 
+		add_state_core = 1180
+		add_state_core = 1185
+		add_state_core = 976
+		add_state_core = 1184
+		add_state_core = 949
+		add_state_core = 1026
+		add_state_core = 718
+		add_state_core = 1181
+		add_state_core = 977
+		add_state_core = 1182
+		add_state_core = 879
+		add_state_core = 1183
+		add_state_core = 548
+		add_state_core = 969
+		add_state_core = 547
+		add_state_core = 970
+		add_state_core = 925
+		add_state_core = 948
+		add_state_core = 869
+		add_state_core = 870
+		add_state_core = 918
+		add_state_core = 1032
+		add_state_core = 546
+		add_state_core = 899
+		add_state_core = 965
+		add_state_core = 871
+		add_state_core = 955
+		add_state_core = 956
+		add_state_core = 813
+		add_state_core = 958
+		add_state_core = 957
+		add_state_core = 964
+		add_state_core = 541
+		add_state_core = 1179
+		add_state_core = 1178
+		add_state_core = 1177
+		add_state_core = 543
+		add_state_core = 892
+	}
+}

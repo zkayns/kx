@@ -943,7 +943,7 @@ shared_focus = {
 
 shared_focus = {
 	id = AFR_Nationalize_Our_Infrastructure
-	icon = VK_NATIONALIZE
+	icon = GFX_VK_NATIONALIZE
 	
 	prerequisite = {
 		focus = AFR_A_Push_for_Tourism
@@ -1239,7 +1239,6 @@ shared_focus = {
 			division_template = {
 				name = "Militia Division"
 				division_names_group = FREN_MIL_01
-				is_locked = yes
 				regiments = {
 					infantry = { x = 0 y = 0 }
 					infantry = { x = 0 y = 1 }
@@ -2601,6 +2600,7 @@ focus_tree = {
 				tag = KBR
 				tag = DJI
 			}
+			is_dynamic_country = no
 		}
 	}
 	

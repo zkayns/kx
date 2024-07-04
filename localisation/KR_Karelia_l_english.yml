@@ -14,8 +14,8 @@ KAR_market_liberal_party:0 "Kansallinen Edistyspuolue"
 KAR_market_liberal_party_long:0 "Kansallinen Edistyspuolue (National Progressive Party)"
 KAR_social_conservative_party:0 "Karjalan Sivistysseura"
 KAR_social_conservative_party_long:0 "Karjalan Sivistysseura (Karelian Society of Enlightenment)"
-KAR_authoritarian_democrat_party:0 "IKYH"
-KAR_authoritarian_democrat_party_long:0 "Itä-Karjalan Yhdistynyt Hallitus (United Government of Eastern Karelia)"
+KAR_authoritarian_democrat_party:0 "Keskushallitus"
+KAR_authoritarian_democrat_party_long:0 "Karjalan Keskushallitus (Karelian United Government)"
 KAR_paternal_autocrat_party:0 "Toimikunta"
 KAR_paternal_autocrat_party_long:0 "Uhtuan Toimikunta (Ukhta Committee)"
 KAR_national_populist_party:0 "Metsäsissit"
@@ -128,7 +128,7 @@ kar.1.d:0 "By the end of 1919, the White Armies took Petrograd, and on January 2
 kar.1.a:0 "Interesting"
 
 kar.2.t:0 "Toimikunta and Yrjö Elfvengren"
-kar.2.d:0 "The Karelian issue is still unresolved. Karelia was divided between the provinces and was not granted autonomy. The region was desolate and poor, and all active political supporters of independence fled to Finland.\n\nSoon after the end of the uprising the Karelian United Government was formed. He was a Finnish nobleman, a white officer and a hero of the Finnish Civil War. During the same years, together with Savinkov and Goppers, he founded the Union for the Defense of the Homeland and Freedom and was responsible for organizing the struggle against the Bolsheviks near the borders with Finland and led the North Ingermanlandian Regiment and the North Ingrian Republic on the border with Petrograd. \n\nAfter the war he was not granted amnesty by the White Armies as he was considered a separatist and remained in Finland. When a new socialist uprising in Russia became known, Elfvengren, together with the Metsäsissit, crossed the border and founded the new Ukhta Committee, hoping for Finnish support in establishing an independent Karelia."
+kar.2.d:0 "The Karelian issue is still unresolved. Karelia was divided between the provinces and was not granted autonomy. The region was desolate and poor, and all active political supporters of independence fled to Finland.\n\nSoon after the end of the uprising the Karelian United Government was formed. Yrjö Elfvengren was a Finnish nobleman, a white officer and a hero of the Finnish Civil War. During the same years, together with Savinkov and Goppers, he founded the Union for the Defense of the Homeland and Freedom and was responsible for organizing the struggle against the Bolsheviks near the borders with Finland and led the North Ingermanlandian Regiment and the North Ingrian Republic on the border with Petrograd. \n\nAfter the war he was not granted amnesty by the White Armies as he was considered a separatist and remained in Finland. When a new socialist uprising in Russia became known, Elfvengren, together with the Metsäsissit, crossed the border and founded the new Ukhta Committee, hoping for Finnish support in establishing an independent Karelia."
 kar.2.a:0 "Down with Russian Imperialism!"
 
 kar.3.t:0 "Paavo Talvela Sent to Karelia"
@@ -140,8 +140,8 @@ kar.4.d:0 "A famous Jäger, participant of the 1922 Karelian Uprising has arrive
 kar.4.a:0 "Welcome, General!"
 
 kar.5.t:0 "Provisional Government"
-kar.5.d:0 "In Uhtua, General Elfvengren was greeted rather warmly, but soon a delegation from the United Government of Eastern Karelia, led by Paavo Ahava, arrived in the town. They declared that Elfvengren had unauthorizedly set up a committee and demanded that power be transferred into the hands of the "legitimate government.\n\nWe need allies now more than ever, and perhaps we should not turn other members of the Karelian government against ourselves. However, the transfer of power and domestic politics according to Elfvengren is clearly not a priority right now. Thus, the new-found "dictator of Karelia" faced a choice - either to agree with the delegates, but insist on his chairmanship of the government, or to send them back, declaring himself dictator officially."
-kar.5.a:0 "We are at war, IKYH makes no sense now!"
+kar.5.d:0 "In Uhtua, General Elfvengren was greeted rather warmly, but soon a delegation from the United Government of Karelia, led by Paavo Ahava, arrived in the town. They declared that Elfvengren had unauthorizedly set up a committee and demanded that power be transferred into the hands of the \"legitimate government\".\n\nWe need allies now more than ever, and perhaps we should not turn other members of the Karelian government against ourselves. However, the transfer of power and domestic politics according to Elfvengren is clearly not a priority right now. Thus, the new-found \"dictator of Karelia\" faced a choice - either to agree with the delegates, but insist on his chairmanship of the government, or to send them back, declaring himself dictator officially."
+kar.5.a:0 "We are at war, Keskushallitus makes no sense now!"
 kar.5.b:0 "Lead the United Government."
 
 kar.6.t:0 "Diplomatic Ties with Finland?"
@@ -149,7 +149,7 @@ kar.6.d:0 "With the strengthening of our power in Karelia, it is necessary to im
 kar.6.a:0 "Send a delegation to Helsinki!"
 
 kar.7.t:0 "Establishing Diplomacy with [FROM.GetName]"
-kar.7.d:0 "With the outbreak of the Russian Civil War, we invested in the Metsäsissit troops. However, contrary to our plans, they conspired with General Elfvengren, who headed the reconstituted Uhtua Committee. Now their government has turned to us with demands to recognize the independence of Karelia and to establish close ties. On the one hand, recognition of independence would allow Elfvengren to obtain legal grounds for the inviolability of his fiefdom, but on the other hand - can we do otherwise?"
+kar.7.d:0 "With the outbreak of the Russian Civil War, Karelia has been proclaimed as a separatist republic. However, contrary to our plans, they conspired with General Elfvengren, who headed the reconstituted Uhtua Committee. Now their government has turned to us with demands to recognize the independence of Karelia and to establish close ties. On the one hand, recognition of independence would allow Elfvengren to obtain legal grounds for the inviolability of his fiefdom, but on the other hand - can we do otherwise?"
 kar.7.a:0 "Recognize [FROM.GetName]!"
 kar.7.b:0 "Karelia is our natural claim!"
 
@@ -311,7 +311,8 @@ kar.42.a:0 "Karelians are not the same as Finns!"
 
 kar.43.t:0 "Karelia Refused Our Terms!"
 kar.43.d:0 "The Karelians have arrogantly rejected our honest terms!"
-kar.43.a:0 "It's their choice."
+kar.43.a:0 "It's their choice..."
+kar.43.b:0 "...and they will pay for it."
 
 kar.44.t:0 "Our Status"
 kar.44.d:0 "With Finnish opinion on our current state, we can now make the final choice - our future."
@@ -390,7 +391,7 @@ kar.66.d:0 "Before the Karelian secession, the NRPR was not really represented i
 kar.66.a:0 "Karelian peasants will be glad."
 
 kar.67.t:0 "Adopting some of NRPR Reforms"
-kar.67.d:0 "Savinkov's NRPR has various reforms, planned for Russian people, but not of them are good for the Karelians. This is why Elfvengren decided that only some NRPR reforms should be adopted. We can officially ban all other parties, mainly the Sivistysseura, and build a one-party state. Moreover, we can nationalize all enterprises in the region, which are owned either by Russians or by Finns, and finally, we can legalize state terror against all enemies of the state."
+kar.67.d:0 "Savinkov's NRPR has various reforms, planned for Russian people, but not all of them are good for the Karelian people. This is why Elfvengren decided that only some NRPR reforms should be adopted. We can officially ban all other parties, mainly the Sivistysseura, and build a one-party state. Moreover, we can nationalize all enterprises in the region, which are owned either by Russians or by Finns, and finally, we can legalize state terror against all enemies of the state."
 kar.67.a:0 "One-party state would be enough."
 kar.67.b:0 "We should also nationalize all enterprises!"
 kar.67.c:0 "And begin terror against all socialists!"
@@ -404,13 +405,13 @@ kar.69.d:0 "It seems that the Karelian leader, [FROM.GetLeader] has completely l
 kar.69.a:0 "Karjala on Suomi!"
 kar.69.b:0 "Let him have it..."
 
-kar.70.t:0 "Finland Accepts!"
-kar.70.d:0 "The Finnish government was forced to accept our terms and hand over Karjala."
-kar.70.a:0 "A great victory for the Karelians!"
+kar.70.t:0 "Finland Refused!"
+kar.70.d:0 "The Finnish government has expectedly refused to accept our terms and now we should get ready for war."
+kar.70.a:0 "We should get ready!"
 
-kar.71.t:0 "Finland Refused!"
-kar.71.d:0 "The Finnish government has expectedly refused to accept our terms and now we should get ready for war."
-kar.71.a:0 "We should get ready!"
+kar.71.t:0 "Finland Accepts!"
+kar.71.d:0 "The Finnish government was forced to accept our terms and hand over Karjala."
+kar.71.a:0 "A great victory for the Karelians!"
 
 kar.72.t:0 "King of Karelia?"
 kar.72.d:0 "Due to the fact that our king was ousted from his palace in Finland, he firstly was in exile in Finland. However, due to the Jägers being the last stronghold of true Finland, it was decided that the legitimate King of Finland and Karelia should settle in Karelia and reclaim his kingdom. Some of the Jägers find this idea appealing. Moreover, the local population of Karelians should now that their King is with them."
@@ -446,7 +447,7 @@ kar.79.d:0 "Our dear leader, Ukki Väinämöinen, today has been officially decl
 kar.79.a:0 "Great!"
 
 kar.80.t:0 "The Death of Fredrik Kaarle I"
-kar.80.d:0 "Our beloved king, Fredrik Kaarle I of Karelia, has passed away as a result of an infection on a wound from the first Weltkrieg at age 72, leaving the Karelian throne vacant. In his place his second eldest surviving son prince Wolfgang shall rise to the throne, taking on the regnal name Väinö I at his coronation [ROOT.Capital.GetName], where the Finnish crown will for the first time be worn by someone other than his father, as had been agreed upon in 1919 when he came along with his father as crown prince of Finland and Karelia in the stead of his elder brother prince Philipp, who remained in Germany."
+kar.80.d:0 "Our beloved king, Fredrik Kaarle I of Karelia, has passed away as a result of an infection on a wound from the Weltkrieg at age 72, leaving the Karelian throne vacant. In his place his second eldest surviving son prince Wolfgang shall rise to the throne, taking on the regnal name Väinö I at his coronation [ROOT.Capital.GetName], where the Finnish crown will for the first time be worn by someone other than his father, as had been agreed upon in 1919 when he came along with his father as crown prince of Finland and Karelia in the stead of his elder brother prince Philipp, who remained in Germany."
 kar.80.a:0 "The king is dead! Long live the king!"
 
 kar.81.t:0 "Botanical Diversity of White Karelia"
@@ -540,7 +541,7 @@ KAR_jager_div_unit_tooltip:0 "Gain two elite §YJääkäriliike Division§!.\n"
 KAR_rykment_unit_tooltip:0 "Gain one elite §YKarjalan rykmentti§! Division.\n"
 KAR_disbanded_metsasissit:0 "Has decided to disband the Metsäsissit"
 KAR_integrated_metsasissit:0 "Has decided to subordinate the Metsäsissit"
-KAR_Negotiate_Karelian_Autonomy_tt:0 "If §Y[FIN.GetName]§! agrees to all our terms, we will become an §Y$kr_autonomous_puppet$§! and §Y[146.GetName]§! and §Y[147.GetName]§!\n"
+KAR_Negotiate_Karelian_Autonomy_tt:0 "If §Y[FIN.GetName]§! agrees to all our terms, we will become an §Y$kr_autonomous_puppet$§! and receive §Y[146.GetName]§! and §Y[147.GetName]§!\n"
 KAR_Dreams_Of_Finno_Ugric_State_tt:0 "§CRussian Minors Update will allow more claims and more interactions§!"
 KAR_tver_karelians_danger:0 "If §Y[247.Owner.GetName]§! will take certain measures, then we will receive:\n"
 
@@ -606,7 +607,7 @@ KAR_Work_With_Sivistysseura_desc:0 "The Karelian Enlightenment Society will be u
 KAR_Karelian_Identity_Effort:0 "Karelian Identity Effort"
 KAR_Karelian_Identity_Effort_desc:0 "By opening new schools and promoting Karelian traditions we will ensure that our people feel themselves as a nation with their own language and culture."
 KAR_Opportunism:0 "In Spirit of Opportunism"
-KAR_Opportunism_desc:0 "Elfvengren has been both a Crimean Tatar separatist leader, a North Ingermanlandian Commander in Chief, a terrorist in Savinkov's anti-Bolshevist SZRS organisation, and finally, a Karelian leader. His spirit of opportunism will never wane."
+KAR_Opportunism_desc:0 "Elfvengren has been both a Crimean Tatar separatist leader, a North Ingrian Commander in Chief, a terrorist in Savinkov's anti-Bolshevist SZRS organisation, and finally, a Karelian leader. His spirit of opportunism will never wane."
 KAR_Establish_NRPR_Department:0 "Karjala NRPR Department"
 KAR_Establish_NRPR_Department_desc:0 "Before the Karelian secession, the NRPR was not really represented in the region, which was predominantly a stronghold of Socialist-Revolutionaries. As Savinkov's ideas are based on some SR ones, the local population, especially among the peasants, is likely to willingly accept some of the NRPR reforms. Moreover, if we want to get closer to Savinkovists, we can allow them to set up an official NRPR department. We must ensure that there is a representation for the Russians within Karelia."
 KAR_Initiate_Savinkovist_Reforms:0 "Initiate Savinkovist Reforms"
@@ -704,6 +705,7 @@ KAR_Narodnik_Karelia:0 "People's Karelia"
 KAR_Narodnik_Karelia_desc:0 "The ideology of Narodism has brought peace and prosperity to all of Karelians. Our people shall become prosperous and educated, thanks to the Soviet rule and, especially, Andrey Matveev."
 
 
+
 KAR_Exiled_King:0 "Exiled King"
 KAR_Exiled_King_desc:0 "The King of Finland and Karelia, Fredrik Kaarle, has arrived in order to bring back the monarchy to the Finnish lands."
 KAR_Karelian_Anticommunist_Front:0 "Karelian Anti-Socialist Front"
@@ -721,3 +723,4 @@ KAR_Integral_Part_Of_Heimo:0 "Integral Part of Heimo"
 KAR_Integral_Part_Of_Heimo_desc:0 "The Karelians are not a separate people, they are an integral part of Heimo - Finnish folk."
 KAR_Vihan_Veljet:0 "Vihan Veljet Operations"
 KAR_Vihan_Veljet_desc:0 "With the help of secret terrorist society of Vihan Veljet, we will ensure that no socialist or communist will escape from us."
+

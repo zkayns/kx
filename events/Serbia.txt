@@ -186,8 +186,24 @@ country_event = { #The Return of Alexander
 			name = "Alexander II"
 			desc = "POLITICS_ALEXANDER_II_DESC"
 			picture = "gfx/leaders/SER/Portrait_SER_Alexander_II.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authoritarian_democrat_subtype
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Alexander II"
+				desc = "POLITICS_ALEXANDER_II_DESC"
+				picture = "gfx/leaders/SER/Portrait_SER_Alexander_II.png"
+				expire = "1.1.1"
+				ideology = yugoslavism_subtype
+			}
+			create_country_leader = {
+				name = "Alexander II"
+				desc = "POLITICS_ALEXANDER_II_DESC"
+				picture = "gfx/leaders/SER/Portrait_SER_Alexander_II.png"
+				expire = "1.1.1"
+				ideology = natpop_yugoslavism_subtype
+			}
 		}
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -937,31 +953,31 @@ country_event = { #King Alexander Shot Dead!
 			create_country_leader = {
 				name = "Peter II"
 				picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Peter II"
 				picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Peter II"
 				picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = market_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Peter II"
 				picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Peter II"
 				picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_democrat_subtype
 			}
 			country_event = { id = serbia.31 days = 10 }
@@ -969,8 +985,8 @@ country_event = { #King Alexander Shot Dead!
 		create_country_leader = {
 			name = "Peter II"
 			picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
+			expire = "1.1.1"
+			ideology = yugoslavism_subtype
 		}
 	}
 }
@@ -2016,7 +2032,26 @@ country_event = {#want some black hand love?
 	option = {
 		name = dhserbia.1.a 
 
-		ai_chance = { factor = 30 }
+		ai_chance = { 
+			factor = 30 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SER_government_path
+						option = SER_GOVERNMENT_PATH_REPUBLIC_MARLIB
+					}
+					has_game_rule = {
+						rule = SER_government_path
+						option = SER_GOVERNMENT_PATH_REPUBLIC_SOCCON
+					}
+					has_game_rule = {
+						rule = SER_government_path
+						option = SER_GOVERNMENT_PATH_REGENT
+					}
+				}
+			}
+		}
 		
 		set_politics = { ruling_party = national_populist elections_allowed = no }
 		add_stability = -0.20
@@ -2024,12 +2059,38 @@ country_event = {#want some black hand love?
 		hidden_effect={
 						drop_cosmetic_tag = yes
 			complete_national_focus = SER_black_hand
+			create_country_leader = {
+				name = "Alexander II"
+				desc = "POLITICS_ALEXANDER_II_DESC"
+				picture = "gfx/leaders/SER/Portrait_SER_Alexander_II.png"
+				expire = "1.1.1"
+				ideology = natpop_yugoslavism_subtype
+			}
 			}
 	}
 	option = {
 		name = dhserbia.1.b
 
-		ai_chance = { factor = 30 }
+		ai_chance = { 
+			factor = 30 
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SER_government_path
+						option = SER_GOVERNMENT_PATH_REPUBLIC_MARLIB
+					}
+					has_game_rule = {
+						rule = SER_government_path
+						option = SER_GOVERNMENT_PATH_REPUBLIC_SOCCON
+					}
+					has_game_rule = {
+						rule = SER_government_path
+						option = SER_GOVERNMENT_PATH_REGENT
+					}
+				}
+			}
+		}
 		
 		set_politics = { ruling_party = national_populist elections_allowed = no }
 		add_stability = -0.20
@@ -2041,8 +2102,8 @@ country_event = {#want some black hand love?
 				name = "George I"
 				desc = ""
 				 picture = "gfx/leaders/SER/Portrait_SER_Prince_George.png"
-				expire = "1965.1.1"
-				ideology = militarism_subtype
+				expire = "1.1.1"
+				ideology = natpop_yugoslavism_subtype
 				traits = {}
 			}
 			 }
@@ -2073,8 +2134,8 @@ country_event = {#what now?
 			name = "Dragutin Keresovic"
 			desc = "Dragustin_Keresovic_DESC"
 			picture = "gfx/leaders/SER/Portrait_SER_Dragutin_Keserovic.png"
-			expire = "1965.1.1"
-			ideology = militarism_subtype
+			expire = "1.1.1"
+			ideology = natpop_yugoslavism_subtype
 			traits = {}
 		}
 		hidden_effect={
@@ -2097,8 +2158,8 @@ country_event = {#what now?
 			name = "Dimitrije Ljotic"
 			desc = "Dimitrije_Ljotic_DESC"
 			picture = "gfx/leaders/SER/Portrait_SER_Dimitrije_Ljotic.png"
-			expire = "1965.1.1"
-			ideology = militarism_subtype
+			expire = "1.1.1"
+			ideology = maurrassism_subtype 
 			traits = {}
 		}
 		hidden_effect={

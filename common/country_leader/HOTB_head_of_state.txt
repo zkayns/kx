@@ -37,7 +37,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	young_leader = { #Yockey/Rockwell
+	young_leader_hos = { #Yockey/Rockwell
 		random = no
 		political_power_gain = -0.05
 		stability_factor = 0.05
@@ -50,6 +50,16 @@ leader_traits = {
 		random = no
 		political_power_gain = 0.05
 		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	alfalfa_son = { #Murray Son
+		random = no
+		political_power_gain = 0.03
+		stability_factor = 0.03
+		local_manpower = 0.03
 
 		ai_will_do = {
 			factor = 1
@@ -82,7 +92,34 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
+	zealous_grand_dragon = { #Green
+		random = no
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_man = { #Bilbo
+		random = no
+		improve_relations_maintain_cost_factor = -0.25
+		party_popularity_stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_klan_accountant = { #Coleslaw
+		random = no
+		local_resources_factor = 0.05
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	blood_and_guts = { #Patton
 		random = no
 		stability_factor = -0.05
@@ -136,6 +173,23 @@ leader_traits = {
 		experience_gain_army = 0.02
 		stability_factor = 0.05
 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	judgment_honesty_duty = { #Vardaman
+		random = no 
+		stability_factor = 0.02
+		political_power_factor = 0.02
+		local_resources = 0.02
+	}
+
+	great_white_chief = { #Vardaman
+		random = no
+		radical_socialist_drift = 0.03
+		stability_factor = 0.03
+		max_command_power = 25
 		ai_will_do = {
 			factor = 1
 		}
@@ -494,6 +548,16 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	father_physical_culture = { #Macfadden
+		random = no 
+		monthly_population = 0.1
+		stability_factor = 0.02
+		war_support_factor = 0.04
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	###New England###
 	elite_family_ties = { #Astors & Cornelius Vanderbilt
 		random = no 
@@ -586,7 +650,7 @@ leader_traits = {
 		random = no 
 		stability_factor = -0.04
 		political_power_factor = 0.03
-		war_support_factor 0.02
+		war_support_factor = 0.02
 
 		ai_will_do = {
 			factor = 1
@@ -597,7 +661,7 @@ leader_traits = {
 		random = no 
 		stability_factor = 0.04
 		political_power_factor = -0.03
-		war_support_factor 0.02
+		war_support_factor = 0.02
 
 		ai_will_do = {
 			factor = 1
@@ -707,6 +771,16 @@ leader_traits = {
 		production_speed_buildings_factor = 0.04
 		enemy_justify_war_goal_time = -0.25
 		local_supplies = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	purple_shamrock = { #Curley
+		random = no 
+		political_power_factor = 0.06
+		social_conservative_drift = 0.01
+		stability_factor = 0.02
 
 		ai_will_do = {
 			factor = 1
@@ -901,6 +975,16 @@ preacher_daddy = { #MK
 		local_resources = 0.05
 		stability_factor = 0.05
 		party_popularity_stability_factor = 0.03	
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	godfather_harlem = { #Bumpy
+		random = no
+		paternal_autocrat_drift = 0.05
+		army_core_attack_factor = 0.07
+		army_core_defence_factor = 0.07
 	
 		ai_will_do = {
 			factor = 1

@@ -22,13 +22,12 @@ KUB_social_conservative_DEF: "the Kuban People's Republic"
 KUB_authoritarian_democrat: "Kuban Cossack Host"
 KUB_authoritarian_democrat_DEF: "the Kuban Cossack Host"
 KUB_paternal_autocrat: "Kuban Cossack Host"
-KUB_paternal_autocrat_DEF: "the Kuban Host"
+KUB_paternal_autocrat_DEF: "the Kuban Cossack Host"
 KUB_national_populist: "Kuban Cossack Host"
 KUB_national_populist_DEF: "the Kuban Cossack Host"
 
-KUB_ukraine: "Autonomous Republic of Kuban"
-KUB_ukraine_ADJ: "Kuban"
-KUB_ukraine_DEF: "Autonomous Republic of Kuban"
+KUB_UKR_subject: "Autonomous Republic of Kuban"
+KUB_UKR_subject_DEF: "the Autonomous Republic of Kuban"
 
 KUB_RUS_social_conservative: "Autonomous Kuban"
 KUB_RUS_social_conservative_ADJ: "Kuban"
@@ -39,7 +38,7 @@ KUB_SOV_DEF: "the Kuban-Black Sea Soviet Republic"
 
 ### Parties ###
 KUB_totalist_party: "K-ChRK"
-KUB_totalist_party_long: "Kubansko-Chernomorsky Revolyutsionniy Komitet (Kuban-Black Sea Revolutionary Committee"
+KUB_totalist_party_long: "Kubansko-Chernomorsky Revolyutsionniy Komitet (Kuban-Black Sea Revolutionary Committee)"
 KUB_syndicalist_party: "Kubsoyuz-TK"
 KUB_syndicalist_party_long: "Kubsoyuz-Trudovye Komitety - Kuban Union of Consumer Communities (Labour Committees)"
 KUB_radical_socialist_party: "Kubsoyuz"
@@ -80,9 +79,9 @@ KUB_Unification_Sentiments_1_desc: "We have signed the convention with the Ukrai
 KUB_Unification_Sentiments_2: "Kuban-Ukrainian Integration"
 KUB_Unification_Sentiments_2_desc: "We have signed several agreements and conventions with Ukrainian government, which bring our countries even closer to each other economically, politically and culturally. It seems that the day of Unification is soon to come!"
 KUB_lecagy_civil_war: "Legacy of the Civil War"
-KUB_lecagy_civil_war: "The Russian Civil War has left its scars here just as it did anywhere else in the former Russian Empire. Influencing our military, our politics, and even the general mindset of the people, the shadow the conflict has left will likely not be cleansed anytime soon."
+KUB_lecagy_civil_war_desc: "The Russian Civil War has left its scars here just as it did anywhere else in the former Russian Empire. Influencing our military, our politics, and even the general mindset of the people, the shadow the conflict has left will likely not be cleansed anytime soon."
 KUB_rada: "Kuban Rada"
-KUB_rada_desc: "Kubanskaya Rada (Kuban Rada) is the only truly democratic force in all of the Caucasus Region. Even though the decisions it make are heavily dependent on the Cooperatives, Cossack Hosts and Insurgent Army, people still have a chance to vote for the candidate they prefer with a confidence that there is no rigging or fraud."
+KUB_rada_desc: "Kubanskaya Rada (Kuban Rada) is the only truly democratic force in all of the Caucasus Region. Even though the decisions it makes are heavily dependent on the Cooperatives, Cossack Hosts and Insurgent Army, people still have a chance to vote for the candidate they prefer with a confidence that there is no rigging or fraud."
 
 KUB_peasant_unrest: "Peasant Unrest"
 KUB_cossack_in_denial: "Cossack Unrest"
@@ -660,7 +659,7 @@ kub.1031.a: "Luka Bych wins the mandate!"
 kub.1031.b: "Nikolai Ryabovol's faction emerges victorous."
 
 kub.1032.t: "Scouts of Kuban"
-kub.1032.d: "In 1914 Erast Platonovich Tsytonovich, a teacher and tutor of Tsarskoye Selo children, became interested in the idea of scouting and joined the newly founded society for the promotion of boys scouts \"Russian Scout\" on September 24. During World War I the Tsarskoye Selo detachment of young scouts (scouts) was headed by Tsytovich.\nAt one of the conventions of His Imperial Majesty's Retinue, Tsytovich said: \"Let us hope ... that the star of scouting lit over Russian youth will burst into bright light throughout the vast expanse of our dear Motherland and that hundreds of thousands of Russian boys and girls will respond to the call: 'Be ready!' with an orderly, cheerful and cheerful response: 'Always ready!'\"\n\nAfter the outbreak of the Civil War, Tsytovich found himself in Kuban as a teacher. From 1918 he became a member of the Kuban government, and from May 5, 1919, until the very end of the First Republic, he served as Minister of National Education. \n\nAs early as September 1918 Erast Tsytovich set up a Commission for Scouting in the Ministry of Education, and in October - courses for instructors in scouting, as well as a series of lectures to the heads and teachers of educational institutions, then for young people and the general public. \nThe result was not long in coming. A month later, two Boy Scout troops and one Girl Scout troop were formed in Yekaterinodar. Erast Platonovich paid great attention to raising and strengthening the Cossack spirit. He made several changes, taking into account the specifics of the Scout Movement in the Cossack region: he introduced the old Cossack term \"gromada\" (community) in the life of scouts, introduced the highest title - \"Ataman Scout\", which corresponded to the English \"Royal Scout\". Under him a new name of the squad appeared - Gromada of Kuban Scouts.\n\nThanks to him, the Scout Movement in Kuban developed by leaps and bounds, and now Tzytovich is asking the government for approval of subsidies and the introduction of scouting in all schools of Kuban."
+kub.1032.d: "In 1914 Erast Platonovich Tsytonovich, a teacher and tutor of Tsarskoye Selo children, became interested in the idea of scouting and joined the newly founded society for the promotion of boys scouts \"Russian Scout\" on September 24. During the Weltkrieg the Tsarskoye Selo detachment of young scouts (scouts) was headed by Tsytovich.\nAt one of the conventions of His Imperial Majesty's Retinue, Tsytovich said: \"Let us hope ... that the star of scouting lit over Russian youth will burst into bright light throughout the vast expanse of our dear Motherland and that hundreds of thousands of Russian boys and girls will respond to the call: 'Be ready!' with an orderly, cheerful and cheerful response: 'Always ready!'\"\n\nAfter the outbreak of the Civil War, Tsytovich found himself in Kuban as a teacher. From 1918 he became a member of the Kuban government, and from May 5, 1919, until the very end of the First Republic, he served as Minister of National Education. \n\nAs early as September 1918 Erast Tsytovich set up a Commission for Scouting in the Ministry of Education, and in October - courses for instructors in scouting, as well as a series of lectures to the heads and teachers of educational institutions, then for young people and the general public. \nThe result was not long in coming. A month later, two Boy Scout troops and one Girl Scout troop were formed in Yekaterinodar. Erast Platonovich paid great attention to raising and strengthening the Cossack spirit. He made several changes, taking into account the specifics of the Scout Movement in the Cossack region: he introduced the old Cossack term \"gromada\" (community) in the life of scouts, introduced the highest title - \"Ataman Scout\", which corresponded to the English \"Royal Scout\". Under him a new name of the squad appeared - Gromada of Kuban Scouts.\n\nThanks to him, the Scout Movement in Kuban developed by leaps and bounds, and now Tzytovich is asking the government for approval of subsidies and the introduction of scouting in all schools of Kuban."
 kub.1032.a: "Fund his movement!"
 kub.1032.b: "The Scout movement is fine without additional help."
 
@@ -682,11 +681,11 @@ kub.1036.a: "Avtonomov ousts Poluyan!"
 kub.1036.b: "Avtonomov is arrested for treason!"
 
 kub.1037.t: "Lineitsy Elected in Kuban"
-kub.1037.d: "The 'Lineitsy' faction gained majority at the recent elections to the parliament of the Kuban People's Republic. The Lineitsy, or the Caucasus Line Cossacks are the faction that is looking forward general alliance with Don Cossacks and Russia, though aiming to secure Kuban sovereignity as independent nation.\nThe opposition has criticized the elections, claiming that they were held with violations."
+kub.1037.d: "The 'Lineitsy' faction gained majority at the recent elections to the parliament of the Kuban People's Republic. The Lineitsy, or the Caucasus Line Cossacks are the faction that is looking forward towards a general alliance with Don Cossacks and Russia, though aiming to secure Kuban sovereignity as independent nation.\nThe opposition has criticized the elections, claiming that they were held with violations."
 kub.1037.a: "Will Kuban turn to Russia?"
 
 kub.1038.t: "Chernomortsy Elected in Kuban"
-kub.1038.d: "The 'Chernomortsy' faction gained majority at the recent elections to the parliament of the Kuban People's Republic. The Chernomortsy, or the Black Sea Cossacks are the faction that is looking forward joining Ukraine in a federal union, or at least greatly strengthening ties with [UKR.GetName].\nThe opposition has criticized the elections, claiming that they were held with violations."
+kub.1038.d: "The 'Chernomortsy' faction gained majority at the recent elections to the parliament of the Kuban People's Republic. The Chernomortsy, or the Black Sea Cossacks are the faction that is looking forward to joining Ukraine in a federal union, or at least greatly strengthening ties with [UKR.GetName].\nThe opposition has criticized the elections, claiming that they were held with violations."
 kub.1038.a: "Will Kuban finally join Ukraine?"
 
 kub.1039.t: "Military Coup in Kuban"
@@ -779,7 +778,7 @@ kub.1058.a: "Push ahead with the plan, even if it means facing opposition from C
 kub.1058.b: "Abandon the plan and look for alternative ways to ease the economic disparities between the two communities."
 
 kub.1059.t: "Peasant Uprising"
-kub.1059.t: "Despite attempts to address the economic disparities, the peasants have grown increasingly frustrated with the slow pace of change and the continued dominance of the Cossacks. This frustration has boiled over into violence, and a Peasant uprising has occurred in several towns across Kuban. With the main center of uprising being in Stavropolye, the region mostly dominated by the Socialist-Revolutionaries since the beginning of the century, the situation is rapidly spinning out of control."
+kub.1059.d: "Despite attempts to address the economic disparities, the peasants have grown increasingly frustrated with the slow pace of change and the continued dominance of the Cossacks. This frustration has boiled over into violence, and a Peasant uprising has occurred in several towns across Kuban. With the main center of uprising being in Stavropolye, the region mostly dominated by the Socialist-Revolutionaries since the beginning of the century, the situation is rapidly spinning out of control."
 kub.1059.a: "Deploy Cossack forces to quell the uprising."
 kub.1059.b: "Open channels of communication with the Peasant leaders and negotiate a peaceful solution."
 
@@ -806,8 +805,8 @@ kub.1064.a: "The Germans are really a valuable ally."
 
 kub.1065.t: "Kuban Asks For Protection"
 kub.1065.d: "The Kuban government has asked us for a protectorate as they fear possible invasion of their land."
-kub.1065.a: "We will provide - but at a cost."
-kub.1065.b: "We are those invaders of our rightful land!"
+kub.1065.a: "We are those invaders of our rightful land!"
+kub.1065.b: "We will provide - but at a cost."
 
 kub.1066.t: "[FROM.GetName] Refused!"
 kub.1066.d: "The [FROM.GetAdjective] government has refused to protect us!"

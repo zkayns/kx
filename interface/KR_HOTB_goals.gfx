@@ -481,9 +481,9 @@ spriteTypes = {
 		name = "GFX_BBR_rural_schools"
 		texturefile = "gfx/interface/goals/BBR_rural_schools.png"
 	}
-	SpriteType = {# Seize Jewish Wealth
-		name = "GFX_BBR_seize_jewish_wealth"
-		texturefile = "gfx/interface/goals/BBR_seize_jewish_wealth.png"
+	SpriteType = {# Seize Wealth
+		name = "GFX_BBR_seize_wealth"
+		texturefile = "gfx/interface/goals/BBR_seize_wealth.png"
 	}
 	SpriteType = {# Socialist Civic Identity
 		name = "GFX_BBR_socialist_civi_identity"
@@ -2474,6 +2474,57 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_USA_By_the_People_For_the_People"
 		texturefile = "gfx/interface/goals/goal_USA_By_the_People_For_the_People.png"
+	}
+
+	### G-W Bill Icons
+	
+	SpriteType = {
+		name = "GFX_goal_USA_Bill_Fails"
+		texturefile = "gfx/interface/goals/USA_Bill_Fails.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Bill_Passes"
+		texturefile = "gfx/interface/goals/USA_Bill_Passes.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Demand_Repayment_War_Debts"
+		texturefile = "gfx/interface/goals/USA_Demand_Repayment_War_Debts.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Deploy_National_Guard"
+		texturefile = "gfx/interface/goals/USA_Deploy_National_Guard.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Doughton_Plan"
+		texturefile = "gfx/interface/goals/USA_Doughton_Plan.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_MacArthurs_Plan"
+		texturefile = "gfx/interface/goals/USA_MacArthurs_Plan.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_New_Industrial_Act"
+		texturefile = "gfx/interface/goals/USA_New_Industrial_Act.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_Pass_Smoot_Hawley_Tariff_Act"
+		texturefile = "gfx/interface/goals/USA_Pass_Smoot_Hawley_Tariff_Act.png"
+	}	
+	SpriteType = {
+		name = "GFX_goal_USA_Reconciliation_With_Canada"
+		texturefile = "gfx/interface/goals/USA_Reconciliation_With_Canada.png"
+	}	
+	SpriteType = {
+		name = "GFX_goal_USA_Reintroduce_Garner_Wagner_Bill"
+		texturefile = "gfx/interface/goals/USA_Reintroduce_Garner_Wagner_Bill.png"
+	}	
+	SpriteType = {
+		name = "GFX_goal_USA_Shipyard_Funding_Scheme"
+		texturefile = "gfx/interface/goals/USA_Shipyard_Funding_Scheme.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_USA_War_Plan_White"
+		texturefile = "gfx/interface/goals/USA_War_Plan_White.png"
 	}
 	
 	### BURNHAM
@@ -5382,6 +5433,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/COR_Silence_Klan_Nationalists.png"
 	}
 	spriteType = {
+		name = "GFX_goal_COR_Humanize_Klan"
+		texturefile = "gfx/interface/goals/COR_Humanize_Klan.png"
+	}
+	spriteType = {
 		name = "GFX_goal_COR_Solid_Republic"
 		texturefile = "gfx/interface/goals/COR_Solid_Republic.png"
 	}
@@ -5392,6 +5447,210 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_COR_Victory_Republicans"
 		texturefile = "gfx/interface/goals/COR_Victory_Republicans.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_America_Preserved"
+		texturefile = "gfx/interface/goals/COR_America_Preserved.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Decentralized_Armaments_Industry"
+		texturefile = "gfx/interface/goals/COR_Decentralized_Armaments_Industry.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Ensuring_Voting_Rights"
+		texturefile = "gfx/interface/goals/COR_Ensuring_Voting_Rights.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Nations_Bank_Peoples_Money"
+		texturefile = "gfx/interface/goals/COR_Nations_Bank_Peoples_Money.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Reconstruction_Finance_Corporation"
+		texturefile = "gfx/interface/goals/COR_Reconstruction_Finance_Corporation.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Second_Dick_Act"
+		texturefile = "gfx/interface/goals/COR_Second_Dick_Act.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Champion_Womens_Three_Movements"
+		texturefile = "gfx/interface/goals/COR_Champion_Womens_Three_Movements.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Friend_Hebrews"
+		texturefile = "gfx/interface/goals/COR_Friend_Hebrews.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Government_People"
+		texturefile = "gfx/interface/goals/COR_Government_People.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Let_World_Free"
+		texturefile = "gfx/interface/goals/COR_Let_World_Free.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Mobilize_Vardaman_Clubs"
+		texturefile = "gfx/interface/goals/COR_Mobilize_Vardaman_Clubs.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Oppose_Elites_Both_Old_New"
+		texturefile = "gfx/interface/goals/COR_Oppose_Elites_Both_Old_New.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Peoples_Senator_Spits_Righteous_Fire"
+		texturefile = "gfx/interface/goals/COR_Peoples_Senator_Spits_Righteous_Fire.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Prison_Reforms_College_Boards"
+		texturefile = "gfx/interface/goals/COR_Prison_Reforms_College_Boards.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Put_End_Vigilante_Lynching"
+		texturefile = "gfx/interface/goals/COR_Put_End_Vigilante_Lynching.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Rally_Rednecks"
+		texturefile = "gfx/interface/goals/COR_Rally_Rednecks.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Repeal_15_Modify_14"
+		texturefile = "gfx/interface/goals/COR_Repeal_15_Modify_14.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Throw_Spanner_Ford"
+		texturefile = "gfx/interface/goals/COR_Throw_Spanner_Ford.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Triumph_Great_White_Chief"
+		texturefile = "gfx/interface/goals/COR_Triumph_Great_White_Chief.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Unions_Fair_Share"
+		texturefile = "gfx/interface/goals/COR_Unions_Fair_Share.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Vardaman_Idea_Lincolns_Light"
+		texturefile = "gfx/interface/goals/COR_Vardaman_Idea_Lincolns_Light.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Vardamanism_America"
+		texturefile = "gfx/interface/goals/COR_Vardamanism_America.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Attract_Wayward_Technocrats"
+		texturefile = "gfx/interface/goals/COR_Attract_Wayward_Technocrats.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Combating_False_Philosophy_Age"
+		texturefile = "gfx/interface/goals/COR_Combating_False_Philosophy_Age.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Crusaders_Klan_Ride_Together"
+		texturefile = "gfx/interface/goals/COR_Crusaders_Klan_Ride_Together.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Developmentalist_Welfare_State"
+		texturefile = "gfx/interface/goals/COR_Developmentalist_Welfare_State.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Fostering_True_Fitzhughism"
+		texturefile = "gfx/interface/goals/COR_Fostering_True_Fitzhughism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Free_Market_Appeals"
+		texturefile = "gfx/interface/goals/COR_Free_Market_Appeals.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Henry_Hughes_Hypothesis"
+		texturefile = "gfx/interface/goals/COR_Henry_Hughes_Hypothesis.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Ignite_Fire_Eaters"
+		texturefile = "gfx/interface/goals/COR_Ignite_Fire_Eaters.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Looking_Back_Southern_Sociologists"
+		texturefile = "gfx/interface/goals/COR_Looking_Back_Southern_Sociologists.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Perfected_Paternalist_Approach"
+		texturefile = "gfx/interface/goals/COR_Perfected_Paternalist_Approach.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Promoting_Protectionist_Slave_Economy"
+		texturefile = "gfx/interface/goals/COR_Promoting_Protectionist_Slave_Economy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Reviewing_JDB_De_Bow"
+		texturefile = "gfx/interface/goals/COR_Reviewing_JDB_De_Bow.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Revolution_Towards_Economic_Liberty"
+		texturefile = "gfx/interface/goals/COR_Revolution_Towards_Economic_Liberty.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Second_Southern_Revolution"
+		texturefile = "gfx/interface/goals/COR_Second_Southern_Revolution.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Smite_American_Sages"
+		texturefile = "gfx/interface/goals/COR_Smite_American_Sages.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Southern_Command_Economy"
+		texturefile = "gfx/interface/goals/COR_Southern_Command_Economy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_State_Supreme_Orderer"
+		texturefile = "gfx/interface/goals/COR_State_Supreme_Orderer.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Taking_Reins"
+		texturefile = "gfx/interface/goals/COR_Taking_Reins.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Tear_Down_Church_God"
+		texturefile = "gfx/interface/goals/COR_Tear_Down_Church_God.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Universal_Institution"
+		texturefile = "gfx/interface/goals/COR_Universal_Institution.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Up_With_Cross"
+		texturefile = "gfx/interface/goals/COR_Up_With_Cross.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Warraneetism_Not_Slavery"
+		texturefile = "gfx/interface/goals/COR_Warraneetism_Not_Slavery.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Draper_Plan"
+		texturefile = "gfx/interface/goals/COR_Draper_Plan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Lindbergh_Reform_Plan"
+		texturefile = "gfx/interface/goals/COR_Lindbergh_Reform_Plan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_McNarney_Tactics"
+		texturefile = "gfx/interface/goals/COR_McNarney_Tactics.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Moseley_Reform_Plan"
+		texturefile = "gfx/interface/goals/COR_Moseley_Reform_Plan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Patton_Strategy"
+		texturefile = "gfx/interface/goals/COR_Patton_Strategy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_Weyland_Reform_Plan"
+		texturefile = "gfx/interface/goals/COR_Weyland_Reform_Plan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_COR_ODP_Grows"
+		texturefile = "gfx/interface/goals/COR_ODP_Grows.png"
 	}
 
 	### Lovestone
@@ -7221,6 +7480,121 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_FRA_Union_Pricees"
 		texturefile = "gfx/interface/goals/FRA_Union_Pricees.png"
+	}
+
+	### CoF Army ###
+	
+	SpriteType = {
+		name = "GFX_goal_FRA_Anarchist_Mobilization_Techniques"
+		texturefile = "gfx/interface/goals/FRA_Anarchist_Mobilization_Techniques.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Billottes_Revolutionary_Vision"
+		texturefile = "gfx/interface/goals/FRA_Billottes_Revolutionary_Vision.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Citadel_Revolution"
+		texturefile = "gfx/interface/goals/FRA_Citadel_Revolution.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Command_Control_Centers"
+		texturefile = "gfx/interface/goals/FRA_Command_Control_Centers.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Curie_Project"
+		texturefile = "gfx/interface/goals/FRA_Curie_Project.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Damocles_Project"
+		texturefile = "gfx/interface/goals/FRA_Damocles_Project.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Defence_Revolution"
+		texturefile = "gfx/interface/goals/FRA_Defence_Revolution.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Defenders_Commune"
+		texturefile = "gfx/interface/goals/FRA_Defenders_Commune.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Firebrand_Arsenal"
+		texturefile = "gfx/interface/goals/FRA_Firebrand_Arsenal.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Frontline_Recon"
+		texturefile = "gfx/interface/goals/FRA_Frontline_Recon.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Institute_Revolutionary_Advancements"
+		texturefile = "gfx/interface/goals/FRA_Institute_Revolutionary_Advancements.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Levee_Masse"
+		texturefile = "gfx/interface/goals/FRA_Levee_Masse.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Liberte_Armes"
+		texturefile = "gfx/interface/goals/FRA_Liberte_Armes.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Marshals_Resignation"
+		texturefile = "gfx/interface/goals/FRA_Marshals_Resignation.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Modernize_Militia_Arsenal"
+		texturefile = "gfx/interface/goals/FRA_Modernize_Militia_Arsenal.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Principle_Concentration"
+		texturefile = "gfx/interface/goals/FRA_Principle_Concentration.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Red_Storm"
+		texturefile = "gfx/interface/goals/FRA_Red_Storm.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Reign_Fire"
+		texturefile = "gfx/interface/goals/FRA_Reign_Fire.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Reinforce_ARF_Command"
+		texturefile = "gfx/interface/goals/FRA_Reinforce_ARF_Command.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Revolutionary_Ethos"
+		texturefile = "gfx/interface/goals/FRA_Revolutionary_Ethos.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Revolutionary_Guerilla_Tactics"
+		texturefile = "gfx/interface/goals/FRA_Revolutionary_Guerilla_Tactics.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Revolutionary_Leadership"
+		texturefile = "gfx/interface/goals/FRA_Revolutionary_Leadership.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Revolutionary_Railways"
+		texturefile = "gfx/interface/goals/FRA_Revolutionary_Railways.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Sentinel_Vigil"
+		texturefile = "gfx/interface/goals/FRA_Sentinel_Vigil.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Speed_Cult"
+		texturefile = "gfx/interface/goals/FRA_Speed_Cult.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Thundering_Artillery_Corps"
+		texturefile = "gfx/interface/goals/FRA_Thundering_Artillery_Corps.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Unite_Arms_Production_Cooperatives"
+		texturefile = "gfx/interface/goals/FRA_Unite_Arms_Production_Cooperatives.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_Vanguard_Revolution"
+		texturefile = "gfx/interface/goals/FRA_Vanguard_Revolution.png"
 	}
 }
 

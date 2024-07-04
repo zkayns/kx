@@ -908,7 +908,7 @@ focus_tree = {
 	name = land_doc_bonus
 	cost_reduction = 0.5
 	uses = 1
-	category = cat_grand_battle_plan
+	category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -954,7 +954,7 @@ focus_tree = {
 	name = land_doc_bonus
 	cost_reduction = 0.5
 	uses = 1
-	category = cat_grand_battle_plan
+	category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1641,7 +1641,7 @@ focus_tree = {
 
 	focus = {
 		id = YEM_Trade_With_Europe
-		icon = GFX_goal_goal_KEN_european_investments
+		icon = GFX_goal_KEN_european_investments
 		relative_position_id = YEM_Free_Kingdom
 		x = 2
 		y = 9

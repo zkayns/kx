@@ -699,7 +699,8 @@ focus_tree = {
 			focus = VIN_Vietnams_Miracle_Man
 		}
 		available = {
-		has_completed_focus = VIN_Personalist_Revolution
+			has_completed_focus = VIN_Personalist_Revolution
+			has_country_flag = VIN_Diem
 		}
 		relative_position_id = VIN_Imperial_Council
 		mutually_exclusive = {
@@ -758,6 +759,11 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = VIN_Private_Police
+		}
+		bypass = {
+			NOT = {
+				has_country_flag = VIN_Diem
+			}
 		}
 		relative_position_id = VIN_Imperial_Council
 		completion_reward = {
@@ -2211,6 +2217,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_ideas = VIN_Honor_Fatherland_idea
+		remove_ideas = VIN_Illiteracy_idea
 		hidden_effect = {
 		country_event = {
 					days = 14
@@ -2474,7 +2481,7 @@ focus_tree = {
 					name = air_doc_bonus
 					cost_reduction = 0.5
 					uses = 2
-					category = operational_integrity_tree
+					category = air_doctrine
 					}
 				}
 
@@ -2529,7 +2536,7 @@ focus_tree = {
 					name = air_doc_bonus
 					cost_reduction = 0.5
 					uses = 2
-					category = cat_battlefield_support
+					category = air_doctrine
 					}
 				}
 
@@ -3531,7 +3538,7 @@ focus_tree = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
-				category = cat_superior_firepower
+				category = land_doctrine
 					}
 				}
 
@@ -3598,7 +3605,7 @@ focus_tree = {
 					name = land_doc_bonus
 					cost_reduction = 0.25
 					uses = 1
-					category = cat_grand_battle_plan
+					category = land_doctrine
 					}
 				}
 
@@ -3651,7 +3658,7 @@ focus_tree = {
 						name = land_doc_bonus
 						cost_reduction = 0.25
 						uses = 1
-						category = cat_grand_battle_plan
+						category = land_doctrine
 					}
 				}
 
@@ -3978,7 +3985,7 @@ focus_tree = {
 	
 	focus = {
 		id = VIN_Fate_Of_Siam
-		icon = YUN_GFX_Goal_The_Siamese_Threat
+		icon = GFX_YUN_Goal_The_Siamese_Threat
 		cost = 5.00
 		prerequisite = {
 			focus = VIN_Reclaim_Indochina
@@ -4015,7 +4022,7 @@ focus_tree = {
 	
 	focus = {
 		id = VIN_Pluck_The_Peacock
-		icon = YUN_GFX_Goal_Exploit_Burma
+		icon = GFX_YUN_Goal_Exploit_Burma
 		cost = 5.00
 		prerequisite = {
 			focus = VIN_Fate_Of_Siam
@@ -4237,6 +4244,9 @@ focus_tree = {
 				}
 				add_claim_by = VIN
 			}
+			hidden_effect = {
+			add_state_claim = 756
+			}
 			owner = {
 					create_wargoal = {
 						type = annex_everything
@@ -4318,7 +4328,12 @@ focus_tree = {
 		}
 		available = {
 		OR = {
+		has_completed_focus = VIN_Peace_And_Plenty
+		has_completed_focus = VIN_Hoa_Hao_Mandate
+		}
+		OR = {
 		has_country_leader = { ruling_only = yes name = "Huynh Phu So" }
+		has_country_leader = { ruling_only = yes name = "Cuong De" }
 		has_country_leader = { ruling_only = yes name = "Ba Cut" }
 		}
 		VIN = {
@@ -4348,6 +4363,7 @@ focus_tree = {
 			focus = VIN_Expand_Into_Asia
 		}
 		available = {
+		has_completed_focus = VIN_Spread_Caodaism
 		OR = {
 		has_country_leader = { ruling_only = yes name = "Cuong De" }
 		has_country_leader = { ruling_only = yes name = "Pham Cong Tac" }
@@ -4379,6 +4395,10 @@ focus_tree = {
 			focus = VIN_Expand_Into_Asia
 		}
 		available = {
+		OR = {
+		has_completed_focus = VIN_True_Global_Faith
+		has_completed_focus = VIN_Heavenly_Mandate
+		}
 		has_country_leader = { ruling_only = yes name = "Ong Dao Dua" }
 		VIN = {
 			owns_state = 427

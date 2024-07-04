@@ -78,7 +78,7 @@ focus_tree = {
 					}
 					has_game_rule = {
 						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_POLAND_UKRAINE
+						option = WHR_FOREIGN_POLICY_UKRAINE
 					}
 				}
 			}
@@ -171,7 +171,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WHR_lithuanian_claims"
 			activate_targeted_decision = { target = LIT decision = WHR_reclaim_vilnya }
-			activate_targeted_decision = { target = 97.owner decision = WHR_reclaim_bialystok }
+			activate_targeted_decision = { target = 1329.owner decision = WHR_reclaim_bialystok }
 		}
 	}
 	focus = {
@@ -186,7 +186,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			NOT = { has_global_flag = UKR_WHR_TREATY }
+			NOT = { has_global_flag = UKR_WHR_treaty_flag }
 		}
 		prerequisite = { focus = WHR_global_belarus }
 		available = {
@@ -742,6 +742,7 @@ focus_tree = {
 			focus = WHR_BPSR
 		}
 		available = { WHR_anarchists_in_power = yes }
+		bypass = { WHR_anarchists_in_power = yes }
 		cost = 6
 		ai_will_do = {
 			factor = 1500
@@ -821,7 +822,7 @@ focus_tree = {
 				type = artillery_equipment
 				amount = 750
 			}
-			UKR = {
+			var:202.owner = {
 				add_popularity = {
 					ideology = syndicalist
 					popularity = 0.1
@@ -935,6 +936,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 3
 			}
+			remove_ideas = WHR_weak_national_identity
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1143,7 +1145,6 @@ focus_tree = {
 			NOT = {
 				has_global_flag = WHR_GER_DOW
 				has_global_flag = WHR_RUS_SPHERE
-				has_country_flag = WHR_Monbol
 				is_subject = yes
 			}
 		}
@@ -1354,9 +1355,7 @@ focus_tree = {
 			increase_ruling_party_popularity_by_5 = yes
 			add_political_power = 125
 			add_stability = 0.05
-			remove_ideas = {
-				WHR_weak_national_identity
-			}
+			remove_ideas = WHR_weak_national_identity
 		}
 	}
 	focus = {
@@ -1445,7 +1444,6 @@ focus_tree = {
 			NOT = {
 				has_global_flag = WHR_GER_DOW
 				has_global_flag = WHR_RUS_SPHERE
-				has_country_flag = WHR_Monbol
 				is_subject_of = RUS
 				is_subject = yes
 			}
@@ -1762,6 +1760,9 @@ focus = {
 			is_subject = no
 			NOT = { is_subject_of = GER }
 		}
+	}
+	bypass = {
+		has_completed_focus = WHR_Revive_Land_Reform
 	}
 
 
@@ -2211,6 +2212,7 @@ focus = {
 				has_completed_focus = WHR_Belorutenization
 				has_completed_focus = WHR_revolution
 				has_completed_focus = WHR_Aftermath_Of_The_Coup
+				has_completed_focus = WHR_Belarus_Sovereignity
 			}
 		}
 		completion_reward = {
@@ -5078,6 +5080,9 @@ focus = {
 			is_subject_of = GER
 		}
 	}
+	bypass = {
+		has_completed_focus = WHR_Solve_The_Agrarian_Question
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WHR_Revive_Land_Reform"
@@ -6319,8 +6324,7 @@ focus = {
 				popularity = 0.1
 			}
 			hidden_effect = {
-				set_temp_variable = { coalition_partner_var = token:national_populist }
-				add_to_coalition = yes		
+				add_natpop_to_coalition = yes	
 			}		
 		}
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
@@ -6514,8 +6518,6 @@ focus = {
 						state = 93
 						state = 997
 						state = 1287
-						state = 1292
-						state = 1293
 						state = 241
 						state = 94
 						state = 96

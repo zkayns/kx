@@ -99,8 +99,8 @@ set_politics = {
 
 set_popularities = {
 	totalist = 4
-	radical_socialist = 1
-	syndicalist = 7
+	radical_socialist = 7
+	syndicalist = 1
 	social_democrat = 4
 	social_liberal = 6
 	market_liberal = 8
@@ -109,6 +109,8 @@ set_popularities = {
 	paternal_autocrat = 10
 	national_populist = 8
 }
+
+CHL = { embargo_ROOT = yes }
 
 country_event = { id = pru.1 days = 1 }
 country_event = { id = pru.103 days = 547 }
@@ -134,7 +136,7 @@ create_country_leader = {
 	name = "Oscar Benavides Larrea"
 	desc = "POLITICS_OSCAR_BENAVIDES_LARREA_DESC"
 	picture = "gfx/leaders/PRU/Portrait_Peru_Oscar_Benavides_Larrea.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = authdem_caudillo_populism_subtype
 }
 
@@ -143,7 +145,7 @@ create_country_leader = {
 	name = "Manuel Vicente Villarán"
 	desc = "POLITICS_VILLARAN_DESC"
 	picture = "gfx/leaders/PRU/Portrait_Peru_Manuel_Villaran.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = social_conservative_subtype
 }
 
@@ -151,7 +153,7 @@ create_country_leader = {
 	name = "José de la Riva Agüero"
 	desc = "POLITICS_JOSE_DE_LA_RIVA_DESC"
 	picture = "gfx/leaders/PRU/Portrait_Peru_Jose_Aguero.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = hispanism_subtype
 }
 
@@ -159,7 +161,7 @@ create_country_leader = {
 	name = "Luis Antonio Eguiguren"
 	desc = "POLITICS_EGUIGUREN_DESC"
 	picture = "gfx/leaders/PRU/Portrait_Peru_Luis_Antonio_Eguiguren.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = social_democrat_subtype
 }
 
@@ -167,7 +169,7 @@ create_country_leader = {
 	name = "Jorge Prado Ugarteche"
 	desc = "POLITICS_UGARTECHE_DESC"
 	picture = "gfx/leaders/PRU/Portrait_PRU_Jorge_Ugarteche.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = social_liberal_subtype
 }
 
@@ -175,31 +177,31 @@ create_country_leader = {
 	name = "Victor R. Haya de la Torre"
 	desc = "POLITICS_HAYA_TORRE_DESC"
 	picture = "gfx/leaders/PRU/Portrait_PRU_Victor_Raul_Haya.png"
-	expire = "1965.1.1"
-	ideology = syndicalist_subtype
+	expire = "1.1.1"
+	ideology = revolutionary_bolivarianism_subtype
 }
 
 create_country_leader = {
 	name = "Gamaliel Churata"
 	desc = "POLITICS_CHURATA_DESC"
 	picture = "gfx/leaders/PRU/Portrait_PRU_Gamaliel_Churata.png"
-	expire = "1965.1.1"
-	ideology = totalist_subtype
+	expire = "1.1.1"
+	ideology = mariateguismo_subtype
 }
 
 create_country_leader = {
-	name = "Alfredo González Prada"
-	desc = "POLITICS_GONZALEA_PRADA_DESC"
+	name = "Eudocio Ravines"
+	desc = "POLITICS_EUDCAIO_RAVINES_DESC"
 	picture = "gfx/leaders/PRU/Portrait_Peru_Eudocio_Ravines.png"
-	expire = "1965.1.1"
-	ideology = anarchism_subtype
+	expire = "1.1.1"
+	ideology = syndicalist_subtype
 }
 
 create_country_leader = {
 	name = "Jorge Prado Ugarteche"
 	desc = "POLITICS_UGARTECHE_DESC"
 	picture = "gfx/leaders/PRU/Portrait_PRU_Jorge_Ugarteche.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = market_liberal_subtype
 }
 
@@ -207,7 +209,7 @@ create_country_leader = {
 	name = "Oscar Benavides Larrea"
 	desc = "POLITICS_OSCAR_BENAVIDES_LARREA_DESC"
 	picture = "gfx/leaders/PRU/Portrait_Peru_Oscar_Benavides_Larrea.png"
-	expire = "1965.1.1"
+	expire = "1.1.1"
 	ideology = caudillo_populism_subtype
 }
 
@@ -301,7 +303,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Carlos Rotalde"
-	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_4.png"
+	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_1.png"
 	traits = { }
 	skill = 1
 	attack_skill = 1

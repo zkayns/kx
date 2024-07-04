@@ -64,6 +64,7 @@ focus_tree = {
 			NOT = { country_exists = SPR }
 			NOT = { country_exists = CAR }
 		}
+		cancel_if_invalid = yes
 		mutually_exclusive = { focus = CNT_election_success }
 		relative_position_id = CNT_election_success
 		x = 2
@@ -106,7 +107,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_anarchist_revolution
-		icon = GFX_goal_harness_peoples_will
+		icon = GFX_goal_CSA_revolutionary_army
 		cost = 5
 
 		relative_position_id = SWF_party_congress
@@ -132,7 +133,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_home_rule
-		icon = GFX_focus_spr_regional_defense_council_of_aragon
+		icon = GFX_goal_autonomism
 		cost = 5
 
 		relative_position_id = SWF_anarchist_revolution
@@ -151,7 +152,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_collectivise_factories
-		icon = GFX_collective_housing
+		icon = GFX_VK_NATIONALIZE
 		cost = 5
 
 		relative_position_id = SWF_home_rule
@@ -173,7 +174,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_red_nation_state
-		icon = GFX_goal_ideology_radical_socialist
+		icon = GFX_goal_HOL_council_communism
 		cost = 5
 
 		relative_position_id = SWF_party_congress
@@ -205,7 +206,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_national_union
-		icon = GFX_ITA_syndicalist_unite
+		icon = GFX_BBR_socialist_civi_identity
 		cost = 5
 
 		relative_position_id = SWF_red_nation_state
@@ -224,7 +225,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_planned_economy
-		icon = GFX_focus_SOV_merge_plants
+		icon = GFX_goal_FRA_planisme
 		cost = 5
 
 		relative_position_id = SWF_national_union
@@ -246,7 +247,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_consolidating_spain
-		icon = GFX_focus_HOL_deal_with_left
+		icon = GFX_goal_MEX_Shining_Stable_Red
 		cost = 5
 
 		relative_position_id = SWF_party_congress
@@ -297,7 +298,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_oppress_opposition
-		icon = GFX_focus_spa_eliminate_the_carlists
+		icon = GFX_goal_AUS_Wrest_German_Homeland_From_Catholics
 		cost = 5
 
 		relative_position_id = SWF_consolidating_spain
@@ -310,7 +311,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SWF_oppress_opposition"
-			remove_ideas = SWF_monarchist_resistance
+			remove_ideas = CNT_monarchist_resistance
 			add_popularity = { ideology = authoritarian_democrat popularity = -0.1 }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.1 }
 			add_popularity = { ideology = national_populist popularity = -0.1 }
@@ -320,7 +321,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_reconcile_opposition
-		icon = GFX_goal_ideology_social_democrat
+		icon = GFX_goal_NIC_Victory_Social_Democracy
 		cost = 5
 
 		relative_position_id = SWF_oppress_opposition
@@ -341,7 +342,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_popular_front
-		icon = GFX_focus_generic_befriend_republican_spain_focus
+		icon = GFX_goal_spain_republican
 		cost = 5
 
 		relative_position_id = SWF_oppress_opposition
@@ -357,17 +358,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SWF_popular_front"
 			SPA_societal_recovery = yes
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			add_to_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
+			add_socdem_to_coalition = yes
+			add_soclib_to_coalition = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
 		id = SWF_anticlerical
-		icon = GFX_focus_mex_triumph_over_the_cristeros
+		icon = GFX_goal_SRI_State_Atheism
 		cost = 5
 
 		relative_position_id = SWF_oppress_opposition
@@ -416,7 +415,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_women_right
-		icon = GFX_focus_generic_women_in_military
+		icon = GFX_goal_generic_female_liberation_syndicalist
 		cost = 5
 
 		relative_position_id = SWF_oppress_opposition
@@ -463,7 +462,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_social_revolution
-		icon = GFX_goal_social_reforms
+		icon = GFX_goal_FIU_socialist_evolution
 		cost = 5
 
 		relative_position_id = SWF_popular_front
@@ -513,7 +512,7 @@ focus_tree = {
 
 	focus = {
 		id = SWF_beacon_socialism
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		icon = GFX_goal_FIU_popular_internationalism
 		cost = 5
 
 		relative_position_id = SWF_popular_front
@@ -928,7 +927,7 @@ focus_tree = {
 	name = land_doc_bonus
 	cost_reduction = 0.5
 	uses = 1
-	category = cat_superior_firepower
+	category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1011,7 +1010,7 @@ focus_tree = {
 	name = land_doc_bonus
 	cost_reduction = 0.5
 	uses = 1
-	category = cat_mobile_warfare
+	category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1502,31 +1501,39 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_war = yes
-				any_enemy_country = {
-					strength_ratio = { tag = CNT ratio > 0.75 }
+				can_declare_war_on = POR
+				OR = {
+					ROOT_is_threatened = yes
+					POR = { default_attack_AI_trigger_FROM = yes }
 				}
 			}
 			modifier = {
 				factor = 0
-				strength_ratio = { tag = POR ratio < 2.0 }
-			}
-			modifier = {
-				factor = 0
-				is_in_faction = no
-				POR = { is_in_faction = yes }
-			}
-			modifier = {
-				factor = 10
+				can_declare_war_on = POR
+				NOT = { has_global_flag = second_weltkrieg_has_started }
 				POR = {
-					is_in_faction = no
-					OR = {
-						NOT = { is_guaranteed_by = CAN }
-						CAN = { has_war_with = GER }
-						CAN = { has_war_with = ENG }
-						CAN = { has_war_with = FRA }
+					NOT = {
+						focus_progress = { focus = POR_the_king_and_country progress > 0 }
+						focus_progress = { focus = POR_the_organic_kingdom progress > 0 }
 					}
 				}
+			}
+			modifier = {
+				factor = 100
+				can_declare_war_on = POR
+				#if POR is still factionless upon reaching these foci, ENT is dead - attack away
+				POR = {
+					is_subject = no
+					is_in_faction = no
+					OR = {
+						focus_progress = { focus = POR_the_king_and_country progress > 0 }
+						focus_progress = { focus = POR_the_organic_kingdom progress > 0 }
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				has_war_with = POR
 			}
 		}
 
@@ -1539,6 +1546,39 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = CNT_united_iberia
+		icon = GFX_goal_FRA_empire_of_french_worker
+		cost = 6
+
+		relative_position_id = CNT_portugal
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = CNT_portugal
+		}
+		available = {
+			is_subject = no
+			controls_state = 112 #Lisbon
+			controls_state = 180 #Porto
+			controls_state = 181 #Guarda
+			controls_state = 179 #Beja
+			NOT = { has_war_with = POR }
+		}
+		ai_will_do = { factor = 200 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CNT_united_iberia"
+			set_cosmetic_tag = CNT_iberia
+			every_state = {
+				limit = { is_core_of = POR }
+				add_core_of = CNT
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 }
 

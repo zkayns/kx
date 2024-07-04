@@ -279,7 +279,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_establish_a_middle_class
-		icon = GFX_BBR_support_black_middle_class
+		icon = GFX_goal_ALB_Establish_Middle_Class
 		prerequisite = { focus = ALB_industrialisation_programmes }
 		relative_position_id = ALB_aftermath_of_black_monday
 		x = 5
@@ -1187,12 +1187,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_invest_in_artillery"
-			add_tech_bonus = {
-				name = ALB_invest_in_artillery
-				bonus = 1
-				uses = 1
-				category = artillery
-			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 275
@@ -1974,13 +1968,7 @@ focus_tree = {
 				set_cosmetic_tag = ALB_kingdom_wied
 			}
 			if = {
-			limit = {
-			has_country_leader = {
-				name = "Wilhelm zu Wied"
-				ruling_only = yes
-			}
-			is_ai = no
-			}
+			limit = { is_ai = no }
 			add_state_core = 765
 			add_state_core = 1097
 			add_state_core = 105
@@ -2463,7 +2451,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Kalmendis_Last_Days"
-			country_event = { id = albsoc.3 days = 1 }
+			country_event = albsoc.3
 			add_manpower = -1
 		}
 	}
@@ -2492,13 +2480,13 @@ focus_tree = {
 			create_country_leader = {
 				name = "House of Zogu - Vacant Head"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Ruins_Zogu.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = absolute_monarchy_subtype
 			}
 			set_party_name = {
 				ideology = paternal_autocrat
-				long_name = "The Ruins of House Zogu"
-				name = "Ruins of Zogu"
+				long_name = ALB_paternal_autocrat_ruins_party_long
+				name = ALB_paternal_autocrat_ruins_party
 			}
 			hidden_effect = {
 			random_unit_leader = {
@@ -2555,7 +2543,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Congress_Permet"
-			country_event = { id = albsoc.4 days = 7 }
+			country_event = albsoc.4
 		}
 	}
 	focus = {
@@ -2634,13 +2622,13 @@ focus_tree = {
 				create_country_leader = {
 					name = "Mehmet Shehu"
 					picture = "gfx/leaders/ALB/Portrait_ALB_Mehmet_Shehu.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = autocratic_socialist_subtype
 				}
 				set_party_name = {
 					ideology = totalist
-					long_name = "Militantët Pararojë (Vanguardist Militants)"
-					name = "MP"
+					long_name = ALB_totalist_militant_party_long
+					name = ALB_totalist_militant_party
 				}
 			}
 		}
@@ -3014,10 +3002,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_No_Other_Way"
-			country_event = {
-				id = albsoc.7
-				days = 4
-			}
+			country_event = albsoc.7
 		}
 	}
 	focus = {
@@ -3376,8 +3361,8 @@ focus_tree = {
 			}
 			set_party_name = {
 				ideology = totalist
-				long_name = "Partia e Punës e Shqipërisë (Party of Labour of Albania)"
-				name = "PPSh"
+				long_name = ALB_totalist_hoxha_party_long
+				name = ALB_totalist_hoxha_party
 			}
 			custom_effect_tooltip = ALB_Hoxha_Destiny_tt
 			hidden_effect = {
@@ -3395,13 +3380,13 @@ focus_tree = {
 				if = {	
 					limit = { has_country_leader = { name = "Enver Hoxha" ruling_only = yes } }
 					set_country_leader_portrait = {
-						portrait = "gfx/leaders/ALB/Portrait_Albania_Enver_Hoxha.png"
+						portrait = "gfx/leaders/ALB/Portrait_ALB_Enver_Hoxha_Uniform.png"
 					}
 				}
 				create_country_leader = {
 					name = "Workers' Congress of Albania"
 					picture = "gfx/leaders/ALB/Portrait_ALB_Workers_Congress.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = syndicalist_subtype
 				}
 			}
@@ -3616,8 +3601,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Purify_Party"
 			set_party_name = {
 				ideology = totalist
-				long_name = "Partia e Vërtetë e Punës e Shqipërisë (True Party of Labour of Albania)"
-				name = "PVPSh"
+				long_name = ALB_totalist_true_party_long
+				name = ALB_totalist_true_party
 			}
 			add_manpower = -2000
 			add_popularity = {
@@ -3817,13 +3802,13 @@ focus_tree = {
 			create_country_leader = {
 				name = "Koçi Xoxe"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Koci_Xoxe.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authcom_subtype
 			}
 			set_party_name = {
 				ideology = totalist
-				long_name = "Lidhja e Komunisteve të Shqipërisë (League of Communists of Albania)"
-				name = "LKSh"
+				long_name = ALB_totalist_league_party_long
+				name = ALB_totalist_league_party
 			}
 			set_politics = {
 				ruling_party = totalist
@@ -4036,13 +4021,13 @@ focus_tree = {
 			create_country_leader = {
 				name = "Sejfulla Malëshova"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Sejfulla_Maleshova.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = liberalized_syndicalism_subtype
 			}
 			set_party_name = {
 				ideology = syndicalist
-				long_name = "Partia Sindikaliste e Shqipërisë (Syndicalist Party of Albania)"
-				name = "PSSh"
+				long_name = ALB_syndicalist_syndie_party_long
+				name = ALB_syndicalist_syndie_party
 			}
 			custom_effect_tooltip = ALB_Maleshova_Cabinet_tt
 			hidden_effect = {
@@ -4277,13 +4262,10 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 100
 			add_popularity = {
-				ideology = syndicalist
-				popularity = 0.07
-			}
-			add_popularity = {
 				ideology = social_democrat
-				popularity = 0.07
+				popularity = 0.15
 			}
+			add_socdem_to_coalition = yes
 			hidden_effect = {
 			country_event = {
 				id = albsoc.27
@@ -5578,68 +5560,68 @@ focus_tree = {
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = market_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = paternal_autocrat_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = national_populist_subtype
 			}
 			set_party_name = {
 				ideology = social_liberal
-				long_name = "Purged"
-				name = "Purged"
+				long_name = ALB_purged_party_long
+				name = ALB_purged_party
 			}
 			set_party_name = {
 				ideology = market_liberal
-				long_name = "Purged"
-				name = "Purged"
+				long_name = ALB_purged_party_long
+				name = ALB_purged_party
 			}
 			set_party_name = {
 				ideology = social_conservative
-				long_name = "Purged"
-				name = "Purged"
+				long_name = ALB_purged_party_long
+				name = ALB_purged_party
 			}
 			set_party_name = {
 				ideology = authoritarian_democrat
-				long_name = "Purged"
-				name = "Purged"
+				long_name = ALB_purged_party_long
+				name = ALB_purged_party
 			}
 			set_party_name = {
 				ideology = paternal_autocrat
-				long_name = "Purged"
-				name = "Purged"
+				long_name = ALB_purged_party_long
+				name = ALB_purged_party
 			}
 			set_party_name = {
 				ideology = national_populist
-				long_name = "Purged"
-				name = "Purged"
+				long_name = ALB_purged_party_long
+				name = ALB_purged_party
 			}
 		}
 	}
@@ -5663,41 +5645,41 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Dissolve_Party"
 			set_party_name = {
 				ideology = totalist
-				long_name = "Drejtoria e Sigurisë Publike (Committee of Public Safety)"
-				name = "Drejtoria e Nexhmijes"
+				long_name = ALB_nexhmije_party_long
+				name = ALB_nexhmije_party
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = syndicalist_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = radical_socialist_subtype
 			}
 			create_country_leader = {
 				name = "Purged"
 				picture = "gfx/leaders/SCT/Portrait_No_Central_Authority.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_democrat_subtype
 			}
 			set_party_name = {
 				ideology = syndicalist
-				long_name = "Dissolved"
-				name = "Dissolved"
+				long_name = ALB_dissolved_party_long
+				name = ALB_dissolved_party
 			}
 			set_party_name = {
 				ideology = radical_socialist
-				long_name = "Dissolved"
-				name = "Dissolved"
+				long_name = ALB_dissolved_party_long
+				name = ALB_dissolved_party
 			}
 			set_party_name = {
 				ideology = social_democrat
-				long_name = "Dissolved"
-				name = "Dissolved"
+				long_name = ALB_dissolved_party_long
+				name = ALB_dissolved_party
 			}
 		}
 	}
