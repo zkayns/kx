@@ -2654,6 +2654,7 @@ country_event = { #Hong Kong Declares Independence
 		}
 		HKG = {
 			add_state_core = 326
+			transfer_technology = yes
 		}
 		every_owned_state = {
 			limit = { is_core_of = HKG }
@@ -2671,6 +2672,7 @@ country_event = { #Hong Kong Declares Independence
 		}
 		HKG = {
 			add_state_core = 326
+			transfer_technology = yes
 		}
 		every_owned_state = {
 			limit = { is_core_of = HKG }
