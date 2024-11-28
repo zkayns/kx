@@ -101,7 +101,7 @@ create_country_leader = {
 	desc = "POLITICS_JEAN_BOLIKANGO_DESC"
 	picture = "gfx/leaders/KIV/Portrait_KIV_Jean_Bolikango.png"
 	expire = "1.1.1"
-	ideology = conservative_populism_subtype
+	ideology = soccon_negritude_subtype
 	traits = {}
 }
 
@@ -181,7 +181,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Léonard Mpoyi "
-	portrait_path = "gfx/leaders/KIV/Portrait_KIV_Leonard_Mpoyi.png"
+	portrait_path = "gfx/leaders/KIV/Portrait_KIV_Leonard_Mpoyi_General.png"
 	traits = {
 		adaptable
 		organizer

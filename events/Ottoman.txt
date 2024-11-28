@@ -738,6 +738,7 @@ country_event = {	#Sultan [OTT.GetLeader] reacts to the rising tensions
 	picture = GFX_OTT_Dolmabahce
 
 	is_triggered_only = yes
+	trigger = { has_idea = OTT_Mustafa_Kemal_Pasa_hog_ade }
 
 	option = {
 		name = ottpol.11.a
@@ -3452,6 +3453,10 @@ country_event = {	#Kurdish sheikhs gather in Diyarbakir
 		NOT = {
 			has_completed_focus = OTT_Eradicate_Military_Disloyalty
 		}
+		350 = { is_owned_and_controlled_by = ROOT }
+		352 = { is_owned_and_controlled_by = ROOT }
+		354 = { is_owned_and_controlled_by = ROOT }
+		1000 = { is_owned_and_controlled_by = ROOT }
 	}
 
 	is_triggered_only = yes
@@ -3766,6 +3771,7 @@ country_event = {	#The Palace Raid
 	fire_only_once = yes
 
 	is_triggered_only = yes
+	trigger = { tag = TUR }
 
 	option = {
 		name = ottkem.43.a
@@ -6495,7 +6501,7 @@ country_event = {	#Increasing Unrest on Bahrain
 	title = ottsep.24.t
 	desc = ottsep.24.d
 
-	picture = GFX_report_event_SPA_civwar
+	picture = GFX_OTT_Demonstration
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -10786,7 +10792,10 @@ country_event = {	#Russians offer whitepeace
 			}
 			every_state = {
 				limit = {
-					is_core_of = ARM
+					OR = {
+						is_core_of = ARM
+						state = 1082
+					}
 					OR = {
 						is_owned_by = RUS
 						is_owned_by = ARM
@@ -14040,6 +14049,7 @@ country_event = {	#Death of [OTT.GetLeader]
 	fire_only_once = yes
 
 	is_triggered_only = yes
+	trigger = { tag = TUR }
 
 	option = {
 		name = ottars.12.a
@@ -14338,6 +14348,7 @@ country_event = {	#To Unite the Faithfuls?
 			1208 = { add_core_of = TUR }
 			583 = { add_core_of = TUR }
 			588 = { add_core_of = TUR }
+			708 = {	add_core_of = TUR }
 			country_event = {
 				id = ottars.14
 				days = 2

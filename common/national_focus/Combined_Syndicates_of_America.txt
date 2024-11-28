@@ -225,7 +225,7 @@ focus_tree = {
 			}
 			completion_reward = {
 				log = "[GetDateText]: [Root.GetName]: Focus CSA_technocrat_inc"
-								create_faction = "Harmonious Compact for Utopia"
+				create_faction = "Harmonious Compact for Utopia"
 				add_popularity = {
 						ideology = totalist
 						popularity = -0.10
@@ -234,7 +234,7 @@ focus_tree = {
 						ideology = radical_socialist
 						popularity = 0.10
 				}
-								add_popularity = {
+				add_popularity = {
 						ideology = social_democrat
 						popularity = 0.10
 				}
@@ -414,6 +414,7 @@ focus_tree = {
 					add_political_power = 70
 					add_stability = 0.05
 					add_popularity = { ideology = radical_socialist popularity = 0.15 }
+					add_popularity = { ideology = social_democrat popularity = 0.15 }
 					add_popularity = { ideology = totalist popularity = -0.20 }
 			}
 	}
@@ -3548,20 +3549,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_american_commonwealth"
-			if = {
-				limit = {
-					has_government = social_democrat
-					NOT = { has_country_flag = CSA_butlers_counter_coup }
-				}
-				increase_ruling_party_popularity_by_5 = yes
-			}
-			if = {
-				limit = {
-					has_government = radical_socialist
-					NOT = { has_country_flag = CSA_butlers_counter_coup }
-				}
-				increase_ruling_party_popularity_by_5 = yes
-			}
+			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 
@@ -8888,7 +8876,7 @@ focus_tree = {
 		select_effect = {
 			add_timed_idea = {
 			idea = CSA_war_on_americanism_idea
-			days = 69
+			days = 40
 			}
 		}
 		completion_reward = {
@@ -8936,7 +8924,7 @@ focus_tree = {
 		select_effect = {
 			add_timed_idea = {
 			idea = CSA_initial_great_sprint_idea
-			days = 68
+			days = 36
 			}
 			hidden_effect = {
 				country_event = {
@@ -10322,9 +10310,21 @@ focus_tree = {
 			remove_idea = CSA_militia_idea2
 			add_idea = CSA_iww_doctrine_idea
 			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:USA_kr_studebaker_organisation = {
+					complete_mio_trait = generic_mio_trait_steel_cargo_bed
+					complete_mio_trait = generic_mio_trait_medium_machinegun_mounts
+				}
+			}
+			else = {
+				army_experience = 15
+			}
 			add_equipment_to_stockpile = {
 			type = motorized_equipment
-			amount = 55
+			amount = 200
 			producer = CSA
 			}
 			random_owned_controlled_state = {
@@ -10373,6 +10373,12 @@ focus_tree = {
 			remove_idea = CSA_iww_doctrine_idea
 			add_idea = CSA_iww_doctrine_idea_2
 			}
+			add_tech_bonus = {
+				name = CSA_iww_doctrine_bonus
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
@@ -10380,9 +10386,9 @@ focus_tree = {
 				category = land_doctrine
 			}
 			add_equipment_to_stockpile = {
-			type = motorized_equipment
-			amount = 120
-			producer = CSA
+				type = motorized_equipment
+				amount = 120
+				producer = CSA
 			}
 		}
 	}
@@ -10402,6 +10408,7 @@ focus_tree = {
 		prerequisite = { focus = CSA_motor_factories }
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
+			add_ideas = CSA_iww_tank_idea_1
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
@@ -10411,14 +10418,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = CSA_iww_doctrine_bonus
 				bonus = 1
-				uses = 1
-				category = armor
-			}
-			add_tech_bonus = {
-				name = CSA_iww_doctrine_bonus
-				bonus = 1
 				uses = 2
-				category = motorized_equipment
+				category = armor
 			}
 		}
 	}
@@ -10458,6 +10459,18 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_mainland_america = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {#Tank Advancements
@@ -10477,10 +10490,15 @@ focus_tree = {
 		prerequisite = { focus = CSA_military_industrialization }
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = CSA_iww_tank_idea_1
+				add_idea = CSA_iww_tank_idea_2
+			}
 			add_tech_bonus = {
 				name = CSA_iww_doctrine_bonus
-				bonus = 1
-				uses = 2
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
 				category = armor
 			}
 			if = {
@@ -10488,9 +10506,9 @@ focus_tree = {
 					NOT = { has_dlc = "No Step Back" }
 				}
 				add_equipment_to_stockpile = {
-				type = light_tank_equipment_1
-				amount = 45
-				producer = CSA
+					type = light_tank_equipment_1
+					amount = 45
+					producer = CSA
 				}
 			}
 			if = {
@@ -10498,9 +10516,9 @@ focus_tree = {
 					has_dlc = "No Step Back"
 				}
 				add_equipment_to_stockpile = {
-				type = light_tank_chassis
-				amount = 45
-				producer = CSA
+					type = light_tank_chassis
+					amount = 45
+					producer = CSA
 				}
 			}			
 		}
@@ -10552,6 +10570,9 @@ focus_tree = {
 		prerequisite = { focus = CSA_tanks_advancements }
 		relative_position_id = CSA_iww_doctrine
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = CSA_iww_tank_idea_2
+			}
 			swap_ideas = {
 			remove_idea = CSA_iww_doctrine_idea_3
 			add_idea = CSA_iww_doctrine_idea_4
@@ -10564,7 +10585,7 @@ focus_tree = {
 			}
 			add_equipment_to_stockpile = {
 			type = motorized_equipment
-			amount = 40
+			amount = 150
 			producer = CSA
 			}
 			if = {
@@ -10573,7 +10594,7 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 				type = light_tank_equipment_1
-				amount = 30
+				amount = 150
 				producer = CSA
 				}
 			}
@@ -10583,7 +10604,7 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 				type = light_tank_chassis
-				amount = 30
+				amount = 150
 				producer = CSA
 				}
 			}
@@ -12310,13 +12331,11 @@ focus_tree = {
 				}
 			}
 			NOT = {
-				OR = {
-					custom_trigger_tooltip = {
-						tooltip = CSA_burnham_is_leader
-						has_country_leader_ideology = burnhamite_thought_subtype
-					}
-					has_country_leader = { ruling_only = yes name = "Jay Lovestone" }
-				}
+				has_country_leader = { ruling_only = yes name = "James Burnham" }
+				has_country_leader = { ruling_only = yes name = "Lyndon LaRouche" }
+				has_country_leader = { ruling_only = yes name = "Ronald Reagan" }
+				has_country_leader = { ruling_only = yes name = "Jay Lovestone" }
+				has_country_leader = { ruling_only = yes name = "Lawrence Dennis" }
 			}
 		}
 		relative_position_id = CSA_back_in_business
@@ -12962,6 +12981,21 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = CSA_energy_accounting_idea
 					add_idea = CSA_energy_accounting_idea_2
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { ruling_only = yes name = "James Burnham" }
+						has_country_leader = { ruling_only = yes name = "Ronald Reagan" }
+						has_country_leader = { ruling_only = yes name = "Lyndon LaRouche" }
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = csa.276
+						days = 100
+					}
 				}
 			}
 		}
@@ -13729,6 +13763,10 @@ focus_tree = {
 			is_major = yes
 			is_subject = no
 			is_faction_leader = no
+			INT = { 
+				exists = yes
+				is_faction_leader = yes
+			}
 		}
 		relative_position_id = CSA_world_revolution
 		x = 0
@@ -13950,6 +13988,13 @@ focus_tree = {
 		available = {
 			is_major = yes
 			is_subject = no
+			OR = {
+			INT = {
+				OR = {
+					is_faction_leader = no
+					exists = no
+				} 
+			}	
 			NOT = {
 				OR = {
 				has_country_leader = { ruling_only = yes name = "William Z. Foster" }
@@ -13961,6 +14006,7 @@ focus_tree = {
 				has_completed_focus = CSA_american_syndicalist_union
 				}
 			}    
+		    }
 		}
 		relative_position_id = CSA_world_revolution
 		x = 2
@@ -14452,6 +14498,9 @@ focus_tree = {
 				exists = yes
 				has_socialist_government = no
 			}
+		}
+		bypass = {
+			has_global_flag = CAN_became_socialist
 		}
 		relative_position_id = CSA_free_the_west
 		x = 0

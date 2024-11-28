@@ -1329,8 +1329,6 @@ country_event = { # New Election
 	title = unionstate.25.t
 		desc = unionstate.25.d
 	picture = GFX_report_event_generic_books
-
-	fire_only_once = yes
 	
 	is_triggered_only = yes
 	
@@ -1451,7 +1449,7 @@ country_event = { # New Election
 		elections_allowed = yes
 			}
 		set_party_name = {
-			ideology = social_democrat
+			ideology = authoritarian_democrat
 			long_name = TEX_authoritarian_democrat_party_long
 			name = TEX_authoritarian_democrat_party }
 		}
@@ -1754,7 +1752,7 @@ country_event = { # New Election
 		}
 	}
 	option = { # The Democratic Party
-		name = unionstate.25.
+		name = unionstate.25.h
 		ai_chance = {
 			factor = 20
 			modifier = {
@@ -2730,6 +2728,7 @@ country_event = { #Minutemen Want to Cancel Speech
 		has_completed_focus = TEX_afp_alone
 		}
 	}
+	picture = GFX_report_event_TEX_Huey_Guards
 
 	fire_only_once = yes
 	
@@ -2771,6 +2770,7 @@ country_event = { #Huey Long Shot
 		has_completed_focus = TEX_reconcile_the_right
 		}
 	}
+	picture = GFX_report_event_TEX_Huey_Shot
 
 	fire_only_once = yes
 	
@@ -2796,6 +2796,7 @@ country_event = { #Long Dead
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.5101"}
 	title = unionstate.5101.t
 	desc = unionstate.5101.d
+	picture = GFX_report_event_TEX_Huey_Dead
 
 	fire_only_once = yes
 	
@@ -2860,7 +2861,7 @@ country_event = { #Long Dead
 		create_country_leader = {
 		name = "Gerald L.K. Smith"
 		desc = "POLITICS_GERALD_LK_SMITH_DESC"
-		picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.png"
+		picture = "gfx/leaders/TEX/Portrait_TEX_Gerald_L_K_Smith.png"
 		expire = "1.1.1"
 		ideology = pataut_longism_subtype
 		traits = { propaganda_expert }
@@ -2879,7 +2880,7 @@ country_event = { #Long Dead
 		create_country_leader = {
 		name = "Gerald L.K. Smith"
 		desc = "POLITICS_GERALD_LK_SMITH_DESC"
-		picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.png"
+		picture = "gfx/leaders/TEX/Portrait_TEX_Gerald_L_K_Smith.png"
 		expire = "1.1.1"
 		ideology = longism_subtype
 		traits = { propaganda_expert }
@@ -3492,7 +3493,7 @@ country_event = { # AFP Primary
 		create_country_leader = {
 		name = "Gerald L.K. Smith"
 		desc = "POLITICS_GERALD_LK_SMITH_DESC"
-		picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.png"
+		picture = "gfx/leaders/TEX/Portrait_TEX_Gerald_L_K_Smith.png"
 		expire = "1.1.1"
 		ideology = pataut_longism_subtype
 		traits = { propaganda_expert }
@@ -3511,7 +3512,7 @@ country_event = { # AFP Primary
 		create_country_leader = {
 		name = "Gerald L.K. Smith"
 		desc = "POLITICS_GERALD_LK_SMITH_DESC"
-		picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.png"
+		picture = "gfx/leaders/TEX/Portrait_TEX_Gerald_L_K_Smith.png"
 		expire = "1.1.1"
 		ideology = longism_subtype
 		traits = { propaganda_expert }
@@ -3967,7 +3968,7 @@ country_event = { # Second AFP Primary
 		create_country_leader = {
 		name = "Gerald L.K. Smith"
 		desc = "POLITICS_GERALD_LK_SMITH_DESC"
-		picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.png"
+		picture = "gfx/leaders/TEX/Portrait_TEX_Gerald_L_K_Smith.png"
 		expire = "1.1.1"
 		ideology = pataut_longism_subtype
 		traits = { propaganda_expert }
@@ -3986,7 +3987,7 @@ country_event = { # Second AFP Primary
 		create_country_leader = {
 		name = "Gerald L.K. Smith"
 		desc = "POLITICS_GERALD_LK_SMITH_DESC"
-		picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.png"
+		picture = "gfx/leaders/TEX/Portrait_TEX_Gerald_L_K_Smith.png"
 		expire = "1.1.1"
 		ideology = longism_subtype
 		traits = { propaganda_expert }
@@ -5107,7 +5108,7 @@ country_event = { #Huey Long's Trial of Assassins
 			create_country_leader = {
 				name = "Gerald L.K. Smith"
 				desc = "POLITICS_GERALD_LK_SMITH_DESC"
-				picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.png"
+				picture = "gfx/leaders/TEX/Portrait_TEX_Gerald_L_K_Smith.png"
 				expire = "1.1.1"
 				ideology = pataut_longism_subtype
 				traits = { propaganda_expert }
@@ -6282,7 +6283,7 @@ country_event = { #Pelley takes an L
 	create_country_leader = {
 		name = "Gerald L.K. Smith"
 		desc = "POLITICS_GERALD_LK_SMITH_DESC"
-		picture = "gfx/leaders/TEX/Portrait_TEX_gearld_k_smith.png"
+		picture = "gfx/leaders/TEX/Portrait_TEX_Gerald_L_K_Smith.png"
 		expire = "1.1.1"
 		ideology = pataut_christian_democracy_subtype
 		traits = { propaganda_expert }
@@ -7384,6 +7385,10 @@ country_event = { # Missles over White Sands
 			category = rocketry
 			category = jet_technology
 		}
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 0.5
+		}
 	}
 }
 
@@ -7398,11 +7403,27 @@ country_event = { # Nuclear Power in New Mexico
 
 	option = { # Of course they may join!
 		name = unionstate.103.a
-		add_tech_bonus = {
-			name = nuclear_bonus
-			bonus = 1
-			uses = 1
-			category = nuclear
+		if = {
+			limit = {
+				NOT = { has_tech = atomic_research }
+				NOT = { is_researching_technology = atomic_research }
+			}
+			add_tech_bonus = {
+				name = unionstate.103.t
+				bonus = 0.5
+				uses = 1
+				technology = atomic_research
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.25
+			}
+		}
+		else = {
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.75
+			}
 		}
 	}
 }
@@ -7427,7 +7448,23 @@ country_event = { # America is reunited
 			country_exists = USA
 			country_exists = CSA
 			country_exists = CAL
+			country_exists = COR
 			country_exists = NEE
+			AND = {
+				country_exists = TXS
+				has_country_flag = TXS_claimed_america
+				is_ally_of_ROOT = no
+			}
+			AND = {
+				country_exists = NYC
+				has_country_flag = NYC_can_invade_america
+				is_ally_of_ROOT = no
+			}
+			AND = {
+				country_exists = BBR
+				has_country_flag = BBR_claimed_america
+				is_ally_of_ROOT = no
+			}
 			has_country_flag = AUS_america_united
 		}
 		controls_all_owned_states = yes
@@ -8230,9 +8267,9 @@ country_event = { # catholic power!!!
 
 	option = {
 		name = unionstate.303.a
-		add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
-		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2500 }
-		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 5500 }
+		add_equipment_to_stockpile = { type = support_equipment amount = 500 }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 300 }
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 200 }
 		set_country_flag = TEX_cath_power
 	}
 }
@@ -8733,6 +8770,7 @@ country_event = { #The Senator from Pendergast
 			long_name = TEX_pendergast_authoritarian_democrat_party_long
 			name = TEX_pendergast_authoritarian_democrat_party
 				}
+		add_authdem_to_coalition = yes
 	}
 }
 
@@ -8827,6 +8865,7 @@ country_event = { #Ideology changes and shiet
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
 		}
+		add_pataut_to_coalition = yes 
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.25
@@ -10677,8 +10716,8 @@ country_event = { # A M E R C I A F I R S T
 
 	option = { #cool
 		name = cathdeath.24.a
-		add_war_support = 0.15
-		add_political_power = 0.25
+		add_war_support = 0.05
+		add_political_power = 25
 	}
 }
 country_event = { # Test of Faith?
@@ -10692,12 +10731,12 @@ country_event = { # Test of Faith?
 
 	option = { #yes
 		name = cathdeath.25.a
-		add_stability = 0.10
-		add_political_power = -0.50
+		add_stability = 0.05
+		add_political_power = -50
 	}
 	option = { #no
 		name = cathdeath.25.b
-		add_political_power = 0.25
+		add_political_power = 25
 
 	}
 }
@@ -11682,7 +11721,6 @@ country_event = { # flag
 
 	option = { #soccon
 		name = cathdeath.111.a
-		add_political_power = 25
 	}
 
 	option = { #soccon
@@ -11783,7 +11821,6 @@ country_event = { # flag
 
 	option = { #soccon
 		name = cathdeath.112.a
-		add_political_power = 25
 	}
 
 	option = { #soccon
@@ -12784,7 +12821,7 @@ country_event = { #Absaroka
 	immediate = {log = "[GetDateText]: [Root.GetName]: event unionstate.30009"}
 	title = unionstate.30009.t
 	desc = unionstate.30009.d
-	picture = GFX_event_TEX_Absaroka
+	picture = GFX_report_event_TEX_Absaroka
 
 	fire_only_once = yes
 	

@@ -44,12 +44,13 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 2
+		available = { is_subject = no }
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
 		}
 		bypass = {
-			always = yes
+			is_subject = no 
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEA_yong_dictator"
@@ -2474,6 +2475,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = CEA_decimate_reds_and_collaborators }
 		prerequisite = { focus = CEA_rebuild_germany }
+		bypass = {
+			has_completed_focus = CEA_abandon_cannibalism
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -3803,11 +3807,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				OR = {
-				has_government = social_democrat
-				has_government = syndicalist
-			}
-				has_government = social_democrat
+			has_government = social_democrat
+			has_government = syndicalist
 			}
 		}
 		completion_reward = {
@@ -3835,11 +3836,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				OR = {
-				has_government = social_democrat
-				has_government = syndicalist
-			}
-				has_government = social_democrat
+			has_government = social_democrat
+			has_government = syndicalist
 			}
 		}
 		completion_reward = {

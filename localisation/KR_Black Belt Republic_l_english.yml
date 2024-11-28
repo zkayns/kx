@@ -2,33 +2,33 @@
 
 ### Parties ###
 BBR_totalist_party:0 "Black Unity League"
-BBR_totalist_party_long:0 "Black Unity League (IWW) - §LThe Black Unity League is a loose grouping of Black Vanguardists who often vote on similar policies, although despite the nickname they are often at odds with each other. They consist of the Socialist Party Centralists (Browderist), The Trade Union Unity League (Collectivist-Syndicalist), The African Blood Brotherhood (National Syndicalist) and the New Communist League (Jacobin).§!"
-BBR_syndicalist_party:0 "IWIU (IWW)"
-BBR_syndicalist_party_long:0 "International Worker's Industrial Union (IWIU) - §LThe most influential wing of the IWW in the south, the IWIU supports the creation of a DeLeonist Syndicalist Worker State, strong Internationale relations and is led by Paul Robeson.§!"
+BBR_totalist_party_long:0 "Black Unity League (IWW)\n§LThe Black Unity League is a loose grouping of Black Vanguardists who often vote on similar policies, although despite the nickname they are often at odds with each other. They consist of the Socialist Party Centralists (Browderist), The Trade Union Unity League (Collectivist-Syndicalist), The African Blood Brotherhood (National Syndicalist) and the New Communist League (Jacobin).§!"
+BBR_syndicalist_party:0 "IWIU"
+BBR_syndicalist_party_long:0 "International Worker's Industrial Union (IWIU)\n§LThe most influential wing of the IWW in the south, the IWIU supports the creation of a DeLeonist Syndicalist Worker State, strong Internationale relations and is led by Paul Robeson.§!"
 BBR_radical_socialist_party:0 "Socialist Party"
-BBR_radical_socialist_party_long:0 "Socialist Party - §LThe mainstream wing of the Socialist Party promotes 'solidarity economics', a form of collectivism and market socialism that W.E.B. DuBois formulated. It draws from Black left intellectuals and the socialist wing of the NAACP, and is responsible for leading the initial revolt against the ODP.§!"
+BBR_radical_socialist_party_long:0 "Socialist Party\n§LThe mainstream wing of the Socialist Party promotes 'solidarity economics', a form of collectivism and market socialism that W.E.B. DuBois formulated. It draws from Black left intellectuals and the socialist wing of the NAACP, and is responsible for leading the initial revolt against the ODP.§!"
 BBR_social_democrat_party:0 "Socialist Party"
-BBR_social_democrat_party_long:0 "Socialist Party (Reformists) - §LThe most moderate wing of the Socialist Party believes in widespread government services, public spending, high union rates and high progressive taxes to create a social democracy in the Black Belt with a liberal system of government.§!"
+BBR_social_democrat_party_long:0 "Socialist Party (Reformists)\n§LThe most moderate wing of the Socialist Party believes in widespread government services, public spending, high union rates and high progressive taxes to create a social democracy in the Black Belt with a liberal system of government.§!"
 BBR_social_liberal_party:0 "Progressive Democratic Party"
-BBR_social_liberal_party_long:0 "Progressive Democratic Party - §LA group made up largely of liberal elements of the NAACP and the more left-leaning Black Republicans, the PDP supports using government to protect basic economic rights while using government action to grow the economy either directly or by aiding the economy. On racial issues they wish to emphasize using the government to create equal opportunity and fight racism.§!"
+BBR_social_liberal_party_long:0 "Progressive Democratic Party\n§LA group made up largely of liberal elements of the NAACP and the more left-leaning Black Republicans, the PDP supports using government to protect basic economic rights while using government action to grow the economy either directly or by aiding the economy. On racial issues they wish to emphasize using the government to create equal opportunity and fight racism.§!"
 BBR_market_liberal_party:0 "New Republican Party"
-BBR_market_liberal_party_long:0 "New Republican Party - §LMade up of largely followers of the late Booker T. Washington, the New Republican Party supports pro-industry, pro-business policies that emphasize growth, aiding Black Businesses and self-reliance.§!"
+BBR_market_liberal_party_long:0 "New Republican Party\n§LMade up of largely followers of the late Booker T. Washington, the New Republican Party supports pro-industry, pro-business policies that emphasize growth, aiding Black Businesses and self-reliance.§!"
 BBR_social_conservative_party:0 "Peace Party"
-BBR_social_conservative_party_long:0 "Peace Party - §LMade up of an assembly of unorthodox Christian Conservatives now doing outreach to other Congregations, the Peace Party is led by Reverend Major Jealous 'Father' Divine and Prophet James F. Jones, along with other contemporaries such as Daddy Grace and Charles Harrison Mason, with the preachers Michael King Sr. and Clarence LaVaughn Franklin standing as the party's newest rising stars. This diverse array of pious pacifist are bonded by their shared emphasis on spiritual patriotism, a strong Christian identity, and conservative but socially responsbile capitalism, while rejecting racial identity and Socialism.§!"
+BBR_social_conservative_party_long:0 "Peace Party\n§LMade up of an assembly of unorthodox Christian Conservatives now doing outreach to other Congregations, the Peace Party is led by Reverend Major Jealous 'Father' Divine and Prophet James F. Jones, along with other contemporaries such as Daddy Grace and Charles Harrison Mason, with the preachers Michael King Sr. and Clarence LaVaughn Franklin standing as the party's newest rising stars. This diverse array of pious pacifist are bonded by their shared emphasis on spiritual patriotism, a strong Christian identity, and conservative but socially responsbile capitalism, while rejecting racial identity and Socialism.§!"
 BBR_authoritarian_democrat_party:0 "Republican Army"
-BBR_authoritarian_democrat_party_long:0 "The Republican Army - §LA grouping of Army Officials with more traditional American Ideals, the Republican Army is led by Charles Young and supported by a mixture of black officers, the middle-class and many whites still in the region who are not ODP members. They are more sympathetic to an American identity which they believe can unite whites and blacks as well as Rooseveltian policies, believing that Woodrow Wilson subverted the progressive Republicans attempts to improve the economy or create racial egalitarianism. They believe that only a strongman could manage to stabilize the country while ridding it of extremist elements.§!"
+BBR_authoritarian_democrat_party_long:0 "Republican Army\n§LA grouping of Army Officials with more traditional American Ideals, the Republican Army is led by Charles Young and supported by a mixture of black officers, the middle-class and many whites still in the region who are not ODP members. They are more sympathetic to an American identity which they believe can unite whites and blacks as well as Rooseveltian policies, believing that Woodrow Wilson subverted the progressive Republicans attempts to improve the economy or create racial egalitarianism. They believe that only a strongman could manage to stabilize the country while ridding it of extremist elements.§!"
 BBR_paternal_autocrat_party:0 "UNIA"
-BBR_paternal_autocrat_party_long:0 "Universal Negro Improvement Association and African Communities League - §LEstablished by Marcus Garvey, the UNIA-ACL, or just UNIA for short, promotes Black Nationalism under a single-party state that represents Black American interests and promotes the concept of Pan-Africanism, in which Africa and other black regions will be be united and advanced under their rule."
+BBR_paternal_autocrat_party_long:0 "Universal Negro Improvement Association and African Communities League\n§LEstablished by Marcus Garvey, the UNIA-ACL, or just UNIA for short, promotes Black Nationalism under a single-party state that represents Black American interests and promotes the concept of Pan-Africanism, in which Africa and other black regions will be be united and advanced under their rule."
 BBR_national_populist_party:0 "Nation of Islam"
-BBR_national_populist_party_long:0 "The Nation of Islam - §LThe Nation of Islam is a radical black supremacist group best known for following a racialist and highly heretical variant of Islam that claims the "White Race" was created by a mad scientist named Yakub thousands of years ago and that the "Black Race" is the chosen people of Allah. Their leader Elijah Muhammad claims that NOI founder Wallace Fard Muhammad was God himself and that Elijah Muhammad is his appointed prophet on Earth, with Fard's sudden dissaparence leaving Elijah in charge. Outside the NOI Fard's dissaparence is a source of a multitude of conspiracy theories but nonetheless the NOI's paramilitary prowess, appeals to racial purity, guarantees of a minimum standard of living for members and promise to end all threats to Black Americans has made it one of the most powerful, and extreme, far-right organizations in Black America.§!"
+BBR_national_populist_party_long:0 "Nation of Islam\n§LThe Nation of Islam is a radical black supremacist group best known for following a racialist and highly heretical variant of Islam that claims the "White Race" was created by a mad scientist named Yakub thousands of years ago and that the "Black Race" is the chosen people of Allah. Their leader Elijah Muhammad claims that NOI founder Wallace Fard Muhammad was God himself and that Elijah Muhammad is his appointed prophet on Earth, with Fard's sudden dissaparence leaving Elijah in charge. Outside the NOI Fard's dissaparence is a source of a multitude of conspiracy theories but nonetheless the NOI's paramilitary prowess, appeals to racial purity, guarantees of a minimum standard of living for members and promise to end all threats to Black Americans has made it one of the most powerful, and extreme, far-right organizations in Black America.§!"
 
 BBR_market_lib_party:0 "Liberal Party"
 BBR_market_lib_party_long:0 "Liberal Party"
 BBR_social_con_party:0 "Constitution Party"
 BBR_social_con_party_long:0 "Constitution Party"
 
-BBR_jew_party_long:0 "Commandment Keepers Ethiopian Hebrew Congregation of the Living God Pillar & Ground of Truth"
 BBR_jew_party:0 "Commandment Keepers"
+BBR_jew_party_long:0 "Commandment Keepers Ethiopian Hebrew Congregation of the Living God Pillar & Ground of Truth"
 
 BBR_sun_ra_1_party:0 "ARM"
 BBR_sun_ra_1_party_long:0 "Africanist Revivalist Movement"
@@ -36,18 +36,29 @@ BBR_sun_ra_1_party_long:0 "Africanist Revivalist Movement"
 BBR_sun_ra_2_party:0 "A-SPP"
 BBR_sun_ra_2_party_long:0 "Afro-Saturnine Pilgrimage Party"
 
-
-BBR_ABB_totalist_party_long:0 "The African Blood Brotherhood"
 BBR_ABB_totalist_party:0 "ABB"
+BBR_ABB_totalist_party_long:0 "The African Blood Brotherhood"
 
-BBR_SPA_totalist_party_long:0 "Socialist Party (Centralist Faction)"
-BBR_SPA_totalist_party:0 "SPCF"
+BBR_SPA_totalist_party:0 "SP(C)"
+BBR_SPA_totalist_party_long:0 "Socialist Party (Centralist)"
 
+BBR_COM_totalist_party:0 "NCL"
 BBR_COM_totalist_party_long:0 "New Communist League"
-BBR_COM_totalist_party:0 "New Communist League"
 
-BBR_TUUC_totalist_party_long:0 "Trade Union Unity League"
 BBR_TUUC_totalist_party:0 "TUUL"
+BBR_TUUC_totalist_party_long:0 "Trade Union Unity League"
+
+BBR_13X_national_populist_party:0 "Suns of Almighty God Allah"
+BBR_13X_national_populist_party_long:0 "Suns of Almighty God Allah"
+
+BBR_Moor_national_populist_party:0 "Moorish Science Temple of America"
+BBR_Moor_national_populist_party_long:0 "Moorish Science Temple of America"
+
+BBR_Mittie_national_populist_party:0 "Peaceful Pacific Society of Africa and the Eastern World"
+BBR_Mittie_national_populist_party_long:0 "Peaceful Pacific Society of Africa and the Eastern World"
+
+BBR_Washington_authoritarian_democrat_party:0 "Washingtonian Party"
+BBR_Washington_authoritarian_democrat_party_long:0 "Washingtonian Party"
 
 ### Cosmetic Tags ###
 
@@ -141,7 +152,7 @@ BBR_paternal_autocrat_ADJ:0 "American"
 BBR_paternal_autocrat_DEF:0 "the Black Belt Republic"
 BBR_national_populist:0 "Black Belt Republic"
 BBR_national_populist_ADJ:0 "American"
-BBR_liberal_national_populist_DEF:0 "the Black Belt Republic"
+BBR_national_populist_DEF:0 "the Black Belt Republic"
 
 BBR_south_radical_socialist:0 "Southern Republic"
 BBR_south_radical_socialist_ADJ:0 "American"
@@ -249,6 +260,10 @@ BBR_NOI_MOOR:0 "Divine National Moorish American Republic"
 BBR_NOI_MOOR_ADJ:0 "Moorish-American Moslem"
 BBR_NOI_MOOR_DEF:0 "the Divine National Moorish American Republic"
 
+BBR_WASHINGTON:0 "United States of the Black Belt"
+BBR_WASHINGTON_ADJ:0 "American"
+BBR_WASHINGTON_DEF:0 "the United States of the Black Belt"
+
 ### Leader Bios ###
 
 POLITICS_HERMAN_BLOUTE_DESC:0 "Musical pioneer and funkadelic mixmaster, Herman Poole Blount has risen from humble beginnings as a musician and artist to become the very face of the Afro-Revivalist movement. The herald of Afrofuturism, the guide of our African-inspired renaissance, and the architect of our new cosmic future was born on May 22, 1914, in Birmingham, Alabama, and this ‘Sun Ra’ - as he likes to be called - has since become the facade of a radical coalition of varied Black nationalists seeking to control the destiny and identity of our republic. Blount, or ‘Sonny’ as his mother and sister used to call him, was born a musical prodigy, becoming a skilled pianist as a toddler and learning to compose and sight-read music before becoming a teenager, but most of his life’s details are kept intentionally-obscure by the man himself. First getting his start in professional music after joining his high school biology teacher’s band, Sun Ra would take off as a harmonious genius, briefly entering college before dropping out after his mysterious ‘Trip to Saturn.’ \n\nIn this ‘Trip,’ Blount claimed to have spiritually traveled to the distant planet of Saturn where he communed with strange beings that told him to drop out of college in order to use his musical talent and philosophy to bring peace to Earth, for a great disaster was on the horizon. It would not be long before the young Blount was proven right, for just a few months later, the Second American Civil War would begin, throwing the entire nation into chaos. \nAs the conflict exploded into bloodshed and the later BBR rose, Blount found himself drifting closer and closer to the radical end of New-Afrikan politics, and would find allies within the ABB, NOI, UNIA, and the Unity League. With the rise of the ‘Americanist’ forces in the nation and their crackdown on Afro-nationalism, Blount was uplifted to be the face of a new radical coalition of his varied friendly parties, all with one goal in common - to bring about a new African renaissance by toppling the Americanist regime. Utilized due to his immense popularity and due to his stance as the key figure of the Afro-revivalist movement, Blount is mostly a puppet to the powers behind him - a cultural pharaoh without a throne, but that may soon change..."
@@ -297,7 +312,6 @@ BBR_trade_contracts_tooltip:0 "We shall seek to improve trade relations around t
 BBR_join_tech_sharing_tooltip:0 "§MWe shall seek to give technological assistance to our allies.§!\n"
 BBR_color_war_plans_tooltip:0 "§MWe shall devise a number of colour-coded plans to deal with America's enemies§!\n"
 BBR_pan_american_confrence_tooltip:0 "§MWe shall convene a Conference in the future with other countries that we are aligned within the Americas§!\n"
-ACW_bbr_unit_tooltip:0 "§MWe shall have our own units!§!\n"
 BBR_trial_of_american_companies_tooltip:0 "§MTrials concerning the companies that supported rebels and traitors shall begin§!\n"
 BBR_economic_recovery_tooltip:0 "§MThe Economy will continue to recover§!\n"
 BBR_political_recovery_tooltip:0 "§MThe Country will continue to recover from the civil war§!\n"
@@ -766,7 +780,7 @@ BBR_a_party_with_a_state_desc:0 "While party membership has increased, it is tim
 BBR_total_employment:0 "State Employment"
 BBR_total_employment_desc:0 "With the heights of the economy controlled by the NCL and all members of society being NCL members it is time to end unemployment and ensure all contribute to socialism. Full employment will be required and workers placed in areas that best suit the needs of the state, with the state finalizing central economic planning in the process."
 BBR_sp_centralists:0 "Socialist Party Centralists"
-BBR_sp_centralists_desc:0 "The Socialist Party Centralist Faction has come to power under James Ford and his so-called 'Browderist-Fordist' faction. Supporting a centrally guided economy, strong leadership, and limited reforms, the faction is considered the least ideological of the Vanguardists."
+BBR_sp_centralists_desc:0 "The Socialist Party (Centralist) has come to power under James Ford and his so-called 'Browderist-Fordist' faction. Supporting a centrally guided economy, strong leadership, and limited reforms, the faction is considered the least ideological of the Vanguardists."
 BBR_workers_market:0 "The Workers Market"
 BBR_workers_market_desc:0 "While capitalist enterprises must be ended, the worker's market will be tolerated for the good of the nation. With price controls in place, workers and family businesses that do not grow too large will be allowed to sell their goods to one another while government control of large businesses will be mandatory."
 BBR_working_the_bourgeosie:0 "Have the Bourgeoisie Bend the Knee"
@@ -1352,10 +1366,6 @@ bbr.1.d:0 "The Black Belt has broken free of the iron fist of the Old Democratic
 bbr.1.a:0 "Enact a Draft"
 bbr.1.b:0 "Publicly Oppose a Draft"
 
-amcivwar.1312.t:0 "Our Own Units?"
-amcivwar.1312.d:0 "In our struggle for independence, some have suggested we copy the unit styles of our foes. This is nonsense. We are our own country now, and we will have our own units as well!"
-amcivwar.1312.a:0 "Distance ourselves from the CAR"
-
 bbr.2.t:0 "Reinforcements Arrive"
 bbr.2.d:0 "Syndicalist's and Liberals in nearby territories have identified with the Black Belt's fight against the CAR and their current socialist leanings, arriving to aid in any way they can. With these groups no longer needing to be underground it has afforded us direct aid and a chance to better arm them. However, it also means the CAR has less internal dissent to deal with, putting more pressure on us to defend our territory. As a result the SPA radicals are pressuring us to ask for additional troops from the CSA, although this would give their faction additional influence."
 bbr.2.a:0 "Very well"
@@ -1418,10 +1428,11 @@ bbr.8005.t:0 "Robert Church Jr. Killed"
 bbr.8005.d:0 "The Crusaders have reported that Robert Church Jr. has been killed due to his connections to the New Republican Party and his funding of 'liberal militants'. A wealthy businessman who inherited a prominent savings bank from his father, it was one of the wealthiest organizations in the National Negro Business League, which is currently being dissolved and peeled apart by the Crusaders and our militants, making Church's death the latest in a series of killings of wealthy blacks who oppose the ABB and leaving his assets in our hands."
 bbr.8005.a:0 "A Success"
 
-bbr.8006.t:0 "Faith in Education"
-bbr.8006.d:0 "Despite our best efforts which include illegalizing the Peace Party and arresting the charlatan Father Divine, the more mainstream Christian Churches continue to survive and even thrive despite some turning against it in favor of our National Mythos or even socialist materialism. This has lead to pushes in the ABB to emphasize discrediting Christianity in schools in favor of what the ABB views the natural faith of Black Culture, which is a seemingly strange mixture of materialism and appeals to more ancient traditions the ABB claims belongs to Blacks."
-bbr.8006.a:0 "A Great Initiative"
-bbr.8006.b:0 "Yes, and squeeze the churches"
+bbr.8006.t:0 "The Debate on Faith in Education and Government"
+bbr.8006.d:0 "Despite our best efforts at eliminating religious extremism within the Black community, which has included illegalizing radical organizations such as Elijah Muhammad's Nation of Islam, Frank S. Cherry's bigoted offshoot of the Black Hebrews, and the Peace Party of that charlatan Father Divine along with his gang of pretenders, swindlers, and peddlers of false faiths like James F. Jones, Charles Harrison Mason, Charles Manuel 'Sweet Daddy' Grace and others like them, more mainstream Abrahamic congregations continue to survive and even thrive under more truly pious and moral religious leaders - like the moderate and faithful Black Hebrews of Wentworth Arthur Matthew's Commandment Keepers or the Reverend Martin Luther King Sr. of the Ebenezer Baptist Church and Patriarch George Alexander McGuire of the African Orthodox Church, which itself has close links to Garvey's UNIA and our ABB's past as a UNIA offshoot before aligning with the old CPUSA. This growth of deradicalized, non-zealous religion that has been divorced from the idea of national salvation has continued despite a decent chunk of the population turning against faith in general in favor of secularism, our own accumulating National Mythos as pushed by our most nationalist members, or even towards socialist materialism and atheism. This has led to some within the ABB, largely those centered around the Afro-nationalist radical playwright and historian-turned-revolutionary theorist Dusé Mohamed Ali, to push for our party to completely discredit Abrahamic faiths in schools and within government in favor of what these radicals view as the so-called 'natural faith of Black Culture', which in their eyes is a seemingly strange syncretic mixture of socialist materialism fused with largely surface-level appeals to more ancient traditions and aesthetics linked to Dusé Mohamed Ali's Egyptian origins and fixations that he claims are the true legacy of the American Negro despite most Afro-Americans coming from West Africa. Should we allow Dusé Mohamed Ali and his band of radicals to push for this syncretic Afro-revolutionary secular civic faith, or should we lean back on more traditional and more widely-accepted ideas such as secularism with friendly ties to those cleansed Abrahamic groups?"
+bbr.8006.a:0 "A great initiative. Approve Dusé's plan."
+bbr.8006.b:0 "Approve Dusé's plan and squeeze the remaining Churches as well."
+bbr.8006.c:0 "Nothing but half-baked pseudohistoric radicalism. Stick with Abrahamic secularism."
 
 ### Nationalists Tolerated ###
 
@@ -1569,10 +1580,11 @@ bbr.20.c:0 "Thurgood Marshall"
 bbr.20.e:0 "Lorenzo Dow Turner"
 
 bbr.21.t:0 "The New Republican Party"
-bbr.21.d:0 "Made up of a coalition of businessmen, the middle-class and followers of the late Washington Booker's Black "Self-Help" philosophy, the New Republican Party was founded by (unsurprisingly) blacks who were part of the mainstream of the anti-ODP Republican Party in the South. Advocating a more laissez-faires, business friendly Republic as the way to prosperity, they have put forward prominent businessman C.C. Spaulding and famed writer Zora Neale Hurston as their candidates."
+bbr.21.d:0 "Made up of a coalition of businessmen, the middle-class and followers of the late Washington Booker's Black "Self-Help" philosophy, the New Republican Party was founded by (unsurprisingly) blacks who were part of the mainstream of the anti-ODP Republican Party in the South. Advocating a more laissez-faires, business friendly Republic as the way to prosperity, they have put forward prominent businessman C.C. Spaulding, famed writer Zora Neale Hurston, member of President Taft's "Black Cabinet" Henry Lincoln Johnson and a famous judge and lawyer Scipio Africanus Jones as their candidates."
 bbr.21.a:0 "Zora Neale Hurston"
 bbr.21.b:0 "C.C. Spaulding"
 bbr.21.c:0 "Henry Lincoln Johnson"
+bbr.21.e:0 "Scipio Africanus Jones"
 
 bbr.22.t:0 "The Peace Party"
 bbr.22.d:0 "Perhaps the strangest party to make the rounds before the election, the Peace Party is led by a grouping of unorthodox Christian preachers, namely Father Divine and Prophet Jones. Despite their unorthodox nature and Father Divine often being ridiculed for claiming to be God himself (a view he no longer brings up in public), their pacificism and emphasis on Christian morals has led to widespread sympathizers among local religious leaders not turned off by their other views and they have widespread support among Christians who view them as possible saviors of the Republic against both greed and radicalism, making them serious contenders in the election."
@@ -1819,7 +1831,7 @@ bbr.1825.d:0 "With New York breaking free of the dying union in a similar fashio
 bbr.1825.a:0 "Let us hope this King of Bolita and Queen of Harlem can be of use."
 
 bbr.1826.t:0 "Not All Whip-Crackers Are Bad"
-bbr.1826.d:0 "Though we are slowly building a new Negro state here in the Black Belt, we still hold ambitions of creating an America that is open and equal to all races, colors, and creeds, and as such, though most of our members and supporters are Negroes themselves, not all of them are. Perhaps one of the only true allies to our cause from the White Man’s world is Walter Francis White - a Georgian native who has dedicated his career and life towards the pursuit of Civil Rights and race equality in America. A leading figure of the National Association for the Advancement of Colored People, or the NAACP, since 1929, White has been one of the most outspoken supporters of the American Negro for over a decade, and as such, he is to be honored by our state. In perhaps the most lavish ceremony ever given to a White Man within our infantile republic, Walter White has been recognized and rewarded for his fierce dedication to the cause both in the courtroom and out on the protest line, rising to be one of the only universally-respected White men in the Black Belt."
+bbr.1826.d:0 "Though we are slowly building a new Negro state here in the Black Belt, we still hold ambitions of creating an America that is open and equal to all races, colors, and creeds, and as such, though most of our members and supporters are Negroes themselves, not all of them are. Perhaps one of the only true allies to our cause from the White Man’s world is Walter Francis White - a Georgian native who has dedicated his career and life towards the pursuit of Civil Rights and race equality in America. Although it might not be evident at first, White is in fact of mixed African and European background, describing himself in the following way: "I am a Negro. My skin is white, my eyes are blue, my hair is blond. The traits of my race are nowhere visible upon me." A leading figure of the National Association for the Advancement of Colored People, or the NAACP, since 1929, White has been one of the most outspoken supporters of the American Negro for over a decade, and as such, he is to be honored by our state. In perhaps the most lavish ceremony ever given to a White Man within our infantile republic, Walter White has been recognized and rewarded for his fierce dedication to the cause both in the courtroom and out on the protest line, rising to be one of the only universally-respected White men in the Black Belt."
 bbr.1826.a:0 "A true ally to our cause."
 
 ###MLK Events###

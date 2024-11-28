@@ -2396,10 +2396,6 @@ country_event = { #Degrelle Shot
 		add_political_power = -100
 		add_stability = -0.20
 		complete_national_focus = WLL_Degrelle_Dead
-		random_unit_leader = {
-			limit = { has_id = 21430 }
-			retire = yes
-		}
 		hidden_effect = {
 			country_event = {
 				id = wll.714
@@ -2439,15 +2435,11 @@ country_event = { #Degrelle Shot
 			remove_ideas_with_trait = head_of_government
 			add_ideas = WLL_Victor_Matthys_hog_npo
 		}
-		if = {
-			limit = { has_unit_leader = 100 }
-				random_unit_leader = {
-					limit = { has_id = 100 }
-					remove_unit_leader = yes
-				}
-			}
+		random_unit_leader = {
+			limit = { has_id = 21430 }
+			retire = yes
 		}
-	
+	}
 	option = {
 		name = wll.713.b
 		ai_chance = {
@@ -2713,7 +2705,7 @@ country_event = { #Elections
 			limit = { has_country_leader = { name = "Henri VI" ruling_only = yes } }
 			create_country_leader = {
 				name = "Henri VI"
-				picture = "gfx/leaders/NFA/Henri_VI_Suit.png"
+				picture = "gfx/leaders/NFA/Portrait_NFA_Henri_VI_Suit.png"
 				expire = "1.1.1"
 				ideology = socdem_reformed_belgicism_subtype
 			}
@@ -2829,7 +2821,7 @@ country_event = { #Elections
 			limit = { has_country_leader = { name = "Henri VI" ruling_only = yes } }
 			create_country_leader = {
 				name = "Henri VI"
-				picture = "gfx/leaders/NFA/Henri_VI_Suit.png"
+				picture = "gfx/leaders/NFA/Portrait_NFA_Henri_VI_Suit.png"
 				expire = "1.1.1"
 				ideology = soclib_reformed_belgicism_subtype
 			}
@@ -2945,7 +2937,7 @@ country_event = { #Elections
 			limit = { has_country_leader = { name = "Henri VI" ruling_only = yes } }
 			create_country_leader = {
 				name = "Henri VI"
-				picture = "gfx/leaders/NFA/Henri_VI_Suit.png"
+				picture = "gfx/leaders/NFA/Portrait_NFA_Henri_VI_Suit.png"
 				expire = "1.1.1"
 				ideology = marlib_reformed_belgicism_subtype
 			}
@@ -3049,7 +3041,7 @@ country_event = { #Elections
 				limit = { has_country_leader = { name = "Henri VI" ruling_only = yes } }
 				create_country_leader = {
 					name = "Henri VI"
-					picture = "gfx/leaders/NFA/Henri_VI_Suit.png"
+					picture = "gfx/leaders/NFA/Portrait_NFA_Henri_VI_Suit.png"
 					expire = "1.1.1"
 					ideology = soccon_reformed_belgicism_subtype
 				}
@@ -3134,7 +3126,7 @@ country_event = { #Elections
 				limit = { has_country_leader = { name = "Henri VI" ruling_only = yes } }
 				create_country_leader = {
 					name = "Henri VI"
-					picture = "gfx/leaders/NFA/Henri_VI_Suit.png"
+					picture = "gfx/leaders/NFA/Portrait_NFA_Henri_VI_Suit.png"
 					expire = "1.1.1"
 					ideology = reformed_belgicism_subtype
 				}
@@ -3468,7 +3460,7 @@ country_event = { #Remi restores the monarchy
 			limit = { has_country_leader_ideology = reformed_belgicism_subtype }
 			create_country_leader = {
 				name = "Henri VI"
-				picture = "gfx/leaders/NFA/Henri_VI_Suit.png"
+				picture = "gfx/leaders/NFA/Portrait_NFA_Henri_VI_Suit.png"
 				expire = "1.1.1"
 				ideology = reformed_belgicism_subtype
 			}
@@ -3477,7 +3469,7 @@ country_event = { #Remi restores the monarchy
 			limit = { has_country_leader_ideology = soccon_reformed_belgicism_subtype }
 			create_country_leader = {
 				name = "Henri VI"
-				picture = "gfx/leaders/NFA/Henri_VI_Suit.png"
+				picture = "gfx/leaders/NFA/Portrait_NFA_Henri_VI_Suit.png"
 				expire = "1.1.1"
 				ideology = soccon_reformed_belgicism_subtype
 			}
@@ -4177,7 +4169,7 @@ country_event = { # he's so happy to be in his lovely homeland, he'd hate to be 
 				limit = { WLL = { has_cosmetic_tag = WLL_LOTHARINGIA } }
 				set_cosmetic_tag = COG_REX_LOTHARINGIA
 			}
-			if = { set_cosmetic_tag = COG_REX }
+			else = { set_cosmetic_tag = COG_REX }
 		}
 	}
 	option = {
@@ -4202,7 +4194,7 @@ country_event = { # he's so happy to be in his lovely homeland, he'd hate to be 
 				limit = { WLL = { has_cosmetic_tag = WLL_LOTHARINGIA } }
 				set_cosmetic_tag = COG_REX_LOTHARINGIA
 			}
-			if = { set_cosmetic_tag = COG_REX }
+			else = { set_cosmetic_tag = COG_REX }
 		}
 	}
 	option = {
@@ -4227,7 +4219,7 @@ country_event = { # he's so happy to be in his lovely homeland, he'd hate to be 
 				limit = { WLL = { has_cosmetic_tag = WLL_LOTHARINGIA } }
 				set_cosmetic_tag = COG_REX_LOTHARINGIA
 			}
-			if = { set_cosmetic_tag = COG_REX }
+			else = { set_cosmetic_tag = COG_REX }
 		}
 	}
 	option = {
@@ -4276,7 +4268,7 @@ country_event = { # he's so happy to be in his lovely homeland, he'd hate to be 
 				limit = { WLL = { has_cosmetic_tag = WLL_LOTHARINGIA } }
 				set_cosmetic_tag = COG_REX_LOTHARINGIA
 			}
-			if = { set_cosmetic_tag = COG_REX }
+			else = { set_cosmetic_tag = COG_REX }
 		}
 	}
 	option = {
@@ -4302,7 +4294,7 @@ country_event = { # he's so happy to be in his lovely homeland, he'd hate to be 
 				limit = { WLL = { has_cosmetic_tag = WLL_LOTHARINGIA } }
 				set_cosmetic_tag = COG_REX_LOTHARINGIA
 			}
-			if = { set_cosmetic_tag = COG_REX }
+			else = { set_cosmetic_tag = COG_REX }
 		}
 	}
 }
@@ -4508,7 +4500,7 @@ country_event = { #The big one (never formed COG)
 				limit = { WLL = { has_cosmetic_tag = WLL_LOTHARINGIA } }
 				set_cosmetic_tag = COG_REX_LOTHARINGIA
 			}
-			if = { set_cosmetic_tag = COG_REX }
+			else = { set_cosmetic_tag = COG_REX }
 		}
 	}
 	
@@ -4538,7 +4530,7 @@ country_event = { #The big one (never formed COG)
 				limit = { WLL = { has_cosmetic_tag = WLL_LOTHARINGIA } }
 				set_cosmetic_tag = COG_REX_LOTHARINGIA
 			}
-			if = { set_cosmetic_tag = COG_REX }
+			else = { set_cosmetic_tag = COG_REX }
 		}
 	}
 	option = {
@@ -4549,6 +4541,11 @@ country_event = { #The big one (never formed COG)
 		add_to_faction = COG
 		COG = {
 			WLL_transfer_congo = yes
+			set_party_name = {
+				ideology = national_populist
+				long_name = WLL_rex_congo_party_long
+				name = WLL_rex_congo_party
+			}
 			create_country_leader = {
 				name = "Émile Janssens"
 				desc = "POLITICS_JANNSENS_DESC"
@@ -4567,7 +4564,10 @@ country_event = { #The big one (never formed COG)
 	option = {
 		name = wll.1342.e
 		trigger = {
-			has_government = national_populist
+			OR = {
+				has_government = national_populist
+				has_government = social_conservative
+			}
 			has_completed_focus = WLL_Herge_Victory
 		}
 		release = COG
@@ -4575,12 +4575,31 @@ country_event = { #The big one (never formed COG)
 		add_to_faction = COG
 		COG = {
 			WLL_transfer_congo = yes
+			set_party_name = {
+				ideology = national_populist
+				long_name = WLL_rex_congo_party_long
+				name = WLL_rex_congo_party
+			}
 			create_country_leader = {
 				name = "Georges Prosper Remi"
 				desc = ""
 				picture = "gfx/leaders/BEL/Portrait_Belgium_Georges_Prosper_Remi.png"
 				expire = "1.1.1"
 				ideology = reformed_belgicism_subtype
+			}
+			if = {
+				limit = { has_government = social_conservative }
+				set_party_name = {
+					ideology = social_conservative
+					long_name = WLL_rex_congo_party_long
+					name = WLL_rex_congo_party
+				}
+				create_country_leader = {
+					name = "Georges Prosper Remi"
+					picture = "gfx/leaders/BEL/Portrait_Belgium_Georges_Prosper_Remi.png"
+					expire = "1.1.1"
+					ideology = soccon_reformed_belgicism_subtype
+				}
 			}
 			if = {
 				limit = { WLL = { has_cosmetic_tag = WLL_LOTHARINGIA } }

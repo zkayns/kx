@@ -312,7 +312,7 @@ JAP_member_integration_3_desc:0 "The Japanese investment in our country is a for
  ### Puppet Ideas - Suzuha ####
  
 JAP_shattered_people_idea:0 "Shattered People"
-JAP_shattered_people_idea_desc:0 "For centuries, the Japanese people have held unwavering support and faith in their emperor. The country of Japan had never before been vanguished but all those beliefs have shattered in a cascade of broken dreams and trust as the Japanese Home Islands now find themselves fully occupied for the first time, by a socialist nation nonetheless. It will take serious effort to rebuild the trust of the Japanese people and to combat the feelings of defeatism and pessimism."
+JAP_shattered_people_idea_desc:0 "For centuries, the Japanese people have held unwavering support and faith in their emperor. The country of Japan had never before been vanquished but all those beliefs have shattered in a cascade of broken dreams and trust as the Japanese Home Islands now find themselves fully occupied for the first time, by a socialist nation nonetheless. It will take serious effort to rebuild the trust of the Japanese people and to combat the feelings of defeatism and pessimism."
 
 JAP_shattered_people_idea2:0 "Shattered People"
 JAP_shattered_people_idea2_desc:0 "$JAP_shattered_people_idea_desc$"
@@ -572,7 +572,7 @@ JAP_man_with_thousand_friends_hog_tt_2:0 "Modify §YMan with a Thousand Friends�
 JAP_scion_of_fujiwara_hog_tt:0 "Replace §YImperial Prince§! with §YScion of Fujiwara§!\nEffective change:\n$MODIFIER_POLITICAL_POWER_GAIN$: §G+0.10§!\n$MODIFIER_STABILITY_FACTOR$: §G+10.00%§!"
 JAP_has_taken_zaibatsu_eco_tt:0 "If we have chosen to §YSupport the Zaibatsu§!, we will gain:"
 JAP_has_taken_bureaucratic_eco_tt:0 "If we have decided on a §YBureaucratic Economy§! instead, we will gain:"
-JAP_puppet_play_tt:0 "§RTHIS WILL SWITCH YOUR FROM YOUR CURRENT NATION TO THE PUPPETED JAPAN!§!"
+JAP_puppet_play_tt:0 "§RTHIS WILL SWITCH YOU FROM YOUR CURRENT NATION TO PUPPET JAPAN!§!"
 
 JAP_elected_marlib:0 "The §mMinseitō§! are victorious in the snap election"
 JAP_elected_soccon:0 "The §cSeiyūkai§! continue to lead the government"
@@ -1234,7 +1234,7 @@ JAP_create_socialist_youth_league_desc:0 "Youth is the vanguard of the future an
 JAP_encourage_revolutionary_culture:0 "Encourage Revolutionary Culture"
 JAP_encourage_revolutionary_culture_desc:0 "The ancient Japanese culture, materialist by its capitalist character and spiritualist by its religious character, is not compatible with our visions of a better society. We must revolutionize Japanese culture so that it is rationalist, humanist and above all socialist, it will then be truly modern and turned towards the outside and towards our comrades around the world."
 JAP_sponser_overseas_revolutionary_studies:0 "Sponser Overseas Revolutionary Studies"
-JAP_sponser_overseas_revolutionary_studies_desc:0 "Education is the basis of any stable modern society, but we cannot provide all education in our universities in Japan, especially as we reconstrut our broken country. To train our students in the best conditions, we will encourage them to study overseas in other revolutionary countries, notably France or Great Britain, so that they can train alongside the best researchers and professors in the socialist world."
+JAP_sponser_overseas_revolutionary_studies_desc:0 "Education is the basis of any stable modern society, but we cannot provide all education in our universities in Japan, especially as we reconstruct our broken country. To train our students in the best conditions, we will encourage them to study overseas in other revolutionary countries, notably France or Great Britain, so that they can train alongside the best researchers and professors in the socialist world."
  ### Japan LKMT Puppet Tree ###
 JAP_white_dawn_eclipses_red_sun:0 "White Dawn Eclipses Red Sun"
 JAP_white_dawn_eclipses_red_sun_desc:0 "For the first time in Japanese history, Japan now finds itself occupied and at the mercy of the fomrerly inferior Chinese nation and peoples. The Chinese Kuomintang is determined to remodel and reorganize Japan into a new anti-imperialist state guided by the Three Principles of the People."
@@ -1289,6 +1289,7 @@ JAP_dismantle_the_national_defense_state:0 "Dismantle the National Defense State
 JAP_repeal_the_peace_preservation_laws:0 "Repeal the Peace Preservation Laws"
 JAP_repeal_the_peace_preservation_laws_desc:0 "The pre-war Peace Preservation Laws are merely tools used by the pre-war government to control our populations and ensure their control over power. Such laws have no place in the better Japan we're building."
 JAP_subject_econ_start_focus:0 "[DemPupGetFinishingPolFocus]"
+JAP_subject_econ_start_focus_desc:0 "The previous regime governing Japan has long chained the people with structures and laws meant to ensure the dominance of the elite groups, favoured by the Emperor. We cannot allow this situation to continue. Let us reject the vestiges of the past mistakes."
 JAP_pressure_the_dissolution_of_the_zaibatsu:0 "Pressure the Dissolution of the Zaibatsu"
 JAP_pressure_the_dissolution_of_the_zaibatsu_desc:0 "The Zaibatsus were accomplices of the pre-war government, and could even be described as the true holders of power in Japan, and are therefore responsible for the disastrous military campaigns we undertook, and consequently for the current suffering of our people. Such organizations should not be capable of repeating such acts and should be dismantled as soon as possible."
 JAP_constitutional_amendments:0 "Constitutional Amendments"
@@ -2743,6 +2744,8 @@ JAP_ishikawa_sanshiro:0 "Ishikawa Sanshirō"
 
 ### Army Spirits ###
 gekokujo_spirit:0 "Gekokujō Spirit"
+kantai_kessen_spirit: "Kantai Kessen Doctrine"
+kantai_kessen_spirit_desc: "Through our superior fighting spirit and tactics we will achieve a Naval Win in one knockout blow. Concentrating all our capital ships into one spearhead to achieve this will not backfire."
 
 ### Traits ###
 JAP_imperial_regent:0 "Imperial Regent" #Hirohito brother

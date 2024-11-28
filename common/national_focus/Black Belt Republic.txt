@@ -755,15 +755,34 @@ focus_tree = {
 			add_ideas = {
 				BBR_TO_SAT_idea
 			}
-			add_tech_bonus = {
-				uses = 2
-				bonus = 2
-				category = nuclear
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
 			}
+			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
-				uses = 2
-				bonus = 2
+				name = CHI_the_dongfeng_project
+				bonus = 0.5
+				uses = 1
 				category = rocketry
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = atomic_research }
+					NOT = { is_researching_technology = atomic_research }
+				}
+				add_tech_bonus = {
+					name = CHI_the_dongfeng_project
+					bonus = 0.5
+					uses = 1
+					technology = atomic_research
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
 			}
 			hidden_effect = {
 				country_event = {
@@ -4464,6 +4483,19 @@ focus_tree = {
 			add_stability = 0.1
 			add_political_power = 35
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+			set_country_leader_ideology = washingtonism_subtype
+			if = {	
+				limit = { has_country_leader = { name = "Charles Young" ruling_only = yes } }
+				set_country_leader_portrait = {
+					portrait = "gfx/leaders/BBR/Portrait_BBR_Charles_Young.png"
+				}
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = BBR_Washington_authoritarian_democrat_party_long
+				name = BBR_Washington_authoritarian_democrat_party 
+			}
+			set_cosmetic_tag = BBR_WASHINGTON
 		}
 	}
 	focus = {# Captain at the Helm
@@ -6678,6 +6710,9 @@ focus_tree = {
 			NOT = {
 				has_country_flag = BBR_sun_ra_flag
 			}
+			hidden_trigger = {
+				NOT = { has_country_leader = { name = "Mittie Maude Lena Gordon" ruling_only = yes } }
+			}
 		}
 				bypass = {
 			has_country_leader = { ruling_only = yes name = "James R. Stewart" }
@@ -8683,6 +8718,10 @@ focus_tree = {
 		id = BBR_join_the_internationale
 		icon = GFX_goal_FRA_Internationale_Congress
 		cost = 2.00
+		available = {
+			is_subject = no
+			has_war = no
+		}
 		prerequisite = {
 			focus = BBR_support_csa
 		}

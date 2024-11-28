@@ -1372,7 +1372,7 @@ shared_focus = {
 				is_controlled_by = ROOT
 				infrastructure < 3
 			}
-			add_building_construction = { type = infrastructure level = 1 }
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 		}
 		add_tech_bonus = {
 			name = RUS_Expand_The_Railway_Network 
@@ -2162,6 +2162,10 @@ shared_focus = {
 			uses = 2
 			category = radar_tech
 		}
+		add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
 	}
 }
 shared_focus = {
@@ -2195,6 +2199,10 @@ shared_focus = {
 			uses = 1
 			category = rocketry
 		}
+		add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -2219,13 +2227,52 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RUS_ec_mutual9"
-		add_tech_bonus = {
-			name = RUS_nuclear_effort
-			bonus = 1
-			uses = 1
-			ahead_reduction = 1
-			category = nuclear
-		}
+			if = {
+				limit = {
+					NOT = { has_tech = atomic_research }
+					NOT = { is_researching_technology = atomic_research }
+				}
+				add_tech_bonus = {
+					name = RUS_Project_Kremlin
+					bonus = 0.5
+					uses = 1
+					technology = atomic_research
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					controls_province = 7350 #OTL Kurchatov
+					810 = { #Semipalatinsk
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = nuclear_facility
+					}
+				}
+				810 = { #Semipalatinsk
+					add_building_construction = {
+						type = nuclear_facility
+						level = 1
+						province = 7350 #OTL Kurchatov
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 810 588 40 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = nuclear_facility
+					}
+					construct_building_in_random_province = { nuclear_facility = 1 }
+				}
+			}
 		country_event = rusd.122
 	}
 }
@@ -2530,6 +2577,34 @@ shared_focus = {
 			bonus = 0.25
 			uses = 4
 			category = air_equipment
+		}
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = {
+				controls_province = 9448 #near Voronezh
+				260 = { #Voronezh
+					is_owned_and_controlled_by = ROOT
+					can_construct_building = air_facility
+				}
+			}
+			260 = { #Voronezh
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					province = 9448 #near Voronezh
+					instant_build = yes
+				}
+			}
+		}
+		else = {
+			random_owned_controlled_state = {
+				prioritize = { 260 258 }
+				limit = {
+					is_core_of = ROOT
+					can_construct_building = air_facility
+				}
+				construct_building_in_random_province = { air_facility = 1 }
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
@@ -3344,6 +3419,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RUS_Jet_Engine_Experiments"
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 0.5
+		}
+		custom_effect_tooltip = tooltip_white_line
 		add_tech_bonus = {
 			name = RUS_Jet_Engine_Experiments
 			bonus = 1
@@ -4691,7 +4771,7 @@ shared_focus = {
 			name = RUS_Commerce_Raiders
 			bonus = 0.5
 			uses = 2
-			category = cat_torpedo
+			category = cat_torpedoes
 			category = cat_targeting
 		}
 		add_tech_bonus = {
@@ -4947,6 +5027,33 @@ shared_focus = {
 				type = dockyard
 				level = 3
 				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = {
+				195 = { #Petrograd
+					is_owned_and_controlled_by = ROOT
+					can_construct_building = naval_facility
+				}
+			}
+			195 = { #Petrograd
+				add_building_construction = {
+					type = naval_facility
+					level = 1
+					province = 6174 #Petrograd
+					instant_build = yes
+				}
+			}
+		}
+		else = {
+			random_owned_controlled_state = {
+				prioritize = { 195 1006 }
+				limit = {
+					is_core_of = ROOT
+					can_construct_building = naval_facility
+				}
+				construct_building_in_random_province = { naval_facility = 1 }
 			}
 		}
 	}
@@ -7447,7 +7554,10 @@ focus_tree = {
 		y = 7
 		cost = 0
 		allow_branch = {
-			rsdrp_in_power = yes	
+			OR = {
+				rsdrp_in_power = yes
+				has_country_flag = make_russia_rsdrp_democratic_tree_visible
+			}
 		}
 
 		available = {
@@ -8426,12 +8536,17 @@ focus_tree = {
 		y = 7
 		cost = 0
 		allow_branch = {
-			psr_in_power = yes
-			NOT = {
-				has_country_leader = {
-					name = "Alexandr Kerensky"
-					ruling_only = yes
+			OR = {
+				AND = {
+					psr_in_power = yes
+					NOT = {
+						has_country_leader = {
+							name = "Alexandr Kerensky"
+							ruling_only = yes
+						}
+					}
 				}
+				has_country_flag = make_russia_psr_democratic_tree_visible
 			}
 		}
 
@@ -9856,7 +9971,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_tooltip = RUS_LAW_SENATE_PSR_KDP_REFORM_initialize
-			set_variable = { Duma_Bill_Status^15 = 1 }
+			set_variable = { Duma_Bill_Status^14 = 1 }
 			RUS_increase_psr_pop = yes
 			RUS_increase_lkdp_pop = yes
 			add_stability = 0.05
@@ -9970,12 +10085,17 @@ focus_tree = {
 		y = 11
 		cost = 5
 		allow_branch = {
-			psr_in_power = yes
-			NOT = {
-				has_country_leader = {
-					name = "Alexandr Kerensky"
-					ruling_only = yes
+			OR = {
+				AND = {
+					psr_in_power = yes
+					NOT = {
+						has_country_leader = {
+							name = "Alexandr Kerensky"
+							ruling_only = yes
+						}
+					}
 				}
+				has_country_flag = make_russia_psr_democratic_tree_visible
 			}
 		}
 		available = {
@@ -11401,7 +11521,7 @@ focus_tree = {
 			focus = RUS_fiscal_reform
 		}
 		available = {
-			rkdp_in_power = no
+			kdp_in_power = yes
 		}
 		mutually_exclusive = {
 			focus = RUS_prog_tax
@@ -11430,7 +11550,7 @@ focus_tree = {
 			focus = RUS_fiscal_reform
 		}
 		available = {
-			lkdp_in_power = no
+			lkdp_in_power = yes
 		}
 		mutually_exclusive = {
 			focus = RUS_lib_tax
@@ -14854,7 +14974,10 @@ focus_tree = {
 		icon = GFX_focus_rus_solidarists
 		cost = 0
 		allow_branch = {
-			nsnp_in_power = yes
+			OR = {
+				nsnp_in_power = yes
+				has_country_flag = make_russia_nsnp_democratic_tree_visible
+			}
 		}
 		available = {
 			nsnp_in_power = yes
@@ -15315,7 +15438,10 @@ focus_tree = {
 		icon = GFX_focus_rus_solidarists
 		cost = 5
 		allow_branch = {
-			nsnp_in_power = yes
+			OR = {
+				nsnp_in_power = yes
+				has_country_flag = make_russia_nsnp_democratic_tree_visible
+			}
 		}
 		available = {
 			nsnp_in_power = yes
@@ -15685,7 +15811,10 @@ focus_tree = {
 		icon = GFX_RUS_Second_Term_Of_RSDRP
 		cost = 0
 		allow_branch = {
-			rsdrp_in_power = yes	
+			OR = {
+				rsdrp_in_power = yes
+				has_country_flag = make_russia_rsdrp_democratic_tree_visible
+			}
 		}
 		available = {
 			rsdrp_in_power = yes
@@ -16444,9 +16573,12 @@ focus_tree = {
 		x = 15
 		y = 7
 		allow_branch = {
-			has_country_leader = {
-				name = "Alexandr Kerensky"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					name = "Alexandr Kerensky"
+					ruling_only = yes
+				}
+				has_country_flag = make_kerensky_tree_visible
 			}
 		}
 		available = {
@@ -17064,16 +17196,9 @@ focus_tree = {
 		y = 5
 		available = {
 			has_country_flag = RUS_KER
-			custom_trigger_tooltip = {
-				tooltip = "This focus is currently unavailable. Wait for the Russian Minors Update"
-				always = no
-			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = "This focus is currently unavailable. Wait for the Russian Minors Update"
-				always = yes
-			}
+			always = yes
 		}
 		ai_will_do = {
 			factor = 110
@@ -18697,7 +18822,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Bonapartism"
-			add_ideas = bonapartism
+			add_ideas = RUS_bonapartism
 			if = {
 				limit = {
 					NOT = { has_country_leader_ideology = pataut_bonapartism_subtype }
@@ -18893,27 +19018,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Teutonic_Discipline"
 			if = {
-				limit = {
-					has_idea = bonapartism_2
+				limit = { # from RUS_Cossack_Soul
+					has_idea = RUS_bonapartism_2
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_2
-					add_idea = bonapartism_6
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = bonapartism_4
-				}
-				swap_ideas = {
-					remove_idea = bonapartism_4
-					add_idea = bonapartism_8
+					remove_idea = RUS_bonapartism_2
+					add_idea = RUS_bonapartism_6
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = bonapartism
-					add_idea = bonapartism_1
+					remove_idea = RUS_bonapartism
+					add_idea = RUS_bonapartism_1
 				}
 			}
 		}
@@ -18932,6 +19048,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_Stratocratic_Government
 		}
+		prerequisite = {
+			focus = RUS_Cossack_Soul
+		}
 		relative_position_id = RUS_Black_Tsar
 		x = -2
 		y = 4
@@ -18941,39 +19060,38 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Prussian_Constitutionalism"
 			if = {
-				limit = {
-					has_idea = bonapartism_6
+				limit = { # White Army
+					has_idea = RUS_bonapartism_5
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_6
-					add_idea = bonapartism_7
+					remove_idea = RUS_bonapartism_5
+					add_idea = RUS_bonapartism_9
 				}
 			}
-			else_if = {
+			else_if = { # White Army + Autonomy
 				limit = {
-					has_idea = bonapartism_8
+					has_idea = RUS_bonapartism_8
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_8
-					add_idea = bonapartism_9
+					remove_idea = RUS_bonapartism_8
+					add_idea = RUS_bonapartism_10
 				}
 			}
-			else_if = {
+			else_if = { # Autonomy
 				limit = {
-					has_idea = bonapartism_5
+					has_idea = RUS_bonapartism_4
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_5
-					add_idea = bonapartism_10
+					remove_idea = RUS_bonapartism_4
+					add_idea = RUS_bonapartism_7
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = bonapartism_1
-					add_idea = bonapartism_3
+					remove_idea = RUS_bonapartism_3
+					add_idea = RUS_bonapartism_6
 				}
-			}
-			
+			}			
 		}
 	}		
 
@@ -19000,35 +19118,17 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Cossack_Soul"
 			if = {
 				limit = {
-					has_idea = bonapartism_1
+					has_idea = RUS_bonapartism_1
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_1
-					add_idea = bonapartism_6
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = bonapartism_3
-				}
-				swap_ideas = {
-					remove_idea = bonapartism_3
-					add_idea = bonapartism_7
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = bonapartism_11
-				}
-				swap_ideas = {
-					remove_idea = bonapartism_11
-					add_idea = bonapartism_12
+					remove_idea = RUS_bonapartism_1
+					add_idea = RUS_bonapartism_3
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = bonapartism
-					add_idea = bonapartism_2
+					remove_idea = RUS_bonapartism
+					add_idea = RUS_bonapartism_2
 				}
 			}
 		}
@@ -19047,6 +19147,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_Legacy_Of_The_Whites
 		}
+		prerequisite = {
+			focus = RUS_Teutonic_Discipline
+		}
 		relative_position_id = RUS_Black_Tsar
 		x = 2
 		y = 4
@@ -19056,45 +19159,36 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Autonomy_For_Cossacks"
 			if = {
-				limit = {
-					has_idea = bonapartism_6
+				limit = { # Pruss Con
+					has_idea = RUS_bonapartism_6
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_6
-					add_idea = bonapartism_8
+					remove_idea = RUS_bonapartism_6
+					add_idea = RUS_bonapartism_7
 				}
 			}
-			else_if = {
+			else_if = { # Pruss Con + White Army
 				limit = {
-					has_idea = bonapartism_7
+					has_idea = RUS_bonapartism_9
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_7
-					add_idea = bonapartism_9
+					remove_idea = RUS_bonapartism_9
+					add_idea = RUS_bonapartism_10
 				}
 			}
-			else_if = {
+			else_if = { # White Army
 				limit = {
-					has_idea = bonapartism_5
+					has_idea = RUS_bonapartism_5
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_5
-					add_idea = bonapartism_11
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = bonapartism_10
-				}
-				swap_ideas = {
-					remove_idea = bonapartism_10
-					add_idea = bonapartism_12
+					remove_idea = RUS_bonapartism_5
+					add_idea = RUS_bonapartism_8
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = bonapartism_2
-					add_idea = bonapartism_4
+					remove_idea = RUS_bonapartism_3
+					add_idea = RUS_bonapartism_4
 				}
 			}
 			custom_effect_tooltip = rus_cossack_forces_tt
@@ -19148,36 +19242,36 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_White_Army_Black_Baron"
 			if = {
-				limit = {
-					has_idea = bonapartism_7
+				limit = { # Pruss Con
+					has_idea = RUS_bonapartism_6
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_7
-					add_idea = bonapartism_10
+					remove_idea = RUS_bonapartism_6
+					add_idea = RUS_bonapartism_9
 				}
 			}
-			else_if = {
+			else_if = { # Pruss Con + Autonomy
 				limit = {
-					has_idea = bonapartism_8
+					has_idea = RUS_bonapartism_7
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_8
-					add_idea = bonapartism_11
+					remove_idea = RUS_bonapartism_7
+					add_idea = RUS_bonapartism_10
 				}
 			}
-			else_if = {
+			else_if = { # Autonomy
 				limit = {
-					has_idea = bonapartism_9
+					has_idea = RUS_bonapartism_4
 				}
 				swap_ideas = {
-					remove_idea = bonapartism_9
-					add_idea = bonapartism_12
+					remove_idea = RUS_bonapartism_4
+					add_idea = RUS_bonapartism_8
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = bonapartism_6
-					add_idea = bonapartism_5
+					remove_idea = RUS_bonapartism_3
+					add_idea = RUS_bonapartism_5
 				}
 			}
 		}
@@ -19209,8 +19303,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Gendarme_of_Europe"
 			army_experience = 100
 			swap_ideas = {
-				remove_idea = bonapartism_12
-				add_idea = bonapartism_13
+				remove_idea = RUS_bonapartism_10
+				add_idea = RUS_bonapartism_11
 			}
 		}
 	}
@@ -22644,7 +22738,6 @@ focus_tree = {
 		completion_reward = {
 				log = "[GetDateText]: [Root.GetName]: Focus RUS_A_Violet_Will_Defeat_A_Machine"
 				add_stability = -0.05
-				set_equipment_fraction = 0.9
 				swap_ideas = {
 					remove_idea = rus_green_dictator_4
 					add_idea = rus_green_dictator_6

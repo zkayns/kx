@@ -140,92 +140,10 @@ bookmarks = {
 			}
 			focuses = {
 				NFA_napoleon_restoration
+				NFA_death_of_le_maitre
 				NFA_marechal_merci
-				NFA_sede_es_petri
 			}
 		}
-
-		"MEX" = {
-			minor = yes
-			history = "MEX_KR_GATHERING_STORM_DESC"
-			ideology = radical_socialist
-			ideas = {
-				MEX_asa_rebellion
-				MEX_dl_opposition
-				MEX_church_question
-			}
-			focuses = {
-				MEX_PCM_the_lenin_of_the_west
-				MEX_fateful_day
-				MEX_GOL_old_or_new
-			}
-		}
-
-		"FOP" = {
-			minor = yes
-			history = "FOP_KR_GATHERING_STORM_DESC"
-			ideology = authoritarian_democrat
-			ideas = {
-				FOP_patagonian_resistance
-				FOP_illegitimate_republic
-			}
-			focuses = {
-				FOP_posadas_at_the_helm
-				FOP_fonte_coup
-				FOP_red_robin_hood
-			}
-		}
-
-
-		"UKR" = {
-			minor = yes
-			history = "UKR_KR_GATHERING_STORM_DESC"
-			ideology = paternal_autocrat
-			ideas = {
-				UKR_hetman_army_placeholder
-				UKR_brotfrieden_idea
-				UKR_breadbasket_of_europe_placeholder
-			}
-			focuses = {
-				UKR_Leader_In_Vyshyvanka
-				UKR_New_Type_Of_Monarchy 
-				UKR_Petliura_Coup 
-			}
-		}
-
-
-		"EGY" = {
-			minor = yes
-			history = "EGY_KR_GATHERING_STORM_DESC"
-			ideology = market_liberal
-			ideas = {
-				EGY_backwards_economy_1
-				EGY_inexperinced_officer_corps
-				EGY_iqta
-			}
-			focuses = {
-				EGY_connection_like_minded_nationalist
-				EGY_our_unique_identity 
-				EGY_appeal_to_our_monarchist_history 
-			}
-		}
-
-		"AFG" = {
-			minor = yes
-			history = "AFG_KR_GATHERING_STORM_DESC"
-			ideology = paternal_autocrat
-			ideas = {
-				AFG_graveyard
-				AFG_tribal_disunity
-				AFG_german_expedition
-			}
-			focuses = {
-				AFG_awaken_the_pashtun
-				AFG_akbar
-				AFG_kalakani
-			}
-		}
-	
 
 		"IRE" = {
 			minor = yes
@@ -243,6 +161,103 @@ bookmarks = {
 			}
 		}
 
+		"UKR" = {
+			minor = yes
+			history = "UKR_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				UKR_hetman_army_placeholder
+				UKR_brotfrieden_idea
+				UKR_breadbasket_of_europe_placeholder
+			}
+			focuses = {
+				UKR_Leader_In_Vyshyvanka
+				UKR_New_Type_Of_Monarchy 
+				UKR_Petliura_Coup 
+			}
+		}
+
+		"EGY" = {
+			minor = yes
+			history = "EGY_KR_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+				EGY_backwards_economy_1
+				EGY_inexperinced_officer_corps
+				EGY_iqta
+			}
+			focuses = {
+				EGY_connection_like_minded_nationalist
+				EGY_Pan_Arab_Federation 
+				EGY_appeal_to_our_monarchist_history 
+			}
+		}
+
+		"AST" = {
+			minor = yes
+			history = "AST_KR_GATHERING_STORM_DESC"
+			ideology = social_conservative
+			ideas = {
+				AST_white_ausrtralia_policy_idea
+				AST_NZL_two_nations_in_one_idea
+				AST_depression_1
+			}
+			focuses = {
+				AST_second_lang_labor_victory
+				AST_empower_the_australia-japan_society
+				AST_an_end_to_terra_nullius
+			}
+		}
+		
+		"NFL" = {
+			minor = yes
+			history = "NFL_KR_GATHERING_STORM_DESC"
+			ideology = social_conservative
+			ideas = {
+				NFL_bad_economy
+				NFL_legacy_of_1932
+				NFL_memories_of_the_regiment
+			}
+			focuses = {
+				NFL_plot_begins
+				NFL_commission_of_govt
+				NFL_elections_once_more
+			}
+		}
+
+		"TUR" = {
+			minor = yes
+			history = "OTT_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				ott_institutionalised_islam
+				ott_widespread_illiteracy
+				ott_armed_neutrality
+			}
+			focuses = {
+				OTT_trust_elites
+				OTT_german_institutions
+				OTT_heia_safari
+			}
+		}
+	
+
+		"AFG" = {
+			minor = yes
+			history = "AFG_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				AFG_graveyard
+				AFG_tribal_disunity
+				AFG_german_expedition
+			}
+			focuses = {
+				AFG_awaken_the_pashtun
+				AFG_akbar
+				AFG_two_emirs_enter
+			}
+		}
+
 		"COG" = {
 			minor = yes
 			history = "COG_KR_GATHERING_STORM_DESC"
@@ -256,22 +271,6 @@ bookmarks = {
 				COG_echoes_africa_new_order
 				COG_new_governor_general
 				COG_african_hre
-			}
-		}
-
-		"TRM" = {
-			minor = yes
-			history = "TRM_KR_GATHERING_STORM_DESC"
-			ideology = paternal_autocrat
-			ideas = {
-				TRM_japanese_vladivostok
-				TRM_dream
-				TRM_Siberian_Army
-			}
-			focuses = {
-				TRM_Autonomous_Republic
-				TRM_Kolchak_Doc
-				TRM_Mil_ML_End
 			}
 		}
 

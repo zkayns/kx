@@ -1,6 +1,6 @@
 ﻿l_english:
 
-Galicia:0 "Galicia Focus Tree"
+galicia_focus_tree:0 "Galicia Focus Tree"
 
 ### Leaders ###
 
@@ -139,7 +139,7 @@ GAL_market_liberal_party_long:0 "Krakowska Szkoła Ekonomii\n§LKraków School o
 GAL_social_conservative_party:0 "Stańczycy"
 GAL_social_conservative_party_long:0 "Stronnictwo Prawicy Narodowej - Frakcja Krakowska\n§LParty of the National Right - Kraków faction§!"
 GAL_authoritarian_democrat_party:0 "SKL"
-GAL_authoritarian_democrat_party_long:0 "Stronnictwo Katolicko-Ludowe\n§L(Catholic People's Party)§!"
+GAL_authoritarian_democrat_party_long:0 "Stronnictwo Katolicko-Ludowe\n§LCatholic People's Party§!"
 GAL_paternal_autocrat_party:0 "Podolacy"
 GAL_paternal_autocrat_party_long:0 "Stronnictwo Prawicy Narodowej - Frakcja Lwowska\n§LParty of the National Right - Lwów faction§!"
 GAL_national_populist_party:0 "RNP"
@@ -267,7 +267,7 @@ gal.36.a:0 "They will be good..."
 
 gal.37.t:0 "The End of 'West Ukraine'?"
 gal.37.d:0 "Yevgen Petrushevich, who is considered the main representative of Ukrainian minority interests in Austria and Galicia, was arrested today. He was officially charged with ties to a terrorist group known as the Galician UWO Corps."
-gal.37.a:0 "Without head the resistance will fade..."
+gal.37.a:0 "Without a head the resistance will fade..."
 
 gal.38.t:0 "Melnyk Leaves For Ukraine"
 gal.38.d:0 "After recent events in Ukraine, the Galician UWO Corps have been recalled to Ukraine. Its head, Andriy Melnyk has left as well, however, some of the UWO insurgents still remain here, mainly the Radicals under the guidance of Mykoła Sciborski. While seriously harming their intelligence and number of their troops and equipment by this exodus, the Radicals are still quite powerful to resist our rule."

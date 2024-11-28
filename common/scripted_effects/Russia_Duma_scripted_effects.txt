@@ -16955,6 +16955,7 @@ RUS_pass_current_law = {
 			popularity = 0.01
 		}
 		add_ideas = municipal_councils
+		destroy_unfinished_land_reform = yes
 	}
 	if = {
 		limit = {
@@ -17134,7 +17135,7 @@ RUS_pass_current_law = {
 				free_building_slots = {
 					building = infrastructure
 					size > 0
-					include_locked = yes
+					
 				}   
 			}
 			add_building_construction = {
@@ -17148,7 +17149,7 @@ RUS_pass_current_law = {
 				free_building_slots = {
 					building = infrastructure
 					size > 0
-					include_locked = yes
+					
 				}   
 			}
 			add_building_construction = {
@@ -17162,7 +17163,7 @@ RUS_pass_current_law = {
 				free_building_slots = {
 					building = infrastructure
 					size > 0
-					include_locked = yes
+					
 				}   
 			}
 			add_building_construction = {

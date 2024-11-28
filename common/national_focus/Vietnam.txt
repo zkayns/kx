@@ -538,7 +538,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = VIN_Nationalist_Rhetoric_idea
 			add_manpower = 3500
-			set_party_name = { ideology = national_populist long_name = VIN_vietnam_restoration_society name = VIN_vietnam_restoration_society } 
+			set_party_name = { ideology = national_populist long_name = VIN_vietnam_restoration_society_long name = VIN_vietnam_restoration_society } 
 			set_country_leader_ideology = natpop_pan_asianism_subtype
 			hidden_effect = {
 			country_event = {
@@ -867,8 +867,8 @@ focus_tree = {
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
 			set_party_name = {
 			ideology = authoritarian_democrat
-			long_name = "Royalist Party"
-			name = "Royalist Party"
+			long_name = VIN_paternal_autocrat_party_long
+			name = VIN_paternal_autocrat_party
 			}
 		}
 		x = 4
@@ -889,6 +889,11 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = VIN_Absolutist_Emperor_idea
 			add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
+			set_party_name = {
+			ideology = paternal_autocrat
+			long_name = VIN_absolutist_party_long
+			name = VIN_absolutist_party
+				}
 			}
 		x = 6
 		y = 7
@@ -1050,6 +1055,12 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_ideas = VIN_Diverse_Society_idea
+		hidden_effect = {
+		country_event = {
+		id = vietnam.102
+		days = 15
+				}
+			}
 		}
 		x = 13
 		y = 10
@@ -1785,7 +1796,8 @@ focus_tree = {
 		focus = VIN_First_Election
 		}
 		available = {
-		has_country_flag = VIN_Socdem_Victory
+			has_country_flag = VIN_Socdem_Victory
+			has_government = social_democrat
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
@@ -1803,6 +1815,12 @@ focus_tree = {
 			focus = VIN_VNQDD_Resurgence
 		}
 		available = {
+			has_government = social_democrat
+		}
+		bypass = {
+			NOT = {
+				has_idea = VIN_Liberalization_idea
+			}
 		}
 		completion_reward = {
 		swap_ideas = {
@@ -1823,6 +1841,7 @@ focus_tree = {
 			focus = VIN_VNQDD_Resurgence
 		}
 		available = {
+			has_government = social_democrat
 		}
 		completion_reward = {
 		add_ideas = VIN_Anti_Communist_Leftist_idea
@@ -1843,6 +1862,7 @@ focus_tree = {
 			focus = VIN_Vietnamese_Social_Nationalism
 		}
 		available = {
+			has_government = social_democrat
 		}
 		completion_reward = {
 		add_ideas = VIN_Tridemist_Economy_idea
@@ -1860,6 +1880,12 @@ focus_tree = {
 			focus = VIN_Tridemist_Market_Economy
 		}
 		available = {
+			has_government = social_democrat
+		}
+		bypass = {
+			NOT = {
+				has_idea = VIN_Diverse_Society_idea
+			}
 		}
 		completion_reward = {
 		swap_ideas = {
@@ -1882,7 +1908,8 @@ focus_tree = {
 		focus = VIN_First_Election
 		}
 		available = {
-		has_country_flag = VIN_Soclib_Victory
+			has_country_flag = VIN_Soclib_Victory
+			has_government = social_liberal
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
@@ -1900,6 +1927,7 @@ focus_tree = {
 			focus = VIN_Peoples_Rule
 		}
 		available = {
+			has_government = social_liberal
 		}
 		completion_reward = {
 		add_ideas = VIN_Abandon_Confucius_idea
@@ -1917,6 +1945,12 @@ focus_tree = {
 			focus = VIN_Abandon_Confucius
 		}
 		available = {
+			has_government = social_liberal
+		}
+		bypass = {
+			NOT = {
+				has_idea = VIN_Liberalization_idea
+			}
 		}
 		completion_reward = {
 		swap_ideas = {
@@ -1941,6 +1975,7 @@ focus_tree = {
 			focus = VIN_Asian_Modernism
 		}
 		available = {
+			has_government = social_liberal
 		}
 		completion_reward = {
 		add_ideas = VIN_State_Monitored_Capitalism_idea
@@ -1958,6 +1993,12 @@ focus_tree = {
 			focus = VIN_Asian_Modernism
 		}
 		available = {
+			has_government = social_liberal
+		}
+		bypass = {
+			NOT = {
+				has_idea = VIN_Diverse_Society_idea
+			}
 		}
 		completion_reward = {
 		swap_ideas = {
@@ -1981,6 +2022,11 @@ focus_tree = {
 			focus = VIN_Rehabilitate_Reds
 		}
 		available = {
+			OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+				has_government = market_liberal
+			}
 		}
 		completion_reward = {
 		swap_ideas = {
@@ -2007,7 +2053,8 @@ focus_tree = {
 		focus = VIN_First_Election
 		}
 		available = {
-		has_country_flag = VIN_Marlib_Victory
+			has_country_flag = VIN_Marlib_Victory
+			has_government = market_liberal
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
@@ -2025,6 +2072,7 @@ focus_tree = {
 			focus = VIN_Indochinese_Constitutionalists
 		}
 		available = {
+			has_government = market_liberal
 		}
 		completion_reward = {
 		add_ideas = VIN_Humanized_Capital_idea
@@ -2042,6 +2090,12 @@ focus_tree = {
 			focus = VIN_Indochinese_Constitutionalists
 		}
 		available = {
+			has_government = market_liberal
+		}
+		bypass = {
+			NOT = {
+				has_idea = VIN_Liberalization_idea
+			}
 		}
 		completion_reward = {
 		swap_ideas = {
@@ -2071,6 +2125,12 @@ focus_tree = {
 			focus = VIN_Harmonious_Financials
 		}
 		available = {
+			has_government = market_liberal
+		}
+		bypass = {
+			NOT = {
+				has_idea = VIN_Diverse_Society_idea
+			}
 		}
 		completion_reward = {
 		swap_ideas = {
@@ -2091,6 +2151,7 @@ focus_tree = {
 			focus = VIN_Bill_Of_Rights
 		}
 		available = {
+			has_government = market_liberal
 		}
 		completion_reward = {
 		add_ideas = VIN_Sow_Golden_Fields_idea

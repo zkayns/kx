@@ -671,8 +671,8 @@ YAK_TRM = {
 	color_ui = rgb { 216 244 247 }
 }
 YAK_SMOLIN = {
-	color = rgb { 216 244 247 }
-	color_ui = rgb { 216 244 247 }
+	color = rgb { 174 232 238 }
+	color_ui = rgb { 174 232 238 }
 }
 BRY_TRM = {
 	color = rgb { 216 244 247 }
@@ -902,6 +902,16 @@ ALA_RAPTURE_USA = {
 	color_ui = rgb { 254 193 27 }
 }
 
+ALA_CASCADIA = {
+	color = rgb { 39 95 47 }
+	color_ui = rgb { 39 95 47 }
+}
+
+ALA_ASTORIA = {
+	color = rgb { 39 95 47 }
+	color_ui = rgb { 39 95 47 }
+}
+
 ALA_JAP = {
 	color = rgb { 255 200 200 }
 	color_ui = rgb { 255 255 255 }
@@ -1109,8 +1119,8 @@ CZE_czechoslovakia_poland = {
 	color_ui = rgb { 45 86 186 }
 }
 CZE_feminist = {
-	color = rgb { 200 80 150 }
-	color_ui = rgb { 200 80 150 }
+	color = rgb { 168 101 152 }
+	color_ui = rgb { 168 101 152 }
 }
 CZE_westafrica_colony = {
 	color = rgb { 75 104 179 }
@@ -1544,6 +1554,26 @@ KOG_KON = {
 	color_ui = rgb { 199 160 139 }
 }
 
+KOG_KONGO = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
+KOG_KONGO_ALT = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
+KOG_KONGO_ALT_2 = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
+KOG_KONGO_ALT_3 = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
 NIC_LIB = {
 	color = rgb { 189 35 53 }
 	color_ui = rgb { 189 25 53 }
@@ -1567,6 +1597,11 @@ RAS_ARB = {
 IFR = {
 	color = rgb { 15 207 0 }
 	color_ui = rgb { 15 207 0 }
+}
+
+EGY_UAS = {
+	color = rgb { 60 174 107 }
+	color_ui = rgb { 60 174 107 }
 }
 
 JBS_ARA = {
@@ -2068,7 +2103,10 @@ GXC_united_china_kuomintang = {
 	color = rgb { 245 12 55 }
 	color_ui = rgb { 245 12 55 }
 }
-
+GXC_united_china_right_kuomintang = {
+	color = rgb { 0 42 177 }
+	color_ui = rgb { 0 42 177 }
+}
 GXC_government_guangzhou = {
 	color = rgb { 149 93 127 }
 	color_ui = rgb { 149 93 127 }
@@ -2631,10 +2669,6 @@ CRM_KRIM = {
 	color = rgb { 77 93 83 }
 	color_ui = rgb { 77 93 83 }
 }
-UBD_napoleonic = {
-	color = rgb { 20 40 150 }
-	color_ui = rgb { 20 40 150 }
-}
 ILL_napoleonic = {
 	color = rgb { 20 40 150 }
 	color_ui = rgb { 20 40 150 }
@@ -2977,6 +3011,10 @@ ABP = {
 	color = rgb { 29 52 119 }
 	color_ui = rgb { 29 52 119 }
 }
+BDN_SAV = {
+	color = rgb { 2 73 124 }
+	color_ui = rgb { 2 73 124 }
+}
 ARG_LA_PLATA = {
 	color = rgb { 153 217 234 }
 	color_ui = rgb { 153 217 234 }
@@ -3058,6 +3096,22 @@ BAY_GREATER_FRANKIA = {
 	color = rgb { 0 0 135 }
 	color_ui = rgb { 90 90 90 }
 }
+AFG_MGH = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_JBD = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_CONFEDERATION = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_KALAKANI_REVOLT = {
+	color = rgb { 190 0 0 }
+	color_ui = rgb { 190 0 0 }
+}
 AFG_KALAKANI_DURRANI = {
 	color = rgb { 0 102 51 }
 	color_ui = rgb { 0 102 51 }
@@ -3065,6 +3119,26 @@ AFG_KALAKANI_DURRANI = {
 AFG_DURRANI_CALIPHATE = {
 	color = rgb { 0 102 51 }
 	color_ui = rgb { 0 102 51 }
+}
+AFG_NADIR_KHAN = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_MGH_NADIR = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_DAOUD = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_MGH_DAOUD = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_DAOUD_KING = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
 }
 AFG_DAOUD_KHORASAN = {
 	color = rgb { 190 0 0 }
@@ -4010,6 +4084,14 @@ ENT_IMPERIAL_FEDERATION_HARGRAVE3 = {
 	color = rgb { 150 0 24 }
 	color_ui = rgb { 150 0 24 }
 }
+CAN_ANGLOSPHERE = {
+	color = rgb { 150 0 24 }
+	color_ui = rgb { 150 0 24 }
+}
+CAN_FORM = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
 NFL_confed = {
 	color = rgb { 0 134 87 }
 	color_ui = rgb { 0 134 87 }
@@ -4017,6 +4099,50 @@ NFL_confed = {
 NFL_republic = {
 	color = rgb { 220 63 99 }
 	color_ui = rgb { 220 63 99 }
+}
+NFL_LAB_republic = {
+	color = rgb { 220 63 99 }
+	color_ui = rgb { 220 63 99 }
+}
+NFL_WAB = {
+	color = rgb { 42 60 148 }
+	color_ui = rgb { 42 60 148 }
+}
+NFL_WAB_inuit_innu = {
+	color = rgb { 42 60 148 }
+	color_ui = rgb { 42 60 148 }
+}
+LAB = {
+	color = rgb { 0 170 203 }
+	color_ui = rgb { 0 170 203 }
+}
+HGW = {
+	color = rgb { 255 0 0 }
+	color_ui = rgb { 255 0 0 }
+}
+SAI = {
+	color = rgb { 60 128 90 }
+	color_ui = rgb { 60 128 90 }
+}
+BFT = {
+	color = rgb { 0 88 156 }
+	color_ui = rgb { 0 88 156 }
+}
+INU = {
+	color = rgb { 51 204 204 }
+	color_ui = rgb { 51 204 204 }
+}
+CEE = {
+	color = rgb { 205 69 22 }
+	color_ui = rgb { 205 69 22 }
+}
+HUR = {
+	color = rgb { 58 0 176 }
+	color_ui = rgb { 58 0 176 }
+}
+AGQ = {
+	color = rgb { 181 32 38 }
+	color_ui = rgb { 181 32 38 }
 }
 MKT = {
 	color = rgb { 81 63 167 }
@@ -4246,4 +4372,12 @@ KIK_EASTAFRICA_2 = {
 LEB_PHOENICIA = {
 	color = rgb { 109 0 205 }
 	color_ui = rgb { 109 0 205 }
+}
+AST_obu_iww = {
+	color = rgb { 97 6 6 }
+	color_ui = rgb { 97 6 6 }
+}
+AST_obu_slp = {
+	color = rgb { 97 6 6 }
+	color_ui = rgb { 97 6 6 }
 }

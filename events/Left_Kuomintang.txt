@@ -5868,7 +5868,8 @@ country_event = { #Flaggot
 	immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.midgame.999" }
 	title = CHI.midgame.999.t
 	desc = CHI.midgame.999.d
-	
+
+	picture = GFX_report_event_CHI_flag
 	is_triggered_only = yes 
 	fire_only_once = yes
 
@@ -15474,11 +15475,44 @@ country_event = {# Epilogue - Chen
 			picture = "gfx/leaders/CHI/Portrait_CHI_Chen_Gongbo.png"
 			traits = { CHI_wang_jingwei_thought }
 			expire = "1.1.1"
-			ideology = radsoc_tridemism_subtype
+			ideology = radsoc_communism_subtype
 		}
 		remove_ideas_with_trait = head_of_government
 		add_ideas = CHI_Shi_Cuntong_hog_rso
 		add_political_power = 20
+	}
+}
+country_event = {# Hu Zongnan Subideo options
+	id = CHI.endgame.903
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.endgame.903" }
+	title = CHI.endgame.903.t
+	desc = CHI.endgame.903.d
+	picture = GFX_report_event_CHI_general_hu_zongnan_red
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Maintain the current line
+		name = CHI.endgame.903.a
+		add_political_power = 20
+	}
+	
+	option = { #Sorelians
+		name = CHI.endgame.903.b
+		FRA = { add_opinion_modifier = { target = CHI modifier = medium_increase } }
+		set_country_leader_ideology = sorelianism_subtype
+	}
+	
+	option = { #British Maximism
+		name = CHI.endgame.903.c	
+		ENG = { add_opinion_modifier = { target = CHI modifier = medium_increase } }
+		set_country_leader_ideology = british_maximism_subtype
+	}
+	
+	option = { #Savinkovism
+		name = CHI.endgame.903.e	
+		RUS = { add_opinion_modifier = { target = CHI modifier = medium_increase } }
+		set_country_leader_ideology = totalist_savinkovism_subtype
 	}
 }
 
@@ -17467,7 +17501,7 @@ country_event = { #leadership
 		name = chi_leader.1.f
 		create_country_leader = {
 			name = "Wang Ming"
-			picture = "gfx/leaders/MON/Portrait_MON_Wang_Ming.png"
+			picture = "gfx/leaders/CHI/Portrait_CHI_Chen_Shaoyu.png"
 			expire = "1.1.1"
 			ideology = hardliner_bolshevism_subtype
 			traits = { CHI_young_and_radical_leninist }
@@ -17607,3 +17641,26 @@ country_event = { #leadership
 	}
 }
 
+country_event = { #hidden event to fix Anqing no war
+	id = CHI.earlygame.1000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.earlygame.1000" }
+	title = CHI.earlygame.1000.t
+	desc = CHI.earlygame.1000.d
+
+	hidden = yes
+	trigger = {
+		tag = CHI
+		LEP = { exists = no }
+		NOT = { has_war_with = ANQ }
+		has_global_flag = LEP_collapse
+	}
+	fire_only_once = yes
+
+	option = {
+		name = CHI.earlygame.1000.a
+		declare_war_on = {
+			target = ANQ
+			type = annex_everything
+		}
+	}
+}

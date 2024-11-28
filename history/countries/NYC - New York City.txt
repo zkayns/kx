@@ -90,7 +90,6 @@ if = {
 		early_ship_hull_heavy = 1
 		basic_ship_hull_heavy = 1
 		improved_ship_hull_heavy = 1
-		ship_hull_super_heavy = 1
 		
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
@@ -449,6 +448,7 @@ create_corps_commander = {
 create_corps_commander = { 
 	name = "Mary A. Sullivan"
 	#desc = "POLITICS_LEWIS_VALENTINE_DESC"
+	female = yes
 	portrait_path = "gfx/leaders/NYC/Portrait_NYC_Mary_Sullivan.png"
 	traits = {
 		NYC_police_officer
@@ -472,6 +472,18 @@ create_navy_leader = {
 }
 
 create_navy_leader = {
+	name = "Grace Hopper"
+	portrait_path = "gfx/leaders/NYC/Portrait_NYC_Grace_Hopper.png"
+	female = yes
+	traits = { }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+
+create_navy_leader = {
 	name = "Evan Peter Aurand"
 	portrait_path = "gfx/leaders/NYC/Portrait_NYC_Evan_Peter_Aurand.png"
 	traits = { aviation_enthusiast }
@@ -483,6 +495,17 @@ create_navy_leader = {
 }
 
 create_navy_leader = {
+	name = "Isadore Greenbaum"
+	portrait_path = "gfx/leaders/NYC/Portrait_NYC_Isadore_Greenbaum.png"
+	traits = { chief_engineer bold }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
 	name = "Alton Adams"
 	portrait_path = "gfx/leaders/NYC/Portrait_NYC_Alton_Adams.png"
 	traits = { navy_media_personality }
@@ -490,7 +513,18 @@ create_navy_leader = {
 	attack_skill = 1
 	defense_skill = 2
 	maneuvering_skill = 2
-	coordination_skill = 3
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Norman Rockwell"
+	portrait_path = "gfx/leaders/NYC/Portrait_NYC_Norman_Rockwell.png"
+	traits = { navy_media_personality gentlemanly }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
 }
 
 USA_start_naval_variant = yes

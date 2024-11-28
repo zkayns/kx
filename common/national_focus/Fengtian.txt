@@ -670,6 +670,18 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 12412
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -2363,10 +2375,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_army_leads_the_empire"
 			decrease_ruling_party_popularity_by_5 = yes
 			add_ideas = FNG_nap_army_leads_the_empire
-			if = {
-				limit = { has_completed_focus = FNG_Preserve_Xinhai }
-				country_event = fng_napoleon.1 #Citizen-Soldier Franchise?
-			}
 		}
 	}
 	
@@ -2613,7 +2621,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_zuolin_unites_china"
 			FNG_increase_legitimacy = yes
 			add_country_leader_trait = unifier_emperor
-			#country_event = fng_napoleon.1 #AND THIS, IS TO GO EVEN FURTHER BEYOND
 		}
 	}
 	

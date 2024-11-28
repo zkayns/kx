@@ -134,7 +134,6 @@ if = {
 		basic_ship_hull_carrier = 1
 		early_ship_hull_heavy = 1
 		basic_ship_hull_heavy = 1
-		ship_hull_super_heavy = 1
 		
 		basic_naval_mines = 1
 
@@ -339,6 +338,17 @@ create_corps_commander = {# Robert C. Richardson Jr.
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
+}
+
+create_corps_commander = {# "Clarence Tinker"
+	name = "Clarence Tinker"
+	portrait_path = "gfx/leaders/HAW/Portrait_HAW_Clarence_Tinker.png"
+	traits = { air_commander }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 ### Admirals ###
